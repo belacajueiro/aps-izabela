@@ -1,6 +1,6 @@
 # Monta index.html (artefato) e site/ (GitHub Pages) a partir das fontes desta pasta.
 import os, re, glob, subprocess, sys
-D = os.path.dirname(os.path.abspath(__file__)); os.chdir(D)
+D = os.path.dirname(os.path.abspath(__file__)); os.chdir(D); os.makedirs('site', exist_ok=True)
 def n(f):
     m = re.match(r'data(\d*)\.js$', os.path.basename(f)); return int(m.group(1) or 1)
 files = sorted(glob.glob('data*.js'), key=n)

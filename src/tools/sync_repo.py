@@ -3,6 +3,9 @@ import os, shutil, sys, re
 D = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); R = os.path.abspath(sys.argv[1])
 for f in ['index.html', 'manifest.webmanifest', 'sw.js', 'icon-192.png', 'icon-512.png', 'robots.txt', 'fontes.json']:
     shutil.copy2(os.path.join(D, 'site', f), os.path.join(R, f))
+if os.path.isdir(os.path.join(D, 'img')):
+    if os.path.isdir(os.path.join(R, 'img')): shutil.rmtree(os.path.join(R, 'img'))
+    shutil.copytree(os.path.join(D, 'img'), os.path.join(R, 'img'))
 S = os.path.join(R, 'src')
 if os.path.isdir(S): shutil.rmtree(S)
 fora = re.compile(r'(\.bak|\.v\d+.*\.bak.*|^check\.js$|^index\.html$|^guia\.(js|css)$|^anamnesepro_v4\.html$|__pycache__)')

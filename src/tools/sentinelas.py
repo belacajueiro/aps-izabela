@@ -2,7 +2,7 @@
 # 1) Visita as páginas de monitor/vigiar.json e acusa documentos novos (links) ou conteúdo alterado.
 # 2) Confere se as URLs das fontes do app (site/fontes.json) ainda respondem e se mudaram (ETag/Last-Modified/tamanho).
 # Compara com monitor/estado.json (estado do mês anterior), grava o novo estado e escreve monitor/sentinelas.md.
-# Uso: python3 tools/sentinelas.py  [--sem-fontes]
+# Uso: python3 tools/sentinelas.py [--sem-fontes] [--estado monitor/estado_semanal.json] [--rel monitor/sentinelas_semanal.md]
 import json, os, re, sys, hashlib, html, urllib.request, urllib.parse, datetime, concurrent.futures as cf
 D = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 M = os.path.join(D, 'monitor')
@@ -35,7 +35,8 @@ def links(b, base, padrao):
 
 def main():
     hoje = datetime.date.today().isoformat()
-    est_p = os.path.join(M, 'estado.json')
+    arg = lambda k, d: sys.argv[sys.argv.index(k) + 1] if k in sys.argv else d
+    est_p = os.path.join(D, arg('--estado', 'monitor/estado.json')); rel_p = os.path.join(D, arg('--rel', 'monitor/sentinelas.md'))
     ant = json.load(open(est_p)) if os.path.exists(est_p) else {'paginas': {}, 'fontes': {}, 'data': None}
     vig = json.load(open(os.path.join(M, 'vigiar.json')))['paginas']
     novo = {'data': hoje, 'paginas': {}, 'fontes': {}}
@@ -66,7 +67,9 @@ def main():
         else:
             rel.append(f"- {p['nome']}: sem mudança.")
     if '--sem-fontes' not in sys.argv:
-        man = json.load(open(os.path.join(D, 'site', 'fontes.json')))
+        fj = os.path.join(D, 'site', 'fontes.json')
+        if not os.path.exists(fj): fj = os.path.join(os.path.dirname(D), 'fontes.json')  # no clone do repo: fontes.json fica na raiz
+        man = json.load(open(fj))
         alvo = {f['k']: f['url'] for f in man['fontes'] if f['url'].startswith('http')}
         def ver(item):
             k, u = item; r = get(u, cab_so=True)
@@ -91,7 +94,7 @@ def main():
     else:
         novo['fontes'] = ant.get('fontes', {})
     json.dump(novo, open(est_p, 'w'), ensure_ascii=False, indent=0)
-    open(os.path.join(M, 'sentinelas.md'), 'w').write('\n'.join(rel) + '\n')
+    open(rel_p, 'w').write('\n'.join(rel) + '\n')
     print('\n'.join(rel))
 
 if __name__ == '__main__':

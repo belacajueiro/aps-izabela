@@ -344,6 +344,23 @@ details.gdet[open]>summary{border-bottom:1px solid var(--line);margin-bottom:10p
   .tab{padding:9px 10px}
   .mbar{justify-content:stretch}.mbar .btn{flex:1}
 }
+
+/* ── v33: barra inferior, recentes e atalhos */
+.bnav{display:none}
+.kbhint{display:block;margin-top:5px;font-size:.68rem;color:var(--muted);line-height:1.6}
+.kbhint kbd{font:500 .66rem var(--f-mono);border:1px solid var(--line);border-bottom-width:2px;border-radius:4px;padding:0 4px;background:var(--surface);color:var(--ink)}
+.item.kb{background:var(--sunk);box-shadow:inset 0 0 0 2px var(--accent)}
+@media (max-width:760px), (hover:none){ .kbhint{display:none} }
+@media (max-width:760px){
+  .app{padding-bottom:calc(58px + env(safe-area-inset-bottom,0px))}
+  .bnav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--surface);border-top:1px solid var(--line);padding:4px 6px calc(4px + env(safe-area-inset-bottom,0px));box-shadow:0 -2px 10px rgb(0 0 0 / .06)}
+  .bnav button{display:flex;flex-direction:column;align-items:center;gap:2px;background:none;border:0;border-radius:10px;padding:5px 2px;font-size:.68rem;font-weight:600;color:var(--muted);cursor:pointer}
+  .bnav svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  .bnav button[aria-current="true"]{color:var(--accent);background:var(--accent-soft)}
+  .bnav button[data-bn="fav"][aria-current="true"] svg{fill:currentColor}
+  .toast{bottom:calc(76px + env(safe-area-inset-bottom,0px))}
+}
+@media print{ .bnav{display:none!important} }
 /* ── consulta de pré-natal guiada pela IG */
 .pnw{display:grid;gap:16px;grid-template-columns:minmax(0,1fr)}
 @media (min-width:1180px){.pnw{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr)}.pw-out{position:sticky;top:8px;align-self:start;max-height:calc(100vh - 24px);overflow:auto}}
@@ -413,13 +430,19 @@ details.gdet[open]>summary{border-bottom:1px solid var(--line);margin-bottom:10p
         <small id="dbstate">Carregando suas edições…</small>
       </div>
       <div class="mods" id="mods" role="group" aria-label="Módulos"></div>
-      <div class="search"><input id="q" type="search" placeholder="Buscar por nome, sintoma, CIAP ou CID" autocomplete="off" aria-label="Buscar condição"></div>
+      <div class="search"><input id="q" type="search" placeholder="Buscar por nome, sintoma, CIAP ou CID" autocomplete="off" aria-label="Buscar condição"><small class="kbhint"><kbd>/</kbd> buscar · <kbd>↑</kbd><kbd>↓</kbd> <kbd>Enter</kbd> abrir · <kbd>Esc</kbd> limpar · <kbd>Alt</kbd>+<kbd>1</kbd>–<kbd>9</kbd> módulos</small></div>
       <div class="sysf" id="chips"></div>
     </div>
     <ul class="list" id="list"></ul>
   </aside>
   <main class="main" id="main"></main>
 </div>
+<nav class="bnav" id="bnav" aria-label="Navegação rápida">
+  <button type="button" data-bn="busca"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>Buscar</button>
+  <button type="button" data-bn="fav"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 17l-5.2 2.7 1-5.9-4.3-4.1 5.9-.8z"/></svg>Favoritas</button>
+  <button type="button" data-bn="rec"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>Recentes</button>
+  <button type="button" data-bn="tools"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.5"/></svg>Ferramentas</button>
+</nav>
 
 <dialog id="editor" aria-labelledby="ed-title">
   <form id="edform" method="dialog">
@@ -14362,6 +14385,10 @@ const isAtalho = c => modOf(c) !== state.mod && MOD(state.mod).atalhos.includes(
 const grpOf = c => isAtalho(c) ? ATALHO_G : c.sistema;
 let rotOk = {};
 const FAV = "★ Favoritas";
+const REC = "↺ Recentes";
+let recents = [];
+try { recents = JSON.parse(localStorage.getItem("de.recent") || "[]"); } catch(e){}
+function pushRecent(id){ recents = [id, ...recents.filter(x => x !== id)].slice(0, 15); try { localStorage.setItem("de.recent", JSON.stringify(recents)); } catch(e){} }
 let favs = new Set();
 try { favs = new Set(JSON.parse(localStorage.getItem("de.favs") || "[]")); } catch(e){}
 function saveFavs(){ try { localStorage.setItem("de.favs", JSON.stringify([...favs])); } catch(e){} }
@@ -14396,9 +14423,9 @@ function renderMods(){
 function renderChips(){
   const ORDEM = ORDEM_OF(); const lst = noModulo();
   const has = s => lst.some(c => grpOf(c) === s);
-  const sis = ["Todos", ...(lst.some(c=>favs.has(c.id)) ? [FAV] : []), ...ORDEM.filter(has), ...new Set(lst.map(grpOf).filter(s=>!ORDEM.includes(s) && s!==ATALHO_G)), ...(has(ATALHO_G)?[ATALHO_G]:[])];
+  const sis = ["Todos", ...(recents.some(get) ? [REC] : []), ...([...favs].some(get) ? [FAV] : []), ...ORDEM.filter(has), ...new Set(lst.map(grpOf).filter(s=>!ORDEM.includes(s) && s!==ATALHO_G)), ...(has(ATALHO_G)?[ATALHO_G]:[])];
   if (!sis.includes(state.sys)) state.sys = "Todos";
-  const nOf = s => s === "Todos" ? lst.length : s === FAV ? lst.filter(c=>favs.has(c.id)).length : lst.filter(c=>grpOf(c)===s).length;
+  const nOf = s => s === "Todos" ? lst.length : s === FAV ? [...favs].filter(get).length : s === REC ? recents.filter(get).length : lst.filter(c=>grpOf(c)===s).length;
   $("#chips").innerHTML = `<label class="vh" for="sys-sel">Filtrar por grupo</label><select id="sys-sel" aria-label="Filtrar por grupo">${sis.map(s => `<option value="${esc(s)}"${s===state.sys?" selected":""}>${esc(s==="Todos"?"Todos os grupos":s)} (${nOf(s)})</option>`).join("")}</select>${state.sys!=="Todos"?`<button class="btn sm ghost" data-sys="Todos" title="Limpar filtro">Limpar</button>`:""}`;
   $("#sistemas").innerHTML = [...new Set([...ORDEM, ...all().filter(c=>modOf(c)===state.mod).map(c=>c.sistema)])].map(s=>`<option value="${esc(s)}">`).join("");
 }
@@ -14418,6 +14445,14 @@ function itemHtml(c, tag){
 const ORD_IDX = Object.fromEntries(CONDICOES.map((c,i)=>[c.id,i]));
 const ordenar = k => (a,b) => (state.mod === "de" || k === ATALHO_G) ? (((a.prio ?? 99) - (b.prio ?? 99)) || a.nome.localeCompare(b.nome,"pt")) : ((ORD_IDX[a.id] ?? 1e6) - (ORD_IDX[b.id] ?? 1e6) || a.nome.localeCompare(b.nome,"pt"));
 function renderList(){
+  kbIdx = -1; updBnav();
+  if (state.sys === FAV || state.sys === REC){
+    let items = (state.sys === REC ? recents : [...favs]).map(get).filter(Boolean).filter(textMatch);
+    if (state.sys === FAV) items.sort((a,b) => a.nome.localeCompare(b.nome, "pt"));
+    const h = items.map(c => itemHtml(c, modOf(c) !== state.mod)).join("");
+    $("#list").innerHTML = h ? `<li class="grp">${esc(state.sys === FAV ? "Favoritas (todos os módulos)" : "Abertas recentemente")}</li>` + h : `<li class="empty">${state.sys === FAV ? "Nenhuma favorita ainda. Toque na ☆ de uma condição para guardá-la aqui." : "Nenhuma condição aberta ainda."}</li>`;
+    return;
+  }
   const ORDEM = [...ORDEM_OF(), ATALHO_G];
   const items = noModulo().filter(matches);
   const grupos = {};
@@ -14457,6 +14492,7 @@ function renderMain(){
   if (!c){ m.innerHTML = `<div class="empty"><p>Escolha um item na lista ou busque por nome, sintoma, CIAP ou CID.</p></div>`; return; }
   if (state.forceTab){ state.tab = state.forceTab; state.forceTab = null; }
   else if (c.id !== state.lastSel) state.tab = c.guia ? "guia" : state.tabPref;
+  if (c.id !== state.lastSel){ pushRecent(c.id); if (state.sys !== REC) renderChips(); }
   state.lastSel = c.id;
   if (!tabsOf(c).some(([k]) => k === state.tab)) state.tab = tabsOf(c)[0][0];
   const legend = `<div class="legend"><span><span class="lab F">F</span> conferido nesta revisão</span><span><span class="lab C">C</span> consolidado, não conferido</span><span><span class="lab NV">NV</span> conferir antes de usar</span></div>`;
@@ -14489,7 +14525,7 @@ function renderMain(){
     <p class="disc">Trilhas: "Melhor evidência · SUS Betim" quando a opção mais sustentada já está na REMUME; "Melhor evidência · comprar" quando não está; "SUS Betim" para a opção disponível quando difere da melhor evidência. Modelo de apoio para médicos. Revise e adapte ao paciente antes de registrar ou prescrever. Doses marcadas NV devem ser conferidas na bula; disponibilidade em Betim conforme a REMUME anexada ao Projeto.</p>
     ${c.S ? `<div class="mbar" id="mbar" hidden><button class="btn pri" data-alias="cp-soap">Copiar SOAP</button><button class="btn" data-alias="cp-tudo">SOAP + receita</button></div>` : ""}`;
   renderPanel(c, legend);
-  watchHead(); fades(m);
+  watchHead(); fades(m); updBnav();
 }
 
 function renderPanel(c, legend){
@@ -14569,8 +14605,39 @@ function renderPanel(c, legend){
 // ── interface: favorito, menu, barra de cópia e indicação de rolagem
 function favLbl(on){ return `<span aria-hidden="true">${on?"★":"☆"}</span><span class="favl"> ${on?"Favorita":"Favoritar"}</span>`; }
 function menuClose(){ const mn = $("#menu"); if (mn && !mn.hidden){ mn.hidden = true; $("#menu-btn").setAttribute("aria-expanded", "false"); } }
-document.addEventListener("click", ev => { if (!ev.target.closest("#menu") && !ev.target.closest("#menu-btn")) setTimeout(menuClose, 0); }, true);
-document.addEventListener("keydown", ev => { if (ev.key === "Escape") menuClose(); });
+document.addEventListener("click", ev => { if (!ev.target.closest("#menu") && !ev.target.closest("#menu-btn") && !ev.target.closest('[data-bn="tools"]')) setTimeout(menuClose, 0); }, true);
+const isMob = () => window.matchMedia("(max-width:760px)").matches;
+function updBnav(){ const bn = document.getElementById("bnav"); if (!bn) return; const k = state.sel ? "" : state.sys === FAV ? "fav" : state.sys === REC ? "rec" : "busca"; bn.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", b.dataset.bn === k)); }
+function bnav(k){
+  state.sel = null;
+  if (k === "busca") state.sys = "Todos";
+  if (k === "fav") state.sys = FAV;
+  if (k === "rec") state.sys = REC;
+  renderChips(); renderList(); renderMain(); $("#list").scrollTop = 0;
+  if (k === "busca"){ const q = $("#q"); q.focus(); q.select(); }
+  if (k === "tools"){ $("#menu").hidden = false; $("#menu-btn").setAttribute("aria-expanded", "true"); }
+  if (k === "fav" && !favs.size) toast("Toque na ☆ de uma condição para guardá-la");
+  updBnav();
+}
+let kbIdx = -1;
+const kbItems = () => [...document.querySelectorAll("#list button.item")];
+function kbMark(i){ const it = kbItems(); if (!it.length) return; kbIdx = Math.max(0, Math.min(i, it.length - 1)); it.forEach((b, j) => b.classList.toggle("kb", j === kbIdx)); it[kbIdx].scrollIntoView({block: "nearest"}); }
+document.addEventListener("keydown", ev => {
+  if (ev.key === "Escape") menuClose();
+  if (document.querySelector("dialog[open]")) return;
+  const typing = ev.target.matches && ev.target.matches("input, textarea, select, [contenteditable]");
+  const q = $("#q");
+  if (((ev.ctrlKey || ev.metaKey) && ev.key.toLowerCase() === "k") || (!typing && ev.key === "/")){
+    ev.preventDefault(); if (state.sel && isMob()){ state.sel = null; renderList(); renderMain(); } q.focus(); q.select(); return; }
+  if (ev.altKey && /^[1-9]$/.test(ev.key)){ const m = MODULOS[+ev.key - 1]; if (m){ ev.preventDefault(); trocarModulo(m.id); } return; }
+  if (ev.target === q){
+    if (ev.key === "ArrowDown"){ ev.preventDefault(); kbMark(kbIdx + 1); return; }
+    if (ev.key === "ArrowUp"){ ev.preventDefault(); kbMark(kbIdx - 1); return; }
+    if (ev.key === "Enter"){ const b = kbItems()[kbIdx >= 0 ? kbIdx : 0]; if (b){ ev.preventDefault(); b.click(); } return; }
+    if (ev.key === "Escape"){ if (q.value){ ev.preventDefault(); q.value = ""; state.q = ""; renderList(); } else q.blur(); return; }
+  }
+  if (!typing && ev.key === "Escape"){ if (state.sel && isMob()){ state.sel = null; renderList(); renderMain(); } else { q.focus(); q.select(); } }
+});
 let headObs = null;
 function watchHead(){
   const bar = $("#mbar"), act = document.querySelector("#main .head .actions");
@@ -14589,6 +14656,7 @@ document.addEventListener("change", ev => { if (ev.target.id === "sys-sel"){ sta
 // ── eventos
 document.addEventListener("click", ev => {
   const t = ev.target.closest("button"); if (!t) return;
+  if (t.dataset.bn){ bnav(t.dataset.bn); return; }
   if (t.dataset.mod){ trocarModulo(t.dataset.mod); return; }
   if (t.dataset.gomod){ trocarModulo(t.dataset.gomod, t.dataset.id); $("#main").scrollTop = 0; return; }
   if (t.dataset.sys){ state.sys = t.dataset.sys; renderChips(); renderList(); return; }

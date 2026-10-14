@@ -305,6 +305,45 @@ details.gdet[open]>summary{border-bottom:1px solid var(--line);margin-bottom:10p
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 
+
+/* ── v32: cabeçalho enxuto, menu de ferramentas, seletor de grupo, barra de cópia e indicação de rolagem */
+.sidetop{flex:none;min-width:0}
+.side [hidden],.mbar[hidden]{display:none!important}
+.side{min-width:0}
+.brandrow{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;padding:16px 18px 10px}
+.brandrow .brand{padding:0;min-width:0}
+.menubtn{flex:none;margin-top:2px}
+.menubtn[aria-expanded="true"]{border-color:var(--accent);color:var(--accent)}
+.menu{margin:0 18px 12px;padding:10px;border:1px solid var(--line);border-radius:var(--r);background:var(--sunk);display:grid;gap:8px}
+.menu .tools{padding:0}
+.menu-sep{font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;border-top:1px solid var(--line);padding-top:8px}
+.menu small{color:var(--muted);font-size:.72rem}
+.sysf{display:flex;gap:6px;align-items:center;padding:0 18px 10px}
+.sysf select{flex:1;min-width:0;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface);font-size:.85rem;color:var(--ink)}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.fl-r{-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 44px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 44px),transparent)}
+.fl-l{-webkit-mask-image:linear-gradient(90deg,transparent,#000 44px);mask-image:linear-gradient(90deg,transparent,#000 44px)}
+.fl-l.fl-r{-webkit-mask-image:linear-gradient(90deg,transparent,#000 44px,#000 calc(100% - 44px),transparent);mask-image:linear-gradient(90deg,transparent,#000 44px,#000 calc(100% - 44px),transparent)}
+.tabs{scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}
+.mbar{position:sticky;bottom:0;z-index:6;display:flex;gap:8px;justify-content:flex-end;padding:14px 0 6px;margin-top:8px;background:linear-gradient(to bottom,transparent,var(--bg) 40%)}
+.mbar .btn{box-shadow:0 2px 8px rgb(0 0 0 / .12)}
+@media (max-width:760px){
+  .brandrow{padding:12px 16px 8px}
+  .brand h1{font-size:1.15rem}
+  .brand p{font-size:.72rem}
+  .menu{margin:0 16px 10px}
+  .mods{display:flex;overflow-x:auto;scrollbar-width:none;margin:0 16px 10px;gap:2px}
+  .mods::-webkit-scrollbar{display:none}
+  .mod{flex:none;padding:7px 12px;font-size:.8rem}
+  .search{padding:0 16px 8px}
+  .sysf{padding:0 16px 8px}
+  .list{padding-bottom:24px}
+  .head .actions #cp-soap,.head .actions #cp-tudo{display:none}
+  #fav .favl{display:none}
+  .head .actions .btn{padding:7px 11px}
+  .tab{padding:9px 10px}
+  .mbar{justify-content:stretch}.mbar .btn{flex:1}
+}
 /* ── consulta de pré-natal guiada pela IG */
 .pnw{display:grid;gap:16px;grid-template-columns:minmax(0,1fr)}
 @media (min-width:1180px){.pnw{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr)}.pw-out{position:sticky;top:8px;align-self:start;max-height:calc(100vh - 24px);overflow:auto}}
@@ -359,19 +398,25 @@ details.gdet[open]>summary{border-bottom:1px solid var(--line);margin-bottom:10p
 
 <div class="app" id="app">
   <aside class="side">
-    <div class="brand">
-      <h1 id="brand-t">Demanda Espontânea</h1>
-      <p><span id="brand-s">SOAP e prescrição para a APS</span> · UBS Betim · revisão <span id="rev"></span></p>
+    <div class="sidetop">
+      <div class="brandrow">
+        <div class="brand">
+          <h1 id="brand-t">Demanda Espontânea</h1>
+          <p><span id="brand-s">SOAP e prescrição para a APS</span> · UBS Betim · revisão <span id="rev"></span></p>
+        </div>
+        <button class="btn sm menubtn" id="menu-btn" aria-expanded="false" aria-controls="menu">Ferramentas <span aria-hidden="true">▾</span></button>
+      </div>
+      <div class="menu" id="menu" hidden>
+        <div class="tools" role="group" aria-label="Ferramentas"><button class="btn sm" id="t-ped" data-mods="de pu">Dose pediátrica</button><button class="btn sm" id="t-cri" data-mods="pu">Calendário da criança</button><button class="btn sm" id="t-ig" data-mods="pn">Idade gestacional</button><button class="btn sm" id="t-calc" data-mods="cr mu pv ho in po de">Calculadoras</button><button class="btn sm" id="t-sc">Escores</button><button class="btn sm" id="t-rede">Rede de Betim</button></div>
+        <div class="menu-sep">Manutenção do app</div>
+        <div class="tools"><button class="btn sm" id="t-pend">Pendências<span class="n" id="pend-n"></span></button><button class="btn sm" id="novo" hidden>+ Nova condição</button></div>
+        <small id="dbstate">Carregando suas edições…</small>
+      </div>
+      <div class="mods" id="mods" role="group" aria-label="Módulos"></div>
+      <div class="search"><input id="q" type="search" placeholder="Buscar por nome, sintoma, CIAP ou CID" autocomplete="off" aria-label="Buscar condição"></div>
+      <div class="sysf" id="chips"></div>
     </div>
-    <div class="mods" id="mods" role="group" aria-label="Módulos"></div>
-    <div class="tools" role="group" aria-label="Ferramentas"><button class="btn sm" id="t-ped" data-mods="de pu">Dose pediátrica</button><button class="btn sm" id="t-cri" data-mods="pu">Calendário da criança</button><button class="btn sm" id="t-ig" data-mods="pn">Idade gestacional</button><button class="btn sm" id="t-calc" data-mods="cr mu pv ho in po de">Calculadoras</button><button class="btn sm" id="t-sc">Escores</button><button class="btn sm" id="t-rede">Rede de Betim</button><button class="btn sm" id="t-pend">Pendências<span class="n" id="pend-n"></span></button></div>
-    <div class="search"><input id="q" type="search" placeholder="Buscar por nome, sintoma, CIAP ou CID" autocomplete="off" aria-label="Buscar condição"></div>
-    <div class="chips" id="chips" role="group" aria-label="Filtrar por sistema"></div>
     <ul class="list" id="list"></ul>
-    <div class="sidefoot">
-      <button class="btn sm" id="novo" hidden>+ Nova condição</button>
-      <small id="dbstate">Carregando suas edições…</small>
-    </div>
   </aside>
   <main class="main" id="main"></main>
 </div>
@@ -14346,13 +14391,15 @@ function renderMods(){
   $("#mods").innerHTML = MODULOS.map(x => `<button class="mod" data-mod="${x.id}" aria-pressed="${x.id===state.mod}" title="${esc(x.nome)}">${esc(x.curto)}</button>`).join("");
   $("#brand-t").textContent = m.titulo; $("#brand-s").textContent = m.sub;
   document.querySelectorAll(".tools [data-mods]").forEach(b => b.hidden = !b.dataset.mods.split(" ").includes(state.mod));
+  setTimeout(() => { const mb = $("#mods"), on = mb.querySelector('[aria-pressed="true"]'); if (on && window.matchMedia("(max-width:760px)").matches) mb.scrollLeft = on.offsetLeft - 16; fade(mb); }, 0);
 }
 function renderChips(){
   const ORDEM = ORDEM_OF(); const lst = noModulo();
   const has = s => lst.some(c => grpOf(c) === s);
   const sis = ["Todos", ...(lst.some(c=>favs.has(c.id)) ? [FAV] : []), ...ORDEM.filter(has), ...new Set(lst.map(grpOf).filter(s=>!ORDEM.includes(s) && s!==ATALHO_G)), ...(has(ATALHO_G)?[ATALHO_G]:[])];
   if (!sis.includes(state.sys)) state.sys = "Todos";
-  $("#chips").innerHTML = sis.map(s => `<button class="chip" aria-pressed="${s===state.sys}" data-sys="${esc(s)}">${esc(s)}</button>`).join("");
+  const nOf = s => s === "Todos" ? lst.length : s === FAV ? lst.filter(c=>favs.has(c.id)).length : lst.filter(c=>grpOf(c)===s).length;
+  $("#chips").innerHTML = `<label class="vh" for="sys-sel">Filtrar por grupo</label><select id="sys-sel" aria-label="Filtrar por grupo">${sis.map(s => `<option value="${esc(s)}"${s===state.sys?" selected":""}>${esc(s==="Todos"?"Todos os grupos":s)} (${nOf(s)})</option>`).join("")}</select>${state.sys!=="Todos"?`<button class="btn sm ghost" data-sys="Todos" title="Limpar filtro">Limpar</button>`:""}`;
   $("#sistemas").innerHTML = [...new Set([...ORDEM, ...all().filter(c=>modOf(c)===state.mod).map(c=>c.sistema)])].map(s=>`<option value="${esc(s)}">`).join("");
 }
 function textMatch(c){
@@ -14427,24 +14474,28 @@ function renderMain(){
         </div>
       </div>
       <div class="actions">
-        <button class="btn ghost" id="fav" aria-pressed="${favs.has(c.id)}" title="Marcar como favorita">${favs.has(c.id)?"★ Favorita":"☆ Favoritar"}</button>
+        <button class="btn ghost" id="fav" aria-pressed="${favs.has(c.id)}" title="Marcar como favorita">${favLbl(favs.has(c.id))}</button>
         ${SC_POR_ID[c.id] && !c.guia ? `<button class="btn" id="open-sc" data-sc-id="${SC_POR_ID[c.id]}">Calcular ${esc((SC.find(x=>x.id===SC_POR_ID[c.id])||{}).nome||"")}</button>` : ""}
         ${c.S ? `<button class="btn ${c.guia?"":"pri"}" id="cp-soap">Copiar SOAP</button>
-        <button class="btn" id="cp-tudo">Copiar SOAP + receita</button>` : ""}
-        ${canEdit ? `<button class="btn" id="edit">Editar modelo</button>`:""}
+        <button class="btn" id="cp-tudo">SOAP + receita</button>` : ""}
+        ${canEdit ? `<button class="btn ghost" id="edit" title="Editar modelo">Editar</button>`:""}
         ${canEdit && c._ed ? `<button class="btn ghost" id="restore">${c._novo?"Excluir":"Restaurar original"}</button>`:""}
       </div>
     </div>
     <div id="confirmslot"></div>
-    ${c.alerta ? `<div class="alerta" role="note">!<span>${esc(c.alerta)}</span></div>`:""}
+    <div id="alertslot"></div>
     <div class="tabs" role="tablist">${tabsOf(c).map(([k,l])=>`<button class="tab" role="tab" aria-selected="${k===state.tab}" data-tab="${k}">${l}</button>`).join("")}</div>
     <div class="panel" id="panel"></div>
-    <p class="disc">Trilhas: "Melhor evidência · SUS Betim" quando a opção mais sustentada já está na REMUME; "Melhor evidência · comprar" quando não está; "SUS Betim" para a opção disponível quando difere da melhor evidência. Modelo de apoio para médicos. Revise e adapte ao paciente antes de registrar ou prescrever. Doses marcadas NV devem ser conferidas na bula; disponibilidade em Betim conforme a REMUME anexada ao Projeto.</p>`;
+    <p class="disc">Trilhas: "Melhor evidência · SUS Betim" quando a opção mais sustentada já está na REMUME; "Melhor evidência · comprar" quando não está; "SUS Betim" para a opção disponível quando difere da melhor evidência. Modelo de apoio para médicos. Revise e adapte ao paciente antes de registrar ou prescrever. Doses marcadas NV devem ser conferidas na bula; disponibilidade em Betim conforme a REMUME anexada ao Projeto.</p>
+    ${c.S ? `<div class="mbar" id="mbar" hidden><button class="btn pri" data-alias="cp-soap">Copiar SOAP</button><button class="btn" data-alias="cp-tudo">SOAP + receita</button></div>` : ""}`;
   renderPanel(c, legend);
+  watchHead(); fades(m);
 }
 
 function renderPanel(c, legend){
   const p = $("#panel");
+  const as = $("#alertslot"); if (as) as.innerHTML = (c.alerta && !(state.tab === "guia" && c.guia && c.guia.urg)) ? `<div class="alerta" role="note">!<span>${esc(c.alerta)}</span></div>` : "";
+  setTimeout(() => { fades(document); const sel = document.querySelector('.tab[aria-selected="true"]'); if (sel) { const t = sel.parentElement; if (sel.offsetLeft + sel.offsetWidth > t.scrollLeft + t.clientWidth || sel.offsetLeft < t.scrollLeft) t.scrollLeft = sel.offsetLeft - 16; } }, 0);
   if (state.tab === "guia" && c.guia){ renderGuia(c, p); return; }
   if (state.tab === "calc" && c.guia){ renderCalcTab(c, p); return; }
   if (state.tab === "soap"){
@@ -14515,6 +14566,26 @@ function renderPanel(c, legend){
   }
 }
 
+// ── interface: favorito, menu, barra de cópia e indicação de rolagem
+function favLbl(on){ return `<span aria-hidden="true">${on?"★":"☆"}</span><span class="favl"> ${on?"Favorita":"Favoritar"}</span>`; }
+function menuClose(){ const mn = $("#menu"); if (mn && !mn.hidden){ mn.hidden = true; $("#menu-btn").setAttribute("aria-expanded", "false"); } }
+document.addEventListener("click", ev => { if (!ev.target.closest("#menu") && !ev.target.closest("#menu-btn")) setTimeout(menuClose, 0); }, true);
+document.addEventListener("keydown", ev => { if (ev.key === "Escape") menuClose(); });
+let headObs = null;
+function watchHead(){
+  const bar = $("#mbar"), act = document.querySelector("#main .head .actions");
+  if (headObs) headObs.disconnect();
+  if (!bar) return;
+  if (window.matchMedia("(max-width:760px)").matches || !act || !("IntersectionObserver" in window)){ bar.hidden = false; return; }
+  headObs = new IntersectionObserver(es => { es.forEach(e => { bar.hidden = e.isIntersecting; }); }, {root: $("#main").scrollHeight > $("#main").clientHeight ? $("#main") : null});
+  headObs.observe(act);
+}
+function fade(el){ const l = el.scrollLeft > 4, r = el.scrollLeft + el.clientWidth < el.scrollWidth - 4; el.classList.toggle("fl-l", l); el.classList.toggle("fl-r", r); }
+function fades(root){ (root || document).querySelectorAll(".tabs, .gnav, .mods").forEach(fade); }
+document.addEventListener("scroll", ev => { const el = ev.target; if (el && el.classList && (el.classList.contains("tabs") || el.classList.contains("gnav") || el.classList.contains("mods"))) fade(el); }, true);
+window.addEventListener("resize", () => fades(document));
+document.addEventListener("change", ev => { if (ev.target.id === "sys-sel"){ state.sys = ev.target.value; renderChips(); renderList(); } });
+
 // ── eventos
 document.addEventListener("click", ev => {
   const t = ev.target.closest("button"); if (!t) return;
@@ -14533,15 +14604,17 @@ document.addEventListener("click", ev => {
   if (t.dataset.pf){ pendFiltro = t.dataset.pf; renderPend(); return; }
   if (t.dataset.goto){ $("#dlg-pend").close(); const gc = get(t.dataset.goto); state.forceTab = "evid"; if (gc && modOf(gc) !== state.mod && !isAtalho(gc)) { trocarModulo(modOf(gc), gc.id); return; } state.sel = t.dataset.goto; renderList(); renderMain(); return; }
   if (t.dataset.cpped !== undefined){ copy(t.dataset.cpped, "Dose"); return; }
+  if (t.closest("#menu")) setTimeout(menuClose, 0);
   const c = get(state.sel);
-  switch (t.id){
+  switch (t.dataset.alias || t.id){
+    case "menu-btn": { const mn = $("#menu"); mn.hidden = !mn.hidden; t.setAttribute("aria-expanded", !mn.hidden); break; }
     case "back": state.sel = null; renderList(); renderMain(); break;
     case "cp-soap": copy(soapText(c, $("#soap-S") ? curSoap() : null), "SOAP"); break;
     case "cp-tudo": {
       const rx = (c.rx||[]).map((b,i)=>{ if (!rxVisible(b)) return null; const el=document.getElementById("rx-"+i); return (el?el.value:b.texto); }).filter(x=>x!==null).join("\n\n");
       copy(soapText(c, $("#soap-S") ? curSoap() : null) + "\n\nPRESCRIÇÃO\n" + rx, "SOAP e receita"); break; }
     case "reset-soap": ["S","O","A","P"].forEach(k=>{const el=$("#soap-"+k); el.value=c[k]||""; grow(el);}); break;
-    case "fav": { favs.has(c.id) ? favs.delete(c.id) : favs.add(c.id); saveFavs(); if (state.sys===FAV && !favs.size) state.sys="Todos"; t.setAttribute("aria-pressed", favs.has(c.id)); t.textContent = favs.has(c.id) ? "★ Favorita" : "☆ Favoritar"; renderChips(); renderList(); toast(favs.has(c.id) ? "Adicionada às favoritas" : "Removida das favoritas"); break; }
+    case "fav": { favs.has(c.id) ? favs.delete(c.id) : favs.add(c.id); saveFavs(); if (state.sys===FAV && !favs.size) state.sys="Todos"; t.setAttribute("aria-pressed", favs.has(c.id)); t.innerHTML = favLbl(favs.has(c.id)); renderChips(); renderList(); toast(favs.has(c.id) ? "Adicionada às favoritas" : "Removida das favoritas"); break; }
     case "edit": openEditor(c); break;
     case "novo": openEditor(null); break;
     case "restore": askRestore(c); break;

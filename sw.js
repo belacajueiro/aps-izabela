@@ -1,5 +1,5 @@
 // cache para funcionar sem internet; a versão muda a cada publicação
-const V = "aps-4c5a6a3d4c";
+const V = "aps-94316a4d18";
 const F = ["./", "index.html", "manifest.webmanifest", "icon-192.png", "icon-512.png"];
 self.addEventListener("install", e => { self.skipWaiting(); e.waitUntil(caches.open(V).then(c => c.addAll(F))); });
 self.addEventListener("activate", e => e.waitUntil(caches.keys().then(k => Promise.all(k.filter(x => x !== V).map(x => caches.delete(x)))).then(() => self.clients.claim())));

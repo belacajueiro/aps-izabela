@@ -3,6 +3,7 @@
 # Uso: sh deploy.sh "mensagem"  [REPO=/caminho/do/clone]
 set -e
 D=$(cd "$(dirname "$0")" && pwd); REPO=${REPO:-/home/claude/aps-izabela}
+(cd "$REPO" && git pull -q --rebase origin main)
 sh "$D/build.sh"
 python3 -I "$D/tools/sync_repo.py" "$REPO"
 cd "$REPO" && git add -A && git commit -q -m "${1:-Atualização}

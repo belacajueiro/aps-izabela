@@ -7,6 +7,11 @@ if os.path.isdir(os.path.join(D, 'img')):
     if os.path.isdir(os.path.join(R, 'img')): shutil.rmtree(os.path.join(R, 'img'))
     shutil.copytree(os.path.join(D, 'img'), os.path.join(R, 'img'))
 S = os.path.join(R, 'src')
+# o estado do monitor é gravado pelas tarefas agendadas direto no repositório: o repositório manda nesses arquivos
+RM = os.path.join(S, 'monitor')
+if os.path.isdir(RM):
+    for a in os.listdir(RM):
+        if re.match(r'(estado.*\.json|sentinelas.*\.md)$', a): shutil.copy2(os.path.join(RM, a), os.path.join(D, 'monitor', a))
 if os.path.isdir(S): shutil.rmtree(S)
 fora = re.compile(r'(\.bak|\.v\d+.*\.bak.*|^check\.js$|^index\.html$|^guia\.(js|css)$|^anamnesepro_v4\.html$|__pycache__)')
 for raiz, dirs, arqs in os.walk(D):

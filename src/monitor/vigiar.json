@@ -1,0 +1,105 @@
+{
+ "_leia": "Páginas oficiais vigiadas pelo monitor. 'docs' = regex dos links de documento que interessam (novos links = documento novo). Editar à vontade. Trocar o ano em ms_notas em janeiro (notas-tecnicas/2027).",
+ "paginas": [
+  {
+   "id": "cmed_precos",
+   "nome": "CMED – lista de preços (PMC)",
+   "url": "https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/cmed/precos",
+   "docs": "lista_pmc__\\d+",
+   "acao": "rodar tools/cmed_update.sh e revisar o No balcão"
+  },
+  {
+   "id": "fp_elenco",
+   "nome": "Farmácia Popular – elenco (PDF)",
+   "url": "https://www.gov.br/saude/pt-br/composicao/sectics/farmacia-popular/arquivos/elenco-de-medicamentos-e-insumos-pfpb.pdf",
+   "acao": "comparar com FP_ELENCO do app (app.html)"
+  },
+  {
+   "id": "fp_pagina",
+   "nome": "Farmácia Popular – página",
+   "url": "https://www.gov.br/saude/pt-br/composicao/sectics/farmacia-popular",
+   "docs": "\\.pdf"
+  },
+  {
+   "id": "conitec_pcdt",
+   "nome": "CONITEC – PCDT publicados",
+   "url": "https://www.gov.br/conitec/pt-br/protocolos-clinicos-e-diretrizes-terapeuticas/protocolos-clinicos-e-diretrizes-terapeuticas"
+  },
+  {
+   "id": "conitec_pcdt_elab",
+   "nome": "CONITEC – PCDT em elaboração",
+   "url": "https://www.gov.br/conitec/pt-br/protocolos-clinicos-e-diretrizes-terapeuticas/pcdt-em-elaboracao"
+  },
+  {
+   "id": "conitec_recom",
+   "nome": "CONITEC – recomendações",
+   "url": "https://www.gov.br/conitec/pt-br/assuntos/avaliacao-de-tecnologias-em-saude/recomendacoes-conitec",
+   "docs": "recomendacoesdaconitec_\\d+",
+   "acao": "abrir a planilha nova e ver recomendações publicadas desde o último mês"
+  },
+  {
+   "id": "conitec_ddt",
+   "nome": "CONITEC – DDT",
+   "url": "https://www.gov.br/conitec/pt-br/protocolos-clinicos-e-diretrizes-terapeuticas/ddt"
+  },
+  {
+   "id": "conitec_cp",
+   "nome": "CONITEC – consultas públicas vigentes",
+   "url": "https://www.gov.br/conitec/pt-br/assuntos/participacao-social/consultas-publicas/vigentes"
+  },
+  {
+   "id": "ms_notas",
+   "nome": "MS – notas técnicas 2026",
+   "url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026",
+   "docs": "notas-tecnicas/2026/.+\\.(pdf|xlsx)/view",
+   "paginar": 30,
+   "acao": "abrir as notas novas e ver se tocam temas do app"
+  },
+  {
+   "id": "ms_calendario",
+   "nome": "MS – Calendário Nacional de Vacinação",
+   "url": "https://www.gov.br/saude/pt-br/vacinacao/calendario",
+   "docs": "vacinacao/arquivos/"
+  },
+  {
+   "id": "rename",
+   "nome": "MS – RENAME",
+   "url": "https://www.gov.br/saude/pt-br/composicao/sectics/rename"
+  },
+  {
+   "id": "gina",
+   "nome": "GINA – relatórios",
+   "url": "https://ginasthma.org/reports/",
+   "docs": "\\.pdf|\\d{4}-gina"
+  },
+  {
+   "id": "gold",
+   "nome": "GOLD – relatório",
+   "url": "https://goldcopd.org/2026-gold-report/",
+   "docs": "\\.pdf"
+  },
+  {
+   "id": "sbd",
+   "nome": "SBD – Diretriz",
+   "url": "https://diretriz.diabetes.org.br/"
+  },
+  {
+   "id": "kdigo",
+   "nome": "KDIGO – diretrizes",
+   "url": "https://kdigo.org/guidelines/",
+   "docs": "guideline"
+  },
+  {
+   "id": "betim",
+   "nome": "Prefeitura de Betim",
+   "url": "https://www.betim.mg.gov.br/",
+   "docs": "saude|remume|\\.pdf"
+  },
+  {
+   "id": "sesmg",
+   "nome": "SES-MG",
+   "url": "https://www.saude.mg.gov.br/",
+   "docs": "nota|deliberacao|\\.pdf"
+  }
+ ]
+}

@@ -1,0 +1,47 @@
+,
+ {id:"cha2ds2va", nome:"CHA₂DS₂-VA (FA: risco de AVC)", itens:[
+   {t:"Insuficiência cardíaca ou disfunção de VE", p:1},{t:"Hipertensão arterial", p:1},
+   {t:"Idade", sel:opt([["< 65 anos",0],["65–74 anos",1],["≥ 75 anos",2]])},
+   {t:"Diabetes", p:1},{t:"AVC, AIT ou tromboembolismo prévio", p:2},{t:"Doença vascular (IAM prévio, doença arterial periférica, placa aórtica)", p:1}],
+   interp:s => s>=2 ? "≥ 2: anticoagulação oral recomendada (ESC 2024, classe I)." : s===1 ? "1: considerar anticoagulação oral (ESC 2024, classe IIa), em decisão compartilhada." : "0: anticoagulação não indicada pelo escore; reavaliar periodicamente.",
+   nota:"ESC 2024 retirou o sexo feminino do escore (CHA₂DS₂-VA). Não se aplica a estenose mitral moderada/grave ou prótese mecânica."},
+ {id:"hasbled", nome:"HAS-BLED (risco de sangramento)", itens:[
+   {t:"Hipertensão não controlada (PAS > 160)", p:1},{t:"Função renal alterada (diálise, transplante, creatinina > 2,26 mg/dL)", p:1},{t:"Função hepática alterada (cirrose ou bilirrubina > 2× e transaminases > 3×)", p:1},
+   {t:"AVC prévio", p:1},{t:"Sangramento prévio ou predisposição (anemia)", p:1},{t:"INR lábil (tempo na faixa < 60%)", p:1},{t:"Idade > 65 anos", p:1},
+   {t:"Antiagregante ou AINE em uso", p:1},{t:"Álcool ≥ 8 doses por semana", p:1}],
+   interp:s => s>=3 ? "≥ 3: alto risco de sangramento. Corrigir fatores modificáveis (PA, AINE, álcool, INR) e seguir de perto – não é motivo, sozinho, para negar a anticoagulação." : "0–2: risco de sangramento baixo a moderado; corrigir fatores modificáveis."},
+ {id:"rankin", nome:"Escala de Rankin modificada", itens:[{t:"Grau funcional atual", sel:opt([["0 – sem sintomas",0],["1 – sintomas sem incapacidade; faz as atividades habituais",1],["2 – incapacidade leve; cuida de si sem ajuda, mas não faz tudo o que fazia",2],["3 – incapacidade moderada; precisa de alguma ajuda, mas anda sem ajuda",3],["4 – moderada a grave; não anda nem cuida de si sem ajuda",4],["5 – grave; acamado, incontinente, cuidado constante",5],["6 – óbito",6]])}],
+   interp:s => s<=2 ? "Independente (mRS 0–2)." : s===3 ? "Dependência moderada (mRS 3): reabilitação, adaptação domiciliar, apoio ao cuidador." : s<=5 ? "Dependência importante: plano de cuidado domiciliar, prevenção de úlceras, disfagia e quedas; apoio ao cuidador." : "Óbito."},
+ {id:"barthel", nome:"Índice de Barthel (AVD)", itens:[
+   {t:"Alimentação", sel:opt([["Dependente",0],["Precisa de ajuda (cortar, passar manteiga)",5],["Independente",10]])},
+   {t:"Banho", sel:opt([["Dependente",0],["Independente",5]])},
+   {t:"Higiene pessoal (rosto, cabelo, dentes, barbear)", sel:opt([["Precisa de ajuda",0],["Independente",5]])},
+   {t:"Vestir-se", sel:opt([["Dependente",0],["Precisa de ajuda, faz metade",5],["Independente (botões, zíper, cadarço)",10]])},
+   {t:"Intestino", sel:opt([["Incontinente",0],["Acidente ocasional",5],["Continente",10]])},
+   {t:"Bexiga", sel:opt([["Incontinente ou cateterizado",0],["Acidente ocasional",5],["Continente",10]])},
+   {t:"Uso do vaso sanitário", sel:opt([["Dependente",0],["Precisa de alguma ajuda",5],["Independente",10]])},
+   {t:"Transferência cama–cadeira", sel:opt([["Incapaz",0],["Grande ajuda (1–2 pessoas), senta",5],["Pequena ajuda verbal ou física",10],["Independente",15]])},
+   {t:"Mobilidade em superfície plana", sel:opt([["Imóvel ou < 50 m",0],["Independente em cadeira de rodas > 50 m",5],["Anda com ajuda de 1 pessoa > 50 m",10],["Independente > 50 m (pode usar bengala)",15]])},
+   {t:"Escadas", sel:opt([["Incapaz",0],["Precisa de ajuda",5],["Independente",10]])}],
+   interp:s => s===100 ? "Independente (100)." : s>=91 ? "Dependência leve (91–99)." : s>=61 ? "Dependência moderada (61–90)." : s>=21 ? "Dependência grave (21–60)." : "Dependência total (0–20).",
+   nota:"Pontos de corte de Shah et al. (1989); reavaliar a cada visita para acompanhar a reabilitação."},
+ {id:"gds15", nome:"GDS-15 (depressão geriátrica)", itens:[
+   ["1. Está satisfeito(a) com a sua vida?",0],["2. Deixou muitos de seus interesses e atividades?",1],["3. Sente que sua vida está vazia?",1],["4. Aborrece-se com frequência?",1],["5. Sente-se de bom humor a maior parte do tempo?",0],["6. Tem medo de que algum mal vá lhe acontecer?",1],["7. Sente-se feliz a maior parte do tempo?",0],["8. Sente que sua situação não tem saída?",1],["9. Prefere ficar em casa a sair e fazer coisas novas?",1],["10. Acha que tem mais problemas de memória que a maioria?",1],["11. Acha que é maravilhoso estar vivo(a)?",0],["12. Sente-se inútil nas atuais circunstâncias?",1],["13. Sente-se cheio(a) de energia?",0],["14. Acha que sua situação é sem esperança?",1],["15. Acha que a maioria das pessoas está melhor que você?",1]
+   ].map(([t,simRisco])=>({t, sel: simRisco ? opt([["— responda —",null],["Não",0],["Sim",1]]) : opt([["— responda —",null],["Sim",0],["Não",1]])})), exige:true,
+   interp:s => s>=6 ? "≥ 6: rastreio positivo (ponto de corte 5/6 na validação brasileira de Almeida & Almeida, 1999) – avaliação clínica para depressão; no pós-AVC, depressão é comum e tratável." : "≤ 5: rastreio negativo; reaplicar se houver mudança de humor, sono ou funcionalidade.",
+   nota:"Itens em paráfrase da versão brasileira; pontua 1 a resposta sugestiva de depressão."},
+ {id:"fagerstrom", nome:"Fagerström (dependência de nicotina)", itens:[
+   {t:"Quanto tempo após acordar fuma o primeiro cigarro?", sel:opt([["Após 60 min",0],["31–60 min",1],["6–30 min",2],["Nos primeiros 5 min",3]])},
+   {t:"Acha difícil não fumar em locais proibidos?", sel:opt([["Não",0],["Sim",1]])},
+   {t:"Qual cigarro do dia traz mais satisfação (mais difícil de largar)?", sel:opt([["Outros",0],["O primeiro da manhã",1]])},
+   {t:"Quantos cigarros fuma por dia?", sel:opt([["≤ 10",0],["11–20",1],["21–30",2],["≥ 31",3]])},
+   {t:"Fuma mais nas primeiras horas da manhã do que no resto do dia?", sel:opt([["Não",0],["Sim",1]])},
+   {t:"Fuma mesmo doente, acamado a maior parte do dia?", sel:opt([["Não",0],["Sim",1]])}],
+   interp:s => s<=2 ? "Dependência muito baixa (0–2)." : s<=4 ? "Dependência baixa (3–4)." : s===5 ? "Dependência média (5): considerar farmacoterapia." : s<=7 ? "Dependência elevada (6–7): farmacoterapia indicada (TRN e/ou bupropiona)." : "Dependência muito elevada (8–10): farmacoterapia combinada e abordagem intensiva."},
+ {id:"childpugh", nome:"Child-Pugh (cirrose)", itens:[
+   {t:"Bilirrubina total", sel:opt([["< 2 mg/dL",1],["2–3 mg/dL",2],["> 3 mg/dL",3]])},
+   {t:"Albumina", sel:opt([["> 3,5 g/dL",1],["2,8–3,5 g/dL",2],["< 2,8 g/dL",3]])},
+   {t:"INR", sel:opt([["< 1,7",1],["1,7–2,3",2],["> 2,3",3]])},
+   {t:"Ascite", sel:opt([["Ausente",1],["Leve / controlada",2],["Moderada a grave",3]])},
+   {t:"Encefalopatia", sel:opt([["Ausente",1],["Grau 1–2",2],["Grau 3–4",3]])}],
+   interp:s => s<=6 ? "Classe A (5–6)." : s<=9 ? "Classe B (7–9): ajustar doses hepáticas; avaliar encaminhamento." : "Classe C (10–15): doença avançada – hepatologia."}

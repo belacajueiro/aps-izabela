@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-14T22:52:01.812Z",
+ "gerado": "2026-10-14T23:07:43.408Z",
  "cmed": {
   "data": "09/10/2026",
   "fonte": "cmed_pmc2026",
@@ -29,6 +29,7 @@
   "ats_pac",
   "sbpt_pac",
   "gold",
+  "pcdt_dpoc",
   "cochrane_bronq",
   "aria",
   "zoster_ecr",
@@ -130,6 +131,7 @@
   "quedas_2022",
   "olho_vermelho",
   "dii",
+  "febrasgo_rh",
   "acog700",
   "chap",
   "aspre",
@@ -170,6 +172,7 @@
   "oms_af2020",
   "bsg_ferro2021",
   "inca_colo2016",
+  "mg_hpv",
   "acr_birads",
   "uspstf_mama",
   "aps_mulher2016",
@@ -387,6 +390,8 @@
   "ata_hipo",
   "marcos_cad",
   "acidentes",
+  "sbd_metas",
+  "sbd_sus",
   "tdc_drc",
   "tdc_osteo",
   "ettehad",
@@ -467,7 +472,7 @@
    "s": "",
    "t": "Ministério da Saúde. Dengue: diagnóstico e manejo clínico – adulto e criança. 6ª ed. 2024 (diretriz/manual MS).",
    "f": "F",
-   "url": "https://portaldeboaspraticas.iff.fiocruz.br/wp-content/uploads/2024/02/dengue-manejo-clinico.pdf",
+   "url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/svsa/dengue/dengue-diagnostico-e-manejo-clinico-adulto-e-crianca",
    "ano": 2024,
    "usado_em": [
     "chikungunya",
@@ -482,7 +487,7 @@
    "s": "",
    "t": "Ministério da Saúde. Nota Técnica nº 8/2022-CGZV/DEIDT/SVS/MS – atualização do protocolo de profilaxia pré, pós e reexposição da raiva humana (norma).",
    "f": "F",
-   "url": "https://familia.sbim.org.br/images/files/notas-tecnicas/cgzv-deidt-svs-ms-protocoloraiva-100322.pdf",
+   "url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/r/raiva/notas-tecnicas-e-informativas/nota-tecnica-no-8-2022-cgzv-deidt-svs-ms",
    "ano": 2022,
    "usado_em": [
     "raiva"
@@ -1297,13 +1302,11 @@
   {
    "k": "pcdt_dpoc",
    "s": "PCDT DPOC 2021",
-   "t": "Ministério da Saúde. PCDT da Doença Pulmonar Obstrutiva Crônica – Portaria Conjunta SAES/SCTIE nº 19/2021: exacerbação – salbutamol 200–400 mcg (2–4 jatos) a cada 4–6 h até melhora; prednisona ou prednisolona 40 mg/dia por 5 dias (estender a 10–14 dias se não melhorar); ipratrópio 40 mcg (2 jatos) 3–4×/dia, máximo 240 mcg/dia; critérios de internação; manutenção por grupos A–D com LABA, LAMA/LABA (tiotrópio+olodaterol, umeclidínio+vilanterol) e CI pelos critérios do protocolo; antibiótico na exacerbação sem esquema especificado (norma).",
+   "t": "Ministério da Saúde. PCDT da Doença Pulmonar Obstrutiva Crônica – Portaria Conjunta SAES/SCTIE nº 19/2021: exacerbação – salbutamol 200–400 mcg (2–4 jatos) a cada 4–6 h até melhora; prednisona ou prednisolona 40 mg/dia por 5 dias (estender a 10–14 dias se não melhorar); ipratrópio 40 mcg (2 jatos) 3–4×/dia, máximo 240 mcg/dia; critérios de internação; manutenção por grupos A–D com LABA, LAMA/LABA (tiotrópio+olodaterol, umeclidínio+vilanterol) e CI pelos critérios do protocolo; antibiótico na exacerbação sem esquema especificado (norma). Substituído pelo PCDT DPOC 2025 (Portaria Conjunta nº 29/2025).",
    "f": "F",
-   "url": "https://www.gov.br/saude/pt-br/assuntos/pcdt/arquivos/2022/portal-portaria-conjunta_no-19_2021_pcdt_dpoc__.pdf",
-   "ano": 2021,
-   "usado_em": [
-    "dpoc-exac"
-   ]
+   "url": "",
+   "ano": 2025,
+   "usado_em": []
   },
   {
    "k": "cochrane_bronq",
@@ -1668,7 +1671,7 @@
    "s": "PCDT Tabagismo 2020",
    "t": "Ministério da Saúde. PCDT do Tabagismo – Portaria Conjunta SCTIE/SAES/MS nº 10, de 16/04/2020 (substitui a Portaria SAS/MS nº 761/2016): TRN combinada preferencial, adesivo pelo nº de cigarros/dia (1 mg por cigarro, máximo 42 mg), bupropiona 150 mg até o 84º dia, critérios de aconselhamento isolado; versão resumida oficial conferida (PDF no Drive da usuária) (norma).",
    "f": "F",
-   "url": "https://www.gov.br/saude/pt-br/assuntos/pcdt/arquivos/2020/pcdt_tabagismo.pdf",
+   "url": "https://www.gov.br/saude/pt-br/assuntos/pcdt/t/tabagismo",
    "ano": 2020,
    "usado_em": [
     "tabagismo"
@@ -2762,7 +2765,7 @@
    "s": "",
    "t": "Ministério da Saúde/SAPS. Caderneta Brasileira da Gestante, 2026 (material oficial do MS): consultas, exames por trimestre, vacinas, sinais de alerta e puerpério.",
    "f": "F",
-   "url": "https://www.gov.br/saude/pt-br/composicao/saps/publicacoes/cadernetas-e-cartoes/caderneta-brasileira-da-gestante.pdf",
+   "url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/s/saude-da-mulher/publicacoes/caderneta-brasileira-da-gestante.pdf",
    "ano": 2026,
    "usado_em": [
     "pn-1consulta",
@@ -2896,10 +2899,10 @@
   {
    "k": "febrasgo_rh",
    "s": "",
-   "t": "FEBRASGO. Fluxograma de isoimunização Rh, 2023 (anti-D 300 µg entre 28 e 34 semanas se disponível; pós-parto até 72 h) (diretriz de sociedade).",
+   "t": "FEBRASGO. Fluxograma de isoimunização Rh, 2023 (anti-D 300 µg entre 28 e 34 semanas se disponível; pós-parto até 72 h) (diretriz de sociedade). O link do fluxograma foi retirado do site da FEBRASGO e não foi localizado em outro endereço em 14/10/2026.",
    "f": "F",
-   "url": "https://www.febrasgo.org.br/fluxopdf/assets/pdf/Isoimunizacao.pdf",
-   "ano": 2023,
+   "url": "",
+   "ano": 2026,
    "usado_em": [
     "pn-rh"
    ]
@@ -3266,7 +3269,7 @@
    "s": "",
    "t": "Ministério da Saúde. PCDT Dislipidemia: prevenção de eventos cardiovasculares e pancreatite – Portaria Conjunta nº 8, de 30/07/2019 (norma).",
    "f": "F",
-   "url": "https://www.gov.br/saude/pt-br/assuntos/pcdt/arquivos/2022/portaria-conjunta-no-08-pcdt-dislipidemia.pdf",
+   "url": "https://www.gov.br/saude/pt-br/assuntos/pcdt/d/dislipidemia",
    "ano": 2019,
    "usado_em": [
     "cr-dac",
@@ -3503,7 +3506,7 @@
    "s": "",
    "t": "Ministério da Saúde/PNI. Calendário Nacional de Vacinação da Criança 2026 e Calendário Técnico (atualizado em 30/01/2026) (norma).",
    "f": "F",
-   "url": "https://www.gov.br/saude/pt-br/vacinacao/calendario-tecnico/calendario-tecnico-nacional-de-vacinacao-crianca",
+   "url": "https://www.gov.br/saude/pt-br/composicao/svsa/pni/calendario-tecnico/calendario-tecnico-nacional-de-vacinacao-crianca",
    "ano": 2026,
    "usado_em": [
     "pu-12m",
@@ -3855,12 +3858,13 @@
   {
    "k": "pcdt_dpoc2025",
    "s": "PCDT DPOC 2025",
-   "t": "Ministério da Saúde/CONITEC. PCDT Doença Pulmonar Obstrutiva Crônica – Relatório de Recomendação nº 1.046 (nov/2025) (norma). Conteúdo conferido na versão de consulta pública nº 35 (mai/2025), arquivada no Drive; conferir a versão final publicada.",
+   "t": "Ministério da Saúde. PCDT da Doença Pulmonar Obstrutiva Crônica – Portaria Conjunta SAES/SCTIE nº 29, de 27/11/2025 (texto final conferido em 14/10/2026): classificação ABE; LAMA+LABA (tiotrópio+olodaterol 2,5+2,5 mcg; umeclidínio+vilanterol 62,5+25 mcg) e terapias triplas pelo CEAF; exacerbação: salbutamol 200–400 mcg (2–4 jatos) a cada 4–6 h até melhora, nebulização com salbutamol 2,5 mg (a cada 20 min nas primeiras horas, sob monitoramento), ipratrópio 40 mcg 3–4 vezes/dia (máx. 240 mcg/dia), prednisona ou prednisolona 40 mg/dia por 5 dias, estendendo a 10–14 dias se não melhorar no 5º dia (norma).",
    "f": "F",
-   "url": "https://www.gov.br/conitec/pt-br/midias/relatorios/2025/relatorio-de-recomendacao-no-1-046-pcdt-da-doenca-pulmonar-obstrutiva-cronica",
-   "ano": 2025,
+   "url": "https://www.gov.br/saude/pt-br/assuntos/pcdt/d/doenca-pulmonar-obstrutiva-cronica",
+   "ano": 2026,
    "usado_em": [
-    "cr-dpoc"
+    "cr-dpoc",
+    "dpoc-exac"
    ]
   },
   {
@@ -3878,10 +3882,10 @@
   {
    "k": "sbd_metas",
    "s": "SBD – Metas",
-   "t": "Sociedade Brasileira de Diabetes. Metas no tratamento do diabetes (Diretriz SBD; DOI 10.29327/557753.2022-3), lido no Drive (diretriz de sociedade).",
-   "f": "F",
-   "url": "https://doi.org/10.29327/557753.2022-3",
-   "ano": 2022,
+   "t": "Sociedade Brasileira de Diabetes. Metas no tratamento do diabetes (Diretriz SBD; DOI 10.29327/557753.2022-3), lido no Drive (diretriz de sociedade). Capítulo substituído pela versão 2026 'Metas de controle glicêmico' (DOI 10.29327/5881296.2026-1); conferir se as metas do app mudaram.",
+   "f": "NV",
+   "url": "https://diretriz.diabetes.org.br/metas-de-controle-glicemico/",
+   "ano": 2026,
    "usado_em": [
     "cr-dm2",
     "cr-prediabetes"
@@ -3890,10 +3894,10 @@
   {
    "k": "sbd_sus",
    "s": "SBD – DM2 no SUS",
-   "t": "Sociedade Brasileira de Diabetes. Tratamento do DM2 no SUS (revisão 25/06/2024; DOI 10.29327/5412848.2024-3), lido no Drive (diretriz de sociedade, resume o PCDT DM2 2024).",
-   "f": "F",
-   "url": "https://doi.org/10.29327/5412848.2024-3",
-   "ano": 2024,
+   "t": "Sociedade Brasileira de Diabetes. Tratamento do DM2 no SUS (revisão 25/06/2024; DOI 10.29327/5412848.2024-3), lido no Drive (diretriz de sociedade, resume o PCDT DM2 2024). Capítulo substituído pela versão 2026 'Tratamento do DM2 no SUS' (DOI 10.29327/5937204.2026-1); conferir o conteúdo do app.",
+   "f": "NV",
+   "url": "https://diretriz.diabetes.org.br/tratamento-do-dm2-no-sistema-unico-de-saude-sus/",
+   "ano": 2026,
    "usado_em": [
     "cr-b12",
     "cr-dm2",
@@ -4200,9 +4204,9 @@
   {
    "k": "mg_hpv",
    "s": "Agência Minas – DNA-HPV",
-   "t": "Agência Minas (31/03, ano não informado no texto): teste molecular de HPV implantado em municípios-piloto de MG (Uberaba e Juiz de Fora desde o fim de 2025; Diamantina e Santo Antônio do Monte previstos em 2026), com expansão gradual (notícia oficial).",
+   "t": "Agência Minas (31/03, ano não informado no texto): teste molecular de HPV implantado em municípios-piloto de MG (Uberaba e Juiz de Fora desde o fim de 2025; Diamantina e Santo Antônio do Monte previstos em 2026), com expansão gradual (notícia oficial). O PDF da Agência Minas foi retirado do ar e não foi localizado em outro endereço em 14/10/2026.",
    "f": "F",
-   "url": "https://agenciaminas.mg.gov.br/news/pdf/129541.pdf",
+   "url": "",
    "ano": 2026,
    "usado_em": [
     "mu-colo",
@@ -4226,7 +4230,7 @@
    "s": "SES-MG – BRCA",
    "t": "Agência Minas (28/10, ano não informado no texto): teste genético BRCA1/BRCA2 pelo SUS-MG, em convênio com a UFMG, previsto para o início de 2026, para mulheres com histórico pessoal ou familiar de câncer de mama/ovário segundo critérios da SES-MG (notícia oficial).",
    "f": "F",
-   "url": "https://www.agenciaminas.mg.gov.br/news/pdf/128015.pdf",
+   "url": "https://www.agenciaminas.mg.gov.br/noticia/governo-de-minas-passa-a-oferecer-teste-genetico-gratuito-para-deteccao-de-cancer-de-mama-e-de-ovario",
    "ano": 2026,
    "usado_em": [
     "mu-mama"
@@ -5478,7 +5482,7 @@
    "s": "Escala de Coelho-Savassi",
    "t": "Coelho FLG, Savassi LCM. Aplicação de Escala de Risco Familiar como instrumento de priorização das visitas domiciliares. Rev Bras Med Fam Comunidade 2004;1(2):19-26 – sentinelas da Ficha A e relação morador/cômodo; 5–6 risco menor (R1), 7–8 médio (R2), ≥ 9 máximo (R3) (material UNA-SUS conferido; tabela com diagramação irregular) (instrumento brasileiro).",
    "f": "F",
-   "url": "https://app4.unasus.gov.br/ppuplayer4_idoso/uploads/recursos/SE_UNASUS_0002_IDOSO_ACOES_ESTRATEGICAS/8/assets/lib/docs/Vulnerabilidade_Familiar_Escala_Coelho_Savassi.pdf",
+   "url": "https://rbmfc.org.br/rbmfc/article/view/104",
    "ano": 2004,
    "usado_em": [
     "po-pobreza",
@@ -5930,10 +5934,10 @@
   {
    "k": "pcdt_asma2023",
    "s": "PCDT Asma 2023",
-   "t": "Ministério da Saúde. PCDT da Asma – Portaria Conjunta SAES/SECTICS nº 32, de 20/12/2023: crise – salbutamol 100–200 mcg a cada 20 min (1–2 doses); moderada/grave 4 jatos a cada 10 min ou 8 a cada 20 min por até 4 h; criança 22,5–30 mcg/kg/dose (até 9 jatos com espaçador) ou 0,15 mg/kg nebulizado (máx. 5 mg); prednisona 40–60 mg/dia (adulto) e prednisolona 1–2 mg/kg/dia (criança; ≥ 40 kg = adulto), sem desmame até 7 dias; CI doses (≥ 12 anos): beclometasona 200–500 baixa, > 500–1.000 média, > 1.000 alta mcg/dia; nenhum paciente deve usar só SABA; formoterol máximo 72 mcg/dia (adulto) e 48 mcg/dia (> 6 anos) na estratégia de manutenção e resgate (norma).",
+   "t": "Ministério da Saúde. PCDT da Asma – Portaria Conjunta SAES/SECTICS nº 32, de 20/12/2023: crise – salbutamol 100–200 mcg a cada 20 min (1–2 doses); moderada/grave 4 jatos a cada 10 min ou 8 a cada 20 min por até 4 h; criança 22,5–30 mcg/kg/dose (até 9 jatos com espaçador) ou 0,15 mg/kg nebulizado (máx. 5 mg); prednisona 40–60 mg/dia (adulto) e prednisolona 1–2 mg/kg/dia (criança; ≥ 40 kg = adulto), sem desmame até 7 dias; CI doses (≥ 12 anos): beclometasona 200–500 baixa, > 500–1.000 média, > 1.000 alta mcg/dia; nenhum paciente deve usar só SABA; formoterol máximo 72 mcg/dia (adulto) e 48 mcg/dia (> 6 anos) na estratégia de manutenção e resgate (norma). Texto do PCDT conferido no Relatório de Recomendação CONITEC nº 785 (2023). Substituído pelo PCDT 2026 no adulto; usado aqui só para a dose pediátrica de salbutamol, que o PCDT 2026 não detalha.",
    "f": "F",
-   "url": "https://www.gov.br/saude/pt-br/assuntos/pcdt/arquivos/2023/portaria-conjunta-saes-sectics-no-32-pcdt-asma.pdf",
-   "ano": 2023,
+   "url": "https://www.gov.br/conitec/pt-br/midias/relatorios/2023/20230524_relatorio_pcdtasma_785_final.pdf/@@download/file",
+   "ano": 2026,
    "usado_em": [
     "asma-crianca",
     "asma-crise"
@@ -5944,7 +5948,7 @@
    "s": "SBCe 2022 – profilaxia da migrânea",
    "t": "Consenso da Sociedade Brasileira de Cefaleia para o tratamento profilático da migrânea episódica – parte I. Arq Neuropsiquiatr 2022;80(8):845-861 (DOI 10.1055/s-0042-1756441): indicar profilaxia com ≥ 3 crises/mês por ≥ 3 meses, crises muito incapacitantes, falha do tratamento agudo ou auras especiais; dose baixa e titulação lenta, avaliar por 2–3 meses, manter ≥ 6 meses; propranolol 40–240 mg/dia (A), amitriptilina 10–150 mg/dia (A), topiramato 50–200 mg/dia (A), valproato 250–1.000 mg/dia (A) (consenso de sociedade).",
    "f": "F",
-   "url": "https://thieme-connect.de/products/ejournals/html/10.1055/s-0042-1756441",
+   "url": "https://doi.org/10.1055/s-0042-1756441",
    "ano": 2022,
    "usado_em": [
     "migranea"
@@ -6919,7 +6923,7 @@
    "nv": 1,
    "fontes": [
     "gold",
-    "pcdt_dpoc",
+    "pcdt_dpoc2025",
     "rename",
     "remume",
     "pack2025"

@@ -1,5 +1,5 @@
 {
- "_leia": "Páginas oficiais vigiadas pelo monitor. 'docs' = regex dos links de documento que interessam (novos links = documento novo). Editar à vontade. Trocar o ano em ms_notas em janeiro (notas-tecnicas/2027).",
+ "_leia": "Páginas oficiais vigiadas pelo monitor. 'docs' = regex dos links de documento que interessam (novos links = documento novo). Editar à vontade. Trocar o ano em ms_notas em janeiro (notas-tecnicas/2027). Itens com tipo 'radar' são fontes secundárias (apoio): só apontam o que conferir na fonte primária e nunca entram como referência do app.",
  "paginas": [
   {
    "id": "cmed_precos",
@@ -100,6 +100,27 @@
    "nome": "SES-MG",
    "url": "https://www.saude.mg.gov.br/",
    "docs": "nota|deliberacao|\\.pdf"
+  },
+  {
+   "id": "tdc_home",
+   "tipo": "radar",
+   "nome": "Tá de Clinicagem – conteúdos novos",
+   "url": "https://www.tadeclinicagem.com.br/",
+   "docs": "/content/(podcast|youtube|instagram)/[^/]+/$|/guia/[^/]+/$"
+  },
+  {
+   "id": "tdc_blog",
+   "tipo": "radar",
+   "nome": "Tá de Clinicagem – blog",
+   "url": "https://www.tadeclinicagem.com.br/blog/",
+   "docs": "/blog/[^/]+/$"
+  },
+  {
+   "id": "afya_portal",
+   "tipo": "radar",
+   "nome": "Portal Afya (ex-PEBMED) – artigos",
+   "url": "https://portal.afya.com.br/",
+   "docs": "portal\\.afya\\.com\\.br/[a-z-]+/[a-z0-9-]{20,}"
   }
  ]
 }

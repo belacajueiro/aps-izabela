@@ -41,7 +41,9 @@ def main():
     vig = json.load(open(os.path.join(M, 'vigiar.json')))['paginas']
     novo = {'data': hoje, 'paginas': {}, 'fontes': {}}
     rel = [f'# Sentinelas – {hoje}', '', f'Estado anterior: {ant.get("data") or "nenhum (primeira execução: só cria a linha de base)"}', '', '## Páginas vigiadas', '']
+    radar = ['', '## Radar (fontes secundárias – só apontam o que conferir na fonte primária)', '']
     for p in vig:
+        alvo_rel = radar if p.get('tipo') == 'radar' else rel
         r = get(p['url'])
         a = ant['paginas'].get(p['id'], {})
         if r['st'] == 200 and p.get('paginar'):
@@ -52,20 +54,20 @@ def main():
                 extra += g['corpo']
             r['corpo'] += extra
         if r['st'] != 200:
-            rel.append(f"- ⚠ **{p['nome']}** – não abriu ({r['st']} {r.get('erro','')}). {p['url']}"); novo['paginas'][p['id']] = a; continue
+            alvo_rel.append(f"- ⚠ **{p['nome']}** – não abriu ({r['st']} {r.get('erro','')}). {p['url']}"); novo['paginas'][p['id']] = a; continue
         b = r['corpo']; pdf = r['tipo'].startswith('application/pdf') or p['url'].lower().endswith('.pdf')
         h = hashlib.sha1(b if pdf else texto(b).encode()).hexdigest()[:16]
         lk = [] if pdf else links(b, r['final'], p.get('docs'))
         novo['paginas'][p['id']] = {'hash': h, 'links': lk, 'tam': len(b)}
         if not a:
-            rel.append(f"- {p['nome']}: linha de base criada ({len(lk)} links)."); continue
+            alvo_rel.append(f"- {p['nome']}: linha de base criada ({len(lk)} links)."); continue
         add = [u for u in lk if u not in set(a.get('links', []))]; rem = [u for u in a.get('links', []) if u not in set(lk)]
-        if add or rem or h != a.get('hash'):
-            rel.append(f"- 🔔 **{p['nome']}** mudou" + (f" – {p['acao']}" if p.get('acao') else '') + f". {p['url']}")
-            rel += [f"  - novo: {u}" for u in add[:25]] + [f"  - saiu: {u}" for u in rem[:10]]
-            if not add and not rem: rel.append('  - (texto da página mudou; nenhum link novo de documento)')
+        if add or rem or (h != a.get('hash') and not p.get('docs')):  # com 'docs', só links novos contam (evita ruído de notícias)
+            alvo_rel.append(f"- 🔔 **{p['nome']}** mudou" + (f" – {p['acao']}" if p.get('acao') else '') + f". {p['url']}")
+            alvo_rel += [f"  - novo: {u}" for u in add[:25]] + [f"  - saiu: {u}" for u in rem[:10]]
+            if not add and not rem: alvo_rel.append('  - (texto da página mudou; nenhum link novo de documento)')
         else:
-            rel.append(f"- {p['nome']}: sem mudança.")
+            alvo_rel.append(f"- {p['nome']}: sem mudança.")
     if '--sem-fontes' not in sys.argv:
         fj = os.path.join(D, 'site', 'fontes.json')
         if not os.path.exists(fj): fj = os.path.join(os.path.dirname(D), 'fontes.json')  # no clone do repo: fontes.json fica na raiz
@@ -93,6 +95,7 @@ def main():
         if ant['fontes'] and not mud: rel.append('- Nenhuma fonte com sinal de nova versão (ETag/data/tamanho).')
     else:
         novo['fontes'] = ant.get('fontes', {})
+    if len(radar) > 3: rel += radar
     json.dump(novo, open(est_p, 'w'), ensure_ascii=False, indent=0)
     open(rel_p, 'w').write('\n'.join(rel) + '\n')
     print('\n'.join(rel))

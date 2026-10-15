@@ -479,6 +479,48 @@ details.gdet[open]>summary{border-bottom:1px solid var(--line);margin-bottom:10p
 .pw-b textarea{width:100%;min-height:120px;border:1px solid var(--line);border-radius:8px;background:var(--sunk);padding:8px 10px}
 .pw-src{font:500 .66rem var(--f-mono);color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:0 4px;white-space:nowrap}
 .pw-go{padding:1px 8px;font-size:.75rem;margin-left:4px}
+
+/* ── v39: página inicial (grade de atalhos, busca, seus atalhos) */
+.home{max-width:820px;margin:0 auto;display:grid;gap:22px}
+.home-h{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.home-h h2{font:700 clamp(1.5rem,3.2vw,1.9rem)/1.1 var(--f-display);margin:0;letter-spacing:-.015em}
+.home-h p{margin:4px 0 0;color:var(--muted);font-size:.82rem}
+.hsearch{display:flex;align-items:center;gap:10px;width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:var(--r);background:var(--surface);color:var(--muted);cursor:text;text-align:left;font-size:.95rem}
+.hsearch svg{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round}
+.hsearch kbd{margin-left:auto;font:500 .7rem var(--f-mono);border:1px solid var(--line);border-bottom-width:2px;border-radius:4px;padding:0 5px;color:var(--ink)}
+.hgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.htile{display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:10px;padding:16px 16px 14px;min-height:112px;background:var(--surface);border:0;text-align:left;cursor:pointer;color:var(--ink)}
+.htile svg{width:28px;height:28px;fill:none;stroke:var(--accent);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.htile b{display:block;font-weight:650;font-size:.98rem;line-height:1.2}
+.htile small{display:block;color:var(--muted);font-size:.76rem;line-height:1.3;margin-top:2px}
+.htile:hover{background:var(--accent-soft)}
+.htile:focus-visible{outline-offset:-3px}
+.htile.urg svg{stroke:var(--crit)}
+.htile.urg:hover{background:var(--crit-soft)}
+.hsec{display:grid;gap:10px}
+.hsec-h{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.hsec h3{font:650 1rem/1.2 var(--f-body);margin:0}
+.htabs{display:inline-grid;grid-auto-flow:column;gap:2px;padding:3px;background:var(--sunk);border:1px solid var(--line);border-radius:10px}
+.htabs button{border:0;background:transparent;border-radius:7px;padding:5px 11px;font-size:.78rem;font-weight:600;color:var(--muted);cursor:pointer}
+.htabs button[aria-selected="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 2px rgb(0 0 0 / .12)}
+.hlist{list-style:none;margin:0;padding:4px;border:1px solid var(--line);border-radius:12px;background:var(--surface);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 6px}
+.hlist .empty{grid-column:1/-1;padding:18px 10px;text-align:left;font-size:.88rem}
+.hmods{display:flex;flex-wrap:wrap;gap:6px}
+.hmods button{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:5px 12px;font-size:.8rem;font-weight:600;color:var(--ink);cursor:pointer}
+.hmods button:hover{border-color:var(--accent);color:var(--accent)}
+.gohome{display:inline-flex;align-items:center;justify-content:center;width:34px;padding:0}
+.gohome svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.brandrow .btns{display:flex;gap:6px;align-items:flex-start}
+@media (max-width:760px){
+  .app.home:not(.detail) .side{display:none}
+  .app.home:not(.detail) .main{display:block}
+  .gohome{display:none}
+  .home{gap:18px}
+  .htile{align-items:center;text-align:center;padding:14px 6px 12px;min-height:104px;gap:8px}
+  .htile small{font-size:.7rem}
+  .hlist{grid-template-columns:1fr}
+}
+@media (max-width:360px){ .htile small{display:none} .htile{min-height:84px} }
 </style>
 <script>
 (function(){
@@ -512,7 +554,7 @@ details.gdet[open]>summary{border-bottom:1px solid var(--line);margin-bottom:10p
           <h1 id="brand-t">Demanda Espontânea</h1>
           <p><span id="brand-s">SOAP e prescrição para a APS</span> · UBS Betim · revisão <span id="rev"></span></p>
         </div>
-        <button class="btn sm menubtn" id="menu-btn" aria-expanded="false" aria-controls="menu">Ferramentas <span aria-hidden="true">▾</span></button>
+        <div class="btns"><button class="btn sm gohome" id="go-home" title="Início" aria-label="Início"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-7 8 7"/><path d="M6 9.5V20h12V9.5"/></svg></button><button class="btn sm menubtn" id="menu-btn" aria-expanded="false" aria-controls="menu">Ferramentas <span aria-hidden="true">▾</span></button></div>
       </div>
       <div class="menu" id="menu" hidden>
         <div class="tools" role="group" aria-label="Ferramentas"><button class="btn sm" id="t-ped" data-mods="co de pu">Dose pediátrica</button><button class="btn sm" id="t-cri" data-mods="pu">Calendário da criança</button><button class="btn sm" id="t-ig" data-mods="pn">Idade gestacional</button><button class="btn sm" id="t-calc" data-mods="co cr mu pv ho in po de">Calculadoras</button><button class="btn sm" id="t-sc">Escores</button><button class="btn sm" id="t-rede">Rede de Betim</button><button class="btn sm" id="t-bal">Nomes no balcão</button></div>
@@ -529,9 +571,9 @@ details.gdet[open]>summary{border-bottom:1px solid var(--line);margin-bottom:10p
   <main class="main" id="main"></main>
 </div>
 <nav class="bnav" id="bnav" aria-label="Navegação rápida">
+  <button type="button" data-bn="home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-7 8 7"/><path d="M6 9.5V20h12V9.5"/></svg>Início</button>
   <button type="button" data-bn="busca"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>Buscar</button>
-  <button type="button" data-bn="fav"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 17l-5.2 2.7 1-5.9-4.3-4.1 5.9-.8z"/></svg>Favoritas</button>
-  <button type="button" data-bn="rec"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>Recentes</button>
+  <button type="button" data-bn="co"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5v5a4 4 0 0 0 8 0v-5"/><path d="M10 12.5v2.5a4.5 4.5 0 0 0 9 0v-2"/><circle cx="19" cy="10.5" r="2"/></svg>Consulta</button>
   <button type="button" data-bn="tools"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.5"/></svg>Ferramentas</button>
 </nav>
 
@@ -581,7 +623,7 @@ details.gdet[open]>summary{border-bottom:1px solid var(--line);margin-bottom:10p
   </div>
 </dialog>
 <dialog id="dlg-sc" aria-labelledby="sc-t">
-  <div class="ed-h"><h3 id="sc-t">Escores clínicos</h3><button type="button" class="btn ghost sm" data-close>Fechar</button></div>
+  <div class="ed-h"><h3 id="sc-t">Escores clínicos</h3><span style="display:flex;gap:6px"><button type="button" class="btn ghost sm" id="sc2calc">Calculadoras</button><button type="button" class="btn ghost sm" data-close>Fechar</button></span></div>
   <div class="ed-b">
     <label class="f">Escore<select id="sc-sel"></select></label>
     <div id="sc-form" class="sc-form"></div>
@@ -619,7 +661,7 @@ details.gdet[open]>summary{border-bottom:1px solid var(--line);margin-bottom:10p
   </div>
 </dialog>
 <dialog id="dlg-calc" aria-labelledby="calc-t">
-  <div class="ed-h"><h3 id="calc-t">Calculadoras clínicas</h3><button type="button" class="btn ghost sm" data-close>Fechar</button></div>
+  <div class="ed-h"><h3 id="calc-t">Calculadoras clínicas</h3><span style="display:flex;gap:6px"><button type="button" class="btn ghost sm" id="calc2sc">Escores</button><button type="button" class="btn ghost sm" data-close>Fechar</button></span></div>
   <div class="ed-b">
     <div class="calcsel"><label class="f" style="min-width:240px">Calculadora<select id="calc-sel"></select></label></div>
     <div id="calc-box"></div>
@@ -661,7 +703,7 @@ details.gdet[open]>summary{border-bottom:1px solid var(--line);margin-bottom:10p
 
 <script>
 // Conteúdo-base revisado em 2026-10-08. Edições da usuária ficam no banco do artefato e sobrepõem estes modelos.
-const REVISAO = "13/10/2026";
+const REVISAO = "14/10/2026";
 const VITAIS = "PA ___ mmHg | FC ___ bpm | FR ___ irpm | Tax ___ °C | SpO₂ ___% (AA)";
 
 const FONTES = {
@@ -15161,6 +15203,15 @@ function pushRecent(id){ recents = [id, ...recents.filter(x => x !== id)].slice(
 let favs = new Set();
 try { favs = new Set(JSON.parse(localStorage.getItem("de.favs") || "[]")); } catch(e){}
 function saveFavs(){ try { localStorage.setItem("de.favs", JSON.stringify([...favs])); } catch(e){} }
+// v39: contagem de uso (só neste aparelho; guarda o id do item e a contagem, nada do paciente)
+let uso = {}, usoN = 0;
+try { uso = JSON.parse(localStorage.getItem("de.uso") || "{}"); usoN = +localStorage.getItem("de.usoN") || 0; } catch(e){}
+const MEIA_VIDA = 30 * 864e5;
+const usoScore = (u, now) => u[0] * Math.pow(2, -(now - u[1]) / MEIA_VIDA);
+function bumpUso(id){ const now = Date.now(), u = uso[id]; uso[id] = [u ? usoScore(u, now) + 1 : 1, now]; usoN++; try { localStorage.setItem("de.uso", JSON.stringify(uso)); localStorage.setItem("de.usoN", usoN); } catch(e){} }
+function maisUsados(){ const now = Date.now(); return Object.entries(uso).map(([id,u]) => [id, usoScore(u, now)]).sort((a,b) => b[1] - a[1]).map(x => x[0]); }
+state.home = true;
+let htab = null; try { htab = localStorage.getItem("de.htab"); } catch(e){}
 function rxVisible(b){ return state.rxf==="todas" || (state.rxf==="evid" ? (b.trilha==="ambos"||b.trilha==="evidencia"||!b.trilha) : (b.trilha==="ambos"||b.trilha==="sus"||!b.trilha)); }
 $("#rev").textContent = REVISAO;
 
@@ -15241,6 +15292,72 @@ function trocarModulo(id, sel){
   renderList(); renderMain();
 }
 
+// ── v39: página inicial
+const HI = {
+  co: '<path d="M6 3.5v5a4 4 0 0 0 8 0v-5"/><path d="M10 12.5v2.5a4.5 4.5 0 0 0 9 0v-2"/><circle cx="19" cy="10.5" r="2"/>',
+  pn: '<path d="M12 20s-7.5-4.6-7.5-10.2A4.1 4.1 0 0 1 12 7.4a4.1 4.1 0 0 1 7.5 2.4C19.5 15.4 12 20 12 20z"/>',
+  pu: '<circle cx="12" cy="12.5" r="7.5"/><path d="M9.3 15c1.5 1.3 3.9 1.3 5.4 0"/><path d="M9.2 11.2h.01M14.8 11.2h.01"/><path d="M12 5c.2-1.3 1.6-1.9 2.4-1"/>',
+  cr: '<path d="M3 12.5h4l2.2-5 4.2 10 2.2-5H21"/>',
+  urg: '<path d="M9.5 3.5h5v6h6v5h-6v6h-5v-6h-6v-5h6z"/>',
+  calc: '<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8.5 7.5h7"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01M8.5 16h.01M12 16h.01M15.5 16h.01"/>',
+  ped: '<path d="M18.5 3.5l2 2"/><path d="M19.5 4.5l-3 3"/><path d="M16.5 7.5l-9 9-3 1 1-3 9-9z"/><path d="M11 9l4 4"/><path d="M8 12l1.5 1.5"/>',
+  bal: '<path d="M10.6 19.9a4.9 4.9 0 0 1-6.9-6.9l9.6-9.6a4.9 4.9 0 0 1 6.9 6.9z"/><path d="M8.5 8.5l7 7"/>',
+  rede: '<path d="M12 21s-6.5-5.8-6.5-11.2a6.5 6.5 0 0 1 13 0C18.5 15.2 12 21 12 21z"/><circle cx="12" cy="10" r="2.3"/>'
+};
+const HTILES = [
+  ["co", "Consulta guiada", "da anamnese à evolução"],
+  ["pn", "Pré-natal", "consulta guiada pela IG"],
+  ["pu", "Puericultura", "consulta guiada pela idade"],
+  ["cr", "Crônicos", "guias, fluxos e metas"],
+  ["urg", "Urgências", "na UBS"],
+  ["calc", "Calculadoras", "e escores"],
+  ["ped", "Dose pediátrica", "por peso"],
+  ["bal", "Nomes no balcão", "marcas e preço"],
+  ["rede", "Rede de Betim", "serviços e contatos"]
+];
+const HMODS = ["de", "mu", "pv", "ho", "in", "po"];
+const svgI = k => `<svg viewBox="0 0 24 24" aria-hidden="true">${HI[k]}</svg>`;
+function homeLista(k){
+  if (k === "mu" && usoN < 10) return `<li class="empty">Esta lista aparece depois de umas 10 aberturas neste aparelho. Por enquanto, veja Recentes.</li>`;
+  const ids = k === "rec" ? recents : k === "fav" ? [...favs] : maisUsados();
+  let items = ids.map(get).filter(Boolean);
+  if (k === "fav") items.sort((a,b) => a.nome.localeCompare(b.nome, "pt"));
+  items = items.slice(0, 8);
+  if (!items.length) return `<li class="empty">${k === "fav" ? "Nenhuma favorita ainda. Abra um item e toque em ☆ Favoritar." : "Os itens que você abrir aparecem aqui."}</li>`;
+  return items.map(c => itemHtml(c, modOf(c) !== state.mod)).join("");
+}
+function homeHtml(){
+  const temRec = recents.some(get), temFav = [...favs].some(get);
+  let k = htab && ["rec","fav","mu"].includes(htab) ? htab : (temRec ? "rec" : temFav ? "fav" : "rec");
+  const tabs = [["rec","Recentes"],["fav","Favoritas"],["mu","Mais usados"]];
+  return `<div class="home">
+    <div class="home-h"><div><h2>APS Betim</h2><p>SOAP, prescrição e guias para a UBS · conteúdo revisado em ${esc(REVISAO)}</p></div></div>
+    <button type="button" class="hsearch" id="h-busca"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg><span>Buscar: nome, sintoma, CIAP, CID</span>${isMob() ? "" : "<kbd>/</kbd>"}</button>
+    <nav class="hgrid" aria-label="Atalhos">${HTILES.map(([id, t, sub]) => `<button type="button" class="htile${id === "urg" ? " urg" : ""}" data-ht="${id}">${svgI(id)}<span><b>${esc(t)}</b><small>${esc(sub)}</small></span></button>`).join("")}</nav>
+    <section class="hsec" aria-labelledby="h-at">
+      <div class="hsec-h"><h3 id="h-at">Seus atalhos</h3><div class="htabs" role="tablist">${tabs.map(([id, t]) => `<button type="button" role="tab" data-htab="${id}" aria-selected="${id === k}">${t}</button>`).join("")}</div></div>
+      <ul class="hlist" id="h-list">${homeLista(k)}</ul>
+    </section>
+    <section class="hsec" aria-labelledby="h-mo">
+      <h3 id="h-mo">Outros módulos</h3>
+      <div class="hmods">${HMODS.map(id => MOD(id)).filter(Boolean).map(m => `<button type="button" data-hmod="${m.id}" title="${esc(m.sub)}">${esc(m.nome)}</button>`).join("")}</div>
+    </section>
+  </div>`;
+}
+function irHome(){ state.home = true; state.sel = null; renderList(); renderMain(); $("#main").scrollTop = 0; }
+function homeTile(k){
+  const abrir = (mod, id) => { state.home = true; trocarModulo(mod, id); $("#main").scrollTop = 0; };
+  if (k === "co") return abrir("co", "co-consulta");
+  if (k === "pn") return abrir("pn", "pn-guiada");
+  if (k === "pu") return abrir("pu", "pu-guiada");
+  if (k === "cr"){ state.home = false; trocarModulo("cr"); return; }
+  if (k === "urg"){ state.home = false; trocarModulo("de", isMob() ? null : "urg-abordagem"); state.sys = "Urgências na UBS"; renderChips(); renderList(); $("#list").scrollTop = 0; return; }
+  if (k === "calc") return openCalc();
+  if (k === "ped"){ renderPed(); $("#dlg-ped").showModal(); return; }
+  if (k === "bal"){ $("#bal-q").value = ""; renderBal(); $("#dlg-bal").showModal(); return; }
+  if (k === "rede") return openRede();
+}
+
 // ── ficha
 const TABS_BASE = [["soap","SOAP"],["rx","Prescrição"],["pac","Paciente"],["sus","Alarme e SUS"],["evid","Evidência"]];
 const tabsOf = c => {
@@ -15258,10 +15375,11 @@ function renderMain(){
   const c = state.sel && get(state.sel);
   const m = $("#main");
   $("#app").classList.toggle("detail", !!c);
-  if (!c){ m.innerHTML = `<div class="empty"><p>Escolha um item na lista ou busque por nome, sintoma, CIAP ou CID.</p></div>`; syncHash(null); updBnav(); return; }
+  $("#app").classList.toggle("home", !c && state.home);
+  if (!c){ m.innerHTML = (state.home || !isMob()) ? homeHtml() : `<div class="empty"><p>Escolha um item na lista ou busque por nome, sintoma, CIAP ou CID.</p></div>`; syncHash(null); updBnav(); return; }
   if (state.forceTab){ state.tab = state.forceTab; state.forceTab = null; }
   else if (c.id !== state.lastSel) state.tab = c.guia ? "guia" : state.tabPref;
-  if (c.id !== state.lastSel){ pushRecent(c.id); if (state.sys !== REC) renderChips(); }
+  if (c.id !== state.lastSel){ pushRecent(c.id); bumpUso(c.id); if (state.sys !== REC) renderChips(); }
   state.lastSel = c.id;
   if (!tabsOf(c).some(([k]) => k === state.tab)) state.tab = tabsOf(c)[0][0];
   const legend = `<div class="legend"><span><span class="lab F">F</span> conferido nesta revisão</span><span><span class="lab C">C</span> consolidado, não conferido</span><span><span class="lab NV">NV</span> conferir antes de usar</span></div>`;
@@ -15397,16 +15515,15 @@ function favLbl(on){ return `<span aria-hidden="true">${on?"★":"☆"}</span><s
 function menuClose(){ const mn = $("#menu"); if (mn && !mn.hidden){ mn.hidden = true; $("#menu-btn").setAttribute("aria-expanded", "false"); } }
 document.addEventListener("click", ev => { if (!ev.target.closest("#menu") && !ev.target.closest("#menu-btn") && !ev.target.closest('[data-bn="tools"]')) setTimeout(menuClose, 0); }, true);
 const isMob = () => window.matchMedia("(max-width:760px)").matches;
-function updBnav(){ const bn = document.getElementById("bnav"); if (!bn) return; const k = state.sel ? "" : state.sys === FAV ? "fav" : state.sys === REC ? "rec" : "busca"; bn.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", b.dataset.bn === k)); }
+function updBnav(){ const bn = document.getElementById("bnav"); if (!bn) return; const k = state.sel ? (state.sel === "co-consulta" ? "co" : "") : state.home ? "home" : "busca"; bn.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", b.dataset.bn === k)); }
 function bnav(k){
-  state.sel = null;
+  if (k === "home") return irHome();
+  if (k === "co"){ state.home = true; trocarModulo("co", "co-consulta"); $("#main").scrollTop = 0; return; }
+  state.sel = null; state.home = false;
   if (k === "busca") state.sys = "Todos";
-  if (k === "fav") state.sys = FAV;
-  if (k === "rec") state.sys = REC;
   renderChips(); renderList(); renderMain(); $("#list").scrollTop = 0;
   if (k === "busca"){ const q = $("#q"); q.focus(); q.select(); }
   if (k === "tools"){ $("#menu").hidden = false; $("#menu-btn").setAttribute("aria-expanded", "true"); }
-  if (k === "fav" && !favs.size) toast("Toque na ☆ de uma condição para guardá-la");
   updBnav();
 }
 let kbIdx = -1;
@@ -15418,7 +15535,7 @@ document.addEventListener("keydown", ev => {
   const typing = ev.target.matches && ev.target.matches("input, textarea, select, [contenteditable]");
   const q = $("#q");
   if (((ev.ctrlKey || ev.metaKey) && ev.key.toLowerCase() === "k") || (!typing && ev.key === "/")){
-    ev.preventDefault(); if (state.sel && isMob()){ state.sel = null; renderList(); renderMain(); } q.focus(); q.select(); return; }
+    ev.preventDefault(); if (isMob() && (state.sel || state.home)){ state.sel = null; state.home = false; renderList(); renderMain(); } q.focus(); q.select(); return; }
   if (ev.altKey && /^[0-9]$/.test(ev.key)){ const m = MODULOS[ev.key === "0" ? 9 : +ev.key - 1]; if (m){ ev.preventDefault(); trocarModulo(m.id); } return; }
   if (ev.target === q){
     if (ev.key === "ArrowDown"){ ev.preventDefault(); kbMark(kbIdx + 1); return; }
@@ -15447,6 +15564,9 @@ document.addEventListener("change", ev => { if (ev.target.id === "sys-sel"){ sta
 document.addEventListener("click", ev => {
   const t = ev.target.closest("button"); if (!t) return;
   if (t.dataset.bn){ bnav(t.dataset.bn); return; }
+  if (t.dataset.ht){ homeTile(t.dataset.ht); return; }
+  if (t.dataset.htab){ htab = t.dataset.htab; try { localStorage.setItem("de.htab", htab); } catch(e){} document.querySelectorAll("[data-htab]").forEach(b => b.setAttribute("aria-selected", b === t)); $("#h-list").innerHTML = homeLista(htab); return; }
+  if (t.dataset.hmod){ state.home = false; trocarModulo(t.dataset.hmod); return; }
   if (t.dataset.mod){ trocarModulo(t.dataset.mod); return; }
   if (t.dataset.gomod){ trocarModulo(t.dataset.gomod, t.dataset.id); $("#main").scrollTop = 0; return; }
   if (t.dataset.sys){ state.sys = t.dataset.sys; renderChips(); renderList(); return; }
@@ -15465,6 +15585,10 @@ document.addEventListener("click", ev => {
   if (t.closest("#menu")) setTimeout(menuClose, 0);
   const c = get(state.sel);
   switch (t.dataset.alias || t.id){
+    case "go-home": irHome(); break;
+    case "h-busca": if (isMob()) bnav("busca"); else { const q = $("#q"); q.focus(); q.select(); } break;
+    case "calc2sc": $("#dlg-calc").close(); openScore(); break;
+    case "sc2calc": $("#dlg-sc").close(); openCalc(); break;
     case "menu-btn": { const mn = $("#menu"); mn.hidden = !mn.hidden; t.setAttribute("aria-expanded", !mn.hidden); break; }
     case "back": if (navPushed && location.hash){ history.back(); break; } state.sel = null; renderList(); renderMain(); break;
     case "cp-soap": copy(soapText(c, $("#soap-S") ? curSoap() : null), "SOAP"); break;
@@ -18370,7 +18494,6 @@ function imprimirOrientacoes(c){
 // ── início
 if (location.hash && BASE[location.hash.slice(1)]){ const hc = BASE[location.hash.slice(1)]; state.mod = modOf(hc); state.sel = hc.id; }
 renderMods(); renderChips();
-if (!state.sel && window.matchMedia("(min-width:761px)").matches) state.sel = (CONDICOES.find(c => modOf(c) === state.mod) || CONDICOES[0]).id;
 renderList(); renderMain();
 
 (async () => {

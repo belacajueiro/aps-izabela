@@ -1,5 +1,5 @@
 // Conteúdo-base revisado em 2026-10-08. Edições da usuária ficam no banco do artefato e sobrepõem estes modelos.
-const REVISAO = "13/10/2026";
+const REVISAO = "14/10/2026";
 const VITAIS = "PA ___ mmHg | FC ___ bpm | FR ___ irpm | Tax ___ °C | SpO₂ ___% (AA)";
 
 const FONTES = {

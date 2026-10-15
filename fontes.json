@@ -1,11 +1,11 @@
 {
- "gerado": "2026-10-15T01:29:04.558Z",
+ "gerado": "2026-10-15T01:53:48.664Z",
  "cmed": {
   "data": "09/10/2026",
   "fonte": "cmed_pmc2026",
   "icms": "PMC com ICMS de Minas Gerais: 12% para genéricos e 18% para os demais"
  },
- "n_fontes": 486,
+ "n_fontes": 488,
  "n_itens": 311,
  "sem_url": [
   "remume",
@@ -6680,6 +6680,38 @@
    "usado_em": [
     "cr-dm2-insulina"
    ]
+  },
+  {
+   "k": "cdc_marcos2022",
+   "s": "CDC/AAP 2022 – marcos do desenvolvimento",
+   "t": "Zubler JM et al. Evidence-informed milestones for developmental surveillance tools. Pediatrics 2022;149(3):e2021052138. DOI 10.1542/peds.2021-052138 – marcos que ≥ 75% das crianças atingem, com listas de 15 e 30 meses (programa Learn the Signs. Act Early.) (revisão/consenso).",
+   "f": "F",
+   "url": "https://doi.org/10.1542/peds.2021-052138",
+   "ano": 2022,
+   "usado_em": [
+    "pu-12m",
+    "pu-18m",
+    "pu-1m",
+    "pu-24m",
+    "pu-2m",
+    "pu-3a5a",
+    "pu-4m",
+    "pu-6m",
+    "pu-9m"
+   ]
+  },
+  {
+   "k": "oms_telas2019",
+   "s": "OMS 2019 – telas (via SBP)",
+   "t": "OMS. Diretriz de atividade física, comportamento sedentário e sono para menores de 5 anos (2019), divulgada pela SBP: menores de 2 anos sem contato com telas; 2 a 5 anos até 1 hora por dia (notícia institucional).",
+   "f": "F",
+   "url": "https://www.sbp.com.br/?p=13811",
+   "ano": 2019,
+   "usado_em": [
+    "pu-18m",
+    "pu-24m",
+    "pu-3a5a"
+   ]
   }
  ],
  "itens": [
@@ -9189,7 +9221,8 @@
     "marcos_cad",
     "acidentes",
     "sbp_vitd2024",
-    "sbp_sono"
+    "sbp_sono",
+    "cdc_marcos2022"
    ]
   },
   {
@@ -9202,7 +9235,8 @@
     "pni2026",
     "marcos_cad",
     "acidentes",
-    "sbp_vitd2024"
+    "sbp_vitd2024",
+    "cdc_marcos2022"
    ]
   },
   {
@@ -9216,7 +9250,8 @@
     "marcos_cad",
     "acidentes",
     "pnsf2022",
-    "guia_menor2"
+    "guia_menor2",
+    "cdc_marcos2022"
    ]
   },
   {
@@ -9231,7 +9266,8 @@
     "acidentes",
     "guia_menor2",
     "pnsf2022",
-    "sbp_ferro2026"
+    "sbp_ferro2026",
+    "cdc_marcos2022"
    ]
   },
   {
@@ -9246,7 +9282,8 @@
     "acidentes",
     "guia_menor2",
     "sbp_ferro2026",
-    "sbp_tro"
+    "sbp_tro",
+    "cdc_marcos2022"
    ]
   },
   {
@@ -9261,7 +9298,8 @@
     "acidentes",
     "guia_menor2",
     "sbp_ferro2026",
-    "pnsf2022"
+    "pnsf2022",
+    "cdc_marcos2022"
    ]
   },
   {
@@ -9276,7 +9314,9 @@
     "acidentes",
     "mchat",
     "lei13438",
-    "sbp_tea"
+    "sbp_tea",
+    "oms_telas2019",
+    "cdc_marcos2022"
    ]
   },
   {
@@ -9291,7 +9331,9 @@
     "acidentes",
     "mchat",
     "sbp_tea",
-    "sisvan"
+    "sisvan",
+    "oms_telas2019",
+    "cdc_marcos2022"
    ]
   },
   {
@@ -9305,7 +9347,9 @@
     "marcos_cad",
     "acidentes",
     "nt64_vip",
-    "sisvan"
+    "sisvan",
+    "oms_telas2019",
+    "cdc_marcos2022"
    ]
   },
   {

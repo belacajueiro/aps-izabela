@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-15T00:58:34.375Z",
+ "gerado": "2026-10-15T01:03:43.711Z",
  "cmed": {
   "data": "09/10/2026",
   "fonte": "cmed_pmc2026",
@@ -6261,7 +6261,7 @@
   {
    "k": "ntc169_2026",
    "s": "MS – NTC 169/2026 (glargina na APS)",
-   "t": "Ministério da Saúde. Nota Técnica Conjunta nº 169/2026-DAF/SECTICS, DEPPROS/SAPS, DAET/SAES: insulina análoga basal (glargina) no Componente Básico para DM1 de 2 a < 18 anos e pessoas ≥ 70 anos com DM1 ou DM2, incluindo novos diagnósticos; quem já está no CEAF permanece nas regras vigentes; conversão de NPH 1×/dia na mesma dose e horário, NPH ≥ 2×/dia com redução de cerca de 20% em dose única; titulação pela glicemia de jejum (norma federal).",
+   "t": "Ministério da Saúde. Nota Técnica Conjunta nº 169/2026-DAF/SCTIE/DEPROS/SAPS/DAET/SAES/MS (assinada em 12–15/06/2026; Ofício Circular nº 77/2026/SCTIE): glargina no Componente Básico para DM1 de 2 a < 18 anos e pessoas ≥ 70 anos com DM1 ou DM2, incluindo novos diagnósticos; quem está no CEAF permanece nas regras vigentes; implantação gradual conforme organização local; recomenda substituir a NPH nos elegíveis pela restrição global de insulina humana; conversão 1:1 ou −20%; titulação em intervalos de até 3 dias; critérios de excesso de basal; caneta, tubetes e agulhas por pessoa; armazenamento; notificação no e-Notivisa e no VigiMed. Revoga a NT 26/2026 e a NT Conjunta 32/2026 (norma federal; texto conferido no documento recebido da usuária).",
    "f": "F",
    "url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-169-2026-dafsctie-deprossaps-daetsaes-ms.pdf",
    "ano": 2026,
@@ -6663,14 +6663,12 @@
   },
   {
    "k": "nt32_2026",
-   "s": "MS – NT Conjunta 32/2026 (piloto da glargina)",
-   "t": "Ministério da Saúde. Nota Técnica Conjunta nº 32/2026-DEPROS/SAPS/DAET/SAES/MS (assinada em 06/02/2026): transição NPH → glargina no projeto-piloto (≥ 80 anos com DM1 ou DM2 e DM1 de 2 a 17 anos; DF, AP, PB e PR); glargina 1×/dia em horário fixo; conversão 1:1 (NPH 1×/dia) ou −20% (NPH ≥ 2×/dia); titulação pela glicemia de jejum em intervalos de até 3 dias; critérios de excesso de basal no DM2 e no DM1 pediátrico. A NTC 169/2026 ampliou o público para ≥ 70 anos (norma federal; documento recebido da usuária).",
+   "s": "MS – NT Conjunta 32/2026 (revogada)",
+   "t": "Ministério da Saúde. Nota Técnica Conjunta nº 32/2026-DEPROS/SAPS/DAET/SAES/MS (06/02/2026): projeto-piloto da glargina (≥ 80 anos com DM1 ou DM2 e DM1 de 2 a 17 anos; DF, AP, PB e PR). Revogada pela NTC 169/2026, item 8.4 (histórico; documento recebido da usuária).",
    "f": "F",
    "url": "",
    "ano": 2026,
-   "usado_em": [
-    "cr-dm2-insulina"
-   ]
+   "usado_em": []
   },
   {
    "k": "betim_glargina_prior",
@@ -9037,7 +9035,6 @@
     "remume",
     "ntc169_2026",
     "betim_dm2026",
-    "nt32_2026",
     "betim_glargina_prior"
    ]
   },

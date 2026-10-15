@@ -440,28 +440,29 @@ function buildLabText() {
   const parts=[];
   const labData=pv('lab-data');
   const labVals=LAB_FIELDS.map(([id,label])=>{const v=pv(id);return v?`${label} ${v}`:null;}).filter(Boolean);
+  const labFree=freeVal('free-lab'); if(labFree) labVals.push(labFree);
   if(labVals.length){
-    const d=labData?`(${labData})`:'';
-    parts.push(`LAB ${d}: ${labVals.join(' / ')}`);
+    const d=labData?` (${labData})`:'';
+    parts.push(`LAB${d}: ${labVals.join(' / ')}`);
   }
   const feData=pv('lab-fe-data');
   const feVals=FE_FIELDS.map(([id,label])=>{const v=pv(id);return v?`${label} ${v}`:null;}).filter(Boolean);
   if(feVals.length){
-    const d=feData?`(${feData})`:'';
-    parts.push(`Cinética do Ferro ${d}: ${feVals.join(' / ')}`);
+    const d=feData?` (${feData})`:'';
+    parts.push(`Cinética do Ferro${d}: ${feVals.join(' / ')}`);
   }
   const easData=pv('eas-data'),easList=getAll('eas-achados'),easFree=freeVal('free-eas');
   if(easList.length||easFree){
-    const d=easData?`(${easData})`:'';
-    let t=`EAS ${d}:`;
+    const d=easData?` (${easData})`:'';
+    let t=`EAS${d}:`;
     if(easList.length) t+=` ${easList.join(' / ')}`;
     if(easFree) t+=(easList.length?' / ':' ')+easFree;
     parts.push(t);
   }
   const microData=pv('micro-data'),microVal=pv('micro-val');
   if(microVal){
-    const d=microData?`(${microData})`:'';
-    parts.push(`Microalbuminúria ${d}: ${microVal}`);
+    const d=microData?` (${microData})`:'';
+    parts.push(`Microalbuminúria${d}: ${microVal}`);
   }
   return parts.join('\n');
 }
@@ -505,13 +506,14 @@ function buildA() { return freeVal('free-hd'); }
 
 function buildP() {
   const exList=getAll('cond-ex');
+  const exFree=freeVal('free-cond-ex'); if(exFree) exFree.split(/\s*[,;\n]\s*/).filter(Boolean).forEach(x=>exList.push(x));
   const condutaList=getAll('cond-conduta');
   const renInstrList=getAll('ren-instr');
   const free=freeVal('free-cond');
   let lines=[];
-  if(exList.length) lines.push(`Exames solicitados: ${joinList(exList)}.`);
-  condutaList.forEach(c=>lines.push(`* ${c}`));
-  renInstrList.forEach(r=>lines.push(r));
+  if(exList.length) lines.push(`- Exames solicitados: ${joinList(exList)}.`);
+  condutaList.forEach(c=>lines.push(`- ${c}`));
+  renInstrList.forEach(r=>lines.push(`- ${r}`));
   if(free) lines.push(free);
   return lines.filter(Boolean).join('\n');
 }

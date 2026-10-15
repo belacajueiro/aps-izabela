@@ -181,7 +181,7 @@ const PPW = (() => {
     L.push("- Oriento sobre sinais de alerta materno e neonatal");
     if (R.lamOk && (!S.met || S.met === "lam" || S.met === "nenhum")) L.push("- Oriento que a amamentação só protege contra gravidez (LAM) enquanto houver amenorreia, aleitamento exclusivo em livre demanda e menos de 6 meses pós-parto; iniciar método contraceptivo assim que qualquer critério falhar");
     else if (S.met && !["", "nenhum", "lam"].includes(S.met)) L.push(`- Método contraceptivo: ${metT}; preservativo para prevenção de IST`);
-    L.push(`- Retorno: ${R.ret}`, "- Oriento paciente sobre o caso e esclareço dúvidas - paciente afirma compreender", "- Oriento quais e como identificar sinais de alarme, gravidade e busca imediata por atendimento em caso de algum sinal", "- Certifico que paciente compreende corretamente e concorda com orientações e conduta");
+    L.push(`- Retorno: ${R.ret}`, ...FECHO_P);
     return L.join("\n");
   }
   function receita(R){

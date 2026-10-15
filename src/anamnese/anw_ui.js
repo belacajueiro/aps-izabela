@@ -31,7 +31,7 @@ const SUG = {
   rotina: ["cr-has","cr-dm2","cr-dislipidemia","cr-obesidade","pv-checkup","pv-vacinas"]
 };
 const COMORB = {"HAS":"cr-has","DM2":"cr-dm2","pré-diabetes":"cr-prediabetes","dislipidemia":"cr-dislipidemia","hipotireoidismo":"cr-hipotireoidismo","hipertireoidismo":"cr-hipertireoidismo","asma":"cr-asma","DPOC":"cr-dpoc","ICC":"cr-ic","DAC":"cr-dac","doença renal crônica (DRC)":"cr-drc","obesidade":"cr-obesidade","hepatopatia crônica":"cr-masld","função renal":"cr-drc","função hepática":"cr-masld","tireoide":"cr-hipotireoidismo","anemia":"cr-ferro","rastreamento / rotina":"pv-checkup"};
-const FECHO = "* Oriento e esclareço dúvidas, paciente compreende e concorda com conduta.";
+const FECHO = FECHO_P.join("\n");
 
 let tipo = "queixa";
 const vals = {};            // textos digitados (id → valor), preservados ao navegar

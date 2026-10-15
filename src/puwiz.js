@@ -296,7 +296,7 @@ const PUW = (() => {
     if (V.agora.length && !S.v_ok) L.push("- Encaminho para vacinação conforme PNI; oriento reações vacinais comuns");
     out.rx.forEach(x => L.push("- " + x.t));
     out.orient.forEach(x => L.push("- " + x.t));
-    L.push("- Oriento sinais de alerta: febre, recusa alimentar, vômitos, letargia, desconforto respiratório", "- Esclareço dúvidas", `- Agendo a próxima consulta de puericultura: ${prox}`);
+    L.push("- Oriento sinais de alerta: febre, recusa alimentar, vômitos, letargia, desconforto respiratório", `- Agendo a próxima consulta de puericultura: ${prox}`, FECHO_P[0], FECHO_P[1], FECHO_P[3]);
     return L.join("\n");
   }
   function receita(R){

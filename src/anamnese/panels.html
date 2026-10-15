@@ -1505,10 +1505,6 @@
               <input type="checkbox" data-g="ren-instr" data-v="ORIENTADO PROCURAR A UNIDADE OU SERVIÇO DE URGÊNCIA EM CASO DE PIORA DO QUADRO, SURGIMENTO DE NOVOS SINTOMAS OU EFEITOS ADVERSOS RELACIONADOS AO USO DAS MEDICAÇÕES." class="ren-check">
               Procurar UBS/urgência em caso de piora
             </label>
-            <label style="display:flex;align-items:flex-start;gap:8px;cursor:pointer;font-size:11px;color:var(--ink2);line-height:1.4">
-              <input type="checkbox" data-g="ren-instr" data-v="PACIENTE CONFIRMA ENTENDER E CONCORDA COM CONDUTA." class="ren-check">
-              Paciente confirma entender e concorda
-            </label>
           </div>
         </div>
       </div>
@@ -1601,6 +1597,7 @@
               <div class="lab-f"><span>VitD</span><input id="an-lab-vitd"></div>
               <div class="lab-f"><span>VitB12</span><input id="an-lab-vitb12"></div>
             </div>
+            <textarea class="free-area" id="an-free-lab" placeholder="Outros exames de sangue (ex.: PSA 1,2 / Mg 2,0 / PCR 8)..." style="min-height:40px;margin-top:6px"></textarea>
           </div>
           <div class="chip-group">
             <div class="lab-row">
@@ -1773,7 +1770,7 @@
         <div class="chip-group">
           <div class="chip-label">MMII</div>
           <div class="chips">
-            <span class="chip radio" data-g="ef-mmii" data-v="sem edema, sem sinais flogísticos">sem edema</span>
+            <span class="chip radio" data-g="ef-mmii" data-v="sem edema, panturrilhas livres, sem sinais flogísticos">sem edema, panturrilhas livres</span>
             <span class="chip radio" data-g="ef-mmii" data-v="com edema bilateral depressível">edema bilateral</span>
             <span class="chip radio" data-g="ef-mmii" data-v="com edema unilateral">edema unilateral</span>
           </div>
@@ -1825,6 +1822,7 @@
             <span class="chip" data-g="cond-ex" data-v="TC de tórax">TC tórax</span>
             <span class="chip" data-g="cond-ex" data-v="TC de abdome e pelve">TC abdome</span>
           </div>
+          <textarea class="free-area" id="an-free-cond-ex" placeholder="Outros exames a solicitar (separe por vírgula)..." style="min-height:40px;margin-top:6px"></textarea>
         </div>
         <div class="chip-group">
           <div class="chip-label">Condutas</div>
@@ -1833,13 +1831,10 @@
             <span class="chip" data-g="cond-conduta" data-v="Retorno em 60 dias">retorno 60d</span>
             <span class="chip" data-g="cond-conduta" data-v="Retorno em 90 dias">retorno 90d</span>
             <span class="chip" data-g="cond-conduta" data-v="Retorno em 180 dias">retorno 180d</span>
-            <span class="chip" data-g="cond-conduta" data-v="Retorno em 1 ano">retorno 1 ano</span>
             <span class="chip" data-g="cond-conduta" data-v="Encaminhamento para especialidade">encaminhamento</span>
-            <span class="chip" data-g="cond-conduta" data-v="Encaminhamento à UBS de referência">encam. UBS ref.</span>
-            <span class="chip" data-g="cond-conduta" data-v="Internação para investigação e tratamento">internação</span>
-            <span class="chip" data-g="cond-conduta" data-v="Observação em UPA/PA">observação UPA</span>
-            <span class="chip" data-g="cond-conduta" data-v="Orientações de dieta e atividade física fornecidas">dieta + AF</span>
-            <span class="chip" data-g="cond-conduta" data-v="Automonitorização de PA domiciliar orientada">AMPA orientada</span>
+            <span class="chip" data-g="cond-conduta" data-v="Oriento MEVs">MEVs</span>
+            <span class="chip" data-g="cond-conduta" data-v="Solicito MRPA/MAPA">MRPA/MAPA</span>
+            <span class="chip" data-g="cond-conduta" data-v="Solicito mapa glicêmico">mapa glicêmico</span>
             <span class="chip" data-g="cond-conduta" data-v="Rastreamento e calendário vacinal revisados">rastreamento/vacinas</span>
             <span class="chip" data-g="cond-conduta" data-v="Prescrição de medicação fornecida">prescrição fornecida</span>
             <span class="chip" data-g="cond-conduta" data-v="Solicitar nova RL em 3 meses">nova RL em 3m</span>

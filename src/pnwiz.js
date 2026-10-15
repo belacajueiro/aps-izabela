@@ -343,7 +343,7 @@ const PNW = (() => {
       `dTpa (> 20 semanas/conferir esquema): ${vs("v_dtpa", "realizada", w >= 20 ? "aplicar hoje" : "a partir de 20 semanas (" + dataEm(20, ig) + ")")}`, `- VSR (a partir de 28 semanas): ${vs("v_vsr", "realizada", w >= 28 ? "aplicar hoje" : "a partir de " + dataEm(28, ig))}`, "");
     L.push("PLANO / CONDUTA:");
     [...out.urg, ...out.ref, ...out.fazer, ...out.pedir, ...out.rx, ...out.orient].forEach(x => L.push("- " + x.t));
-    L.push(`- Retorno ${ret}.`, "", "- Oriento paciente sobre o caso e esclareço dúvidas - paciente afirma compreender", "- Oriento quais e como identificar sinais de alarme, gravidade e busca imediata por atendimento em caso de algum sinal", "- Certifico que paciente compreende corretamente e concorda com orientações e conduta");
+    L.push(`- Retorno ${ret}.`, ...FECHO_P);
     return L.join("\n");
   }
   function receita(R){

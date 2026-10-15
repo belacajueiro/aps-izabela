@@ -15155,6 +15155,51 @@ FONTES["betim_glargina_prior"] = {s: "Betim – prioridade da glargina", t: "SMS
     c.mudancas = (c.mudancas || []).concat(["Revisão 14/10/2026 (v39): linha Betim completada com amoxicilina + clavulanato (REMUME, cód. 22534 e 24538) e com cefalexina e SMX-TMP marcados como não preferenciais."]);
   }
 })();
+// ───────────── data46.js – v39.4: consultas de pré-natal por trimestre no mesmo formato da evolução guiada; sinais de alarme específicos e retorno em linha própria; carga tabágica no tabagismo
+(function(){
+  const get = id => CONDICOES.find(x => x.id === id);
+  const EX1 = "### EXAMES DO 1° TRIMESTRE ###\n- TR (__/__/__): HIV ___ / Sífilis ___ / Hep C ___ / Hep B ___\n- LAB (__/__/__): Hb ___ / Ht ___ / GL ___ / Plaq ___\nABO/Rh: ___ | Glicemia de jejum: ___ | Toxoplasmose IgG/IgM: ___ | Eletroforese de Hb: ___\n- EAS e urocultura (__/__/__): ___\n- USG (__/__/__): ___\n------------------------------------------------------------------------------------";
+  const VAC = (w20, w28) => `### VACINAÇÃO ###\n- COVID-19: ___\n- Influenza: ___\n- Hepatite B (se esquema incompleto): ___\n- dTpa (a partir de 20 semanas): ${w20}\n- VSR (a partir de 28 semanas): ${w28}`;
+  const ALARME_2 = "- Oriento sinais de alarme: sangramento, perda de líquido, febre, cefaleia forte ou visão turva, dor forte na boca do estômago, inchaço repentino, contrações regulares ou dor forte na barriga, bebê mexendo menos – procurar a maternidade.";
+  const ALARME_3 = "- Oriento sinais de alarme e de trabalho de parto: sangramento, perda de líquido, contrações regulares, cefaleia forte ou visão turva, dor forte na boca do estômago, inchaço repentino, febre, bebê mexendo menos – procurar a maternidade (CMI).";
+  const FECHO_PN = "- Dúvidas esclarecidas; gestante verbaliza entendimento e concorda com a conduta.";
+
+  const t2 = get("pn-2tri");
+  if (t2) {
+    t2.S = "## PRÉ-NATAL ##\n__ª CONSULTA DE PRÉ-NATAL – 2º TRIMESTRE\n- IG: ___ (DUM/USG) | DPP: ___\n- PNRH / PNAR (alto risco), mantendo acompanhamento na UBS\n- Comorbidades: ___\n- Em uso de: sulfato ferroso, AAS ___\n\nGestante comparece à consulta para seguimento de pré-natal. Refere ___ (bem-estar geral / queixas: ___).\nNega sintomas urinários, dor abdominal, perdas de líquido, sangramento, contrações, cefaleia ou alterações visuais. Movimentação fetal: ___ (percebida / ainda não).\n\n# HPP: ___. Alergias: ___.\n# Antecedentes obstétricos: GPA ___ | intercorrências em gestações anteriores: ___";
+    t2.O = "# EXAME FÍSICO:\nPA: ___x___ mmHg\nPeso: ___ kg (ganho ___ kg desde o início)\nBCF: ___ bpm\nAU: ___ cm\nMF: ___ | Edema: ___\n\n" + EX1 + "\n### EXAMES DO 2° TRIMESTRE ###\n- TOTG 75 g (__/__/__): jejum ___ / 1 h ___ / 2 h ___\n- Toxoplasmose IgG/IgM (se suscetível): ___\n- Coombs indireto (se Rh negativo): ___\n- USG morfológico 2°T (__/__/__): ___\n------------------------------------------------------------------------------------\n" + VAC("___", "a partir de 28 semanas");
+    t2.A = "- Gestação de ___ semanas, pré-natal de risco ___ (habitual / intermediário / alto), evolução ___ (favorável / com ___).";
+    t2.P = "- TOTG 75 g entre 24 e 28 semanas (jejum, 1 h e 2 h).\n- Toxoplasmose IgG/IgM se suscetível; Coombs indireto se Rh negativo.\n- Mantido ferro; AAS até 36 semanas se em uso. Cálcio usado só para pré-eclâmpsia: suspenso (Betim, 30/09/2026).\n- dTpa a partir de 20 semanas, se ainda não feita.\n- Atualizada caderneta da gestante.\n" + ALARME_2 + "\n" + FECHO_PN + "\n\n- Retorno em 4 semanas, alternando médico e enfermagem.";
+    t2.mudancas = (t2.mudancas || []).concat(["Revisão 14/10/2026 (v39.4): SOAP no mesmo formato da consulta guiada (cabeçalho, HPP, exame físico, exames por trimestre, vacinação); sinais de alarme específicos e retorno em linha própria."]);
+  }
+
+  const t3 = get("pn-3tri");
+  if (t3) {
+    t3.S = "## PRÉ-NATAL ##\n__ª CONSULTA DE PRÉ-NATAL – 3º TRIMESTRE\n- IG: ___ (DUM/USG) | DPP: ___\n- PNRH / PNAR (alto risco), mantendo acompanhamento na UBS\n- Comorbidades: ___\n- Em uso de: sulfato ferroso, AAS ___ (suspender com 36 semanas)\n\nGestante comparece à consulta para seguimento de pré-natal. Refere ___ (bem-estar geral / queixas: ___).\nNega sangramento, perda de líquido, contrações regulares, cefaleia, escotomas, epigastralgia ou edema súbito. Relata movimentação fetal ___ (preservada).\n\n# HPP: ___. Alergias: ___.\n# Antecedentes obstétricos: GPA ___ | intercorrências em gestações anteriores: ___";
+    t3.O = "# EXAME FÍSICO:\nPA: ___x___ mmHg\nPeso: ___ kg\nBCF: ___ bpm\nAU: ___ cm\nApresentação: ___ (cefálica / pélvica / transversa)\nMF: ___ | Edema: ___\n\n" + EX1 + "\n### EXAMES DO 2° TRIMESTRE ###\n- TOTG 75 g (__/__/__): jejum ___ / 1 h ___ / 2 h ___\n- USG morfológico 2°T (__/__/__): ___\n------------------------------------------------------------------------------------\n### EXAMES DO 3° TRIMESTRE ###\n- TR (__/__/__): HIV ___ / Sífilis ___ / Hep C ___ / Hep B ___\n- LAB (__/__/__): Hb ___ / Ht ___ / GL ___ / Plaq ___ / GJ ___\nToxoplasmose IgG/IgM (se suscetível): ___ | Coombs indireto (se Rh negativo): ___\n- EAS e urocultura (__/__/__): ___\n- USG 3º tri (__/__/__): ___\n------------------------------------------------------------------------------------\n" + VAC("___", "___");
+    t3.A = "- Gestação de ___ semanas, pré-natal de risco ___ (habitual / intermediário / alto), evolução ___ (favorável / com ___).";
+    t3.P = "- Exames do 3º trimestre: hemograma, glicemia de jejum, EAS e urocultura, testes de sífilis e HIV, Coombs se Rh negativo, toxoplasmose se suscetível.\n- Vacina VSR (a partir de 28 semanas) e dTpa, se pendentes.\n- AAS suspenso com 36 semanas (se em uso).\n- Plano de parto conversado; maternidade de referência confirmada.\n- Cesárea a pedido: ___ (se desejo mantido após aconselhamento – TCLE, registro e termo de transferência ao CMI a partir de 36 semanas; cirurgia entre 39 e 41 semanas completas).\n- A partir de 34 semanas: registro diário de movimentos fetais (≥ 6 movimentos em 1 h após comer; se não, repetir; persistindo < 6 → maternidade).\n- 41 semanas: encaminhar ao CMI.\n- Atualizada caderneta da gestante.\n" + ALARME_3 + "\n" + FECHO_PN + "\n\n- Retorno quinzenal até 36 semanas e semanal depois.";
+    t3.mudancas = (t3.mudancas || []).concat(["Revisão 14/10/2026 (v39.4): SOAP no mesmo formato da consulta guiada; sinais de alarme e de trabalho de parto específicos; retorno em linha própria."]);
+  }
+
+  const p1 = get("pn-1consulta");
+  if (p1) {
+    p1.P = p1.P.replace("- Sinais de alerta orientados. Retorno em até 4 semanas, alternando médico e enfermagem.", "- Caderneta da gestante preenchida.\n" + ALARME_2.replace(", contrações regulares ou dor forte na barriga, bebê mexendo menos", ", dor forte na barriga") + "\n" + FECHO_PN);
+    p1.P += "\n\n- Retorno em até 4 semanas, alternando médico e enfermagem.";
+    p1.mudancas = (p1.mudancas || []).concat(["Revisão 14/10/2026 (v39.4): sinais de alarme específicos e retorno em linha própria, no fim do plano."]);
+  }
+
+  // Puericultura: alarme específico no lugar do genérico
+  CONDICOES.filter(c => c.modulo === "pu" && typeof c.P === "string" && c.P.includes("- Sinais de alerta orientados.")).forEach(c => {
+    c.P = c.P.replace("- Sinais de alerta orientados.", "- Oriento sinais de alarme: febre, recusa alimentar, vômitos, letargia, desconforto respiratório.\n- Dúvidas dos responsáveis esclarecidas.\n");
+  });
+
+  // Carga tabágica à mão no item de tabagismo e na DPOC
+  const tb = get("tabagismo");
+  if (tb && tb.guia) tb.guia.calcs = ["macos", ...(tb.guia.calcs || []).filter(x => x !== "macos")];
+  const dp = get("cr-dpoc");
+  if (dp && dp.guia && !(dp.guia.calcs || []).includes("macos")) dp.guia.calcs = [...(dp.guia.calcs || []), "macos"];
+})();
 
 </script>
 <script>
@@ -15165,8 +15210,9 @@ const FECHO_P = [
   "- Paciente e/ou acompanhante verbalizam entendimento das orientações fornecidas.",
   "- Orientados sinais de alarme relacionados ao quadro atual e necessidade de procura imediata por atendimento em caso de surgimento ou piora dos mesmos.",
   "- Paciente participa da decisão terapêutica e manifesta concordância com a conduta estabelecida."];
-const pComFecho = p => { const t = String(p || "").replace(/\s+$/, ""); return !t ? "" : t.includes("verbalizam entendimento") ? t : t + "\n" + FECHO_P.join("\n"); };
-const soapVal = (c, k) => k === "P" ? pComFecho(c.P) : (c[k] || "");
+const SEM_FECHO = ["pn", "pu"]; // pré-natal e puericultura têm fechamento próprio, mais curto
+const pComFecho = (p, c) => { const t = String(p || "").replace(/\s+$/, ""); return !t ? "" : (c && SEM_FECHO.includes((c.modulo || "de"))) || t.includes("verbalizam entendimento") ? t : t + "\n" + FECHO_P.join("\n"); };
+const soapVal = (c, k) => k === "P" ? pComFecho(c.P, c) : (c[k] || "");
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const norm = s => String(s||"").normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase();
@@ -15422,7 +15468,7 @@ const tabsOf = c => {
   return (c && c.roteiro && c.roteiro.length) ? [TABS_BASE[0], ["rot","Roteiro"], ...TABS_BASE.slice(1)] : TABS_BASE;
 };
 function soapText(c, vals){
-  const v = vals || {S:c.S,O:c.O,A:c.A,P:pComFecho(c.P)};
+  const v = vals || {S:c.S,O:c.O,A:c.A,P:pComFecho(c.P, c)};
   return `CIAP-2: ${c.ciap||"—"} | CID-10: ${c.cid||"—"}\n\nS: ${v.S}\n\nO: ${v.O}\n\nA: ${v.A}\n\nP: ${v.P}`;
 }
 function curSoap(){ const o={}; ["S","O","A","P"].forEach(k=>{ const el=document.getElementById("soap-"+k); o[k]=el?el.value:""; }); return o; }
@@ -16289,7 +16335,7 @@ const PNW = (() => {
       <div data-vis="ig20"><h4 class="pw-h">TOTG 75 g (24–28 semanas)</h4><div class="pw-row pw-ex">${num("tj", "Jejum", {step: 1})}${num("t1", "1 hora", {step: 1})}${num("t2", "2 horas", {step: 1})}</div></div>
       <div data-vis="ig14"><h4 class="pw-h">2º trimestre (Betim)</h4><div class="pw-row pw-ex">${dt("d2", "Data dos exames")}${EX2.map(exField).join("")}</div></div>
       <div data-vis="ig28"><h4 class="pw-h">3º trimestre</h4><div class="pw-row pw-ex">${dt("d3", "Data dos exames")}${EX3.map(exField).join("")}</div></div>
-      <h4 class="pw-h">Modelo de USG para a evolução</h4><div class="pw-row pw-ex">${sel("usgmod", "Inserir laudo", [["", "nenhum"], ["tv", "USG transvaginal (8–12 s)"], ["m1", "Morfológica 1º tri (11–13s6d)"], ["m2", "Morfológica 2º tri (20–24 s)"], ["t3", "USG 3º tri (32–36 s)"], ["dop", "USG com Doppler"]])}</div>
+      <h4 class="pw-h">Modelos de USG para a evolução <span class="hint" style="font-weight:400">(marque quantos quiser)</span></h4><div class="pw-grid">${USGOPT.map(([k, l]) => box("usg_" + k, l)).join("")}</div><div class="pw-row" style="margin-top:6px">${txt("usgout", "Outro laudo de USG (colar ou digitar)", "ex.: USG 3º tri (10/10/26): IG 33s, PFE 2.100 g (p40)…")}</div>
     </fieldset>
     <fieldset class="pw-sec"><legend>5. Vacinas já feitas</legend><div class="pw-grid">${VAC.map(([k, l]) => box(k, l)).join("")}</div></fieldset>
     </div>
@@ -16435,7 +16481,7 @@ const PNW = (() => {
     if (C("cesped") && w >= 36) out.fazer.push(it("Cesárea a pedido: aconselhamento registrado, TCLE e termo de transferência ao CMI (cirurgia entre 39 e 41 semanas)", "Betim", "pn-3tri"));
     else if (C("cesped")) out.fazer.push(it("Cesárea a pedido: aconselhar sobre vias de parto; termo de transferência ao CMI a partir de 36 semanas", "Betim", "pn-3tri"));
     if (w >= 36) out.orient.push(it("Amamentação na 1ª hora, consultas puerperais (até o 5º dia e 30–40 dias) e contracepção pós-parto", "Betim", "pp-1semana"));
-    out.orient.push(it("Sinais de alerta explicados: sangramento, perda de líquido, cefaleia/visão turva, febre, contrações, redução dos movimentos", "Caderneta"));
+    out.orient.push(it(`Oriento sinais de alarme: sangramento, perda de líquido, febre, cefaleia forte ou visão turva, dor forte na boca do estômago, inchaço repentino${w >= 20 ? ", contrações regulares ou dor forte na barriga, bebê mexendo menos" : ", dor forte na barriga"} – procurar a maternidade`, "Caderneta"));
     // encaminhamento por risco
     if (alto && !out.ref.some(r => /^PNAR/.test(r.t))) out.ref.push(it("PNAR: gestação de alto risco (critérios marcados)", "Betim"));
     if (flags.some(k => CONDF[k].sepadi)) out.ref.push(it("SEPADI: HIV ou hepatite", "Betim"));
@@ -16452,6 +16498,7 @@ const PNW = (() => {
   const bloco = (t, arr, cls) => arr.length ? `<div class="pw-b ${cls || ""}"><h4>${esc(t)}</h4><ul>${arr.map(li).join("")}</ul></div>` : "";
   const DT = k => S[k] ? fd(pd(S[k])) : "__/__/__";
   const TRv = v => v === "nr" ? "NR" : v === "r" ? "R" : "";
+  const USGOPT = [["tv", "USG transvaginal (8–12 s)"], ["m1", "Morfológica 1º tri (11–13s6d)"], ["m2", "Morfológica 2º tri (20–24 s)"], ["t3", "USG 3º tri (32–36 s)"], ["dop", "USG com Doppler"]];
   const USGM = {
     tv: ["1", "USGTV (__/__/__): IG ___s, feto único, BCF ___ bpm, CCN ___ mm, implantação intrauterina, saco gestacional e vesícula vitelínica presentes, sem sinais de descolamento. DPP: __/__/__."],
     m1: ["1", "USG morfológico 1º tri (__/__/__): IG ___s, feto único, BCF ___ bpm, apresentação ___, CCN ___ mm, TN ___ mm, osso nasal presente, ducto venoso normal, fluxo tricúspide normal, anatomia sem alterações, placenta ___. Risco para aneuploidias baixo."],
@@ -16493,11 +16540,12 @@ const PNW = (() => {
     const toxo = {imune: "IgG reagente / IgM não reagente (imune)", susc: "IgG não reagente / IgM não reagente (suscetível)", igm: "IgM reagente"}[S.toxo] || "";
     const urina = v => ({ok: "sem alterações", itu: "bacteriúria / ITU", prot: "proteinúria", pielo: "pielonefrite"}[v] || "");
     const eletro = {aa: "Hb AA (normal)", as: "Hb AS (traço falciforme)", df: "doença falciforme"}[S.eletro] || "Hb A1 __% / Hb A2 __% / Hb Fetal __%";
-    const usgLines = (tri, vazio) => S.usgmod && USGM[S.usgmod] && USGM[S.usgmod][0] === tri ? ["- " + USGM[S.usgmod][1]] : vazio;
+    const triAt = w >= 28 ? "3" : w >= 14 ? "2" : "1";
+    const usgLines = (tri, vazio) => { const l = Object.keys(USGM).filter(k => S["usg_" + k] && USGM[k][0] === tri).map(k => "- " + USGM[k][1]); if (S.usgout && tri === triAt) l.push("- " + S.usgout.replace(/^-\s*/, "")); return l.length ? l : vazio; };
     L.push("### EXAMES DO 1° TRIMESTRE ###", `- TR (${DT("d1")}): HIV ${TRv(S.hiv1)} / Sífilis ${TRv(S.sif1)} / Hep C ${TRv(S.hcv1)} / Hep B ${TRv(S.hbv1)}`, `- LAB (${DT("d1")}): Hb ${ok(N(S.hb1)) ? nF(N(S.hb1)) : ""} / Ht  / GL  / Plaq `,
       `ABO/Rh: ${S.rh === "neg" ? "Rh negativo" : S.rh === "pos" ? "Rh positivo" : ""}`, `Glicemia de jejum: ${ok(N(S.gj)) ? N(S.gj) : ""}`, `Toxoplasmose IgG/IgM: ${toxo}`, "TSH  / T4 livre ", `Eletroforese de Hemoglobina: ${eletro}`);
     if (S.htlv) L.push(`HTLV: ${TRv(S.htlv)}`);
-    L.push(`- LAB (${DT("d1")}): Coombs indireto: ${S.coombs === "n" ? "negativo" : S.coombs === "p" ? "positivo" : ""}`, `- EAS e urocultura (${DT("d1")}): ${urina(S.urina1)}`, `- USGTV (__/__/__): ${S.usg === "ok" ? "sem alterações" : S.usg === "alt" ? "alterada: ___" : ""}`, ...usgLines("1", ["- USG morfológico 1°T (__/__/__):"]), "------------------------------------------------------------------------------------");
+    L.push(`- LAB (${DT("d1")}): Coombs indireto: ${S.coombs === "n" ? "negativo" : S.coombs === "p" ? "positivo" : ""}`, `- EAS e urocultura (${DT("d1")}): ${urina(S.urina1)}`, ...(S.usg_tv ? [] : [`- USGTV (__/__/__): ${S.usg === "ok" ? "sem alterações" : S.usg === "alt" ? "alterada: ___" : ""}`]), ...usgLines("1", S.usg_tv ? [] : ["- USG morfológico 1°T (__/__/__):"]), "------------------------------------------------------------------------------------");
     if (w >= 14){
       const tj = N(S.tj), t1 = N(S.t1), t2 = N(S.t2);
       L.push("### EXAMES DO 2° TRIMESTRE ###", `- TR (${DT("d2")}): HIV ${TRv(S.hiv2)} / Sífilis ${TRv(S.sif2)} / Hep C ${TRv(S.hep2)} / Hep B ${TRv(S.hep2)}`, `- LAB (${DT("d2")}): TOTG ${ok(tj) || ok(t1) || ok(t2) ? `${ok(tj) ? tj : "—"} / ${ok(t1) ? t1 : "—"} / ${ok(t2) ? t2 : "—"}` : ""}`, `Toxoplasmose IgG/IgM (${DT("d2")}): `, "Coombs indireto: ", ...usgLines("2", ["- USG morfológico 2°T (__/__/__):"]), "------------------------------------------------------------------------------------");
@@ -16510,7 +16558,7 @@ const PNW = (() => {
       `dTpa (> 20 semanas/conferir esquema): ${vs("v_dtpa", "realizada", w >= 20 ? "aplicar hoje" : "a partir de 20 semanas (" + dataEm(20, ig) + ")")}`, `- VSR (a partir de 28 semanas): ${vs("v_vsr", "realizada", w >= 28 ? "aplicar hoje" : "a partir de " + dataEm(28, ig))}`, "");
     L.push("PLANO / CONDUTA:");
     [...out.urg, ...out.ref, ...out.fazer, ...out.pedir, ...out.rx, ...out.orient].forEach(x => L.push("- " + x.t));
-    L.push(`- Retorno ${ret}.`, ...FECHO_P);
+    L.push("- Dúvidas esclarecidas; gestante verbaliza entendimento e concorda com a conduta.", "", `- Retorno ${ret}.`);
     return L.join("\n");
   }
   function receita(R){
@@ -16868,7 +16916,7 @@ const PUW = (() => {
     if (V.agora.length && !S.v_ok) L.push("- Encaminho para vacinação conforme PNI; oriento reações vacinais comuns");
     out.rx.forEach(x => L.push("- " + x.t));
     out.orient.forEach(x => L.push("- " + x.t));
-    L.push("- Oriento sinais de alerta: febre, recusa alimentar, vômitos, letargia, desconforto respiratório", `- Agendo a próxima consulta de puericultura: ${prox}`, FECHO_P[0], FECHO_P[1], FECHO_P[3]);
+    L.push("- Oriento sinais de alarme: febre, recusa alimentar, vômitos, letargia, desconforto respiratório", "- Dúvidas dos responsáveis esclarecidas.", "", `- Agendo a próxima consulta de puericultura: ${prox}`);
     return L.join("\n");
   }
   function receita(R){
@@ -17101,10 +17149,10 @@ const PPW = (() => {
     L.push("- Orientações sobre aleitamento materno");
     if (dias < 91) L.push(`- Manter suplementação de ferro até 3 meses pós-parto (${fd(pd(S.dparto) + 91 * DIA)})`);
     out.fazer.forEach(x => L.push("- " + x.t));
-    L.push("- Oriento sobre sinais de alerta materno e neonatal");
+    L.push("- Oriento sinais de alarme: sangramento que aumenta, febre ou corrimento com cheiro forte, cefaleia forte ou visão turva, dor e inchaço em uma perna, falta de ar, mama vermelha e dolorida com febre, tristeza intensa ou pensamentos de se machucar; no bebê, febre, icterícia que aumenta, recusa das mamadas ou sonolência excessiva");
     if (R.lamOk && (!S.met || S.met === "lam" || S.met === "nenhum")) L.push("- Oriento que a amamentação só protege contra gravidez (LAM) enquanto houver amenorreia, aleitamento exclusivo em livre demanda e menos de 6 meses pós-parto; iniciar método contraceptivo assim que qualquer critério falhar");
     else if (S.met && !["", "nenhum", "lam"].includes(S.met)) L.push(`- Método contraceptivo: ${metT}; preservativo para prevenção de IST`);
-    L.push(`- Retorno: ${R.ret}`, ...FECHO_P);
+    L.push("- Dúvidas esclarecidas; puérpera verbaliza entendimento e concorda com a conduta.", "", `- Retorno: ${R.ret}`);
     return L.join("\n");
   }
   function receita(R){
@@ -18272,10 +18320,10 @@ CALC_MENU.push(["mec","MEC rápido (contracepção)"],["colo","Rastreio do colo:
 Object.assign(CALCS, {
  macos: {nome: "Carga tabágica (maços-ano) e TC de baixa dose",
   desc: "Maços-ano = (cigarros por dia ÷ 20) × anos de tabagismo. Elegibilidade pelos critérios da USPSTF 2021 (sem programa no SUS).",
-  html: () => `<div class="cgrid">${fld("cig","Cigarros por dia",{min:0,step:1})}${fld("anos","Anos fumando",{min:0,step:1})}${fld("idade","Idade",{step:1})}${fld("parou","Parou há (anos)",{min:0,step:1,ph:"0 se fuma"})}</div>`,
+  html: () => `<div class="cgrid">${fld("cig","Cigarros por dia",{min:0,step:1})}${fld("mac","ou maços por dia",{min:0,step:"0.5",ph:"ex.: 1,5"})}${fld("anos","Anos fumando",{min:0,step:1})}${fld("idade","Idade",{step:1})}${fld("parou","Parou há (anos)",{min:0,step:1,ph:"0 se fuma"})}</div>`,
   run(el){
-   const c = V(el,"cig"), a = V(el,"anos"), id = V(el,"idade"), p = okN(V(el,"parou")) ? V(el,"parou") : 0;
-   if (!(c > 0 && a > 0)) return saida(el, vazio("Informe cigarros por dia e anos fumando."));
+   const c = V(el,"cig") > 0 ? V(el,"cig") : (V(el,"mac") > 0 ? V(el,"mac") * 20 : NaN), a = V(el,"anos"), id = V(el,"idade"), p = okN(V(el,"parou")) ? V(el,"parou") : 0;
+   if (!(c > 0 && a > 0)) return saida(el, vazio("Informe cigarros (ou maços) por dia e anos fumando."));
    const ma = c/20*a; const L = [["Carga tabágica", `<span class="big">${nF(ma)} maços-ano</span>`]];
    let el2 = "";
    if (id > 0){ const ok = id >= 50 && id <= 80 && ma >= 20 && p <= 15;
@@ -18331,7 +18379,7 @@ SC.push(
   interp: s => s >= 8 ? "≥ 8: uso de alto risco/possível dependência – AUDIT completo, avaliar abstinência e encaminhamento (CAPS AD)." : s >= 4 ? "Positivo (≥ 4 em homens; ≥ 3 em mulheres): intervenção breve e retorno." : s === 3 ? "3: positivo para mulheres (intervenção breve); para homens, abaixo do corte." : "Abaixo do corte: reforçar baixo risco.",
   nota:"1 dose ≈ 14 g de álcool (1 lata de cerveja, 1 taça de vinho, 1 dose de destilado). Cortes usuais [C]."}
 );
-CALC_MENU.push(["macos","Maços-ano e TC de baixa dose"],["ccr","Rastreio colorretal"],["psa","PSA: interpretação"],["sc:ipss","IPSS (próstata)"],["sc:iief5","IIEF-5 (ereção)"],["sc:auditc","AUDIT-C (álcool)"]);
+CALC_MENU.push(["macos","Carga tabágica (maços-ano) e TC de baixa dose"],["ccr","Rastreio colorretal"],["psa","PSA: interpretação"],["sc:ipss","IPSS (próstata)"],["sc:iief5","IIEF-5 (ereção)"],["sc:auditc","AUDIT-C (álcool)"]);
 
 // ── calculadoras de infectologia na APS
 Object.assign(CALCS, {

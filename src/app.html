@@ -678,8 +678,9 @@ const FECHO_P = [
   "- Paciente e/ou acompanhante verbalizam entendimento das orientações fornecidas.",
   "- Orientados sinais de alarme relacionados ao quadro atual e necessidade de procura imediata por atendimento em caso de surgimento ou piora dos mesmos.",
   "- Paciente participa da decisão terapêutica e manifesta concordância com a conduta estabelecida."];
-const pComFecho = p => { const t = String(p || "").replace(/\s+$/, ""); return !t ? "" : t.includes("verbalizam entendimento") ? t : t + "\n" + FECHO_P.join("\n"); };
-const soapVal = (c, k) => k === "P" ? pComFecho(c.P) : (c[k] || "");
+const SEM_FECHO = ["pn", "pu"]; // pré-natal e puericultura têm fechamento próprio, mais curto
+const pComFecho = (p, c) => { const t = String(p || "").replace(/\s+$/, ""); return !t ? "" : (c && SEM_FECHO.includes((c.modulo || "de"))) || t.includes("verbalizam entendimento") ? t : t + "\n" + FECHO_P.join("\n"); };
+const soapVal = (c, k) => k === "P" ? pComFecho(c.P, c) : (c[k] || "");
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const norm = s => String(s||"").normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase();
@@ -935,7 +936,7 @@ const tabsOf = c => {
   return (c && c.roteiro && c.roteiro.length) ? [TABS_BASE[0], ["rot","Roteiro"], ...TABS_BASE.slice(1)] : TABS_BASE;
 };
 function soapText(c, vals){
-  const v = vals || {S:c.S,O:c.O,A:c.A,P:pComFecho(c.P)};
+  const v = vals || {S:c.S,O:c.O,A:c.A,P:pComFecho(c.P, c)};
   return `CIAP-2: ${c.ciap||"—"} | CID-10: ${c.cid||"—"}\n\nS: ${v.S}\n\nO: ${v.O}\n\nA: ${v.A}\n\nP: ${v.P}`;
 }
 function curSoap(){ const o={}; ["S","O","A","P"].forEach(k=>{ const el=document.getElementById("soap-"+k); o[k]=el?el.value:""; }); return o; }
@@ -2094,10 +2095,10 @@ CALC_MENU.push(["mec","MEC rápido (contracepção)"],["colo","Rastreio do colo:
 Object.assign(CALCS, {
  macos: {nome: "Carga tabágica (maços-ano) e TC de baixa dose",
   desc: "Maços-ano = (cigarros por dia ÷ 20) × anos de tabagismo. Elegibilidade pelos critérios da USPSTF 2021 (sem programa no SUS).",
-  html: () => `<div class="cgrid">${fld("cig","Cigarros por dia",{min:0,step:1})}${fld("anos","Anos fumando",{min:0,step:1})}${fld("idade","Idade",{step:1})}${fld("parou","Parou há (anos)",{min:0,step:1,ph:"0 se fuma"})}</div>`,
+  html: () => `<div class="cgrid">${fld("cig","Cigarros por dia",{min:0,step:1})}${fld("mac","ou maços por dia",{min:0,step:"0.5",ph:"ex.: 1,5"})}${fld("anos","Anos fumando",{min:0,step:1})}${fld("idade","Idade",{step:1})}${fld("parou","Parou há (anos)",{min:0,step:1,ph:"0 se fuma"})}</div>`,
   run(el){
-   const c = V(el,"cig"), a = V(el,"anos"), id = V(el,"idade"), p = okN(V(el,"parou")) ? V(el,"parou") : 0;
-   if (!(c > 0 && a > 0)) return saida(el, vazio("Informe cigarros por dia e anos fumando."));
+   const c = V(el,"cig") > 0 ? V(el,"cig") : (V(el,"mac") > 0 ? V(el,"mac") * 20 : NaN), a = V(el,"anos"), id = V(el,"idade"), p = okN(V(el,"parou")) ? V(el,"parou") : 0;
+   if (!(c > 0 && a > 0)) return saida(el, vazio("Informe cigarros (ou maços) por dia e anos fumando."));
    const ma = c/20*a; const L = [["Carga tabágica", `<span class="big">${nF(ma)} maços-ano</span>`]];
    let el2 = "";
    if (id > 0){ const ok = id >= 50 && id <= 80 && ma >= 20 && p <= 15;
@@ -2153,7 +2154,7 @@ SC.push(
   interp: s => s >= 8 ? "≥ 8: uso de alto risco/possível dependência – AUDIT completo, avaliar abstinência e encaminhamento (CAPS AD)." : s >= 4 ? "Positivo (≥ 4 em homens; ≥ 3 em mulheres): intervenção breve e retorno." : s === 3 ? "3: positivo para mulheres (intervenção breve); para homens, abaixo do corte." : "Abaixo do corte: reforçar baixo risco.",
   nota:"1 dose ≈ 14 g de álcool (1 lata de cerveja, 1 taça de vinho, 1 dose de destilado). Cortes usuais [C]."}
 );
-CALC_MENU.push(["macos","Maços-ano e TC de baixa dose"],["ccr","Rastreio colorretal"],["psa","PSA: interpretação"],["sc:ipss","IPSS (próstata)"],["sc:iief5","IIEF-5 (ereção)"],["sc:auditc","AUDIT-C (álcool)"]);
+CALC_MENU.push(["macos","Carga tabágica (maços-ano) e TC de baixa dose"],["ccr","Rastreio colorretal"],["psa","PSA: interpretação"],["sc:ipss","IPSS (próstata)"],["sc:iief5","IIEF-5 (ereção)"],["sc:auditc","AUDIT-C (álcool)"]);
 
 // ── calculadoras de infectologia na APS
 Object.assign(CALCS, {

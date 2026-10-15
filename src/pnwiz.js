@@ -122,7 +122,7 @@ const PNW = (() => {
       <div data-vis="ig20"><h4 class="pw-h">TOTG 75 g (24–28 semanas)</h4><div class="pw-row pw-ex">${num("tj", "Jejum", {step: 1})}${num("t1", "1 hora", {step: 1})}${num("t2", "2 horas", {step: 1})}</div></div>
       <div data-vis="ig14"><h4 class="pw-h">2º trimestre (Betim)</h4><div class="pw-row pw-ex">${dt("d2", "Data dos exames")}${EX2.map(exField).join("")}</div></div>
       <div data-vis="ig28"><h4 class="pw-h">3º trimestre</h4><div class="pw-row pw-ex">${dt("d3", "Data dos exames")}${EX3.map(exField).join("")}</div></div>
-      <h4 class="pw-h">Modelo de USG para a evolução</h4><div class="pw-row pw-ex">${sel("usgmod", "Inserir laudo", [["", "nenhum"], ["tv", "USG transvaginal (8–12 s)"], ["m1", "Morfológica 1º tri (11–13s6d)"], ["m2", "Morfológica 2º tri (20–24 s)"], ["t3", "USG 3º tri (32–36 s)"], ["dop", "USG com Doppler"]])}</div>
+      <h4 class="pw-h">Modelos de USG para a evolução <span class="hint" style="font-weight:400">(marque quantos quiser)</span></h4><div class="pw-grid">${USGOPT.map(([k, l]) => box("usg_" + k, l)).join("")}</div><div class="pw-row" style="margin-top:6px">${txt("usgout", "Outro laudo de USG (colar ou digitar)", "ex.: USG 3º tri (10/10/26): IG 33s, PFE 2.100 g (p40)…")}</div>
     </fieldset>
     <fieldset class="pw-sec"><legend>5. Vacinas já feitas</legend><div class="pw-grid">${VAC.map(([k, l]) => box(k, l)).join("")}</div></fieldset>
     </div>
@@ -268,7 +268,7 @@ const PNW = (() => {
     if (C("cesped") && w >= 36) out.fazer.push(it("Cesárea a pedido: aconselhamento registrado, TCLE e termo de transferência ao CMI (cirurgia entre 39 e 41 semanas)", "Betim", "pn-3tri"));
     else if (C("cesped")) out.fazer.push(it("Cesárea a pedido: aconselhar sobre vias de parto; termo de transferência ao CMI a partir de 36 semanas", "Betim", "pn-3tri"));
     if (w >= 36) out.orient.push(it("Amamentação na 1ª hora, consultas puerperais (até o 5º dia e 30–40 dias) e contracepção pós-parto", "Betim", "pp-1semana"));
-    out.orient.push(it("Sinais de alerta explicados: sangramento, perda de líquido, cefaleia/visão turva, febre, contrações, redução dos movimentos", "Caderneta"));
+    out.orient.push(it(`Oriento sinais de alarme: sangramento, perda de líquido, febre, cefaleia forte ou visão turva, dor forte na boca do estômago, inchaço repentino${w >= 20 ? ", contrações regulares ou dor forte na barriga, bebê mexendo menos" : ", dor forte na barriga"} – procurar a maternidade`, "Caderneta"));
     // encaminhamento por risco
     if (alto && !out.ref.some(r => /^PNAR/.test(r.t))) out.ref.push(it("PNAR: gestação de alto risco (critérios marcados)", "Betim"));
     if (flags.some(k => CONDF[k].sepadi)) out.ref.push(it("SEPADI: HIV ou hepatite", "Betim"));
@@ -285,6 +285,7 @@ const PNW = (() => {
   const bloco = (t, arr, cls) => arr.length ? `<div class="pw-b ${cls || ""}"><h4>${esc(t)}</h4><ul>${arr.map(li).join("")}</ul></div>` : "";
   const DT = k => S[k] ? fd(pd(S[k])) : "__/__/__";
   const TRv = v => v === "nr" ? "NR" : v === "r" ? "R" : "";
+  const USGOPT = [["tv", "USG transvaginal (8–12 s)"], ["m1", "Morfológica 1º tri (11–13s6d)"], ["m2", "Morfológica 2º tri (20–24 s)"], ["t3", "USG 3º tri (32–36 s)"], ["dop", "USG com Doppler"]];
   const USGM = {
     tv: ["1", "USGTV (__/__/__): IG ___s, feto único, BCF ___ bpm, CCN ___ mm, implantação intrauterina, saco gestacional e vesícula vitelínica presentes, sem sinais de descolamento. DPP: __/__/__."],
     m1: ["1", "USG morfológico 1º tri (__/__/__): IG ___s, feto único, BCF ___ bpm, apresentação ___, CCN ___ mm, TN ___ mm, osso nasal presente, ducto venoso normal, fluxo tricúspide normal, anatomia sem alterações, placenta ___. Risco para aneuploidias baixo."],
@@ -326,11 +327,12 @@ const PNW = (() => {
     const toxo = {imune: "IgG reagente / IgM não reagente (imune)", susc: "IgG não reagente / IgM não reagente (suscetível)", igm: "IgM reagente"}[S.toxo] || "";
     const urina = v => ({ok: "sem alterações", itu: "bacteriúria / ITU", prot: "proteinúria", pielo: "pielonefrite"}[v] || "");
     const eletro = {aa: "Hb AA (normal)", as: "Hb AS (traço falciforme)", df: "doença falciforme"}[S.eletro] || "Hb A1 __% / Hb A2 __% / Hb Fetal __%";
-    const usgLines = (tri, vazio) => S.usgmod && USGM[S.usgmod] && USGM[S.usgmod][0] === tri ? ["- " + USGM[S.usgmod][1]] : vazio;
+    const triAt = w >= 28 ? "3" : w >= 14 ? "2" : "1";
+    const usgLines = (tri, vazio) => { const l = Object.keys(USGM).filter(k => S["usg_" + k] && USGM[k][0] === tri).map(k => "- " + USGM[k][1]); if (S.usgout && tri === triAt) l.push("- " + S.usgout.replace(/^-\s*/, "")); return l.length ? l : vazio; };
     L.push("### EXAMES DO 1° TRIMESTRE ###", `- TR (${DT("d1")}): HIV ${TRv(S.hiv1)} / Sífilis ${TRv(S.sif1)} / Hep C ${TRv(S.hcv1)} / Hep B ${TRv(S.hbv1)}`, `- LAB (${DT("d1")}): Hb ${ok(N(S.hb1)) ? nF(N(S.hb1)) : ""} / Ht  / GL  / Plaq `,
       `ABO/Rh: ${S.rh === "neg" ? "Rh negativo" : S.rh === "pos" ? "Rh positivo" : ""}`, `Glicemia de jejum: ${ok(N(S.gj)) ? N(S.gj) : ""}`, `Toxoplasmose IgG/IgM: ${toxo}`, "TSH  / T4 livre ", `Eletroforese de Hemoglobina: ${eletro}`);
     if (S.htlv) L.push(`HTLV: ${TRv(S.htlv)}`);
-    L.push(`- LAB (${DT("d1")}): Coombs indireto: ${S.coombs === "n" ? "negativo" : S.coombs === "p" ? "positivo" : ""}`, `- EAS e urocultura (${DT("d1")}): ${urina(S.urina1)}`, `- USGTV (__/__/__): ${S.usg === "ok" ? "sem alterações" : S.usg === "alt" ? "alterada: ___" : ""}`, ...usgLines("1", ["- USG morfológico 1°T (__/__/__):"]), "------------------------------------------------------------------------------------");
+    L.push(`- LAB (${DT("d1")}): Coombs indireto: ${S.coombs === "n" ? "negativo" : S.coombs === "p" ? "positivo" : ""}`, `- EAS e urocultura (${DT("d1")}): ${urina(S.urina1)}`, ...(S.usg_tv ? [] : [`- USGTV (__/__/__): ${S.usg === "ok" ? "sem alterações" : S.usg === "alt" ? "alterada: ___" : ""}`]), ...usgLines("1", S.usg_tv ? [] : ["- USG morfológico 1°T (__/__/__):"]), "------------------------------------------------------------------------------------");
     if (w >= 14){
       const tj = N(S.tj), t1 = N(S.t1), t2 = N(S.t2);
       L.push("### EXAMES DO 2° TRIMESTRE ###", `- TR (${DT("d2")}): HIV ${TRv(S.hiv2)} / Sífilis ${TRv(S.sif2)} / Hep C ${TRv(S.hep2)} / Hep B ${TRv(S.hep2)}`, `- LAB (${DT("d2")}): TOTG ${ok(tj) || ok(t1) || ok(t2) ? `${ok(tj) ? tj : "—"} / ${ok(t1) ? t1 : "—"} / ${ok(t2) ? t2 : "—"}` : ""}`, `Toxoplasmose IgG/IgM (${DT("d2")}): `, "Coombs indireto: ", ...usgLines("2", ["- USG morfológico 2°T (__/__/__):"]), "------------------------------------------------------------------------------------");
@@ -343,7 +345,7 @@ const PNW = (() => {
       `dTpa (> 20 semanas/conferir esquema): ${vs("v_dtpa", "realizada", w >= 20 ? "aplicar hoje" : "a partir de 20 semanas (" + dataEm(20, ig) + ")")}`, `- VSR (a partir de 28 semanas): ${vs("v_vsr", "realizada", w >= 28 ? "aplicar hoje" : "a partir de " + dataEm(28, ig))}`, "");
     L.push("PLANO / CONDUTA:");
     [...out.urg, ...out.ref, ...out.fazer, ...out.pedir, ...out.rx, ...out.orient].forEach(x => L.push("- " + x.t));
-    L.push(`- Retorno ${ret}.`, ...FECHO_P);
+    L.push("- Dúvidas esclarecidas; gestante verbaliza entendimento e concorda com a conduta.", "", `- Retorno ${ret}.`);
     return L.join("\n");
   }
   function receita(R){

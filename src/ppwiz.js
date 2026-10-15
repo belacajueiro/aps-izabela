@@ -178,10 +178,10 @@ const PPW = (() => {
     L.push("- Orientações sobre aleitamento materno");
     if (dias < 91) L.push(`- Manter suplementação de ferro até 3 meses pós-parto (${fd(pd(S.dparto) + 91 * DIA)})`);
     out.fazer.forEach(x => L.push("- " + x.t));
-    L.push("- Oriento sobre sinais de alerta materno e neonatal");
+    L.push("- Oriento sinais de alarme: sangramento que aumenta, febre ou corrimento com cheiro forte, cefaleia forte ou visão turva, dor e inchaço em uma perna, falta de ar, mama vermelha e dolorida com febre, tristeza intensa ou pensamentos de se machucar; no bebê, febre, icterícia que aumenta, recusa das mamadas ou sonolência excessiva");
     if (R.lamOk && (!S.met || S.met === "lam" || S.met === "nenhum")) L.push("- Oriento que a amamentação só protege contra gravidez (LAM) enquanto houver amenorreia, aleitamento exclusivo em livre demanda e menos de 6 meses pós-parto; iniciar método contraceptivo assim que qualquer critério falhar");
     else if (S.met && !["", "nenhum", "lam"].includes(S.met)) L.push(`- Método contraceptivo: ${metT}; preservativo para prevenção de IST`);
-    L.push(`- Retorno: ${R.ret}`, ...FECHO_P);
+    L.push("- Dúvidas esclarecidas; puérpera verbaliza entendimento e concorda com a conduta.", "", `- Retorno: ${R.ret}`);
     return L.join("\n");
   }
   function receita(R){

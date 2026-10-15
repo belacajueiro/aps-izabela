@@ -501,8 +501,8 @@ details.gdet[open]>summary{border-bottom:1px solid var(--line);margin-bottom:10p
 .gohome svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .brandrow .btns{display:flex;gap:6px;align-items:flex-start}
 @media (max-width:760px){
-  .app.home:not(.detail) .side{display:none}
-  .app.home:not(.detail) .main{display:block}
+  .app.athome:not(.detail) .side{display:none}
+  .app.athome:not(.detail) .main{display:block}
   .gohome{display:none}
   .home{gap:18px}
   .htile{align-items:center;text-align:center;padding:14px 6px 12px;min-height:104px;gap:8px}
@@ -937,7 +937,7 @@ function renderMain(){
   const c = state.sel && get(state.sel);
   const m = $("#main");
   $("#app").classList.toggle("detail", !!c);
-  $("#app").classList.toggle("home", !c && state.home);
+  $("#app").classList.toggle("athome", !c && state.home);
   if (!c){ m.innerHTML = (state.home || !isMob()) ? homeHtml() : `<div class="empty"><p>Escolha um item na lista ou busque por nome, sintoma, CIAP ou CID.</p></div>`; syncHash(null); updBnav(); return; }
   if (state.forceTab){ state.tab = state.forceTab; state.forceTab = null; }
   else if (c.id !== state.lastSel) state.tab = c.guia ? "guia" : state.tabPref;
@@ -1895,15 +1895,15 @@ const CALCS = {
   }},
  glic: {nome: "HbA1c, glicemia média e titulação da NPH",
   desc: "Glicemia média estimada (ADAG): 28,7 × HbA1c − 46,7. Titulação pelo PCDT DM2 2024 e SBD.",
-  html: () => `<div class="cgrid">${fld("a1c","HbA1c",{ph:"%"})}${sel("perfil","Perfil (SBD)",[["adulto","Adulto / idoso saudável"],["comp","Idoso comprometido"],["muito","Idoso muito comprometido"]])}${fld("kg","Peso",{ph:"kg"})}${fld("nph","NPH atual",{ph:"UI/dia (0 se não usa)"})}${fld("gj","Média glicemia jejum",{ph:"mg/dL, últimos 3 dias"})}</div><div class="cchk">${chk("hipo","Glicemia < 70 ou hipoglicemia nos últimos dias")}</div>`,
+  html: () => `<div class="cgrid">${fld("a1c","HbA1c",{ph:"%"})}${sel("perfil","Perfil",[["adulto","Adulto / idoso saudável"],["comp","Idoso comprometido"],["muito","Idoso muito comprometido"]])}${fld("kg","Peso",{ph:"kg"})}${fld("nph","NPH atual",{ph:"UI/dia (0 se não usa)"})}${fld("gj","Média glicemia jejum",{ph:"mg/dL, últimos 3 dias"})}</div><div class="cchk">${chk("hipo","Glicemia < 70 ou hipoglicemia nos últimos dias")}</div>`,
   run(el){
    const a1c = V(el,"a1c"), perfil = Sv(el,"perfil"), kg = V(el,"kg"), nph = V(el,"nph"), gj = V(el,"gj"), hipo = V(el,"hipo");
-   const META = {adulto:["< 7,0% (idoso saudável < 7,5%)", 80, 130], comp:["< 8,0%", 90, 150], muito:["evitar sintomas de hiper/hipoglicemia", 100, 180]}[perfil];
-   const pares = [["Meta HbA1c (SBD)", META[0] + ' <span class="lab F">F</span>'], ["Meta jejum/pré-prandial", `${META[1]}–${META[2]} mg/dL <span class="lab F">F</span>`]], acoes = [], txt = [];
+   const META = {adulto:["< 7,0% (idoso saudável: < 7,5% no PCDT, 7,0–7,5% na SBD)", 80, 130], comp:["< 8,0% no PCDT, < 8,5% na SBD", 90, 150], muito:["evitar sintomas de hiper/hipoglicemia", 100, 180]}[perfil];
+   const pares = [["Meta HbA1c (PCDT e SBD 2026)", META[0] + ' <span class="lab F">F</span>'], ["Meta jejum/pré-prandial", `${META[1]}–${META[2]} mg/dL <span class="lab F">F</span>`]], acoes = [], txt = [];
    if (okN(a1c)){ const gm = 28.7*a1c - 46.7; pares.unshift(["Glicemia média estimada", `<span class="big">${n0(gm)} mg/dL</span> (HbA1c ${nF(a1c)}%)`]); txt.push(`HbA1c ${nF(a1c)}% ≈ glicemia média ${n0(gm)} mg/dL`); }
    if (okN(nph) && nph === 0 && kg > 0) acoes.push(`Início da NPH ao deitar: **10 UI** ou 0,1–0,2 UI/kg (${n0(kg*0.1)}–${n0(kg*0.2)} UI) [F].`);
    if (okN(nph) && nph > 0){
-     if (hipo || (okN(gj) && gj < 70)){ const r = Math.max(4, Math.round(nph*0.10)); acoes.push(`Hipoglicemia: **reduzir ${r} UI** (4 UI ou 10%, o que for maior) → ${n0(nph - r)} UI [F].`); }
+     if (hipo || (okN(gj) && gj < 70)){ const r = Math.max(4, Math.round(nph*0.10)); acoes.push(`Hipoglicemia: **reduzir ${r} UI** (SBD: 4 UI ou 10%, o que for maior; o PCDT 2026 cita 2–4 UI) → ${n0(nph - r)} UI [F].`); }
      else if (okN(gj) && gj > META[2]){ acoes.push(`Jejum acima da meta: **+2 UI a cada 3 dias** → próxima dose ${n0(nph + 2)} UI, até jejum ${META[1]}–${META[2]} [F].`); if (kg > 0 && nph/kg >= 0.5) acoes.push(`NPH já em ${nF(nph/kg)} UI/kg: antes de subir mais, checar hipoglicemia noturna e se o problema é pós-prandial (HbA1c alta com jejum na meta → insulina regular antes da maior refeição) [C].`); }
      else if (okN(gj)) acoes.push("Jejum na meta: manter a dose. Se a HbA1c seguir alta, investigar hiperglicemia pós-prandial (glicemias 2 h após as refeições) [C].");
      if (okN(gj)) txt.push(`NPH ${n0(nph)} UI, jejum médio ${n0(gj)} mg/dL`);

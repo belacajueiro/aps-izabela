@@ -1,11 +1,11 @@
 {
- "gerado": "2026-10-15T00:39:03.024Z",
+ "gerado": "2026-10-15T00:58:34.375Z",
  "cmed": {
   "data": "09/10/2026",
   "fonte": "cmed_pmc2026",
   "icms": "PMC com ICMS de Minas Gerais: 12% para genéricos e 18% para os demais"
  },
- "n_fontes": 484,
+ "n_fontes": 486,
  "n_itens": 311,
  "sem_url": [
   "remume",
@@ -242,7 +242,9 @@
   "betim_feridas2026",
   "betim_cesarea2025",
   "betim_reab2018",
-  "betim_pn2024"
+  "betim_pn2024",
+  "nt32_2026",
+  "betim_glargina_prior"
  ],
  "nao_conferidas": [
   "aap_oma",
@@ -6658,6 +6660,28 @@
    "usado_em": [
     "cr-dislipidemia"
    ]
+  },
+  {
+   "k": "nt32_2026",
+   "s": "MS – NT Conjunta 32/2026 (piloto da glargina)",
+   "t": "Ministério da Saúde. Nota Técnica Conjunta nº 32/2026-DEPROS/SAPS/DAET/SAES/MS (assinada em 06/02/2026): transição NPH → glargina no projeto-piloto (≥ 80 anos com DM1 ou DM2 e DM1 de 2 a 17 anos; DF, AP, PB e PR); glargina 1×/dia em horário fixo; conversão 1:1 (NPH 1×/dia) ou −20% (NPH ≥ 2×/dia); titulação pela glicemia de jejum em intervalos de até 3 dias; critérios de excesso de basal no DM2 e no DM1 pediátrico. A NTC 169/2026 ampliou o público para ≥ 70 anos (norma federal; documento recebido da usuária).",
+   "f": "F",
+   "url": "",
+   "ano": 2026,
+   "usado_em": [
+    "cr-dm2-insulina"
+   ]
+  },
+  {
+   "k": "betim_glargina_prior",
+   "s": "Betim – prioridade da glargina",
+   "t": "SMS Betim/DAPS. Capacitação 'Manejo clínico do diabetes na APS' (2026): proposta de ordem de prioridade para a transição NPH → glargina, a pactuar; a SMS informou que publicará nota técnica municipal com os grupos prioritários, porque o estoque não permite trocar todos os elegíveis de uma vez (informação da capacitação, relatada pela usuária).",
+   "f": "F",
+   "url": "",
+   "ano": 2026,
+   "usado_em": [
+    "cr-dm2-insulina"
+   ]
   }
  ],
  "itens": [
@@ -9012,7 +9036,9 @@
     "rename",
     "remume",
     "ntc169_2026",
-    "betim_dm2026"
+    "betim_dm2026",
+    "nt32_2026",
+    "betim_glargina_prior"
    ]
   },
   {

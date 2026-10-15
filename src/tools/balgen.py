@@ -15,7 +15,7 @@ T = [
  ("tetraciclina_oft","Tetraciclina pomada oftálmica",r"tetraciclina.*oftalm",r"^CLORIDRATO DE TETRACICLINA$|^TETRACICLINA$",r"POM OFT","emb",None,None),
  # ouvido / nariz
  ("cipro_oto","Ciprofloxacino otológico",r"ciprofloxacino.*otolog",r"CIPROFLOXACINO",r"OTO","emb",None,None),
- ("poli_oto","Polimixina B + neomicina + fluocinolona + lidocaína otológico",r"polimixina",r"FLUOCINOLONA.*POLIMIXINA",r".","emb",r"ELOTIN",None),
+ ("poli_oto","Polimixina B + neomicina + fluocinolona + lidocaína otológico",r"fluocinolona",r"FLUOCINOLONA.*POLIMIXINA",r".","emb",r"ELOTIN",None),
  ("budesonida_nasal","Budesonida 32 mcg spray nasal",r"budesonida 32",r"^BUDESONIDA$",r"32 MCG.*NAS.*120","emb",None,None),
  # respiratório
  ("bud_form","Budesonida + formoterol 200/6 mcg",r"budesonida.*formoterol|formoterol.*budesonida",r"BUDESONIDA.*FORMOTEROL|FORMOTEROL.*BUDESONIDA",r"^\(?6 MCG(/INAL)? \+ 200 MCG|^\(6 \+ 200\) MCG","dose",None,None),
@@ -23,6 +23,10 @@ T = [
  ("beclometasona_inal","Beclometasona 200 mcg/jato aerossol",r"beclometasona 200 ?mcg",r"^DIPROPIONATO DE BECLOMETASONA$",r"^200 MCG/DOSE SOL AER","emb",None,None),
  ("salbutamol_aer","Salbutamol 100 mcg/jato aerossol",r"salbutamol 100 ?mcg",r"^SULFATO DE SALBUTAMOL$",r"^100 MCG.*(AER|JATO)","emb",None,None),
  ("lama_laba","LAMA + LABA (tiotrópio + olodaterol / umeclidínio + vilanterol)",r"lama \+ laba|olodaterol|umeclidinio",r"TIOTR.*OLODATEROL|OLODATEROL.*TIOTR|UMECLID.*VILANTEROL|VILANTEROL.*UMECLID",r"^(\(2,5 \+ 2,5\)|62,5 MCG)","dose",r"FUROATO",None),
+ ("oto_betnovate","Betametasona + clorfenesina + tetracaína otológico",r"clorfenesina",r"CLORFENESINA",r"OTO","emb",None,None),
+ ("otosporin","Neomicina + polimixina B + hidrocortisona otológico",r"hidrocortisona.*polimixina|polimixina.*hidrocortisona|neomicina.*hidrocortisona",r"NEOMICINA.*HIDROCORTISONA|HIDROCORTISONA.*NEOMICINA",r"OTO","emb",None,None),
+ # vitaminas
+ ("mecobalamina","Mecobalamina 1.000 mcg (sublingual)",r"mecobalamina",r"^MECOBALAMINA$",r"^1000 MCG COM","un",None,None),
  # infecções / pele
  ("fosfomicina","Fosfomicina trometamol 3 g",r"fosfomicina",r"FOSFOMICINA",r"5,631","emb",None,None),
  ("ulipristal","Acetato de ulipristal 30 mg",r"ulipristal",r"ULIPRISTAL",r".","emb",None,None),

@@ -1,11 +1,11 @@
 {
- "gerado": "2026-10-14T23:07:43.408Z",
+ "gerado": "2026-10-15T00:16:32.639Z",
  "cmed": {
   "data": "09/10/2026",
   "fonte": "cmed_pmc2026",
   "icms": "PMC com ICMS de Minas Gerais: 12% para genéricos e 18% para os demais"
  },
- "n_fontes": 474,
+ "n_fontes": 484,
  "n_itens": 311,
  "sem_url": [
   "remume",
@@ -390,8 +390,6 @@
   "ata_hipo",
   "marcos_cad",
   "acidentes",
-  "sbd_metas",
-  "sbd_sus",
   "tdc_drc",
   "tdc_osteo",
   "ettehad",
@@ -3140,14 +3138,15 @@
   },
   {
    "k": "pcdt_dm2",
-   "s": "",
-   "t": "Ministério da Saúde. PCDT Diabete Melito tipo 2 – Portaria SECTICS/MS nº 7, de 28/02/2024 (norma): dapagliflozina e início de NPH.",
+   "s": "PCDT DM2 2026",
+   "t": "Ministério da Saúde. Protocolo Clínico e Diretrizes Terapêuticas do Diabete Melito Tipo 2 – Portaria SCTIE/MS nº 13, de 21/02/2026, que revoga a Portaria SECTICS/MS nº 7/2024 (norma). Relatório de recomendação CONITEC nº 1074. Inclui metas (Quadro 6), dapagliflozina, NPH e análogos de insulina incorporados em 2024.",
    "f": "F",
-   "url": "https://www.gov.br/conitec/pt-br/midias/protocolos/PCDTDM2.pdf/@@display-file/file",
-   "ano": 2024,
+   "url": "https://www.gov.br/conitec/pt-br/midias/protocolos/2026/pcdt-diabete-melito-tipo-2/@@display-file/file",
+   "ano": 2026,
    "usado_em": [
     "cr-dm2",
-    "cr-dm2-insulina"
+    "cr-dm2-insulina",
+    "cr-polifarmacia"
    ]
   },
   {
@@ -3881,29 +3880,29 @@
   },
   {
    "k": "sbd_metas",
-   "s": "SBD – Metas",
-   "t": "Sociedade Brasileira de Diabetes. Metas no tratamento do diabetes (Diretriz SBD; DOI 10.29327/557753.2022-3), lido no Drive (diretriz de sociedade). Capítulo substituído pela versão 2026 'Metas de controle glicêmico' (DOI 10.29327/5881296.2026-1); conferir se as metas do app mudaram.",
-   "f": "NV",
+   "s": "SBD 2026 – Metas",
+   "t": "Sociedade Brasileira de Diabetes. Diretriz 2026 – Metas de controle glicêmico (DOI 10.29327/5881296.2026-1). Diretriz de sociedade.",
+   "f": "F",
    "url": "https://diretriz.diabetes.org.br/metas-de-controle-glicemico/",
    "ano": 2026,
    "usado_em": [
     "cr-dm2",
+    "cr-polifarmacia",
     "cr-prediabetes"
    ]
   },
   {
    "k": "sbd_sus",
-   "s": "SBD – DM2 no SUS",
-   "t": "Sociedade Brasileira de Diabetes. Tratamento do DM2 no SUS (revisão 25/06/2024; DOI 10.29327/5412848.2024-3), lido no Drive (diretriz de sociedade, resume o PCDT DM2 2024). Capítulo substituído pela versão 2026 'Tratamento do DM2 no SUS' (DOI 10.29327/5937204.2026-1); conferir o conteúdo do app.",
-   "f": "NV",
+   "s": "SBD 2026 – DM2 no SUS",
+   "t": "Sociedade Brasileira de Diabetes. Diretriz 2026 – Tratamento do DM2 no Sistema Único de Saúde (DOI 10.29327/5937204.2026-1). Diretriz de sociedade; resume o PCDT DM2 2026 e as NT 32/2026 e 169/2026 sobre glargina na APS.",
+   "f": "F",
    "url": "https://diretriz.diabetes.org.br/tratamento-do-dm2-no-sistema-unico-de-saude-sus/",
    "ano": 2026,
    "usado_em": [
     "cr-b12",
     "cr-dm2",
     "cr-dm2-insulina",
-    "cr-pe-diabetico",
-    "cr-polifarmacia"
+    "cr-pe-diabetico"
    ]
   },
   {
@@ -6265,6 +6264,7 @@
    "url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-169-2026-dafsctie-deprossaps-daetsaes-ms.pdf",
    "ano": 2026,
    "usado_em": [
+    "cr-dm2",
     "cr-dm2-insulina"
    ]
   },
@@ -6502,7 +6502,9 @@
    "url": "https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/cmed/precos",
    "ano": 2026,
    "usado_em": [
-    "cr-asma"
+    "cr-asma",
+    "cr-b12",
+    "otite-externa"
    ]
   },
   {
@@ -6536,6 +6538,125 @@
    "ano": null,
    "usado_em": [
     "cr-asma"
+   ]
+  },
+  {
+   "k": "obeid2015_b12",
+   "s": "Obeid 2015 – formas de cobalamina",
+   "t": "Obeid R, Fedosov SN, Nexo E. Cobalamin coenzyme forms are not likely to be superior to cyano- and hydroxyl-cobalamin in prevention or treatment of cobalamin deficiency. Mol Nutr Food Res 2015;59(7):1364-72. DOI 10.1002/mnfr.201500019 (revisão narrativa).",
+   "f": "F",
+   "url": "https://doi.org/10.1002/mnfr.201500019",
+   "ano": 2015,
+   "usado_em": [
+    "cr-b12"
+   ]
+  },
+  {
+   "k": "bula_mecobe",
+   "s": "Bula Mecobe (mecobalamina)",
+   "t": "Mecobe (mecobalamina 500 e 1.000 mcg comprimido sublingual), bula do paciente: indicado para deficiência de B12 em uso de metformina e hiper-homocisteinemia; 1.000 mcg 1×/dia por até 3 meses, sublingual (bula registrada).",
+   "f": "F",
+   "url": "https://www.araujo.com.br/bula/Mecobe-1000mcg-com-30-Comprimidos-Sublinguais",
+   "ano": null,
+   "usado_em": [
+    "cr-b12"
+   ]
+  },
+  {
+   "k": "cochrane_oe2010",
+   "s": "Cochrane 2010 – otite externa aguda",
+   "t": "Kaushik V, Malik T, Saeed SR. Interventions for acute otitis externa. Cochrane Database Syst Rev 2010;CD004740. DOI 10.1002/14651858.CD004740.pub2 (RS: 19 ECR, 3.382 participantes; qualidade geral baixa).",
+   "f": "F",
+   "url": "https://doi.org/10.1002/14651858.CD004740.pub2",
+   "ano": 2010,
+   "usado_em": [
+    "otite-externa"
+   ]
+  },
+  {
+   "k": "bula_otobetnovate",
+   "s": "Bula Oto-Betnovate",
+   "t": "Oto-Betnovate (betametasona 1 mg/mL + clorfenesina 10 mg/mL + cloridrato de tetracaína 5 mg/mL, solução otológica), bula do paciente: otites externas agudas ou crônicas por bactérias ou fungos, otite do nadador, otites por dermatite seborreica, eczema e psoríase; adultos 3–4 gotas 3–4×/dia, crianças 2–3 gotas 3–4×/dia, por 7–14 dias (bula registrada).",
+   "f": "F",
+   "url": "https://img.drogasil.com.br/raiadrogasil_bula/OTOBETNOVATE.pdf",
+   "ano": null,
+   "usado_em": [
+    "otite-externa"
+   ]
+  },
+  {
+   "k": "patel2007_conj",
+   "s": "Patel 2007 – conjuntivite bacteriana na criança",
+   "t": "Patel PB, Diaz MC, Bennett JE, Attia MW. Clinical features of bacterial conjunctivitis in children. Acad Emerg Med 2007;14(1):1-5. DOI 10.1197/j.aem.2006.08.006 (coorte prospectiva em PS pediátrico, n = 111).",
+   "f": "F",
+   "url": "https://doi.org/10.1197/j.aem.2006.08.006",
+   "ano": 2007,
+   "usado_em": [
+    "conj-alergica",
+    "conj-bact",
+    "conj-viral",
+    "olho-vermelho-alarme"
+   ]
+  },
+  {
+   "k": "azari2013_conj",
+   "s": "Azari 2013 – conjuntivite (JAMA)",
+   "t": "Azari AA, Barney NP. Conjunctivitis: a systematic review of diagnosis and treatment. JAMA 2013;310(16):1721-9. DOI 10.1001/jama.2013.280318 (revisão sistemática).",
+   "f": "F",
+   "url": "https://doi.org/10.1001/jama.2013.280318",
+   "ano": 2013,
+   "usado_em": [
+    "conj-alergica",
+    "conj-bact",
+    "conj-viral",
+    "olho-vermelho-alarme"
+   ]
+  },
+  {
+   "k": "hu2021_conj",
+   "s": "Hu 2021 – conjuntivite-otite",
+   "t": "Hu YL et al. Predominant role of Haemophilus influenzae in the association of conjunctivitis, acute otitis media and acute bacterial paranasal sinusitis in children. Sci Rep 2021;11:11. DOI 10.1038/s41598-020-79680-6 (série de casos, Taiwan).",
+   "f": "F",
+   "url": "https://doi.org/10.1038/s41598-020-79680-6",
+   "ano": 2021,
+   "usado_em": [
+    "conj-alergica",
+    "conj-bact",
+    "conj-viral",
+    "olho-vermelho-alarme"
+   ]
+  },
+  {
+   "k": "improve_it",
+   "s": "IMPROVE-IT (NEJM 2015)",
+   "t": "Cannon CP et al. Ezetimibe added to statin therapy after acute coronary syndromes. N Engl J Med 2015;372:2387-97. DOI 10.1056/NEJMoa1410489 (ECR duplo-cego, n = 18.144; financiado pela Merck).",
+   "f": "F",
+   "url": "https://doi.org/10.1056/NEJMoa1410489",
+   "ano": 2015,
+   "usado_em": [
+    "cr-dislipidemia"
+   ]
+  },
+  {
+   "k": "racing2022",
+   "s": "RACING (Lancet 2022)",
+   "t": "Kim BK et al. Moderate-intensity statin with ezetimibe versus high-intensity statin monotherapy in ASCVD (RACING): randomised, open-label, non-inferiority trial. Lancet 2022;400:380-90. DOI 10.1016/S0140-6736(22)00916-3 (ECR aberto, n = 3.780, Coreia do Sul).",
+   "f": "F",
+   "url": "https://doi.org/10.1016/S0140-6736(22)00916-3",
+   "ano": 2022,
+   "usado_em": [
+    "cr-dislipidemia"
+   ]
+  },
+  {
+   "k": "ctt2010",
+   "s": "CTT 2010 (Lancet)",
+   "t": "Cholesterol Treatment Trialists' Collaboration. Efficacy and safety of more intensive lowering of LDL cholesterol: meta-analysis of 170,000 participants in 26 randomised trials. Lancet 2010;376:1670-81. DOI 10.1016/S0140-6736(10)61350-5 (MA de dados individuais).",
+   "f": "F",
+   "url": "https://doi.org/10.1016/S0140-6736(10)61350-5",
+   "ano": 2010,
+   "usado_em": [
+    "cr-dislipidemia"
    ]
   }
  ],
@@ -6658,7 +6779,10 @@
    "modulo": "de",
    "nv": 2,
    "fontes": [
+    "cochrane_oe2010",
     "aaohns_oe",
+    "bula_otobetnovate",
+    "cmed_pmc2026",
     "rename",
     "remume"
    ]
@@ -6670,6 +6794,8 @@
    "nv": 1,
    "fontes": [
     "cochrane_conj",
+    "azari2013_conj",
+    "patel2007_conj",
     "rename",
     "remume"
    ]
@@ -6680,6 +6806,7 @@
    "modulo": "de",
    "nv": 1,
    "fontes": [
+    "azari2013_conj",
     "cab28",
     "rename",
     "remume"
@@ -8870,7 +8997,8 @@
     "sbd_diag2025",
     "sbd_prediab",
     "betim_retino2025",
-    "betim_dm2026"
+    "betim_dm2026",
+    "ntc169_2026"
    ]
   },
   {
@@ -8899,7 +9027,10 @@
     "fda_sinva",
     "ctt",
     "rename",
-    "remume"
+    "remume",
+    "improve_it",
+    "racing2022",
+    "ctt2010"
    ]
   },
   {
@@ -8998,7 +9129,7 @@
    "id": "cr-dpoc",
    "nome": "DPOC – manutenção",
    "modulo": "cr",
-   "nv": 3,
+   "nv": 2,
    "fontes": [
     "pcdt_dpoc2025",
     "gold",
@@ -9871,12 +10002,14 @@
    "id": "cr-b12",
    "nome": "Deficiência de vitamina B12",
    "modulo": "cr",
-   "nv": 2,
+   "nv": 3,
    "fontes": [
     "cochrane_b12",
     "sbd_sus",
     "rename",
-    "remume"
+    "remume",
+    "obeid2015_b12",
+    "bula_mecobe"
    ]
   },
   {

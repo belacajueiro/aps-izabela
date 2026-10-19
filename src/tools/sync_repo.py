@@ -7,6 +7,8 @@ if os.path.isdir(os.path.join(D, 'img')):
     if os.path.isdir(os.path.join(R, 'img')): shutil.rmtree(os.path.join(R, 'img'))
     shutil.copytree(os.path.join(D, 'img'), os.path.join(R, 'img'))
 S = os.path.join(R, 'src')
+if os.path.isdir(S) and os.path.samefile(S, D):
+    print('src/ já é o clone do repositório: só o site foi copiado'); sys.exit(0)
 # o estado do monitor é gravado pelas tarefas agendadas direto no repositório: o repositório manda nesses arquivos
 RM = os.path.join(S, 'monitor')
 if os.path.isdir(RM):

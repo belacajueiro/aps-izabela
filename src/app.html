@@ -1616,8 +1616,8 @@ const SC = [
  {id:"h2fpef", nome:"H₂FPEF (probabilidade de IC com FE preservada)", itens:[
    {t:"IMC > 30 kg/m²", p:2},{t:"Em uso de ≥ 2 anti-hipertensivos", p:1},{t:"Fibrilação atrial (paroxística ou persistente)", p:3},
    {t:"PSAP > 35 mmHg no ecocardiograma", p:1},{t:"Idade > 60 anos", p:1},{t:"E/e' > 9 no ecocardiograma", p:1}],
-   interp:s => s>=6 ? "6–9: ICFEP muito provável (> 90% no estudo original) – tratar como ICFEP se FEVE ≥ 50% e sintomas." : s>=2 ? "2–5: probabilidade intermediária – peptídeo natriurético, rever o eco e, se persistir a dúvida, discutir com a cardiologia (eco de esforço/teste invasivo)." : "0–1: ICFEP pouco provável – procurar outra causa da dispneia (pulmão, anemia, obesidade, descondicionamento, isquemia).",
-   nota:"Reddy YNV et al., Circulation 2018 (citado de memória, não conferido). Usar só com FEVE ≥ 50% e dispneia sem outra causa evidente."}
+   interp:s => s>=6 ? "6–9: probabilidade alta – ICFEP confirmada; buscar etiologias específicas (SBC 2026, Figura 6.4)." : s>=2 ? "2–5: probabilidade intermediária – teste de estresse diastólico (eco de esforço ou invasivo) em centro de referência: discutir com a cardiologia." : "0–1: probabilidade baixa – ICFEP excluída; procurar outra causa da dispneia (pulmão, anemia, obesidade, descondicionamento, isquemia).",
+   nota:"Escore de Reddy et al. (2018), recomendado pela Diretriz Brasileira de IC 2026 (Quadro 6.3; forte, moderada) para dispneia inexplicada com suspeita de ICFEP e FEVE ≥ 50%."}
 
 ];
 const SC_POR_ID = {"cr-prediabetes":"findrisc","cr-aga":"ivcf","cr-inapetencia":"mnasf","cr-fragilidade":"sarcf","po-idoso-vulneravel":"ivcf","po-acamado":"braden","po-pobreza":"savassi","pu-18m":"mchat","pu-24m":"mchat","pu-dnpm":"mchat","pp-depressao":"epds","pp-1semana":"epds","pp-consulta":"epds","cr-asma":"gina","cr-dpoc":"mmrc",faringite:"centor", pac:"curb65", tvp:"wells", "dor-toracica":"marburg", sepse:"qsofa", crupe:"westley", "abstinencia-alcool":"ciwa", depressao:"phq9", "risco-suicida":"phq9", tag:"gad7", panico:"gad7", delirium:"cam"};

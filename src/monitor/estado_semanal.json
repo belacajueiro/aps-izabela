@@ -1,5 +1,5 @@
 {
-"data": "2026-10-14",
+"data": "2026-10-19",
 "paginas": {
 "cmed_precos": {
 "hash": "d508990a846ee1a6",
@@ -18,7 +18,7 @@
 "links": [
 "https://www.gov.br/saude/pt-br/composicao/sectics/farmacia-popular/arquivos/elenco-de-medicamentos-e-insumos-pfpb.pdf"
 ],
-"tam": 150971
+"tam": 150969
 },
 "conitec_pcdt": {
 "hash": "7493ed890163ebcd",
@@ -84,7 +84,7 @@
 "https://www.gov.br/conitec/static/js/client.39c478e1.js",
 "https://www.gov.br/conitec/static/js/runtime~client.6ba753dd.js"
 ],
-"tam": 239115
+"tam": 238742
 },
 "conitec_pcdt_elab": {
 "hash": "ff6b79569e557c76",
@@ -153,14 +153,14 @@
 "https://www.gov.br/conitec/static/js/client.39c478e1.js",
 "https://www.gov.br/conitec/static/js/runtime~client.6ba753dd.js"
 ],
-"tam": 250457
+"tam": 250458
 },
 "conitec_recom": {
 "hash": "bf28c58fa93e5500",
 "links": [
 "https://www.gov.br/conitec/pt-br/midias/dados-em-excel/recomendacoesdaconitec_20260615.xlsx/@@download/file"
 ],
-"tam": 239546
+"tam": 239545
 },
 "conitec_ddt": {
 "hash": "7493ed890163ebcd",
@@ -226,7 +226,7 @@
 "https://www.gov.br/conitec/static/js/client.39c478e1.js",
 "https://www.gov.br/conitec/static/js/runtime~client.6ba753dd.js"
 ],
-"tam": 239045
+"tam": 239448
 },
 "conitec_cp": {
 "hash": "de1cb69e65b55fda",
@@ -329,7 +329,7 @@
 "tam": 306991
 },
 "ms_notas": {
-"hash": "40691e229e8271df",
+"hash": "3d180095aef1a417",
 "links": [
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/anexo-da-nota-tecnica-no-62-2026.xlsx/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-informativa-no-2-2025-cglab-svsa-ms.pdf/view",
@@ -353,6 +353,7 @@
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-236.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-244-2025-depros-saps-ms.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-255-2026-coae-cgesco-desf-saps-ms.pdf/view",
+"https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-256-2026.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-270-2026.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-276-uso-acido-tranexamico.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-304.pdf/view",
@@ -362,9 +363,11 @@
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-32-2026-depros-saps-daet-saes-ms.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-324-2026-cgvdi-dpni-svsa-ms.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-325-2026-covisi-cggas-dapsi-sesai-ms.pdf/view",
+"https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-329.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-335-2026.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-34-2026-cgvdi-dpni-svsa-ms.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-35-2026-cggi-cgici-dpni-cgzha-dedt-svsa-ms-e-cgzha-dedt-svsa-ms.pdf/view",
+"https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-360-2026-dgci-desf-depros-saps-ms.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-361-2026.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-407-2025-cgici-dpni-svsa-ms.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-43-2026-saps-saes-svsa-ms.pdf/view",
@@ -479,7 +482,7 @@
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-98-2026.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-99-2026-dahud-saes-ms.pdf/view"
 ],
-"tam": 900668
+"tam": 912514
 },
 "ms_calendario": {
 "hash": "5a4e95cab2dde4aa",
@@ -490,7 +493,7 @@
 "https://www.gov.br/saude/pt-br/vacinacao/arquivos/calendario-nacional-de-vacinacao-gestante",
 "https://www.gov.br/saude/pt-br/vacinacao/arquivos/calendario-nacional-de-vacinacao-idoso"
 ],
-"tam": 244713
+"tam": 244711
 },
 "rename": {
 "hash": "885908fc079890bc",
@@ -707,8 +710,8 @@
 "https://www.gov.br/saude/pt-br/se",
 "https://www.gov.br/saude/pt-br/search?origem=termos&SearchableText=Desenrola Brasil",
 "https://www.gov.br/saude/pt-br/search?origem=termos&SearchableText=assinatura",
+"https://www.gov.br/saude/pt-br/search?origem=termos&SearchableText=cnh",
 "https://www.gov.br/saude/pt-br/search?origem=termos&SearchableText=imposto de renda",
-"https://www.gov.br/saude/pt-br/search?origem=termos&SearchableText=inss",
 "https://www.gov.br/saude/pt-br/search?origem=termos&SearchableText=mei",
 "https://www.gov.br/saude/pt-br/sus",
 "https://www.gov.br/saude/pt-br/vacinacao",
@@ -723,7 +726,7 @@
 "https://www.youtube.com/minsaudebr",
 "tel://136"
 ],
-"tam": 129010
+"tam": 129008
 },
 "gina": {
 "hash": "abe4f2fa613a4c0e",
@@ -733,7 +736,7 @@
 "https://ginasthma.org/2026-gina-strategy-report/",
 "https://ginasthma.org/2026-gina-summary-guide/"
 ],
-"tam": 86692
+"tam": 90164
 },
 "gold": {
 "hash": "abe9eb28e1e12fac",
@@ -859,7 +862,7 @@
 "https://www.mdcalc.com/calc/91/serum-osmolality-osmolarity",
 "https://www.openevidence.com/"
 ],
-"tam": 248603
+"tam": 250911
 },
 "kdigo": {
 "hash": "fcfa194673964efe",
@@ -901,19 +904,118 @@
 "https://kdigo.org/guidelines/transplant-recipient/",
 "https://kdigo.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fkdigo.org%2Fguidelines%2F"
 ],
-"tam": 84166
+"tam": 84169
 },
 "betim": {
-"hash": "ca0705e4e94fd2fe",
+"hash": "5131b6ec0b94e235",
 "links": [],
-"tam": 414056
+"tam": 414567
 },
 "sesmg": {
-"hash": "1aed9fe34c86fcf0",
+"hash": "51f1980e95f26a52",
 "links": [
 "https://www.saude.mg.gov.br/wp-content/uploads/2026/08/Protocolo_TAVI_SES_MG.pdf.pdf"
 ],
-"tam": 548590
+"tam": 550779
+},
+"tdc_home": {
+"hash": "f07532951f46a6e4",
+"links": [
+"https://www.tadeclinicagem.com.br/content/instagram/comentando-questoes-do-enamed-20262027-nessa-questao-de-dor-toracica-pedro-aproveitou-pra-comentar-sobre-a-abordagem-da-dor-toracica-com-base-na-diret/",
+"https://www.tadeclinicagem.com.br/content/instagram/hipertensao-assintomatica-no-ps-3-coisas-para-nao-esquecer-veja-o-video-completo-no-yt-do-tdc-aas-para-prevencao-primaria-180x120-de-pa-no-ps-e-nomes/",
+"https://www.tadeclinicagem.com.br/content/instagram/por-tras-de-cada-conteudo-podcast-topico-revisao-e-discussao-de-casos-clinicos-ha-medicos-que-atuam-diretamente-na-assistencia-em-todos-os-ambientes-d/",
+"https://www.tadeclinicagem.com.br/content/podcast/plano/",
+"https://www.tadeclinicagem.com.br/content/podcast/tdc-355-caso-clinico-de-insuficiencia-respiratoria-no-imunossuprimido/",
+"https://www.tadeclinicagem.com.br/content/podcast/tdc-356-manejo-de-choque-circulatorio/",
+"https://www.tadeclinicagem.com.br/content/podcast/tdc-a-beira-leito-03-essa-sincope-e-de-origem-cardiaca/",
+"https://www.tadeclinicagem.com.br/content/youtube/bismuto-para-h-pylori-falha-de-extubacao-e-trombocitemia-imune-tdc-responde/",
+"https://www.tadeclinicagem.com.br/content/youtube/comentando-questoes-do-enamed-20262027/",
+"https://www.tadeclinicagem.com.br/content/youtube/hipertensao-assintomatica-no-ps-3-coisas-para-nao-esquecer/",
+"https://www.tadeclinicagem.com.br/guia/calculadoras/",
+"https://www.tadeclinicagem.com.br/guia/casos/",
+"https://www.tadeclinicagem.com.br/guia/colecoes/",
+"https://www.tadeclinicagem.com.br/guia/edition/",
+"https://www.tadeclinicagem.com.br/guia/editorial-context/",
+"https://www.tadeclinicagem.com.br/guia/faq/",
+"https://www.tadeclinicagem.com.br/guia/favoritos/",
+"https://www.tadeclinicagem.com.br/guia/feed/",
+"https://www.tadeclinicagem.com.br/guia/flashcard/",
+"https://www.tadeclinicagem.com.br/guia/fluxogramas/",
+"https://www.tadeclinicagem.com.br/guia/glossario/",
+"https://www.tadeclinicagem.com.br/guia/landing/",
+"https://www.tadeclinicagem.com.br/guia/revisoes/"
+],
+"tam": 101620
+},
+"tdc_blog": {
+"hash": "25319833bfce850b",
+"links": [
+"https://www.tadeclinicagem.com.br/blog/antibioticos-inalatorios-quando-e-por-que-prescrever/",
+"https://www.tadeclinicagem.com.br/blog/causas-e-diagnostico-de-hipercalcemia-o-que-voce-precisa-saber/",
+"https://www.tadeclinicagem.com.br/blog/como-utilizar-na-avaliacao-de-tontura-persistente/",
+"https://www.tadeclinicagem.com.br/blog/conheca-as-principais-bacterias-multirresistentes/",
+"https://www.tadeclinicagem.com.br/blog/dor-toracica-e-dispneia-no-paciente-falciforme-abordagem-clinica/",
+"https://www.tadeclinicagem.com.br/blog/entenda-as-diferencas-entre-igra-e-ppd-no-diagnostico-de-tuberculose-latente/",
+"https://www.tadeclinicagem.com.br/blog/estatina-para-dac-sempre-necessaria-de-alta-potencia/",
+"https://www.tadeclinicagem.com.br/blog/febre-de-origem-central-causas-e-diagnostico-em-neurocriticos/",
+"https://www.tadeclinicagem.com.br/blog/fratura-atipica-de-femur-em-pacientes-com-osteoporose/",
+"https://www.tadeclinicagem.com.br/blog/interacoes-medicamentosas-com-varfarina-o-que-saber/",
+"https://www.tadeclinicagem.com.br/blog/manejo-de-paciente-com-pneumonia-recorrente-abordagem-clinica/",
+"https://www.tadeclinicagem.com.br/blog/sindrome-neuroleptica-entenda-os-sintomas-e-tratamentos/"
+],
+"tam": 140508
+},
+"afya_portal": {
+"hash": "eba255a3107e6c6e",
+"links": [
+"https://portal.afya.com.br/anestesiologia/exposicao-a-anestesia-geral-e-o-declinio-cognitivo",
+"https://portal.afya.com.br/cardiologia/abordagem-clinica-e-estrategia-terapeutica-no-manejo-da-insonia-na-pratica-medica",
+"https://portal.afya.com.br/cardiologia/acc-propoe-roteiro-pratico-para-a-hipertensao-resistente",
+"https://portal.afya.com.br/cardiologia/controle-da-hipertensao-pode-evitar-518-mil-mortes-cardiovasculares-ao-ano",
+"https://portal.afya.com.br/cardiologia/o-que-ha-de-novidade-no-cha-2-ds-2--va",
+"https://portal.afya.com.br/cardiologia/risco-cardiovascular-perioperatorio-exige-decisao-seletiva",
+"https://portal.afya.com.br/cardiologia/sbc-2025-nova-diretriz-brasileira-de-dislipidemias",
+"https://portal.afya.com.br/cardiologia/sindrome-coronariana-aguda-exige-decisoes-individualizadas",
+"https://portal.afya.com.br/carreira/calendario-de-residencia-medica-2025-2026",
+"https://portal.afya.com.br/carreira/qualidade-de-vida-dos-medicos-pesquisa-aponta-o-peso-do-estresse-renda-e-jornada",
+"https://portal.afya.com.br/clinica-medica/conexao-microvascular-entre-diabetes-e-insuficiencia-venosa-cronica",
+"https://portal.afya.com.br/colunistas/vitor-henrique-de-oliveira",
+"https://portal.afya.com.br/endocrinologia/agonistas-de-glp-1-o-que-influencia-a-perda-de-peso-na-obesidade",
+"https://portal.afya.com.br/endocrinologia/atraso-no-diagnostico-de-doencas-autoimunes-afeta-mais-as-mulheres-alerta-estudo",
+"https://portal.afya.com.br/endocrinologia/easd-lanca-diretriz-sobre-sofrimento-emocional-no-diabetes",
+"https://portal.afya.com.br/endocrinologia/monitorizacao-continua-pode-melhorar-controle-do-diabetes-tipo-2",
+"https://portal.afya.com.br/endocrinologia/pros-e-contras-da-tibolona-na-menopausa",
+"https://portal.afya.com.br/endocrinologia/uso-da-testosterona-na-mulher",
+"https://portal.afya.com.br/especialidades/ginecologia-e-obstetricia",
+"https://portal.afya.com.br/ginecologia-e-obstetricia/fezolinetanto-se-associa-a-melhora-do-sono-na-menopausa",
+"https://portal.afya.com.br/ginecologia-e-obstetricia/infertilidade-feminina-conduta-clinica-propedeutica-e-cuidado-multiprofissional",
+"https://portal.afya.com.br/ginecologia-e-obstetricia/oms-lanca-roteiro-global-contra-hipertensao-na-gestacao",
+"https://portal.afya.com.br/ginecologia-e-obstetricia/revisao-liga-exposicao-a-agrotoxicos-na-gestacao-a-risco-materno-e-fetal",
+"https://portal.afya.com.br/ginecologia-e-obstetricia/tdah-e-ciclicidade-hormonal-feminina-da-fisiopatologia-ao-diagnostico",
+"https://portal.afya.com.br/infectologia/srag-no-brasil-mantem-estabilidade-mas-sergipe-segue-em-alerta",
+"https://portal.afya.com.br/infectologia/tratamento-do-hiv-brasil-testa-tratamento-injetavel-quadrimestral-em-estudo",
+"https://portal.afya.com.br/nefrologia/recomendacoes-para-o-manejo-da-fragilidade-na-drc-um-relatorio-de-consenso",
+"https://portal.afya.com.br/neurologia/alem-do-esquecimento-sinais-de-comprometimento-cognitivo-na-consulta-de-rotina",
+"https://portal.afya.com.br/neurologia/alimentos-ultraprocessados-se-associam-a-lesoes-vasculares-cerebrais",
+"https://portal.afya.com.br/pediatria/calor-extremo-eleva-obito-por-doenca-respiratoria-infantil",
+"https://portal.afya.com.br/pediatria/criancas-e-adolescentes-com-tdah-criterios-de-transicao-para-nao-estimulantes",
+"https://portal.afya.com.br/pediatria/mel-para-tosse-em-criancas-funciona-como-antitussigeno",
+"https://portal.afya.com.br/pediatria/o-uso-de-ivermectina-em-criancas-e-recomendado-entenda",
+"https://portal.afya.com.br/pediatria/recomendacoes-aap-influenza-em-criancas",
+"https://portal.afya.com.br/pediatria/vacinacao-materna-contra-vsr-e-prematuridade-o-que-mostra-a-nova-metanalise",
+"https://portal.afya.com.br/psiquiatria/canabinoides-na-demencia-tem-eficacia-limitada-em-metanalise",
+"https://portal.afya.com.br/psiquiatria/diretriz-de-manejo-de-dislipidemia-associada-a-antipsicoticos",
+"https://portal.afya.com.br/psiquiatria/estudo-brasileiro-avaliou-a-saude-mental-de-criancas-e-adolescentes-no-brasil",
+"https://portal.afya.com.br/psiquiatria/guia-da-oms-aborda-a-importancia-da-desinstitucionalizacao-psiquiatrica",
+"https://portal.afya.com.br/saude/bronquiolite-anvisa-amplia-vacinacao-para-adultos-a-partir-de-18-anos",
+"https://portal.afya.com.br/terapia-intensiva/protocolo-vexus-acuracia-diagnostica-e-prognostico-em-pacientes-graves",
+"https://portal.afya.com.br/terapia-intensiva/traqueostomia-percutanea-dilatacional-exige-selecao-cuidadosa",
+"https://portal.afya.com.br/terapia-intensiva/trombocitopenia-induzida-por-heparina-no-suporte-circulatorio-mecanico",
+"https://portal.afya.com.br/terapia-intensiva/ultrassom-pode-ajudar-na-decisao-de-decanulacao-da-traqueostomia",
+"https://portal.afya.com.br/videos/ginecologia-e-obstetricia/expectativa-x-realidade-na-conducao-da-infertilidade-feminina",
+"https://portal.afya.com.br/videos/ginecologia-e-obstetricia/infertilidade-feminina-quando-investigar-e-como-conduzir-no-consultorio"
+],
+"tam": 466538
 }
 },
 "fontes": {}

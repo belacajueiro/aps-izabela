@@ -1,11 +1,11 @@
 {
- "gerado": "2026-10-19T20:47:59.691Z",
+ "gerado": "2026-10-19T21:24:25.262Z",
  "cmed": {
   "data": "09/10/2026",
   "fonte": "cmed_pmc2026",
   "icms": "PMC com ICMS de Minas Gerais: 12% para genéricos e 18% para os demais"
  },
- "n_fontes": 527,
+ "n_fontes": 528,
  "n_itens": 324,
  "sem_url": [
   "remume",
@@ -246,6 +246,7 @@
   "cab34",
   "trs_cardio2022",
   "gvs3_fm",
+  "crie2023",
   "icfep_ecr"
  ],
  "nao_conferidas": [
@@ -6995,6 +6996,18 @@
    ]
   },
   {
+   "k": "crie2023",
+   "s": "MS – Manual dos CRIE, 6ª ed. (2023)",
+   "t": "Ministério da Saúde. Manual dos Centros de Referência para Imunobiológicos Especiais, 6ª ed., 2023 (cópia na base clínica): cardiopatias crônicas – 'doenças ou transtornos do coração que necessitam de controle permanente' – recebem nos CRIE influenza inativada e pneumocócica polissacarídica 23-valente (VPP23), além do esquema de rotina (crianças: também esquema pneumocócico conjugado e DTPa/penta acelular se risco de descompensação com febre); a VSR não consta nesta edição (norma). Atualizações posteriores sobre pneumocócicas conjugadas (NT 52/2026, VPC20) não foram conferidas para cardiopatas.",
+   "f": "F",
+   "url": "",
+   "ano": 2026,
+   "usado_em": [
+    "cr-ic",
+    "cr-icfep"
+   ]
+  },
+  {
    "k": "conitec1067",
    "s": "CONITEC 1.067/2025 – dapagliflozina FE > 40%",
    "t": "CONITEC. Relatório de Recomendação nº 1.067 – dapagliflozina para IC com FEVE > 40%, NYHA II–IV (147ª reunião, 08/12/2025): não incorporação por maioria simples. DELIVER: piora da IC ou morte CV 16,4% × 19,5% (HR 0,82; ~32 eventos a menos por 1.000 em 2,3 anos); morte CV 7,4% × 8,3% (HR 0,88; IC95% 0,74–1,05; não significativo); custo anual proposto R$ 810/paciente, RCEI R$ 20.493/QALY, impacto orçamentário incremental de R$ 171,6 milhões em 5 anos, considerado alto e incerto (decisão).",
@@ -7029,10 +7042,10 @@
   },
   {
    "k": "sbc_valv2026",
-   "s": "SBC 2026 – valvopatias (resumo)",
-   "t": "Sociedade Brasileira de Cardiologia. Diretriz Brasileira de Valvopatias 2026 (GRADE; apresentada em 08–10/10/2026), conhecida nesta revisão só por resumo secundário (Portal Afya, 09/10/2026): EAo com baixo risco cirúrgico – < 70 anos cirurgia (forte) e TAVI (fraca), 70–80 anos ambas (fortes), > 80 anos TAVI (forte); sem preferência automática por TAVI aos 70 anos; EAo importante assintomática de alto gradiente – intervenção precoce só em selecionados (fraca); IM reumática – troca valvar (forte) preferida ao reparo (fraca) (diretriz, via resumo).",
+   "s": "SBC 2026 – Diretriz Brasileira de Valvopatias",
+   "t": "Tarasoutchi F, Fernandes JRC, Rosa VEE, Sampaio RO et al. Diretriz Brasileira de Valvopatias – 2026 (SBC/SBHCI/SBCCV). Arq Bras Cardiol 2026;123(10):e20260796, DOI 10.36660/abc.20260796 (GRADE; texto integral na base clínica, conferido em 19/10/2026). Seguimento por gravidade – EM (Quadro 8), IM primária (Quadro 15), EAo (Quadros 27–28; escolha cirurgia × TAVI por idade e risco), IAo (Quadro 35); anticoagulação (Quadro 71: varfarina na EM reumática com FA, DOAC só se varfarina impossível – fraca, baixa; prótese mecânica – varfarina, DOAC não indicado; INR 2,5 na prótese aórtica e 3,0 na mitral; início 5 mg ou 2,5 mg ≥ 65 anos; Quadro 72 ajuste); febre reumática (Quadros 77–80: faringite; benzatina ≤ 27 kg 600.000 UI e > 27 kg 1.200.000 UI a cada 21 dias; sulfadiazina 1 g/dia ou eritromicina 250 mg 2x; durações); endocardite (item 16.1 – grupo de risco que inclui valvopatia moderada/importante, bicúspide e dispositivos; Quadros 81–83); gestação (Quadros 84–85) (diretriz).",
    "f": "F",
-   "url": "https://portal.afya.com.br/cardiologia/diretriz-brasileira-de-valvopatias-2026-entenda-as-principais-mudancas",
+   "url": "https://doi.org/10.36660/abc.20260796",
    "ano": 2026,
    "usado_em": [
     "cr-valvopatias"
@@ -9582,7 +9595,8 @@
     "rename",
     "remume",
     "esc_ic2026",
-    "sbc_ic2026"
+    "sbc_ic2026",
+    "crie2023"
    ]
   },
   {
@@ -11076,6 +11090,7 @@
     "conitec1067",
     "icfep_ecr",
     "pcdt_dm2",
+    "crie2023",
     "fp_elenco2026",
     "rename",
     "remume"
@@ -11085,18 +11100,18 @@
    "id": "cr-valvopatias",
    "nome": "Valvopatias na APS: sopro, seguimento, febre reumática, anticoagulação e endocardite",
    "modulo": "cr",
-   "nv": 6,
+   "nv": 4,
    "fontes": [
-    "sbc_valv2020",
     "sbc_valv2026",
-    "esc_valv2025",
+    "sbc_fa2025b",
     "trs_cardio2022",
     "invictus",
-    "sbc_fa2025b",
-    "sbc_fr2009",
     "goal_rhd",
-    "oms_fr2024",
     "aha_ei2021",
+    "esc_valv2025",
+    "sbc_valv2020",
+    "sbc_fr2009",
+    "oms_fr2024",
     "rename",
     "remume"
    ]

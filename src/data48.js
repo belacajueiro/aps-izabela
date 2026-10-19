@@ -48,7 +48,7 @@ CONDICOES.push(
   mudancas: ["Item novo (v40): seguimento longitudinal da depressão; o item 'Depressão leve a moderada' segue na demanda espontânea."],
   nv: ["Dose-alvo da nortriptilina e da bupropiona para depressão: conferir na bula.", "Fluxo de matriciamento e psicoterapia em Betim.", "Preço do escitalopram genérico."],
   guia: {
-    resumo: "O que muda desfecho no seguimento: **medir (PHQ-9) em toda consulta**, **rever em 2 semanas** (1 semana se 18–25 anos ou risco), **não trocar antes de 4–6 semanas em dose adequada**, **manter ≥ 6 meses após a remissão** e **retirar devagar**. Duas falhas → matriciamento.",
+    resumo: "O que muda desfecho no seguimento: **medir (PHQ-9) em toda consulta**, **rever em 2 semanas** (1 semana se 18–25 anos ou risco), **não trocar antes de 4 semanas em dose adequada** (4–6 se psicoterapia ou combinação), **manter ≥ 6 meses após a remissão** e **retirar devagar**. Duas falhas → matriciamento.",
     calcs: ["sc:phq9"],
     secoes: [
       {t: "Avaliar a resposta", b: [

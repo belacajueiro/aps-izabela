@@ -1,12 +1,12 @@
 {
- "gerado": "2026-10-15T01:53:48.664Z",
+ "gerado": "2026-10-19T00:18:05.633Z",
  "cmed": {
   "data": "09/10/2026",
   "fonte": "cmed_pmc2026",
   "icms": "PMC com ICMS de Minas Gerais: 12% para genéricos e 18% para os demais"
  },
- "n_fontes": 488,
- "n_itens": 311,
+ "n_fontes": 504,
+ "n_itens": 321,
  "sem_url": [
   "remume",
   "aap_oma",
@@ -39,7 +39,6 @@
   "hemor",
   "gota_ecr",
   "entorse",
-  "nice_ansiedade",
   "acp_insonia",
   "stoffel",
   "nice_febre",
@@ -61,7 +60,6 @@
   "ms_tb",
   "ms_diag_hiv",
   "pcdt_hep",
-  "nice_depressao",
   "cipriani",
   "sop_2023",
   "cochrane_tpm",
@@ -244,7 +242,8 @@
   "betim_reab2018",
   "betim_pn2024",
   "nt32_2026",
-  "betim_glargina_prior"
+  "betim_glargina_prior",
+  "cab34"
  ],
  "nao_conferidas": [
   "aap_oma",
@@ -277,7 +276,6 @@
   "hemor",
   "gota_ecr",
   "entorse",
-  "nice_ansiedade",
   "acp_insonia",
   "stoffel",
   "nice_febre",
@@ -300,7 +298,6 @@
   "pcdt_hiv",
   "ms_diag_hiv",
   "pcdt_hep",
-  "nice_depressao",
   "cipriani",
   "sop_2023",
   "cochrane_tpm",
@@ -538,12 +535,14 @@
     "coqueluche",
     "corpo-estranho-ocular",
     "covid",
+    "cr-ansiedade",
     "cr-apso",
     "cr-ar",
     "cr-asma",
     "cr-b12",
     "cr-crise-has",
     "cr-dac",
+    "cr-depressao",
     "cr-dislipidemia",
     "cr-dm2",
     "cr-dm2-insulina",
@@ -758,18 +757,25 @@
     "coqueluche",
     "corpo-estranho-ocular",
     "covid",
+    "cr-adolescente",
+    "cr-alcool",
+    "cr-ansiedade",
     "cr-apso",
     "cr-ar",
     "cr-asma",
     "cr-b12",
+    "cr-bipolar",
+    "cr-bzd",
     "cr-crise-has",
     "cr-dac",
+    "cr-depressao",
     "cr-dislipidemia",
     "cr-dm2",
     "cr-dm2-insulina",
     "cr-dpoc",
     "cr-drc",
     "cr-espondilo",
+    "cr-esquizofrenia",
     "cr-fa",
     "cr-ferro",
     "cr-fibromialgia",
@@ -788,6 +794,8 @@
     "cr-pos-avc",
     "cr-prediabetes",
     "cr-psoriase",
+    "cr-tdah",
+    "cr-tea",
     "cr-vitd",
     "crise-convulsiva",
     "crupe",
@@ -1416,8 +1424,8 @@
    "k": "nice_ansiedade",
    "s": "",
    "t": "NICE CG113. Generalised anxiety disorder and panic disorder in adults, 2011 (atualizada 2020) (diretriz).",
-   "f": "C",
-   "url": "",
+   "f": "F",
+   "url": "https://www.nice.org.uk/guidance/cg113",
    "ano": 2020,
    "usado_em": [
     "panico",
@@ -1761,8 +1769,8 @@
    "k": "nice_depressao",
    "s": "",
    "t": "NICE NG222. Depression in adults: treatment and management, 2022 (diretriz).",
-   "f": "C",
-   "url": "",
+   "f": "F",
+   "url": "https://www.nice.org.uk/guidance/ng222",
    "ano": 2022,
    "usado_em": [
     "depressao",
@@ -1778,6 +1786,7 @@
    "url": "",
    "ano": 2018,
    "usado_em": [
+    "cr-depressao",
     "depressao"
    ]
   },
@@ -2486,6 +2495,7 @@
    "url": "",
    "ano": 2022,
    "usado_em": [
+    "cr-adolescente",
     "risco-suicida"
    ]
   },
@@ -3696,6 +3706,7 @@
    "url": "https://www.sbp.com.br/fileadmin/user_upload/24331c-MO_Triagem_Perecoce_para_Autismo.pdf",
    "ano": 2024,
    "usado_em": [
+    "cr-tea",
     "pu-18m",
     "pu-24m",
     "pu-dnpm"
@@ -4702,6 +4713,7 @@
    "url": "",
    "ano": 1998,
    "usado_em": [
+    "cr-alcool",
     "ho-mental",
     "pv-alcool"
    ]
@@ -5189,6 +5201,7 @@
    "usado_em": [
     "cr-aga",
     "cr-alzheimer",
+    "cr-bzd",
     "cr-demencia",
     "cr-inapetencia",
     "cr-parkinson",
@@ -5592,6 +5605,7 @@
    "url": "https://cristalia.com.br/produto/150/bula-profissional",
    "ano": 2026,
    "usado_em": [
+    "cr-alcool",
     "po-substancias"
    ]
   },
@@ -5637,6 +5651,7 @@
    "url": "",
    "ano": 2004,
    "usado_em": [
+    "cr-drogas",
     "po-substancias"
    ]
   },
@@ -6711,6 +6726,190 @@
     "pu-18m",
     "pu-24m",
     "pu-3a5a"
+   ]
+  },
+  {
+   "k": "pcdt_tab2016",
+   "s": "PCDT Transtorno Afetivo Bipolar tipo I 2016",
+   "t": "Ministério da Saúde. PCDT do Transtorno Afetivo Bipolar do tipo I – Portaria SAS/MS nº 315, de 30/03/2016: mania – estabilizador + antipsicótico (nível 1 lítio + risperidona; 2 valproato/olanzapina; 3 carbamazepina, haloperidol ou quetiapina; 4 clozapina após falha de ≥ 2 combinações); depressão bipolar – lítio, quetiapina, lamotrigina, olanzapina + fluoxetina; manutenção com os fármacos eficazes no episódio, por tempo indeterminado; antidepressivo reduzido após 6–8 semanas de remissão; litemia 0,6–1,2 mEq/L (toxicidade > 1,5; potencialmente fatal > 3,5); valproato teratogênico; clozapina com hemograma semanal nas primeiras 18 semanas e mensal depois (norma).",
+   "f": "F",
+   "url": "https://www.gov.br/conitec/pt-br/midias/protocolos/pcdt_transtornoafetivobipolar_tipoi.pdf/@@download/file",
+   "ano": 2016,
+   "usado_em": [
+    "cr-bipolar",
+    "cr-esquizofrenia"
+   ]
+  },
+  {
+   "k": "pcdt_esq2013",
+   "s": "PCDT Esquizofrenia 2013",
+   "t": "Ministério da Saúde. PCDT da Esquizofrenia – Portaria SAS/MS nº 364, de 09/04/2013: antipsicóticos (exceto clozapina) sem ordem de preferência, em monoterapia; falha = 6 semanas em dose adequada com melhora < 30% na BPRS; clozapina após 2 falhas, alto risco de suicídio ou discinesia tardia; decanoato de haloperidol se adesão oral impossível; posologias (risperidona 3–6 mg/dia; haloperidol até 15 mg na fase aguda e 10 mg na manutenção; clorpromazina 400–800 mg/dia; decanoato 150–200 mg/mês); monitorização: antropometria e PA no início e em 3, 6 e 12 meses, glicemia e lipídios no início e em 3 e 12 meses, depois anual; prolactina se sintomas – > 25 ng/mL (mulher) ou > 20 ng/mL (homem) com sintomas → trocar (norma).",
+   "f": "F",
+   "url": "https://www.gov.br/saude/pt-br/assuntos/pcdt/e/esquizofrenia",
+   "ano": 2013,
+   "usado_em": [
+    "cr-esquizofrenia"
+   ]
+  },
+  {
+   "k": "pcdt_tdah2022",
+   "s": "PCDT TDAH 2022",
+   "t": "Ministério da Saúde. PCDT do Transtorno do Déficit de Atenção com Hiperatividade – Portaria Conjunta SAES/SCTIE nº 14, de 29/07/2022: diagnóstico clínico (CID-10/DSM-5) com informações da família e da escola; SNAP-IV como apoio; tratamento multimodal não medicamentoso (psicoeducação, treinamento parental, TCC, apoio escolar); metilfenidato e lisdexanfetamina NÃO incorporados (Relatórios CONITEC 601 e 610/2021 – evidência de baixa/muito baixa certeza e alto impacto orçamentário) e não preconizados; consultas a cada ≤ 30 dias no início, depois a cada 3–4 meses; sem exames de rotina (norma).",
+   "f": "F",
+   "url": "https://www.gov.br/conitec/pt-br/midias/protocolos/portariaconjuntan14pcdttranstornododeficitdeatencaocomhiperatividadetdah.pdf/@@download/file",
+   "ano": 2022,
+   "usado_em": [
+    "cr-tdah"
+   ]
+  },
+  {
+   "k": "pcdt_tea2022",
+   "s": "PCDT Comportamento agressivo no TEA 2022",
+   "t": "Ministério da Saúde. PCDT do Comportamento Agressivo no Transtorno do Espectro do Autismo – Portaria Conjunta SAES/SCTIE nº 7, de 12/04/2022 (Relatório CONITEC 716): risperidona para agressividade grave com baixa resposta ou adesão às intervenções não medicamentosas, > 5 anos; doses por peso (Quadro 1); suspender sem resposta em 6 semanas na dose máxima; considerar retirada gradual após 6–12 meses de controle; monitorização (antropometria e PA em 3, 6 e 12 meses; hemograma, lipídios e glicemia em 3 e 12 meses; depois anual); prolactina se sintomas (> 25 ng/mL mulher, > 20 ng/mL homem, com galactorreia/alteração menstrual/libido → interromper); neutropenia grave (< 1 × 10⁹/L) → suspender; adultos 1 mg/dia, +1 mg a cada 3–4 dias, ~3 mg/dia (1–6), máximo 10 mg/dia; APS pode manter e monitorar após prescrição inicial especializada (norma).",
+   "f": "F",
+   "url": "https://www.gov.br/saude/pt-br/assuntos/pcdt/c/comportamento-agressivo-no-transtorno-do-espectro-do-autismo",
+   "ano": 2022,
+   "usado_em": [
+    "cr-tea"
+   ]
+  },
+  {
+   "k": "ceaf_mg2026",
+   "s": "CEAF/MG – lista por doença (set/2026)",
+   "t": "SES-MG. Lista de medicamentos do Componente Especializado por doença (documento atualizado em set/2026): TAB (F31.1–F31.7) – clozapina, lamotrigina, olanzapina, quetiapina, risperidona; esquizofrenia (F20.0–F20.8) – clozapina, olanzapina, quetiapina, risperidona, ziprasidona; comportamento agressivo no TEA (F84.0, F84.1, F84.3, F84.5, F84.8) – risperidona 1 mg, 2 mg e solução 1 mg/mL (idade mínima 5 anos) (lista oficial estadual).",
+   "f": "F",
+   "url": "https://www.saude.mg.gov.br/obtermedicamentos/ceaf/lista-de-medicamentos-por-doenca/",
+   "ano": 2026,
+   "usado_em": [
+    "cr-bipolar",
+    "cr-esquizofrenia",
+    "cr-tea"
+   ]
+  },
+  {
+   "k": "cab34",
+   "s": "CAB 34 – Saúde mental (MS 2013)",
+   "t": "Ministério da Saúde. Cadernos de Atenção Básica nº 34 – Saúde Mental, 2013: papel da APS e matriciamento; faixas de dose de antidepressivos (fluoxetina 20 mg usual, 5–80 mg; sertralina 50–150 mg usual, 50–200 mg; amitriptilina/clomipramina/imipramina 150–200 mg usual, iniciar 25 mg e aumentar 25 mg a cada 2–3 dias), benzodiazepínicos (meias-vidas e doses usuais) e redução gradual do clonazepam em gotas (manual oficial; PDF na base clínica do Drive).",
+   "f": "F",
+   "url": "",
+   "ano": 2013,
+   "usado_em": [
+    "cr-ansiedade",
+    "cr-bipolar",
+    "cr-bzd",
+    "cr-depressao",
+    "cr-esquizofrenia"
+   ]
+  },
+  {
+   "k": "nice_ng222",
+   "s": "NICE NG222 (2022) – depressão no adulto",
+   "t": "NICE. Depression in adults: treatment and management (NG222), 2022: primeira revisão em até 2 semanas (1 semana se 18–25 anos ou risco de suicídio); efeito geralmente em até 4 semanas; sem resposta em 4–6 semanas, rever adesão e fatores e então aumentar dose, trocar, associar psicoterapia ou potencializar (lítio, antipsicótico de 2ª geração – com especialista); manter ≥ 6 meses após remissão; retirada gradual (degraus de ~50%, depois ~25%), guiada por sintomas de retirada, que podem durar semanas a meses; hiponatremia e quedas em idosos; trocas podem exigir redução cruzada (diretriz).",
+   "f": "F",
+   "url": "https://www.nice.org.uk/guidance/ng222",
+   "ano": 2022,
+   "usado_em": [
+    "cr-depressao"
+   ]
+  },
+  {
+   "k": "nice_cg113",
+   "s": "NICE CG113 (2011, rev. 2020) – TAG e pânico",
+   "t": "NICE. Generalised anxiety disorder and panic disorder in adults: management (CG113): cuidado escalonado; ISRS como fármaco de escolha (sertralina primeiro na TAG); benzodiazepínico não na TAG, exceto crise breve, e não no pânico; < 30 anos – rever em 1 semana e vigiar ideação semanalmente no 1º mês; rever a cada 2–4 semanas nos 3 primeiros meses; TAG – manter ≥ 1 ano se eficaz; pânico – rever em 2, 4, 6 e 12 semanas, sem melhora em 12 semanas considerar imipramina ou clomipramina, manter ≥ 6 meses após dose ótima; ISRS + AINE/AAS aumentam sangramento (gastroproteção) (diretriz).",
+   "f": "F",
+   "url": "https://www.nice.org.uk/guidance/cg113",
+   "ano": 2020,
+   "usado_em": [
+    "cr-ansiedade",
+    "cr-bzd"
+   ]
+  },
+  {
+   "k": "nice_cg185",
+   "s": "NICE CG185 (2014, rev. 2023) – transtorno bipolar",
+   "t": "NICE. Bipolar disorder: assessment and management (CG185): lítio como 1ª linha de longo prazo; não iniciar lítio na APS sem cuidado compartilhado nem valproato na APS; litemia 0,6–0,8 mmol/L no 1º tratamento (0,8–1,0 se recaída em uso de lítio ou sintomas subclínicos); litemia a cada 3 meses no 1º ano e depois a cada 6 meses (3 meses em idosos, interações, risco renal/tireoidiano, má adesão ou último nível ≥ 0,8); peso, ureia/eletrólitos com cálcio, TFG e TSH a cada 6 meses; evitar AINE; retirada do lítio em ≥ 4 semanas (ideal até 3 meses); valproato com as restrições MHRA (não iniciar < 55 anos sem 2 especialistas); valproato – orientar sinais de doença hepática/hematológica; lítio na gestação com especialista e litemia mais frequente; checagem anual de saúde física (diretriz).",
+   "f": "F",
+   "url": "https://www.nice.org.uk/guidance/cg185",
+   "ano": 2023,
+   "usado_em": [
+    "cr-bipolar"
+   ]
+  },
+  {
+   "k": "nice_ng87",
+   "s": "NICE NG87 (2018, rev. 2019) – TDAH",
+   "t": "NICE. Attention deficit hyperactivity disorder: diagnosis and management (NG87): < 5 anos – treinamento parental em grupo como 1ª linha, sem medicação sem 2ª opinião especializada; ≥ 5 anos – medicação se prejuízo persistente após adaptações do ambiente, metilfenidato como 1ª linha, lisdexanfetamina após 6 semanas sem benefício; avaliação basal com altura, peso, pulso e PA (diretriz).",
+   "f": "F",
+   "url": "https://www.nice.org.uk/guidance/ng87",
+   "ano": 2019,
+   "usado_em": [
+    "cr-tdah"
+   ]
+  },
+  {
+   "k": "nice_ng134",
+   "s": "NICE NG134 (2019) – depressão em crianças e adolescentes",
+   "t": "NICE. Depression in children and young people: identification and management (NG134): leve – espera vigilante de 2 semanas e psicoterapia, sem antidepressivo inicial; moderada a grave – psicoterapia específica; fluoxetina só com psicoterapia concomitante, após avaliação de psiquiatra da infância e adolescência, início 10 mg e 20 mg após 1 semana; vigiar suicídio semanalmente no início; manter ≥ 6 meses após remissão; 2ª linha sertralina ou citalopram; não usar tricíclicos; retirada em 6–12 semanas (diretriz).",
+   "f": "F",
+   "url": "https://www.nice.org.uk/guidance/ng134",
+   "ano": 2019,
+   "usado_em": [
+    "cr-adolescente"
+   ]
+  },
+  {
+   "k": "pottie2018",
+   "s": "Pottie 2018 – desprescrição de benzodiazepínico",
+   "t": "Pottie K et al. Deprescribing benzodiazepine receptor agonists: evidence-based clinical practice guideline. Can Fam Physician 2018;64(5):339-51. PMID 29760253 (diretriz GRADE): oferecer retirada lenta a ≥ 65 anos qualquer que seja a duração (forte) e a 18–64 anos com uso > 4 semanas (fraca) na insônia; redução de ~25% a cada 2 semanas e ~12,5% perto do fim, com dias sem o remédio; a retirada gradual aumenta a cessação em 3 e 12 meses sem dano grave.",
+   "f": "F",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5951648/",
+   "ano": 2018,
+   "usado_em": [
+    "cr-bzd"
+   ]
+  },
+  {
+   "k": "jonas2014",
+   "s": "Jonas 2014 – fármacos para transtorno por uso de álcool",
+   "t": "Jonas DE et al. Pharmacotherapy for adults with alcohol use disorders in outpatient settings: a systematic review and meta-analysis. JAMA 2014;311(18):1889-900. DOI 10.1001/jama.2014.3628 – naltrexona oral 50 mg: NNT 20 para evitar qualquer retorno ao beber e NNT 12 para evitar retorno ao beber pesado; acamprosato NNT 12; sem diferença entre os dois (RS/MA de 122 ECR).",
+   "f": "F",
+   "url": "https://doi.org/10.1001/jama.2014.3628",
+   "ano": 2014,
+   "usado_em": [
+    "cr-alcool"
+   ]
+  },
+  {
+   "k": "decrescenzo2018",
+   "s": "De Crescenzo 2018 – intervenções psicossociais em cocaína",
+   "t": "De Crescenzo F et al. Comparative efficacy and acceptability of psychosocial interventions for individuals with cocaine and amphetamine addiction: a systematic review and network meta-analysis. PLoS Med 2018;15(12):e1002715. DOI 10.1371/journal.pmed.1002715 – manejo de contingência + abordagem de reforço comunitário foi a única intervenção que aumentou a abstinência no fim do tratamento (OR 2,84) e no seguimento longo (50 ECR).",
+   "f": "F",
+   "url": "https://doi.org/10.1371/journal.pmed.1002715",
+   "ano": 2018,
+   "usado_em": [
+    "cr-drogas"
+   ]
+  },
+  {
+   "k": "chan2019",
+   "s": "Chan 2019 – fármacos para cocaína",
+   "t": "Chan B et al. Pharmacotherapy for cocaine use disorder – a systematic review and meta-analysis. J Gen Intern Med 2019;34(12):2858-73. DOI 10.1007/s11606-019-05074-8 – antidepressivos sem efeito; bupropiona, topiramato e psicoestimulantes com aumento de abstinência de baixa força de evidência; nenhum aprovado.",
+   "f": "F",
+   "url": "https://doi.org/10.1007/s11606-019-05074-8",
+   "ano": 2019,
+   "usado_em": [
+    "cr-drogas"
+   ]
+  },
+  {
+   "k": "cortese2018",
+   "s": "Cortese 2018 – fármacos no TDAH",
+   "t": "Cortese S et al. Comparative efficacy and tolerability of medications for ADHD in children, adolescents, and adults: a systematic review and network meta-analysis. Lancet Psychiatry 2018;5(9):727-38. DOI 10.1016/S2215-0366(18)30269-4 – metilfenidato preferido em crianças e adolescentes e anfetaminas em adultos no curto prazo (133 ECR duplo-cegos); faltam dados ≥ 26 semanas.",
+   "f": "F",
+   "url": "https://doi.org/10.1016/S2215-0366(18)30269-4",
+   "ano": 2018,
+   "usado_em": [
+    "cr-tdah"
    ]
   }
  ],
@@ -10472,6 +10671,127 @@
     "eular_pmr2025",
     "rename",
     "remume"
+   ]
+  },
+  {
+   "id": "cr-depressao",
+   "nome": "Depressão no adulto: seguimento, falha terapêutica e retirada do antidepressivo",
+   "modulo": "cr",
+   "nv": 3,
+   "fontes": [
+    "nice_ng222",
+    "cipriani",
+    "cab34",
+    "rename",
+    "remume"
+   ]
+  },
+  {
+   "id": "cr-ansiedade",
+   "nome": "Transtornos de ansiedade (TAG e pânico): tratamento de longo prazo",
+   "modulo": "cr",
+   "nv": 2,
+   "fontes": [
+    "nice_cg113",
+    "cab34",
+    "rename",
+    "remume"
+   ]
+  },
+  {
+   "id": "cr-bzd",
+   "nome": "Benzodiazepínico de uso prolongado: desprescrição gradual",
+   "modulo": "cr",
+   "nv": 2,
+   "fontes": [
+    "pottie2018",
+    "cab34",
+    "beers2023",
+    "nice_cg113",
+    "remume"
+   ]
+  },
+  {
+   "id": "cr-bipolar",
+   "nome": "Transtorno afetivo bipolar: manutenção, lítio e cuidado compartilhado",
+   "modulo": "cr",
+   "nv": 2,
+   "fontes": [
+    "pcdt_tab2016",
+    "nice_cg185",
+    "ceaf_mg2026",
+    "remume",
+    "cab34"
+   ]
+  },
+  {
+   "id": "cr-esquizofrenia",
+   "nome": "Esquizofrenia e psicoses crônicas: antipsicóticos, saúde física e cuidado compartilhado",
+   "modulo": "cr",
+   "nv": 3,
+   "fontes": [
+    "pcdt_esq2013",
+    "ceaf_mg2026",
+    "remume",
+    "cab34"
+   ]
+  },
+  {
+   "id": "cr-alcool",
+   "nome": "Transtorno por uso de álcool: seguimento, prevenção de recaída e complicações",
+   "modulo": "cr",
+   "nv": 2,
+   "fontes": [
+    "jonas2014",
+    "naltrexona_bula",
+    "remume",
+    "audit_c"
+   ]
+  },
+  {
+   "id": "cr-drogas",
+   "nome": "Uso de cocaína, crack e maconha: cuidado longitudinal e redução de danos",
+   "modulo": "cr",
+   "nv": 1,
+   "fontes": [
+    "decrescenzo2018",
+    "chan2019",
+    "assist_oms"
+   ]
+  },
+  {
+   "id": "cr-tdah",
+   "nome": "TDAH: diagnóstico, cuidado multimodal e o que o SUS oferece",
+   "modulo": "cr",
+   "nv": 2,
+   "fontes": [
+    "pcdt_tdah2022",
+    "nice_ng87",
+    "cortese2018",
+    "remume"
+   ]
+  },
+  {
+   "id": "cr-adolescente",
+   "nome": "Depressão e ansiedade na adolescência: avaliação, psicoterapia e quando usar fluoxetina",
+   "modulo": "cr",
+   "nv": 2,
+   "fontes": [
+    "nice_ng134",
+    "suicidio",
+    "remume"
+   ]
+  },
+  {
+   "id": "cr-tea",
+   "nome": "TEA com comportamento agressivo: risperidona pelo PCDT e monitorização na APS",
+   "modulo": "cr",
+   "nv": 2,
+   "fontes": [
+    "pcdt_tea2022",
+    "ceaf_mg2026",
+    "remume",
+    "sbp_tea"
    ]
   }
  ]

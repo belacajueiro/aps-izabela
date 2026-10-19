@@ -1,12 +1,12 @@
 {
- "gerado": "2026-10-19T00:18:48.349Z",
+ "gerado": "2026-10-19T20:02:07.171Z",
  "cmed": {
   "data": "09/10/2026",
   "fonte": "cmed_pmc2026",
   "icms": "PMC com ICMS de Minas Gerais: 12% para genéricos e 18% para os demais"
  },
- "n_fontes": 504,
- "n_itens": 321,
+ "n_fontes": 523,
+ "n_itens": 324,
  "sem_url": [
   "remume",
   "aap_oma",
@@ -243,7 +243,8 @@
   "betim_pn2024",
   "nt32_2026",
   "betim_glargina_prior",
-  "cab34"
+  "cab34",
+  "icfep_ecr"
  ],
  "nao_conferidas": [
   "aap_oma",
@@ -461,7 +462,9 @@
   "ewgsop2",
   "icfsr2017",
   "ada2026_s3",
-  "findrisc"
+  "findrisc",
+  "icfep_ecr",
+  "esc_valv2025"
  ],
  "fontes": [
   {
@@ -559,6 +562,7 @@
     "cr-hipertireoidismo",
     "cr-hipotireoidismo",
     "cr-ic",
+    "cr-icfep",
     "cr-les",
     "cr-osteoporose",
     "cr-parkinson",
@@ -566,6 +570,7 @@
     "cr-pos-avc",
     "cr-prediabetes",
     "cr-psoriase",
+    "cr-valvopatias",
     "cr-vitd",
     "crise-convulsiva",
     "crupe",
@@ -597,6 +602,7 @@
     "fascite",
     "febre-adulto",
     "febre-crianca",
+    "febre-maculosa",
     "ferida",
     "gengivoestomatite",
     "gota",
@@ -786,6 +792,7 @@
     "cr-hipertireoidismo",
     "cr-hipotireoidismo",
     "cr-ic",
+    "cr-icfep",
     "cr-inapetencia",
     "cr-les",
     "cr-osteoporose",
@@ -796,6 +803,7 @@
     "cr-psoriase",
     "cr-tdah",
     "cr-tea",
+    "cr-valvopatias",
     "cr-vitd",
     "crise-convulsiva",
     "crupe",
@@ -826,6 +834,7 @@
     "fascite",
     "febre-adulto",
     "febre-crianca",
+    "febre-maculosa",
     "ferida",
     "gengivoestomatite",
     "gota",
@@ -3158,6 +3167,7 @@
    "usado_em": [
     "cr-dm2",
     "cr-dm2-insulina",
+    "cr-icfep",
     "cr-polifarmacia"
    ]
   },
@@ -3245,7 +3255,8 @@
    "ano": 2024,
    "usado_em": [
     "cr-fa",
-    "cr-ic"
+    "cr-ic",
+    "cr-icfep"
    ]
   },
   {
@@ -5044,7 +5055,8 @@
    "url": "https://portal.afya.com.br/cardiologia/sbc-2025-nova-diretriz-brasileira-de-fibrilacao-atrial",
    "ano": 2025,
    "usado_em": [
-    "cr-fa"
+    "cr-fa",
+    "cr-valvopatias"
    ]
   },
   {
@@ -5456,6 +5468,7 @@
     "cr-asma",
     "cr-dac",
     "cr-dm2",
+    "cr-icfep",
     "cr-parkinson",
     "hiperglicemia",
     "migranea",
@@ -6910,6 +6923,217 @@
    "ano": 2018,
    "usado_em": [
     "cr-tdah"
+   ]
+  },
+  {
+   "k": "esc_ic2026",
+   "s": "ESC 2026 – insuficiência cardíaca",
+   "t": "Køber L, Adamo M et al. 2026 ESC Guidelines for the management of heart failure. Eur Heart J 2026;47(38):5346–5457, doi 10.1093/eurheartj/ehag100 (online 28/08/2026): categoria 'levemente reduzida' extinta; ICFEr = FEVE < 50%; ICFEP = FEVE ≥ 50% + sinais/sintomas + alteração estrutural ou funcional + peptídeo natriurético elevado; terapia de base da ICFEP = antagonista mineralocorticoide + iSGLT2; ARM na IC sintomática independentemente da FEVE (I A); IECA/BRA/sacubitril-valsartana podem ser considerados na ICFEP (IIb C); semaglutida ou tirzepatida com FEVE ≥ 45% e IMC ≥ 30 (IIa B); PAS < 130 mmHg na hipertensão (I A); exercício supervisionado (I) (diretriz; página da revista consultada).",
+   "f": "F",
+   "url": "https://academic.oup.com/eurheartj/advance-article/doi/10.1093/eurheartj/ehag100/8766302",
+   "ano": 2026,
+   "usado_em": [
+    "cr-ic",
+    "cr-icfep"
+   ]
+  },
+  {
+   "k": "sbc_ic2026",
+   "s": "SBC 2026 – Diretriz Brasileira de IC",
+   "t": "Simões MV, Moura LZ et al. Diretriz Brasileira de Insuficiência Cardíaca – 2026. Arq Bras Cardiol 2026;123(10):e20260830, DOI 10.36660/abc.20260830i (08/10/2026; GRADE). Citação conferida na revista; o texto integral não abriu nesta revisão – recomendações conferidas em dois resumos secundários (Medway e Portal Afya, out/2026): ICFEP = FEVE ≥ 50% (faixa 41–49% extinta); NT-proBNP ≥ 125 ou BNP ≥ 35 pg/mL indicam ecocardiograma; na ICFEP sintomática, iSGLT2 (forte, alta) e ARM – espironolactona ou finerenona – com TFG > 25 e K < 5,0 (forte, alta); diurético de preferência de alça na congestão (forte, baixa); contra bradicardizante para FC < 70 em ritmo sinusal; IMC ≥ 30: tirzepatida (forte, moderada), semaglutida para peso e qualidade de vida (forte, moderada) e para eventos (fraca, baixa); não fazer restrição intensa de sal (< 2 g de sal/dia) no estável (diretriz, via resumo).",
+   "f": "F",
+   "url": "https://abccardiol.org/en/article/brazilian-guideline-for-heart-failure-2026/",
+   "ano": 2026,
+   "usado_em": [
+    "cr-ic",
+    "cr-icfep"
+   ]
+  },
+  {
+   "k": "conitec1067",
+   "s": "CONITEC 1.067/2025 – dapagliflozina FE > 40%",
+   "t": "CONITEC. Relatório de Recomendação nº 1.067 – dapagliflozina para IC com FEVE > 40%, NYHA II–IV (147ª reunião, 08/12/2025): não incorporação por maioria simples. DELIVER: piora da IC ou morte CV 16,4% × 19,5% (HR 0,82; ~32 eventos a menos por 1.000 em 2,3 anos); morte CV 7,4% × 8,3% (HR 0,88; IC95% 0,74–1,05; não significativo); custo anual proposto R$ 810/paciente, RCEI R$ 20.493/QALY, impacto orçamentário incremental de R$ 171,6 milhões em 5 anos, considerado alto e incerto (decisão).",
+   "f": "F",
+   "url": "https://www.gov.br/conitec/pt-br/midias/relatorios/2025/relatorio-de-recomendacao-no-1067-dapagliflozina/@@display-file/file",
+   "ano": 2025,
+   "usado_em": [
+    "cr-icfep"
+   ]
+  },
+  {
+   "k": "icfep_ecr",
+   "s": "ECR na ICFEP",
+   "t": "EMPEROR-Preserved (empagliflozina, NEJM 2021) e DELIVER (dapagliflozina, NEJM 2022): menos internação por IC, sem redução isolada de mortalidade; FINEARTS-HF (finerenona, NEJM 2024): menos eventos de piora da IC; TOPCAT (espironolactona, NEJM 2014): desfecho primário neutro, menos internação, grande variação regional; PARAGON-HF (sacubitril-valsartana, NEJM 2019): neutro; STEP-HFpEF (semaglutida, NEJM 2023): melhora de sintomas e peso; SUMMIT (tirzepatida, NEJM 2025): menos morte CV ou piora da IC (ECR, citados de memória).",
+   "f": "C",
+   "url": "",
+   "ano": 2025,
+   "usado_em": [
+    "cr-icfep"
+   ]
+  },
+  {
+   "k": "sbc_valv2020",
+   "s": "SBC 2020 – valvopatias",
+   "t": "Tarasoutchi F, Montera MW et al. Atualização das Diretrizes Brasileiras de Valvopatias – 2020. Arq Bras Cardiol 2020;115(4):720–775, doi 10.36660/abc.20201047: EAo importante = AVA ≤ 1,0 cm² (≤ 0,6 cm²/m²) com gradiente médio ≥ 40 mmHg ou Vmáx ≥ 4 m/s; sintomas = indicação inequívoca de intervenção; complicadores (FEVE < 50%, AVA < 0,7 cm², Vmáx > 5 m/s, gradiente > 60 mmHg); EM reumática sintomática (NYHA II–IV) → valvoplastia por balão (I A); IM primária: complicadores FEVE ≤ 60%, DSVE ≥ 40 mm, PSAP ≥ 50 mmHg, AE ≥ 60 mL/m², FA recente; seguimento ecocardiográfico: EM importante assintomática 6–12 meses, EM não importante anual; IM importante assintomática 6–12 meses, moderada 1–2 anos, discreta 2–3 anos (diretriz; texto na PMC).",
+   "f": "F",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8386977",
+   "ano": 2020,
+   "usado_em": [
+    "cr-valvopatias"
+   ]
+  },
+  {
+   "k": "sbc_valv2026",
+   "s": "SBC 2026 – valvopatias (resumo)",
+   "t": "Sociedade Brasileira de Cardiologia. Diretriz Brasileira de Valvopatias 2026 (GRADE; apresentada em 08–10/10/2026), conhecida nesta revisão só por resumo secundário (Portal Afya, 09/10/2026): EAo com baixo risco cirúrgico – < 70 anos cirurgia (forte) e TAVI (fraca), 70–80 anos ambas (fortes), > 80 anos TAVI (forte); sem preferência automática por TAVI aos 70 anos; EAo importante assintomática de alto gradiente – intervenção precoce só em selecionados (fraca); IM reumática – troca valvar (forte) preferida ao reparo (fraca) (diretriz, via resumo).",
+   "f": "F",
+   "url": "https://portal.afya.com.br/cardiologia/diretriz-brasileira-de-valvopatias-2026-entenda-as-principais-mudancas",
+   "ano": 2026,
+   "usado_em": [
+    "cr-valvopatias"
+   ]
+  },
+  {
+   "k": "esc_valv2025",
+   "s": "ESC/EACTS 2025 – valvopatias",
+   "t": "Praz F, Borger MA, Lanz J et al. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J 2025, doi 10.1093/eurheartj/ehaf194 (publicada em 29/08/2025, substitui a de 2021): Heart Team, imagem avançada, TAVI a partir de 70 anos com anatomia favorável; intervenção na EAo importante assintomática com marcadores de risco (IIa) (diretriz; conferida a publicação e pontos-chave em resumos).",
+   "f": "C",
+   "url": "https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines/All-ESC-Practice-Guidelines/Valvular-Heart-Disease",
+   "ano": 2025,
+   "usado_em": [
+    "cr-valvopatias"
+   ]
+  },
+  {
+   "k": "invictus",
+   "s": "INVICTUS (NEJM 2022)",
+   "t": "Connolly SJ et al. Rivaroxaban in rheumatic heart disease-associated atrial fibrillation (INVICTUS). NEJM 2022: 4.531 pacientes com cardiopatia reumática e FA (CHA2DS2-VASc ≥ 2, área mitral ≤ 2 cm² ou contraste espontâneo/trombo em AE); desfecho primário 8,2% com rivaroxabana × 6,5% com antagonista da vitamina K; morte vascular 6,3% × 4,8% – a varfarina segue indicada nessa população (ECR; resumo do ACC conferido).",
+   "f": "F",
+   "url": "https://www.acc.org/Latest-in-Cardiology/Clinical-Trials/2022/08/27/04/07/INVICTUS",
+   "ano": 2022,
+   "usado_em": [
+    "cr-valvopatias"
+   ]
+  },
+  {
+   "k": "sbc_fr2009",
+   "s": "Diretrizes brasileiras de febre reumática (2009)",
+   "t": "SBC/SBP/SBR. Diretrizes Brasileiras para o Diagnóstico, Tratamento e Prevenção da Febre Reumática. Arq Bras Cardiol 2009;93(3 supl. 4):1–18: profilaxia secundária com penicilina G benzatina 600.000 UI IM (< 20 kg) ou 1.200.000 UI IM (≥ 20 kg) a cada 21 dias; alergia à penicilina – sulfadiazina 500 mg/dia (< 30 kg) ou 1 g/dia (≥ 30 kg); alergia a ambas – eritromicina 250 mg 12/12 h; duração – sem cardite: até 21 anos ou 5 anos após o último surto (o que for maior); cardite sem sequela ou IM leve residual: até 25 anos ou 10 anos após o último surto; lesão moderada a grave: até 40 anos ou por toda a vida; após cirurgia valvar: por toda a vida (diretriz; tabelas conferidas em resumo secundário).",
+   "f": "F",
+   "url": "https://www.medway.com.br/conteudos/tratamento-e-profilaxia-da-febre-reumatica/",
+   "ano": 2009,
+   "usado_em": [
+    "cr-valvopatias"
+   ]
+  },
+  {
+   "k": "goal_rhd",
+   "s": "GOAL (NEJM 2021/22) – cardiopatia reumática latente",
+   "t": "Beaton A et al. Secondary antibiotic prophylaxis for latent rheumatic heart disease (GOAL). NEJM, doi 10.1056/NEJMoa2102074: 818 crianças e adolescentes de 5–17 anos com cardiopatia reumática latente ao eco; penicilina benzatina a cada 4 semanas por 2 anos × observação – progressão 0,8% × 8,2% (NNT 13); 1 anafilaxia (ECR; resumo do Portal Afya conferido).",
+   "f": "F",
+   "url": "https://portal.afya.com.br/cardiologia/penicilina-benzatina-e-eficaz-em-retardar-a-evolucao-da-cardite-reumatica",
+   "ano": 2021,
+   "usado_em": [
+    "cr-valvopatias"
+   ]
+  },
+  {
+   "k": "oms_fr2024",
+   "s": "OMS 2024 – febre reumática",
+   "t": "World Health Organization. WHO guideline on the prevention and diagnosis of rheumatic fever and rheumatic heart disease, 29/10/2024: prevenção primária (tratar faringite e infecção de pele estreptocócica), profilaxia secundária de longo prazo, estratégias de adesão e rastreio ecocardiográfico (diretriz; só a página de apresentação foi conferida).",
+   "f": "F",
+   "url": "https://www.who.int/publications/i/item/9789240100077",
+   "ano": 2024,
+   "usado_em": [
+    "cr-valvopatias"
+   ]
+  },
+  {
+   "k": "aha_ei2021",
+   "s": "AHA 2021 – profilaxia de endocardite",
+   "t": "Wilson WR et al. Prevention of viridans group streptococcal infective endocarditis: a scientific statement from the AHA. Circulation 2021 (PMID 33853363): profilaxia só nos de maior risco – prótese valvar ou anel de anuloplastia, endocardite prévia, cardiopatias congênitas selecionadas e transplantado cardíaco com valvopatia; não para prolapso mitral ou valva aórtica bicúspide; só em procedimento dentário que manipula gengiva ou região periapical ou perfura a mucosa; nenhuma profilaxia em endoscopia, colonoscopia ou cistoscopia; clindamicina deve ser evitada (preferir azitromicina se sem QT longo) (declaração científica; comentário oficial conferido).",
+   "f": "F",
+   "url": "https://professional.heart.org/en/science-news/Prevention-of-Viridans-Group-Streptococcal-Infective-Endocarditis/commentary",
+   "ano": 2021,
+   "usado_em": [
+    "cr-valvopatias"
+   ]
+  },
+  {
+   "k": "nt88_2025",
+   "s": "MS – NT 88/2025 (febre maculosa)",
+   "t": "Ministério da Saúde. Nota Técnica nº 88/2025-CGZV/DEDT/SVSA/MS (10/10/2025) – sazonalidade da febre maculosa: caso suspeito = febre súbita, cefaleia e mialgia + picada/contato com carrapato, contato com animais domésticos ou silvestres ou ida a área de transmissão nos 15 dias anteriores, OU febre súbita, cefaleia e mialgia seguidas de exantema maculopapular entre o 2º e o 5º dia e/ou manifestações hemorrágicas; doxiciclina é a escolha para todos os casos suspeitos, de qualquer idade e gravidade, iniciada na suspeita, sem aguardar exame; 7 dias ou até 3 dias após a febre ceder; doxiciclina 100 mg injetável nos graves (NT 11/2024); sorologia pareada (RIFI): 1ª amostra na suspeita (até o 7º dia), 2ª em 14–21 dias, confirmação por aumento ≥ 4 vezes do título; a coleta não pode atrasar o tratamento; notificação compulsória IMEDIATA de todo caso suspeito, por qualquer meio, e ficha de investigação no Sinan; letalidade por R. rickettsii de até ~55–60% (norma).",
+   "f": "F",
+   "url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2025/nota-tecnica-no-88-2025-cgzv-dedt-svsa-ms.pdf",
+   "ano": 2025,
+   "usado_em": [
+    "febre-maculosa"
+   ]
+  },
+  {
+   "k": "nt49_2026",
+   "s": "MS – NT 49/2026 (febre maculosa)",
+   "t": "Ministério da Saúde. Nota Técnica nº 49/2026-CGZHA/DEDT/SVSA/MS (04/09/2026) – sazonalidade da febre maculosa: reforça a suspeita clínica e o início imediato da doxiciclina sem confirmação laboratorial; acionar de imediato o fluxo de aquisição do medicamento; doxiciclina EV em internação nos graves; sinais de gravidade – alteração de consciência, convulsões, hipotensão/choque, oligúria/insuficiência renal, insuficiência respiratória, sangramentos, icterícia, edema importante, arritmias/miocardite, necrose periférica e progressão do exantema para petéquias, púrpura ou equimoses; RIFI é o método de referência e PCR auxilia na fase inicial (norma).",
+   "f": "F",
+   "url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-49-2026.pdf",
+   "ano": 2026,
+   "usado_em": [
+    "febre-maculosa"
+   ]
+  },
+  {
+   "k": "nt97_2022",
+   "s": "MS – NT 97/2022 (doxiciclina)",
+   "t": "Ministério da Saúde. Nota Técnica nº 97/2022-CGZV/DEIDT/SVS/MS (02–04/09/2022): doxiciclina de 12/12 h, VO ou EV conforme a gravidade; criança < 45 kg – 2,2 mg/kg de 12/12 h, VO ou EV; uso rotineiro por 7 dias, mantendo até 3 dias após a febre ceder (norma).",
+   "f": "F",
+   "url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2022/sei_ms-0029017249-nota-tecnica.pdf",
+   "ano": 2022,
+   "usado_em": [
+    "febre-maculosa"
+   ]
+  },
+  {
+   "k": "caf_sp2023",
+   "s": "SES-SP – NT CAF 11/2023 (febre maculosa)",
+   "t": "SES-SP, Coordenadoria de Assistência Farmacêutica. Nota Técnica CAF nº 11 (22/06/2023): doxiciclina adulto 100 mg de 12/12 h VO ou EV, criança < 45 kg 2,2 mg/kg de 12/12 h, até 3 dias após a febre; cloranfenicol (alternativa) adulto 500 mg de 6/6 h VO (grave: 1 g EV de 6/6 h), criança 50–100 mg/kg/dia de 6/6 h (máx. 2 g/dia); febre costuma ceder em 24–72 h se o tratamento começa nos primeiros 5 dias; internar se disfunção orgânica, plaquetopenia, icterícia, sangramento, impossibilidade de via oral ou piora com tratamento oral (norma estadual).",
+   "f": "F",
+   "url": "https://www.cosemssp.org.br/wp-content/uploads/2023/06/NOTA-TECNICA-TRATAMENTO-FEBRE-MACULOSA.pdf",
+   "ano": 2023,
+   "usado_em": [
+    "febre-maculosa"
+   ]
+  },
+  {
+   "k": "rj_fm2025",
+   "s": "SES-RJ – NI 10/2025 (doxiciclina)",
+   "t": "SES-RJ. Nota Informativa nº 10/2025 SAFIE/SUBAS (13–15/12/2025): incubação de 2 a 14 dias (média 7); exantema costuma surgir entre o 3º e o 5º dia e pode faltar; doxiciclina é a 1ª escolha em todas as idades, inclusive crianças, iniciada na suspeita; apresentações – comprimido 100 mg, comprimido solúvel 100 mg e solução injetável 100 mg; a receita deve trazer posologia, duração e peso estimado; notificação imediata no Sinan (Portaria GM/MS nº 3.148/2024) (norma estadual).",
+   "f": "F",
+   "url": "https://www.rj.gov.br/saude/sites/default/files/arquivo_pagina_basica/SEI_94178164_Nota_Tecnica.pdf",
+   "ano": 2025,
+   "usado_em": [
+    "febre-maculosa"
+   ]
+  },
+  {
+   "k": "cdc_rmsf",
+   "s": "CDC – febre maculosa das Montanhas Rochosas",
+   "t": "CDC. Clinical Care of Rocky Mountain Spotted Fever (página atual): doxiciclina é a 1ª linha em todas as idades – adulto 100 mg 12/12 h, criança < 45 kg 2,2 mg/kg 2x/dia; mínimo 5–7 dias e ≥ 3 dias após a febre; cursos curtos (5–10 dias) não mancharam dentes permanentes; na gestação, a doxiciclina é pouco provável de causar teratogenicidade relevante (aconselhar risco × benefício); cloranfenicol é a única alternativa e tem mais mortalidade; febre cede em 24–48 h; maior benefício se iniciada nos primeiros 5 dias (agência de saúde).",
+   "f": "F",
+   "url": "https://www.cdc.gov/rocky-mountain-spotted-fever/hcp/clinical-care/",
+   "ano": null,
+   "usado_em": [
+    "febre-maculosa"
+   ]
+  },
+  {
+   "k": "sesmg_fm2025",
+   "s": "SES-MG – febre maculosa 2025",
+   "t": "SES-MG, dados até 30/09/2025 divulgados pela imprensa (Rádio Itatiaia): 27 casos confirmados e 2 óbitos em MG em 2025 (letalidade 7,4%), com casos em residentes de Betim (1), Contagem (1), Belo Horizonte (5), Santa Luzia (3), Caeté (2, ambos óbitos), Lagoa Santa e Vespasiano; o município de residência pode não ser o local de infecção (dado oficial via imprensa).",
+   "f": "F",
+   "url": "https://www.itatiaia.com.br/brasil/sudeste/mg/febre-maculosa-em-mg-governo-divulga-lista-de-cidades-com-casos-confirmados-em-2025/",
+   "ano": 2025,
+   "usado_em": [
+    "febre-maculosa"
    ]
   }
  ],
@@ -9305,13 +9529,15 @@
    "id": "cr-ic",
    "nome": "Insuficiência cardíaca com FE reduzida – seguimento",
    "modulo": "cr",
-   "nv": 2,
+   "nv": 3,
    "fontes": [
     "pcdt_ic",
     "dapa_ic",
     "esc_ic",
     "rename",
-    "remume"
+    "remume",
+    "esc_ic2026",
+    "sbc_ic2026"
    ]
   },
   {
@@ -10792,6 +11018,58 @@
     "ceaf_mg2026",
     "remume",
     "sbp_tea"
+   ]
+  },
+  {
+   "id": "cr-icfep",
+   "nome": "Insuficiência cardíaca com FE preservada (ICFEP): diagnóstico e tratamento",
+   "modulo": "cr",
+   "nv": 4,
+   "fontes": [
+    "esc_ic2026",
+    "sbc_ic2026",
+    "conitec1067",
+    "icfep_ecr",
+    "pcdt_dm2",
+    "fp_elenco2026",
+    "rename",
+    "remume"
+   ]
+  },
+  {
+   "id": "cr-valvopatias",
+   "nome": "Valvopatias na APS: sopro, seguimento, febre reumática, anticoagulação e endocardite",
+   "modulo": "cr",
+   "nv": 5,
+   "fontes": [
+    "sbc_valv2020",
+    "sbc_valv2026",
+    "esc_valv2025",
+    "invictus",
+    "sbc_fa2025",
+    "sbc_fr2009",
+    "goal_rhd",
+    "oms_fr2024",
+    "aha_ei2021",
+    "rename",
+    "remume"
+   ]
+  },
+  {
+   "id": "febre-maculosa",
+   "nome": "Febre maculosa – suspeita",
+   "modulo": "de",
+   "nv": 3,
+   "fontes": [
+    "nt88_2025",
+    "nt49_2026",
+    "nt97_2022",
+    "caf_sp2023",
+    "rj_fm2025",
+    "cdc_rmsf",
+    "sesmg_fm2025",
+    "rename",
+    "remume"
    ]
   }
  ]

@@ -1,12 +1,12 @@
 {
- "gerado": "2026-10-19T21:24:25.262Z",
+ "gerado": "2026-10-20T13:32:06.803Z",
  "cmed": {
   "data": "09/10/2026",
   "fonte": "cmed_pmc2026",
   "icms": "PMC com ICMS de Minas Gerais: 12% para genéricos e 18% para os demais"
  },
- "n_fontes": 528,
- "n_itens": 324,
+ "n_fontes": 540,
+ "n_itens": 326,
  "sem_url": [
   "remume",
   "aap_oma",
@@ -247,7 +247,16 @@
   "trs_cardio2022",
   "gvs3_fm",
   "crie2023",
-  "icfep_ecr"
+  "icfep_ecr",
+  "cab29_2010",
+  "cab33_2012",
+  "pcdt_ist2022_q5",
+  "betim_exames2026",
+  "uspstf_idoso",
+  "uspstf_ped",
+  "aap_obes2023",
+  "ada_jovem",
+  "headsss"
  ],
  "nao_conferidas": [
   "aap_oma",
@@ -467,7 +476,12 @@
   "ada2026_s3",
   "findrisc",
   "icfep_ecr",
-  "esc_valv2025"
+  "esc_valv2025",
+  "uspstf_idoso",
+  "uspstf_ped",
+  "aap_obes2023",
+  "ada_jovem",
+  "headsss"
  ],
  "fontes": [
   {
@@ -3146,7 +3160,8 @@
     "cr-has-meds",
     "cr-has-resistente",
     "cr-pos-avc",
-    "pa-elevada"
+    "pa-elevada",
+    "pu-checkup"
    ]
   },
   {
@@ -3208,7 +3223,8 @@
     "cr-dm2",
     "ho-rotina",
     "mu-rotina",
-    "pv-checkup"
+    "pv-checkup",
+    "pv-checkup-idoso"
    ]
   },
   {
@@ -3286,7 +3302,8 @@
     "cr-dm2",
     "cr-escalas",
     "cr-obesidade",
-    "cr-pos-avc"
+    "cr-pos-avc",
+    "pu-checkup"
    ]
   },
   {
@@ -3519,6 +3536,7 @@
     "pu-4m",
     "pu-6m",
     "pu-9m",
+    "pu-checkup",
     "pu-crescimento",
     "pu-dnpm",
     "pu-guiada",
@@ -3594,6 +3612,7 @@
     "pu-12m",
     "pu-6m",
     "pu-9m",
+    "pu-checkup",
     "pu-guiada",
     "pu-prematuro",
     "pu-suplementacao"
@@ -3609,6 +3628,7 @@
    "usado_em": [
     "pu-1m",
     "pu-2m",
+    "pu-checkup",
     "pu-guiada",
     "pu-rn",
     "pu-suplementacao"
@@ -3696,6 +3716,7 @@
    "usado_em": [
     "pu-18m",
     "pu-24m",
+    "pu-checkup",
     "pu-dnpm",
     "pu-guiada"
    ]
@@ -3723,6 +3744,7 @@
     "cr-tea",
     "pu-18m",
     "pu-24m",
+    "pu-checkup",
     "pu-dnpm"
    ]
   },
@@ -3902,7 +3924,8 @@
    "ano": 2025,
    "usado_em": [
     "cr-osteoporose",
-    "pv-checkup"
+    "pv-checkup",
+    "pv-checkup-idoso"
    ]
   },
   {
@@ -4119,7 +4142,8 @@
    "usado_em": [
     "cr-aga",
     "cr-escalas",
-    "cr-pos-avc"
+    "cr-pos-avc",
+    "pv-checkup-idoso"
    ]
   },
   {
@@ -4212,7 +4236,8 @@
     "in-hiv",
     "mu-colo",
     "mu-rotina",
-    "po-trans"
+    "po-trans",
+    "pv-checkup-idoso"
    ]
   },
   {
@@ -4224,7 +4249,8 @@
    "ano": 2016,
    "usado_em": [
     "mu-colo",
-    "mu-rotina"
+    "mu-rotina",
+    "pv-checkup-idoso"
    ]
   },
   {
@@ -4248,7 +4274,8 @@
    "ano": 2025,
    "usado_em": [
     "mu-mama",
-    "mu-rotina"
+    "mu-rotina",
+    "pv-checkup-idoso"
    ]
   },
   {
@@ -4274,6 +4301,7 @@
     "mu-colo",
     "mu-rotina",
     "mu-violencia",
+    "pu-checkup",
     "pv-vacinas",
     "violencia"
    ]
@@ -4616,6 +4644,7 @@
    "usado_em": [
     "ho-rotina",
     "pv-checkup",
+    "pv-checkup-idoso",
     "pv-colorretal"
    ]
   },
@@ -4627,6 +4656,7 @@
    "url": "https://site.cff.org.br/noticia/Noticias-gerais/25/05/2026/sus-adota-novo-exame-para-detectar-cancer-de-intestino-antes-dos-sintomas",
    "ano": 2026,
    "usado_em": [
+    "pv-checkup-idoso",
     "pv-colorretal"
    ]
   },
@@ -4638,6 +4668,7 @@
    "url": "https://portal.afya.com.br/saude/inca-inicia-estudo-para-viabilizar-rastreamento-de-cancer-de-pulmao-no-sus",
    "ano": 2026,
    "usado_em": [
+    "pv-checkup-idoso",
     "pv-pulmao"
    ]
   },
@@ -4650,6 +4681,7 @@
    "ano": 2021,
    "usado_em": [
     "pv-checkup",
+    "pv-checkup-idoso",
     "pv-pulmao"
    ]
   },
@@ -4688,6 +4720,7 @@
     "ho-rotina",
     "in-hepatites",
     "pv-checkup",
+    "pv-checkup-idoso",
     "pv-infecciosas"
    ]
   },
@@ -4716,6 +4749,7 @@
    "ano": 2026,
    "usado_em": [
     "cr-aga",
+    "pv-checkup-idoso",
     "pv-vacinas"
    ]
   },
@@ -4742,7 +4776,8 @@
    "usado_em": [
     "ho-psa",
     "ho-rotina",
-    "pv-checkup"
+    "pv-checkup",
+    "pv-checkup-idoso"
    ]
   },
   {
@@ -4841,7 +4876,8 @@
    "url": "",
    "ano": 2019,
    "usado_em": [
-    "ho-rotina"
+    "ho-rotina",
+    "pv-checkup-idoso"
    ]
   },
   {
@@ -5191,7 +5227,8 @@
    "url": "https://saude.rs.gov.br/upload/arquivos/202410/07100606-identificacao-demencia-atencao-primaria.pdf",
    "ano": 2024,
    "usado_em": [
-    "cr-demencia"
+    "cr-demencia",
+    "pv-checkup-idoso"
    ]
   },
   {
@@ -5220,7 +5257,8 @@
     "cr-inapetencia",
     "cr-parkinson",
     "cr-polifarmacia",
-    "cr-quedas"
+    "cr-quedas",
+    "pv-checkup-idoso"
    ]
   },
   {
@@ -5491,7 +5529,8 @@
    "usado_em": [
     "cr-aga",
     "cr-fragilidade",
-    "po-idoso-vulneravel"
+    "po-idoso-vulneravel",
+    "pv-checkup-idoso"
    ]
   },
   {
@@ -7192,6 +7231,142 @@
    "ano": 2025,
    "usado_em": [
     "febre-maculosa"
+   ]
+  },
+  {
+   "k": "lee_ttb2013",
+   "s": "Lee 2013 – tempo até o benefício do rastreio",
+   "t": "Lee SJ, Boscardin WJ, Stijacic-Cenzer I et al. Time lag to benefit after screening for breast and colorectal cancer: meta-analysis of survival data from the United States, Sweden, United Kingdom, and Denmark. BMJ 2013;346:e8441. PMID 23299842 (metanálise de ECR): ~10,7 anos (mama) e ~10,3 anos (colorretal) para evitar 1 morte a cada 1.000 rastreados; rastreio mais apropriado com expectativa de vida > 10 anos.",
+   "f": "F",
+   "url": "https://doi.org/10.1136/bmj.e8441",
+   "ano": 2013,
+   "usado_em": [
+    "pv-checkup-idoso"
+   ]
+  },
+  {
+   "k": "cab29_2010",
+   "s": "CAB 29 – Rastreamento (2010)",
+   "t": "Ministério da Saúde. Cadernos de Atenção Primária nº 29 – Rastreamento, 2010 (manual MS): tabelas de recomendações para adultos, crianças e cânceres; ênfase na prevenção quaternária e nos danos do excesso de exames (PDF da base da usuária).",
+   "f": "F",
+   "url": "",
+   "ano": 2010,
+   "usado_em": [
+    "pu-checkup",
+    "pv-checkup-idoso"
+   ]
+  },
+  {
+   "k": "cab33_2012",
+   "s": "CAB 33 – Saúde da criança (2012)",
+   "t": "Ministério da Saúde. Cadernos de Atenção Básica nº 33 – Saúde da criança: crescimento e desenvolvimento, 2012 (manual MS): cap. 4.3.4–4.3.5 (visão e audição) e cap. 5 (exames em crianças assintomáticas – hemograma só em risco, sem EAS/parasitológico de rotina, perfil lipídico seletivo) (PDF da base da usuária).",
+   "f": "F",
+   "url": "",
+   "ano": 2012,
+   "usado_em": [
+    "pu-checkup"
+   ]
+  },
+  {
+   "k": "pcdt_ist2022_q5",
+   "s": "PCDT IST 2022 – Quadro 5",
+   "t": "Ministério da Saúde. PCDT para Atenção Integral às Pessoas com IST, 2022, seção 2.4, Quadro 5 – Rastreamento de IST: adolescentes e jovens (≤ 30 anos) com vida sexual ativa – HIV e sífilis anual; clamídia/gonococo e hepatites conforme subgrupo ou prática sexual (norma; PDF da base da usuária).",
+   "f": "F",
+   "url": "",
+   "ano": 2022,
+   "usado_em": [
+    "pu-checkup"
+   ]
+  },
+  {
+   "k": "betim_exames2026",
+   "s": "Betim – Protocolo de exames eletivos (2026)",
+   "t": "SMS Betim, Diretoria de Regulação, Controle e Avaliação – Central de Exames. Protocolo de Regulação do Acesso aos Exames Eletivos de Alta e Média Complexidade, versão final, 2026 (densitometria, colonoscopia, mamografia, audiometria/PEATE) (documento municipal anexado ao Projeto).",
+   "f": "F",
+   "url": "",
+   "ano": 2026,
+   "usado_em": [
+    "cr-osteoporose",
+    "pv-checkup",
+    "pv-checkup-idoso",
+    "pv-colorretal"
+   ]
+  },
+  {
+   "k": "uspstf_quedas2024",
+   "s": "USPSTF 2024 – quedas",
+   "t": "USPSTF. Falls Prevention in Community-Dwelling Older Adults: Interventions (jun/2024): exercício para ≥ 65 anos com risco aumentado de queda (B); intervenções multifatoriais individualizadas (C) (diretriz; conferida por notícia da Healio, 04/06/2024).",
+   "f": "F",
+   "url": "https://healio.com/news/primary-care/20240604/uspstf-finalizes-recommendation-on-exercise-for-fall-prevention-among-older-adults",
+   "ano": 2024,
+   "usado_em": [
+    "pv-checkup-idoso"
+   ]
+  },
+  {
+   "k": "zoster_sus2026",
+   "s": "Herpes-zóster – não incorporada (2026)",
+   "t": "Ministério da Saúde/CONITEC, Relatório de Recomendação nº 1.073 – vacina recombinante adjuvada contra herpes-zóster: não incorporada ao SUS (decisão divulgada em 12/01/2026; populações avaliadas: ≥ 80 anos e imunocomprometidos ≥ 18 anos; motivo: custo-efetividade e impacto orçamentário > R$ 5,2 bilhões em 5 anos) (conferido por notícia do Poder360; relatório não aberto).",
+   "f": "F",
+   "url": "https://www.poder360.com.br/poder-saude/sus-rejeita-inclusao-de-vacina-contra-herpes-zoster/",
+   "ano": 2026,
+   "usado_em": [
+    "pv-checkup-idoso"
+   ]
+  },
+  {
+   "k": "uspstf_idoso",
+   "s": "USPSTF – rastreios de evidência insuficiente ou contra",
+   "t": "USPSTF: evidência insuficiente (I) para rastrear perda auditiva (2021), acuidade visual (2022), comprometimento cognitivo (2020), disfunção tireoidiana (2015) e deficiência de vitamina D (2021) em assintomáticos; contra (D) rastrear bacteriúria assintomática fora da gestação (2019), estenose de carótida (2021), ECG em baixo risco (2018) e PSA ≥ 70 anos (2018); câncer colorretal 76–85 anos: decisão individual (C, 2021); vitamina D para prevenir quedas em idosos da comunidade: contra (D, 2018) (diretrizes; citadas de memória).",
+   "f": "C",
+   "url": "",
+   "ano": 2022,
+   "usado_em": [
+    "pv-checkup-idoso"
+   ]
+  },
+  {
+   "k": "uspstf_ped",
+   "s": "USPSTF – rastreios pediátricos",
+   "t": "USPSTF: acuidade visual/ambliopia 3–5 anos (B, 2017); obesidade ≥ 6 anos com intervenção comportamental (B, 2024); depressão 12–18 anos (B, 2022) e ansiedade 8–18 anos (B, 2022); evidência insuficiente (I) para perfil lipídico (2023), PA (2020) e deficiência de ferro 6–24 meses (2015) em assintomáticos (diretrizes; citadas de memória, exceto ferro, conferido em resumo).",
+   "f": "C",
+   "url": "",
+   "ano": 2024,
+   "usado_em": [
+    "pu-checkup"
+   ]
+  },
+  {
+   "k": "aap_obes2023",
+   "s": "AAP 2023 – obesidade pediátrica",
+   "t": "Hampl SE et al. Clinical Practice Guideline for the Evaluation and Treatment of Children and Adolescents With Obesity. Pediatrics 2023;151(2):e2022060640 – avaliar lipídios, glicemia/HbA1c e ALT a partir dos 10 anos na obesidade (diretriz; citada de memória).",
+   "f": "C",
+   "url": "",
+   "ano": 2023,
+   "usado_em": [
+    "pu-checkup"
+   ]
+  },
+  {
+   "k": "ada_jovem",
+   "s": "ADA – DM2 em jovens",
+   "t": "ADA Standards of Care: rastrear DM2 após a puberdade ou a partir dos 10 anos em jovens com sobrepeso/obesidade e ≥ 1 fator de risco, a cada 3 anos (diretriz; citada de memória).",
+   "f": "C",
+   "url": "",
+   "ano": null,
+   "usado_em": [
+    "pu-checkup"
+   ]
+  },
+  {
+   "k": "headsss",
+   "s": "HEEADSSS",
+   "t": "Entrevista psicossocial do adolescente HEEADSSS (casa, educação/emprego, alimentação, atividades, drogas, sexualidade, suicídio/humor, segurança) – Goldenring & Rosen, 2004 (derivada do HEADSS de Goldenring & Cohen, 1988) (instrumento; citado de memória; uso em materiais do MS/SBP não conferido).",
+   "f": "C",
+   "url": "",
+   "ano": 2004,
+   "usado_em": [
+    "pu-checkup"
    ]
   }
  ],
@@ -9982,7 +10157,8 @@
     "tdc_osteo",
     "frax",
     "rename",
-    "remume"
+    "remume",
+    "betim_exames2026"
    ]
   },
   {
@@ -10223,7 +10399,8 @@
     "uspstf_naorastrear",
     "sbd_rastreio2025",
     "prevent_aha",
-    "pni_adulto2026"
+    "pni_adulto2026",
+    "betim_exames2026"
    ]
   },
   {
@@ -10234,7 +10411,8 @@
    "fontes": [
     "conitec_ccr2026",
     "fit_sus2026",
-    "uspstf_ccr"
+    "uspstf_ccr",
+    "betim_exames2026"
    ]
   },
   {
@@ -11133,6 +11311,40 @@
     "sesmg_fm2025",
     "rename",
     "remume"
+   ]
+  },
+  {
+   "id": "pv-checkup-idoso",
+   "nome": "Check-up da pessoa idosa: o que rastrear, quando parar e o que não pedir",
+   "modulo": "pv",
+   "nv": 4,
+   "fontes": [
+    "lee_ttb2013",
+    "inca_colo2025",
+    "nt_mama2025",
+    "conitec_ccr2026",
+    "pcdt_osteo2025",
+    "pni_idoso2026",
+    "ms_demencia2024",
+    "uspstf_quedas2024",
+    "betim_exames2026"
+   ]
+  },
+  {
+   "id": "pu-checkup",
+   "nome": "Check-up da criança e do adolescente (0–19 anos): o que rastrear e o que não pedir",
+   "modulo": "pu",
+   "nv": 5,
+   "fontes": [
+    "caderneta_crianca",
+    "cab33_2012",
+    "dbha2025",
+    "dbdisl2025",
+    "sbp_ferro2026",
+    "sbp_vitd2024",
+    "pcdt_ist2022_q5",
+    "hpv_vac2026",
+    "uspstf_ped"
    ]
   }
  ]

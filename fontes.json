@@ -1,12 +1,12 @@
 {
- "gerado": "2026-10-20T13:32:06.803Z",
+ "gerado": "2026-10-20T23:32:12.023Z",
  "cmed": {
   "data": "09/10/2026",
   "fonte": "cmed_pmc2026",
   "icms": "PMC com ICMS de Minas Gerais: 12% para genéricos e 18% para os demais"
  },
- "n_fontes": 540,
- "n_itens": 326,
+ "n_fontes": 545,
+ "n_itens": 330,
  "sem_url": [
   "remume",
   "aap_oma",
@@ -256,7 +256,8 @@
   "uspstf_ped",
   "aap_obes2023",
   "ada_jovem",
-  "headsss"
+  "headsss",
+  "sbp_sono2023"
  ],
  "nao_conferidas": [
   "aap_oma",
@@ -3528,12 +3529,16 @@
    "ano": 2025,
    "usado_em": [
     "pu-12m",
+    "pu-15m",
     "pu-18m",
     "pu-1m",
     "pu-24m",
     "pu-2m",
+    "pu-30m",
     "pu-3a5a",
+    "pu-4a",
     "pu-4m",
+    "pu-5a",
     "pu-6m",
     "pu-9m",
     "pu-checkup",
@@ -3553,12 +3558,16 @@
    "ano": 2026,
    "usado_em": [
     "pu-12m",
+    "pu-15m",
     "pu-18m",
     "pu-1m",
     "pu-24m",
     "pu-2m",
+    "pu-30m",
     "pu-3a5a",
+    "pu-4a",
     "pu-4m",
+    "pu-5a",
     "pu-6m",
     "pu-9m",
     "pu-guiada",
@@ -3756,8 +3765,12 @@
    "url": "https://bvsms.saude.gov.br/bvs/publicacoes/orientacoes_coleta_analise_dados_antropometricos.pdf",
    "ano": 2011,
    "usado_em": [
+    "pu-15m",
     "pu-24m",
+    "pu-30m",
     "pu-3a5a",
+    "pu-4a",
+    "pu-5a",
     "pu-crescimento"
    ]
   },
@@ -6759,14 +6772,17 @@
    "ano": 2022,
    "usado_em": [
     "pu-12m",
+    "pu-15m",
     "pu-18m",
     "pu-1m",
     "pu-24m",
     "pu-2m",
+    "pu-30m",
     "pu-3a5a",
     "pu-4m",
     "pu-6m",
-    "pu-9m"
+    "pu-9m",
+    "pu-guiada"
    ]
   },
   {
@@ -7368,6 +7384,81 @@
    "usado_em": [
     "pu-checkup"
    ]
+  },
+  {
+   "k": "guia_menor2_cons",
+   "s": "Guia Alimentar < 2 anos – esquemas por idade",
+   "t": "Ministério da Saúde. Guia Alimentar para Crianças Brasileiras Menores de 2 Anos – versão resumida (2021), p. 48–54: esquemas de refeições aos 6 meses, 7–8, 9–11 meses e 1–2 anos (quantidades de referência, consistência, sinais de fome e saciedade); açúcar, mel e ultraprocessados não devem ser oferecidos antes de 2 anos; leite de vaca antes de 9 meses não recomendado (PDF da base da usuária).",
+   "f": "F",
+   "url": "https://bvsms.saude.gov.br/bvs/publicacoes/guia_alimentar_crianca_brasileira_versao_resumida.pdf",
+   "ano": 2021,
+   "usado_em": [
+    "pu-12m",
+    "pu-6m",
+    "pu-9m",
+    "pu-guiada"
+   ]
+  },
+  {
+   "k": "bliss_cresc2017",
+   "s": "BLISS 2017 – crescimento",
+   "t": "Taylor RW et al. Effect of a Baby-Led Approach to Complementary Feeding on Infant Growth and Overweight: A Randomized Clinical Trial. JAMA Pediatr 2017;171(9):838-46. DOI 10.1001/jamapediatrics.2017.1284 (ECR, n = 206, Nova Zelândia): IMC escore-z sem diferença aos 12 e 24 meses; menos seletividade alimentar aos 12 meses.",
+   "f": "F",
+   "url": "https://doi.org/10.1001/jamapediatrics.2017.1284",
+   "ano": 2017,
+   "usado_em": [
+    "pu-6m",
+    "pu-guiada"
+   ]
+  },
+  {
+   "k": "bliss_engasgo2016",
+   "s": "BLISS 2016 – engasgo",
+   "t": "Fangupo LJ et al. A Baby-Led Approach to Eating Solids and Risk of Choking. Pediatrics 2016;138(4):e20160772. DOI 10.1542/peds.2016-0772 (ECR, n = 206): 35% engasgaram ao menos uma vez entre 6 e 8 meses, sem diferença entre BLISS e controle; oferta de alimentos de risco frequente nos dois grupos.",
+   "f": "F",
+   "url": "https://doi.org/10.1542/peds.2016-0772",
+   "ano": 2016,
+   "usado_em": [
+    "pu-6m",
+    "pu-guiada"
+   ]
+  },
+  {
+   "k": "sbp_blw2017",
+   "s": "SBP 2017 – BLW",
+   "t": "SBP, notícia de 27/06/2017 sobre o guia do Departamento de Nutrologia: não recomenda o BLW como método único; recomenda alimentação mista (a criança explora alimentos e texturas e o cuidador garante a ingestão), sempre sentada (notícia institucional; guia original não aberto).",
+   "f": "F",
+   "url": "https://www.sbp.com.br/imprensa/detalhe/nid/blw-sociedade-brasileira-de-pediatria-lanca-guia-sobre-alimentacao-complementar/",
+   "ano": 2017,
+   "usado_em": [
+    "pu-6m",
+    "pu-guiada"
+   ]
+  },
+  {
+   "k": "sbp_sono2023",
+   "s": "SBP NA 56/2023 – sono seguro",
+   "t": "SBP. Nota de Alerta nº 56 (mar/2023) – Sono seguro: de barriga para cima; berço com superfície firme e não inclinada; sem travesseiros, protetores, ninhos ou objetos fofos; berço no quarto dos pais ao menos até 6 meses (de preferência até 12); cama de adulto e sofá contraindicados; ambiente sem tabaco; tempo de barriguinha supervisionado desde a chegada em casa, progressivo até 15–30 min com sete semanas de vida (diretriz de sociedade; PDF da base da usuária).",
+   "f": "F",
+   "url": "",
+   "ano": 2023,
+   "usado_em": [
+    "pu-12m",
+    "pu-15m",
+    "pu-18m",
+    "pu-1m",
+    "pu-24m",
+    "pu-2m",
+    "pu-30m",
+    "pu-3a5a",
+    "pu-4a",
+    "pu-4m",
+    "pu-5a",
+    "pu-6m",
+    "pu-9m",
+    "pu-guiada",
+    "pu-rn"
+   ]
   }
  ],
  "itens": [
@@ -7392,7 +7483,13 @@
     "mchat",
     "guia_menor2",
     "betim_triagem2026",
-    "remume"
+    "remume",
+    "sbp_sono2023",
+    "guia_menor2_cons",
+    "bliss_cresc2017",
+    "bliss_engasgo2016",
+    "sbp_blw2017",
+    "cdc_marcos2022"
    ]
   },
   {
@@ -9856,7 +9953,7 @@
    "id": "pu-rn",
    "nome": "Primeira consulta do recém-nascido (1ª semana)",
    "modulo": "pu",
-   "nv": 2,
+   "nv": 4,
    "fontes": [
     "caderneta_crianca",
     "triagem_bio",
@@ -9866,14 +9963,15 @@
     "lei_linguinha",
     "sbp_vitd2024",
     "sbp_sono",
-    "remume"
+    "remume",
+    "sbp_sono2023"
    ]
   },
   {
    "id": "pu-1m",
    "nome": "Consulta de 1 mês",
    "modulo": "pu",
-   "nv": 1,
+   "nv": 2,
    "fontes": [
     "caderneta_crianca",
     "pni2026",
@@ -9881,28 +9979,30 @@
     "acidentes",
     "sbp_vitd2024",
     "sbp_sono",
-    "cdc_marcos2022"
+    "cdc_marcos2022",
+    "sbp_sono2023"
    ]
   },
   {
    "id": "pu-2m",
    "nome": "Consulta de 2 meses",
    "modulo": "pu",
-   "nv": 1,
+   "nv": 2,
    "fontes": [
     "caderneta_crianca",
     "pni2026",
     "marcos_cad",
     "acidentes",
     "sbp_vitd2024",
-    "cdc_marcos2022"
+    "cdc_marcos2022",
+    "sbp_sono2023"
    ]
   },
   {
    "id": "pu-4m",
    "nome": "Consulta de 4 meses",
    "modulo": "pu",
-   "nv": 1,
+   "nv": 2,
    "fontes": [
     "caderneta_crianca",
     "pni2026",
@@ -9910,12 +10010,34 @@
     "acidentes",
     "pnsf2022",
     "guia_menor2",
-    "cdc_marcos2022"
+    "cdc_marcos2022",
+    "sbp_sono2023"
    ]
   },
   {
    "id": "pu-6m",
    "nome": "Consulta de 6 meses e introdução alimentar",
+   "modulo": "pu",
+   "nv": 3,
+   "fontes": [
+    "caderneta_crianca",
+    "pni2026",
+    "marcos_cad",
+    "acidentes",
+    "guia_menor2",
+    "pnsf2022",
+    "sbp_ferro2026",
+    "cdc_marcos2022",
+    "sbp_sono2023",
+    "guia_menor2_cons",
+    "bliss_cresc2017",
+    "bliss_engasgo2016",
+    "sbp_blw2017"
+   ]
+  },
+  {
+   "id": "pu-9m",
+   "nome": "Consulta de 9 meses",
    "modulo": "pu",
    "nv": 2,
    "fontes": [
@@ -9924,32 +10046,18 @@
     "marcos_cad",
     "acidentes",
     "guia_menor2",
-    "pnsf2022",
-    "sbp_ferro2026",
-    "cdc_marcos2022"
-   ]
-  },
-  {
-   "id": "pu-9m",
-   "nome": "Consulta de 9 meses",
-   "modulo": "pu",
-   "nv": 1,
-   "fontes": [
-    "caderneta_crianca",
-    "pni2026",
-    "marcos_cad",
-    "acidentes",
-    "guia_menor2",
     "sbp_ferro2026",
     "sbp_tro",
-    "cdc_marcos2022"
+    "cdc_marcos2022",
+    "sbp_sono2023",
+    "guia_menor2_cons"
    ]
   },
   {
    "id": "pu-12m",
    "nome": "Consulta de 12 meses",
    "modulo": "pu",
-   "nv": 1,
+   "nv": 2,
    "fontes": [
     "caderneta_crianca",
     "pni2026",
@@ -9958,14 +10066,29 @@
     "guia_menor2",
     "sbp_ferro2026",
     "pnsf2022",
-    "cdc_marcos2022"
+    "cdc_marcos2022",
+    "sbp_sono2023",
+    "guia_menor2_cons"
+   ]
+  },
+  {
+   "id": "pu-15m",
+   "nome": "Consulta de 15 meses (consulta extra)",
+   "modulo": "pu",
+   "nv": 3,
+   "fontes": [
+    "caderneta_crianca",
+    "pni2026",
+    "sisvan",
+    "cdc_marcos2022",
+    "sbp_sono2023"
    ]
   },
   {
    "id": "pu-18m",
    "nome": "Consulta de 18 meses (com M-CHAT-R)",
    "modulo": "pu",
-   "nv": 1,
+   "nv": 2,
    "fontes": [
     "caderneta_crianca",
     "pni2026",
@@ -9975,14 +10098,15 @@
     "lei13438",
     "sbp_tea",
     "oms_telas2019",
-    "cdc_marcos2022"
+    "cdc_marcos2022",
+    "sbp_sono2023"
    ]
   },
   {
    "id": "pu-24m",
    "nome": "Consulta de 24 meses (com M-CHAT-R)",
    "modulo": "pu",
-   "nv": 1,
+   "nv": 2,
    "fontes": [
     "caderneta_crianca",
     "pni2026",
@@ -9992,14 +10116,28 @@
     "sbp_tea",
     "sisvan",
     "oms_telas2019",
-    "cdc_marcos2022"
+    "cdc_marcos2022",
+    "sbp_sono2023"
+   ]
+  },
+  {
+   "id": "pu-30m",
+   "nome": "Consulta de 30 meses (consulta extra)",
+   "modulo": "pu",
+   "nv": 3,
+   "fontes": [
+    "caderneta_crianca",
+    "pni2026",
+    "sisvan",
+    "cdc_marcos2022",
+    "sbp_sono2023"
    ]
   },
   {
    "id": "pu-3a5a",
-   "nome": "Consulta anual de 3 a 5 anos",
+   "nome": "Consulta de 3 anos",
    "modulo": "pu",
-   "nv": 1,
+   "nv": 2,
    "fontes": [
     "caderneta_crianca",
     "pni2026",
@@ -10008,7 +10146,32 @@
     "nt64_vip",
     "sisvan",
     "oms_telas2019",
-    "cdc_marcos2022"
+    "cdc_marcos2022",
+    "sbp_sono2023"
+   ]
+  },
+  {
+   "id": "pu-4a",
+   "nome": "Consulta de 4 anos",
+   "modulo": "pu",
+   "nv": 2,
+   "fontes": [
+    "caderneta_crianca",
+    "pni2026",
+    "sisvan",
+    "sbp_sono2023"
+   ]
+  },
+  {
+   "id": "pu-5a",
+   "nome": "Consulta de 5 anos",
+   "modulo": "pu",
+   "nv": 2,
+   "fontes": [
+    "caderneta_crianca",
+    "pni2026",
+    "sisvan",
+    "sbp_sono2023"
    ]
   },
   {

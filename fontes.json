@@ -1,12 +1,12 @@
 {
- "gerado": "2026-10-21T00:11:50.093Z",
+ "gerado": "2026-10-21T00:59:52.162Z",
  "cmed": {
   "data": "09/10/2026",
   "fonte": "cmed_pmc2026",
   "icms": "PMC com ICMS de Minas Gerais: 12% para genéricos e 18% para os demais"
  },
- "n_fontes": 553,
- "n_itens": 330,
+ "n_fontes": 565,
+ "n_itens": 337,
  "sem_url": [
   "remume",
   "aap_oma",
@@ -482,7 +482,9 @@
   "uspstf_ped",
   "aap_obes2023",
   "ada_jovem",
-  "headsss"
+  "headsss",
+  "aap_ict2022",
+  "roma4_lactente2016"
  ],
  "fontes": [
   {
@@ -931,8 +933,13 @@
     "pp-pos-gestacao-risco",
     "prolapso",
     "prurido",
+    "pu-amamentacao",
+    "pu-choro-colica",
+    "pu-constipacao",
     "pu-fimose",
     "pu-guiada",
+    "pu-pele",
+    "pu-refluxo",
     "pu-rn",
     "pu-suplementacao",
     "pv-alcool",
@@ -1609,7 +1616,8 @@
    "ano": 2022,
    "usado_em": [
     "amamentacao",
-    "mastite"
+    "mastite",
+    "pu-amamentacao"
    ]
   },
   {
@@ -2500,7 +2508,8 @@
    "url": "",
    "ano": 2014,
    "usado_em": [
-    "constipacao-infantil"
+    "constipacao-infantil",
+    "pu-constipacao"
    ]
   },
   {
@@ -3542,9 +3551,12 @@
     "pu-6m",
     "pu-9m",
     "pu-checkup",
+    "pu-constipacao",
     "pu-crescimento",
     "pu-dnpm",
     "pu-guiada",
+    "pu-ictericia",
+    "pu-pele",
     "pu-prematuro",
     "pu-rn"
    ]
@@ -3622,6 +3634,7 @@
     "pu-6m",
     "pu-9m",
     "pu-checkup",
+    "pu-formula",
     "pu-guiada",
     "pu-prematuro",
     "pu-suplementacao"
@@ -7457,6 +7470,7 @@
     "pu-6m",
     "pu-9m",
     "pu-guiada",
+    "pu-refluxo",
     "pu-rn"
    ]
   },
@@ -7565,6 +7579,7 @@
     "pu-1m",
     "pu-2m",
     "pu-4m",
+    "pu-choro-colica",
     "pu-rn"
    ]
   },
@@ -7579,6 +7594,7 @@
     "pu-1m",
     "pu-2m",
     "pu-4m",
+    "pu-choro-colica",
     "pu-rn"
    ]
   },
@@ -7593,7 +7609,150 @@
     "pu-1m",
     "pu-2m",
     "pu-4m",
+    "pu-choro-colica",
     "pu-rn"
+   ]
+  },
+  {
+   "k": "cab23_2015",
+   "s": "CAB 23 – Aleitamento materno e alimentação complementar (2015)",
+   "t": "Ministério da Saúde. Cadernos de Atenção Básica nº 23 – Saúde da criança: aleitamento materno e alimentação complementar, 2ª ed., 2015: pontos-chave da OMS de posição e pega, sinais de técnica inadequada, ordenha manual, leite cru 12 h na geladeira e 15 dias no congelador, manejo de fissura, ingurgitamento, bloqueio de ductos, mastite, candidíase mamilar (mãe e bebê ao mesmo tempo, antifúngico tópico por 2 semanas), 'pouco leite', situações com restrição ao aleitamento (HIV, HTLV, galactosemia; interrupção temporária em herpes na mama, varicela perinatal, drogas de abuso) e Quadro 11 – volume e número de refeições lácteas por idade da criança não amamentada (manual MS).",
+   "f": "F",
+   "url": "https://bvsms.saude.gov.br/bvs/publicacoes/saude_crianca_aleitamento_materno_cab23.pdf",
+   "ano": 2015,
+   "usado_em": [
+    "pu-amamentacao",
+    "pu-formula"
+   ]
+  },
+  {
+   "k": "guia_menor2_2019",
+   "s": "Guia Alimentar < 2 anos – versão completa (2019)",
+   "t": "Ministério da Saúde. Guia Alimentar para Crianças Brasileiras Menores de 2 Anos, 2019 (versão completa, 265 p.): amamentação (pega, livre demanda 8 a 12 vezes ao dia, práticas que prejudicam, dificuldades e o que fazer; não usar cremes, óleos ou o próprio leite nos mamilos; sem exercícios de mamilo no pré-natal), quando não amamentar (HIV, HTLV1/2, medicamentos incompatíveis, uso regular de álcool ou drogas), interrupção temporária (inclusive vacina febre amarela em mães de menores de 6 meses), álcool (até 240 mL de vinho ou 2 latas de cerveja e esperar 2 h), retirar e guardar o leite (congelador 15 dias, geladeira 12 h fora da porta, descongelar em banho-maria com o fogo apagado, sem ferver ou micro-ondas, não recongelar, oferecer em copo), fórmula infantil como 1ª alternativa, compostos lácteos não indicados antes de 2 anos, preparo da fórmula (ferver a água 5 min, misturar o pó em até 15 min após a fervura, ferver utensílios 15 min, não aquecer no micro-ondas), troca da fórmula por leite de vaca integral a partir de 9 meses, leites vegetais não recomendados antes de 6 meses (guia MS).",
+   "f": "F",
+   "url": "http://189.28.128.100/dab/docs/portaldab/publicacoes/guia_da_crianca_2019.pdf",
+   "ano": 2019,
+   "usado_em": [
+    "pu-amamentacao",
+    "pu-formula",
+    "pu-refluxo"
+   ]
+  },
+  {
+   "k": "sbp_ict2021",
+   "s": "SBP 2021 – hiperbilirrubinemia indireta neonatal",
+   "t": "Sociedade Brasileira de Pediatria, Departamento de Neonatologia. Hiperbilirrubinemia indireta no período neonatal (Documento científico/Manual de orientação, 2021): icterícia fisiológica após 24 h com pico ao redor de 12 mg/dL no 3º–4º dia; em termos brasileiros em aleitamento exclusivo, BT transcutânea média de 5,5 mg/dL no 3º–5º dia (P95 12 mg/dL) e 8,5 mg/dL (P95) no 12º dia; avaliação visual (zonas de Kramer) não confiável; fatores de risco (Tabela 2); quando dosar BT; fluxograma do RN ≥ 35 semanas na 1ª semana; Tabela 9 – BT para fototerapia e exsanguineotransfusão por horas de vida e IG (35–37 6/7 e ≥ 38 semanas), reduzindo 2 mg/dL se doença hemolítica, G6PD, asfixia, sepse, acidose ou albumina < 3 g/dL; icterícia com 2 semanas ou mais: BT e frações (BD > 1 mg/dL = colestase, avaliação urgente); atresia biliar operar antes de 6 semanas; consulta após a alta até o 5º dia (documento SBP).",
+   "f": "F",
+   "url": "https://www.sbp.com.br/fileadmin/user_upload/23176c-MO_Hiperbilirrubinemia_indireta_periodo_neo.pdf",
+   "ano": 2021,
+   "usado_em": [
+    "pu-amamentacao",
+    "pu-ictericia"
+   ]
+  },
+  {
+   "k": "aap_ict2022",
+   "s": "AAP 2022 – hiperbilirrubinemia ≥ 35 semanas",
+   "t": "Kemper AR et al. Clinical Practice Guideline Revision: Management of Hyperbilirubinemia in the Newborn Infant 35 or More Weeks of Gestation. Pediatrics 2022;150(3):e2022058859. DOI 10.1542/peds.2022-058859 (diretriz AAP; limiares de fototerapia por idade gestacional, horas de vida e fatores de risco de neurotoxicidade; ferramenta BiliTool). Conferido no PubMed (metadados); os limiares numéricos não foram conferidos nesta revisão.",
+   "f": "C",
+   "url": "https://doi.org/10.1542/peds.2022-058859",
+   "ano": 2022,
+   "usado_em": [
+    "pu-ictericia"
+   ]
+  },
+  {
+   "k": "naspghan_drge2018",
+   "s": "NASPGHAN/ESPGHAN 2018 – refluxo na criança",
+   "t": "Rosen R et al. Pediatric Gastroesophageal Reflux Clinical Practice Guidelines: Joint Recommendations of NASPGHAN and ESPGHAN. J Pediatr Gastroenterol Nutr 2018;66(3):516-554. DOI 10.1097/MPG.0000000000001889 (diretriz GRADE): espessar a dieta na regurgitação visível; ajustar volume e frequência para evitar superalimentação; teste de 2–4 semanas com fórmula extensamente hidrolisada (ou de aminoácidos) no lactente com fórmula após falha das medidas; no amamentado, a mãe pode retirar todo laticínio da dieta; não usar terapia posicional (elevação da cabeceira, decúbito lateral ou ventral) no lactente dormindo; não usar massagem, probióticos ou fitoterápicos; não usar IBP ou anti-H2 para choro/irritabilidade nem para regurgitação visível no lactente saudável; IBP para esofagite erosiva; não usar domperidona, metoclopramida ou outros procinéticos; início após 6 meses ou persistência após 12 meses sugere outro diagnóstico (texto completo PMC5958910).",
+   "f": "F",
+   "url": "https://doi.org/10.1097/MPG.0000000000001889",
+   "ano": 2018,
+   "usado_em": [
+    "pu-choro-colica",
+    "pu-formula",
+    "pu-refluxo"
+   ]
+  },
+  {
+   "k": "roma4_lactente2016",
+   "s": "Roma IV – distúrbios funcionais do lactente (2016)",
+   "t": "Benninga MA et al. Childhood Functional Gastrointestinal Disorders: Neonate/Toddler. Gastroenterology 2016;150(6):1443-1455. DOI 10.1053/j.gastro.2016.02.016 (critérios de Roma IV: regurgitação do lactente, cólica, disquezia e constipação funcional). Conferido no PubMed (metadados); os critérios foram citados de memória.",
+   "f": "C",
+   "url": "https://doi.org/10.1053/j.gastro.2016.02.016",
+   "ano": 2016,
+   "usado_em": [
+    "pu-choro-colica",
+    "pu-constipacao",
+    "pu-refluxo"
+   ]
+  },
+  {
+   "k": "sbp_pele2024",
+   "s": "SBP 2024 – pele e anexos do recém-nascido",
+   "t": "Sociedade Brasileira de Pediatria, Departamentos de Dermatologia e Neonatologia. Guia Prático de Atualização nº 140 (20/03/2024) – Cuidados com a pele e anexos do recém-nascido: da higienização e hidratação ao tratamento: banho, sabonetes líquidos com pH adequado, hidratantes (não previnem dermatite atópica: BEEP, PreventADALL), coto limpo e seco sem antisséptico em partos hospitalares, área de fralda (troca frequente, água e algodão, cremes de barreira de óxido de zinco, dexpantenol ou petrolato), evitar sol direto antes de 6 meses (não para vitamina D nem para icterícia; filtro mineral de 6 meses a 2 anos), unhas, e afecções: acne neonatal, milium, descamação, eritema tóxico, granuloma umbilical (sal comum como 1ª linha), mancha mongólica, mancha salmão, melanose pustulosa, miliária, pustulose cefálica (cetoconazol tópico se extensa), precursor de hemangioma e hemangioma congênito (documento SBP; elaborado com apoio de Johnson's).",
+   "f": "F",
+   "url": "https://www.sbp.com.br/fileadmin/user_upload/24424g-GPA_ISBN_-_Cuidado_Pele_e_Anexos_do_RN.pdf",
+   "ano": 2024,
+   "usado_em": [
+    "pu-ictericia",
+    "pu-pele"
+   ]
+  },
+  {
+   "k": "aap_hemang2019",
+   "s": "AAP 2019 – hemangioma infantil",
+   "t": "Krowchuk DP et al. Clinical Practice Guideline for the Management of Infantile Hemangiomas. Pediatrics 2019;143(1):e20183475. DOI 10.1542/peds.2018-3475: crescimento mais rápido entre 1 e 3 meses e completo até 5 meses na maioria; intervenção ou encaminhamento precoce, idealmente até 1 mês de vida, nos de maior risco; propranolol 2–3 mg/kg/dia quando indicado tratamento sistêmico; timolol tópico em lesões pequenas e superficiais selecionadas (resumo conferido no PubMed).",
+   "f": "F",
+   "url": "https://doi.org/10.1542/peds.2018-3475",
+   "ano": 2019,
+   "usado_em": [
+    "pu-pele"
+   ]
+  },
+  {
+   "k": "sbp_picadas2025",
+   "s": "SBP 2025 – picadas de insetos e repelentes",
+   "t": "Sociedade Brasileira de Pediatria, Departamento de Dermatologia. Picadas de insetos e repelentes (portal SBP para famílias, atualizado em agosto/2025): prurigo estrófulo é hipersensibilidade à saliva de insetos, mais comum de 2 a 10 anos; pápulas com vesícula ou crosta central, isoladas, agrupadas ou em trio; unhas curtas, roupas leves e compressas frias; repelentes por idade: < 3 meses só barreiras físicas; 3 a 6 meses icaridina só se exposição inevitável; 6 meses a 2 anos icaridina ou IR3535 1 vez ao dia; 2 a 7 anos repelente infantil até 2 vezes ao dia; 7 a 12 anos até 3 vezes ao dia (página SBP).",
+   "f": "F",
+   "url": "https://www.sbp.com.br/?p=31436",
+   "ano": 2025,
+   "usado_em": [
+    "pu-pele"
+   ]
+  },
+  {
+   "k": "conitec_aplv2018",
+   "s": "CONITEC 2018 – fórmulas para APLV (Portaria SCTIE 67/2018)",
+   "t": "CONITEC. Relatório de recomendação – Fórmulas nutricionais para crianças com alergia à proteína do leite de vaca, 2018. Decisão: incorporar ao SUS as fórmulas à base de soja, de proteína extensamente hidrolisada com ou sem lactose e de aminoácidos para crianças de 0 a 24 meses com APLV (Portaria nº 67, DOU 26/11/2018) (relatório CONITEC).",
+   "f": "F",
+   "url": "https://www.gov.br/conitec/pt-br/midias/relatorios/2018/recomendacao/relatorio_formulasnutricionais_aplv.pdf",
+   "ano": 2018,
+   "usado_em": [
+    "pu-formula"
+   ]
+  },
+  {
+   "k": "sesmg_formula2021",
+   "s": "SES-MG NT 1/2021 – fórmula infantil para filhos de mães com HIV",
+   "t": "Secretaria de Estado de Saúde de Minas Gerais. Nota Técnica nº 1/SES/SUBPAS-SAF-CFT/2021 (jan/2021) – fórmula infantil de partida para lactentes de 0 a 6 meses filhos de mães vivendo com HIV, sem restrição alimentar; aleitamento contraindicado em mães com HIV ou HTLV-I; especificação de compra com DHA, ARA e prebióticos (nota técnica estadual).",
+   "f": "F",
+   "url": "https://portal-hml.saude.mg.gov.br/wp-content/uploads/2025/01/Nota-Tecnica-Formulas-Infantis.pdf",
+   "ano": 2021,
+   "usado_em": [
+    "pu-amamentacao",
+    "pu-formula"
+   ]
+  },
+  {
+   "k": "precos_formula2026",
+   "s": "Preços de fórmulas – comparador online (20/10/2026)",
+   "t": "Menores preços de fórmulas infantis exibidos no comparador CliqueFarma (páginas de fórmulas infantis e de cada produto) e nas lojas Drogal e Pague Menos, consultados em 20–21/10/2026. Fórmula infantil é alimento, não medicamento: não há preço-teto regulado (CMED) e o valor varia muito entre lojas e ao longo do tempo.",
+   "f": "F",
+   "url": "https://www.cliquefarma.com.br/bebe-e-gestante/alimentacao-infantil/formulas-infantis",
+   "ano": 2026,
+   "usado_em": [
+    "pu-formula"
    ]
   }
  ],
@@ -11700,6 +11859,96 @@
     "pcdt_ist2022_q5",
     "hpv_vac2026",
     "uspstf_ped"
+   ]
+  },
+  {
+   "id": "pu-amamentacao",
+   "nome": "Amamentação: pega, rotina, ordenha e problemas comuns",
+   "modulo": "pu",
+   "nv": 4,
+   "fontes": [
+    "guia_menor2_2019",
+    "cab23_2015",
+    "sbp_ict2021",
+    "sesmg_formula2021",
+    "abm_mastite",
+    "remume"
+   ]
+  },
+  {
+   "id": "pu-formula",
+   "nome": "Fórmula infantil: quando usar, preparo, quantidade, tipos e preços",
+   "modulo": "pu",
+   "nv": 3,
+   "fontes": [
+    "guia_menor2_2019",
+    "cab23_2015",
+    "naspghan_drge2018",
+    "conitec_aplv2018",
+    "sesmg_formula2021",
+    "precos_formula2026"
+   ]
+  },
+  {
+   "id": "pu-ictericia",
+   "nome": "Icterícia neonatal: quando é normal, quando dosar e quando encaminhar",
+   "modulo": "pu",
+   "nv": 3,
+   "fontes": [
+    "sbp_ict2021",
+    "aap_ict2022",
+    "sbp_pele2024",
+    "caderneta_crianca"
+   ]
+  },
+  {
+   "id": "pu-refluxo",
+   "nome": "Regurgitação, refluxo e vômitos no lactente: como manejar e quando preocupar",
+   "modulo": "pu",
+   "nv": 1,
+   "fontes": [
+    "naspghan_drge2018",
+    "roma4_lactente2016",
+    "sbp_sono2023",
+    "remume"
+   ]
+  },
+  {
+   "id": "pu-choro-colica",
+   "nome": "Choro excessivo e cólica do lactente: avaliação, orientação e o que tem evidência",
+   "modulo": "pu",
+   "nv": 0,
+   "fontes": [
+    "roma4_lactente2016",
+    "sung2018_reuteri",
+    "cochrane_colica2016",
+    "naspghan_drge2018",
+    "remume"
+   ]
+  },
+  {
+   "id": "pu-constipacao",
+   "nome": "Constipação no lactente e na criança: o que é normal, disquezia e tratamento",
+   "modulo": "pu",
+   "nv": 2,
+   "fontes": [
+    "espghan_constip",
+    "roma4_lactente2016",
+    "caderneta_crianca",
+    "remume"
+   ]
+  },
+  {
+   "id": "pu-pele",
+   "nome": "Pele do bebê: cuidados, lesões comuns do recém-nascido, hemangioma e estrófulo",
+   "modulo": "pu",
+   "nv": 3,
+   "fontes": [
+    "sbp_pele2024",
+    "aap_hemang2019",
+    "sbp_picadas2025",
+    "caderneta_crianca",
+    "remume"
    ]
   }
  ]

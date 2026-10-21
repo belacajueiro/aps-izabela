@@ -139,6 +139,9 @@ textarea.fill.mono{font:13px/1.55 var(--f-mono);background:var(--sunk)}
 /* blocos de texto */
 .box{border:1px solid var(--line);border-radius:var(--r);background:var(--surface);padding:14px 16px;margin-bottom:14px}
 .box h3{font:700 1rem var(--f-display);margin:0 0 8px}
+.box.ori h4{font:700 .95rem var(--f-display);margin:14px 0 4px}
+.box.ori ul{margin:4px 0 8px;padding-left:1.2em}
+.box.ori li{margin:2px 0}
 .box p{margin:0 0 8px;max-width:68ch}
 .box ul{margin:0;padding-left:20px}
 .box li{margin:3px 0;max-width:68ch}
@@ -696,7 +699,7 @@ const MODULOS = [
    ordem:["HAS","DM","Doença cardiovascular","Dislipidemias","Asma e DPOC","Obesidade","DRC","AVC","Tireoide","Fígado","Reumatologia e osso","Saúde da pessoa idosa","Saúde mental","Deficiências nutricionais","Outras condições crônicas","Escalas e calculadoras"],
    atalhos:["pa-elevada","hiperglicemia","hipoglicemia","ic-descompensada","palpitacoes","dor-toracica","asma-crise","dpoc-exac","gota","queda-idoso","delirium","depressao","tremor","perda-peso","incontinencia","constipacao","insonia","po-idoso-vulneravel","po-acamado","tabagismo"]},
   {id:"pu", nome:"Puericultura", curto:"Criança", titulo:"Puericultura", sub:"Consultas da criança de 0 a 5 anos e check-up até os 19",
-   ordem:["Consulta guiada","Consultas por idade","Nutrição e crescimento","Vacinas e triagens","Desenvolvimento e condições"],
+   ordem:["Consulta guiada","Consultas por idade","Nutrição e crescimento","Queixas comuns do bebê","Vacinas e triagens","Desenvolvimento e condições"],
    atalhos:["febre-crianca","febre-menor-3m","bronquiolite","diarreia-crianca","colica-lactente","moniliase-oral","dermatite-fraldas","constipacao-infantil","itu-crianca","asma-crianca","crupe","oma","dermatite-atopica","gengivoestomatite","maopeboca","varicela","pediculose","escabiose","parasitoses","impetigo","amamentacao","violencia"]},
   {id:"mu", nome:"Saúde da mulher", curto:"Mulher", titulo:"Saúde da Mulher", sub:"Rastreios, planejamento reprodutivo, climatério e ginecologia",
    ordem:["Consulta de rotina","Rastreio de colo e mama","Climatério","Planejamento reprodutivo","Saúde reprodutiva e ginecologia","Violência contra a mulher"],
@@ -1055,8 +1058,8 @@ function renderPanel(c, legend){
   }
   if (state.tab === "pac"){
     const al = (c.alarme||[]);
-    const txt = `${c.orient||""}\n\nProcure atendimento imediatamente se:\n${al.map(a=>"- "+a).join("\n")}`;
-    p.innerHTML = `<div class="box"><h3>Orientações ao paciente</h3>${(c.orient||"").split(/\n+/).map(x=>`<p>${esc(x)}</p>`).join("")}</div>
+    const txt = `${oriTxt(c.orient)}\n\nProcure atendimento imediatamente se:\n${al.map(a=>"- "+a).join("\n")}`;
+    p.innerHTML = `<div class="box ori"><h3>Orientações ao paciente</h3>${oriHtml(c.orient)}</div>
       <div class="box"><h3>Procure atendimento imediatamente se</h3><ul class="alarm">${al.map(a=>`<li>${esc(a)}</li>`).join("")}</ul></div>
       <div class="actions"><button class="btn pri" id="cp-pac">Copiar orientações + sinais de alarme</button><button class="btn" id="pr-pac">Imprimir para o paciente</button></div>`;
     p.querySelector("#cp-pac").onclick = () => copy(txt, "Orientações");
@@ -2374,8 +2377,20 @@ function imprimirReceita(c){
   const corpo = texts.map(t => `<pre>${esc(t)}</pre>`).join("");
   imprimir("Receituário", corpo);
 }
+// Orientações: linhas "## Título" viram subtítulo; linhas "- item" viram lista; **negrito**.
+function oriHtml(t){
+  const out = []; let ul = [];
+  const fl = () => { if (ul.length){ out.push(`<ul>${ul.map(x=>`<li>${x}</li>`).join("")}</ul>`); ul = []; } };
+  const b = x => esc(x).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
+  String(t||"").split(/\n+/).forEach(l => { const s = l.trim(); if (!s) return;
+    if (s.startsWith("## ")){ fl(); out.push(`<h4>${b(s.slice(3))}</h4>`); }
+    else if (s.startsWith("- ")) ul.push(b(s.slice(2)));
+    else { fl(); out.push(`<p>${b(s)}</p>`); } });
+  fl(); return out.join("");
+}
+const oriTxt = t => String(t||"").split("\n").map(l => l.startsWith("## ") ? "\n" + l.slice(3).toUpperCase() : l).join("\n").replace(/\*\*(.+?)\*\*/g, "$1").replace(/^\n+/, "");
 function imprimirOrientacoes(c){
-  const corpo = `<h2>${esc(c.nome)}</h2>${(c.orient||"").split(/\n+/).map(x=>`<p>${esc(x)}</p>`).join("")}<h2>Procure atendimento imediatamente se</h2><ul>${(c.alarme||[]).map(a=>`<li>${esc(a)}</li>`).join("")}</ul>`;
+  const corpo = `<h2>${esc(c.nome)}</h2>${oriHtml(c.orient)}<h2>Procure atendimento imediatamente se</h2><ul>${(c.alarme||[]).map(a=>`<li>${esc(a)}</li>`).join("")}</ul>`;
   imprimir("Orientações ao paciente", corpo);
 }
 

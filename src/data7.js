@@ -167,11 +167,11 @@ P: `- Educação e desmistificação; diário de evacuação.
 rx: [
  {trilha: "evidencia", titulo: "Macrogol (PEG 3350) – 1ª linha", texto: `USO ORAL
 1. Polietilenoglicol 3350 sem eletrólitos ______ 1 frasco
-   Manutenção: 0,4 g/kg/dia (faixa 0,2–0,8) dissolvido em água ou suco, ajustando até fezes pastosas diárias.
-   Desimpactação: 1–1,5 g/kg/dia por 3–6 dias.`, dose: "NV", nota: "ESPGHAN/NASPGHAN 2014: 1ª linha para desimpactação e manutenção. Não consta na RENAME nem na REMUME."},
+   Manutenção: 0,4 g/kg/dia (faixa 0,2–0,8; até cerca de 17 g/dia) dissolvido em água ou suco, ajustando até fezes pastosas diárias.
+   Desimpactação: 1–1,5 g/kg/dia por 3–6 dias (até cerca de 100 g/dia).`, dose: "NV", nota: "ESPGHAN/NASPGHAN 2014: 1ª linha para desimpactação e manutenção. Não consta na RENAME nem na REMUME."},
  {trilha: "sus", titulo: "Lactulose (SUS Betim)", texto: `USO ORAL
 1. Lactulose 667 mg/mL ______ 1 frasco
-   1 a 2 mL/kg/dia em 1–2 tomadas, ajustando até fezes pastosas diárias.`, dose: "NV", nota: "Alternativa quando PEG não disponível; mais flatulência e cólica."}
+   1,5 a 3 mL/kg/dia (1–2 g/kg/dia) em 1–2 tomadas, sem passar da dose do adulto da bula, ajustando até fezes pastosas diárias.`, dose: "NV", nota: "Alternativa quando PEG não disponível; mais flatulência e cólica. ESPGHAN/NASPGHAN 2014: 1–2 g/kg/dia (667 mg/mL → 1,5–3 mL/kg/dia)."}
 ],
 orient: `O intestino preso na criança melhora com tratamento contínuo por alguns meses. Não pare o remédio quando melhorar: a retirada é gradual.
 Coloque a criança no vaso por 5 minutos depois das refeições, com os pés apoiados. Elogie as tentativas, sem punição por escapes.`,

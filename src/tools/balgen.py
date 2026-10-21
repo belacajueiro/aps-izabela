@@ -85,7 +85,10 @@ T = [
  # cardiometabólico
  ("dapagliflozina","Dapagliflozina 10 mg",r"dapagliflozina",r"^DAPAGLIFLOZINA$",r"^10 MG COM","un",None,None),
  ("semaglutida","Semaglutida injetável (DM2)",r"semaglutida 0.25",r"^SEMAGLUTIDA$",r"1,34 MG/ML SOL INJ","emb",None,None),
- ("semaglutida_ob","Semaglutida 2,4 mg (obesidade)",r"semaglutida \(apresentacao para obesidade\)",r"^SEMAGLUTIDA$",r"2,4 MG|3,2 MG/ML|2,27 MG/ML|SOL INJ SC CT 4 SER","emb",r"1,34 MG/ML",None),
+ ("semaglutida_ob","Semaglutida 2,4 mg (obesidade)",r"semaglutida \(apresentacao para obesidade\)",r"^SEMAGLUTIDA$",r"3,2 MG/ML","emb",None,"Preço da caneta de 2,4 mg (4 doses). Canetas de 0,25, 0,5 e 1 mg: mesmo teto do Ozempic; 1,7 mg: ver tabela do item de agonistas de GLP-1."),
+ ("semaglutida_oral","Semaglutida oral (Rybelsus)",r"semaglutida oral",r"^SEMAGLUTIDA$",r"COM OR","un",None,None),
+ ("liraglutida","Liraglutida 6 mg/mL (caneta de 3 mL)",r"liraglutida",r"^LIRAGLUTIDA$",r"^6 MG/ML SOL INJ","emb",None,"Preço por caneta (18 mg). Saxenda e Olire: controle de peso; Victoza e Lirux: DM2."),
+ ("dulaglutida","Dulaglutida (Trulicity)",r"dulaglutida",r"^DULAGLUTIDA$",r"SOL INJ","dose",None,None),
  ("tirzepatida","Tirzepatida",r"tirzepatida",r"^TIRZEPATIDA$",r"^5 MG/ML SOL INJ","dose",None,None),
  ("orlistate","Orlistate 120 mg",r"orlistate",r"^ORLISTATE?$",r"^120 MG","un",None,None),
  ("atorva40","Atorvastatina 40 mg",r"atorvastatina 40",r"^ATORVASTATINA C[AÁ]LCICA$",r"^40 MG COM","un",None,None),
@@ -152,7 +155,7 @@ for k, rot, mt, sub, apr, un, excl, nota in T:
         lst.append(it)
     ordem = {'Genérico':0,'Novo':1,'Biológico':1,'Similar':2,'Específico':2}
     lst.sort(key=lambda z:(ordem.get(z['t'],3), not z['c'], z['p']))
-    UL = {'bud_form':'inalação','bdp_form':'inalação','lama_laba':'inalação','tirzepatida':'aplicação','testosterona':'ampola'}
+    UL = {'bud_form':'inalação','bdp_form':'inalação','lama_laba':'inalação','tirzepatida':'aplicação','dulaglutida':'caneta','testosterona':'ampola'}
     ent = {'k':k,'rot':rot,'m':mt,'u':('un' if un=='un' else UL.get(k,'') if un=='dose' else un),'it':lst}
     if nota: ent['nota'] = nota
     out.append(ent)

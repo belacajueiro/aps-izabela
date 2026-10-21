@@ -1,12 +1,12 @@
 {
- "gerado": "2026-10-21T10:51:13.942Z",
+ "gerado": "2026-10-21T21:09:35.070Z",
  "cmed": {
   "data": "09/10/2026",
   "fonte": "cmed_pmc2026",
   "icms": "PMC com ICMS de Minas Gerais: 12% para genéricos e 18% para os demais"
  },
- "n_fontes": 573,
- "n_itens": 347,
+ "n_fontes": 601,
+ "n_itens": 348,
  "sem_url": [
   "remume",
   "aap_oma",
@@ -487,7 +487,8 @@
   "aap_ict2022",
   "roma4_lactente2016",
   "fda_denticao2018",
-  "guia_telas2025"
+  "guia_telas2025",
+  "periop_multi2024"
  ],
  "fontes": [
   {
@@ -809,6 +810,7 @@
     "cr-fa",
     "cr-ferro",
     "cr-fibromialgia",
+    "cr-glp1",
     "cr-gota",
     "cr-has",
     "cr-has-meds",
@@ -3199,6 +3201,7 @@
    "usado_em": [
     "cr-dm2",
     "cr-dm2-insulina",
+    "cr-glp1",
     "cr-icfep",
     "cr-polifarmacia"
    ]
@@ -3385,6 +3388,7 @@
    "url": "https://www.gov.br/conitec/pt-br/midias/relatorios/2025/relatorio-de-recomendacao-com-decisao-final-no-1033-semaglutida/@@display-file/file",
    "ano": 2025,
    "usado_em": [
+    "cr-glp1",
     "cr-obesidade"
    ]
   },
@@ -6612,6 +6616,7 @@
    "usado_em": [
     "cr-asma",
     "cr-b12",
+    "cr-glp1",
     "otite-externa"
    ]
   },
@@ -6622,7 +6627,9 @@
    "f": "F",
    "url": "https://simtax.com.br/?p=56709",
    "ano": 2025,
-   "usado_em": []
+   "usado_em": [
+    "cr-glp1"
+   ]
   },
   {
    "k": "gina2026",
@@ -7867,6 +7874,321 @@
    "ano": 2025,
    "usado_em": [
     "pu-telas"
+   ]
+  },
+  {
+   "k": "abeso2026",
+   "s": "ABESO 2026 – Diretriz de tratamento farmacológico da obesidade",
+   "t": "Associação Brasileira para o Estudo da Obesidade e da Síndrome Metabólica. Diretriz Brasileira de Tratamento Farmacológico da Obesidade 2026, 5ª ed. (ISBN 978-65-995414-1-4; 32 recomendações com classe e nível de evidência, metodologia AGREE II): R4 farmacoterapia com IMC ≥ 30 ou ≥ 27 com complicação (I/A); R7 meta ≥ 10% (IIa/B); R9 preferir alta potência – semaglutida e tirzepatida (IIa/C); R12 tratamento contínuo para manutenção, com o mesmo fármaco (I/A); R13 semaglutida na DCV aterosclerótica com IMC ≥ 27 sem DM (I/B); R16 semaglutida ou tirzepatida na ICFEP (I/B); R17 pré-diabetes (I/A); R19 semaglutida na MASH com fibrose (I/B); R20 osteoartrite de joelho (IIa/B); R26 tirzepatida na apneia moderada a grave (IIa/B); R28–R29 sarcopenia, treino de força e proteína 1–1,2 g/kg/dia; R32 não usar manipulados (III/C). Avaliação em 12 semanas de dose plena com perda ≥ 5% (regra não universal); reganho após suspensão (STEP 1, STEP 4, SURMOUNT 4); suspender na gestação e na lactação (diretriz).",
+   "f": "F",
+   "url": "https://abeso.org.br/wp-content/uploads/2026/03/Diretrizes-ABESO_completo_20260320.pdf",
+   "ano": 2026,
+   "usado_em": [
+    "cr-glp1",
+    "cr-obesidade"
+   ]
+  },
+  {
+   "k": "bula_wegovy2026",
+   "s": "Bula Wegovy (semaglutida 0,25–2,4 e 7,2 mg) – 2026",
+   "t": "Novo Nordisk. Wegovy – bula do profissional de saúde (v. EU-PI 12/2025 + FDA 19/03/2026): indicações no Brasil (controle de peso em adultos com IMC ≥ 30 ou ≥ 27 com comorbidade; adolescentes ≥ 12 anos com obesidade e > 60 kg; MASH não cirrótica F2–F3; redução de MACE em DCV estabelecida com IMC ≥ 27); escalonamento 0,25 → 0,5 → 1 → 1,7 → 2,4 mg a cada 4 semanas, 7,2 mg excepcional (IMC ≥ 30, ≥ 4 semanas em 2,4 mg, três injeções de 2,4 mg); adiar aumento se sintomas GI; dose esquecida até 5 dias; troca de dia com intervalo > 72 h; contraindicação só hipersensibilidade; cautela com CMT/NEM2; pancreatite (suspender; não reiniciar se confirmada); NOIA; retinopatia; aspiração na anestesia; gastroparesia grave não recomendada; TFGe < 30 e Child-Pugh C não recomendados; suspender ≥ 2 meses antes de gestação planejada; não usar na amamentação; em uso: 6 semanas abaixo de 30 °C (bula).",
+   "f": "F",
+   "url": "https://www.novonordisk.com.br/content/dam/nncorp/br/pt/pdfs/bulas/hcp/Wegovy_Bula_Profissional.pdf",
+   "ano": 2026,
+   "usado_em": [
+    "cr-glp1",
+    "cr-masld"
+   ]
+  },
+  {
+   "k": "bula_ozempic2026",
+   "s": "Bula Ozempic (semaglutida, DM2) – 2026",
+   "t": "Novo Nordisk. Ozempic – bula do profissional de saúde (PDF de 22/04/2026): DM2 em monoterapia (intolerância à metformina) ou associação; redução do declínio da TFGe, DRC terminal e morte CV no DM2 com DRC; 0,25 mg/semana por 4 semanas → 0,5 mg; após ≥ 4 semanas, 1 mg se necessário; doses > 1 mg não recomendadas; 0,25 mg não é dose de manutenção; reduzir sulfonilureia/insulina; dose esquecida até 5 dias; contraindicação só hipersensibilidade; cautela com CMT/NEM2; retinopatia com insulina; IC classe IV não recomendada; suspender ≥ 2 meses antes da gestação (bula).",
+   "f": "F",
+   "url": "https://www.novonordisk.com.br/content/dam/nncorp/br/pt/pdfs/bulas/hcp/Ozempic_3mL_1mg_Bula_Profissional.pdf",
+   "ano": 2026,
+   "usado_em": [
+    "cr-glp1"
+   ]
+  },
+  {
+   "k": "bula_rybelsus2026",
+   "s": "Bula Rybelsus (semaglutida oral) – 2026",
+   "t": "Novo Nordisk. Rybelsus – bula do profissional de saúde (PDF de 16/09/2026): DM2 e redução de MACE no DM2 de alto risco; 3 mg/dia por 1 mês → 7 mg; após ≥ 1 mês, 14 mg (máximo; 1 comprimido por dia); em jejum de ≥ 8 h, com até 120 mL de água, esperar ≥ 30 min para comer, beber ou tomar outros remédios; não partir; dose esquecida: pular; não recomendado na DRC terminal (bula).",
+   "f": "F",
+   "url": "https://www.novonordisk.com.br/content/dam/nncorp/br/pt/pdfs/bulas/hcp/Rybelsus_Bula_PROFISSIONAL.pdf",
+   "ano": 2026,
+   "usado_em": [
+    "cr-glp1"
+   ]
+  },
+  {
+   "k": "bula_victoza2024",
+   "s": "Bula Victoza (liraglutida, DM2) – 2024",
+   "t": "Novo Nordisk. Victoza – bula do profissional (EU-PI 22/11/2024): DM2 em adultos e > 10 anos; 0,6 mg/dia por ≥ 1 semana → 1,2 mg; após ≥ 1 semana, 1,8 mg se necessário (máximo); dose esquecida até 12 h; sem ajuste na DRC leve a grave, não recomendado na DRC terminal e na hepatopatia grave; em uso, 1 mês entre 15 e 30 °C (bula).",
+   "f": "F",
+   "url": "https://www.novonordisk.com.br/content/dam/nncorp/br/pt/pdfs/bulas/hcp/Victoza_Bula_Profissional-05-01.pdf",
+   "ano": 2024,
+   "usado_em": [
+    "cr-glp1"
+   ]
+  },
+  {
+   "k": "bula_saxenda2021",
+   "s": "Bula Saxenda (liraglutida 3 mg, obesidade) – 2021",
+   "t": "Novo Nordisk. Saxenda – bula do profissional (PDF de 18/11/2021): controle de peso em adultos com IMC ≥ 30 ou ≥ 27 com comorbidade e em adolescentes ≥ 12 anos > 60 kg; 0,6 mg/dia com aumentos de 0,6 mg a cada ≥ 1 semana até 3,0 mg; considerar parar se o aumento não for tolerado por 2 semanas; suspender se perda < 5% após 12 semanas em 3,0 mg; contraindicado na gravidez; dose esquecida até 12 h; não recomendado com ClCr < 30 (bula).",
+   "f": "F",
+   "url": "https://www.novonordisk.com.br/content/dam/nncorp/br/pt/pdfs/bulas/hcp/Saxenda_Bula_Profissional.pdf",
+   "ano": 2021,
+   "usado_em": [
+    "cr-glp1"
+   ]
+  },
+  {
+   "k": "bula_trulicity2019",
+   "s": "Bula Trulicity (dulaglutida) – 2019",
+   "t": "Eli Lilly. Trulicity – bula do paciente (CDS 26/03/2019; cópia do bulário de rede de farmácias): 0,75 mg/semana na monoterapia ou em populações vulneráveis; 1,5 mg/semana na associação; máximo 1,5 mg; redução de MACE no DM2 com ou sem DCV estabelecida; dose esquecida se faltarem ≥ 3 dias para a próxima; troca de dia se a última dose foi há ≥ 3 dias; não recomendado na DRC terminal (bula; versão antiga, conferir a vigente).",
+   "f": "F",
+   "url": "https://img.drogasil.com.br/raiadrogasil_bula/Trulicity.pdf",
+   "ano": 2019,
+   "usado_em": [
+    "cr-glp1"
+   ]
+  },
+  {
+   "k": "bula_mounjaro",
+   "s": "Bula Mounjaro (tirzepatida) – 2024/2026",
+   "t": "Eli Lilly. Mounjaro – bula do paciente (CDS 28/10/2024): 2,5 mg/semana por 4 semanas → 5 mg; aumentos de 2,5 mg após ≥ 4 semanas; máximo 15 mg; sem ajuste por idade, DRC (inclusive terminal) ou hepatopatia; dose esquecida até 4 dias (96 h); troca de dia com intervalo ≥ 72 h; não indicado com história pessoal/familiar de CMT ou NEM2; pancreatite; vesícula; retinopatia grave não estudada; aspiração na anestesia; desnutrição; ideação suicida; fora da geladeira até 21 dias abaixo de 30 °C. Indicações na bula do profissional atualizada em 06/04/2026 (BulasMed): DM2; controle crônico do peso com IMC ≥ 30 ou ≥ 27 com comorbidade; apneia obstrutiva do sono moderada a grave em adultos com obesidade (bula).",
+   "f": "F",
+   "url": "https://www.bulas.med.br/p/substancias/bula/1502615/Mounjaro.html",
+   "ano": 2026,
+   "usado_em": [
+    "cr-glp1"
+   ]
+  },
+  {
+   "k": "ema_mounjaro",
+   "s": "EMA – Mounjaro (RCM em português)",
+   "t": "European Medicines Agency. Mounjaro – resumo das características do medicamento: contraceptivo oral sem ajuste após dose única; mulheres em idade fértil devem usar contracepção; tirzepatida não recomendada na gravidez; suspender ≥ 1 mês antes de gravidez planeada (regulatória).",
+   "f": "F",
+   "url": "https://www.ema.europa.eu/pt/documents/product-information/mounjaro-epar-product-information_pt.pdf",
+   "ano": null,
+   "usado_em": [
+    "cr-glp1"
+   ]
+  },
+  {
+   "k": "lilly_contracep",
+   "s": "Lilly EUA – tirzepatida e contraceptivo oral",
+   "t": "Lilly Medical (EUA). Resposta sobre Zepbound e contraceptivos orais, citando a bula americana: trocar para método não oral ou acrescentar método de barreira por 4 semanas após o início e por 4 semanas após cada aumento de dose (regulatória, EUA).",
+   "f": "F",
+   "url": "https://medical.lilly.com/us/products/answers/can-adults-with-obesity-or-overweight-taking-zepbound-tirzepatide-also-take-oral-contraceptives-211019",
+   "ano": null,
+   "usado_em": [
+    "cr-glp1"
+   ]
+  },
+  {
+   "k": "anvisa_glp1_2025",
+   "s": "ANVISA – RDC 973/2025 (retenção de receita de GLP-1)",
+   "t": "ANVISA. Perguntas e respostas: mudanças na comercialização e escrituração dos medicamentos agonistas de GLP-1. RDC nº 471/2021 alterada pela RDC nº 973, de 23/04/2025 (vigência 23/06/2025), e IN nº 360/2025: semaglutida, liraglutida, dulaglutida, tirzepatida (e lixisenatida) vendidas com retenção de receita; receituário comum do prescritor ou do serviço, em 2 vias, legível; nome completo, idade e sexo do paciente; DCB, concentração, forma, posologia e quantidade; validade de 90 dias; uso prolongado: quantidade por 30 dias, compras sucessivas dentro dos 90 dias; receita eletrônica com assinatura avançada (norma).",
+   "f": "F",
+   "url": "https://www.gov.br/anvisa/pt-br/centraisdeconteudo/publicacoes/monitoramento/farmacovigilancia/perguntas-e-respostas/perguntas-respostas-mudancas-na-comercializacao-e-escrituracao-dos-medicamentos-inibidores-glp-1",
+   "ano": 2025,
+   "usado_em": [
+    "cr-glp1",
+    "cr-obesidade"
+   ]
+  },
+  {
+   "k": "ms_conitec_glp1_2026",
+   "s": "MS pede à CONITEC avaliação de semaglutida e liraglutida (24/09/2026)",
+   "t": "Agência Gov. Ministério da Saúde protocola na CONITEC pedido de análise para incorporação de semaglutida e liraglutida (princípios ativos sem patente) no SUS para obesidade, em 24/09/2026; critérios de acesso ainda a definir; 25 canetas registradas no país, 14 delas em 2026, incluindo versões nacionais e genéricos (notícia oficial).",
+   "f": "F",
+   "url": "https://agenciagov.ebc.com.br/noticias/202609/ministerio-da-saude-protocola-na-conitec-pedido-de-analise-para-incorporacao-de-canetas-emagrecedoras-no-sus",
+   "ano": 2026,
+   "usado_em": [
+    "cr-glp1",
+    "cr-obesidade"
+   ]
+  },
+  {
+   "k": "liraglutida_generico2026",
+   "s": "Liraglutida genérica (EMS) – 2026",
+   "t": "Mercado&Consumo (10/09/2026): DOU de 08/09/2026 publica registro de liraglutida 6 mg/mL genérica da EMS; a empresa já comercializa Olire (controle de peso) e Lirux (controle glicêmico) (notícia; fonte secundária).",
+   "f": "F",
+   "url": "https://mercadoeconsumo.com.br/10/09/2026/economia/anvisa-aprova-genericos-de-medicamentos-contra-diabetes-e-obesidade/",
+   "ano": 2026,
+   "usado_em": [
+    "cr-glp1"
+   ]
+  },
+  {
+   "k": "select2023",
+   "s": "SELECT 2023",
+   "t": "Lincoff AM et al. Semaglutide and Cardiovascular Outcomes in Obesity without Diabetes. N Engl J Med 2023;389:2221-2232. DOI 10.1056/NEJMoa2307563 (ECR, n = 17.604, ≥ 45 anos, DCV e IMC ≥ 27 sem DM; semaglutida 2,4 mg: MACE 6,5% × 8,0%, HR 0,80 (IC95% 0,72–0,90) em 39,8 meses; suspensão por evento adverso 16,6% × 8,2%; financiado pela Novo Nordisk).",
+   "f": "F",
+   "url": "https://doi.org/10.1056/NEJMoa2307563",
+   "ano": 2023,
+   "usado_em": [
+    "cr-glp1"
+   ]
+  },
+  {
+   "k": "flow2024",
+   "s": "FLOW 2024",
+   "t": "Perkovic V et al. Effects of Semaglutide on Chronic Kidney Disease in Patients with Type 2 Diabetes. N Engl J Med 2024. DOI 10.1056/NEJMoa2403347 (ECR, n = 3.533, DM2 com DRC; semaglutida 1 mg: desfecho renal maior 331 × 410 eventos, HR 0,76 (0,66–0,88); morte CV HR 0,71; morte por qualquer causa HR 0,80; mediana 3,4 anos; interrompido precocemente por eficácia).",
+   "f": "F",
+   "url": "https://doi.org/10.1056/NEJMoa2403347",
+   "ano": 2024,
+   "usado_em": [
+    "cr-glp1"
+   ]
+  },
+  {
+   "k": "soul2025",
+   "s": "SOUL 2025",
+   "t": "McGuire DK et al. Oral Semaglutide and Cardiovascular Outcomes in High-Risk Type 2 Diabetes. N Engl J Med 2025. DOI 10.1056/NEJMoa2501006 (ECR, n = 9.650, DM2 com DCV aterosclerótica e/ou DRC; semaglutida oral até 14 mg: MACE 12,0% × 13,8%, HR 0,86 (0,77–0,96); desfechos renais confirmatórios sem diferença; mediana 49,5 meses).",
+   "f": "F",
+   "url": "https://doi.org/10.1056/NEJMoa2501006",
+   "ano": 2025,
+   "usado_em": [
+    "cr-glp1"
+   ]
+  },
+  {
+   "k": "step1_2021",
+   "s": "STEP 1 2021",
+   "t": "Wilding JPH et al. Once-Weekly Semaglutide in Adults with Overweight or Obesity. N Engl J Med 2021. DOI 10.1056/NEJMoa2032183 (ECR, n = 1.961 sem DM; semaglutida 2,4 mg por 68 semanas: −14,9% × −2,4%; ≥ 10% de perda em 69,1% × 12,0%; suspensão por evento GI 4,5% × 0,8%).",
+   "f": "F",
+   "url": "https://doi.org/10.1056/NEJMoa2032183",
+   "ano": 2021,
+   "usado_em": [
+    "cr-glp1"
+   ]
+  },
+  {
+   "k": "step1ext2022",
+   "s": "STEP 1 – extensão sem tratamento (2022)",
+   "t": "Wilding JPH et al. Weight regain and cardiometabolic effects after withdrawal of semaglutide: The STEP 1 trial extension. Diabetes Obes Metab 2022. DOI 10.1111/dom.14725 (extensão exploratória, n = 327: perda de 17,3% até a semana 68; 1 ano após suspender semaglutida e intervenção de estilo de vida, reganho de 11,6 pontos percentuais – dois terços do perdido –, perda líquida de 5,6%; fatores cardiometabólicos voltaram ao basal).",
+   "f": "F",
+   "url": "https://doi.org/10.1111/dom.14725",
+   "ano": 2022,
+   "usado_em": [
+    "cr-glp1"
+   ]
+  },
+  {
+   "k": "surmount1_2022",
+   "s": "SURMOUNT-1 2022",
+   "t": "Jastreboff AM et al. Tirzepatide Once Weekly for the Treatment of Obesity. N Engl J Med 2022. DOI 10.1056/NEJMoa2206038 (ECR, n = 2.539 sem DM, 72 semanas: −15,0% (5 mg), −19,5% (10 mg), −20,9% (15 mg) × −3,1% placebo; suspensão por evento adverso 4,3–7,1% × 2,6%).",
+   "f": "F",
+   "url": "https://doi.org/10.1056/NEJMoa2206038",
+   "ano": 2022,
+   "usado_em": [
+    "cr-glp1"
+   ]
+  },
+  {
+   "k": "surmount4_2024",
+   "s": "SURMOUNT-4 2024",
+   "t": "Aronne LJ et al. Continued Treatment With Tirzepatide for Maintenance of Weight Reduction in Adults With Obesity: The SURMOUNT-4 Randomized Clinical Trial. JAMA 2024. DOI 10.1001/jama.2023.24945 (ECR de retirada, n = 670: −20,9% nas 36 semanas abertas; da semana 36 à 88, −5,5% mantendo × +14,0% com placebo; mantiveram ≥ 80% da perda 89,5% × 16,6%).",
+   "f": "F",
+   "url": "https://doi.org/10.1001/jama.2023.24945",
+   "ano": 2024,
+   "usado_em": [
+    "cr-glp1",
+    "cr-obesidade"
+   ]
+  },
+  {
+   "k": "surmount5_2025",
+   "s": "SURMOUNT-5 2025",
+   "t": "Aronne LJ et al. Tirzepatide as Compared with Semaglutide for the Treatment of Obesity. N Engl J Med 2025. DOI 10.1056/NEJMoa2416394 (ECR aberto, n = 751 sem DM, 72 semanas: tirzepatida 10–15 mg −20,2% × semaglutida 1,7–2,4 mg −13,7%; cintura −18,4 × −13,0 cm; financiado pela Lilly).",
+   "f": "F",
+   "url": "https://doi.org/10.1056/NEJMoa2416394",
+   "ano": 2025,
+   "usado_em": [
+    "cr-glp1",
+    "cr-obesidade"
+   ]
+  },
+  {
+   "k": "stephfpef2023",
+   "s": "STEP-HFpEF 2023",
+   "t": "Kosiborod MN et al. Semaglutide in Patients with Heart Failure with Preserved Ejection Fraction and Obesity. N Engl J Med 2023. DOI 10.1056/NEJMoa2306963 (ECR, n = 529, IMC ≥ 30: KCCQ-CSS +16,6 × +8,7 (diferença 7,8); peso −13,3% × −2,6%; caminhada de 6 min +20,3 m; 52 semanas).",
+   "f": "F",
+   "url": "https://doi.org/10.1056/NEJMoa2306963",
+   "ano": 2023,
+   "usado_em": [
+    "cr-glp1"
+   ]
+  },
+  {
+   "k": "summit2024",
+   "s": "SUMMIT 2024",
+   "t": "Packer M et al. Tirzepatide for Heart Failure with Preserved Ejection Fraction and Obesity. N Engl J Med 2024. DOI 10.1056/NEJMoa2410027 (ECR, n = 731, FE ≥ 50% e IMC ≥ 30; tirzepatida até 15 mg: morte CV ou piora da IC 9,9% × 15,3%, HR 0,62 (0,41–0,95), mediana 104 semanas; morte CV isolada sem diferença (2,2% × 1,4%); KCCQ-CSS +6,9).",
+   "f": "F",
+   "url": "https://doi.org/10.1056/NEJMoa2410027",
+   "ano": 2024,
+   "usado_em": [
+    "cr-glp1"
+   ]
+  },
+  {
+   "k": "essence2025",
+   "s": "ESSENCE 2025",
+   "t": "Sanyal AJ et al. Phase 3 Trial of Semaglutide in Metabolic Dysfunction-Associated Steatohepatitis. N Engl J Med 2025. DOI 10.1056/NEJMoa2413258 (ECR, MASH F2–F3 por biópsia, análise interina de 72 semanas, n = 800: resolução da esteato-hepatite 62,9% × 34,3%; redução da fibrose 36,8% × 22,4%; peso −10,5% × −2,0%).",
+   "f": "F",
+   "url": "https://doi.org/10.1056/NEJMoa2413258",
+   "ano": 2025,
+   "usado_em": [
+    "cr-glp1",
+    "cr-masld"
+   ]
+  },
+  {
+   "k": "surmountosa2024",
+   "s": "SURMOUNT-OSA 2024",
+   "t": "Malhotra A et al. Tirzepatide for the Treatment of Obstructive Sleep Apnea and Obesity. N Engl J Med 2024. DOI 10.1056/NEJMoa2404881 (2 ECR, apneia moderada a grave e obesidade, dose máxima tolerada 10 ou 15 mg por 52 semanas: IAH −20,0 eventos/h sem CPAP e −23,8 eventos/h com CPAP em relação ao placebo; IAH basal ~50/h).",
+   "f": "F",
+   "url": "https://doi.org/10.1056/NEJMoa2404881",
+   "ano": 2024,
+   "usado_em": [
+    "cr-glp1"
+   ]
+  },
+  {
+   "k": "west_bmj2026",
+   "s": "West 2026 (BMJ) – reganho após suspender remédios para obesidade",
+   "t": "West S et al. Weight regain after cessation of medication for weight management: systematic review and meta-analysis. BMJ 2026. DOI 10.1136/bmj-2025-085304 (RS/MA, 37 estudos, 9.341 participantes: reganho médio de 0,4 kg/mês após parar; marcadores cardiometabólicos projetados de volta ao basal em ~1,4 ano; reganho mais rápido que após programas comportamentais, em 0,3 kg/mês).",
+   "f": "F",
+   "url": "https://doi.org/10.1136/bmj-2025-085304",
+   "ano": 2026,
+   "usado_em": [
+    "cr-glp1"
+   ]
+  },
+  {
+   "k": "periop_bja2025",
+   "s": "BJAN 2025 – GLP-1 no perioperatório (síntese de consensos)",
+   "t": "Carta ao editor. The role of GLP-1 agonists in perioperative care: a suspension dilemma. Braz J Anesthesiol 2025. DOI 10.1016/j.bjane.2025.844668 (PMID 40754201): orientação multissocietária americana (inclui ASA) – decisão compartilhada e individualizada; se suspender, formulações diárias no dia e semanais 1 semana antes; dieta líquida por ≥ 24 h se suspeita de esvaziamento lento; avaliar sintomas no dia; ultrassom gástrico. SBD: suspender semaglutida 21 dias e tirzepatida 15 dias antes (três meias-vidas). Consenso britânico 2025: manter. Australianos/neozelandeses: manter e dieta líquida 24 h antes de endoscopia (síntese; carta).",
+   "f": "F",
+   "url": "https://doi.org/10.1016/j.bjane.2025.844668",
+   "ano": 2025,
+   "usado_em": [
+    "cr-glp1"
+   ]
+  },
+  {
+   "k": "periop_multi2024",
+   "s": "Orientação multissocietária 2024 – GLP-1 no perioperatório",
+   "t": "Kindel TL et al. Multisociety clinical practice guidance for the safe use of glucagon-like peptide-1 receptor agonists in the perioperative period. Surg Obes Relat Dis 2024;20(12):1183-1186. DOI 10.1016/j.soard.2024.08.033 (orientação de sociedades americanas; conteúdo conhecido apenas pela síntese do BJAN 2025, sem acesso ao texto integral).",
+   "f": "C",
+   "url": "https://doi.org/10.1016/j.soard.2024.08.033",
+   "ano": 2025,
+   "usado_em": [
+    "cr-glp1"
    ]
   }
  ],
@@ -10299,12 +10621,15 @@
    "id": "cr-obesidade",
    "nome": "Obesidade",
    "modulo": "cr",
-   "nv": 3,
+   "nv": 2,
    "fontes": [
     "obes_ecr",
     "conitec_obes",
     "cfm_bariatrica",
-    "ms_bariatrica"
+    "ms_bariatrica",
+    "abeso2026",
+    "anvisa_glp1_2025",
+    "ms_conitec_glp1_2026"
    ]
   },
   {
@@ -11344,7 +11669,9 @@
    "modulo": "cr",
    "nv": 2,
    "fontes": [
-    "masld2025"
+    "masld2025",
+    "essence2025",
+    "bula_wegovy2026"
    ]
   },
   {
@@ -12173,6 +12500,44 @@
     "sbp_pele2024",
     "sbp_picadas2025",
     "sbp_repel2015"
+   ]
+  },
+  {
+   "id": "cr-glp1",
+   "nome": "Agonistas de GLP-1 e tirzepatida: indicação, esquemas, efeitos e suspensão",
+   "modulo": "cr",
+   "nv": 6,
+   "fontes": [
+    "abeso2026",
+    "select2023",
+    "soul2025",
+    "flow2024",
+    "summit2024",
+    "stephfpef2023",
+    "essence2025",
+    "surmountosa2024",
+    "step1_2021",
+    "step1ext2022",
+    "surmount1_2022",
+    "surmount4_2024",
+    "surmount5_2025",
+    "west_bmj2026",
+    "periop_bja2025",
+    "bula_wegovy2026",
+    "bula_ozempic2026",
+    "bula_rybelsus2026",
+    "bula_victoza2024",
+    "bula_saxenda2021",
+    "bula_trulicity2019",
+    "bula_mounjaro",
+    "ema_mounjaro",
+    "lilly_contracep",
+    "anvisa_glp1_2025",
+    "conitec_obes",
+    "pcdt_dm2",
+    "ms_conitec_glp1_2026",
+    "cmed_pmc2026",
+    "remume"
    ]
   }
  ]

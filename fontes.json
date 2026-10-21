@@ -1,12 +1,12 @@
 {
- "gerado": "2026-10-21T00:59:52.162Z",
+ "gerado": "2026-10-21T01:48:21.095Z",
  "cmed": {
   "data": "09/10/2026",
   "fonte": "cmed_pmc2026",
   "icms": "PMC com ICMS de Minas Gerais: 12% para genéricos e 18% para os demais"
  },
- "n_fontes": 565,
- "n_itens": 337,
+ "n_fontes": 573,
+ "n_itens": 347,
  "sem_url": [
   "remume",
   "aap_oma",
@@ -257,7 +257,8 @@
   "aap_obes2023",
   "ada_jovem",
   "headsss",
-  "sbp_sono2023"
+  "sbp_sono2023",
+  "fda_denticao2018"
  ],
  "nao_conferidas": [
   "aap_oma",
@@ -484,7 +485,9 @@
   "ada_jovem",
   "headsss",
   "aap_ict2022",
-  "roma4_lactente2016"
+  "roma4_lactente2016",
+  "fda_denticao2018",
+  "guia_telas2025"
  ],
  "fontes": [
   {
@@ -700,6 +703,7 @@
     "prolapso",
     "prurido",
     "pu-fimose",
+    "pu-nariz",
     "pu-suplementacao",
     "queda-idoso",
     "queimadura",
@@ -3550,15 +3554,21 @@
     "pu-5a",
     "pu-6m",
     "pu-9m",
+    "pu-acidentes",
+    "pu-alimentacao",
     "pu-checkup",
     "pu-constipacao",
     "pu-crescimento",
+    "pu-dentes",
     "pu-dnpm",
     "pu-guiada",
     "pu-ictericia",
+    "pu-nao-come",
     "pu-pele",
     "pu-prematuro",
-    "pu-rn"
+    "pu-rn",
+    "pu-telas",
+    "pu-umbigo-olhos"
    ]
   },
   {
@@ -3583,6 +3593,7 @@
     "pu-6m",
     "pu-9m",
     "pu-guiada",
+    "pu-reacoes-vacinas",
     "pu-vacinas"
    ]
   },
@@ -6808,7 +6819,8 @@
    "usado_em": [
     "pu-18m",
     "pu-24m",
-    "pu-3a5a"
+    "pu-3a5a",
+    "pu-telas"
    ]
   },
   {
@@ -7072,7 +7084,8 @@
    "ano": 2026,
    "usado_em": [
     "cr-ic",
-    "cr-icfep"
+    "cr-icfep",
+    "pu-reacoes-vacinas"
    ]
   },
   {
@@ -7445,6 +7458,7 @@
    "ano": 2017,
    "usado_em": [
     "pu-6m",
+    "pu-alimentacao",
     "pu-guiada"
    ]
   },
@@ -7469,9 +7483,11 @@
     "pu-5a",
     "pu-6m",
     "pu-9m",
+    "pu-acidentes",
     "pu-guiada",
     "pu-refluxo",
-    "pu-rn"
+    "pu-rn",
+    "pu-sono"
    ]
   },
   {
@@ -7530,6 +7546,7 @@
     "pu-5a",
     "pu-6m",
     "pu-9m",
+    "pu-reacoes-vacinas",
     "pu-rn"
    ]
   },
@@ -7551,7 +7568,8 @@
     "pu-4m",
     "pu-5a",
     "pu-6m",
-    "pu-9m"
+    "pu-9m",
+    "pu-reacoes-vacinas"
    ]
   },
   {
@@ -7621,6 +7639,7 @@
    "url": "https://bvsms.saude.gov.br/bvs/publicacoes/saude_crianca_aleitamento_materno_cab23.pdf",
    "ano": 2015,
    "usado_em": [
+    "pu-alimentacao",
     "pu-amamentacao",
     "pu-formula"
    ]
@@ -7633,8 +7652,11 @@
    "url": "http://189.28.128.100/dab/docs/portaldab/publicacoes/guia_da_crianca_2019.pdf",
    "ano": 2019,
    "usado_em": [
+    "pu-alimentacao",
     "pu-amamentacao",
+    "pu-dentes",
     "pu-formula",
+    "pu-nao-come",
     "pu-refluxo"
    ]
   },
@@ -7696,7 +7718,9 @@
    "ano": 2024,
    "usado_em": [
     "pu-ictericia",
-    "pu-pele"
+    "pu-pele",
+    "pu-sol-repelente",
+    "pu-umbigo-olhos"
    ]
   },
   {
@@ -7718,7 +7742,8 @@
    "url": "https://www.sbp.com.br/?p=31436",
    "ano": 2025,
    "usado_em": [
-    "pu-pele"
+    "pu-pele",
+    "pu-sol-repelente"
    ]
   },
   {
@@ -7753,6 +7778,95 @@
    "ano": 2026,
    "usado_em": [
     "pu-formula"
+   ]
+  },
+  {
+   "k": "esavi2020",
+   "s": "MS 2020 – Manual de eventos adversos pós-vacinação (4ª ed.)",
+   "t": "Ministério da Saúde/SVS. Manual de Vigilância Epidemiológica de Eventos Adversos Pós-Vacinação, 4ª edição, 2020: evolução da lesão da BCG (6 a 12 semanas; linfonodo axilar até 3 cm sem supuração em até 10%); úlcera > 1 cm sem cicatrização, abscesso frio, granuloma e linfonodo supurado → notificar e isoniazida 10 mg/kg/dia (máx. 400 mg) até regressão; linfonodo > 3 cm sem supuração → não puncionar e sem isoniazida; abscesso quente → antibiótico; Quadro 4 (penta): reações locais 24–48 h, febre nas primeiras 24 h, choro persistente, EHH nas primeiras 48 h (continuar com DTP acelular), convulsão até 72 h (continuar com DTP acelular), encefalopatia em 7 dias (contraindica DTP/DTPa, completar com DT), anafilaxia (contraindica); rotavírus: invaginação 1–2/100.000 após as primeiras doses; SCR: febre e exantema entre o 5º e o 14º dia, púrpura trombocitopênica 2–3 semanas; varicela/tetraviral: febre e exantema 5–12 dias, convulsão febril com a tetraviral; febre amarela: eventos neurológicos e viscerotrópicos (notificação imediata); Capítulo 26: compressas frias 24–48 h, antitérmico não profilático (considerar se febre alta prévia ou convulsão febril), doses de paracetamol, dipirona e ibuprofeno; eventos graves ou inusitados: notificação imediata em até 24 h; UBS e salas de vacina são unidades notificadoras (manual MS; cópia SBIm).",
+   "f": "F",
+   "url": "https://sbim.org.br/images/files/manual-vigilancia-epidemiologica-eventos-vacinacao-4ed.pdf",
+   "ano": 2020,
+   "usado_em": [
+    "pu-reacoes-vacinas"
+   ]
+  },
+  {
+   "k": "sbp_transito2021",
+   "s": "SBP 2021 – transporte de crianças no carro (CTB art. 64)",
+   "t": "Sociedade Brasileira de Pediatria (26/04/2021). Manifesto em defesa da segurança das crianças no trânsito: o art. 64 do CTB, alterado pela Lei 14.071/2020, exige dispositivo de retenção para crianças de até 10 anos que não atingiram 1,45 m; a SBP recomenda assento de elevação até 1,45 m e aponta conflito com a Resolução CONTRAN 819/2021 (página SBP).",
+   "f": "F",
+   "url": "https://www.sbp.com.br/?p=17645",
+   "ano": 2021,
+   "usado_em": [
+    "pu-acidentes"
+   ]
+  },
+  {
+   "k": "fda_denticao2018",
+   "s": "FDA 2018 – produtos para dentição",
+   "t": "FDA (EUA), 2018: alertas contra géis e pomadas com benzocaína para dentição (risco de metemoglobinemia) e contra colares e pulseiras de dentição (âmbar, madeira, silicone), pelo risco de estrangulamento e engasgo (comunicados de segurança; citado sem conferência nesta sessão).",
+   "f": "C",
+   "url": "",
+   "ano": 2018,
+   "usado_em": [
+    "pu-dentes"
+   ]
+  },
+  {
+   "k": "sbp_sono2021",
+   "s": "SBP 2021 – higiene do sono",
+   "t": "Sociedade Brasileira de Pediatria, Departamento Científico do Sono. Higiene do sono – atualização 2021: duração do sono em 24 h (AASM 2016) 4–12 meses 12–16 h, 1–2 anos 11–14 h, 3–5 anos 10–13 h (cochilos incluídos), 6–12 anos 9–12 h, 13–18 anos 8–10 h; entre 6 e 9 meses a maioria dorme a noite inteira com 2–3 cochilos; cochilo desaparece até 5 anos; despertares breves são normais; medidas: rotina diurna, horários regulares inclusive nos fins de semana, ritual breve (até 30 min), ambiente adequado, sem telas 1 h antes de dormir, mesma estratégia entre os pais, adormecer na própria cama, objeto de transição, evitar chocolate, café e refrigerante à noite (documento SBP).",
+   "f": "F",
+   "url": "https://www.sbp.com.br/fileadmin/user_upload/23196c-DC_Higiene_do_Sono_-_Atualizacao_2021.pdf",
+   "ano": 2021,
+   "usado_em": [
+    "pu-sono",
+    "pu-telas"
+   ]
+  },
+  {
+   "k": "sbp_desfralde2019",
+   "s": "SBP/SBU 2019 – treinamento esfincteriano",
+   "t": "Sociedade Brasileira de Pediatria e Sociedade Brasileira de Urologia. Manual de orientação – Treinamento esfincteriano (set/2019): no Brasil, início médio aos 22 meses e conclusão aos 27,4 meses; prontidão geralmente entre 24 e 36 meses; 21 sinais de prontidão; abordagem orientada para a criança (AAP); penico preferível no início, com pés apoiados; elogios sem guloseimas e sem punição; recusa → pausa de 1 a 3 meses; investigar se ≥ 36 meses sem sinais de prontidão ou ≥ 48 meses sem controle diurno (deficiência intelectual, TEA, TDAH, disrafismo, bexiga/intestino neurogênicos, constipação, abuso sexual etc.); tratar a constipação antes ou durante (manual SBP/SBU).",
+   "f": "F",
+   "url": "https://www.sbp.com.br/fileadmin/user_upload/22076c-MO_-_Treinamento_Esfincteriano.pdf",
+   "ano": 2019,
+   "usado_em": [
+    "pu-desfralde"
+   ]
+  },
+  {
+   "k": "bula_nafazolina",
+   "s": "Bula – nafazolina nasal (Narix adulto)",
+   "t": "Bula do paciente – Narix (cloridrato de nafazolina 0,5 mg/mL, solução nasal; Cimed): uso adulto; contraindicado para menores de 12 anos; não usar por longos períodos (bula).",
+   "f": "F",
+   "url": "https://cimedremedios.com.br/wp-content/uploads/2020/03/Medicamento_Bula_Paciente-NARIX-GOTAS.pdf",
+   "ano": null,
+   "usado_em": [
+    "pu-nariz"
+   ]
+  },
+  {
+   "k": "sbp_repel2015",
+   "s": "SBP 2015 – uso de repelentes em crianças",
+   "t": "Sociedade Brasileira de Pediatria. Uso do repelente de insetos em crianças (2015): proteção mecânica; abaixo de 6 meses sem estudos de segurança; IR3535 acima de 6 meses; DEET e icaridina acima de 2 anos; aplicar com a mão do adulto, longe de olhos e boca, não dormir com repelente; protetor solar e, 20–40 min depois, o repelente; loção preferível a spray; pulseiras de citronela e aparelhos ultrassônicos sem eficácia (documento SBP).",
+   "f": "F",
+   "url": "https://www.sbp.com.br/fileadmin/user_upload/2012/12/Repelentes-2015.pdf",
+   "ano": 2015,
+   "usado_em": [
+    "pu-sol-repelente"
+   ]
+  },
+  {
+   "k": "guia_telas2025",
+   "s": "Governo Federal 2025 – guia de telas",
+   "t": "Secretaria de Comunicação Social da Presidência (Secom). Crianças, Adolescentes e Telas: Guia sobre Uso de Dispositivos Digitais (11/03/2025): telas só a partir de 2 anos, exceto videochamadas com a família; sem smartphone próprio antes de 12 anos (conferido por reportagem da CNN Brasil; documento original não aberto).",
+   "f": "C",
+   "url": "https://www.cnnbrasil.com.br/educacao/governo-lanca-guia-sobre-uso-de-telas-por-criancas-e-adolescentes-confira/",
+   "ano": 2025,
+   "usado_em": [
+    "pu-telas"
    ]
   }
  ],
@@ -10541,11 +10655,14 @@
   },
   {
    "id": "pu-alimentacao",
-   "nome": "Alimentação até 2 anos e introdução alimentar",
+   "nome": "Alimentação até 2 anos e introdução alimentar (tradicional, BLISS ou mista)",
    "modulo": "pu",
-   "nv": 0,
+   "nv": 1,
    "fontes": [
-    "guia_menor2"
+    "guia_menor2_2019",
+    "guia_menor2",
+    "sbp_blw2017",
+    "cab23_2015"
    ]
   },
   {
@@ -11949,6 +12066,113 @@
     "sbp_picadas2025",
     "caderneta_crianca",
     "remume"
+   ]
+  },
+  {
+   "id": "pu-dentes",
+   "nome": "Dentição e saúde bucal: nascimento dos dentes, escovação, flúor, cárie e trauma",
+   "modulo": "pu",
+   "nv": 2,
+   "fontes": [
+    "caderneta_crianca",
+    "guia_menor2_2019",
+    "fda_denticao2018"
+   ]
+  },
+  {
+   "id": "pu-reacoes-vacinas",
+   "nome": "Reações às vacinas (ESAVI): o que é esperado, o que fazer e quando notificar",
+   "modulo": "pu",
+   "nv": 2,
+   "fontes": [
+    "esavi2020",
+    "crie2023",
+    "pni2026",
+    "bula_paracetamol",
+    "bula_dipirona"
+   ]
+  },
+  {
+   "id": "pu-acidentes",
+   "nome": "Prevenção de acidentes por idade: sono, quedas, engasgo, afogamento, queimaduras, intoxicação e transporte",
+   "modulo": "pu",
+   "nv": 2,
+   "fontes": [
+    "caderneta_crianca",
+    "sbp_transito2021",
+    "sbp_sono2023"
+   ]
+  },
+  {
+   "id": "pu-umbigo-olhos",
+   "nome": "Umbigo e olhos do bebê: coto, granuloma, hérnia umbilical, lacrimejamento e secreção ocular",
+   "modulo": "pu",
+   "nv": 3,
+   "fontes": [
+    "sbp_pele2024",
+    "caderneta_crianca"
+   ]
+  },
+  {
+   "id": "pu-nao-come",
+   "nome": "\"Meu filho não come\": apetite, seletividade alimentar e quando investigar",
+   "modulo": "pu",
+   "nv": 2,
+   "fontes": [
+    "guia_menor2_2019",
+    "caderneta_crianca"
+   ]
+  },
+  {
+   "id": "pu-sono",
+   "nome": "Sono do bebê e da criança: quanto dormir, rotina, despertares e sono seguro",
+   "modulo": "pu",
+   "nv": 2,
+   "fontes": [
+    "sbp_sono2021",
+    "sbp_sono2023"
+   ]
+  },
+  {
+   "id": "pu-telas",
+   "nome": "Telas: TV, celular e tablet por idade",
+   "modulo": "pu",
+   "nv": 1,
+   "fontes": [
+    "caderneta_crianca",
+    "sbp_sono2021",
+    "guia_telas2025",
+    "oms_telas2019"
+   ]
+  },
+  {
+   "id": "pu-desfralde",
+   "nome": "Desfralde: quando começar, como fazer e quando investigar",
+   "modulo": "pu",
+   "nv": 1,
+   "fontes": [
+    "sbp_desfralde2019"
+   ]
+  },
+  {
+   "id": "pu-nariz",
+   "nome": "Nariz entupido no bebê e na criança: lavagem nasal e o que não usar",
+   "modulo": "pu",
+   "nv": 3,
+   "fontes": [
+    "bula_nafazolina",
+    "rename"
+   ]
+  },
+  {
+   "id": "pu-sol-repelente",
+   "nome": "Proteção solar e repelente por idade",
+   "modulo": "pu",
+   "nv": 3,
+   "fontes": [
+    "sbp_pele2024",
+    "sbp_picadas2025",
+    "sbp_repel2015"
    ]
   }
  ]

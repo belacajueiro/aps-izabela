@@ -17467,6 +17467,720 @@ Algumas crianças têm reação forte a picadas de mosquito ou pulga: aparecem b
 // Orientação aos responsáveis compartilhada com os itens de demanda espontânea
 (() => { const a = CONDICOES.find(c => c.id === "colica-lactente"); if (a){ a.orient = ORI_COLICA; (a.rx || []).forEach(r => { if (/reuteri/.test(r.texto)) r.dose = "F"; }); }
   const b = CONDICOES.find(c => c.id === "constipacao-infantil"); if (b) b.orient = ORI_CONSTIP; })();
+// ───────────── data54.js – v44: puericultura, lote 2 (introdução alimentar ampliada, dentição e saúde bucal,
+// reações às vacinas, prevenção de acidentes por idade). Conteúdo conferido em 20/10/2026.
+Object.assign(FONTES, {
+  esavi2020: {s: "MS 2020 – Manual de eventos adversos pós-vacinação (4ª ed.)", t: "Ministério da Saúde/SVS. Manual de Vigilância Epidemiológica de Eventos Adversos Pós-Vacinação, 4ª edição, 2020: evolução da lesão da BCG (6 a 12 semanas; linfonodo axilar até 3 cm sem supuração em até 10%); úlcera > 1 cm sem cicatrização, abscesso frio, granuloma e linfonodo supurado → notificar e isoniazida 10 mg/kg/dia (máx. 400 mg) até regressão; linfonodo > 3 cm sem supuração → não puncionar e sem isoniazida; abscesso quente → antibiótico; Quadro 4 (penta): reações locais 24–48 h, febre nas primeiras 24 h, choro persistente, EHH nas primeiras 48 h (continuar com DTP acelular), convulsão até 72 h (continuar com DTP acelular), encefalopatia em 7 dias (contraindica DTP/DTPa, completar com DT), anafilaxia (contraindica); rotavírus: invaginação 1–2/100.000 após as primeiras doses; SCR: febre e exantema entre o 5º e o 14º dia, púrpura trombocitopênica 2–3 semanas; varicela/tetraviral: febre e exantema 5–12 dias, convulsão febril com a tetraviral; febre amarela: eventos neurológicos e viscerotrópicos (notificação imediata); Capítulo 26: compressas frias 24–48 h, antitérmico não profilático (considerar se febre alta prévia ou convulsão febril), doses de paracetamol, dipirona e ibuprofeno; eventos graves ou inusitados: notificação imediata em até 24 h; UBS e salas de vacina são unidades notificadoras (manual MS; cópia SBIm).", f: "F", url: "https://sbim.org.br/images/files/manual-vigilancia-epidemiologica-eventos-vacinacao-4ed.pdf"},
+  sbp_transito2021: {s: "SBP 2021 – transporte de crianças no carro (CTB art. 64)", t: "Sociedade Brasileira de Pediatria (26/04/2021). Manifesto em defesa da segurança das crianças no trânsito: o art. 64 do CTB, alterado pela Lei 14.071/2020, exige dispositivo de retenção para crianças de até 10 anos que não atingiram 1,45 m; a SBP recomenda assento de elevação até 1,45 m e aponta conflito com a Resolução CONTRAN 819/2021 (página SBP).", f: "F", url: "https://www.sbp.com.br/?p=17645"},
+  fda_denticao2018: {s: "FDA 2018 – produtos para dentição", t: "FDA (EUA), 2018: alertas contra géis e pomadas com benzocaína para dentição (risco de metemoglobinemia) e contra colares e pulseiras de dentição (âmbar, madeira, silicone), pelo risco de estrangulamento e engasgo (comunicados de segurança; citado sem conferência nesta sessão).", f: "C", url: ""}
+});
+
+// ── 1. Introdução alimentar: amplia o item existente (data12.js) com guia clínico e orientação completa
+(() => { const c = CONDICOES.find(x => x.id === "pu-alimentacao"); if (!c) return;
+  c.nome = "Alimentação até 2 anos e introdução alimentar (tradicional, BLISS ou mista)";
+  c.tags += " BLW BLISS papinha engasgo ânsia ovo amendoim glúten vegetariano quantidade colheres prato";
+  c.alerta = "Engasgos frequentes, tosse ou cansaço para comer, recusa com perda de peso, vômitos persistentes, sangue nas fezes ou reação (urticária, inchaço, vômitos) logo após um alimento novo: avaliar. Reação com falta de ar ou inchaço de lábios e língua: urgência (anafilaxia).";
+  c.guia = {rotulo: "Guia clínico",
+    resumo: "Leite materno exclusivo até 6 meses; a partir de 6 meses, comida de verdade amassada (não liquidificada), com todos os grupos, progredindo até a comida da família aos 12 meses, sem açúcar até 2 anos e sem ultraprocessados (Guia Alimentar 2019) [F]. A SBP (2017) recomenda a abordagem mista (colher e pedaços para a criança pegar) e não recomenda o BLW como método único [F]; o BLISS é uma opção com cuidados contra engasgo [C].",
+    secoes: [
+      {t: "Quando começar", b: [
+        {ul: ["Aos 6 meses, mantendo o leite materno em livre demanda até 2 anos ou mais [F]", "Sinais de prontidão: senta com pouco ou nenhum apoio, menos protrusão da língua, interesse pela comida [F]", "Criança em fórmula: outros alimentos e água também a partir de 6 meses [F]; em leite de vaca antes de 6 meses, o CAB 23 prevê comida a partir de 4 meses [F]", "Prematuro: usar a idade corrigida e a prontidão motora (Caderneta 2025) [C]"]}
+      ]},
+      {t: "Refeições e quantidades por idade", b: [
+        {tab: {h: ["Idade", "Refeições", "Quantidade aproximada (almoço/jantar)", "Consistência"], r: [
+          ["6 meses", "Leite materno + fruta nos lanches da manhã e da tarde + almoço", "2 a 3 colheres de sopa no total", "Amassada com garfo, alimentos separados no prato; carnes desfiadas ou bem picadas"],
+          ["7 a 8 meses", "Leite materno + frutas + almoço e jantar", "3 a 4 colheres de sopa", "Menos amassada; pedaços pequenos e macios"],
+          ["9 a 11 meses", "Leite materno + frutas + almoço e jantar", "4 a 5 colheres de sopa", "Picada, já próxima da comida da família"],
+          ["12 a 24 meses", "Café da manhã, lanches, almoço e jantar com a família + leite materno", "5 a 6 colheres de sopa", "Comida da família"]]}, nota: "Guia Alimentar < 2 anos (2019) [F]. As quantidades são referência, não meta: respeitar fome e saciedade [F]."},
+        {p: "Prato do almoço e do jantar: 1 cereal ou raiz/tubérculo + 1 feijão (ou outra leguminosa) + 1 ou mais legumes e verduras + 1 carne, vísceras ou ovo; pode acompanhar um pedaço de fruta [F]. Óleo vegetal e temperos naturais em pouca quantidade; pouco sal [F]."}
+      ]},
+      {t: "Tradicional, BLISS ou mista", b: [
+        {tab: {h: ["Método", "Como é", "Cuidados"], r: [
+          ["Tradicional (Guia Alimentar)", "Comida amassada com garfo, oferecida na colher, progredindo a pedaços", "Não liquidificar nem peneirar; deixar a criança tocar e pegar os alimentos [F]"],
+          ["BLISS (BLW modificado)", "A criança se alimenta com pedaços macios que consegue segurar; em cada refeição um alimento fonte de ferro e um energético", "Sentada, com adulto atento; evitar alimentos de risco de engasgo; ECR na Nova Zelândia (BLISS, 2016) sem aumento de engasgo em relação ao tradicional [C]"],
+          ["Mista (recomendada pela SBP)", "Parte na colher, parte em pedaços para a criança pegar", "A SBP (2017) não recomenda o BLW como método único e sugere a abordagem mista [F]"]]}},
+        {ir: [["pu-6m", "Consulta de 6 meses (roteiro detalhado)"], ["pu-suplementacao", "Ferro e vitamina D"]]}
+      ]},
+      {t: "O que evitar e o que não precisa evitar", b: [
+        {ul: ["**Açúcar de qualquer tipo, mel, melado, rapadura e adoçantes** antes de 2 anos; mel também pelo risco de botulismo antes de 1 ano [F/C]", "**Ultraprocessados:** biscoitos, bolachas, iogurtes com açúcar, petit suisse, salgadinhos, embutidos, macarrão instantâneo, achocolatados, refrigerantes, sucos de caixa [F]", "**Suco:** não antes de 1 ano, mesmo natural; de 1 a 3 anos, se oferecido, até cerca de 120 mL por dia, natural e sem açúcar, de preferência ao fim de uma refeição [F]", "**Engasgo:** sem pipoca antes de 2 anos; amendoim, castanhas e nozes só moídos ou em pasta; uva e acerola sem semente e cortadas em 2 a 4 pedaços [F]; alimentos duros crus (cenoura, maçã em pedaços) só ralados ou cozidos, sobretudo no BLISS; salsicha não (ultraprocessado) [C]", "**Não precisa evitar:** glúten (só se doença celíaca) [F]; ovo, peixe, amendoim em pasta e outros alergênicos podem entrar a partir de 6 meses, sem atrasar [C]", "**Leite:** a criança amamentada não precisa de outro leite; leite de vaca integral só a partir de 9 meses para quem usa fórmula (Guia 2019) [F]; a SBP 2026 orienta evitar no 1º ano [F]", "Telas durante a refeição: evitar; comer junto com a família [F]"]},
+        {alerta: "Diferenciar o reflexo de ânsia (tosse, careta, a criança devolve o alimento – comum e protetor) do engasgo verdadeiro (silenciosa, sem conseguir tossir ou chorar, arroxeada). Orientar a manobra de desengasgo do lactente para toda família [C]."},
+        {ir: [["ovace", "Engasgo – manobras"], ["pu-formula", "Fórmula e leite de vaca"], ["pu-nao-come", "\"Meu filho não come\""]]}
+      ]},
+      {t: "Situações especiais", b: [
+        {ul: ["Família vegetariana: possível com planejamento; fonte de ferro e combinação de cereais e leguminosas em todas as refeições; vegana estrita exige B12 e acompanhamento com nutrição [C]", "Baixo ganho de peso ou recusa persistente: rever a técnica, o ambiente e a curva; eMulti (nutrição) [I]", "Suspeita de alergia (urticária, vômitos, sangue nas fezes ligados a um alimento): retirar o alimento e avaliar; anafilaxia → urgência [C]"]}
+      ]},
+      {t: "Fontes", b: [{ref: ["guia_menor2_2019", "guia_menor2", "sbp_blw2017", "cab23_2015", "caderneta_crianca"]}]}
+    ]};
+  c.orient = `## A partir dos 6 meses
+O leite do peito continua sendo muito importante até 2 anos ou mais. A partir dos 6 meses, a criança começa a comer a comida da família, feita em casa, com pouco sal e sem açúcar.
+A criança está pronta quando senta com pouco apoio, mostra interesse pela comida e não empurra tudo para fora com a língua.
+## Como montar o prato do almoço e do jantar
+- 1 cereal ou raiz: arroz, macarrão, batata, mandioca, inhame, cará ou milho.
+- 1 feijão: feijão, lentilha, grão-de-bico ou ervilha.
+- 1 ou mais legumes e verduras: abóbora, cenoura, chuchu, beterraba, couve, espinafre, brócolis…
+- 1 carne ou ovo: boi, frango, peixe, fígado ou ovo bem cozido.
+- Use óleo e temperos naturais (alho, cebola, cheiro-verde) e pouco sal.
+## Como oferecer
+- **Aos 6 meses:** amasse com o garfo, sem bater no liquidificador e sem peneirar. Deixe cada alimento separado no prato para a criança conhecer os sabores. Carnes desfiadas ou bem picadas.
+- **De 7 a 11 meses:** amasse cada vez menos e ofereça pedaços pequenos e macios.
+- **A partir de 1 ano:** a criança come a mesma comida da família.
+- Deixe a criança pegar a comida com as mãos e brincar com ela: assim ela aprende. Pedaços macios que ela consiga segurar (legumes cozidos em palitos, frutas macias) podem ser oferecidos junto com a comida na colher.
+- Sempre sentada, nunca deitada, andando ou no carro, e sempre com um adulto olhando.
+## Quantidade
+- 6 meses: começa com 2 a 3 colheres de sopa no almoço; fruta nos lanches.
+- 7 a 8 meses: almoço e jantar, 3 a 4 colheres de sopa.
+- 9 a 11 meses: 4 a 5 colheres de sopa.
+- 1 a 2 anos: 5 a 6 colheres de sopa, mais café da manhã e lanches.
+São só referências. A criança mostra quando quer mais (abre a boca, se inclina) e quando está satisfeita (vira o rosto, fecha a boca, empurra a colher). Não force, não troque a comida por leite ou doce e não faça "aviãozinho" para enganar.
+## Água e sucos
+- Ofereça água filtrada ou fervida várias vezes ao dia, no copo.
+- Não dê suco antes de 1 ano, nem natural. Prefira a fruta inteira, amassada ou em pedaços.
+## Não dê antes dos 2 anos
+- Açúcar de qualquer tipo, mel (proibido antes de 1 ano), rapadura e adoçante.
+- Biscoitos, bolachas, bolos prontos, iogurtes com açúcar, "danoninho", gelatina, achocolatado, refrigerante, suco de caixa ou em pó.
+- Salgadinhos, embutidos (salsicha, presunto, mortadela), macarrão instantâneo e temperos prontos.
+## Cuidado com engasgo
+- Não ofereça pipoca, amendoim ou castanhas inteiros, bala ou uva inteira. Corte uva e tomate-cereja em pedaços e tire as sementes. Cenoura e maçã cruas, só raladas ou cozidas.
+- É normal a criança fazer careta, tossir e devolver a comida no começo: isso protege contra o engasgo. Engasgo de verdade é quando ela não consegue tossir, chorar ou respirar: aprenda a manobra de desengasgo com a equipe.
+## Recusa
+É comum a criança recusar um alimento novo. Ofereça de novo em outros dias, de outro jeito, junto com o que ela já gosta. Às vezes são precisas 8 a 10 tentativas.
+## Na hora da refeição
+- Coma junto com a criança. Ela aprende vendo a família comer.
+- Desligue a TV e guarde o celular.
+- Lave as mãos (as suas e as da criança) antes de preparar e de comer.`;
+  c.alarme = ["Falta de ar, inchaço nos lábios ou língua, manchas pelo corpo ou vômitos logo depois de comer", "Engasgo em que a criança não consegue tossir, chorar ou respirar", "Tosse, cansaço ou engasgos em quase todas as refeições", "Recusa de quase tudo com perda de peso", "Sangue no cocô ou vômitos que não param"];
+  c.evid.fontes = ["guia_menor2_2019", "guia_menor2", "sbp_blw2017", "cab23_2015"];
+  c.mudancas = (c.mudancas || []).concat(["v44: guia clínico com quantidades e consistência por idade, métodos tradicional, BLISS e misto, alimentos de risco de engasgo e orientação completa aos responsáveis."]);
+  c.nv = (c.nv || []).concat(["Introdução precoce de alergênicos (ovo, amendoim em pasta) citada de memória: conferir no Consenso SBP/ASBAI de alergia alimentar vigente."]);
+})();
+
+CONDICOES.push(
+{
+  id: "pu-dentes", modulo: "pu", nome: "Dentição e saúde bucal: nascimento dos dentes, escovação, flúor, cárie e trauma", sistema: "Queixas comuns do bebê", risco: "baixo",
+  ciap: "D19 · D82", cid: "K00.7 · K02.9",
+  tags: "dentição dente nascendo erupção dentária baba gengiva coçando mordedor gel dentição colar de âmbar escovação creme dental flúor 1000 ppm grão de arroz cárie mamadeira noturna chupeta dedo trauma dentário dente caiu avulsão dentista",
+  alerta: "Febre alta, diarreia importante, recusa alimentar ou irritabilidade intensa não devem ser atribuídas à dentição: investigar outra causa. Dente permanente que saiu da boca: levar ao dentista o mais rápido possível, conservado em leite.",
+  guia: {rotulo: "Guia clínico",
+    resumo: "Os dentes de leite começam a nascer por volta de 6 meses, com sintomas leves. A escovação com creme dental com flúor (≥ 1.000 ppm) começa no primeiro dente, 2 vezes ao dia, com quantidade de um grão de arroz até 3 anos e 11 meses e de um grão de ervilha a partir de 4 anos (Caderneta 2025) [F].",
+    secoes: [
+      {t: "Nascimento dos dentes", b: [
+        {ul: ["Início por volta de 6 meses; 20 dentes de leite por volta de 3 anos; 1º molar permanente por volta de 6 anos; troca dos 6 aos 14 anos (Caderneta) [F]", "Sintomas esperados: alteração do sono, perda de apetite, pequeno aumento de temperatura, salivação, coceira na gengiva e irritabilidade [F]", "Febre alta, diarreia, vômitos ou prostração não são explicados pela dentição: examinar e procurar outra causa [C]"]},
+        {h: "Alívio"},
+        {ul: ["Massagem na gengiva com o dedo limpo; mordedor resfriado na geladeira (não congelado) [C]", "Paracetamol pela dose do peso se o desconforto for importante [I]", "**Não usar:** géis e pomadas anestésicos (benzocaína: risco de metemoglobinemia) nem colares e pulseiras de âmbar ou similares (estrangulamento e engasgo) – alertas da FDA 2018 [C]"]}
+      ]},
+      {t: "Higiene e flúor", b: [
+        {tab: {h: ["Idade", "Como escovar", "Creme dental"], r: [
+          ["Do 1º dente a 3 anos e 11 meses", "Escova pequena de cerdas macias, 2 vezes ao dia ou mais; o adulto escova", "Com flúor ≥ 1.000 ppm, quantidade de um grão de arroz cru [F]"],
+          ["A partir de 4 anos", "O adulto escova ou supervisiona até a criança conseguir sozinha (por volta de 8 anos)", "Com flúor ≥ 1.000 ppm, quantidade de um grão de ervilha [F]"],
+          ["Dentes encostados", "Fio dental 1 vez ao dia [F]", "—"]]}, nota: "Caderneta da Criança 2025 [F]. Cuidar para a criança não engolir a espuma; guardar o creme dental fora do alcance [F]. Cuspir o excesso sem enxaguar muito mantém o flúor na boca [C]."},
+        {p: "A Caderneta exige pelo menos 1.000 ppm de flúor [F]; cremes \"sem flúor\" ou com menos de 1.000 ppm não têm eficácia comprovada contra cárie [C]: conferir a concentração no tubo."}
+      ]},
+      {t: "Cárie", b: [
+        {ul: ["Causa: bactérias que usam o açúcar da dieta [F]", "Cárie precoce e rápida: mamadeira frequente e prolongada à noite sem limpeza dos dentes; não adoçar a mamadeira nem acrescentar achocolatado [F]", "Prevenção: dieta sem açúcar até 2 anos e com açúcar controlado depois, escovação com flúor e fio dental [F]", "Manchas brancas opacas perto da gengiva são o 1º sinal de cárie: encaminhar à saúde bucal [C]"]}
+      ]},
+      {t: "Chupeta e sucção de dedo", b: [
+        {ul: ["A chupeta atrapalha a amamentação e pode deformar a arcada, desalinhar os dentes e prejudicar fala, mastigação e respiração, mesmo as ortodônticas (Guia 2019) [F]", "Se a família usar: nunca adoçar, não prender no pescoço com cordão, ferver regularmente e planejar a retirada gradual [C]"]}
+      ]},
+      {t: "Trauma dentário", b: [
+        {ul: ["Qualquer trauma: dentista o quanto antes; o tempo muda o prognóstico [F]", "Dente permanente quebrado: guardar o fragmento e levar ao dentista [F]", "Dente permanente que saiu da boca: lavar em água corrente e guardar em leite (de preferência), saliva ou soro fisiológico; dentista imediatamente [F]; segurar pela coroa, sem tocar a raiz [C]", "Dente de leite que saiu: não reimplantar; avaliar com o dentista [C]", "Trauma com outros sinais (vômitos, sonolência, perda de consciência) → avaliar trauma craniano [I]"]},
+        {ir: [["odontalgia", "Dor de dente e abscesso"], ["pu-acidentes", "Prevenção de acidentes"]]}
+      ]},
+      {t: "SUS", b: [
+        {trio: {ideal: "Avaliação com a equipe de saúde bucal desde o 1º ano de vida, escovação com flúor desde o 1º dente e dieta sem açúcar.", sus: "Equipe de saúde bucal da APS (Brasil Sorridente). Idade da 1ª consulta odontológica e fluxo de agendamento em Betim: conferir [NV].", ponte: "Encaminhar à saúde bucal da UBS na consulta de puericultura em que nascer o 1º dente, ou antes se houver mancha branca ou cárie [I]."}}
+      ]},
+      {t: "Fontes", b: [{ref: ["caderneta_crianca", "guia_menor2_2019", "fda_denticao2018"]}]}
+    ]},
+  S: `Criança de ___ meses/anos. Dentes ___ (nascendo / nº ___). Sintomas ___ (baba, irritabilidade, sono alterado). Febre ___, diarreia ___. Escovação ___ (vezes/dia, quem escova). Creme dental ___ (com flúor ___ ppm / sem flúor). Mamadeira noturna ___, açúcar ___. Chupeta ___. Trauma ___.`,
+  O: `Dentes: ___. Manchas brancas ou cavidades ___. Gengivas ___. Mucosas ___.`,
+  A: `Erupção dentária fisiológica ___ / higiene bucal ___ (adequada / a orientar) / risco de cárie ___.`,
+  P: `- Oriento escovação com creme dental com flúor ≥ 1.000 ppm, quantidade adequada para a idade.
+- Oriento dieta sem açúcar e retirada da mamadeira noturna.
+- Encaminho à equipe de saúde bucal ___.`,
+  orient: `## Quando os dentes nascem
+Os primeiros dentes costumam nascer por volta dos 6 meses. Nesse período o bebê pode babar mais, morder tudo, dormir pior, comer menos e ficar irritado. Pode ter uma febre baixinha.
+Febre alta, diarreia, vômitos ou bebê muito abatido **não** são da dentição: procure a unidade.
+## O que alivia
+- Massagem na gengiva com o dedo limpo.
+- Mordedor gelado (da geladeira, não do congelador).
+- Se a criança estiver muito incomodada, a equipe pode indicar um remédio para dor na dose do peso.
+## O que não usar
+- Pomadas e géis para dentição: alguns têm anestésico que pode fazer mal ao sangue do bebê.
+- Colares e pulseiras de âmbar, madeira ou bolinhas: podem enforcar ou causar engasgo.
+## Escovar desde o primeiro dente
+- Escove 2 vezes por dia (de manhã e antes de dormir), com escova pequena e macia.
+- Use creme dental **com flúor**, de pelo menos 1.000 ppm (o número está no tubo).
+- Até 3 anos e 11 meses: só um grão de arroz de creme dental. A partir de 4 anos: um grão de ervilha.
+- Um adulto escova os dentes da criança até ela conseguir sozinha, lá pelos 8 anos.
+- Use fio dental quando os dentes estiverem encostados.
+- Guarde o creme dental longe da criança.
+## Evite a cárie
+- Não dê açúcar antes dos 2 anos e não adoce a mamadeira.
+- Não deixe a criança dormir mamando na mamadeira. Se mamar à noite, limpe os dentes depois.
+- Manchas brancas perto da gengiva podem ser o começo da cárie: mostre para a equipe.
+## Chupeta
+A chupeta atrapalha a amamentação e pode entortar os dentes e prejudicar a fala. Se usar, nunca passe açúcar ou mel, não prenda no pescoço com cordão e combine com a equipe como tirar aos poucos.
+## Se o dente bater ou cair
+- Procure o dentista o quanto antes.
+- Se um dente permanente quebrar, guarde o pedaço.
+- Se um dente permanente sair inteiro: segure pela parte branca (não pela raiz), lave rapidinho em água corrente, coloque num copo de leite (ou na saliva, ou em soro) e vá ao dentista imediatamente.
+- Dente de leite que saiu não deve ser recolocado.`,
+  alarme: ["Febre alta, diarreia ou vômitos (não são da dentição)", "Inchaço no rosto ou na gengiva com febre", "Dente permanente que saiu da boca", "Batida na boca com vômitos, sonolência ou desmaio"],
+  encaminhar: "Cárie, manchas brancas, trauma dentário, abscesso → equipe de saúde bucal da UBS (dente permanente avulsionado: atendimento imediato). Trauma com sinais neurológicos → urgência.",
+  sus: {nacional: "Saúde bucal na APS (Brasil Sorridente).", betim: "Equipe de saúde bucal da UBS; fluxo de 1ª consulta odontológica do bebê e urgência odontológica em Betim: conferir [NV]."},
+  evid: {resumo: "Caderneta da Criança 2025 (MS): creme dental com flúor ≥ 1.000 ppm desde o 1º dente, grão de arroz até 3a11m e de ervilha a partir de 4 anos; mamadeira noturna e açúcar como causa de cárie precoce; manejo inicial do trauma. Guia Alimentar 2019: chupeta prejudica amamentação e arcada. FDA (2018): não usar benzocaína nem colares de dentição.", certeza: "Moderada para flúor; baixa para medidas de alívio da dentição (estimada)", fontes: ["caderneta_crianca", "guia_menor2_2019", "fda_denticao2018"]},
+  mudancas: ["Entrada nova (v44)."],
+  nv: ["Idade e fluxo da 1ª consulta odontológica do bebê em Betim.", "Alertas da FDA sobre produtos de dentição citados de memória."]
+},
+{
+  id: "pu-reacoes-vacinas", modulo: "pu", nome: "Reações às vacinas (ESAVI): o que é esperado, o que fazer e quando notificar", sistema: "Vacinas e triagens", risco: "moderado",
+  ciap: "A87", cid: "T88.1 · Y58 · Y59",
+  tags: "reação vacinal evento adverso pós-vacinação ESAVI EAPV febre após vacina dor local BCG ferida gânglio penta choro persistente episódio hipotônico-hiporresponsivo convulsão rotavírus invaginação tríplice viral exantema febre amarela antitérmico profilático notificação falsa contraindicação",
+  alerta: "Anafilaxia (minutos a horas): urgência. Episódio hipotônico-hiporresponsivo, convulsão, choro inconsolável ≥ 3 h, vômitos, crises de choro, prostração ou sangue nas fezes após rotavírus (invaginação), sinais neurológicos ou icterícia após febre amarela: avaliar no mesmo dia e notificar (graves: em até 24 h).",
+  guia: {rotulo: "Guia clínico",
+    resumo: "A maioria das reações é local ou febre leve nas primeiras 24–48 h, sem contraindicar as próximas doses. Compressa fria e antitérmico ou analgésico se necessário; antitérmico profilático não é recomendado (MS 2020) [F]. Eventos graves ou inusitados: notificação imediata em até 24 h; a UBS é unidade notificadora [F].",
+    secoes: [
+      {t: "O que esperar de cada vacina", b: [
+        {tab: {h: ["Vacina", "Esperado (não contraindica)", "Avaliar e notificar"], r: [
+          ["BCG", "Mancha avermelhada e endurecida (1ª–2ª semana) → pústula e crosta (3ª–4ª) → úlcera de 4–10 mm (4ª–5ª) → cicatriz de 4–7 mm (6ª–12ª semana; às vezes até 24). Linfonodo axilar do mesmo lado, frio e indolor, até 3 cm, sem pus (até 10%). Sem cicatriz não significa sem proteção nem indica revacinar [F]", "Úlcera > 1 cm que não cicatriza em 12 semanas, abscesso frio, granuloma ou linfonodo com pus: notificar e isoniazida 10 mg/kg/dia (máx. 400 mg) até regressão, com seguimento por 3 meses após suspender [F]. Linfonodo > 3 cm sem pus: notificar, não puncionar e não dar isoniazida; retorno se amolecer ou drenar [F]. Abscesso quente: antibiótico [F]"],
+          ["Penta e DTP", "Dor, vermelhidão e endurecimento em 24–48 h; febre nas primeiras 24 h; sonolência, irritabilidade, perda de apetite [F]", "Febre alta e choro persistente (2–8 h após, até 48 h): notificar e manter penta/DTP [F]. Episódio hipotônico-hiporresponsivo (até 48 h) ou convulsão (até 72 h): notificar e continuar o esquema com DTP acelular (CRIE) [F]. Encefalopatia em 7 dias: contraindica DTP/DTPa, completar com DT. Anafilaxia: contraindica [F]"],
+          ["Rotavírus", "Febre, diarreia e vômitos com frequência semelhante ao placebo [F]", "Invaginação intestinal (1–2 casos/100.000 após as primeiras doses, sobretudo na 1ª semana): vômitos, crises de choro, palidez ou prostração, sangue nas fezes (sinal tardio) – qualquer um → urgência e notificar (até 14 dias) [F]. Estrias de sangue isoladas são comuns e não contraindicam as próximas doses [F]"],
+          ["Tríplice viral", "Febre entre o 5º e o 12º dia; manchas no corpo entre o 7º e o 14º dia (cerca de 2 dias); íngua [F]", "Febre ≥ 39,5 °C com manchas, púrpura plaquetopênica (2–3 semanas), meningite ou encefalite: notificar [F]"],
+          ["Varicela e tetraviral", "Dor local; febre e manchas ou bolhinhas entre 5 e 26 dias [F]", "Convulsão febril (5–10 dias, mais com a tetraviral na 1ª dose); lesões extensas: notificar [F]"],
+          ["Febre amarela", "Dor local em 1–2 dias; febre, dor no corpo e de cabeça a partir do 3º dia, leves [F]", "Sinais neurológicos (1–30 dias) ou icterícia e sangramento (3–4 dias): notificação e investigação imediatas [F]. Mãe que amamenta bebê < 6 meses: adiar a vacina ou suspender a amamentação por 10 dias (CRIE 2023) [F]"],
+          ["Pneumocócica, meningocócica, VIP, hepatite B, influenza, COVID-19", "Reações locais e febre baixa nos primeiros dias [C]", "Reações graves ou inusitadas: notificar [F]"]]}, nota: "Manual de Vigilância de Eventos Adversos Pós-Vacinação, 4ª ed. (MS, 2020) [F]. Frequências e definições de caso no manual."}
+      ]},
+      {t: "Conduta", b: [
+        {ol: ["Reação local: compressa fria nas primeiras 24–48 h; analgésico se necessário [F]. Abscesso: avaliação médica (antibiótico ou drenagem) [F]", "Febre: repouso, líquidos e leite materno; antitérmico se desconforto [F]. Antitérmico profilático não é recomendado; pode ser considerado se houve febre alta em dose anterior ou há história de convulsão febril [F]", "Antitérmicos (manual MS): paracetamol 10–15 mg/kg por dose a cada 4–6 h, até 5 doses ao dia; dipirona 20–25 mg/kg por dose a cada 6 h, máx. 500 mg por dose; ibuprofeno 5–10 mg/kg a cada 6–8 h (máx. 40 mg/kg/dia) [F]. O manual cita dose neonatal de dipirona, mas o app segue a bula: dipirona não antes de 3 meses ou 5 kg [F]. Ibuprofeno a partir de 6 meses (bula) [NV]; a REMUME só tem comprimido de 600 mg [F]", "Febre em bebê menor de 3 meses: examinar no mesmo dia, mesmo após vacina [I]", "Atentar para infecção intercorrente [F]: investigar febre que dure mais de 24–48 h ou apareça fora da janela esperada [I]", "Anafilaxia: adrenalina IM e urgência; contraindica a vacina envolvida [F]"]},
+        {ir: [["anafilaxia", "Anafilaxia"], ["febre-menor-3m", "Febre no lactente < 3 meses"], ["pu-vacinas", "Calendário vacinal"]]}
+      ]},
+      {t: "Notificação", b: [
+        {ul: ["Eventos graves ou inusitados: notificação imediata, em até 24 h, ao nível superior (telefone, e-mail ou outro meio rápido), com investigação iniciada em até 48 h [F]", "Unidades notificadoras: UBS e salas de vacina, UPA, prontos-socorros e hospitais; qualquer serviço público ou privado deve notificar [F]", "Também notificar: reações locais muito intensas ou em surto, febre alta, choro persistente, EHH, convulsão, BCG com complicação [F]", "Sistema de registro vigente (e-SUS Notifica ou SIPNI) e fluxo em Betim: conferir [NV]"]}
+      ]},
+      {t: "O que não contraindica a vacina", b: [
+        {ul: ["Reação local ou febre baixa após dose anterior [F]", "Doença leve, resfriado, diarreia leve ou convalescença de doença aguda [C]", "Uso de antibiótico, prematuridade (vacinar pela idade cronológica), amamentação, história familiar de reação ou de convulsão [C]", "Contraindicações verdadeiras: anafilaxia a dose anterior ou componente; encefalopatia em 7 dias após DTP (para pertússis); imunodeficiência ou imunossupressão para vacinas vivas (conferir CRIE); história de invaginação para rotavírus; prematuro internado não recebe rotavírus enquanto hospitalizado [F]; tríplice viral do Serum Institute contraindicada na alergia grave à proteína do leite de vaca (PNI 2026) [F/C]"]}
+      ]},
+      {t: "Fontes", b: [{ref: ["esavi2020", "crie2023", "pni2026", "bula_dipirona", "bula_paracetamol"]}]}
+    ]},
+  S: `Criança de ___ meses/anos, vacinada em ___ com ___. Há ___ h/dias: ___ (dor/vermelhidão local / febre ___ °C / choro persistente ___ h / sonolência / vômitos / manchas / lesão da BCG ___). Medicações usadas ___. Reações em doses anteriores ___.`,
+  O: `Estado geral ___. Tax ___. Local da aplicação: ___ (eritema ___ cm, enduração, flutuação). Lesão da BCG ___ (fase, diâmetro). Linfonodos ___. Pele ___. Exame neurológico ___.`,
+  A: `Evento supostamente atribuível à vacinação ___ (local / sistêmico leve / grave), ___ (esperado para a vacina / a investigar).`,
+  P: `- Oriento compressas frias e sintomáticos; sem antitérmico profilático.
+- Notificação ___ (realizada / não indicada).
+- Próximas doses: ___ (manter esquema / encaminhar ao CRIE).
+- Retorno se sinais de alarme.`,
+  rx: [
+    {trilha: "ambos", titulo: "Febre ou dor após vacina (REMUME)", texto: "USO ORAL\n1. Paracetamol 200 mg/mL gotas ______ 1 frasco\n   Dar ___ gotas (1 gota por kg; máximo 35 gotas) a cada 4 a 6 horas, se febre ou dor. No máximo 5 vezes em 24 horas.\n\nCompressa fria no local da vacina nas primeiras 24 a 48 horas.", dose: "F", nota: "Bula do paracetamol 200 mg/mL (1 gota/kg, máx. 35 gotas, até 5 vezes/dia) e manual MS 2020 (10–15 mg/kg/dose). Não usar de forma preventiva. Menor de 3 meses com febre: examinar antes."}
+  ],
+  orient: `## O que é normal depois da vacina
+É comum, nos primeiros 1 a 2 dias, a criança ter dor, vermelhidão ou um caroço no lugar da injeção, febre baixa, ficar mais sonolenta, mais chorosa ou comer menos. Isso passa sozinho e não impede as próximas doses.
+- **Compressa fria** (pano limpo com água gelada) no local, nas primeiras 24 a 48 horas.
+- Ofereça o peito ou líquidos com mais frequência e deixe a criança descansar.
+- Se tiver febre ou muita dor, dê o remédio receitado, na dose do peso. Não dê remédio antes, "para prevenir".
+## Reações que aparecem dias depois
+- **Tríplice viral, varicela e tetraviral:** entre 5 e 14 dias depois, pode aparecer febre e manchinhas no corpo por 1 ou 2 dias.
+- **Febre amarela:** a partir do 3º dia pode haver febre baixa e dor no corpo, por 1 ou 2 dias.
+## A ferida da BCG
+- No braço direito surge uma mancha vermelha que vira uma bolinha com pus, depois uma feridinha com casca e, entre 6 e 12 semanas, uma cicatriz. Isso é o esperado.
+- Não coloque pomada, curativo, remédio ou nada em cima. Lave só com água e sabão no banho.
+- Uma íngua pequena na axila do mesmo lado pode aparecer e some sozinha.
+- Mostre para a equipe se a ferida ficar maior que 1 cm, não cicatrizar depois de 3 meses, ou se a íngua crescer, ficar mole ou soltar pus.
+- Se não ficar cicatriz, não precisa vacinar de novo.
+## Procure atendimento no mesmo dia se
+- Bebê com menos de 3 meses tiver febre.
+- Febre acima de 39,5 °C ou que dure mais de 2 dias.
+- Choro sem parar por 3 horas ou mais.
+- A criança ficar molinha, pálida, sem reagir, ou tiver convulsão.
+- Na primeira semana após a vacina de rotavírus: vômitos repetidos, crises de choro forte com as pernas encolhidas, bebê molinho ou pálido, ou sangue no cocô (qualquer um desses sinais).
+- Após a vacina de febre amarela: pele ou olhos amarelos, sangramentos, dor de cabeça forte, confusão ou fraqueza.
+## Procure urgência imediatamente se
+Falta de ar, chiado, inchaço no rosto, lábios ou língua, manchas vermelhas pelo corpo todo ou desmaio, principalmente na primeira hora depois da vacina.
+## Continue vacinando
+Reações leves não são motivo para atrasar as próximas vacinas. Leve sempre a Caderneta e conte à equipe o que aconteceu na dose anterior.`,
+  alarme: ["Falta de ar, inchaço no rosto ou lábios, manchas pelo corpo ou desmaio", "Bebê menor de 3 meses com febre", "Criança molinha, pálida e sem reagir, ou convulsão", "Choro sem parar por 3 horas ou mais", "Vômitos, crises de choro, bebê molinho ou sangue no cocô na semana após a vacina de rotavírus", "Pele amarela, sangramentos ou confusão após a vacina de febre amarela", "Ferida da BCG maior que 1 cm ou íngua com pus"],
+  encaminhar: "Anafilaxia → urgência (SAMU 192). Invaginação → urgência cirúrgica. EHH, convulsão, encefalopatia → avaliação no mesmo dia, notificar e definir o esquema (CRIE). Complicações da BCG → notificar e tratar conforme o manual.",
+  sus: {nacional: "Notificação de ESAVI pela UBS/sala de vacina; CRIE para vacinas especiais (DTP acelular após EHH ou convulsão).", betim: "Coordenação de imunizações/vigilância de Betim recebe as notificações; fluxo e telefone: conferir [NV]."},
+  evid: {resumo: "Manual de Vigilância Epidemiológica de Eventos Adversos Pós-Vacinação (MS, 4ª ed., 2020): eventos esperados por vacina, condutas e critérios de notificação; antitérmico profilático não recomendado de rotina.", certeza: "Alta para a segurança das vacinas do calendário; condutas baseadas em norma (estimada)", fontes: ["esavi2020", "crie2023", "pni2026", "bula_paracetamol", "bula_dipirona"]},
+  mudancas: ["Entrada nova (v44)."],
+  nv: ["Sistema de notificação de ESAVI vigente (e-SUS Notifica/SIPNI) e fluxo de Betim.", "Possível edição mais recente do manual de ESAVI (a 4ª edição é de 2020)."]
+},
+{
+  id: "pu-acidentes", modulo: "pu", nome: "Prevenção de acidentes por idade: sono, quedas, engasgo, afogamento, queimaduras, intoxicação e transporte", sistema: "Desenvolvimento e condições", risco: "moderado",
+  ciap: "A98", cid: "Z00.1",
+  tags: "prevenção de acidentes segurança infantil cadeirinha bebê conforto assento de elevação booster cinto carro CTB queda janela grade escada afogamento balde piscina queimadura fogão panela intoxicação medicamento produto de limpeza CIATox engasgo bateria botão ímã arma de fogo cachorro bicicleta capacete sono seguro",
+  alerta: "Bateria de botão ou ímãs engolidos, produto cáustico ingerido, afogamento (mesmo recuperado), queimadura extensa, na face, mãos, genitais ou por eletricidade, queda com perda de consciência, vômitos ou sonolência: urgência (SAMU 192). Intoxicação: CIATox 0800-722-6001.",
+  guia: {rotulo: "Guia clínico",
+    resumo: "Acidentes são causa importante de morte e sequela na infância e são, em grande parte, preveníveis com supervisão contínua e mudanças simples no ambiente. Orientar a cada consulta, conforme a fase do desenvolvimento (Caderneta 2025) [F].",
+    secoes: [
+      {t: "Por idade", b: [
+        {tab: {h: ["Idade", "Principais riscos", "Orientações-chave"], r: [
+          ["0 a 6 meses", "Sufocação no sono, quedas de móveis, queimadura no banho ou com líquidos quentes, transporte", "Sono de barriga para cima, berço sem travesseiro, protetores ou bichos de pelúcia; grades com no máximo 6 cm de vão; nunca deixar sozinho em cima de móveis ou com outra criança; água do banho a 37 °C; não segurar líquidos quentes nem fumar com o bebê no colo; sem talco; bebê-conforto voltado para trás, no banco traseiro [F]"],
+          ["6 meses a 2 anos", "Quedas (escadas, janelas), engasgo, intoxicação, queimaduras na cozinha, choque elétrico, afogamento", "Portões nas escadas e redes ou grades nas janelas; tanque e pia bem fixos; produtos de limpeza e remédios no alto e trancados, nunca em garrafa de bebida; sem acesso à cozinha; bocas de trás do fogão e cabos das panelas para dentro; protetor de tomada; nunca sozinho perto de baldes, bacias, tanques e piscinas [F]"],
+          ["2 a 4 anos", "Atropelamento, afogamento, animais, fogo, intoxicação, armas", "Segurar pelo pulso na rua; não brincar em garagens; adulto atento o tempo todo perto da água, mesmo se souber nadar; longe de cães desconhecidos ou comendo; fogo, fósforos e álcool fora do alcance; cadeirinha no banco traseiro; armas de fogo longe da criança [F]"],
+          ["4 a 6 anos", "Quedas de bicicleta, patins e skate, lajes, trânsito", "Capacete e proteção; lugares seguros para brincar; criança do lado de dentro da calçada; lajes e varandas só com grade; assento de elevação com cinto de 3 pontos [F]"],
+          ["6 a 10 anos", "Trânsito, pipa e choque elétrico", "Não soltar pipa perto de fios nem usar linha com cerol; banco traseiro até 10 anos [F]"]]}, nota: "Caderneta da Criança 2025 [F]."}
+      ]},
+      {t: "Transporte no carro", b: [
+        {ul: ["Lei: crianças de até 10 anos que não atingiram 1,45 m devem usar dispositivo de retenção adequado, no banco traseiro (CTB art. 64, alterado pela Lei 14.071/2020) [F]", "Sequência: bebê-conforto ou cadeira conversível voltada para trás → cadeirinha com cinto próprio → assento de elevação com cinto de 3 pontos, conforme peso e altura do fabricante [F]", "A SBP recomenda manter o assento de elevação até 1,45 m de altura, mesmo depois de 7 anos e meio [F]; a Resolução CONTRAN 819/2021 e a própria Caderneta 2025 admitem o cinto de 3 pontos a partir de 7,5 anos – divergência entre a SBP e as normas [F]. O app orienta como a SBP, apresentado como recomendação e não como lei [I]. O texto da lei fala em crianças com idade inferior a 10 anos [C]", "Nunca transportar no colo; nunca no banco da frente com airbag ligado [C]"]}
+      ]},
+      {t: "Riscos que merecem destaque", b: [
+        {ul: ["**Baterias de botão e ímãs:** ingestão é emergência (lesão de esôfago em horas); guardar controles, brinquedos e aparelhos com bateria fora do alcance [C]", "**Sono seguro:** de barriga para cima, no berço, no quarto dos pais; cama de adulto contraindicada antes de 1 ano (risco maior se o adulto fuma, bebeu ou usa sedativos); sofá e poltrona são os locais mais perigosos [F]", "**Afogamento:** pode ocorrer em pouca água (balde, bacia, vaso) [F] e em segundos [C]", "**Intoxicação:** de 1 a 3 anos é a idade de maior risco; nunca dizer que remédio é doce; descartar remédios vencidos [C]", "**Queimaduras:** água corrente em temperatura ambiente por cerca de 20 minutos; não usar pasta de dente, manteiga, gelo ou pó de café; não estourar bolhas; queimadura extensa: cobrir com pano limpo e evitar hipotermia [C]", "**Armas de fogo:** se houver em casa, descarregadas e trancadas, com munição separada [C]", "**Violência:** sacudir o bebê causa trauma craniano grave; orientar pausa segura no choro [C]"]},
+        {ir: [["ovace", "Engasgo – manobras"], ["pcr", "Parada cardiorrespiratória (RCP)"], ["intoxicacao", "Intoxicação exógena"], ["queimadura", "Queimadura pequena"], ["pu-choro-colica", "Choro e pausa segura"]]}
+      ]},
+      {t: "Fontes", b: [{ref: ["caderneta_crianca", "sbp_transito2021", "sbp_sono2023"]}]}
+    ]},
+  P: `- Oriento prevenção de acidentes para a idade: ___.
+- Entrego orientações por escrito.`,
+  orient: `## Do nascimento aos 6 meses
+- **Sono:** sempre de barriga para cima, no berço, sem travesseiro, protetor de berço, cobertor solto ou bichinhos de pelúcia. O lençol bem preso no colchão. Não durma com o bebê no sofá ou na poltrona (é o mais perigoso), e a cama dos pais também não é recomendada.
+- **Quedas:** nunca deixe o bebê sozinho em cima da cama, sofá ou trocador, nem aos cuidados de outra criança. As grades do berço devem ter no máximo 6 cm de vão.
+- **Sufocação:** não use talco; sem cordões, correntinhas ou prendedor de chupeta no pescoço; longe de sacos plásticos e peças pequenas.
+- **Banho:** água morna (teste com o cotovelo); nunca deixe o bebê sozinho na banheira, nem por um segundo.
+- **Queimaduras:** não beba café ou chá quente nem fume com o bebê no colo.
+- **Remédios:** só os receitados, na dose certa.
+- **Carro:** bebê-conforto virado para trás, no banco de trás, preso conforme o manual. Nunca no colo.
+## Dos 6 meses aos 2 anos
+A criança começa a rolar, engatinhar, andar e colocar tudo na boca.
+- Portão nas escadas, rede ou grade nas janelas e varandas. Não deixe móveis perto da janela.
+- Produtos de limpeza, venenos e remédios no alto e trancados. Nunca guarde produto em garrafa de refrigerante ou de água.
+- Protetores nas tomadas; fios elétricos longe do alcance.
+- Na cozinha: criança fora; use as bocas de trás do fogão e vire o cabo das panelas para dentro. Cuidado com ferro de passar e garrafa térmica.
+- Baldes, bacias e tanques vazios e virados; tampa no vaso sanitário; piscina com cerca.
+- Peças pequenas, moedas, baterias redondas (de controle, relógio, brinquedo) e ímãs longe da criança: **se engolir, é urgência.**
+## Dos 2 aos 4 anos
+- Na rua, segure a criança pelo pulso. Não deixe brincar na garagem ou perto de carros.
+- Perto de água (piscina, rio, mar, balde), um adulto olhando o tempo todo, mesmo que ela saiba nadar.
+- Fósforos, isqueiros, álcool e fogos de artifício fora do alcance.
+- Não deixe a criança se aproximar de cachorros desconhecidos, comendo ou com filhotes.
+- Arma de fogo: o ideal é não ter em casa. Se tiver, descarregada e trancada, com a munição separada.
+- Carro: cadeirinha no banco de trás.
+## Dos 4 aos 6 anos e depois
+- Capacete e proteção para bicicleta, patins e skate.
+- Na calçada, a criança anda do lado de dentro.
+- Lajes e varandas só com grade.
+- Pipa longe de fios elétricos e sem cerol.
+- Carro: assento de elevação com cinto de 3 pontos. A Sociedade de Pediatria recomenda manter o assento até a criança ter 1,45 m de altura, mesmo depois dos 7 anos e meio. Até os 10 anos, sempre no banco de trás (lei).
+## Se acontecer
+- **Engasgo:** se a criança tosse, deixe tossir. Se não consegue tossir, chorar ou respirar, faça a manobra de desengasgo e chame o SAMU (192). Peça para a equipe ensinar a manobra.
+- **Queimadura:** água corrente (não gelada) por cerca de 20 minutos. Se for grande, cubra com pano limpo e mantenha a criança aquecida. Não passe pasta de dente, manteiga, pó de café ou gelo, e não estoure as bolhas. Procure atendimento.
+- **Engoliu remédio, produto de limpeza ou veneno:** não provoque vômito. Ligue para o Disque-Intoxicação (0800-722-6001) ou SAMU (192) e leve a embalagem.
+- **Queda ou batida na cabeça:** procure atendimento se a criança desmaiar, vomitar, ficar sonolenta, irritada demais ou diferente do normal.
+- **Afogamento:** tire a criança da água. Se ela não respira, chame o SAMU (192) e comece as respirações e a massagem no peito, se souber. Mesmo que pareça bem depois, leve para avaliação.`,
+  alarme: ["Engasgo em que a criança não tosse, não chora ou não respira", "Engoliu bateria redonda, ímã, remédio ou produto de limpeza", "Batida na cabeça com desmaio, vômitos, sonolência ou comportamento diferente", "Queimadura grande, no rosto, mãos ou partes íntimas, ou por choque elétrico", "Afogamento, mesmo que pareça recuperada"],
+  encaminhar: "Ingestão de bateria de botão, ímãs ou cáusticos, afogamento, queimaduras graves, TCE com sinais de alarme → urgência/SAMU 192. Intoxicação → CIATox (0800-722-6001) e urgência. Suspeita de negligência ou violência → notificar e acionar a rede de proteção.",
+  sus: {nacional: "SAMU 192; Disque-Intoxicação 0800-722-6001 (citado na Caderneta).", betim: "Rede de urgência pediátrica de referência em Betim: conferir [NV]."},
+  evid: {resumo: "Caderneta da Criança 2025 (MS): orientações de prevenção por faixa etária. CTB art. 64 (Lei 14.071/2020): dispositivo de retenção até 10 anos ou 1,45 m. SBP (2021): assento de elevação até 1,45 m. Primeiros socorros (queimadura, bateria de botão) baseados em consenso.", certeza: "Moderada (normativa e observacional, estimada)", fontes: ["caderneta_crianca", "sbp_transito2021", "sbp_sono2023"]},
+  mudancas: ["Entrada nova (v44), com o transporte no carro atualizado pelo CTB art. 64."],
+  nv: ["Faixas de peso e idade de cada dispositivo na Resolução CONTRAN 819/2021 (texto não aberto nesta sessão).", "Rede de urgência pediátrica de Betim."]
+}
+);
+// ───────────── data55.js – v44: puericultura, lote 3 (umbigo e olhos, "não come", sono, telas, desfralde,
+// nariz entupido, sol e repelente). Conteúdo conferido em 20/10/2026.
+Object.assign(FONTES, {
+  sbp_sono2021: {s: "SBP 2021 – higiene do sono", t: "Sociedade Brasileira de Pediatria, Departamento Científico do Sono. Higiene do sono – atualização 2021: duração do sono em 24 h (AASM 2016) 4–12 meses 12–16 h, 1–2 anos 11–14 h, 3–5 anos 10–13 h (cochilos incluídos), 6–12 anos 9–12 h, 13–18 anos 8–10 h; entre 6 e 9 meses a maioria dorme a noite inteira com 2–3 cochilos; cochilo desaparece até 5 anos; despertares breves são normais; medidas: rotina diurna, horários regulares inclusive nos fins de semana, ritual breve (até 30 min), ambiente adequado, sem telas 1 h antes de dormir, mesma estratégia entre os pais, adormecer na própria cama, objeto de transição, evitar chocolate, café e refrigerante à noite (documento SBP).", f: "F", url: "https://www.sbp.com.br/fileadmin/user_upload/23196c-DC_Higiene_do_Sono_-_Atualizacao_2021.pdf"},
+  sbp_desfralde2019: {s: "SBP/SBU 2019 – treinamento esfincteriano", t: "Sociedade Brasileira de Pediatria e Sociedade Brasileira de Urologia. Manual de orientação – Treinamento esfincteriano (set/2019): no Brasil, início médio aos 22 meses e conclusão aos 27,4 meses; prontidão geralmente entre 24 e 36 meses; 21 sinais de prontidão; abordagem orientada para a criança (AAP); penico preferível no início, com pés apoiados; elogios sem guloseimas e sem punição; recusa → pausa de 1 a 3 meses; investigar se ≥ 36 meses sem sinais de prontidão ou ≥ 48 meses sem controle diurno (deficiência intelectual, TEA, TDAH, disrafismo, bexiga/intestino neurogênicos, constipação, abuso sexual etc.); tratar a constipação antes ou durante (manual SBP/SBU).", f: "F", url: "https://www.sbp.com.br/fileadmin/user_upload/22076c-MO_-_Treinamento_Esfincteriano.pdf"},
+  bula_nafazolina: {s: "Bula – nafazolina nasal (Narix adulto)", t: "Bula do paciente – Narix (cloridrato de nafazolina 0,5 mg/mL, solução nasal; Cimed): uso adulto; contraindicado para menores de 12 anos; não usar por longos períodos (bula).", f: "F", url: "https://cimedremedios.com.br/wp-content/uploads/2020/03/Medicamento_Bula_Paciente-NARIX-GOTAS.pdf"},
+  sbp_repel2015: {s: "SBP 2015 – uso de repelentes em crianças", t: "Sociedade Brasileira de Pediatria. Uso do repelente de insetos em crianças (2015): proteção mecânica; abaixo de 6 meses sem estudos de segurança; IR3535 acima de 6 meses; DEET e icaridina acima de 2 anos; aplicar com a mão do adulto, longe de olhos e boca, não dormir com repelente; protetor solar e, 20–40 min depois, o repelente; loção preferível a spray; pulseiras de citronela e aparelhos ultrassônicos sem eficácia (documento SBP).", f: "F", url: "https://www.sbp.com.br/fileadmin/user_upload/2012/12/Repelentes-2015.pdf"},
+  guia_telas2025: {s: "Governo Federal 2025 – guia de telas", t: "Secretaria de Comunicação Social da Presidência (Secom). Crianças, Adolescentes e Telas: Guia sobre Uso de Dispositivos Digitais (11/03/2025): telas só a partir de 2 anos, exceto videochamadas com a família; sem smartphone próprio antes de 12 anos (conferido por reportagem da CNN Brasil; documento original não aberto).", f: "C", url: "https://www.cnnbrasil.com.br/educacao/governo-lanca-guia-sobre-uso-de-telas-por-criancas-e-adolescentes-confira/"}
+});
+
+CONDICOES.push(
+{
+  id: "pu-umbigo-olhos", modulo: "pu", nome: "Umbigo e olhos do bebê: coto, granuloma, hérnia umbilical, lacrimejamento e secreção ocular", sistema: "Queixas comuns do bebê", risco: "baixo",
+  ciap: "A94 · F80", cid: "P83.6 · K42.9 · Q10.5 · P39.1",
+  tags: "coto umbilical umbigo granuloma umbilical sal hérnia umbilical moeda faixa onfalite obstrução do ducto lacrimal lacrimejamento olho com remela massagem de Crigler dacriocistite conjuntivite neonatal oftalmia glaucoma congênito",
+  alerta: "Vermelhidão que se espalha ao redor do umbigo, pus com mau cheiro ou febre (onfalite); hérnia endurecida, dolorosa ou que não volta (encarceramento); conjuntivite com muita secreção nas primeiras 4 semanas (oftalmia neonatal); olho que lacrimeja com fotofobia ou córnea opaca ou aumentada (glaucoma congênito): avaliação no mesmo dia.",
+  guia: {rotulo: "Guia clínico",
+    resumo: "Coto limpo e seco cai até o fim da 2ª semana; granuloma que persiste após 4 semanas responde ao sal de cozinha (SBP 2024) [F]. A hérnia umbilical costuma fechar sozinha nos primeiros anos [C]. Lacrimejamento com remela sem olho vermelho, desde as primeiras semanas, é obstrução do ducto lacrimal: massagem e espera; a maioria resolve até 1 ano [C].",
+    secoes: [
+      {t: "Coto e granuloma", b: [
+        {ul: ["Coto: manter limpo e seco; cai até o fim da 2ª semana; sem faixas, moedas ou substâncias (Caderneta) [F]. Álcool 70% (Caderneta) ou só limpo e seco (SBP 2024) [F]", "Sangramento discreto na queda do coto é comum; sangramento que persiste ou encharca a fralda (vitamina K, coagulopatia) ou coto que não caiu até cerca de 3 semanas: avaliar [C]; pus, mau cheiro ou vermelhidão ao redor = onfalite → avaliação imediata (Caderneta) [F]", "Granuloma: lesão vermelha, úmida e friável no centro do umbigo; tratar se não resolver até 4 semanas de vida; sal de cozinha como 1ª linha [F]; nitrato de prata não é 1ª linha (queimadura química) [F]", "Secreção clara intermitente com cheiro de urina (úraco persistente) ou secreção mucoide/fecal (persistência do ducto onfalomesentérico): USG e cirurgia pediátrica [F/C]"]}
+      ]},
+      {t: "Hérnia umbilical", b: [
+        {ul: ["Comum, mais em prematuros e em crianças negras; aumenta com o choro sem causar dor [C]", "A maioria fecha espontaneamente até 4–5 anos [C]", "Não usar faixas, moedas ou esparadrapo: não ajudam e irritam a pele [C]", "Encaminhar à cirurgia pediátrica: persistência após 4–5 anos, anel grande (cerca de 1,5–2 cm ou mais) que não diminui, ou qualquer episódio de encarceramento [C]", "Hérnia dura, dolorosa, arroxeada ou com vômitos = encarceramento → urgência [C]"]}
+      ]},
+      {t: "Olhos: lacrimejamento e secreção", b: [
+        {tab: {h: ["Quadro", "Como é", "Conduta"], r: [
+          ["Obstrução congênita do ducto lacrimal", "Lacrimejamento e remela desde as primeiras semanas, olho branco, sem fotofobia; piora com resfriado", "Limpar com água fervida ou soro; massagem de Crigler (pressão suave descendente no canto interno, várias vezes ao dia); a maioria resolve até 12 meses; persistência após 12 meses → oftalmologia (sondagem) [C]"],
+          ["Dacriocistite", "Inchaço vermelho e doloroso no canto interno do olho, às vezes febre", "Avaliação no mesmo dia; antibiótico sistêmico e oftalmologia [C]"],
+          ["Conjuntivite neonatal (< 28 dias)", "Olho vermelho com muita secreção purulenta, edema de pálpebras", "Secreção purulenta abundante nos primeiros 2–5 dias = suspeita de gonococo: referenciar no mesmo dia para tratamento sistêmico (risco de perfuração da córnea), não tratar só com colírio; clamídia (5–14 dias): tratamento sistêmico; investigar e tratar mãe e parceria (PCDT IST) [C]; doses [NV]"],
+          ["Dacriocistocele", "Inchaço azulado no canto interno do olho ao nascer", "Oftalmologia precoce [C]"],
+          ["Glaucoma congênito", "Lacrimejamento com fotofobia, blefaroespasmo, córnea opaca ou olho grande", "Oftalmologia com urgência [C]"],
+          ["Reflexo vermelho alterado", "Ausente, assimétrico ou branco (leucocoria)", "Oftalmologia com urgência (catarata, retinoblastoma) – ver triagens [C]"]]}},
+        {ir: [["pu-triagens", "Triagens neonatais (teste do olhinho)"], ["conj-bact", "Conjuntivite bacteriana"], ["in-ist", "IST (PCDT)"], ["pu-pele", "Pele do bebê (granuloma e lesões)"]]}
+      ]},
+      {t: "Fontes", b: [{ref: ["sbp_pele2024", "caderneta_crianca"]}]}
+    ]},
+  S: `Lactente de ___ dias/meses. Umbigo: ___ (coto caiu com ___ dias / secreção ___ / lesão úmida ___ / "umbigo saltado" ___). Olhos: ___ (lacrimejamento desde ___, remela ___, olho vermelho ___, fotofobia ___). Febre ___. Mamando ___.`,
+  O: `Umbigo: ___ (cicatrizado / granuloma ___ mm / hérnia com anel de ___ cm, redutível ___). Pele periumbilical ___. Olhos: ___ (conjuntiva clara / hiperemia), secreção ___, refluxo à compressão do saco lacrimal ___, córneas ___, reflexo vermelho ___.`,
+  A: `___ (granuloma umbilical / hérnia umbilical / obstrução congênita do ducto lacrimal), sem sinais de complicação.`,
+  P: `- Oriento cuidados e evolução esperada.
+- Granuloma: sal de cozinha ___ (técnica orientada).
+- Ducto lacrimal: limpeza e massagem; reavaliar aos 12 meses.
+- Retorno se sinais de alarme.`,
+  rx: [
+    {trilha: "ambos", titulo: "Granuloma umbilical – sal de cozinha (sem custo)", texto: "USO TÓPICO\n1. Sal de cozinha (cloreto de sódio)\n   Limpar e secar o umbigo; proteger a pele ao redor com um pouco de vaselina ou creme de barreira; colocar uma pitada de sal sobre o granuloma e cobrir com gaze por 10 a 30 minutos; depois limpar com água. Fazer 2 vezes ao dia por 2 a 3 dias e retornar para reavaliação.", dose: "NV", nota: "SBP 2024: sal de cozinha como 1ª linha para granuloma umbilical (indolor e seguro). Técnica (tempo, frequência e duração) varia entre os estudos citados: conferir [NV]."}
+  ],
+  orient: `## O umbigo
+- Mantenha o coto limpo e seco, com a fralda dobrada abaixo dele. Ele cai até o fim da 2ª semana.
+- Não coloque faixa, moeda, esparadrapo, pó, pomada ou qualquer outra coisa.
+- Um pouco de sangue quando o coto cai é comum. Se o sangramento não parar ou encharcar a fralda, ou se o coto não cair até 3 semanas, procure a unidade.
+- **Procure atendimento imediatamente** se a pele em volta ficar vermelha e inchada, se sair pus com mau cheiro ou se o bebê tiver febre.
+## Bolinha úmida no umbigo (granuloma)
+Depois que o coto cai, pode ficar uma bolinha vermelha e úmida no fundo do umbigo. Se ela não secar até o bebê completar 4 semanas de vida, a equipe pode orientar o tratamento com sal de cozinha, que não dói.
+## Umbigo saltado (hérnia umbilical)
+- É comum e aumenta quando o bebê chora ou faz força. Não dói.
+- Na maioria das crianças fecha sozinha até os 4 ou 5 anos. Moeda, faixa ou esparadrapo não ajudam e machucam a pele.
+- **Procure urgência** se a hérnia ficar dura, roxa, dolorida, não voltar para dentro, ou se o bebê vomitar.
+## Olho lacrimejando com remela
+Muitos bebês nascem com o canal da lágrima ainda fechado: o olho lacrimeja e junta remela, mas fica branco, sem vermelhidão.
+- Limpe com algodão e água fervida (fria) ou soro, de dentro para fora, um algodão para cada olho.
+- Faça a massagem ensinada pela equipe: com o dedo limpo, aperte de leve o cantinho do olho, perto do nariz, e deslize para baixo. Várias vezes ao dia.
+- Quase sempre melhora até 1 ano. Se não melhorar, a equipe encaminha ao oftalmologista.
+## Procure atendimento no mesmo dia se
+- O olho ficar vermelho, com muito pus, ou as pálpebras incharem, principalmente no primeiro mês.
+- Aparecer inchaço vermelho e dolorido no canto do olho.
+- O bebê não aguentar a luz, apertar muito os olhos, ou um olho parecer maior ou embaçado.
+- Aparecer um brilho branco na pupila em fotos com flash.`,
+  alarme: ["Vermelhidão e inchaço ao redor do umbigo, pus com mau cheiro ou febre", "Hérnia dura, dolorida, roxa ou que não volta, ou vômitos", "Olho muito vermelho, com pus ou pálpebras inchadas no 1º mês", "Inchaço vermelho e dolorido no canto do olho", "Bebê que não suporta a luz ou olho embaçado ou maior", "Brilho branco na pupila"],
+  encaminhar: "Onfalite, encarceramento, conjuntivite neonatal, dacriocistite, suspeita de glaucoma congênito ou leucocoria → urgência/mesmo dia. Hérnia que persiste após 4–5 anos ou grande → cirurgia pediátrica. Obstrução do ducto lacrimal após 12 meses → oftalmologia.",
+  sus: {nacional: "Cirurgia pediátrica e oftalmologia pela regulação.", betim: "Fluxo de cirurgia pediátrica e oftalmologia pediátrica em Betim: conferir [NV]."},
+  evid: {resumo: "SBP 2024 (granuloma umbilical: sal comum como 1ª linha; coto limpo e seco) e Caderneta 2025 (coto). Hérnia umbilical e obstrução congênita do ducto lacrimal: história natural favorável descrita em coortes e consensos, citados sem conferência nesta sessão.", certeza: "Baixa a moderada (estimada)", fontes: ["sbp_pele2024", "caderneta_crianca"]},
+  mudancas: ["Entrada nova (v44)."],
+  nv: ["Técnica do sal no granuloma (tempo e número de aplicações).", "Critérios de cirurgia na hérnia umbilical e de sondagem do ducto lacrimal citados de memória.", "Fluxos de Betim para cirurgia e oftalmologia pediátricas."]
+},
+{
+  id: "pu-nao-come", modulo: "pu", nome: "\"Meu filho não come\": apetite, seletividade alimentar e quando investigar", sistema: "Nutrição e crescimento", risco: "baixo",
+  ciap: "T04", cid: "R63.3 · F98.2",
+  tags: "não come falta de apetite inapetência seletividade alimentar neofobia criança enjoada para comer recusa alimentar fome vitamina para abrir o apetite estimulante de apetite TARE ARFID",
+  alerta: "Perda ou parada de ganho de peso, engasgos ou tosse para comer, vômitos frequentes, dor para engolir, aceitação de pouquíssimos alimentos com repercussão nutricional, ou sinais de autismo: investigar.",
+  guia: {rotulo: "Guia clínico",
+    resumo: "A partir de 1 ano o apetite diminui porque o crescimento desacelera, e a recusa de alimentos novos (neofobia) é comum, sobretudo no 2º ano [C]. Se a criança cresce bem na curva, a quantidade é adequada (Guia 2019) [F]. O tratamento é orientação: sem forçar, sem chantagem, sem recompensa e sem trocar a refeição por lanche [F]. O Guia trata de menores de 2 anos; para crianças maiores – extrapolação: não estudado diretamente nesta população [I].",
+    secoes: [
+      {t: "Avaliar", b: [
+        {ol: ["Curva de peso, comprimento e IMC na Caderneta: crescendo bem = quantidade adequada [F]", "Recordatório de um dia: leite (volume), sucos, lanches e beliscos entre as refeições, guloseimas [I]", "Como é a refeição: telas, pressão, castigo, \"aviãozinho\", porção servida, horários [F]", "Seletividade com repercussão: menos de 15–20 alimentos aceitos, exclusão de grupos inteiros, sofrimento intenso ou crescimento prejudicado → pensar em transtorno alimentar restritivo/evitativo (TARE) ou dificuldade sensorial [C]", "Sinais de alarme orgânico: disfagia, engasgos, vômitos, dor abdominal, diarreia crônica, sinais de alergia, anemia, sinais de autismo [C]"]},
+        {ir: [["pu-crescimento", "Desvios do crescimento"], ["pu-dnpm", "Sinais de autismo"], ["pu-alimentacao", "Alimentação até 2 anos"]]}
+      ]},
+      {t: "Orientar", b: [
+        {ul: ["Respeitar fome e saciedade; servir porções pequenas e repetir se a criança quiser [F]", "Não forçar, não ameaçar, não castigar, não premiar com doces ou presentes [F]", "Não substituir a refeição recusada por lanche ou leite [F]", "Oferecer de novo o alimento recusado em outros dias e de outras formas; podem ser necessárias 8 a 10 exposições ou mais [F]", "Recusar um alimento e aceitar outro do mesmo grupo não é motivo de preocupação [F]", "Comer junto com a família, sem TV ou celular [F]", "Horários regulares; evitar beliscos, sucos e excesso de leite entre as refeições [F/I]", "Envolver a criança no preparo e deixar escolher entre opções saudáveis [F]", "Não suspender a amamentação para a criança comer mais [F]"]},
+        {alerta: "\"Vitaminas para abrir o apetite\", estimulantes de apetite (ciproeptadina e similares) e polivitamínicos não tratam a recusa alimentar e não são recomendados [C]. Suplementar só deficiências documentadas ou as previstas no programa (ferro, vitamina D) [I]."}
+      ]},
+      {t: "Fontes", b: [{ref: ["guia_menor2_2019", "caderneta_crianca"]}]}
+    ]},
+  S: `Criança de ___ anos/meses. Família refere que "não come" desde ___. Aceita ___ alimentos (quais ___). Leite ___ mL/dia, sucos ___, lanches ___. Refeições ___ (com telas / à mesa com a família / com pressão ou castigo). Engasgos ___, vômitos ___, dor para engolir ___. Evacuações ___. Desenvolvimento ___.`,
+  O: `Peso ___ (P/I ___), comprimento/estatura ___ (C/I ___), IMC/I ___. Curva ___ (ascendente / estável / descendente). Palidez ___. Exame ___.`,
+  A: `___ (apetite fisiológico da idade / seletividade alimentar), crescimento ___ (adequado / a investigar).`,
+  P: `- Mostro a curva de crescimento à família.
+- Oriento alimentação responsiva: sem pressão, sem recompensa, sem trocar a refeição.
+- Retorno em ___ para reavaliar a curva.`,
+  orient: `## Por que a criança passa a comer menos
+Depois de 1 ano a criança cresce mais devagar e, por isso, precisa de menos comida do que a família imagina. Também é normal ela recusar alimentos novos ou que antes aceitava, principalmente por volta dos 2 anos. Isso costuma passar.
+Se ela está crescendo bem na curva da Caderneta, está comendo o suficiente.
+## O que ajuda
+- Sirva pouca comida no prato. Se ela comer tudo e quiser mais, repita.
+- Coma junto com a criança, à mesa, com a TV desligada e sem celular.
+- Ofereça de novo, em outros dias, o alimento que ela recusou, preparado de outro jeito (cozido, assado, cru, em purê). Às vezes são necessárias 8 a 10 tentativas.
+- Coloque legumes e verduras no prato todos os dias, mesmo que ela não coma. Deixe a criança escolher entre duas opções saudáveis.
+- Deixe a criança ajudar a lavar, montar e servir a comida.
+- Mantenha horários. Evite beliscos, suco, biscoito e muito leite entre as refeições: a criança chega sem fome.
+## O que atrapalha
+- Forçar, brigar, ameaçar, castigar ou não deixar sair da mesa.
+- Prometer doce, presente ou celular para ela comer.
+- Trocar o almoço ou o jantar recusado por lanche, mingau ou mamadeira: a criança aprende que, se recusar, ganha outra coisa.
+- Distrair com TV ou celular para ela comer sem perceber.
+- Parar de amamentar para ela comer mais.
+## Vitaminas para abrir o apetite
+Não são necessárias e não resolvem. A criança só precisa das vitaminas indicadas pela equipe (como ferro e vitamina D na idade certa).
+## Procure a equipe se
+- A criança perder peso ou parar de crescer na curva.
+- Engasgar, tossir ou vomitar com frequência ao comer, ou sentir dor para engolir.
+- Aceitar pouquíssimos alimentos e ficar muito angustiada diante de comidas novas.
+- Você notar atraso na fala, pouco contato visual ou comportamentos repetitivos.`,
+  alarme: ["Perda de peso ou criança que parou de crescer", "Engasgos, tosse ou vômitos frequentes ao comer", "Dor para engolir ou recusa até de líquidos", "Diarreia que não passa ou sangue no cocô", "Criança muito abatida ou pálida"],
+  encaminhar: "Curva descendente ou baixo peso → investigação (ver desvios do crescimento). Disfagia, engasgos recorrentes → avaliação pediátrica e fonoaudiologia. Seletividade grave (TARE) ou sinais de TEA → eMulti, saúde mental infantil ou neuropediatria conforme o fluxo.",
+  sus: {nacional: "Nutrição, fonoaudiologia e psicologia pela eMulti; CAPSi para casos graves.", betim: "Fluxo de eMulti e saúde mental infantil em Betim: conferir [NV]."},
+  evid: {resumo: "Guia Alimentar para Crianças Menores de 2 Anos (MS, 2019): apetite menor após 1 ano, neofobia, exposição repetida (8 a 10 vezes), alimentação responsiva sem pressão nem recompensa e uso da curva como critério. TARE e estimulantes de apetite citados sem conferência nesta sessão.", certeza: "Baixa a moderada (estimada)", fontes: ["guia_menor2_2019", "caderneta_crianca"]},
+  mudancas: ["Entrada nova (v44)."],
+  nv: ["Critérios de TARE (ARFID) e posição sobre estimulantes de apetite citados de memória.", "Fluxo de eMulti e saúde mental infantil em Betim."]
+},
+{
+  id: "pu-sono", modulo: "pu", nome: "Sono do bebê e da criança: quanto dormir, rotina, despertares e sono seguro", sistema: "Desenvolvimento e condições", risco: "baixo",
+  ciap: "P06", cid: "G47.9 · F51.9",
+  tags: "sono bebê criança dorme pouco acorda à noite despertares noturnos rotina higiene do sono cochilo soneca cama compartilhada berço sono seguro morte súbita ronco apneia terror noturno pesadelo melatonina telas antes de dormir",
+  alerta: "Ronco frequente com pausas respiratórias, respiração pela boca e sonolência ou agitação durante o dia (apneia obstrutiva); sono que piorou de repente com dor, febre ou choro inconsolável; movimentos rítmicos ou crises durante o sono: avaliar.",
+  guia: {rotulo: "Guia clínico",
+    resumo: "Despertares noturnos breves são normais. A higiene do sono (horários regulares, ritual curto, ambiente adequado, sem telas 1 h antes de dormir) é a base da prevenção e do tratamento (SBP 2021) [F]. Até 1 ano, sono seguro: de barriga para cima, no berço, no quarto dos pais (SBP 2023) [F].",
+    secoes: [
+      {t: "Quanto dormir", b: [
+        {tab: {h: ["Idade", "Sono em 24 horas (com cochilos)"], r: [
+          ["4 a 12 meses", "12 a 16 horas"],
+          ["1 a 2 anos", "11 a 14 horas"],
+          ["3 a 5 anos", "10 a 13 horas"],
+          ["6 a 12 anos", "9 a 12 horas"],
+          ["13 a 18 anos", "8 a 10 horas"]]}, nota: "SBP 2021 (consenso AASM 2016) [F]. Entre 6 e 9 meses a maioria dorme a noite inteira e faz 2–3 cochilos; o cochilo diurno desaparece até 5 anos – sonolência diurna depois disso sugere privação de sono noturno [F]."}
+      ]},
+      {t: "Higiene do sono", b: [
+        {ul: ["Rotina diurna ativa e horários regulares para dormir e acordar, também nos fins de semana [F]", "Ritual breve (até 30 minutos) e prazeroso: banho, massagem, história, luzes apagadas [F]", "Ambiente: temperatura agradável, escuro e silencioso [F]", "Sem telas pelo menos 1 hora antes de dormir [F]; sem TV ou computador no quarto até 10 anos (Caderneta) [F]", "Os pais usam a mesma estratégia [F]", "Estimular a criança a adormecer na própria cama ou berço [F]; objeto de transição (paninho, boneco) a partir de 12 meses [F/C]", "Evitar chocolate, café e refrigerante perto da hora de dormir [F]; também chá preto e mate [C]"]},
+        {p: "Despertares breves entre os ciclos de sono são normais e a criança volta a dormir sem intervenção [F]; aprender a adormecer sozinha facilita isso [C]. Técnicas de extinção gradual (esperar intervalos crescentes antes de intervir) são opções para famílias que desejam, a partir de 6 meses [C]."}
+      ]},
+      {t: "Sono seguro (até 1 ano)", b: [
+        {ul: ["De barriga para cima, em todo sono [F]", "Berço com colchão firme e plano, sem travesseiro, protetor, ninho, cobertor solto ou pelúcia [F]", "No quarto dos pais pelo menos até 6 meses, de preferência até 12 [F]", "Sofá e poltrona: os locais mais perigosos; cama de adulto: contraindicada, com risco muito maior se o adulto fuma, bebeu, usa sedativos ou está exausto [F]", "Sem elevação da cabeceira, mesmo com refluxo; bebê-conforto não é local de sono de rotina; parar de enrolar quando começar a tentar rolar (por volta de 3 meses) [F]", "Ambiente sem fumaça de cigarro; não agasalhar demais; amamentar protege [F]"]},
+        {ir: [["pu-choro-colica", "Choro e cólica"], ["pu-telas", "Telas"]]}
+      ]},
+      {t: "Quando investigar", b: [
+        {ul: ["Ronco habitual (3 ou mais noites por semana) com pausas, respiração pela boca, sono agitado, sudorese, enurese ou sonolência, agitação e dificuldade escolar: suspeita de apneia obstrutiva (hipertrofia de amígdalas e adenoides) → otorrinolaringologia [C]", "Terror noturno e sonambulismo: comuns e benignos em pré-escolares; garantir segurança e não acordar a criança; investigar se frequentes ou com movimentos estereotipados [C]", "Insônia persistente apesar da higiene do sono, ou associada a TEA ou TDAH: avaliação especializada [C]", "Melatonina: não é a primeira medida; em crianças é uso fora da bula, restrito a casos selecionados (ex.: TEA, TDAH) com especialista [C]; a autorização da ANVISA para suplementos é para adultos (2021) [NV]"]}
+      ]},
+      {t: "Fontes", b: [{ref: ["sbp_sono2021", "sbp_sono2023"]}]}
+    ]},
+  S: `Criança de ___. Dorme ___ h/noite, cochilos ___. Hora de dormir ___, de acordar ___. Rotina ___. Onde dorme ___ (berço/cama própria/cama dos pais). Despertares ___ vezes/noite, como volta a dormir ___. Telas antes de dormir ___. Ronco ___, pausas ___, respiração oral ___. Sonolência ou agitação diurna ___.`,
+  O: `Estado geral ___. Crescimento ___. Amígdalas ___, respiração ___. Desenvolvimento ___.`,
+  A: `Sono ___ (adequado para a idade / higiene do sono inadequada / suspeita de distúrbio respiratório do sono).`,
+  P: `- Oriento higiene do sono e sono seguro.
+- Retorno em ___.`,
+  orient: `**Ligue 192 ou vá à urgência** se o bebê ficar roxo, mole ou parar de respirar, mesmo que depois volte ao normal.
+## Quanto a criança precisa dormir (somando a noite e os cochilos)
+- 4 a 12 meses: 12 a 16 horas.
+- 1 a 2 anos: 11 a 14 horas.
+- 3 a 5 anos: 10 a 13 horas.
+- 6 a 12 anos: 9 a 12 horas.
+Cada criança é um pouco diferente. Acordar rapidinho durante a noite é normal em qualquer idade.
+## Bebê com menos de 1 ano: sono seguro
+- Sempre de barriga para cima, inclusive nos cochilos.
+- No berço, com colchão firme, sem travesseiro, protetor de berço, ninho, cobertor solto ou bichinhos.
+- O berço fica no quarto dos pais pelo menos até 6 meses.
+- O lugar mais seguro é o berço. Nunca durma com o bebê no sofá ou na poltrona: é o mais perigoso.
+- A cama dos pais também não é recomendada, e o risco é muito maior se alguém fuma, bebeu, usou remédio ou droga, ou está exausto. Se for amamentar à noite deitada e puder cochilar, faça isso na cama (nunca no sofá) e depois volte o bebê para o berço.
+- Não eleve a cabeceira do berço, nem por refluxo. Bebê-conforto e cadeirinha não são lugar para dormir: ao chegar, passe o bebê para o berço.
+- Se o bebê for enrolado num pano, pare quando ele começar a tentar rolar.
+- Ninguém fuma perto do bebê. Não agasalhe demais.
+## Rotina que ajuda a dormir
+- Horários parecidos para dormir e acordar todos os dias, inclusive no fim de semana.
+- Durante o dia: luz, brincadeiras e passeios. À noite: casa mais calma e luz baixa.
+- Um ritual curto e sempre igual antes de dormir (banho, pijama, escovar os dentes, história, luz apagada), de no máximo 30 minutos.
+- Desligue TV, celular e tablet pelo menos 1 hora antes de dormir. Sem TV no quarto.
+- Nada de café, chá preto, chocolate ou refrigerante à noite.
+- Coloque a criança na cama sonolenta, mas ainda acordada, para ela aprender a adormecer sozinha.
+- Um paninho ou bichinho preferido pode ajudar depois de 1 ano.
+- Não dê melatonina, chás calmantes ou remédios para dormir sem orientação médica.
+- Os adultos da casa combinam e fazem do mesmo jeito.
+## Quando a criança acorda à noite
+Fale baixo, com pouca luz, sem brincadeira e sem tela. Dê tempo para ela voltar a dormir. Se for preciso, conforte rapidamente e coloque de volta na cama.
+## Procure a equipe se
+- A criança ronca quase todas as noites, parece parar de respirar por instantes ou dorme de boca aberta.
+- Fica muito sonolenta, irritada ou agitada durante o dia.
+- O sono piorou de repente, com dor, febre ou choro diferente.
+- Tem sustos, movimentos ou crises repetidas durante o sono.`,
+  alarme: ["Bebê roxo, mole ou que parou de respirar, mesmo que tenha voltado (urgência)", "Ronco forte quase todas as noites, com pausas", "Sonolência ou agitação importantes durante o dia", "Choro diferente, com dor ou febre, que atrapalha o sono", "Movimentos repetidos ou crises durante o sono"],
+  encaminhar: "Suspeita de apneia obstrutiva → otorrinolaringologia. Parassonias frequentes ou movimentos estereotipados no sono → neuropediatria. Insônia persistente com TEA/TDAH → avaliação especializada.",
+  sus: {nacional: "Orientação na APS; otorrino e neuropediatria pela regulação.", betim: "Fluxo de otorrinolaringologia e neuropediatria em Betim: conferir [NV]."},
+  evid: {resumo: "SBP 2021 (higiene do sono, durações AASM 2016) e SBP 2023 (sono seguro, recomendações da AAP). Técnicas de extinção, apneia e parassonias citadas sem conferência nesta sessão.", certeza: "Moderada para sono seguro; baixa a moderada para higiene do sono (estimada)", fontes: ["sbp_sono2021", "sbp_sono2023"]},
+  mudancas: ["Entrada nova (v44)."],
+  nv: ["Técnicas comportamentais (extinção gradual) e uso de melatonina citados de memória.", "Fluxos de otorrino e neuropediatria em Betim."]
+},
+{
+  id: "pu-telas", modulo: "pu", nome: "Telas: TV, celular e tablet por idade", sistema: "Desenvolvimento e condições", risco: "baixo",
+  ciap: "Z29", cid: "Z72.8",
+  tags: "telas tempo de tela celular tablet televisão videogame criança menor de 2 anos desenvolvimento fala atraso linguagem sono obesidade redes sociais smartphone",
+  alerta: "Atraso de fala ou de interação social em criança com muita exposição a telas: avaliar o desenvolvimento (inclusive sinais de autismo), não atribuir só às telas.",
+  guia: {rotulo: "Guia clínico",
+    resumo: "Menores de 2 anos: sem telas (exceto videochamada com a família); 2 a 5 anos: no máximo 1 hora por dia, com conteúdo adequado e um adulto junto; sem TV ou computador no quarto até 10 anos e sem celular próprio antes de 12 (Caderneta 2025) [F].",
+    secoes: [
+      {t: "Recomendações por idade", b: [
+        {tab: {h: ["Idade", "Recomendação"], r: [
+          ["Menos de 2 anos", "Não expor a telas; videochamada com a família é exceção [F/C]"],
+          ["2 a 5 anos", "No máximo 1 hora por dia, com conteúdo adequado à idade [F], de preferência com um adulto junto [C]"],
+          ["Até 10 anos", "Sem TV ou computador no próprio quarto [F]"],
+          ["Antes de 12 anos", "Sem celular ou smartphone próprio [F]"],
+          ["Todas as idades", "Sem telas nas refeições e 1 hora antes de dormir; adultos dão o exemplo [F]"]]}, nota: "Caderneta da Criança 2025 [F]; SBP 2021 (telas antes de dormir) [F]; guia do Governo Federal de 2025 (telas só a partir de 2 anos, exceto videochamadas; smartphone próprio não antes de 12) [C]."}
+      ]},
+      {t: "Na consulta", b: [
+        {ul: ["Perguntar quanto tempo, quais conteúdos, em que horários e se há telas no quarto e nas refeições [I]", "Excesso de telas associa-se a menos brincadeira, interação e atividade física e a obesidade (Caderneta) [F]; telas antes de dormir pioram o sono (SBP 2021) [F]", "Atraso de linguagem ou de interação: aplicar a vigilância do desenvolvimento e o M-CHAT-R quando indicado; reduzir telas e aumentar a interação, sem atrasar a investigação [I]", "Ajudar a família a montar um plano realista (horários sem tela, alternativas de brincadeira) [I]"]},
+        {ir: [["pu-dnpm", "Atraso do desenvolvimento e autismo"], ["pu-sono", "Sono"]]}
+      ]},
+      {t: "Fontes", b: [{ref: ["caderneta_crianca", "sbp_sono2021", "guia_telas2025", "oms_telas2019"]}]}
+    ]},
+  orient: `## Por que limitar as telas
+As crianças aprendem brincando, conversando e convivendo com as pessoas. O tempo na frente de TV, celular, tablet e videogame tira esse tempo, pode atrasar a fala, piorar o sono e favorecer o ganho de peso.
+## Por idade
+- **Menos de 2 anos:** sem telas. Videochamada com a família pode.
+- **2 a 5 anos:** no máximo 1 hora por dia, com desenhos e programas para a idade, e de preferência com um adulto junto, conversando sobre o que estão vendo.
+- **Até 10 anos:** sem TV, computador ou videogame no quarto da criança.
+- **Antes de 12 anos:** a criança não deve ter celular próprio.
+## Combinados para a família
+- Nada de tela durante as refeições.
+- Desligue tudo pelo menos 1 hora antes de dormir.
+- Não use o celular para a criança comer, se acalmar ou ficar quieta. Converse, cante, leia, ofereça brinquedos simples.
+- Os adultos também guardam o celular quando estão com a criança: ela aprende pelo exemplo.
+- Prefira brincadeiras ao ar livre, livros, massinha, desenho, blocos e música.
+## Procure a equipe se
+A criança fala pouco para a idade, não olha nos olhos, não atende pelo nome ou só se acalma com a tela. Isso precisa ser avaliado.`,
+  alarme: ["Criança que não fala ou fala bem menos que outras da mesma idade", "Pouco contato visual ou não atende quando chamada", "Crises intensas quando a tela é retirada"],
+  encaminhar: "Atraso de desenvolvimento ou sinais de autismo → ver item de desenvolvimento e o fluxo de avaliação.",
+  sus: {nacional: "Orientação na APS; Caderneta da Criança 2025.", betim: "—"},
+  evid: {resumo: "Caderneta da Criança 2025 (MS): sem telas antes de 2 anos; até 1 h/dia de 2 a 5 anos; sem TV ou computador no quarto até 10 anos; sem celular antes de 12. SBP 2021: sem telas 1 h antes de dormir. OMS 2019 e guia federal de 2025 na mesma direção. Evidência majoritariamente observacional.", certeza: "Baixa (observacional, estimada)", fontes: ["caderneta_crianca", "sbp_sono2021", "guia_telas2025", "oms_telas2019"]},
+  mudancas: ["Entrada nova (v44)."],
+  nv: ["Texto original do guia federal de 2025 (conferido só por reportagem)."]
+},
+{
+  id: "pu-desfralde", modulo: "pu", nome: "Desfralde: quando começar, como fazer e quando investigar", sistema: "Desenvolvimento e condições", risco: "baixo",
+  ciap: "P22 · U04", cid: "Z00.1 · F98.0",
+  tags: "desfralde tirar a fralda treinamento esfincteriano penico redutor de assento xixi na cama enurese noturna escape regressão criança segura cocô",
+  alerta: "Perda de urina constante (gotejamento), jato fraco, infecções urinárias de repetição, constipação importante, alterações na região lombossacra ou perda de controle já adquirido com sinais de sofrimento: investigar (incluindo violência).",
+  guia: {rotulo: "Guia clínico",
+    resumo: "O momento é dado pelos sinais de prontidão, em geral entre 24 e 36 meses; no Brasil, o desfralde começa em média aos 22 meses e termina aos 27 meses. Abordagem orientada para a criança, com penico, elogios e sem punição; recusa → pausa de 1 a 3 meses (SBP/SBU 2019) [F].",
+    secoes: [
+      {t: "Sinais de prontidão (principais)", b: [
+        {ul: ["Imita os adultos, quer agradar e quer fazer sozinha [F]", "Anda, senta com estabilidade, abaixa e sobe a roupa [F]", "Entende e segue comandos simples; tem palavras para xixi e cocô [F]", "Avisa ou mostra que vai fazer ou que fez; incomoda-se com a fralda molhada [F]", "Fica seca por 2 horas ou mais durante o dia; consegue ficar sentada no penico 3 a 5 minutos [F]"]}
+      ]},
+      {t: "Como fazer", b: [
+        {ol: ["Apresentar o penico antes, como objeto da criança, sem cobrança [F]", "Sentar no penico vestida e depois sem fralda, em horários do dia (ao acordar, após refeições, antes do banho e de dormir) por poucos minutos – nunca por muito tempo [F]", "Penico é preferível no início (pés apoiados, melhor posição); no vaso, redutor de assento e apoio para os pés [F]", "Roupas fáceis de tirar; após sucessos repetidos, calcinha ou cueca [F]", "Meninos começam sentados; meninas limpam da frente para trás [F]", "Elogiar sem guloseimas; nunca punir os escapes [F]", "Começar ao mesmo tempo em casa e na creche [F]", "Tratar a constipação antes ou durante: ela atrapalha o desfralde [F]"]},
+        {p: "Recusa: pausa de 1 a 3 meses e recomeçar [F]. O controle noturno vem depois do diurno; xixi na cama é comum até 5 anos [C]."}
+      ]},
+      {t: "Quando investigar", b: [
+        {ul: ["36 meses ou mais sem sinais de prontidão, ou 48 meses ou mais sem controle diurno [F]", "Considerar: deficiência intelectual, TEA, TDAH, transtornos de comportamento, espinha bífida oculta ou estigma sacral, bexiga ou intestino neurogênicos, hipotonia, estresse tóxico, abuso sexual, constipação [F]", "Enurese noturna após 5 anos, ou perda de controle depois de adquirido: avaliar (ITU, constipação, diabetes, estresse) [C]; polidipsia, poliúria ou emagrecimento → glicemia no mesmo dia [C]"]},
+        {ir: [["pu-constipacao", "Constipação"], ["pu-dnpm", "Desenvolvimento e autismo"], ["po-violencia-vulneraveis", "Violência contra criança"]]}
+      ]},
+      {t: "Fontes", b: [{ref: ["sbp_desfralde2019"]}]}
+    ]},
+  orient: `## Quando começar
+Não existe uma idade certa: a criança mostra quando está pronta, geralmente entre 2 e 3 anos. Sinais de que está pronta:
+- Avisa ou mostra que vai fazer ou que fez xixi ou cocô, e se incomoda com a fralda suja.
+- Fica com a fralda seca por 2 horas ou mais.
+- Consegue sentar no penico por alguns minutos, abaixar e subir a roupa.
+- Entende pedidos simples e quer fazer as coisas sozinha.
+Começar antes da hora costuma demorar mais e gerar briga.
+## Como fazer
+- Deixe a criança conhecer o penico antes: sentar de roupa, brincar perto, ver os adultos usando o banheiro.
+- Coloque no penico em alguns horários (ao acordar, depois das refeições, antes do banho e de dormir), por poucos minutos. Não deixe sentada muito tempo.
+- Se usar o vaso, coloque um redutor de assento e um banquinho para os pés.
+- Use roupas fáceis de tirar. Depois de vários acertos, passe para calcinha ou cueca.
+- Meninos podem começar fazendo xixi sentados. Ensine as meninas a se limparem da frente para trás.
+- Elogie cada tentativa, sem dar doces como prêmio.
+- **Escapes vão acontecer. Não brigue e não castigue.** Limpe com calma.
+- Combine com a creche ou escola para todos fazerem do mesmo jeito.
+- Se a criança faz cocô duro ou com dor, trate o intestino preso: isso atrapalha muito.
+## Se a criança recusar
+Pare por 1 a 3 meses e tente de novo. Isso é comum e não é falha de ninguém.
+## À noite
+Ficar seco à noite costuma vir depois. Fazer xixi na cama é comum até os 5 anos. Mantenha a fralda à noite enquanto for preciso.
+## Procure a equipe se
+- A criança tem 3 anos e não mostra nenhum sinal de estar pronta, ou tem 4 anos e ainda não controla o xixi durante o dia.
+- Tem mancha, tufo de pelos ou covinha nas costas, perto do bumbum, ou fraqueza nas pernas.
+- Tem muita sede, faz muito xixi ou emagreceu: procure no mesmo dia.
+- Vive molhada, pinga xixi o tempo todo ou o jato é fraco.
+- Tem dor para fazer xixi, febre ou infecções urinárias.
+- Voltou a fazer xixi ou cocô na roupa depois de já ter aprendido, ou mudou de comportamento.`,
+  alarme: ["Muita sede, muito xixi, voltou a molhar a cama ou emagreceu (pode ser diabetes: procurar no mesmo dia)", "Dor ou ardência para urinar, febre ou xixi com cheiro forte", "Criança que vive molhada ou pinga xixi o tempo todo", "Perda de controle depois de já ter aprendido", "Fraqueza nas pernas ou alteração nas costas (mancha, tufo de pelos, covinha)"],
+  encaminhar: "≥ 48 meses sem controle diurno, sinais neurológicos ou sacrais, ITU de repetição → pediatria/urologia pediátrica. Suspeita de violência → notificar e acionar a rede de proteção.",
+  sus: {nacional: "Orientação na APS; urologia pediátrica pela regulação.", betim: "—"},
+  evid: {resumo: "Manual SBP/SBU (2019): sinais de prontidão, abordagem orientada para a criança, penico, elogio sem recompensa, pausa na recusa e critérios para investigar. Enurese noturna até 5 anos como normal citada sem conferência nesta sessão.", certeza: "Baixa (consenso, estimada)", fontes: ["sbp_desfralde2019"]},
+  mudancas: ["Entrada nova (v44)."],
+  nv: ["Definição de enurese (≥ 5 anos) citada de memória."]
+},
+{
+  id: "pu-nariz", modulo: "pu", nome: "Nariz entupido no bebê e na criança: lavagem nasal e o que não usar", sistema: "Queixas comuns do bebê", risco: "baixo",
+  ciap: "R07 · R74", cid: "J00 · R09.8",
+  tags: "nariz entupido obstrução nasal congestão nasal bebê lavagem nasal soro fisiológico seringa aspirador nasal coriza resfriado descongestionante nafazolina Neosoro Sorine vasoconstritor ronco bebê",
+  alerta: "Esforço para respirar (tiragem, batimento de asa do nariz, gemência), respiração rápida, recusa de mamadas, febre em menor de 3 meses ou cianose: avaliação no mesmo dia. Secreção de um lado só, com mau cheiro: pensar em corpo estranho.",
+  guia: {rotulo: "Guia clínico",
+    resumo: "Obstrução nasal leve é comum no lactente (narinas estreitas, resfriados). Lavagem com soro fisiológico 0,9% e aspiração suave antes das mamadas e do sono são as medidas de conforto; a evidência de benefício é limitada, mas o risco é baixo [C]. Vasoconstritores nasais de uso adulto são contraindicados abaixo de 12 anos (bula da nafazolina) [F]; em qualquer criança, só com prescrição [C].",
+    secoes: [
+      {t: "Avaliar", b: [
+        {ul: ["Bebê bem, mamando, sem esforço respiratório: medidas de conforto [I]", "Sinais de gravidade: taquipneia, tiragem, gemência, batimento de asa nasal, apneia, cianose, recusa alimentar, febre em < 3 meses → avaliação no mesmo dia [C]", "Obstrução desde o nascimento, unilateral ou que impede mamar: atresia de coanas, estenose de abertura piriforme → otorrino [C]", "Secreção unilateral fétida: corpo estranho [C]; pilha ou bateria de botão no nariz = urgência imediata [C]", "Obstrução crônica com ronco: rinite alérgica, hipertrofia de adenoides [C]"]},
+        {ir: [["resfriado", "Resfriado comum"], ["bronquiolite", "Bronquiolite"], ["rinite", "Rinite alérgica"], ["pu-sono", "Sono e ronco"]]}
+      ]},
+      {t: "Lavagem nasal", b: [
+        {ul: ["Soro fisiológico 0,9% de farmácia (cloreto de sódio 0,9%, sem outros componentes), em temperatura ambiente [C]", "Bebê: algumas gotas a cerca de 1 mL em cada narina, com a criança de lado ou sentada, com conta-gotas ou seringa sem agulha, sem pressão forte [NV]", "Criança maior: 2 a 5 mL em cada narina, ou mais, conforme tolerância [NV]", "Antes das mamadas, das refeições e do sono, quantas vezes for necessário [I]", "Aspirador nasal manual com cuidado; evitar hastes e cotonetes dentro do nariz [C]"]},
+        {alerta: "Não usar descongestionantes vasoconstritores (nafazolina, oximetazolina, fenilefrina e similares, inclusive associados ao soro) em crianças: apresentações de uso adulto são contraindicadas abaixo de 12 anos e podem causar intoxicação com sonolência, queda da temperatura e bradicardia (bula da nafazolina) [F]. Apresentações pediátricas não foram conferidas nesta revisão [NV]. Também não usar antigripais, anti-histamínicos sedativos ou antitussígenos em menores de 2 anos [C]."}
+      ]},
+      {t: "Fontes", b: [{ref: ["bula_nafazolina"]}]}
+    ]},
+  rx: [
+    {trilha: "ambos", titulo: "Lavagem nasal com soro fisiológico", texto: "USO NASAL\n1. Cloreto de sódio 0,9% (soro fisiológico) – ampola de 10 mL ______ ___ ampolas\n   Pingar ___ mL em cada narina (bebê: algumas gotas a 1 mL; criança maior: 2 a 5 mL), com a criança de lado ou sentada, antes das mamadas e do sono, quantas vezes for necessário.", dose: "NV", nota: "Volumes por consenso [NV]; evidência de benefício limitada e risco baixo. A REMUME Betim tem cloreto de sódio 0,9% só como solução injetável (ampola de 10 mL e frascos), sem apresentação nasal [F]; a ampola, de uso único, pode ser usada para a lavagem [I]."}
+  ],
+  orient: `## Por que o nariz do bebê entope
+O nariz do bebê é pequeno, e qualquer secreção ou resfriado já atrapalha a respiração e a mamada. Barulho de nariz entupido e espirros são comuns e, se o bebê está bem e mamando, não são sinal de doença grave.
+## Lavagem com soro
+- Use soro fisiológico 0,9% de farmácia, em temperatura ambiente.
+- Deite o bebê de lado (ou deixe a criança maior sentada, com a cabeça um pouco para a frente).
+- Pingue o soro em cada narina: no bebê, algumas gotas até 1 mL; na criança maior, 2 a 5 mL. Use conta-gotas ou seringa sem agulha, devagar, sem força.
+- Limpe o que sair com um paninho. Se precisar, use um aspirador nasal com cuidado.
+- Faça antes de mamar, antes das refeições e antes de dormir, quantas vezes for preciso.
+- Não coloque haste, cotonete ou outros objetos dentro do nariz.
+## Não use
+- **Descongestionantes nasais** (nafazolina, oximetazolina e outros "que desentopem o nariz"), mesmo os misturados com soro: podem causar intoxicação grave em crianças, com sonolência, coração lento e queda da temperatura. Nunca antes dos 12 anos sem receita. Confira no rótulo do soro que ele tem só cloreto de sódio 0,9%.
+- Xaropes para tosse, antigripais e antialérgicos sem receita, principalmente antes dos 2 anos.
+- Vapor de água quente ou panela no fogo para inalar: risco de queimadura.
+## O que mais ajuda
+- Ofereça o peito com mais frequência. Bebê com menos de 6 meses em aleitamento exclusivo: só o peito, sem água ou chá. Maiores: peito e água.
+- Mantenha o ambiente arejado e sem fumaça de cigarro.
+## Procure atendimento no mesmo dia se
+- A criança respirar rápido, com esforço, com a barriga afundando ou as costelas aparecendo, ou fazendo barulho (gemido, chiado).
+- Ficar roxa, fizer pausas na respiração ou recusar o peito.
+- For bebê com menos de 3 meses com febre.
+- Sair secreção com mau cheiro por uma narina só (pode ser objeto no nariz). Se você sabe que a criança colocou pilha ou bateria no nariz, vá à urgência imediatamente.`,
+  alarme: ["Respiração rápida, com esforço ou com gemido", "Lábios roxos ou pausas na respiração", "Bebê que recusa o peito ou mama muito pouco", "Febre em bebê menor de 3 meses", "Secreção com mau cheiro saindo de uma narina só"],
+  encaminhar: "Desconforto respiratório → urgência. Obstrução nasal desde o nascimento ou que impede a mamada, ou crônica com ronco → otorrinolaringologia. Corpo estranho nasal → otorrino/urgência.",
+  sus: {nacional: "Cloreto de sódio 0,9% (RENAME); apresentação nasal na RENAME: conferir [NV].", betim: "REMUME Betim: cloreto de sódio 0,9% solução injetável (ampola de 10 mL e frascos), sem apresentação nasal [F]."},
+  evid: {resumo: "Lavagem nasal com soro fisiológico: medida de conforto de baixo risco e evidência limitada (citado de memória). Vasoconstritores tópicos: risco de intoxicação em crianças; a bula do produto adulto de nafazolina contraindica abaixo de 12 anos.", certeza: "Baixa (estimada)", fontes: ["bula_nafazolina", "rename"]},
+  mudancas: ["Entrada nova (v44)."],
+  nv: ["Volumes de soro por idade (consenso).", "Apresentações pediátricas de vasoconstritores nasais e suas idades na bula.", "Apresentação nasal de cloreto de sódio na RENAME."]
+},
+{
+  id: "pu-sol-repelente", modulo: "pu", nome: "Proteção solar e repelente por idade", sistema: "Queixas comuns do bebê", risco: "baixo",
+  ciap: "S80 · A98", cid: "Z29.8",
+  tags: "protetor solar filtro solar bebê sol exposição solar vitamina D banho de sol repelente icaridina IR3535 DEET citronela mosquito dengue picada idade mínima",
+  alerta: "Queimadura solar com bolhas extensas, febre ou prostração, ou sinais de insolação (vômitos, sonolência, pele quente e seca): avaliação no mesmo dia.",
+  guia: {rotulo: "Guia clínico",
+    resumo: "Antes de 6 meses: sem sol direto e sem filtro solar – proteção com sombra, roupas e chapéu; de 6 meses a 2 anos, filtro mineral (SBP 2024) [F]. Banho de sol não é indicado para vitamina D nem para icterícia [F]. Repelentes conforme a idade (SBP 2025) e o rótulo [F].",
+    secoes: [
+      {t: "Sol", b: [
+        {tab: {h: ["Idade", "Orientação"], r: [
+          ["Menos de 6 meses", "Evitar sol direto; sombra, guarda-sol, roupas leves de manga comprida e chapéu; filtro solar não recomendado por falta de estudos de segurança [F]"],
+          ["6 meses a 2 anos", "Filtro solar mineral (óxido de zinco, dióxido de titânio) nas áreas expostas, além das barreiras [F]"],
+          ["Todas as idades", "Evitar o sol entre 10 e 16 horas [C]"],
+          ["A partir de 6 meses", "Filtro com FPS 30 ou mais, aplicado 15–30 min antes, reaplicado a cada 2 horas e após água ou suor [C]"]]}, nota: "SBP 2024 [F]. A vitamina D do lactente é suplementada em gotas; exposição solar intencional para vitamina D não é recomendada [F]."}
+      ]},
+      {t: "Repelente", b: [
+        {tab: {h: ["Idade", "Repelente (SBP 2025)"], r: [
+          ["Menos de 3 meses", "Só barreiras físicas (mosquiteiro, roupas) [F]"],
+          ["3 a 6 meses", "Icaridina, só se a exposição for inevitável [F]"],
+          ["6 meses a 2 anos", "Icaridina ou IR3535, 1 vez ao dia [F]"],
+          ["2 a 7 anos", "Repelente infantil, uso ocasional, até 2 vezes ao dia [F]"],
+          ["7 a 12 anos", "Repelente infantil, até 3 vezes ao dia [F]"],
+          ["Mais de 12 anos", "Repelentes de adulto, até 3 vezes ao dia [F]"]]}, nota: "Sempre respeitar também a idade mínima do rótulo [I]. O rótulo e a SBP podem divergir (a SBP 2015 liberava icaridina só acima de 2 anos): não usar produto cujo rótulo não inclua a idade da criança; abaixo de 6 meses, barreiras físicas primeiro [I]; idades nos rótulos atuais [NV]. Aplicar com a mão do adulto, longe de olhos, boca e mãos da criança; não dormir com repelente; protetor solar primeiro e repelente 20–40 min depois; preferir loção a spray; evitar produtos combinados filtro + repelente; pulseiras de citronela e aparelhos ultrassônicos não funcionam (SBP 2015) [F]."},
+        {ir: [["pu-pele", "Pele do bebê e estrófulo"], ["pu-ictericia", "Icterícia (sem banho de sol)"]]}
+      ]},
+      {t: "Fontes", b: [{ref: ["sbp_pele2024", "sbp_picadas2025", "sbp_repel2015"]}]}
+    ]},
+  orient: `## Sol
+- **Bebê com menos de 6 meses:** não deve ficar no sol direto. Use sombra, guarda-sol, roupas leves de manga comprida e chapéu. Protetor solar não é indicado nessa idade.
+- **Banho de sol não é necessário:** a vitamina D do bebê é dada em gotas, e o sol não trata o amarelão.
+- **De 6 meses a 2 anos:** além da sombra e das roupas, use protetor solar próprio para bebês, de preferência mineral (com óxido de zinco ou dióxido de titânio no rótulo).
+- **Em todas as idades:** evite o sol forte entre 10 e 16 horas.
+- **A partir de 6 meses:** use protetor com FPS 30 ou mais, passe 15 a 30 minutos antes de sair e reaplique a cada 2 horas e depois de entrar na água ou suar.
+- Nos dias quentes, ofereça o peito mais vezes. Bebê com menos de 6 meses em aleitamento exclusivo: só o peito, sem água ou chá. Maiores: peito e água.
+## Repelente
+- **Menos de 3 meses:** não use. Proteja com mosquiteiro no berço e no carrinho, telas nas janelas e roupas compridas.
+- **3 a 6 meses:** só com orientação da equipe, quando não houver outro jeito.
+- **6 meses a 2 anos:** repelente com icaridina ou IR3535 (o nome vem no rótulo), 1 vez ao dia.
+- **2 a 7 anos:** repelente infantil, até 2 vezes ao dia. **7 a 12 anos:** até 3 vezes ao dia.
+- Sempre respeite a idade mínima escrita no rótulo. Se o rótulo não indicar a idade do seu filho, não use.
+## Como passar o repelente
+- Passe com a sua mão, nunca deixe a criança passar sozinha. Longe dos olhos, da boca e das mãos dela, e nunca em machucados.
+- Prefira loção em vez de spray.
+- Se usar protetor solar, passe o protetor primeiro e o repelente 20 a 40 minutos depois. Evite produtos que misturam os dois.
+- Dê banho para tirar o repelente quando não for mais preciso. A criança não deve dormir com repelente.
+- Pulseiras de citronela e aparelhos de ultrassom não protegem.
+## Contra a dengue
+Elimine água parada em casa e no quintal, use telas nas janelas e mosquiteiros.`,
+  alarme: ["Queimadura de sol com bolhas grandes, febre ou criança abatida", "Vômitos, sonolência ou pele muito quente e seca depois de muito sol", "Reação na pele, falta de ar ou sonolência depois de usar repelente"],
+  encaminhar: "Queimadura solar extensa ou com bolhas, insolação → avaliação no mesmo dia. Reação ao repelente com sintomas sistêmicos → urgência.",
+  sus: {nacional: "Protetor solar e repelente: compra pela família (não constam na RENAME para uso pediátrico de rotina) [NV].", betim: "—"},
+  evid: {resumo: "SBP 2024 (sem sol direto e sem filtro antes de 6 meses; filtro mineral de 6 meses a 2 anos; sem banho de sol para vitamina D ou icterícia); SBP 2025 (repelentes por idade); SBP 2015 (cuidados na aplicação). FPS e horários citados sem conferência nesta sessão.", certeza: "Baixa a moderada (consenso, estimada)", fontes: ["sbp_pele2024", "sbp_picadas2025", "sbp_repel2015"]},
+  mudancas: ["Entrada nova (v44)."],
+  nv: ["Idade mínima nos rótulos de repelentes vendidos hoje.", "FPS mínimo e intervalo de reaplicação citados de memória.", "Presença de protetor solar e repelente na RENAME/programas para crianças."]
+}
+);
 
 </script>
 <script>

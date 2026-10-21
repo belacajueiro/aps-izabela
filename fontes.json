@@ -1,11 +1,11 @@
 {
- "gerado": "2026-10-20T23:32:12.023Z",
+ "gerado": "2026-10-21T00:11:50.093Z",
  "cmed": {
   "data": "09/10/2026",
   "fonte": "cmed_pmc2026",
   "icms": "PMC com ICMS de Minas Gerais: 12% para genéricos e 18% para os demais"
  },
- "n_fontes": 545,
+ "n_fontes": 553,
  "n_itens": 330,
  "sem_url": [
   "remume",
@@ -7459,6 +7459,142 @@
     "pu-guiada",
     "pu-rn"
    ]
+  },
+  {
+   "k": "oms_mgrs2006",
+   "s": "OMS 2006 – padrões de crescimento (0–5 anos)",
+   "t": "WHO Child Growth Standards (2006): peso/idade, comprimento-estatura/idade, PC/idade e IMC/idade, tabelas LMS diárias dos macros igrowup; escore-z com a correção da OMS acima de +3 e abaixo de −3 para peso e IMC. OMS 2007 (5–19 anos) para 61–72 meses. Tabelas carregadas da cópia do pacote growthstandards (ki-tools, GitHub) (padrão de crescimento; tabelas conferidas no código-fonte).",
+   "f": "F",
+   "url": "https://www.who.int/tools/child-growth-standards",
+   "ano": 2007,
+   "usado_em": [
+    "pu-12m",
+    "pu-15m",
+    "pu-18m",
+    "pu-1m",
+    "pu-24m",
+    "pu-2m",
+    "pu-30m",
+    "pu-3a5a",
+    "pu-4a",
+    "pu-4m",
+    "pu-5a",
+    "pu-6m",
+    "pu-9m",
+    "pu-rn"
+   ]
+  },
+  {
+   "k": "ig_rn2014",
+   "s": "INTERGROWTH-21st – tamanho ao nascer",
+   "t": "Villar J et al. International standards for newborn weight, length, and head circumference by gestational age and sex: the Newborn Cross-Sectional Study of the INTERGROWTH-21st Project. Lancet 2014;384:857-68 (33+0 a 42+6 semanas); Villar J et al. INTERGROWTH-21st very preterm size at birth reference charts. Lancet 2016 (24+0 a 32+6). Percentis 10 e 90 do peso calculados com os coeficientes publicados (pacote growthstandards) e conferidos com os valores de teste do pacote (ex.: menino 33+1: P10 1,47 kg, P90 2,56 kg) (padrão). A Caderneta da Criança 2025 usa as curvas INTERGROWTH-21st para o pré-termo.",
+   "f": "F",
+   "url": "https://doi.org/10.1016/S0140-6736(14)60932-6",
+   "ano": 2025,
+   "usado_em": [
+    "pu-rn"
+   ]
+  },
+  {
+   "k": "bula_paracetamol",
+   "s": "Bula – paracetamol gotas e suspensão",
+   "t": "Bula de paracetamol 200 mg/mL gotas (15 gotas/mL; 13,3 mg/gota): < 12 anos, 1 gota/kg até 35 gotas por dose, a cada 4–6 h, máx. 5 vezes em 24 h; < 11 kg ou 2 anos: orientação médica. Paracetamol suspensão 32 mg/mL: 10–15 mg/kg/dose a cada 4–6 h, máx. 5 doses e 75 mg/kg/dia (bulas de genéricos consultadas em bula.com.br e Drogasil).",
+   "f": "F",
+   "url": "https://img.drogasil.com.br/raiadrogasil_bula/Paracetamol200mgPrati.pdf",
+   "ano": null,
+   "usado_em": [
+    "pu-12m",
+    "pu-15m",
+    "pu-18m",
+    "pu-1m",
+    "pu-24m",
+    "pu-2m",
+    "pu-30m",
+    "pu-3a5a",
+    "pu-4a",
+    "pu-4m",
+    "pu-5a",
+    "pu-6m",
+    "pu-9m",
+    "pu-rn"
+   ]
+  },
+  {
+   "k": "bula_dipirona",
+   "s": "Bula – dipirona gotas e solução oral",
+   "t": "Bula de dipirona 500 mg/mL gotas (20 gotas/mL): 5–8 kg 2–5 gotas; 9–15 kg 3–10; 16–23 kg 5–15; 24–30 kg 8–20 gotas por dose, até 4 vezes ao dia. Solução oral 50 mg/mL: 5–8 kg 1,25–2,5 mL; 9–15 kg 2,5–5 mL; 16–23 kg 3,75–7,5 mL; 24–30 kg 5–10 mL por dose, até 4 vezes ao dia. Contraindicada em < 3 meses ou < 5 kg (bulas de genéricos, Medquímica e Germed, via drconsulta).",
+   "f": "F",
+   "url": "https://drconsulta.com/conteudo/dipirona-sodica-medquimica-bula/",
+   "ano": null,
+   "usado_em": [
+    "pu-12m",
+    "pu-15m",
+    "pu-18m",
+    "pu-24m",
+    "pu-30m",
+    "pu-3a5a",
+    "pu-4a",
+    "pu-4m",
+    "pu-5a",
+    "pu-6m",
+    "pu-9m"
+   ]
+  },
+  {
+   "k": "bula_simeticona",
+   "s": "Bula – simeticona gotas",
+   "t": "Bula de simeticona 75 mg/mL gotas (27 gotas/mL): crianças e lactentes 3 a 5 gotas, 3 vezes ao dia; máx. 500 mg/dia (bula.com.br).",
+   "f": "F",
+   "url": "https://bula.com.br/original/simeticona-gotas-75-mgml",
+   "ano": null,
+   "usado_em": [
+    "pu-1m",
+    "pu-2m",
+    "pu-4m",
+    "pu-rn"
+   ]
+  },
+  {
+   "k": "bula_colidis",
+   "s": "Colidis (L. reuteri DSM 17938)",
+   "t": "Colidis gotas: Limosilactobacillus reuteri DSM 17938, 10⁸ UFC em 5 gotas; 5 gotas ao dia, misturadas a líquido frio ou em temperatura ambiente (não quente); frasco de 5 mL dura ~25 dias (informação do fabricante em bula.com.br).",
+   "f": "F",
+   "url": "https://bula.com.br/original/colidis",
+   "ano": null,
+   "usado_em": [
+    "pu-1m",
+    "pu-2m",
+    "pu-4m",
+    "pu-rn"
+   ]
+  },
+  {
+   "k": "sung2018_reuteri",
+   "s": "Sung 2018 – L. reuteri na cólica",
+   "t": "Sung V et al. Lactobacillus reuteri to Treat Infant Colic: A Meta-analysis. Pediatrics 2018;141(1):e20171811. DOI 10.1542/peds.2017-1811 (metanálise de dados individuais, 4 ECR duplo-cegos, 345 lactentes): −25 min/dia de choro no dia 21; sucesso 1,7 vez maior; NNT 2,6 em amamentados; sem efeito demonstrado em lactentes com fórmula.",
+   "f": "F",
+   "url": "https://doi.org/10.1542/peds.2017-1811",
+   "ano": 2018,
+   "usado_em": [
+    "pu-1m",
+    "pu-2m",
+    "pu-4m",
+    "pu-rn"
+   ]
+  },
+  {
+   "k": "cochrane_colica2016",
+   "s": "Cochrane 2016 – analgésicos na cólica",
+   "t": "Biagioli E et al. Pain-relieving agents for infantile colic. Cochrane Database Syst Rev 2016;9:CD009999. DOI 10.1002/14651858.CD009999.pub2 (18 ECR, 1.014 lactentes, alto risco de viés): sem evidência que apoie a simeticona (RR de resposta 0,95; IC 0,73–1,23); fitoterápicos (funcho, camomila, melissa), açúcar, diciclomina e cimetrópio não podem ser recomendados (evidência baixa e inconsistente).",
+   "f": "F",
+   "url": "https://doi.org/10.1002/14651858.CD009999.pub2",
+   "ano": 2016,
+   "usado_em": [
+    "pu-1m",
+    "pu-2m",
+    "pu-4m",
+    "pu-rn"
+   ]
   }
  ],
  "itens": [
@@ -9964,7 +10100,14 @@
     "sbp_vitd2024",
     "sbp_sono",
     "remume",
-    "sbp_sono2023"
+    "sbp_sono2023",
+    "oms_mgrs2006",
+    "bula_paracetamol",
+    "bula_simeticona",
+    "bula_colidis",
+    "sung2018_reuteri",
+    "cochrane_colica2016",
+    "ig_rn2014"
    ]
   },
   {
@@ -9980,7 +10123,13 @@
     "sbp_vitd2024",
     "sbp_sono",
     "cdc_marcos2022",
-    "sbp_sono2023"
+    "sbp_sono2023",
+    "oms_mgrs2006",
+    "bula_paracetamol",
+    "bula_simeticona",
+    "bula_colidis",
+    "sung2018_reuteri",
+    "cochrane_colica2016"
    ]
   },
   {
@@ -9995,7 +10144,13 @@
     "acidentes",
     "sbp_vitd2024",
     "cdc_marcos2022",
-    "sbp_sono2023"
+    "sbp_sono2023",
+    "oms_mgrs2006",
+    "bula_paracetamol",
+    "bula_simeticona",
+    "bula_colidis",
+    "sung2018_reuteri",
+    "cochrane_colica2016"
    ]
   },
   {
@@ -10011,7 +10166,14 @@
     "pnsf2022",
     "guia_menor2",
     "cdc_marcos2022",
-    "sbp_sono2023"
+    "sbp_sono2023",
+    "oms_mgrs2006",
+    "bula_paracetamol",
+    "bula_dipirona",
+    "bula_simeticona",
+    "bula_colidis",
+    "sung2018_reuteri",
+    "cochrane_colica2016"
    ]
   },
   {
@@ -10029,6 +10191,9 @@
     "sbp_ferro2026",
     "cdc_marcos2022",
     "sbp_sono2023",
+    "oms_mgrs2006",
+    "bula_paracetamol",
+    "bula_dipirona",
     "guia_menor2_cons",
     "bliss_cresc2017",
     "bliss_engasgo2016",
@@ -10050,6 +10215,9 @@
     "sbp_tro",
     "cdc_marcos2022",
     "sbp_sono2023",
+    "oms_mgrs2006",
+    "bula_paracetamol",
+    "bula_dipirona",
     "guia_menor2_cons"
    ]
   },
@@ -10068,6 +10236,9 @@
     "pnsf2022",
     "cdc_marcos2022",
     "sbp_sono2023",
+    "oms_mgrs2006",
+    "bula_paracetamol",
+    "bula_dipirona",
     "guia_menor2_cons"
    ]
   },
@@ -10081,7 +10252,10 @@
     "pni2026",
     "sisvan",
     "cdc_marcos2022",
-    "sbp_sono2023"
+    "sbp_sono2023",
+    "oms_mgrs2006",
+    "bula_paracetamol",
+    "bula_dipirona"
    ]
   },
   {
@@ -10099,7 +10273,10 @@
     "sbp_tea",
     "oms_telas2019",
     "cdc_marcos2022",
-    "sbp_sono2023"
+    "sbp_sono2023",
+    "oms_mgrs2006",
+    "bula_paracetamol",
+    "bula_dipirona"
    ]
   },
   {
@@ -10117,7 +10294,10 @@
     "sisvan",
     "oms_telas2019",
     "cdc_marcos2022",
-    "sbp_sono2023"
+    "sbp_sono2023",
+    "oms_mgrs2006",
+    "bula_paracetamol",
+    "bula_dipirona"
    ]
   },
   {
@@ -10130,7 +10310,10 @@
     "pni2026",
     "sisvan",
     "cdc_marcos2022",
-    "sbp_sono2023"
+    "sbp_sono2023",
+    "oms_mgrs2006",
+    "bula_paracetamol",
+    "bula_dipirona"
    ]
   },
   {
@@ -10147,7 +10330,10 @@
     "sisvan",
     "oms_telas2019",
     "cdc_marcos2022",
-    "sbp_sono2023"
+    "sbp_sono2023",
+    "oms_mgrs2006",
+    "bula_paracetamol",
+    "bula_dipirona"
    ]
   },
   {
@@ -10159,7 +10345,10 @@
     "caderneta_crianca",
     "pni2026",
     "sisvan",
-    "sbp_sono2023"
+    "sbp_sono2023",
+    "oms_mgrs2006",
+    "bula_paracetamol",
+    "bula_dipirona"
    ]
   },
   {
@@ -10171,7 +10360,10 @@
     "caderneta_crianca",
     "pni2026",
     "sisvan",
-    "sbp_sono2023"
+    "sbp_sono2023",
+    "oms_mgrs2006",
+    "bula_paracetamol",
+    "bula_dipirona"
    ]
   },
   {

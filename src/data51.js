@@ -61,7 +61,7 @@ const PU = (() => {
     rn: {suj: "Recém-nascido",
       s: e => `${e.al === "ame" && !e.st.bico ? e.resp + " refere aleitamento materno exclusivo em livre demanda, com boa sucção, sem dor mamilar. Nega uso de mamadeira, chupeta ou complementos." : e.alimF} Sono regular, em posição supina. Coto umbilical com higiene adequada, sem secreções. Eliminações fisiológicas presentes: diurese e evacuações frequentes, de coloração e consistência esperadas.`,
       o: ["RN ativo e reativo, corado, hidratado, em BEG, choro vigoroso.", "Pele: normocorada, anictérica (se icterícia: zona de Kramer ___).", "Cabeça: crânio simétrico, fontanela anterior com @F polpas digitais, normotensa; fontanela posterior fechada.", "Olhos: reflexo vermelho presente bilateralmente, pupilas isocóricas e fotorreagentes, sem secreções.", "Ouvidos: condutos auditivos pérvios.", "Nariz e boca: narinas pérvias, mucosa oral íntegra, palato normal, frênulo lingual sem alterações, sucção vigorosa.", "Pescoço: sem massas, mobilidade preservada; clavículas íntegras.", "AR: murmúrio vesicular fisiológico presente bilateralmente, sem ruídos adventícios.", "ACV: RCR em 2T, bulhas normofonéticas, sem sopros; pulsos femorais palpáveis e simétricos.", "ABD: globoso, flácido, RHA+, indolor, sem visceromegalias; coto umbilical sem sinais flogísticos.", "@GEN", "Ânus: pérvio, em posição anatômica.", "@QUAD", "Locomotor: simetria de membros, boa mobilidade, coluna íntegra.", "Neurológico: tônus em semiflexão, reflexos primitivos presentes (Moro, sucção, preensão, marcha reflexa)."],
-      fazer: ["Registrar peso, comprimento e PC nas curvas da Caderneta (escore-z)", "Calcular a variação de peso desde o nascimento (perda normal até ~10%; recuperar até 10–14 dias)", "Conferir coleta (ideal do 3º ao 5º dia) e resultado do teste do pezinho e as demais triagens neonatais", "Conferir BCG e hepatite B", "Avaliar icterícia (início, extensão – zonas de Kramer)", "Triagens: orelhinha que falhou → reteste em até 30 dias; reflexo vermelho ausente/duvidoso → oftalmologia; coraçãozinho normal se SpO₂ ≥ 95% e diferença ≤ 3% (90–94% ou diferença ≥ 4% repetir; ≤ 89% → ecocardiograma); linguinha pelo protocolo da maternidade (Bristol)", "Observar uma mamada (pega e posição)", "Conferir sorologias maternas e tipagem", "Agendar a consulta puerperal da mãe"],
+      fazer: ["Registrar peso, comprimento e PC nas curvas da Caderneta (escore-z)", "Conferir se recuperou o peso de nascimento (esperado até 10–14 dias de vida)", "Conferir coleta (ideal do 3º ao 5º dia) e resultado do teste do pezinho e as demais triagens neonatais", "Conferir BCG e hepatite B", "Avaliar icterícia (início, extensão – zonas de Kramer)", "Triagens: orelhinha que falhou → reteste em até 30 dias; reflexo vermelho ausente/duvidoso → oftalmologia; coraçãozinho normal se SpO₂ ≥ 95% e diferença ≤ 3% (90–94% ou diferença ≥ 4% repetir; ≤ 89% → ecocardiograma); linguinha pelo protocolo da maternidade (Bristol)", "Observar uma mamada (pega e posição)", "Conferir sorologias maternas e tipagem", "Agendar a consulta puerperal da mãe"],
       alim: ["Aleitamento exclusivo em livre demanda; sem água, chá ou outro leite até 6 meses [F]", "Pega e posição: corrigir na consulta; dor mamilar e fissuras pedem avaliação da mamada [C]", "Se não amamentado: fórmula infantil, preparada conforme o rótulo [F]"],
       est: ["Contato pele a pele, voz e olhar durante as mamadas"],
       acid: ["Verificar a temperatura da água do banho", "Nunca deixar sozinho em trocador, cama ou sofá", "Transporte em bebê-conforto voltado para trás, no banco traseiro"],
@@ -69,7 +69,7 @@ const PU = (() => {
     1: {suj: "Lactente",
       s: e => `${e.alimF} Refere evacuações e diurese presentes em todas as trocas de fralda. Nega regurgitações excessivas ou cólicas intensas. ${e.resp} relata que o bebê apresenta períodos de alerta, abre os olhos quando ouve vozes familiares e acalma-se ao colo; emite sons curtos quando está acordado e confortável. Sono em berço no quarto dos pais, sempre em decúbito dorsal.`,
       o: ["Estado geral: lactente alerta, normocorado, hidratado, com tônus adequado e reativo aos estímulos.", "Cabeça e pescoço: crânio simétrico, fontanela anterior aberta e normotensa com @F polpas digitais; fontanela posterior fechada. Sem linfonodomegalias.", "Olhos: acompanha a luz brevemente, sem secreções; reflexo vermelho presente.", "Orelhas: pavilhões de implantação normal, condutos auditivos externos pérvios. Reage a sons súbitos.", "Nariz: narinas pérvias, sem secreções.", "Orofaringe: mucosas coradas e hidratadas, palato íntegro, freio lingual sem alterações.", "AR: murmúrio vesicular fisiológico, sem ruídos adventícios.", "ACV: bulhas rítmicas, normofonéticas, em 2 tempos, sem sopros; pulsos femorais palpáveis e simétricos.", "Abdome: plano, flácido, indolor, sem visceromegalias; cicatriz umbilical bem formada, sem sinais flogísticos.", "@GEN", "Ânus sem fissuras.", "@QUAD", "Extremidades: simétricas, boa movimentação espontânea, bem perfundidas.", "Neurológico: reflexos primitivos presentes e simétricos (Moro, preensão palmar, marcha reflexa, tônico-cervical, sucção, busca); tônus adequado."],
-      fazer: ["Registrar peso, comprimento e PC nas curvas da Caderneta (escore-z)", "Ganho de peso esperado ≈ 20–30 g/dia no 1º trimestre", "Conferir o resultado do teste do pezinho e das demais triagens", "Icterícia prolongada (> 2 semanas no termo) → investigar", "Perguntar sobre o humor da mãe e a rede de apoio (depressão pós-parto; EPDS se indicado) – não vai para a evolução"],
+      fazer: ["Registrar peso, comprimento e PC nas curvas da Caderneta (escore-z)", "Peso, comprimento, PC e IMC/idade em escore-z (a consulta guiada calcula pelas curvas da OMS)", "Conferir o resultado do teste do pezinho e das demais triagens", "Icterícia prolongada (> 2 semanas no termo) → investigar", "Perguntar sobre o humor da mãe e a rede de apoio (depressão pós-parto; EPDS se indicado) – não vai para a evolução"],
       alim: ["Aleitamento exclusivo em livre demanda até 6 meses [F]", "Cólica e regurgitação fisiológicas: orientar, sem medicação de rotina; colo, massagem abdominal e ambiente calmo [C]"],
       est: ["Conversar com o bebê, contato visual frequente", "Sons suaves, canções e brinquedos visuais contrastantes", "Estimular o vínculo com toques, olhares e voz suave"],
       acid: ["Verificar a temperatura da água do banho", "Não deixar o bebê sozinho em locais elevados ou na banheira", "Evitar objetos pequenos ou cortantes por perto", "Proteger o ambiente de fumaça de cigarro"],
@@ -182,7 +182,7 @@ const PU = (() => {
     const m = mesesDe(k), L2 = [];
     L2.push(m < 12 ? "Vitamina D 400 UI/dia de 0 a 12 meses (SBP 2024) [F]" : m < 24 ? "Vitamina D 600 UI/dia a partir de 1 ano (SBP 2024) [F]" : "A SBP sugere 600 UI/dia de vitamina D de 1 a 18 anos, por dieta e/ou suplemento; sem programa do MS – decisão individual com a família [F]");
     if (m < 6) L2.push("Ferro no termo com peso adequado: só a partir de 6 meses; prematuro/baixo peso: a partir de 30 dias, 2–4 mg/kg/dia conforme o peso ao nascer [F]; quem recebe leite de vaca pode precisar de ferro a partir de 4 meses (SBP 2026) [F]");
-    else if (m < 9) L2.push("Ferro – 1º ciclo (6 aos 9 meses): sulfato ferroso 25 mg/mL, 10–12,5 mg/dia de ferro elementar (0,4–0,5 mL), em 2 ciclos de 3 meses com pausa de 3 meses (SBP 2026; PNSF) [F]");
+    else if (m < 9) L2.push("Ferro – 1º ciclo (6 aos 9 meses): sulfato ferroso 125 mg/mL (25 mg/mL de ferro elementar), 10–12,5 mg/dia de ferro elementar (10 gotas), em 2 ciclos de 3 meses com pausa de 3 meses (SBP 2026; PNSF) [F]");
     else if (m < 12) L2.push("Ferro: encerrar o 1º ciclo ao completar 3 meses de uso; 2º ciclo dos 12 aos 15 meses [F]");
     else if (m < 15) L2.push("Ferro – 2º ciclo (12 aos 15 meses): 10–12,5 mg/dia [F]");
     else if (m < 24) L2.push("Ferro: encerrar o 2º ciclo ao completar 3 meses de uso; prematuro/baixo peso: 1 mg/kg/dia até 24 meses [F]");
@@ -213,6 +213,8 @@ const PU = (() => {
   const TRIV = {ok: "realizado – normal", ag: "realizado – aguarda resultado", alt: "ALTERADO", nao: "não realizado"};
   const N = v => { const s = String(v ?? "").replace(",", "."); return s === "" ? NaN : parseFloat(s); };
   const ok = x => typeof x === "number" && isFinite(x);
+  // IG "38+0", "38 + 2" ou "38" → {s: semanas, dd: dias, d: total em dias}
+  const igParse = v => { const m2 = /^\s*(\d{2})(?:\s*\+\s*(\d))?/.exec(String(v || "")); if (!m2) return null; const w = +m2[1], dd = +(m2[2] || 0); return w >= 22 && w <= 44 ? {s: w, dd, d: w * 7 + dd} : null; };
   const up = s => s[0].toUpperCase() + s.slice(1);
   // ── lógica clínica. O CONTEÚDO segue a consulta (k); a idade exata (ctx.m, ctx.dias) só entra em segurança:
   // febre < 3 meses, variação de peso, ferro do prematuro a partir de 30 dias e idade corrigida.
@@ -221,12 +223,33 @@ const PU = (() => {
     const ma = ctx.mc != null ? ctx.mc : ctx.m != null ? ctx.m : mk0; const dias = ctx.dias != null ? ctx.dias : Math.round(mk0 * 30.4375);
     const out = {urg: [], fazer: [], cond: [], achados: [], rx: [], ret: null};
     const C2 = a => !!st[a];
-    const ign = N(st.ign), pn = N(st.pn), peso = N(st.peso), pant = N(st.pant), tax = N(st.tax);
+    const ign = N(st.ign), pn = N(st.pn), peso = N(st.peso), tax = N(st.tax);
     const prem = ok(ign) && ign < 37, baixo = ok(pn) && pn < 2500;
     const febreT = ok(tax) && tax >= 37.8;
     ALARM.forEach(([a, l]) => { const on = C2(a) || (a === "a_febre" && febreT); if (on) { const f3 = a === "a_febre" && ma < 3; out.urg.push({t: up(l) + (a === "a_febre" && febreT ? ` (Tax ${st.tax} °C)` : "") + (f3 ? " em menor de 3 meses: avaliação no mesmo dia/urgência pediátrica" : ": avaliar hoje; sinais de gravidade → urgência pediátrica"), src: "Caderneta", link: f3 ? "febre-menor-3m" : null}); out.cond.push(f3 ? "Febre em menor de 3 meses: encaminho para avaliação na urgência pediátrica" : `Avalio ${l} e oriento sinais de gravidade`); } });
-    if (ok(peso) && ok(pn) && dias <= 21){ const v = (peso - pn) / pn * 100; out.achados.push(`variação de peso desde o nascimento ${v.toFixed(1).replace(".", ",")}%`); if (v <= -10){ out.urg.push({t: `Perda de ${Math.abs(v).toFixed(1).replace(".", ",")}% do peso de nascimento (≥ 10%): avaliar mamada e hidratação hoje; retorno em 48 h`, src: "C"}); out.cond.push("Perda de peso ≥ 10% do nascimento: avalio mamada e hidratação"); out.ret = "em 48 horas"; } else if (dias >= 14 && peso < pn){ out.fazer.push({t: "Não recuperou o peso de nascimento até 14 dias: avaliar mamada e retorno em 1 semana", src: "C"}); out.cond.push("Peso de nascimento ainda não recuperado: oriento técnica de amamentação"); out.ret = out.ret || "em 1 semana"; } }
-    if (ok(peso) && ok(pant) && st.dant && ctx.ref){ const d = Math.round((ctx.ref - ctx.pdant) / DI); if (d > 0){ const g = (peso - pant) / d; out.achados.push(`ganho de ${Math.round(g)} g/dia desde a última consulta`); if (ma < 4 && g < 20) out.fazer.push({t: `Ganho de ${Math.round(g)} g/dia (< 20 g/dia no 1º trimestre): reavaliar alimentação e curva`, src: "C"}); } }
+    // crescimento: escore-z nas curvas da OMS (idade corrigida no prematuro até 2 anos; até 3 se IG < 28 semanas)
+    const igs = igParse(st.ign);
+    let cresA = null;
+    if (!tpl && typeof GROW !== "undefined" && (st.sexo === "m" || st.sexo === "f") && (ok(peso) || ok(N(st.comp)) || ok(N(st.pc)))){
+      const sx = st.sexo === "m" ? 1 : 2, comp = N(st.comp), pc = N(st.pc), kg = peso / 1000;
+      const corr = igs && igs.d < 259 && (dias < 730 || (igs.d < 196 && dias < 1096)) ? 280 - igs.d : 0;
+      const dz = Math.max(0, dias - corr), mz = dz / 30.4375;
+      const f = v => (v >= 0 ? "+" : "−") + Math.abs(v).toFixed(1).replace(".", ",");
+      const Z = {}; if (ok(peso)) Z.wfa = GROW.z("wfa", sx, dz, kg); if (ok(comp)) Z.lhfa = GROW.z("lhfa", sx, dz, comp); if (ok(pc) && dz <= 1856) Z.hcfa = GROW.z("hcfa", sx, dz, pc); if (ok(peso) && ok(comp)) Z.bfa = GROW.z("bfa", sx, dz, kg / Math.pow(comp / 100, 2));
+      const NOME = {wfa: "P/I", lhfa: dz < 731 ? "C/I" : "E/I", hcfa: "PC/I", bfa: "IMC/I"};
+      Object.keys(Z).forEach(kk => { if (Z[kk] != null) out.achados.push(`${NOME[kk]} ${f(Z[kk])} escore-z (${GROW.classe(kk, Z[kk], mz)})`); });
+      if (corr) out.achados.push(`calculado pela idade corrigida (${Math.round(dz)} dias)`);
+      const cb = Z.bfa != null ? GROW.classe("bfa", Z.bfa, mz) : null;
+      const al = [];
+      if (Z.bfa != null && Z.bfa < -3){ out.urg.push({t: "IMC/idade < −3 escore-z (magreza acentuada): avaliação no mesmo dia; edema ou desidratação → urgência", src: "SISVAN", link: "pu-crescimento"}); out.cond.push("Magreza acentuada (IMC/idade < −3 escore-z): avaliação clínica hoje e plano alimentar"); out.ret = out.ret || "em 7 dias"; }
+      else if (Z.bfa != null && (Z.bfa < -2 || Z.bfa > (mz < 60 ? 2 : 1))) al.push(`IMC/idade: ${cb}`);
+      if (Z.lhfa != null && Z.lhfa < -2) al.push(GROW.classe("lhfa", Z.lhfa, mz));
+      if (Z.hcfa != null && Math.abs(Z.hcfa) > 2) al.push(GROW.classe("hcfa", Z.hcfa, mz));
+      if (Z.wfa != null && Z.wfa < -2 && !(Z.bfa != null && Z.bfa < -3)) al.push(GROW.classe("wfa", Z.wfa, mz));
+      if (al.length){ out.fazer.push({t: "Desvio do crescimento: " + al.join("; ") + " – conferir a medida, a tendência na curva e investigar", src: "SISVAN", link: "pu-crescimento"}); out.cond.push(`Desvio do crescimento (${al.join("; ")}): investigo causas e oriento alimentação`); out.ret = out.ret || "em 30 dias"; }
+      else if (Z.bfa != null && Z.bfa > 1 && mz < 60) out.fazer.push({t: "IMC/idade > +1 escore-z (risco de sobrepeso): orientar alimentação e atividade física; acompanhar a tendência", src: "SISVAN", link: "pu-crescimento"});
+      cresA = cb ? `Estado nutricional: ${cb} (IMC/idade${corr ? ", idade corrigida" : ""})${al.length ? "; " + al.filter(a => !/^IMC/.test(a)).join("; ") : ""}` : null;
+    }
     if (st.orto === "alt" && mk0 < 4){ out.fazer.push({t: "Ortolani/Barlow alterado: USG de quadril e ortopedia com prioridade", src: "C"}); out.cond.push("Manobras de Ortolani/Barlow alteradas: solicito USG de quadril e encaminho à ortopedia com prioridade"); }
     if (mk0 < 6){ TRI.forEach(([kk, l]) => { if (st[kk] === "alt"){ out.fazer.push({t: `${up(l)} alterado: seguir o fluxo do serviço de referência`, src: "Caderneta", link: "pu-triagens"}); out.cond.push(`${up(l)} alterado: encaminho conforme o fluxo do serviço de referência`); } if (st[kk] === "nao"){ const tard = kk === "t_pez" && dias > 30; out.fazer.push({t: tard ? "Pezinho não coletado e > 30 dias: biotinidase + teste do suor no Nupad e triagem tardia pela Direg (Memorando 1098/2026)" : `${up(l)} não realizado: providenciar`, src: "Betim", link: "pu-triagens"}); out.cond.push(tard ? "Teste do pezinho não coletado (> 30 dias): solicito triagem tardia conforme o fluxo municipal" : `${up(l)} não realizado: solicito`); } });
       if (!tpl && !st.t_pez && dias > 5) out.fazer.push({t: "Conferir coleta e resultado do teste do pezinho na Caderneta", src: "Betim", link: "pu-triagens"}); }
@@ -248,7 +271,7 @@ const PU = (() => {
       else if (ma >= 12 && ma < 24){ fer = "Sulfato ferroso 1 mg/kg/dia de ferro elementar até 24 meses (prematuro/baixo peso)"; ferCond = "sulfato ferroso 1 mg/kg/dia de ferro elementar até 24 meses (prematuro/baixo peso)"; ferNec = true; }
       else if (dias < 30) fer = `Ferro a partir de 30 dias: ${mg} mg/kg/dia (prematuro/baixo peso)`; }
     else if ((k === 6 || k === 12) && ma < k - 0.5) out.fazer.push({t: `Ainda não está na idade do ${k === 6 ? "1º" : "2º"} ciclo de ferro: iniciar ao completar ${k} meses`, src: "SBP 2026"});
-    else if (k === 6 || k === 12){ const c1 = k === 6; fer = `Sulfato ferroso 25 mg/mL: 0,4–0,5 mL/dia (10–12,5 mg de ferro elementar), ${c1 ? "1º ciclo (6 aos 9 meses)" : "2º ciclo (12 aos 15 meses)"}`; ferCond = `sulfato ferroso 25 mg/mL, ${gfe} gotas/dia (10–12,5 mg/dia de ferro elementar), por 3 meses – ${c1 ? "1º ciclo (6 aos 9 meses)" : "2º ciclo (12 aos 15 meses)"}`; ferNec = true; }
+    else if (k === 6 || k === 12){ const c1 = k === 6; fer = `Sulfato ferroso 125 mg/mL (25 mg/mL de ferro elementar; frasco de 30 mL da REMUME): 10 gotas/dia (10–12,5 mg de ferro elementar, conforme o conta-gotas), ${c1 ? "1º ciclo (6 aos 9 meses)" : "2º ciclo (12 aos 15 meses)"}`; ferCond = `sulfato ferroso 125 mg/mL (25 mg/mL de ferro elementar), ${st.g_fe || "10"} gotas/dia (10–12,5 mg/dia de ferro elementar), por 3 meses – ${c1 ? "1º ciclo (6 aos 9 meses)" : "2º ciclo (12 aos 15 meses)"}`; ferNec = true; }
     else if (k === 4 && st.alim === "lv"){ fer = "Recebe leite de vaca: pode precisar de ferro a partir de 4 meses (SBP 2026) – 10–12,5 mg/dia; fórmula infantil já contém ferro"; ferCond = `sulfato ferroso 25 mg/mL, ${gfe} gotas/dia, por receber leite de vaca`; ferNec = true; }
     if (ctx.fora) out.fazer.unshift({t: "Idade fora da consulta: conferir o que depende da idade exata (ferro, dose de vitamina D, vacinas) antes de copiar a evolução", src: "I"});
     if (mk0 < 24) out.rx.push({t: `Vitamina D ${vitd} UI/dia${usaD && !tpl ? " – em uso" : ""}`, src: "SBP 2024"});
@@ -263,7 +286,7 @@ const PU = (() => {
     if (mk0 < 12 && st.alim === "lv") out.fazer.push({t: "Leite de vaca: o Guia Alimentar não recomenda antes de 9 meses e a SBP 2026 orienta evitar no 1º ano (fórmula até ~12 meses); se for a única opção, orientar preparo e diluição corretos", src: "Guia/SBP", link: "pu-alimentacao"});
     if (C2("bico") && k !== "rn") out.cond.push("Desestimulo mamadeira e chupeta");
     const alim = st.alim || alimDef(k);
-    const cres = tpl ? "Crescimento ___ (adequado / desvio: ___) nas curvas da Caderneta" : st.cres === "alt" ? "Desvio do crescimento" + (st.cres_t ? ": " + st.cres_t : " – ver plano") : "Crescimento adequado nas curvas da Caderneta";
+    const cres = tpl ? "Crescimento ___ (adequado / desvio: ___) nas curvas da Caderneta" : cresA ? cresA : st.cres === "alt" ? "Desvio do crescimento" + (st.cres_t ? ": " + st.cres_t : " – ver plano") : "Crescimento adequado nas curvas da Caderneta";
     const suplOk = usaD && !doseD && (!ferNec || usaFe);
     const A = [out.urg.length ? "Criança com sinal de alerta – ver plano" : "Criança em bom estado geral", cres, dnpm, ALIM_A[alim] || "Alimentação adequada", tpl ? "Esquema vacinal ___ (atualizado / pendências: ___)" : C2("v_ok") ? "Esquema vacinal atualizado" : (st.v_pend ? "Vacinas pendentes: " + st.v_pend : "Situação vacinal a conferir")];
     if (mk0 < 24) A.push(tpl ? "Suplementação ___ (adequada / a ajustar)" : suplOk ? "Suplementação adequada" : "Suplementação a ajustar");
@@ -300,26 +323,33 @@ const PU = (() => {
     }
     p1.push(usos.length ? `Em uso de: ${usos.join("; ")}.` : "Sem suplementos em uso.");
     if (mk0 >= 12) p1.push(`Frequenta creche/escola: ${tpl || !st.creche ? "___" : st.creche}. Tempo de telas: ${tpl || !st.telas ? "___" : st.telas} h/dia. Escova os dentes ${tpl || !st.escova ? "___" : st.escova} vez(es) ao dia, com creme dental com flúor.${mk0 >= 18 && mk0 < 48 ? ` Controle esfincteriano: ${tpl || !st.esfin ? "___" : st.esfin}.` : ""}`);
+    let NB = "";
     if (prim){
       if (tpl){
-        p1.push("Nascido(a) de parto ___, com IG ___ semanas, peso ___ g, comprimento ___ cm, PC ___ cm e Apgar ___. Intercorrências neonatais: ___ (UTI, fototerapia, infecção).");
         p1.push("Sorologias maternas: sífilis ___, HIV ___, hepatite B ___, toxoplasmose ___; tipagem materna ___.");
         p1.push("Triagens neonatais: teste do pezinho ___, orelhinha ___, olhinho ___, coraçãozinho ___ e linguinha ___.");
         p1.push("Mãe/cuidador(a) com humor ___ e rede de apoio ___; fumaça de cigarro no domicílio ___.");
+        NB = ["# INFORMAÇÕES DO NASCIMENTO:", "Gestação ___ (única / gemelar), ___ (sem intercorrências / com ___)", "Data do parto: ___", "IG ao parto: ___ + ___", "Tipo de Parto: ___", "APGAR: ___/___", "Peso ao nascer: ___ g | Altura ao nascer: ___ cm | PC ao nascer: ___ cm - ___ (AIG / PIG / GIG)", "Alta ___ (sem intercorrências / com ___)"].join("\n");
       } else {
-        const nb = [];
-        if (st.parto) nb.push("de parto " + st.parto); if (st.dparto) nb.push("em " + st.dparto); if (st.ign) nb.push(`com IG de ${st.ign} semanas`);
-        const med = []; if (st.pn) med.push(`peso ${st.pn} g`); if (st.cn) med.push(`comprimento ${st.cn} cm`); if (st.pcn) med.push(`PC ${st.pcn} cm`); if (st.apgar) med.push(`Apgar ${st.apgar}`);
-        if (nb.length || med.length) p1.push(`Nascido(a) ${nb.join(", ")}${med.length ? (nb.length ? "; " : "") + med.join(", ") : ""}.`);
-        if (st.alta) p1.push(`Alta: ${st.alta}.`);
         if (st.sor) p1.push(`Sorologias maternas: ${st.sor}.`);
         const tri = TRI.filter(([kk]) => st[kk]).map(([kk, l]) => `${l} ${TRIV[st[kk]]}`);
         if (tri.length) p1.push(`Triagens neonatais: ${tri.join("; ")}.`);
         const cu = []; if (st.c_humor) cu.push("humor " + st.c_humor); if (st.c_rede) cu.push("rede de apoio " + st.c_rede); if (st.c_fumo) cu.push(st.c_fumo === "sim" ? "há fumantes no domicílio" : "sem fumaça de cigarro no domicílio");
         if (cu.length) p1.push(`Cuidador(a): ${cu.join("; ")}.`);
+        const igs = igParse(st.ign);
+        const cl = typeof GROW !== "undefined" && igs ? GROW.ig(st.sexo, igs.d, N(st.pn)) : null;
+        const L2 = [];
+        if (st.gest) L2.push("Gestação " + st.gest);
+        if (ctx.dn) L2.push("Data do parto: " + new Date(ctx.dn).toISOString().slice(0, 10).split("-").reverse().map((v, i) => i === 2 ? v.slice(2) : v).join("/"));
+        if (igs) L2.push(`IG ao parto: ${igs.s} + ${igs.dd}`);
+        if (st.parto) L2.push("Tipo de Parto: " + st.parto);
+        if (st.apgar) L2.push("APGAR: " + st.apgar);
+        if (st.pn || st.cn || st.pcn) L2.push(`Peso ao nascer: ${st.pn || "___"} g | Altura ao nascer: ${st.cn || "___"} cm | PC ao nascer: ${st.pcn || "___"} cm${cl && cl.c ? " - " + cl.c : ""}`);
+        if (st.alta) L2.push(/^alta/i.test(st.alta) ? st.alta : "Alta " + st.alta);
+        if (L2.length > 1) NB = ["# INFORMAÇÕES DO NASCIMENTO:", ...L2].join("\n");
       }
     }
-    const S = tit + "\n" + p1.join(" ");
+    const S = tit + "\n" + p1.join(" ") + (NB ? "\n\n" + NB : "");
     // O – exame (antropometria e sinais vitais ficam fora: vão para o campo próprio do SIGSS)
     const fn = N(st.font);
     const F = tpl || !ok(fn) ? "___" : String(st.font);
@@ -367,8 +397,31 @@ const PU = (() => {
     g.push({g: "Prevenção de acidentes", i: I.acid});
     return g;
   }
+  // ── prescrições-modelo por idade (as mesmas opções da receita da consulta guiada)
+  const RXN = {
+    vitd: m => ({trilha: "evidencia", titulo: `Vitamina D ${m < 12 ? "400" : "600"} UI/dia (200 UI/gota – comprar)`, texto: `USO ORAL\n1. Vitamina D (colecalciferol) 200 UI/gota ______ 1 frasco\n   Dar ${m < 12 ? "2 gotas (400 UI)" : "3 gotas (600 UI)"} 1 vez ao dia${m < 12 ? " até 12 meses; a partir de 1 ano, 3 gotas (600 UI)" : ""}.\n   Pode ser de qualquer marca, desde que a apresentação seja de 200 UI por gota (conferir no rótulo ou com o farmacêutico).`, dose: "F", nota: "SBP DC 181/2024: 400 UI/dia de 0 a 12 meses e 600 UI/dia de 1 a 18 anos. A conversão em gotas vale só para a apresentação de 200 UI/gota."}),
+    poli: () => ({trilha: "sus", titulo: "Polivitamínico gotas (REMUME) – alternativa sem custo", texto: "USO ORAL\n1. Polivitamínico gotas (por mL: vitamina A 3.000 UI, complexo B, vitamina C 80 mg, vitamina D2 900 UI, vitamina E 15 mg) ______ 1 frasco\n   Dar 0,45 mL 1 vez ao dia (≈ 400 UI de vitamina D2), medido com seringa.", dose: "NV", nota: "Única fonte de vitamina D na REMUME de Betim; D2 é menos potente que D3 e fornece ~1.350 UI/dia de vitamina A. Usar só até 12 meses e se a família não puder comprar a vitamina D; nunca junto com megadose de vitamina A."}),
+    ferro: k => ({trilha: "ambos", titulo: `Sulfato ferroso – ${k === 6 ? "1º" : "2º"} ciclo (REMUME)`, texto: `USO ORAL\n1. Sulfato ferroso 125 mg/mL (25 mg/mL de ferro elementar) gotas ______ 1 frasco de 30 mL\n   Dar 10 gotas 1 vez ao dia, por 3 meses (${k === 6 ? "dos 6 aos 9 meses" : "dos 12 aos 15 meses"}). Não precisa suspender o peito. Limpar os dentes depois (pode manchar).`, dose: "NV", nota: "PNSF 2022/SBP 2026: 10–12,5 mg/dia de ferro elementar em 2 ciclos de 3 meses. 10 gotas = 10 mg (frasco com 25 gotas/mL) a 12,5 mg (20 gotas/mL): dentro da dose nas duas apresentações – conferir as gotas por mL no frasco da REMUME."}),
+    parag: () => ({trilha: "ambos", titulo: "Paracetamol gotas – febre ou dor (REMUME)", texto: "USO ORAL\n1. Paracetamol 200 mg/mL gotas ______ 1 frasco\n   Dar ___ gotas (1 gota por kg; máximo 35 gotas por dose) até de 6/6 horas, se febre ou dor. Não dar mais de 5 vezes em 24 horas.", dose: "F", nota: "Bula: 1 gota/kg (≈ 13 mg/kg) a cada 4–6 h, máx. 35 gotas por dose e 5 doses/dia; < 11 kg ou < 2 anos, dose pela orientação médica. Febre em < 3 meses: avaliação médica antes do antitérmico."}),
+    paras: () => ({trilha: "fora", titulo: "Paracetamol suspensão 32 mg/mL – febre ou dor (comprar)", texto: "USO ORAL\n1. Paracetamol 32 mg/mL suspensão oral ______ 1 frasco\n   Dar ___ mL (10–15 mg/kg) até de 6/6 horas, se febre ou dor. Não dar mais de 5 vezes em 24 horas.", dose: "F", nota: "Bula: 10–15 mg/kg/dose a cada 4–6 h, máx. 5 doses e 75 mg/kg/dia. Tabela da bula: 11–15 kg 5 mL; 16–21 kg 7,5 mL; 22–26 kg 10 mL; 27–31 kg 12,5 mL. Abaixo de 11 kg: calcular pelo peso (mL = kg × 0,31 a 0,47)."}),
+    dipg: () => ({trilha: "ambos", titulo: "Dipirona gotas – febre ou dor (REMUME; ≥ 3 meses e ≥ 5 kg)", texto: "USO ORAL\n1. Dipirona 500 mg/mL gotas ______ 1 frasco\n   Dar ___ gotas até de 6/6 horas, se febre ou dor.", dose: "F", nota: "Bula (20 gotas/mL): 5–8 kg 2–5 gotas; 9–15 kg 3–10; 16–23 kg 5–15; 24–30 kg 8–20 gotas por dose, até 4 vezes ao dia. Contraindicada em < 3 meses ou < 5 kg."}),
+    dips: () => ({trilha: "fora", titulo: "Dipirona solução oral 50 mg/mL – febre ou dor (comprar; ≥ 3 meses e ≥ 5 kg)", texto: "USO ORAL\n1. Dipirona 50 mg/mL solução oral ______ 1 frasco\n   Dar ___ mL até de 6/6 horas, se febre ou dor.", dose: "F", nota: "Bula: 5–8 kg 1,25–2,5 mL; 9–15 kg 2,5–5 mL; 16–23 kg 3,75–7,5 mL; 24–30 kg 5–10 mL por dose, até 4 vezes ao dia. Contraindicada em < 3 meses ou < 5 kg."}),
+    sime: () => ({trilha: "ambos", titulo: "Simeticona gotas – gases/cólica (REMUME; opção, sem benefício comprovado)", texto: "USO ORAL\n1. Simeticona 75 mg/mL gotas ______ 1 frasco\n   Dar 3 a 5 gotas, 3 vezes ao dia, se desconforto por gases.", dose: "F", nota: "Bula: lactentes 3–5 gotas 3 vezes ao dia. Cochrane 2016: sem evidência de benefício na cólica (RR de resposta 0,95) – usar só se a família quiser, depois das medidas de acalmar."}),
+    reut: () => ({trilha: "fora", titulo: "L. reuteri DSM 17938 (Colidis) – cólica em amamentados (comprar)", texto: "USO ORAL\n1. Lactobacillus reuteri DSM 17938 gotas (ex.: Colidis) ______ 1 frasco\n   Dar 5 gotas 1 vez ao dia por 21 dias, misturadas em leite materno ordenhado ou outro líquido frio ou em temperatura ambiente (nunca quente).", dose: "F", nota: "Metanálise de dados individuais (Sung 2018, 4 ECR): −25 min/dia de choro aos 21 dias e NNT 2,6 em bebês amamentados; sem efeito demonstrado com fórmula. Fitoterápicos (funcho, camomila, melissa): evidência baixa e inconsistente – não recomendados (Cochrane 2016)."})
+  };
+  function rx(k){
+    const m = mesesDe(k), L2 = [];
+    if (m < 24) L2.push(RXN.vitd(m));
+    if (m < 12) L2.push(RXN.poli());
+    if (k === 6 || k === 12) L2.push(RXN.ferro(k));
+    if (m <= 4) L2.push(RXN.sime(), RXN.reut());
+    if (m < 3){ const F3 = "\n   Febre (37,8 °C ou mais) em bebê menor de 3 meses: procurar atendimento no mesmo dia, antes de dar o remédio."; [RXN.parag(), RXN.paras()].forEach(r => { r.texto = r.texto.replace("se febre ou dor", "se dor") + F3; L2.push(r); }); }
+    else L2.push(RXN.parag(), RXN.paras());
+    if (m >= 4) L2.push(RXN.dipg(), RXN.dips());
+    return L2;
+  }
   const mesesCal = (dn, ref) => { const a = new Date(dn), b = new Date(ref); let m = (b.getUTCFullYear() - a.getUTCFullYear()) * 12 + (b.getUTCMonth() - a.getUTCMonth()); if (addM(dn, m) > ref) m--; return m + (ref - addM(dn, m)) / DI / 30.4375; };
-  return {mesesCal, L, X, C, qual, idade, evo, info, roteiro, plano, marcos, alvo, janela, PROX, mesesDe, VACHOJE};
+  return {rx, mesesCal, L, X, C, qual, idade, evo, info, roteiro, plano, marcos, alvo, janela, PROX, mesesDe, VACHOJE};
 })();
 
 // ── aplica o conteúdo único aos itens "Consultas por idade" (o modelo = evolução da consulta guiada sem dados)
@@ -395,8 +448,9 @@ const PU = (() => {
     c.sistema = "Consultas por idade";
     c.S = ev.S; c.O = ev.O; c.A = ev.A; c.P = ev.P;
     c.roteiro = PU.roteiro(x.k);
+    c.rx = PU.rx(x.k);
     if (x.k === 36 && c.tags) c.tags = c.tags.replace(/4 anos 5 anos /, "");
-    const fx = ["sbp_sono2023", ...(x.k === 6 ? ["guia_menor2_cons", "bliss_cresc2017", "bliss_engasgo2016", "sbp_blw2017"] : x.k === 9 || x.k === 12 ? ["guia_menor2_cons"] : [])];
+    const fx = ["sbp_sono2023", "oms_mgrs2006", "bula_paracetamol", ...(PU.mesesDe(x.k) >= 4 ? ["bula_dipirona"] : []), ...(PU.mesesDe(x.k) <= 4 ? ["bula_simeticona", "bula_colidis", "sung2018_reuteri", "cochrane_colica2016"] : []), ...(x.k === "rn" ? ["ig_rn2014"] : []), ...(x.k === 6 ? ["guia_menor2_cons", "bliss_cresc2017", "bliss_engasgo2016", "sbp_blw2017"] : x.k === 9 || x.k === 12 ? ["guia_menor2_cons"] : [])];
     if (c.evid){ c.evid.fontes = [...new Set([...(c.evid.fontes || []), ...fx])]; }
     c.nv = [...new Set([...(c.nv || []).filter(t => !/Marcos do desenvolvimento: conferir/.test(t)), "Marcos do desenvolvimento: conferir o texto exato do instrumento da Caderneta 2025.", "Gotas por mL do sulfato ferroso da REMUME e UI por gota da vitamina D (conferir no frasco)."])];
     if (x.extra) c.nv.push("Consulta não prevista no calendário da Caderneta 2025: confirmar se a agenda da unidade a oferece.");

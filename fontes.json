@@ -1,12 +1,12 @@
 {
- "gerado": "2026-10-22T18:30:07.877Z",
+ "gerado": "2026-10-22T20:31:54.389Z",
  "cmed": {
   "data": "09/10/2026",
   "fonte": "cmed_pmc2026",
   "icms": "PMC com ICMS de Minas Gerais: 12% para genéricos e 18% para os demais"
  },
- "n_fontes": 626,
- "n_itens": 364,
+ "n_fontes": 628,
+ "n_itens": 365,
  "sem_url": [
   "remume",
   "aap_oma",
@@ -262,7 +262,8 @@
   "betim_nt_arbo2025",
   "betim_fluxo_arbo",
   "betim_rx_dengue2024",
-  "betim_arbo_apres2024"
+  "betim_arbo_apres2024",
+  "betim_nt14_2026"
  ],
  "nao_conferidas": [
   "aap_oma",
@@ -822,6 +823,7 @@
     "cr-fa",
     "cr-ferro",
     "cr-fibromialgia",
+    "cr-glargina",
     "cr-glp1",
     "cr-gota",
     "cr-has",
@@ -3226,6 +3228,7 @@
    "usado_em": [
     "cr-dm2",
     "cr-dm2-insulina",
+    "cr-glargina",
     "cr-glp1",
     "cr-icfep",
     "cr-polifarmacia"
@@ -6404,7 +6407,8 @@
    "ano": 2026,
    "usado_em": [
     "cr-dm2",
-    "cr-dm2-insulina"
+    "cr-dm2-insulina",
+    "cr-glargina"
    ]
   },
   {
@@ -6416,7 +6420,8 @@
    "ano": 2026,
    "usado_em": [
     "cr-dm2",
-    "cr-dm2-insulina"
+    "cr-dm2-insulina",
+    "cr-glargina"
    ]
   },
   {
@@ -6819,9 +6824,7 @@
    "f": "F",
    "url": "",
    "ano": 2026,
-   "usado_em": [
-    "cr-dm2-insulina"
-   ]
+   "usado_em": []
   },
   {
    "k": "cdc_marcos2022",
@@ -8529,6 +8532,32 @@
    "usado_em": [
     "dengue-a"
    ]
+  },
+  {
+   "k": "betim_nt14_2026",
+   "s": "SMS Betim – NT DAPS nº 14/2026 (glargina na APS)",
+   "t": "Secretaria Municipal de Saúde de Betim, Diretoria de Atenção Primária (DAPS). Nota Técnica nº 14/2026 – liberação escalonada da insulina glargina 100 UI/mL (refil 3 mL) e da caneta reutilizável na APS: fase 1 vigente (DM1 de 2 a < 18 anos fora do CEAF; ≥ 80 anos com DM1 ou DM2, inclusive novos diagnósticos); fases 2 a 5 (≥ 70 anos) aguardam liberação; marcadores de risco da fase 3; prescrição (dose, horário, refis para até 180 dias, caneta e agulhas); refis/mês = (dose × 30) ÷ 300; dispensação só na UBS de referência, 30 dias por vez; registro no SIGSS/SIGAF; conversão da NTC 169/2026; seguimento (contato na 1ª semana, consulta em até 30 dias, HbA1c ≥ 3 meses); armazenamento; perda da caneta com boletim de ocorrência. SEI 4133.01.0031439/2026-74, assinada em 19–20/10/2026 (Drive da usuária, pasta DIA A DIA).",
+   "f": "F",
+   "url": "",
+   "ano": 2026,
+   "usado_em": [
+    "cr-dm2",
+    "cr-dm2-insulina",
+    "cr-glargina",
+    "hiperglicemia"
+   ]
+  },
+  {
+   "k": "cochrane_glarg2020",
+   "s": "Cochrane 2020 – análogos de longa ação × NPH no DM2",
+   "t": "Semlitsch T, et al. (Ultra-)long-acting insulin analogues versus NPH insulin (human isophane insulin) for adults with type 2 diabetes mellitus. Cochrane Database Syst Rev. 2020;11:CD005613 (RS de 24 ECR): HbA1c semelhante; glargina reduz hipoglicemia confirmada e noturna; hipoglicemia grave RR 0,68 (IC95% 0,46–1,01; RAR −1,2%; certeza muito baixa); desfechos como morte e complicações insuficientes ou sem diferença; metas glicêmicas dos estudos mais rígidas que as atuais. doi:10.1002/14651858.CD005613.pub4; PMID 33166419.",
+   "f": "F",
+   "url": "https://doi.org/10.1002/14651858.CD005613.pub4",
+   "ano": 2020,
+   "usado_em": [
+    "cr-dm2-insulina",
+    "cr-glargina"
+   ]
   }
  ],
  "itens": [
@@ -9381,7 +9410,8 @@
     "rename",
     "remume",
     "sbd_dispensacao",
-    "fp_elenco2026"
+    "fp_elenco2026",
+    "betim_nt14_2026"
    ]
   },
   {
@@ -10890,7 +10920,8 @@
     "sbd_prediab",
     "betim_retino2025",
     "betim_dm2026",
-    "ntc169_2026"
+    "ntc169_2026",
+    "betim_nt14_2026"
    ]
   },
   {
@@ -10905,7 +10936,8 @@
     "remume",
     "ntc169_2026",
     "betim_dm2026",
-    "betim_glargina_prior"
+    "betim_nt14_2026",
+    "cochrane_glarg2020"
    ]
   },
   {
@@ -13087,6 +13119,20 @@
     "abd_pr2008",
     "gvs2_hansen",
     "gvs2_lt"
+   ]
+  },
+  {
+   "id": "cr-glargina",
+   "nome": "Troca da insulina NPH pela glargina (NTC 169/2026 e NT Betim 14/2026)",
+   "modulo": "cr",
+   "nv": 3,
+   "fontes": [
+    "ntc169_2026",
+    "betim_nt14_2026",
+    "cochrane_glarg2020",
+    "betim_dm2026",
+    "pcdt_dm2",
+    "remume"
    ]
   }
  ]

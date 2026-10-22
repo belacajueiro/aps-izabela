@@ -111,3 +111,15 @@ const COPOSP = ml => { const n = Math.round(ml / 200); return n <= 1 ? "1 copo" 
   c.mudancas = [...(c.mudancas || []), "v48 (22/10/2026): orientação ao paciente reescrita – volumes calculados pelo peso (sem frações), preparo e validade do soro, criadouros, piora na fase de queda da febre e retorno; sinais de alarme em linguagem leiga."];
   c.nv = [...(c.nv || []), "Guardar o soro pronto na geladeira: as bulas consultadas indicam temperatura ambiente/lugar fresco e não mencionam geladeira – o app orienta 'lugar fresco'."];
 })();
+
+// ── reescrita das orientações ao paciente (padrão v48): partes com título, remédios em linguagem simples a partir da receita do item,
+// cuidados em casa, quando voltar e prevenção; sinais de alarme (lista "Procure atendimento imediatamente se") sem termos técnicos.
+// Nenhum dado clínico novo: o texto deriva do plano (P), da receita (rx), do encaminhamento e das fontes já citadas em cada item.
+const ORI59_LOG = [];
+const ORI59 = (id, texto, alarme) => {
+  const c = CONDICOES.find(x => x.id === id);
+  if (!c){ ORI59_LOG.push("não achei: " + id); return; }
+  c.orient = texto.trim();
+  if (alarme) c.alarme = alarme;
+  c.mudancas = [...(c.mudancas || []), "v48 (22/10/2026): orientação ao paciente reescrita em linguagem simples, com partes, remédios, quando voltar" + (alarme ? " e sinais de alarme revistos" : "") + "."];
+};

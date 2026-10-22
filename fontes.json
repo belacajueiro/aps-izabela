@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-22T17:18:35.877Z",
+ "gerado": "2026-10-22T17:32:52.898Z",
  "cmed": {
   "data": "09/10/2026",
   "fonte": "cmed_pmc2026",
@@ -7507,6 +7507,7 @@
    "url": "",
    "ano": 2023,
    "usado_em": [
+    "bronquiolite",
     "pu-12m",
     "pu-15m",
     "pu-18m",
@@ -8534,7 +8535,7 @@
    "id": "resfriado",
    "nome": "Resfriado comum",
    "modulo": "de",
-   "nv": 1,
+   "nv": 2,
    "fontes": [
     "cochrane_resfriado",
     "cab28"
@@ -9112,7 +9113,8 @@
     "fhemig_bronq",
     "vsr_sbim2026",
     "nirsevimabe",
-    "ms_bva2026"
+    "ms_bva2026",
+    "sbp_sono2023"
    ]
   },
   {

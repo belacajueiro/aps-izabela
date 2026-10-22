@@ -266,6 +266,8 @@ ol.passos>li::before{content:counter(p);position:absolute;left:10px;top:8px;widt
 .gfig button{display:block;width:100%;padding:8px;border:1px solid var(--line);border-radius:var(--r);background:#fff;cursor:zoom-in}
 .gfig img{display:block;width:100%;height:auto}
 .gfig figcaption{font-size:.78rem;color:var(--muted);margin-top:6px;max-width:74ch}
+.gfig.foto{display:inline-block;vertical-align:top;width:min(100%,265px);margin-right:12px}
+@media (max-width:420px){.gfig.foto{width:100%;margin-right:0}}
 .calc{border:1px solid var(--accent);border-radius:var(--r);background:var(--surface);padding:12px 14px;margin:0 0 14px}
 .calc h4{margin:0 0 2px;font:700 1rem var(--f-display)}
 .calc .cd{color:var(--muted);font-size:.8rem;margin:0 0 10px}
@@ -1670,7 +1672,7 @@ function bloco(b){
   if (b.ol) return `<ol>${b.ol.map(x=>`<li>${fmt(x)}</li>`).join("")}</ol>`;
   if (b.tab) return `<div class="gtw"><table class="gt"><thead><tr>${b.tab.h.map(h=>`<th>${fmt(h)}</th>`).join("")}</tr></thead><tbody>${b.tab.r.map(r=>`<tr>${r.map(x=>`<td>${fmt(x)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>${b.nota?`<p class="gnote">${fmt(b.nota)}</p>`:""}`;
   if (b.fluxo) return `<div class="flow" role="group" aria-label="Fluxograma">${flowNodes(b.fluxo)}</div>${b.nota?`<p class="gnote">${fmt(b.nota)}</p>`:""}`;
-  if (b.fig) return `<figure class="gfig"><button type="button" data-zoom="${esc(b.fig.src)}" data-cap="${esc(b.fig.leg)}" aria-label="Ampliar: ${esc(b.fig.leg)}"><img loading="lazy" src="${esc(b.fig.src)}" alt="${esc(b.fig.alt || b.fig.leg)}"></button><figcaption>${fmt(b.fig.leg)}${b.fig.fonte?` · Fonte: ${fmt(b.fig.fonte)}`:""}</figcaption></figure>`;
+  if (b.fig) return `<figure class="gfig${b.fig.foto?" foto":""}"><button type="button" data-zoom="${esc(b.fig.src)}" data-cap="${esc(b.fig.leg)}" aria-label="Ampliar: ${esc(b.fig.leg)}"><img loading="lazy" src="${esc(b.fig.src)}" alt="${esc(b.fig.alt || b.fig.leg)}"></button><figcaption>${fmt(b.fig.leg)}${b.fig.fonte?` · Fonte: ${fmt(b.fig.fonte)}`:""}</figcaption></figure>`;
   if (b.perola) { const q = b.perola; return `<div class="perola"><div class="ph">${fmt(q.t)}${q.l?` <span class="lab ${q.l}">${q.l}</span>`:""}</div><p>${fmt(q.x)}</p>${q.d?`<div class="pd"><b>Desfecho:</b> ${fmt(q.d)}</div>`:""}</div>`; }
   if (b.trio) return `<div class="trio"><div class="box"><div class="k ideal">Melhor evidência</div><p>${fmt(b.trio.ideal)}</p></div><div class="box"><div class="k sus">No SUS de Betim</div><p>${fmt(b.trio.sus)}</p></div><div class="box"><div class="k ponte">Como decidir</div><p>${fmt(b.trio.ponte)}</p></div></div>`;
   if (b.calc) return calcHtml(b.calc);

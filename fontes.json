@@ -1,12 +1,12 @@
 {
- "gerado": "2026-10-22T12:53:37.695Z",
+ "gerado": "2026-10-22T16:39:08.401Z",
  "cmed": {
   "data": "09/10/2026",
   "fonte": "cmed_pmc2026",
   "icms": "PMC com ICMS de Minas Gerais: 12% para genéricos e 18% para os demais"
  },
- "n_fontes": 614,
- "n_itens": 352,
+ "n_fontes": 619,
+ "n_itens": 364,
  "sem_url": [
   "remume",
   "aap_oma",
@@ -688,6 +688,10 @@
     "parestesias",
     "paroniquia",
     "pediculose",
+    "pele-alopecia",
+    "pele-candidiase",
+    "pele-eczemas",
+    "pele-onicomicose",
     "pep",
     "picada-inseto",
     "pielonefrite",
@@ -928,6 +932,15 @@
     "parestesias",
     "paroniquia",
     "pediculose",
+    "pele-alopecia",
+    "pele-candidiase",
+    "pele-eczemas",
+    "pele-melasma",
+    "pele-onicomicose",
+    "pele-pitiriase-rosea",
+    "pele-rosacea",
+    "pele-urticaria-cronica",
+    "pele-vitiligo",
     "picada-inseto",
     "pielonefrite",
     "pitiriase-versicolor",
@@ -6445,6 +6458,8 @@
    "ano": 2026,
    "usado_em": [
     "ivc",
+    "pele-cancer",
+    "pele-eczemas",
     "po-acamado"
    ]
   },
@@ -8258,7 +8273,8 @@
    "url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/svsa/vigilancia/guia-de-vigilancia-em-saude-volume-2-6a-edicao/view",
    "ano": 2024,
    "usado_em": [
-    "in-esporotricose"
+    "in-esporotricose",
+    "pele-atlas"
    ]
   },
   {
@@ -8291,7 +8307,8 @@
    "url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/svsa/vigilancia/guia-de-vigilancia-em-saude-volume-2-6a-edicao/view",
    "ano": 2024,
    "usado_em": [
-    "in-lt"
+    "in-lt",
+    "pele-atlas"
    ]
   },
   {
@@ -8347,7 +8364,86 @@
    "ano": 2024,
    "usado_em": [
     "hanseniase",
-    "in-hansen"
+    "in-hansen",
+    "pele-atlas",
+    "pele-vitiligo"
+   ]
+  },
+  {
+   "k": "tsrs_derm2023",
+   "s": "TelessaúdeRS-UFRGS – Protocolo de Dermatologia (2023)",
+   "t": "TelessaúdeRS-UFRGS / SES-RS. Protocolos de encaminhamento – Dermatologia, versão digital 2023 (revisão 05/05/2023; cópia no Drive da usuária): critérios de encaminhamento e 'tratamento clínico otimizado' na APS para acne, melanoma (Quadro 3 – ABCDE e 'patinho feio'; Quadro 4 – alto risco), câncer não melanoma, ceratose actínica (Quadro 8 – 5-FU 5%), eczemas (Quadro 13 – seborreico, contato, disidrótico, estase), micoses (Quadros 15–18 – candidíase, tineas, pitiríase versicolor, onicomicose), alopecias (Quadro 24), urticária crônica (Quadro 25), rosácea (Quadro 30), melasma (Quadro 31), vitiligo (Quadro 32), queloide; potência dos corticoides tópicos (Quadro 12) (protocolo de regulação estadual com a SBD e o HCPA).",
+   "f": "F",
+   "url": "https://www.ufrgs.br/telessauders/regulasus/#regulasus-protocolos",
+   "ano": 2023,
+   "usado_em": [
+    "pele-alopecia",
+    "pele-atlas",
+    "pele-cancer",
+    "pele-candidiase",
+    "pele-eczemas",
+    "pele-melasma",
+    "pele-onicomicose",
+    "pele-rosacea",
+    "pele-urticaria-cronica",
+    "pele-vitiligo"
+   ]
+  },
+  {
+   "k": "abd_pr2008",
+   "s": "An Bras Dermatol 2008 – Pitiríase rósea (revisão)",
+   "t": "Miranda SMB, Delmaestro D, Miranda PB, Filgueira AL, Pontes LFS. Pitiríase rósea. An Bras Dermatol. 2008;83(5):461-9 (revisão): placa-mãe em 50–94%, 2–10 cm, 7–14 dias antes da erupção; lesões de 0,5–1,5 cm nas linhas de clivagem ('árvore de Natal'); evolução média de 8 semanas (até 12); formas atípicas em ~20% (inversa, papulosa, vesiculosa, sem placa-mãe); diferencial obrigatório com sífilis secundária (VDRL/RPR), dermatofitose, eczema numular, farmacodermia, psoríase gutata; anti-HIV em formas atípicas/generalizadas; tratamento sintomático (corticoide tópico, anti-histamínico); aciclovir 800 mg 5x/dia por 7 dias e eritromicina com estudos pequenos (revisão narrativa).",
+   "f": "F",
+   "url": "https://www.scielo.br/j/abd/a/Y8BVHW77CHDRzpFxPzhxmvS/?lang=pt",
+   "ano": 2008,
+   "usado_em": [
+    "pele-atlas",
+    "pele-pitiriase-rosea"
+   ]
+  },
+  {
+   "k": "msd_pr2025",
+   "s": "MSD Manual – Pitiríase rósea (nov/2025)",
+   "t": "Das S. Pityriasis rosea. MSD Manual Professional Version, revisão completa nov/2025: placa-mãe 2–10 cm e erupção em 7–14 dias, resolução espontânea em ~5 semanas, mais comum de 10 a 35 anos; sorologia para sífilis se palmas/plantas acometidas, sem placa-mãe ou distribuição/sequência incomum; tratamento sintomático; aciclovir curto pode ajudar em doença precoce e extensa; na gestação, sobretudo nas primeiras 15 semanas, associação com parto prematuro e morte fetal – oferecer aciclovir, sem prova de que reduza as complicações (compêndio clínico).",
+   "f": "F",
+   "url": "https://www.msdmanuals.com/professional/dermatologic-disorders/psoriasis-and-other-papulosquamous-disorders/pityriasis-rosea",
+   "ano": 2025,
+   "usado_em": [
+    "pele-pitiriase-rosea"
+   ]
+  },
+  {
+   "k": "bad_sjs2016",
+   "s": "Diretriz britânica SJS/NET em adultos (BJD 2016)",
+   "t": "Creamer D, Walsh SA, Dziewulski P, et al. UK guidelines for the management of Stevens-Johnson syndrome/toxic epidermal necrolysis in adults 2016. Br J Dermatol. 2016;174(6):1194-227: pródromo de febre e mal-estar dias antes; dor na pele precoce; alvos atípicos e máculas purpúricas; mucosas (olhos, boca, genitais) acometidas cedo; Nikolsky; SJS < 10% de descolamento, sobreposição 10–30%, NET > 30%; droga culpada em ~85%, sobretudo alopurinol, carbamazepina, lamotrigina, nevirapina, AINE oxicam, fenobarbital, fenitoína, sulfonamidas e sulfassalazina, entre 5 e 28 dias do início; suspender a droga suspeita reduz a mortalidade; > 10% de descolamento → centro de queimados ou UTI sem demora (diretriz internacional).",
+   "f": "F",
+   "url": "https://academic.oup.com/bjd/article/174/6/1194/6617016",
+   "ano": 2016,
+   "usado_em": [
+    "pele-atlas",
+    "pele-farmacodermia"
+   ]
+  },
+  {
+   "k": "wm_commons_pele",
+   "s": "Wikimedia Commons – fotos dermatológicas",
+   "t": "Fotos clínicas da Wikimedia Commons sob licenças livres (CC BY, CC BY-SA) ou domínio público (CDC, NCI, VA), redimensionadas para o app; autor e licença na legenda de cada figura. Algumas imagens vêm de pacientes de outros países e fototipos – o aspecto varia com a cor da pele (acervo de imagens).",
+   "f": "F",
+   "url": "https://commons.wikimedia.org/",
+   "ano": null,
+   "usado_em": [
+    "pele-alopecia",
+    "pele-atlas",
+    "pele-cancer",
+    "pele-candidiase",
+    "pele-eczemas",
+    "pele-farmacodermia",
+    "pele-melasma",
+    "pele-onicomicose",
+    "pele-pitiriase-rosea",
+    "pele-rosacea",
+    "pele-urticaria-cronica",
+    "pele-vitiligo"
    ]
   }
  ],
@@ -12758,6 +12854,145 @@
     "port6734",
     "rename",
     "remume"
+   ]
+  },
+  {
+   "id": "pele-onicomicose",
+   "nome": "Onicomicose (micose de unha)",
+   "modulo": "de",
+   "nv": 2,
+   "fontes": [
+    "tsrs_derm2023",
+    "rename",
+    "remume",
+    "wm_commons_pele"
+   ]
+  },
+  {
+   "id": "pele-candidiase",
+   "nome": "Candidíase cutânea, intertrigo e queilite angular",
+   "modulo": "de",
+   "nv": 1,
+   "fontes": [
+    "tsrs_derm2023",
+    "rename",
+    "remume",
+    "wm_commons_pele"
+   ]
+  },
+  {
+   "id": "pele-pitiriase-rosea",
+   "nome": "Pitiríase rósea",
+   "modulo": "de",
+   "nv": 2,
+   "fontes": [
+    "abd_pr2008",
+    "msd_pr2025",
+    "remume",
+    "wm_commons_pele"
+   ]
+  },
+  {
+   "id": "pele-rosacea",
+   "nome": "Rosácea",
+   "modulo": "de",
+   "nv": 1,
+   "fontes": [
+    "tsrs_derm2023",
+    "remume",
+    "wm_commons_pele"
+   ]
+  },
+  {
+   "id": "pele-melasma",
+   "nome": "Melasma (manchas escuras no rosto)",
+   "modulo": "de",
+   "nv": 1,
+   "fontes": [
+    "tsrs_derm2023",
+    "remume",
+    "wm_commons_pele"
+   ]
+  },
+  {
+   "id": "pele-vitiligo",
+   "nome": "Vitiligo",
+   "modulo": "de",
+   "nv": 1,
+   "fontes": [
+    "tsrs_derm2023",
+    "remume",
+    "wm_commons_pele"
+   ]
+  },
+  {
+   "id": "pele-cancer",
+   "nome": "Lesão de pele suspeita de câncer (melanoma, basocelular, espinocelular) e ceratose actínica",
+   "modulo": "de",
+   "nv": 1,
+   "fontes": [
+    "tsrs_derm2023",
+    "betim_feridas2026",
+    "wm_commons_pele"
+   ]
+  },
+  {
+   "id": "pele-alopecia",
+   "nome": "Queda de cabelo e alopecias (areata, androgenética, eflúvio telógeno)",
+   "modulo": "de",
+   "nv": 2,
+   "fontes": [
+    "tsrs_derm2023",
+    "rename",
+    "remume",
+    "wm_commons_pele"
+   ]
+  },
+  {
+   "id": "pele-urticaria-cronica",
+   "nome": "Urticária crônica (> 6 semanas) e angioedema recorrente",
+   "modulo": "de",
+   "nv": 1,
+   "fontes": [
+    "tsrs_derm2023",
+    "remume",
+    "wm_commons_pele"
+   ]
+  },
+  {
+   "id": "pele-farmacodermia",
+   "nome": "Reação cutânea grave a medicamento (Stevens-Johnson / NET) – reconhecer e referenciar",
+   "modulo": "de",
+   "nv": 2,
+   "fontes": [
+    "bad_sjs2016",
+    "wm_commons_pele"
+   ]
+  },
+  {
+   "id": "pele-eczemas",
+   "nome": "Eczema disidrótico (mãos e pés) e eczema de estase (pernas)",
+   "modulo": "de",
+   "nv": 2,
+   "fontes": [
+    "tsrs_derm2023",
+    "betim_feridas2026",
+    "rename",
+    "remume",
+    "wm_commons_pele"
+   ]
+  },
+  {
+   "id": "pele-atlas",
+   "nome": "Atlas de diagnóstico diferencial da pele (fotos)",
+   "modulo": "de",
+   "nv": 1,
+   "fontes": [
+    "wm_commons_pele",
+    "tsrs_derm2023",
+    "abd_pr2008",
+    "gvs2_hansen",
+    "gvs2_lt"
    ]
   }
  ]

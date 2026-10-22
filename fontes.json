@@ -1,11 +1,11 @@
 {
- "gerado": "2026-10-22T17:41:50.034Z",
+ "gerado": "2026-10-22T18:30:07.877Z",
  "cmed": {
   "data": "09/10/2026",
   "fonte": "cmed_pmc2026",
   "icms": "PMC com ICMS de Minas Gerais: 12% para genéricos e 18% para os demais"
  },
- "n_fontes": 621,
+ "n_fontes": 626,
  "n_itens": 364,
  "sem_url": [
   "remume",
@@ -258,7 +258,11 @@
   "ada_jovem",
   "headsss",
   "sbp_sono2023",
-  "fda_denticao2018"
+  "fda_denticao2018",
+  "betim_nt_arbo2025",
+  "betim_fluxo_arbo",
+  "betim_rx_dengue2024",
+  "betim_arbo_apres2024"
  ],
  "nao_conferidas": [
   "aap_oma",
@@ -8468,6 +8472,63 @@
    "usado_em": [
     "dengue-a"
    ]
+  },
+  {
+   "k": "betim_nt_arbo2025",
+   "s": "SMS Betim – NT do manejo das arboviroses (11/02/2025)",
+   "t": "Secretaria Municipal de Saúde de Betim. Nota Técnica do manejo das arboviroses na rede SUS Betim-MG, 11/02/2025: definição de caso, sinais de alarme e de gravidade, estadiamento A–D, hidratação imediata (SRO ou, na falta, água filtrada), antiagregantes/anticoagulantes (reprodução do MS 2024), exames (hemograma a critério no grupo A e obrigatório em B, C e D; RT-PCR para arbovírus de 24 h ao 5º dia e sorologia IgM do 6º ao 45º dia para todo caso suspeito, coleta na UAPS e envio ao laboratório do HPRB; TR-NS1 na UAPS para grupos B e C conforme estoque), notificação no SIGSS em 2 vias, cartão de acompanhamento, retorno, gestante (mínimo grupo B, avaliação diária na APS; C/D → PA do HPRB), fins de semana (UPA de referência com relatório), grade de referência UBS → UPA (Anexo XI) e contatos. Documento normativo municipal (Drive da usuária, pasta DIA A DIA).",
+   "f": "F",
+   "url": "",
+   "ano": 2025,
+   "usado_em": [
+    "chikungunya",
+    "dengue-a",
+    "zika"
+   ]
+  },
+  {
+   "k": "betim_fluxo_arbo",
+   "s": "SMS Betim – Fluxograma assistencial das arboviroses (Anexo III)",
+   "t": "SMS Betim. Fluxograma assistencial para casos suspeitos/confirmados de arboviroses (sem data no documento; Anexo III da NT de 11/02/2025): notificar todo caso suspeito; grupos A–D com conduta por grupo; condições clínicas especiais; grupo B com hematócrito alterado → UPA de forma responsável; gestante → PA do HPRB. Drive da usuária, pasta DIA A DIA.",
+   "f": "F",
+   "url": "",
+   "ano": 2025,
+   "usado_em": [
+    "dengue-a"
+   ]
+  },
+  {
+   "k": "betim_rx_dengue2024",
+   "s": "Prefeitura de Betim – Receituário padrão da dengue (Plano de Contingência 2024)",
+   "t": "Prefeitura de Betim. Receituário – Plano de Contingência da Dengue/2024 (sugestão de prescrição padrão; Anexo VI da NT de 11/02/2025): paracetamol 500 mg 1 cp 6/6 h se febre ou dor; dipirona 500 mg 1 cp 6/6 h se febre ou dor, intercalada com o paracetamol; SRO com volume diário total, de sais e de outros líquidos; solução reconstituída válida por 24 h; prova do laço; sinais para procurar a UPA. A NT diz que o modelo não exime de avaliar indicações e contraindicações. Drive da usuária.",
+   "f": "F",
+   "url": "",
+   "ano": 2025,
+   "usado_em": [
+    "dengue-a"
+   ]
+  },
+  {
+   "k": "betim_arbo_apres2024",
+   "s": "Prefeitura de Betim – Apresentação Manejo clínico das arboviroses (22/01/2024)",
+   "t": "Prefeitura de Betim (Diretorias Operacional da Saúde, de Vigilância à Saúde e de Urgência e Emergência). Manejo clínico das arboviroses, 22/01/2024 (slides): toda gestante no mínimo grupo B, avaliação diária na APS; nos dias em que a UBS estiver fechada (fins de semana, feriados, noite), reavaliação no PA do HPRB. Drive da usuária.",
+   "f": "F",
+   "url": "",
+   "ano": 2024,
+   "usado_em": [
+    "dengue-a"
+   ]
+  },
+  {
+   "k": "ms_dengue_enf2026",
+   "s": "MS – Dengue: manual de enfermagem, 3ª ed. 2026",
+   "t": "Ministério da Saúde. Dengue: manual de enfermagem. 3ª ed. Brasília: MS, 2026 (cita a 6ª ed. 2024 de 'Dengue: diagnóstico e manejo clínico' como referência; grupo B com retorno diário até 48 h após a queda da febre).",
+   "f": "F",
+   "url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/guias-e-manuais/2026/dengue-manual-de-enfermagem.pdf",
+   "ano": 2026,
+   "usado_em": [
+    "dengue-a"
+   ]
   }
  ],
  "itens": [
@@ -8816,14 +8877,19 @@
    "id": "dengue-a",
    "nome": "Dengue – grupo A",
    "modulo": "de",
-   "nv": 2,
+   "nv": 5,
    "fontes": [
     "ms_dengue",
     "rename",
     "remume",
     "fhemig_dengue",
     "bula_sro",
-    "ms_criadouros2024"
+    "ms_criadouros2024",
+    "betim_nt_arbo2025",
+    "betim_fluxo_arbo",
+    "betim_rx_dengue2024",
+    "betim_arbo_apres2024",
+    "ms_dengue_enf2026"
    ]
   },
   {
@@ -9053,7 +9119,8 @@
     "ses_chik",
     "ms_dengue",
     "rename",
-    "remume"
+    "remume",
+    "betim_nt_arbo2025"
    ]
   },
   {
@@ -10009,12 +10076,13 @@
    "id": "zika",
    "nome": "Zika – suspeita",
    "modulo": "de",
-   "nv": 1,
+   "nv": 0,
    "fontes": [
     "ms_zika",
     "ms_dengue",
     "rename",
-    "remume"
+    "remume",
+    "betim_nt_arbo2025"
    ]
   },
   {

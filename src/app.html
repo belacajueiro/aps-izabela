@@ -142,6 +142,10 @@ textarea.fill.mono{font:13px/1.55 var(--f-mono);background:var(--sunk)}
 .box.ori h4{font:700 .95rem var(--f-display);margin:14px 0 4px}
 .box.ori ul{margin:4px 0 8px;padding-left:1.2em}
 .box.ori li{margin:2px 0}
+.calcpac .cpf{display:flex;flex-wrap:wrap;gap:10px}
+.calcpac .cpf label{flex:1 1 140px;max-width:220px}
+.calcpac input{width:100%}
+.calcpac .cpres{margin:8px 0 0;font-weight:600}
 .box p{margin:0 0 8px;max-width:68ch}
 .box ul{margin:0;padding-left:20px}
 .box li{margin:3px 0;max-width:68ch}
@@ -1052,16 +1056,16 @@ function renderPanel(c, legend){
     const avHtml = av.length ? `<div class="avisos"><b>Receituário:</b> ${av.map(esc).join(" ")}</div>` : "";
     const prBtn = vis.length && temRemedio ? `<div class="actions" style="margin:0 0 12px"><button class="btn sm" id="pr-rx">Imprimir receita (blocos marcados)</button></div>` : "";
     const acesso = temRemedio ? `<div class="acesso"><b>Acesso real:</b> estar na RENAME/REMUME não garante estoque na farmácia da UBS – confira antes. Quando o item está na Farmácia Popular (gratuito, receita do SUS ou particular + documento com CPF), aparece um selo verde no bloco; em "No balcão" aparecem as marcas, o genérico e o preço-teto (PMC) da lista CMED de ${BALCAO_INFO.data} – o preço real costuma ser menor. Prescreva pelo nome genérico; a farmácia pode trocar a marca de referência pelo genérico.</div>` : "";
-    p.innerHTML = decide + filt + avHtml + acesso + prBtn + (vis.length ? `<div class="rx">${vis.map(b=>`
+    p.innerHTML = calcPacHtml(c) + decide + filt + avHtml + acesso + prBtn + (vis.length ? `<div class="rx">${vis.map(b=>`
       <div class="rxb ${TRILHA[b.trilha][1]}"><div class="rxb-h"><div class="rxt"><span class="trilha ${TRILHA[b.trilha][1]}">${TRILHA[b.trilha][0]}</span><h4>${esc(b.titulo)}</h4></div><div class="actions">${b.dose?`<span class="lab ${esc(b.dose)}" title="Procedência da dose">dose ${esc(b.dose)}</span>`:""}${temRemedio?`<label class="inc"><input type="checkbox" class="rx-inc" data-i="${b.i}" ${vis[0]&&vis[0].i===b.i?"checked":""}> imprimir</label>`:""}<button class="btn sm" data-cprx="${b.i}">Copiar</button></div></div>
-      <textarea class="fill mono" id="rx-${b.i}" aria-label="${esc(b.titulo)}">${esc(b.texto)}</textarea>
+      <textarea class="fill mono" id="rx-${b.i}" aria-label="${esc(b.titulo)}">${esc(pacSub(c, b.texto))}</textarea>
       ${b.nota?`<div class="nota">${esc(b.nota)}</div>`:""}${(()=>{ const f = fpMatch(b.texto); return f.length ? `<div class="fpop" title="Programa Farmácia Popular – elenco de 31/08/2026">Grátis na Farmácia Popular: ${esc(f.join("; "))} <span class="lab F">F</span></div>` : ""; })()}${balMatch(b.texto).map(e => balHtml(e)).join("")}</div>`).join("")}</div>` : `<p class="empty">Sem prescrição neste filtro.</p>`) + legend;
     p.querySelectorAll("textarea").forEach(grow);
   }
   if (state.tab === "pac"){
     const al = (c.alarme||[]);
-    const txt = `${oriTxt(c.orient)}\n\nProcure atendimento imediatamente se:\n${al.map(a=>"- "+a).join("\n")}`;
-    p.innerHTML = `<div class="box ori"><h3>Orientações ao paciente</h3>${oriHtml(c.orient)}</div>
+    const txt = `${oriTxt(pacSub(c, c.orient))}\n\nProcure atendimento imediatamente se:\n${al.map(a=>"- "+a).join("\n")}`;
+    p.innerHTML = `${calcPacHtml(c)}<div class="box ori"><h3>Orientações ao paciente</h3>${oriHtml(pacSub(c, c.orient))}</div>
       <div class="box"><h3>Procure atendimento imediatamente se</h3><ul class="alarm">${al.map(a=>`<li>${esc(a)}</li>`).join("")}</ul></div>
       <div class="actions"><button class="btn pri" id="cp-pac">Copiar orientações + sinais de alarme</button><button class="btn" id="pr-pac">Imprimir para o paciente</button></div>`;
     p.querySelector("#cp-pac").onclick = () => copy(txt, "Orientações");
@@ -2380,6 +2384,31 @@ function imprimirReceita(c){
   imprimir("Receituário", corpo);
 }
 // Orientações: linhas "## Título" viram subtítulo; linhas "- item" viram lista; **negrito**.
+// ── cálculo pelo peso dentro das orientações e da receita (c.calcPac = {titulo, campos:[[chave, rótulo]], f(valores) → {token: texto}, nota})
+const calcPacVal = {};
+function pacTok(c){
+  const cp = c.calcPac; if (!cp) return null; const v = calcPacVal[c.id] || {};
+  const ok = cp.campos.every(([k]) => v[k] !== undefined && String(v[k]).trim() !== "" && !isNaN(+String(v[k]).replace(",", ".")) && +String(v[k]).replace(",", ".") > 0);
+  if (!ok) return null;
+  try { return cp.f(Object.fromEntries(cp.campos.map(([k]) => [k, +String(v[k]).replace(",", ".")]))) || null; } catch(e){ return null; }
+}
+function pacSub(c, t){
+  if (!c.calcPac) return t;
+  const tk = pacTok(c) || {};
+  return String(t || "").replace(/\{\{(\w+)\}\}/g, (m, k) => tk[k] != null ? tk[k] : "___");
+}
+function calcPacHtml(c){
+  const cp = c.calcPac; if (!cp) return ""; const v = calcPacVal[c.id] || {}; const tk = pacTok(c);
+  return `<div class="box calcpac"><h3>${esc(cp.titulo || "Calcular pelo peso")}</h3><div class="cpf">${cp.campos.map(([k, l]) => `<label class="f">${esc(l)}<input type="text" inputmode="decimal" data-cpac="${esc(k)}" value="${esc(v[k] ?? "")}" autocomplete="off"></label>`).join("")}</div>${tk && tk._resumo ? `<p class="cpres">${esc(tk._resumo)}</p>` : `<p class="hint" style="margin:8px 0 0">Preencha para completar as quantidades nas orientações e na receita (os campos ___).</p>`}${cp.nota ? `<p class="hint" style="margin:6px 0 0">${esc(cp.nota)}</p>` : ""}</div>`;
+}
+let calcPacT = 0;
+document.addEventListener("input", e => {
+  const t = e.target; if (!t.dataset || t.dataset.cpac === undefined) return;
+  const c = state.sel && get(state.sel); if (!c) return;
+  calcPacVal[c.id] = {...(calcPacVal[c.id] || {}), [t.dataset.cpac]: t.value};
+  const k = t.dataset.cpac; clearTimeout(calcPacT);
+  calcPacT = setTimeout(() => { const y = window.scrollY; renderMain(); window.scrollTo(0, y); const n = document.querySelector(`[data-cpac="${k}"]`); if (n){ n.focus(); const L = n.value.length; try { n.setSelectionRange(L, L); } catch(_){} } }, 450);
+});
 function oriHtml(t){
   const out = []; let ul = [];
   const fl = () => { if (ul.length){ out.push(`<ul>${ul.map(x=>`<li>${x}</li>`).join("")}</ul>`); ul = []; } };
@@ -2392,7 +2421,7 @@ function oriHtml(t){
 }
 const oriTxt = t => String(t||"").split("\n").map(l => l.startsWith("## ") ? "\n" + l.slice(3).toUpperCase() : l).join("\n").replace(/\*\*(.+?)\*\*/g, "$1").replace(/^\n+/, "");
 function imprimirOrientacoes(c){
-  const corpo = `<h2>${esc(c.nome)}</h2>${oriHtml(c.orient)}<h2>Procure atendimento imediatamente se</h2><ul>${(c.alarme||[]).map(a=>`<li>${esc(a)}</li>`).join("")}</ul>`;
+  const corpo = `<h2>${esc(c.nome)}</h2>${oriHtml(pacSub(c, c.orient))}<h2>Procure atendimento imediatamente se</h2><ul>${(c.alarme||[]).map(a=>`<li>${esc(a)}</li>`).join("")}</ul>`;
   imprimir("Orientações ao paciente", corpo);
 }
 

@@ -153,6 +153,10 @@ textarea.fill.mono{font:13px/1.55 var(--f-mono);background:var(--sunk)}
 .box.ori h4{font:700 .95rem var(--f-display);margin:14px 0 4px}
 .box.ori ul{margin:4px 0 8px;padding-left:1.2em}
 .box.ori li{margin:2px 0}
+.calcpac .cpf{display:flex;flex-wrap:wrap;gap:10px}
+.calcpac .cpf label{flex:1 1 140px;max-width:220px}
+.calcpac input{width:100%}
+.calcpac .cpres{margin:8px 0 0;font-weight:600}
 .box p{margin:0 0 8px;max-width:68ch}
 .box ul{margin:0;padding-left:20px}
 .box li{margin:3px 0;max-width:68ch}
@@ -19657,6 +19661,119 @@ Não passe pomadas caseiras, álcool ou sabão em pó nas lesões.`,
   const add = (id, links) => { const c = CONDICOES.find(x => x.id === id); if (!c) return; if (c.guia && c.guia.secoes && c.guia.secoes.length) { c.guia.secoes[c.guia.secoes.length - 1].b.push({ir: links}); } };
   ["tinea", "pitiriase-versicolor", "impetigo", "urticaria", "exantema", "dermatite-contato", "seborreica", "acne", "dermatite-atopica"].forEach(id => add(id, [["pele-atlas", "Atlas de diagnóstico diferencial (fotos)"]]));
 })();
+// ───────────── data59.js – v48: orientações ao paciente reescritas em linguagem concreta (sem frações, siglas ou termos técnicos).
+// Começa pela dengue: volumes calculados pelo peso (calcPac – campo na aba Paciente e na Prescrição), preparo do soro, criadouros, sinais de alarme e retorno.
+// Conteúdo conferido em 22/10/2026: MS, Dengue: diagnóstico e manejo clínico – adulto e criança, 6ª ed. 2024 (Drive da usuária: Quadro 1, item 6.1.2, Quadro 3, item 2.2.2.1);
+// bulas de sais para reidratação oral (Cazi; FURP/SES-SP 2024); MS/Agência Gov 01/02/2024 (10 passos contra criadouros); REMUME Betim (envelope para 1.000 mL).
+Object.assign(FONTES, {
+  bula_sro: {s: "Bulas de sais para reidratação oral (Cazi; FURP/SES-SP 2024)", t: "Bula de sais para reidratação oral (Cazi Química Farmacêutica): dissolver todo o envelope em 1 litro de água filtrada ou fervida; usar o soro preparado em até 24 horas, conservado em temperatura ambiente (15–30 °C); descartar o que sobrar. Folheto FURP/SES-SP (atualizado em 29/11/2024), envelope de 27,9 g: solução preparada mantida em temperatura ambiente e usada em até 24 horas. Nenhuma das duas menciona geladeira (bula).", f: "F", url: "https://portal.saude.sp.gov.br/resources/ses/perfil/gestor/assistencia-farmaceutica/medicamentos-das-unidades-farmacia-dose-certa/sais_reidratacao_set2024_final_atualizado.pdf"},
+  ms_criadouros2024: {s: "Ministério da Saúde – 10 passos para eliminar criadouros (2024)", t: "Ministério da Saúde/Agência Gov, 01/02/2024. Confira 10 passos para eliminar focos do mosquito da dengue: tampar caixas-d'água, ralos e pias; limpar bebedouros de animais; descartar pneus pela coleta (ou guardar cobertos e sem água); esvaziar e lavar a bandeja da geladeira e bebedouros; limpar calhas e lajes e pôr areia em cacos de vidro de muros; areia nos pratos de plantas; lixo bem fechado; vistoria da casa pelo menos 1 vez por semana; repelente e telas; receber os agentes comunitários e de endemias (orientação oficial).", f: "F", url: "https://agenciagov.ebc.com.br/noticias/202402/confira-10-passos-para-eliminar-focos-do-mosquito-da-dengue"}
+});
+
+// volume em linguagem do dia a dia: arredonda para 50 mL e escreve "1 litro e 400 mL"
+const VOLP = ml => { ml = Math.max(0, Math.round(ml / 50) * 50); const l = Math.floor(ml / 1000), r = ml % 1000; return l ? `${l} ${l === 1 ? "litro" : "litros"}${r ? ` e ${r} mL` : ""}` : `${r} mL`; };
+const COPOSP = ml => { const n = Math.round(ml / 200); return n <= 1 ? "1 copo" : `${n} copos`; };
+
+(() => {
+  const c = CONDICOES.find(x => x.id === "dengue-a"); if (!c) return;
+
+  // volumes do MS 2024 (Quadro 3): adulto 60 mL/kg/dia; criança (< 13 anos) até 10 kg 130, > 10–20 kg 100, > 20 kg 80 mL/kg/dia; 1/3 em SRO, no início
+  c.calcPac = {
+    titulo: "Calcular a hidratação pelo peso",
+    campos: [["kg", "Peso (kg)"], ["anos", "Idade (anos)"]],
+    nota: "MS 2024, Quadro 3: adulto 60 mL/kg/dia; criança (< 13 anos) até 10 kg 130 mL/kg/dia, > 10 a 20 kg 100 mL/kg/dia, > 20 kg 80 mL/kg/dia; um terço em soro de reidratação oral nas primeiras 4 a 6 horas e o restante em líquidos caseiros; manter durante a febre e até 24–48 h após a defervescência. Volumes arredondados para 50 mL. O manual não define teto: em obesidade, cardiopatia ou doença renal, ajuste pela clínica.",
+    f: ({kg, anos}) => {
+      const crianca = anos < 13;
+      const taxa = crianca ? (kg <= 10 ? 130 : kg <= 20 ? 100 : 80) : 60;
+      const total = Math.round(kg * taxa / 50) * 50, sro = Math.round(total / 3 / 50) * 50, outros = total - sro;
+      const env = Math.max(1, Math.ceil(sro / 1000));
+      return {
+        kg: String(kg).replace(".", ","), total: VOLP(total), sro: VOLP(sro), outros: VOLP(outros),
+        copos_total: COPOSP(total), copos_sro: COPOSP(sro), copos_outros: COPOSP(outros),
+        env: env === 1 ? "1 envelope" : `${env} envelopes`,
+        _resumo: `${crianca ? "Criança" : "Adulto"}, ${String(kg).replace(".", ",")} kg × ${taxa} mL/kg = ${VOLP(total)} por dia: ${VOLP(sro)} de soro de reidratação oral nas primeiras 4 a 6 horas + ${VOLP(outros)} de outros líquidos ao longo do dia.`
+      };
+    }
+  };
+
+  c.orient = `## Beber líquidos é o principal tratamento da dengue
+- Beba ao todo **{{total}} de líquidos por dia** (cerca de {{copos_total}} de 200 mL), mesmo sem sede. Essa quantidade foi calculada pelo peso ({{kg}} kg).
+- **{{sro}} devem ser de soro de reidratação oral**, tomados nas **primeiras 4 a 6 horas do dia** (cerca de {{copos_sro}}). No dia da consulta, comece assim que chegar em casa.
+- O restante, **{{outros}}** (cerca de {{copos_outros}}), deve ser bebido ao longo do dia: água, chás, sucos de fruta, água de coco ou soro caseiro.
+- Se estiver enjoado, beba aos poucos, em pequenos goles, sem parar.
+- **Continue com o soro e os outros líquidos todos os dias enquanto tiver febre e por mais 1 a 2 dias depois que a febre acabar.**
+- Continue comendo normalmente, conforme a fome. Se o bebê mama no peito, continue amamentando.
+
+## Como preparar o soro de reidratação oral
+- Lave as mãos e use uma jarra e uma colher limpas.
+- Dissolva todo o pó do envelope na quantidade de água indicada pelo fabricante na embalagem. O envelope entregue na farmácia do SUS é para **1 litro de água**.
+- Use água filtrada ou fervida (espere esfriar antes de misturar).
+- Não acrescente açúcar, sal, suco ou outra coisa ao soro.
+- Guarde o soro pronto em uma jarra ou garrafa tampada, em lugar fresco.
+- **Use o soro preparado em até 24 horas.** Depois de 24 horas, jogue fora o que sobrou e prepare outro.
+
+## Remédios
+- Para febre e dor, use só o que foi receitado (paracetamol ou dipirona), nos horários da receita.
+- **Não tome** AAS, ibuprofeno, diclofenaco, nimesulida, cetoprofeno ou outros anti-inflamatórios, nem corticoide (como prednisona). Eles aumentam o risco de sangramento.
+- Não tome nenhum outro remédio por conta própria.
+- Fique em repouso enquanto estiver com febre.
+
+## Atenção quando a febre for embora
+- A dengue pode piorar justamente **quando a febre começa a melhorar**, geralmente entre o 3º e o 7º dia da doença. Melhorar da febre não quer dizer que o perigo passou.
+- Nesses dias, preste atenção aos sinais de alarme listados abaixo. Se aparecer qualquer um deles, **vá imediatamente à UPA ou ao pronto-socorro**, de dia ou de noite, sem esperar o retorno marcado.
+
+## Quando voltar à unidade
+- **Volte no dia em que a febre melhorar** (o primeiro dia sem febre), para ser examinado de novo.
+- **Se a febre continuar, volte no 5º dia da doença** (contando a partir do dia em que a febre começou), mesmo que esteja se sentindo bem.
+- Leve o cartão de acompanhamento da dengue em todas as consultas.
+
+## Não deixe o mosquito picar outras pessoas
+- Enquanto estiver doente, use repelente nas partes do corpo descobertas, para o mosquito não picar você e levar o vírus para outras pessoas da casa.
+- Coloque telas em janelas e portas, se possível.
+
+## Acabe com a água parada (10 minutos por semana)
+- Tampe bem caixas-d'água, tonéis, ralos e pias que ficam sem uso.
+- Coloque areia nos pratinhos dos vasos de plantas.
+- Lave e troque a água dos bebedouros de animais com frequência.
+- Esvazie e lave com água e sabão a bandeja de trás da geladeira e o reservatório do bebedouro.
+- Limpe calhas e lajes; coloque areia nos cacos de vidro em cima de muros.
+- Guarde pneus velhos cobertos e sem água, ou entregue na coleta da prefeitura.
+- Feche bem os sacos de lixo e não jogue lixo em lotes vagos ou na rua.
+- Uma vez por semana, olhe a casa e o quintal procurando água parada.
+- Receba os agentes comunitários de saúde e de combate às endemias.`;
+
+  c.alarme = [
+    "Dor forte na barriga que não passa",
+    "Vômitos repetidos, que não deixam beber o soro",
+    "Sangramento pelo nariz, pela gengiva, na urina, no vômito ou nas fezes (fezes pretas ou com sangue)",
+    "Tontura ou desmaio ao se levantar",
+    "Muita sonolência, confusão ou, na criança, irritação e choro sem parar",
+    "Barriga inchada ou falta de ar",
+    "Mãos e pés frios, pele pálida e suada",
+    "Urinar muito pouco"
+  ];
+
+  const h = (c.rx || []).find(r => /reidrata/i.test(r.titulo + r.texto));
+  if (h){
+    h.texto = `USO ORAL
+1. Sais para reidratação oral (envelope para 1 litro) ______ ___ envelopes
+   Dissolver 1 envelope em 1 litro de água filtrada ou fervida (já fria).
+   Beber {{sro}} de soro por dia, nas primeiras 4 a 6 horas do dia ({{env}} por dia).
+   Beber também mais {{outros}} de outros líquidos ao longo do dia (água, chás, sucos, água de coco).
+   Total de líquidos por dia: {{total}} (peso {{kg}} kg).
+   Manter enquanto houver febre e por 1 a 2 dias depois que a febre passar.
+   Usar o soro preparado em até 24 horas; depois disso, jogar fora o que sobrar.`;
+    h.nota = "Volumes pelo peso e pela idade no campo 'Calcular a hidratação pelo peso' (MS 2024, Quadro 3) [F]. Envelope da REMUME Betim: pó para 1.000 mL [F]. Preparo e validade de 24 h: bulas [F]. A quantidade total de envelopes depende dos dias de febre – preencher.";
+    h.dose = "F";
+  }
+  const s = (c.rx || []).find(r => /Sintom/i.test(r.titulo));
+  if (s) s.texto = s.texto.replace("Tomar 1 comprimido até de 6/6h se dor ou febre.", "Tomar 1 comprimido de 6 em 6 horas, se tiver dor ou febre.").replace("Tomar 1 a 2 comprimidos até de 6/6h se dor ou febre (máximo 4 g/dia).", "Tomar 1 a 2 comprimidos de 6 em 6 horas, se tiver dor ou febre (no máximo 8 comprimidos por dia).");
+
+  c.P = c.P.replace("- Orientados repelente e eliminação de criadouros.", "- Orientados repelente e eliminação de criadouros; orientações de hidratação entregues por escrito, com volumes pelo peso.");
+  c.evid.fontes = [...new Set([...(c.evid.fontes || []), "bula_sro", "ms_criadouros2024"])];
+  c.mudancas = [...(c.mudancas || []), "v48 (22/10/2026): orientação ao paciente reescrita – volumes calculados pelo peso (sem frações), preparo e validade do soro, criadouros, piora na fase de queda da febre e retorno; sinais de alarme em linguagem leiga."];
+  c.nv = [...(c.nv || []), "Guardar o soro pronto na geladeira: as bulas consultadas indicam temperatura ambiente/lugar fresco e não mencionam geladeira – o app orienta 'lugar fresco'."];
+})();
 
 </script>
 <script>
@@ -20035,16 +20152,16 @@ function renderPanel(c, legend){
     const avHtml = av.length ? `<div class="avisos"><b>Receituário:</b> ${av.map(esc).join(" ")}</div>` : "";
     const prBtn = vis.length && temRemedio ? `<div class="actions" style="margin:0 0 12px"><button class="btn sm" id="pr-rx">Imprimir receita (blocos marcados)</button></div>` : "";
     const acesso = temRemedio ? `<div class="acesso"><b>Acesso real:</b> estar na RENAME/REMUME não garante estoque na farmácia da UBS – confira antes. Quando o item está na Farmácia Popular (gratuito, receita do SUS ou particular + documento com CPF), aparece um selo verde no bloco; em "No balcão" aparecem as marcas, o genérico e o preço-teto (PMC) da lista CMED de ${BALCAO_INFO.data} – o preço real costuma ser menor. Prescreva pelo nome genérico; a farmácia pode trocar a marca de referência pelo genérico.</div>` : "";
-    p.innerHTML = decide + filt + avHtml + acesso + prBtn + (vis.length ? `<div class="rx">${vis.map(b=>`
+    p.innerHTML = calcPacHtml(c) + decide + filt + avHtml + acesso + prBtn + (vis.length ? `<div class="rx">${vis.map(b=>`
       <div class="rxb ${TRILHA[b.trilha][1]}"><div class="rxb-h"><div class="rxt"><span class="trilha ${TRILHA[b.trilha][1]}">${TRILHA[b.trilha][0]}</span><h4>${esc(b.titulo)}</h4></div><div class="actions">${b.dose?`<span class="lab ${esc(b.dose)}" title="Procedência da dose">dose ${esc(b.dose)}</span>`:""}${temRemedio?`<label class="inc"><input type="checkbox" class="rx-inc" data-i="${b.i}" ${vis[0]&&vis[0].i===b.i?"checked":""}> imprimir</label>`:""}<button class="btn sm" data-cprx="${b.i}">Copiar</button></div></div>
-      <textarea class="fill mono" id="rx-${b.i}" aria-label="${esc(b.titulo)}">${esc(b.texto)}</textarea>
+      <textarea class="fill mono" id="rx-${b.i}" aria-label="${esc(b.titulo)}">${esc(pacSub(c, b.texto))}</textarea>
       ${b.nota?`<div class="nota">${esc(b.nota)}</div>`:""}${(()=>{ const f = fpMatch(b.texto); return f.length ? `<div class="fpop" title="Programa Farmácia Popular – elenco de 31/08/2026">Grátis na Farmácia Popular: ${esc(f.join("; "))} <span class="lab F">F</span></div>` : ""; })()}${balMatch(b.texto).map(e => balHtml(e)).join("")}</div>`).join("")}</div>` : `<p class="empty">Sem prescrição neste filtro.</p>`) + legend;
     p.querySelectorAll("textarea").forEach(grow);
   }
   if (state.tab === "pac"){
     const al = (c.alarme||[]);
-    const txt = `${oriTxt(c.orient)}\n\nProcure atendimento imediatamente se:\n${al.map(a=>"- "+a).join("\n")}`;
-    p.innerHTML = `<div class="box ori"><h3>Orientações ao paciente</h3>${oriHtml(c.orient)}</div>
+    const txt = `${oriTxt(pacSub(c, c.orient))}\n\nProcure atendimento imediatamente se:\n${al.map(a=>"- "+a).join("\n")}`;
+    p.innerHTML = `${calcPacHtml(c)}<div class="box ori"><h3>Orientações ao paciente</h3>${oriHtml(pacSub(c, c.orient))}</div>
       <div class="box"><h3>Procure atendimento imediatamente se</h3><ul class="alarm">${al.map(a=>`<li>${esc(a)}</li>`).join("")}</ul></div>
       <div class="actions"><button class="btn pri" id="cp-pac">Copiar orientações + sinais de alarme</button><button class="btn" id="pr-pac">Imprimir para o paciente</button></div>`;
     p.querySelector("#cp-pac").onclick = () => copy(txt, "Orientações");
@@ -22910,6 +23027,31 @@ function imprimirReceita(c){
   imprimir("Receituário", corpo);
 }
 // Orientações: linhas "## Título" viram subtítulo; linhas "- item" viram lista; **negrito**.
+// ── cálculo pelo peso dentro das orientações e da receita (c.calcPac = {titulo, campos:[[chave, rótulo]], f(valores) → {token: texto}, nota})
+const calcPacVal = {};
+function pacTok(c){
+  const cp = c.calcPac; if (!cp) return null; const v = calcPacVal[c.id] || {};
+  const ok = cp.campos.every(([k]) => v[k] !== undefined && String(v[k]).trim() !== "" && !isNaN(+String(v[k]).replace(",", ".")) && +String(v[k]).replace(",", ".") > 0);
+  if (!ok) return null;
+  try { return cp.f(Object.fromEntries(cp.campos.map(([k]) => [k, +String(v[k]).replace(",", ".")]))) || null; } catch(e){ return null; }
+}
+function pacSub(c, t){
+  if (!c.calcPac) return t;
+  const tk = pacTok(c) || {};
+  return String(t || "").replace(/\{\{(\w+)\}\}/g, (m, k) => tk[k] != null ? tk[k] : "___");
+}
+function calcPacHtml(c){
+  const cp = c.calcPac; if (!cp) return ""; const v = calcPacVal[c.id] || {}; const tk = pacTok(c);
+  return `<div class="box calcpac"><h3>${esc(cp.titulo || "Calcular pelo peso")}</h3><div class="cpf">${cp.campos.map(([k, l]) => `<label class="f">${esc(l)}<input type="text" inputmode="decimal" data-cpac="${esc(k)}" value="${esc(v[k] ?? "")}" autocomplete="off"></label>`).join("")}</div>${tk && tk._resumo ? `<p class="cpres">${esc(tk._resumo)}</p>` : `<p class="hint" style="margin:8px 0 0">Preencha para completar as quantidades nas orientações e na receita (os campos ___).</p>`}${cp.nota ? `<p class="hint" style="margin:6px 0 0">${esc(cp.nota)}</p>` : ""}</div>`;
+}
+let calcPacT = 0;
+document.addEventListener("input", e => {
+  const t = e.target; if (!t.dataset || t.dataset.cpac === undefined) return;
+  const c = state.sel && get(state.sel); if (!c) return;
+  calcPacVal[c.id] = {...(calcPacVal[c.id] || {}), [t.dataset.cpac]: t.value};
+  const k = t.dataset.cpac; clearTimeout(calcPacT);
+  calcPacT = setTimeout(() => { const y = window.scrollY; renderMain(); window.scrollTo(0, y); const n = document.querySelector(`[data-cpac="${k}"]`); if (n){ n.focus(); const L = n.value.length; try { n.setSelectionRange(L, L); } catch(_){} } }, 450);
+});
 function oriHtml(t){
   const out = []; let ul = [];
   const fl = () => { if (ul.length){ out.push(`<ul>${ul.map(x=>`<li>${x}</li>`).join("")}</ul>`); ul = []; } };
@@ -22922,7 +23064,7 @@ function oriHtml(t){
 }
 const oriTxt = t => String(t||"").split("\n").map(l => l.startsWith("## ") ? "\n" + l.slice(3).toUpperCase() : l).join("\n").replace(/\*\*(.+?)\*\*/g, "$1").replace(/^\n+/, "");
 function imprimirOrientacoes(c){
-  const corpo = `<h2>${esc(c.nome)}</h2>${oriHtml(c.orient)}<h2>Procure atendimento imediatamente se</h2><ul>${(c.alarme||[]).map(a=>`<li>${esc(a)}</li>`).join("")}</ul>`;
+  const corpo = `<h2>${esc(c.nome)}</h2>${oriHtml(pacSub(c, c.orient))}<h2>Procure atendimento imediatamente se</h2><ul>${(c.alarme||[]).map(a=>`<li>${esc(a)}</li>`).join("")}</ul>`;
   imprimir("Orientações ao paciente", corpo);
 }
 

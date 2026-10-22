@@ -1,11 +1,11 @@
 {
- "gerado": "2026-10-22T16:39:08.401Z",
+ "gerado": "2026-10-22T17:18:35.877Z",
  "cmed": {
   "data": "09/10/2026",
   "fonte": "cmed_pmc2026",
   "icms": "PMC com ICMS de Minas Gerais: 12% para genéricos e 18% para os demais"
  },
- "n_fontes": 619,
+ "n_fontes": 621,
  "n_itens": 364,
  "sem_url": [
   "remume",
@@ -8445,6 +8445,28 @@
     "pele-urticaria-cronica",
     "pele-vitiligo"
    ]
+  },
+  {
+   "k": "bula_sro",
+   "s": "Bulas de sais para reidratação oral (Cazi; FURP/SES-SP 2024)",
+   "t": "Bula de sais para reidratação oral (Cazi Química Farmacêutica): dissolver todo o envelope em 1 litro de água filtrada ou fervida; usar o soro preparado em até 24 horas, conservado em temperatura ambiente (15–30 °C); descartar o que sobrar. Folheto FURP/SES-SP (atualizado em 29/11/2024), envelope de 27,9 g: solução preparada mantida em temperatura ambiente e usada em até 24 horas. Nenhuma das duas menciona geladeira (bula).",
+   "f": "F",
+   "url": "https://portal.saude.sp.gov.br/resources/ses/perfil/gestor/assistencia-farmaceutica/medicamentos-das-unidades-farmacia-dose-certa/sais_reidratacao_set2024_final_atualizado.pdf",
+   "ano": 2024,
+   "usado_em": [
+    "dengue-a"
+   ]
+  },
+  {
+   "k": "ms_criadouros2024",
+   "s": "Ministério da Saúde – 10 passos para eliminar criadouros (2024)",
+   "t": "Ministério da Saúde/Agência Gov, 01/02/2024. Confira 10 passos para eliminar focos do mosquito da dengue: tampar caixas-d'água, ralos e pias; limpar bebedouros de animais; descartar pneus pela coleta (ou guardar cobertos e sem água); esvaziar e lavar a bandeja da geladeira e bebedouros; limpar calhas e lajes e pôr areia em cacos de vidro de muros; areia nos pratos de plantas; lixo bem fechado; vistoria da casa pelo menos 1 vez por semana; repelente e telas; receber os agentes comunitários e de endemias (orientação oficial).",
+   "f": "F",
+   "url": "https://agenciagov.ebc.com.br/noticias/202402/confira-10-passos-para-eliminar-focos-do-mosquito-da-dengue",
+   "ano": 2024,
+   "usado_em": [
+    "dengue-a"
+   ]
   }
  ],
  "itens": [
@@ -8793,12 +8815,14 @@
    "id": "dengue-a",
    "nome": "Dengue – grupo A",
    "modulo": "de",
-   "nv": 1,
+   "nv": 2,
    "fontes": [
     "ms_dengue",
     "rename",
     "remume",
-    "fhemig_dengue"
+    "fhemig_dengue",
+    "bula_sro",
+    "ms_criadouros2024"
    ]
   },
   {

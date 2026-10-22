@@ -1996,7 +1996,7 @@ ORI59("hematuria", `
 ORI59("retencao-urinaria", `
 ## A sonda
 - A sonda esvazia a bexiga. **Mantenha a bolsa sempre abaixo do nível da bexiga** e sem dobras no tubo.
-- Esvazie a bolsa quando estiver com metade a dois terços da capacidade (antes de encher), lavando as mãos antes e depois.
+- Esvazie a bolsa quando estiver mais ou menos pela metade (não deixe encher), lavando as mãos antes e depois.
 - Lave a região em volta da sonda com água e sabão todos os dias.
 
 ## Remédio

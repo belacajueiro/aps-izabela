@@ -21784,7 +21784,7 @@ ORI59("hematuria", `
 ORI59("retencao-urinaria", `
 ## A sonda
 - A sonda esvazia a bexiga. **Mantenha a bolsa sempre abaixo do nível da bexiga** e sem dobras no tubo.
-- Esvazie a bolsa quando estiver com metade a dois terços da capacidade (antes de encher), lavando as mãos antes e depois.
+- Esvazie a bolsa quando estiver mais ou menos pela metade (não deixe encher), lavando as mãos antes e depois.
 - Lave a região em volta da sonda com água e sabão todos os dias.
 
 ## Remédio
@@ -24526,6 +24526,595 @@ ORI59("pv-checkup-idoso", `
 ## Conte para a equipe
 - Quedas, esquecimentos, tristeza, perda de peso e dificuldade para ver ou ouvir.
 `, ["Perda de peso sem explicação", "Sangue nas fezes ou mudança do intestino que não passa", "Sangramento vaginal depois da menopausa", "Queda com dificuldade para levantar, ou quedas repetidas", "Esquecimento que piora rápido ou confusão de repente"]);
+
+// ── Pré-natal e puerpério (o fecho padrão da gestante vira a última parte)
+const PN_FECHO59 = `
+## Em todas as consultas
+- Traga a **caderneta da gestante** em todas as consultas e exames.
+- **Se tiver algum sinal de alerta, vá direto à maternidade de referência, a qualquer hora.**`;
+
+ORI59("pn-1consulta", `
+## Parabéns pela gestação
+- O pré-natal tem **pelo menos 7 consultas**, alternando médico e enfermagem: **uma por mês até 28 semanas, a cada 15 dias até 36 semanas e toda semana depois**.
+
+## Vitaminas
+- **Ácido fólico:** 2 mL da solução (ou o comprimido da receita) **1 vez ao dia, até 12 semanas**. Meça com a seringa dosadora.
+- **Sulfato ferroso:** 1 comprimido **1 vez ao dia, até o fim da gestação e por 3 meses depois do parto**. Tome longe de leite, café e chá. As fezes ficam escuras: é esperado.
+- **Cálcio:** coma alimentos com cálcio (leite, queijo, iogurte, folhas verde-escuras). O comprimido de cálcio não é mais receitado para todas as gestantes; se a equipe indicar para você, tome junto com as refeições e **com 2 horas de distância do ferro**.
+- **AAS, se receitado:** 1 comprimido à noite, de 12–16 até 36 semanas.
+
+## Cuidados
+- **Não use remédios, chás ou suplementos sem falar com a equipe.**
+- Faça os exames pedidos e traga os resultados.
+- Mantenha as vacinas em dia (a sala de vacina confere a caderneta).
+- Use o repelente receitado.
+- Agende a consulta com a equipe de saúde bucal.
+- Seu parceiro ou parceira também deve fazer os testes rápidos.
+${PN_FECHO59}
+`);
+
+ORI59("pn-risco", `
+## Seu acompanhamento
+- Seu pré-natal tem alguns fatores que pedem mais atenção. Você pode ser acompanhada também por um **serviço especializado (pré-natal de alto risco)**, mas **continua com a nossa equipe na unidade**.
+- **Leve a caderneta e os exames a todas as consultas**, aqui e no serviço especializado.
+- Se ficou com alguma dúvida sobre o que o serviço especializado orientou, traga para conversarmos.
+${PN_FECHO59}
+`);
+
+ORI59("pn-vacinas", `
+## Por que vacinar na gestação
+- As vacinas protegem **você e o bebê nos primeiros meses de vida**, antes que ele possa ser vacinado.
+- **dTpa:** protege o bebê contra a coqueluche. Uma dose a partir de 20 semanas, **em toda gestação**.
+- **VSR:** protege o bebê contra a bronquiolite grave. Dose única a partir de 28 semanas.
+- Gripe (na temporada), COVID-19 e hepatite B (se o esquema não estiver completo) também são indicadas.
+
+## Depois da vacina
+- Dor no local e febre baixa podem acontecer e passam em 1 a 2 dias. Para dor ou febre, paracetamol.
+${PN_FECHO59}
+`, ["Falta de ar, inchaço nos lábios ou na língua, ou placas pelo corpo logo depois da vacina", "Febre alta ou que dura mais de 2 dias", "Sangramento pela vagina", "Perda de líquido pela vagina", "Dor forte ou contínua na barriga", "Febre acima de 37,8 °C"]);
+
+ORI59("pn-2tri", `
+## Exame da curva glicêmica (entre 24 e 28 semanas)
+- Vá **em jejum de 8 horas**.
+- No laboratório você vai tomar um líquido doce e colher sangue algumas vezes: **fique em repouso** durante as coletas.
+
+## Vitaminas e remédios
+- **Continue o ferro** (e o AAS, se foi receitado, até 36 semanas).
+- O cálcio não é mais usado para todas as gestantes: **se você toma só por isso, pode parar**.
+
+## Vacina
+- Tome a **dTpa** a partir de 20 semanas, se ainda não tomou.
+
+## Próxima consulta
+- Em 4 semanas, alternando médico e enfermagem.
+${PN_FECHO59}
+`);
+
+ORI59("pn-3tri", `
+## Consultas mais frequentes
+- **A cada 15 dias até 36 semanas** e **toda semana depois**.
+- Faça os exames do 3º trimestre pedidos e tome a vacina VSR (a partir de 28 semanas) e a dTpa, se ainda faltarem.
+- Se toma AAS, **pare com 36 semanas**.
+
+## Movimentos do bebê (a partir de 34 semanas)
+- Todos os dias, depois de uma refeição, deite de lado e **conte os movimentos por 1 hora**. O esperado é **6 ou mais**.
+- Se forem menos de 6, repita na hora seguinte. **Se continuar com menos de 6, vá à maternidade.**
+
+## Vá à maternidade se tiver
+- **Contrações regulares, de 10 em 10 minutos ou menos.**
+- Perda de líquido, sangramento ou o bebê mexendo menos.
+
+## Prepare-se
+- Converse com a equipe sobre o seu **plano de parto** e sobre o **método para evitar gravidez depois do parto**.
+- Com 41 semanas, você será encaminhada à maternidade.
+${PN_FECHO59}
+`);
+
+ORI59("pn-plano-parto", `
+## Seus direitos
+- **Acompanhante de sua escolha** durante o trabalho de parto, o parto e o pós-parto.
+- **Ser informada e concordar antes de qualquer procedimento.**
+
+## Plano de parto
+- Leve o plano de parto **impresso para a maternidade**, com uma cópia para o acompanhante.
+
+## Se sofrer desrespeito
+- Registre e denuncie: ouvidoria do hospital, **Disque 136** (Ministério da Saúde) ou **Disque 180** (violência contra a mulher).
+${PN_FECHO59}
+`);
+
+ORI59("pn-queixas", `
+## São comuns
+- Esses incômodos são comuns na gravidez e costumam **melhorar com cuidados simples**.
+
+## Azia
+- Refeições menores, sem deitar logo depois de comer.
+- Se receitado antiácido: depois das refeições e ao deitar, **com 2 horas de distância do ferro**.
+
+## Intestino preso
+- Mais fibras (frutas, verduras, feijão), água e caminhadas.
+- Se receitada lactulose: 15 mL 1 vez ao dia, ajustando conforme o intestino.
+
+## Dor nas costas ou dor de cabeça
+- Paracetamol: 1 a 2 comprimidos até de 6 em 6 horas, **no máximo 6 por dia**.
+- **Não tome outros remédios sem orientação.**
+${PN_FECHO59}
+`);
+
+ORI59("pn-dmg", `
+## O que é
+- O diabetes da gravidez é **comum e controlável**. O controle protege você e o bebê.
+
+## No dia a dia
+- Siga o plano alimentar combinado com a equipe.
+- **Caminhe**, se a equipe liberar.
+- **Meça a glicose em jejum e 1 hora (ou 2 horas) depois das refeições** e anote com data e horário. Traga na consulta em 1 a 2 semanas.
+- Metas: jejum entre 65 e 95; 1 hora depois da refeição, abaixo de 140; 2 horas depois, abaixo de 120.
+
+## Se usar insulina
+- Aplique nos horários da receita (antes do café e às 22 horas) e troque o local a cada aplicação.
+- **Glicose baixa** (tremor, suor frio, fome, confusão): tome **1 colher de sopa de açúcar em água** e meça de novo em 15 minutos.
+
+## Depois do parto
+- A insulina costuma ser suspensa.
+- **Faça a curva glicêmica por volta de 6 semanas depois do parto** e um exame de glicose por ano.
+
+## Acompanhamento
+- Você também será acompanhada no pré-natal de alto risco, sem deixar a unidade.
+${PN_FECHO59}
+`, ["Glicose abaixo de 70 que não melhora com açúcar, ou desmaio", "Glicose acima de 200 várias vezes", "Sangramento pela vagina", "Perda de líquido pela vagina", "Dor forte ou contínua na barriga", "Febre acima de 37,8 °C", "Dor de cabeça forte ou que não passa", "Visão embaçada, pontos brilhantes ou perda de visão", "Dor forte na boca do estômago", "Inchaço repentino do rosto, das mãos ou das pernas", "Bebê mexendo menos ou parado (depois de 20 semanas)", "Falta de ar, dor no peito, desmaio ou convulsão"]);
+
+ORI59("pn-has", `
+## Acompanhamento mais de perto
+- A pressão alta na gravidez precisa de acompanhamento **aqui e no pré-natal de alto risco**.
+
+## Remédio
+- Tome **todos os dias**, nos horários da receita (metildopa de 8 em 8 horas, ou nifedipino, ou anlodipino).
+- **Não use o remédio de pressão que você usava antes da gravidez sem conversar com a equipe:** alguns fazem mal ao bebê.
+- AAS, se receitado: à noite, até 36 semanas.
+
+## Medir a pressão
+- Meça **2 a 3 vezes por semana** (em casa, na farmácia ou na unidade) e anote. Traga na consulta.
+
+## Retorno
+- **Em até 7 a 14 dias**, como combinado, com os exames pedidos.
+${PN_FECHO59}
+`, ["Pressão 16 por 11 ou mais", "Sangramento pela vagina", "Perda de líquido pela vagina", "Dor forte ou contínua na barriga", "Febre acima de 37,8 °C", "Dor de cabeça forte ou que não passa", "Visão embaçada, pontos brilhantes ou perda de visão", "Dor forte na boca do estômago", "Inchaço repentino do rosto, das mãos ou das pernas", "Bebê mexendo menos ou parado (depois de 20 semanas)", "Falta de ar, dor no peito, desmaio ou convulsão"]);
+
+ORI59("pn-anemia", `
+## O que está acontecendo
+- Sua hemoglobina está baixa. **O ferro ajuda a recuperar, mas leva semanas.**
+
+## Como tomar o ferro
+- **1 comprimido 3 vezes ao dia, 30 minutos antes das refeições**, com suco de fruta cítrica (laranja, acerola, limão).
+- **Longe do leite, do café, do chá e do cálcio.**
+- As fezes ficam escuras e o intestino pode prender: é esperado.
+- Faça o exame de sangue em 30 dias. Quando a hemoglobina melhorar, a dose volta para 1 comprimido por dia até 3 meses depois do parto.
+
+## Alimentação
+- Feijão, lentilha, carnes, folhas verde-escuras e frutas.
+${PN_FECHO59}
+`, ["Falta de ar, coração disparado ou desmaio", "Sangramento pela vagina", "Perda de líquido pela vagina", "Dor forte ou contínua na barriga", "Febre acima de 37,8 °C", "Dor de cabeça forte ou que não passa"]);
+
+ORI59("pn-rh", `
+## O que significa
+- Seu sangue é **Rh negativo**. Se o bebê for Rh positivo, seu corpo pode produzir anticorpos que afetam esta ou as próximas gestações. **Isso pode ser prevenido.**
+
+## O que fazer
+- Faça o exame de **Coombs** nas datas pedidas durante o pré-natal.
+- **Se tiver sangramento, procure atendimento e avise que é Rh negativo.**
+- **Na maternidade, informe que é Rh negativo:** pode ser preciso tomar uma injeção até 72 horas depois do parto.
+${PN_FECHO59}
+`, ["Sangramento pela vagina", "Perda de líquido pela vagina", "Dor forte ou contínua na barriga", "Febre acima de 37,8 °C"]);
+
+ORI59("pn-toxo", `
+## Para evitar a toxoplasmose
+- Coma **carnes bem passadas** (nada cru ou malpassado, inclusive embutidos artesanais).
+- **Lave bem frutas e verduras** e beba água filtrada ou fervida.
+- Use luvas para mexer na terra ou no jardim.
+- **Não limpe caixa de areia de gato.**
+
+## Se o exame mostrar infecção recente
+- O remédio **diminui a chance de passar para o bebê**. Tome **todos os dias, nos horários** (espiramicina: 2 comprimidos de 8 em 8 horas), até a orientação do serviço de referência.
+- Faça os exames pedidos e vá às consultas no serviço especializado.
+${PN_FECHO59}
+`, ["Febre ou manchas pelo corpo", "Falta de ar ou alergia ao remédio (placas, inchaço)", "Sangramento pela vagina", "Perda de líquido pela vagina", "Dor forte ou contínua na barriga", "Febre acima de 37,8 °C"]);
+
+ORI59("pn-tireoide", `
+## Por que tratar
+- O hormônio da tireoide é importante para a gestação e para o bebê.
+
+## Levotiroxina
+- **Em jejum, sempre no mesmo horário**, só com água. Espere **30 a 60 minutos** para comer.
+- **Tome o ferro (e o cálcio, se usar) pelo menos 4 horas depois.**
+- Faça os exames de sangue **a cada mês** para ajustar a dose.
+${PN_FECHO59}
+`, ["Coração disparado, tremores ou perda de peso", "Sangramento pela vagina", "Perda de líquido pela vagina", "Dor forte ou contínua na barriga", "Febre acima de 37,8 °C"]);
+
+ORI59("pp-1semana", `
+## Amamentação
+- Amamente **sempre que o bebê quiser, dia e noite**.
+- **Peça ajuda se doer para amamentar:** quase sempre é a pega, e dá para corrigir.
+
+## Seu corpo
+- O sangramento diminui e clareia nos primeiros dias. **Febre, cheiro forte ou sangramento que aumenta não são normais.**
+- **Continue o ferro** (1 comprimido por dia) **por 3 meses**.
+- Se você teve pressão alta, meça a pressão e venha na data marcada (em até 7 dias).
+
+## Emoções
+- Tristeza e choro fácil nos primeiros dias são comuns e passam em até 2 semanas. **Se durarem mais ou forem intensos, procure a equipe.**
+
+## Próximos passos
+- Vamos conversar sobre **como evitar uma nova gravidez** agora.
+- Confira as vacinas (dTpa, se não tomou na gestação; gripe; hepatite B).
+- Consulta do bebê e teste do pezinho em dia.
+- Retorno para a consulta puerperal por volta de 30 dias.
+`, ["Sangramento que aumenta ou encharca um absorvente por hora", "Febre ou corrimento com cheiro forte", "Dor de cabeça forte, visão embaçada ou pressão 16 por 11 ou mais", "Dor e inchaço em uma perna, falta de ar ou dor no peito", "Mama vermelha, quente e dolorida com febre", "Pensamentos de se machucar ou de machucar o bebê"]);
+
+ORI59("pp-consulta", `
+## Voltando à rotina
+- Você pode voltar às atividades **aos poucos**, conforme se sentir bem.
+
+## Evitar uma nova gravidez
+- **A gravidez pode voltar antes da primeira menstruação.** Use o método que escolhemos.
+
+## Se teve diabetes ou pressão alta na gravidez
+- **Diabetes:** faça a curva glicêmica com cerca de 6 semanas depois do parto e um exame de glicose por ano.
+- **Pressão alta:** seu risco de problemas no coração no futuro é maior. Mantenha o acompanhamento e meça a pressão.
+
+## Outros cuidados
+- Preventivo (exame do colo do útero) se estiver atrasado.
+- Consultas do bebê em dia.
+`, ["Sangramento forte ou febre", "Mama vermelha e dolorida com febre", "Tristeza forte, falta de interesse por tudo ou pensamentos de se machucar", "Pressão 16 por 11 ou mais, dor de cabeça forte ou visão embaçada"]);
+
+ORI59("pp-contracepcao", `
+## Escolha um método já
+- **Você pode engravidar antes da primeira menstruação.**
+- **Implante e DIU** são os mais eficazes e duram anos; podem ser retirados quando você quiser.
+- **Métodos só com progesterona não atrapalham a amamentação** (minipílula, injeção de 3 em 3 meses, implante).
+- Pílulas com estrogênio devem ser evitadas nas primeiras 6 semanas e, de preferência, enquanto amamenta.
+
+## Como usar
+- **Minipílula (noretisterona):** 1 comprimido por dia, **sempre no mesmo horário**, sem pausa entre as cartelas.
+- **Injeção trimestral:** a cada 12 semanas (pode atrasar até 2 semanas). Anote a data da próxima.
+
+## Camisinha
+- Use também para se proteger de infecções e até o método começar a proteger.
+`, ["Dor forte na barriga ou sangramento forte depois de colocar o DIU", "Febre e dor no pé da barriga", "Dor e inchaço em uma perna, ou falta de ar", "Dor de cabeça forte e diferente do habitual"]);
+
+ORI59("pp-depressao", `
+## Não é culpa sua
+- Depressão depois do parto é **comum e tem tratamento**. **Não é culpa sua nem falta de amor pelo bebê.**
+
+## O que ajuda
+- **Conte com ajuda** para dormir algumas horas seguidas e para cuidar do bebê.
+- Acompanhamento com psicologia, quando oferecido.
+
+## Remédio (se receitado)
+- **Sertralina:** meio comprimido por dia na primeira semana; depois, 1 comprimido por dia. **Pode ser usada durante a amamentação.**
+- O efeito começa em **2 a 4 semanas**. Não pare por conta própria.
+
+## Se vierem pensamentos de se machucar ou de machucar o bebê
+- **Procure ajuda imediatamente:** a unidade, o CAPS, o SAMU (**192**) ou o CVV (**188**).
+- Não fique sozinha com o bebê nesse momento: chame alguém de confiança.
+
+## Retorno
+- **Em 2 a 4 semanas.**
+`, ["Pensamentos de se machucar ou de que seria melhor morrer", "Pensamentos de machucar o bebê", "Ouvir vozes, ver coisas, confusão ou agitação forte", "Não conseguir cuidar de si ou do bebê", "Ficar dias sem dormir, com muita energia"]);
+
+ORI59("pp-pos-gestacao-risco", `
+## Por que acompanhar
+- Ter tido diabetes ou pressão alta na gravidez **aumenta a chance de diabetes, pressão alta e problemas do coração no futuro**.
+
+## Exames
+- **Curva glicêmica por volta de 6 semanas** depois do parto e exames **uma vez por ano**.
+- **Meça a pressão regularmente.** Se teve pré-eclâmpsia, venha nas consultas de controle combinadas (cerca de 7 dias, 40 dias e 12 semanas).
+- Remédio da pressão, se receitado: todos os dias. Ele será retirado quando a pressão normalizar.
+
+## Na próxima gravidez
+- **Procure a unidade cedo:** há remédios que ajudam a prevenir a pré-eclâmpsia.
+
+## Hábitos
+- Alimentação saudável, atividade física e peso adequado diminuem esse risco.
+`, ["Pressão 16 por 11 ou mais", "Dor de cabeça forte, visão embaçada ou dor na boca do estômago", "Falta de ar ou inchaço importante", "Muita sede e muita urina"]);
+
+// ── Puericultura – consultas por idade e temas (conteúdo da v42/v43/v44 mantido, agora com partes)
+const PU_FECHO59 = `
+## Em todas as consultas
+- Traga a **Caderneta da Criança**.`;
+const PU_FEBRE59 = `
+## Febre ou dor
+- Dê paracetamol ou dipirona **só na quantidade da receita** (calculada pelo peso), respeitando o intervalo mínimo de 6 horas. Não dê os dois juntos.
+- Dipirona não deve ser usada antes de 3 meses ou em bebês com menos de 5 kg.`;
+
+ORI59("pu-rn", `
+## Alimentação
+- **Ofereça o peito sempre que o bebê quiser, dia e noite.**
+- **Não é preciso água, chá ou outro leite até os 6 meses.**
+
+## Vitamina D
+- **2 gotas por dia** (vitamina D de 200 UI por gota, de qualquer marca), todos os dias. Ou o polivitamínico da farmácia da unidade, na quantidade da receita, medido com a seringa.
+
+## Sono seguro
+- Sempre **de barriga para cima, no próprio berço**, no quarto dos pais.
+- **Sem travesseiro, protetor de berço ou bichos de pelúcia.**
+
+## Umbigo
+- Mantenha **limpo e seco**; limpe com álcool 70% se a equipe orientar. Ele cai entre 1 e 2 semanas.
+
+## Segurança
+- **Nunca deixe o bebê sozinho** em cama, sofá ou trocador.
+- No carro, **sempre no bebê-conforto, de costas para o movimento**.
+${PU_FECHO59}
+`);
+
+ORI59("pu-1m", `
+## Choro e cólica
+- O choro é a forma de o bebê se comunicar. **As cólicas costumam melhorar até 3 a 4 meses.**
+- Colo, contato pele a pele e ambiente calmo ajudam. **Nunca sacuda o bebê.**
+
+## Estímulo
+- Converse, cante e olhe nos olhos do bebê.
+- **Deixe-o de bruços alguns minutos por dia, acordado** e com você por perto.
+
+## Vitamina D
+- Continue **todos os dias** (2 gotas da vitamina de 200 UI por gota, ou a quantidade da receita).
+${PU_FECHO59}
+`);
+
+ORI59("pu-2m", `
+## Vacinas de hoje
+- O bebê toma várias vacinas. Pode ter **febre baixa e dor no local nas primeiras 24 a 48 horas**.
+- **Só dê remédio para febre se a equipe tiver receitado a dose.**
+- Procure a unidade no mesmo dia se a febre passar de 38,5 °C, durar mais de 48 horas, ou se o bebê ficar molinho, gemendo ou recusar o peito.
+- **Aos 3 meses, volte à sala de vacina** para a meningocócica C.
+
+## Estímulo
+- Converse e brinque com o bebê: **ele já sorri para você**.
+
+## Vitamina D
+- Continue todos os dias.
+${PU_FECHO59}
+`);
+
+ORI59("pu-4m", `
+## Alimentação
+- **Continue só o leite materno até os 6 meses.** Água, chá e suco não são necessários.
+
+## Segurança
+- **O bebê já rola:** não o deixe sozinho na cama ou no trocador, nem por um instante.
+
+## Vacinas
+- **Aos 5 meses, volte à sala de vacina** para a 2ª dose da meningocócica C.
+
+## Vitamina D
+- Continue todos os dias.
+${PU_FECHO59}
+`);
+
+ORI59("pu-6m", `
+## Início da alimentação (mantendo o peito)
+- Ofereça **comida de verdade**: legumes, verduras, feijão, carnes, ovos, frutas, arroz.
+- **Amasse com o garfo, sem liquidificar.**
+- Pouco sal e **nenhum tempero pronto**.
+- **Não ofereça** açúcar, mel, achocolatado, biscoitos, sucos de caixinha ou embutidos.
+- Ofereça **água nos intervalos**.
+- Deixe o bebê tocar e explorar a comida.
+
+## Ferro (dos 6 aos 9 meses)
+- **10 gotas por dia, por 3 meses.** Não precisa parar o peito.
+- Limpe os dentes depois (pode manchar). **As fezes ficam escuras: é esperado.**
+
+## Vitamina D
+- Continue todos os dias.
+${PU_FEBRE59}
+${PU_FECHO59}
+`);
+
+ORI59("pu-9m", `
+## Alimentação
+- O bebê já pode comer **pedaços pequenos e macios** da comida da família.
+- **Evite alimentos duros e redondos** (uva inteira, pipoca, amendoim, castanhas) pelo risco de engasgo. Uva e tomate-cereja: corte em 4.
+
+## Segurança
+- Com o bebê engatinhando: **proteja tomadas e escadas** e guarde remédios e produtos de limpeza **no alto e trancados**.
+
+## Vitamina D
+- Continue todos os dias até 1 ano.
+${PU_FEBRE59}
+${PU_FECHO59}
+`);
+
+ORI59("pu-12m", `
+## Alimentação
+- Com 1 ano, a criança come **a mesma comida da família**, sem sal em excesso e **sem açúcar**.
+- Continue o peito, se for possível.
+
+## Ferro (dos 12 aos 15 meses)
+- **10 gotas por dia, por 3 meses.** Limpe os dentes depois.
+
+## Vitamina D
+- A partir de 1 ano: **3 gotas por dia** (vitamina de 200 UI por gota).
+
+## Dentes
+- Escove **2 vezes ao dia**, desde o primeiro dente, com **creme dental com flúor (1.000 ppm ou mais)** na quantidade de **um grão de arroz cru**.
+
+## Vacinas
+- **Aos 15 meses há novas vacinas:** volte à sala de vacina.
+${PU_FEBRE59}
+${PU_FECHO59}
+`);
+
+ORI59("pu-15m", `
+## Desenvolvimento
+- **Converse, leia e cante** com a criança todos os dias.
+- Birras são comuns nesta idade: mantenha a calma e **limites claros**.
+
+## Alimentação
+- Ofereça de novo os alimentos que ela recusou, **sem forçar e sem trocar a refeição por leite**.
+
+## Vitamina D
+- 3 gotas por dia.
+
+## Vacinas
+- Volte à sala de vacina para as vacinas dos 15 meses, se ainda não tomou.
+${PU_FEBRE59}
+${PU_FECHO59}
+`);
+
+ORI59("pu-18m", `
+## Desenvolvimento
+- **Converse, leia e brinque** todos os dias.
+- **Evite celular, tablet e TV antes dos 2 anos.**
+- A criança aprende imitando: **dê o exemplo** nas refeições e na rotina.
+
+## Vitamina D
+- 3 gotas por dia.
+${PU_FEBRE59}
+${PU_FECHO59}
+`);
+
+ORI59("pu-24m", `
+## Telas
+- A partir de 2 anos: **no máximo 1 hora por dia, com um adulto junto**.
+- **Nada de tela durante as refeições e 1 hora antes de dormir.**
+
+## Desfralde
+- Acontece quando a criança mostra que está pronta: **não force nem castigue**.
+
+## Dentes
+- Escovação 2 vezes ao dia com creme dental com flúor.
+${PU_FEBRE59}
+${PU_FECHO59}
+`);
+
+ORI59("pu-30m", `
+## Desenvolvimento
+- **Leia e converse todos os dias**, fazendo perguntas e ampliando as frases da criança.
+
+## Desfralde
+- Acontece quando a criança está pronta: **sem pressão e sem castigo**.
+
+## Telas
+- **No máximo 1 hora por dia**, com um adulto junto.
+${PU_FEBRE59}
+${PU_FECHO59}
+`);
+
+const PU_PRE59 = `
+## Hábitos que fazem diferença
+- **Brincadeiras ativas todos os dias.**
+- **Sono regular** (10 a 13 horas por dia, contando os cochilos).
+- Pouca tela (no máximo 1 hora por dia, com um adulto junto).
+
+## Segurança
+- **Na água, a criança precisa estar sempre ao alcance do braço de um adulto.**
+- **No carro, cadeirinha adequada ao peso, no banco de trás.**
+
+## Dentes
+- Escovação 2 vezes ao dia com creme dental com flúor e consulta com a equipe de saúde bucal.
+${PU_FEBRE59}
+${PU_FECHO59}
+`;
+ORI59("pu-3a5a", PU_PRE59);
+ORI59("pu-4a", PU_PRE59);
+ORI59("pu-5a", PU_PRE59);
+
+ORI59("pu-suplementacao", `
+## Ferro
+- O ferro **previne anemia**, comum entre 6 meses e 2 anos.
+- Dê **30 minutos antes de uma refeição** (não precisa parar o peito), na quantidade da receita.
+- **Limpe os dentes depois** (pode manchar). **Fezes escuras são esperadas.**
+- **Guarde o frasco fora do alcance das crianças:** ferro em excesso é perigoso.
+
+## Vitamina D
+- Ajuda os ossos. Dê **todos os dias na dose combinada** (até 1 ano, 400 UI; depois, 600 UI). **Mais não é melhor.**
+- Confira no rótulo quantas unidades tem cada gota.
+`, ["Criança engoliu muitos comprimidos ou o frasco de ferro: vá à urgência", "Vômitos que não param ou fezes com sangue"]);
+
+ORI59("pu-crescimento", `
+## Acompanhamento
+- O crescimento da criança é acompanhado pela **curva da caderneta**. **Mais importante que um peso isolado é a tendência** ao longo do tempo.
+- Vamos ajustar a alimentação juntos e **acompanhar com mais frequência**. Venha nas datas combinadas.
+
+## Alimentação
+- Comida de verdade em horários regulares, com a família, sem tela.
+- Evite ultraprocessados e bebidas adoçadas (refrigerante, suco de caixinha).
+`, ["Perda de peso rápida", "Inchaço nas pernas ou no rosto", "Criança apática, que não brinca", "Diarreia que não passa ou vômitos"]);
+
+ORI59("pu-vacinas", `
+## Vacinas protegem
+- As vacinas protegem contra doenças graves. **Todas as do calendário são gratuitas** na unidade.
+
+## Depois da vacina
+- Febre baixa e dor no local podem acontecer e passam em 1 a 2 dias.
+- Para febre ou dor, só o remédio e a quantidade receitados.
+
+## Atrasou?
+- **Não precisa recomeçar:** a sala de vacina completa o que falta.
+
+## Caderneta
+- Guarde a caderneta e traga em todas as consultas.
+`, ["Falta de ar, inchaço no rosto ou placas pelo corpo logo depois da vacina", "Febre alta ou choro sem parar por mais de 3 horas", "Convulsão", "Bebê molinho ou pálido demais"]);
+
+ORI59("pu-triagens", `
+## Testes do bebê
+- Os testes do bebê (pezinho, olhinho, orelhinha, coraçãozinho e linguinha) **encontram cedo doenças que têm tratamento**.
+- **Guarde os resultados na caderneta.**
+- Se algum teste não foi feito ou precisa ser repetido, **faça o quanto antes**.
+`, ["Bebê arroxeado, cansado para mamar ou suando nas mamadas", "Mancha branca na pupila em fotos ou no exame", "Não se assusta com barulhos altos"]);
+
+ORI59("pu-dnpm", `
+## Cada criança tem seu ritmo
+- Mas alguns sinais pedem avaliação mais cedo. **Quanto antes começa a estimulação, melhor o resultado.**
+- **Você não precisa esperar o diagnóstico** para começar a estimulação indicada.
+
+## Em casa, todos os dias
+- **Converse, cante, leia e brinque no chão** com a criança.
+- **Evite telas antes dos 2 anos.**
+
+## Próximos passos
+- Vá às avaliações e terapias encaminhadas e traga as anotações na consulta.
+`, ["Perda da fala ou de habilidades que a criança já tinha", "Convulsões ou episódios de \"desligar\"", "Não reage a sons"]);
+
+ORI59("pu-prematuro", `
+## Idade corrigida
+- Para crescimento e desenvolvimento, contamos a **idade corrigida** (como se tivesse nascido com 40 semanas) **até os 2 anos**.
+- **As vacinas seguem a idade de nascimento.**
+
+## Vitaminas
+- **Ferro e vitamina D todos os dias**, na quantidade da receita.
+
+## Acompanhamento
+- Mantenha as consultas na unidade **e no serviço de egressos** (seguimento do prematuro).
+${PU_FECHO59}
+`);
+
+ORI59("pu-fimose", `
+## O que é normal
+- Na maioria dos meninos, a pele do pênis **solta sozinha até os 3 anos ou mais**.
+- **Não force a pele para trás:** isso pode machucar e causar cicatriz.
+
+## Se usar a pomada
+- Camada fina no anel da pele, **2 vezes ao dia, por 4 a 8 semanas**.
+- Puxe a pele **só até onde não doer**.
+
+## Higiene
+- No banho, lave com água e sabão a parte que fica à mostra e enxágue bem.
+`, ["Pele presa para trás, com a cabeça do pênis inchada", "Dor, vermelhidão e pus", "Dificuldade para urinar ou febre"]);
+
+ORI59("pu-checkup", `
+## Exames de rotina
+- **Criança saudável não precisa de exames de sangue, fezes ou urina "de rotina".**
+- O que mais ajuda é a consulta: medir peso, altura e pressão, ver visão, audição, dentes, desenvolvimento e vacinas.
+- Exame pedido sem motivo pode dar alteração que não significa doença e levar a mais exames e preocupação.
+
+## O que faz mais pela saúde
+- Telas com moderação, sono regular, brincadeira ativa todos os dias e alimentação com comida de verdade.
+
+## Adolescentes
+- Parte da consulta é **a sós com o profissional, com sigilo**, que só é quebrado se houver risco à vida ou à integridade (como suspeita de violência ou abuso).
+`);
 
 </script>
 <script>

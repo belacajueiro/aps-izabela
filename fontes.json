@@ -1,11 +1,11 @@
 {
- "gerado": "2026-10-25T16:28:06.305Z",
+ "gerado": "2026-10-25T16:39:51.880Z",
  "cmed": {
   "data": "09/10/2026",
   "fonte": "cmed_pmc2026",
   "icms": "PMC com ICMS de Minas Gerais: 12% para genéricos e 18% para os demais"
  },
- "n_fontes": 655,
+ "n_fontes": 660,
  "n_itens": 365,
  "sem_url": [
   "remume",
@@ -275,7 +275,8 @@
   "gvs3_lepto",
   "gvs3_raiva",
   "gvs3_pecon",
-  "gvs2_malaria"
+  "gvs2_malaria",
+  "crie2023_vz"
  ],
  "nao_conferidas": [
   "aap_oma",
@@ -505,7 +506,8 @@
   "periop_multi2024",
   "alvarado1986",
   "cssrs",
-  "mckee1971"
+  "mckee1971",
+  "aap_piolho2022"
  ],
  "fontes": [
   {
@@ -8735,6 +8737,7 @@
     "risco-suicida",
     "sarampo",
     "tb-sr",
+    "varicela",
     "zika"
    ]
   },
@@ -8896,6 +8899,61 @@
    "usado_em": [
     "acidente-ofidico",
     "sarampo"
+   ]
+  },
+  {
+   "k": "gvs1_varicela",
+   "s": "GVS 6ª ed. (2024) vol. 1 – varicela/herpes-zóster",
+   "t": "Ministério da Saúde. Guia de Vigilância em Saúde, 6ª ed. rev., 2024, vol. 1 – Varicela: transmissão de 1–2 dias antes do exantema até todas as lesões em crosta; complicações (infecção bacteriana de pele, pneumonia, ataxia cerebelar, encefalite, trombocitopenia, varicela hemorrágica no imunodeprimido, síndrome de Reye com AAS – AAS contraindicado); síndrome da varicela congênita (1,2% no 1º trimestre; 2% entre 13–20 semanas); RN cuja mãe teve varicela de 5 dias antes a 2 dias após o parto: risco de varicela grave; aciclovir para quem tem risco de agravamento – criança sem imunodepressão 20 mg/kg/dose VO 5×/dia, 'dose máxima de 800 mg/dia', 5 dias; adulto 800 mg VO 5×/dia por 7 dias, mais efetivo nas primeiras 24 h; imunodeprimido ou grave: aciclovir IV; não recomendado na gestação, salvo complicação (manual MS).",
+   "f": "F",
+   "url": "https://bvsms.saude.gov.br/bvs/publicacoes/guia_vigilancia_saude_6edrev_v1.pdf",
+   "ano": 2024,
+   "usado_em": [
+    "varicela"
+   ]
+  },
+  {
+   "k": "crie2023_vz",
+   "s": "Manual dos CRIE 2023 – varicela (VZ e IGHAVZ)",
+   "t": "Ministério da Saúde. Manual dos Centros de Referência para Imunobiológicos Especiais, 6ª ed., 2023, cap. 18: vacina pós-exposição para controle de surto em hospital, creches e escolas com crianças < 7 anos – suscetíveis imunocompetentes a partir de 9 meses, até 120 h (5 dias) do contato; IGHAVZ 125 UI/10 kg (mín. 125, máx. 625 UI) até 96 h do contato se: suscetível + contato significativo (domiciliar contínuo ou ≥ 1 h em ambiente fechado/mesmo quarto hospitalar) + risco especial (imunodeprimidos, < 9 meses em contato hospitalar, gestantes, RN de mãe com varicela de 5 dias antes a 48 h após o parto, prematuros ≥ 28 semanas de mãe sem varicela, prematuros < 28 semanas ou < 1.000 g); IGHAVZ sem uso terapêutico; AAS proibido por 6 semanas após a vacina (manual MS).",
+   "f": "F",
+   "url": "",
+   "ano": 2023,
+   "usado_em": [
+    "varicela"
+   ]
+  },
+  {
+   "k": "cochrane_crupe2023",
+   "s": "Cochrane 2023 – corticoide no crupe",
+   "t": "Aregbesola A et al. Glucocorticoids for croup in children. Cochrane Database Syst Rev 2023;1:CD001955, doi 10.1002/14651858.CD001955.pub5 (45 ECR, 5.888 crianças): corticoide reduz o escore em 2, 6 e 12 h (certeza baixa), o tempo de permanência e os retornos; prednisolona × dexametasona sem diferença no escore em 2 h (alta), mas dexametasona provavelmente reduz retornos/readmissões (RR 0,55; moderada); dexametasona 0,15 × 0,60 mg/kg sem diferença em retornos (alta) – a dose menor pode ser tão eficaz (revisão sistemática; conferida no PubMed).",
+   "f": "F",
+   "url": "https://doi.org/10.1002/14651858.CD001955.pub5",
+   "ano": 2023,
+   "usado_em": [
+    "crupe"
+   ]
+  },
+  {
+   "k": "espghan_constip2026",
+   "s": "ESPGHAN/NASPGHAN 2026 – constipação funcional (0–18 anos)",
+   "t": "Gordon M, de Geus A, et al. ESPGHAN/NASPGHAN guidelines for treatment of functional constipation in children aged 0–18 years. J Pediatr Gastroenterol Nutr 2026;83(2):335-66, doi 10.1002/jpn3.70447 (GRADE; 102 ECR; texto integral no PMC): diagnóstico pelos critérios de Roma IV; desimpactação por 3–6 dias (VO ou retal); PEG com ou sem eletrólitos como opção de manutenção – mais sucesso que placebo (65% × 36%; NNT 4; certeza moderada) e que lactulose (72% × 51%; NNT 5; baixa); Tabela 10: PEG desimpactação 1–1,5 g/kg/dia (máx. 6 dias), manutenção 0,4–0,8 g/kg/dia; lactulose 350–700 mg/kg/dia até 7 meses e 0,6–2 g/kg/dia de 7 meses a 18 anos; óleo mineral 1–3 mL/kg/dia de 3 a 18 anos (máx. 90 mL/dia), uso rotineiro não sugerido; senna, picossulfato e bisacodil como substitutos ou adjuvantes se o PEG não bastar; probiótico/simbiótico específico como opção condicional (baixa certeza) (diretriz; conferida em 25/10/2026).",
+   "f": "F",
+   "url": "https://doi.org/10.1002/jpn3.70447",
+   "ano": 2026,
+   "usado_em": [
+    "constipacao-infantil"
+   ]
+  },
+  {
+   "k": "aap_piolho2022",
+   "s": "AAP 2022 – pediculose (Nolt et al.)",
+   "t": "Nolt D, Moore S, Yan AC, Melnick L; AAP. Head Lice. Pediatrics 2022;150(4):e2022059282, doi 10.1542/peds.2022-059282: relatório clínico revisado com novos medicamentos aprovados e algoritmo de manejo (conferido apenas pelo resumo no PubMed; detalhes do tratamento citados de memória).",
+   "f": "C",
+   "url": "https://doi.org/10.1542/peds.2022-059282",
+   "ano": 2022,
+   "usado_em": [
+    "pediculose"
    ]
   }
  ],
@@ -9579,14 +9637,17 @@
    "fontes": [
     "aap_varicela",
     "rename",
-    "remume"
+    "remume",
+    "gvs1_varicela",
+    "crie2023_vz",
+    "port11211"
    ]
   },
   {
    "id": "maopeboca",
    "nome": "Doença mão-pé-boca",
    "modulo": "de",
-   "nv": 1,
+   "nv": 2,
    "fontes": [
     "rename",
     "remume",
@@ -9601,7 +9662,8 @@
    "fontes": [
     "pediculose",
     "rename",
-    "remume"
+    "remume",
+    "aap_piolho2022"
    ]
   },
   {
@@ -10554,7 +10616,8 @@
    "fontes": [
     "cochrane_crupe",
     "rename",
-    "remume"
+    "remume",
+    "cochrane_crupe2023"
    ]
   },
   {
@@ -10597,7 +10660,8 @@
    "fontes": [
     "espghan_constip",
     "rename",
-    "remume"
+    "remume",
+    "espghan_constip2026"
    ]
   },
   {

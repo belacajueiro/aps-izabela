@@ -1,11 +1,11 @@
 {
- "gerado": "2026-10-25T16:50:03.174Z",
+ "gerado": "2026-10-25T17:14:37.099Z",
  "cmed": {
   "data": "09/10/2026",
   "fonte": "cmed_pmc2026",
   "icms": "PMC com ICMS de Minas Gerais: 12% para genéricos e 18% para os demais"
  },
- "n_fontes": 663,
+ "n_fontes": 666,
  "n_itens": 365,
  "sem_url": [
   "remume",
@@ -926,6 +926,7 @@
     "maopeboca",
     "mastite",
     "migranea",
+    "miiase",
     "moniliase-oral",
     "mu-climaterio",
     "mu-endometriose",
@@ -1238,12 +1239,15 @@
     "diarreia",
     "dor-abdominal",
     "escabiose",
+    "exantema",
     "fadiga",
+    "herpes-labial",
     "hordeolo",
     "impetigo",
     "maopeboca",
     "olho-vermelho-alarme",
     "parasitoses",
+    "picada-inseto",
     "queimadura",
     "resfriado",
     "tensional",
@@ -8413,6 +8417,8 @@
    "url": "https://www.ufrgs.br/telessauders/regulasus/#regulasus-protocolos",
    "ano": 2023,
    "usado_em": [
+    "acne",
+    "condiloma",
     "dermatite-contato",
     "pele-alopecia",
     "pele-atlas",
@@ -8424,8 +8430,11 @@
     "pele-rosacea",
     "pele-urticaria-cronica",
     "pele-vitiligo",
+    "pitiriase-versicolor",
+    "seborreica",
     "tinea",
-    "urticaria"
+    "urticaria",
+    "verrugas"
    ]
   },
   {
@@ -8654,7 +8663,10 @@
    "url": "https://www.ufrgs.br/telessauders/regulacao/protocolos-de-encaminhamento/",
    "ano": 2023,
    "usado_em": [
+    "colica-renal",
     "escroto-agudo",
+    "hematuria",
+    "incontinencia",
     "retencao-urinaria"
    ]
   },
@@ -8735,7 +8747,9 @@
     "acidente-ofidico",
     "chikungunya",
     "coqueluche",
+    "dermatite-contato",
     "escorpiao",
+    "exantema",
     "hepatites-tr",
     "hiv-diagnostico",
     "leptospirose",
@@ -8744,6 +8758,7 @@
     "raiva",
     "risco-suicida",
     "sarampo",
+    "sifilis",
     "tb-sr",
     "varicela",
     "zika"
@@ -8768,6 +8783,7 @@
    "url": "https://bvsms.saude.gov.br/bvs/publicacoes/guia_vigilancia_saude_6edrev_v1.pdf",
    "ano": 2024,
    "usado_em": [
+    "exantema",
     "sarampo"
    ]
   },
@@ -8779,6 +8795,7 @@
    "url": "",
    "ano": 2026,
    "usado_em": [
+    "exantema",
     "sarampo"
    ]
   },
@@ -8803,6 +8820,7 @@
    "ano": 2024,
    "usado_em": [
     "chikungunya",
+    "exantema",
     "zika"
    ]
   },
@@ -8973,7 +8991,9 @@
    "ano": 2024,
    "usado_em": [
     "ferida",
-    "queimadura"
+    "miiase",
+    "queimadura",
+    "tungiase"
    ]
   },
   {
@@ -8996,6 +9016,47 @@
    "ano": 2026,
    "usado_em": [
     "zoster"
+   ]
+  },
+  {
+   "k": "gvs3_himenop",
+   "s": "GVS 6ª ed. (2024) vol. 3 – acidentes por himenópteros",
+   "t": "Ministério da Saúde. Guia de Vigilância em Saúde, 6ª ed. rev., 2024, vol. 3 – Acidente por himenópteros (abelhas, vespas e formigas): reação tóxica local (dor, eritema, edema por horas); reação tóxica sistêmica por múltiplas picadas (em geral > 100 em adultos e algumas dezenas em crianças) com hemólise, rabdomiólise e injúria renal; síndrome de envenenamento em geral com > 500 picadas; reação alérgica local extensa (edema por até alguns dias); Quadro 1 – graus I a IV das reações alérgicas sistêmicas (III e IV com risco de vida); após reação só local, risco de reação sistêmica grave em nova picada < 10% e de anafilaxia grave < 3%; tratamento: gelo, analgésico, anti-histamínico; antibiótico só se infecção; anafilaxia: adrenalina 1 mg/mL 0,01 mg/kg IM na coxa (máx. 0,5 mg adulto, 0,3 mg criança), repetir a cada 5–15 min; não há soro antiapílico disponível (em fase de testes) (manual MS).",
+   "f": "F",
+   "url": "https://bvsms.saude.gov.br/bvs/publicacoes/guia_vigilancia_saude_6edrev_v3.pdf",
+   "ano": 2024,
+   "usado_em": [
+    "picada-inseto"
+   ]
+  },
+  {
+   "k": "pcdt_ist2022",
+   "s": "PCDT IST 2022 (texto integral)",
+   "t": "Ministério da Saúde. Protocolo Clínico e Diretrizes Terapêuticas para Atenção Integral às Pessoas com IST, 2022 (cópia na base clínica): Quadro 15 (sífilis: recente 2,4 milhões UI dose única; tardia 2,4 milhões UI/semana por 3 semanas; alternativa doxiciclina 15/30 dias, exceto gestantes; intervalo máximo de 14 dias fora da gestação); seção 5.7 (resposta adequada: queda de 2 diluições em 6 meses na recente e 12 meses na tardia; retratamento se não cair, se subir 2 diluições ou se sintomas); Quadros 31 e 37 (ceftriaxona 500 mg IM + azitromicina 1 g; 2ª opção ceftriaxona + doxiciclina 7 dias; retratamento gonocócico com azitromicina 2 g ou gentamicina 240 mg IM + azitromicina 2 g); Quadro 33 (candidíase: miconazol 7 noites ou nistatina 100.000 UI 14 noites; fluconazol 150 mg ou itraconazol 200 mg 2×/dia por 1 dia; recorrente: indução e manutenção 6 meses; gestante só via vaginal); Quadro 34 (vaginose: metronidazol 500 mg 2×/dia 7 dias ou gel 5 noites; clindamicina 300 mg 2×/dia 7 dias; recorrente 10–14 dias + supressão); Quadro 35 (tricomoníase: metronidazol 2 g dose única ou 500 mg 2×/dia 7 dias; tratar parcerias; evitar álcool); Quadro 38 (herpes genital: 1º episódio aciclovir 400 mg 3×/dia ou 200 mg 5×/dia 7–10 dias; recidiva 400 mg 3×/dia ou 800 mg 2×/dia 5 dias; supressão 400 mg 2×/dia até 6 meses–2 anos; gestante: supressão a partir de 36 semanas com 400 mg 3×/dia); Quadro 39 (cancroide: azitromicina 1 g); Quadro 51 (levonorgestrel 1,5 mg ou 0,75 mg 12/12 h até 5 dias); Figuras 11–14 e 16 (fluxogramas de corrimento vaginal, cervicite, corrimento uretral, úlcera genital e verrugas anogenitais); verrugas: ATA 80–90% e crioterapia podem ser usados na gestação, podofilina e imiquimode não; testes de HPV não indicados (protocolo; cópia na base clínica).",
+   "f": "F",
+   "url": "https://www.gov.br/aids/pt-br/central-de-conteudo/pcdts/2022/ist/pcdt-ist-2022_isbn-1.pdf",
+   "ano": 2022,
+   "usado_em": [
+    "ae",
+    "candidiase",
+    "cervicite",
+    "condiloma",
+    "herpes-genital",
+    "sifilis",
+    "tricomoniase",
+    "uretrite",
+    "vaginose"
+   ]
+  },
+  {
+   "k": "nt14_2023",
+   "s": "NT 14/2023-DATHI/SVSA/MS – intervalo de penicilina na gestante",
+   "t": "Ministério da Saúde. Nota Técnica nº 14/2023-DATHI/SVSA/MS: atualização do intervalo entre doses de benzilpenicilina benzatina para sífilis em gestantes – ideal 7 dias, máximo 9 dias; se uma dose for perdida ou o intervalo passar de 9 dias, reiniciar o esquema (conferido pela notícia da Agência Gov de 19/07/2023 e pelo título no Portal de Boas Práticas/Fiocruz; texto da NT não aberto).",
+   "f": "F",
+   "url": "https://agenciagov.ebc.com.br/noticias/202307/ministerio-da-saude-atualiza-recomendacao-sobre-o-intervalo-entre-doses-de-penicilina-para-tratamento-de-sifilis-em-gestantes",
+   "ano": 2023,
+   "usado_em": [
+    "sifilis"
    ]
   }
  ],
@@ -9221,12 +9282,13 @@
    "id": "vaginose",
    "nome": "Vaginose bacteriana",
    "modulo": "de",
-   "nv": 1,
+   "nv": 0,
    "fontes": [
     "pcdt_ist",
     "cdc_ist",
     "rename",
-    "remume"
+    "remume",
+    "pcdt_ist2022"
    ]
   },
   {
@@ -9237,7 +9299,8 @@
    "fontes": [
     "pcdt_ist",
     "rename",
-    "remume"
+    "remume",
+    "pcdt_ist2022"
    ]
   },
   {
@@ -9249,7 +9312,8 @@
     "pcdt_ist",
     "cdc_ist",
     "rename",
-    "remume"
+    "remume",
+    "pcdt_ist2022"
    ]
   },
   {
@@ -9260,7 +9324,8 @@
    "fontes": [
     "ulip_bula",
     "rename",
-    "remume"
+    "remume",
+    "pcdt_ist2022"
    ]
   },
   {
@@ -9438,37 +9503,42 @@
    "id": "uretrite",
    "nome": "Corrimento uretral (uretrite)",
    "modulo": "de",
-   "nv": 2,
+   "nv": 1,
    "fontes": [
     "pcdt_ist22",
     "cdc_ist",
     "rename",
-    "remume"
+    "remume",
+    "pcdt_ist2022"
    ]
   },
   {
    "id": "sifilis",
    "nome": "Sífilis adquirida",
    "modulo": "de",
-   "nv": 2,
+   "nv": 1,
    "fontes": [
     "sp_sifilis",
     "pcdt_ist22",
     "rename",
     "remume",
-    "betim_pn2024"
+    "betim_pn2024",
+    "pcdt_ist2022",
+    "nt14_2023",
+    "port11211"
    ]
   },
   {
    "id": "herpes-genital",
    "nome": "Herpes genital",
    "modulo": "de",
-   "nv": 2,
+   "nv": 1,
    "fontes": [
     "bvs_herpes",
     "cdc_ist",
     "rename",
-    "remume"
+    "remume",
+    "pcdt_ist2022"
    ]
   },
   {
@@ -9530,7 +9600,8 @@
    "fontes": [
     "rename",
     "remume",
-    "tsrs_derm2023"
+    "tsrs_derm2023",
+    "port11211"
    ]
   },
   {
@@ -9779,7 +9850,8 @@
    "fontes": [
     "eau_litiase",
     "rename",
-    "remume"
+    "remume",
+    "tsrs_uro2023"
    ]
   },
   {
@@ -10233,7 +10305,8 @@
    "fontes": [
     "malassezia",
     "rename",
-    "remume"
+    "remume",
+    "tsrs_derm2023"
    ]
   },
   {
@@ -10244,7 +10317,8 @@
    "fontes": [
     "malassezia",
     "rename",
-    "remume"
+    "remume",
+    "tsrs_derm2023"
    ]
   },
   {
@@ -10265,7 +10339,8 @@
    "nv": 0,
    "fontes": [
     "ectoparasitoses",
-    "gvs_tetano"
+    "gvs_tetano",
+    "gvs1_tetano"
    ]
   },
   {
@@ -10275,7 +10350,8 @@
    "nv": 0,
    "fontes": [
     "ectoparasitoses",
-    "gvs_tetano"
+    "gvs_tetano",
+    "gvs1_tetano"
    ]
   },
   {
@@ -10286,7 +10362,8 @@
    "fontes": [
     "eaaci_urt",
     "rename",
-    "remume"
+    "remume",
+    "gvs3_himenop"
    ]
   },
   {
@@ -10297,7 +10374,8 @@
    "fontes": [
     "cochrane_verruga",
     "rename",
-    "remume"
+    "remume",
+    "tsrs_derm2023"
    ]
   },
   {
@@ -10434,7 +10512,8 @@
    "fontes": [
     "prolapso",
     "rename",
-    "remume"
+    "remume",
+    "tsrs_uro2023"
    ]
   },
   {
@@ -10443,7 +10522,8 @@
    "modulo": "de",
    "nv": 0,
    "fontes": [
-    "aua_hematuria"
+    "aua_hematuria",
+    "tsrs_uro2023"
    ]
   },
   {
@@ -10612,7 +10692,11 @@
     "nt_sarampo",
     "ms_dengue",
     "rename",
-    "remume"
+    "remume",
+    "cab28",
+    "gvs1_sarampo",
+    "port11211",
+    "ms_arbo_aps2024"
    ]
   },
   {
@@ -10825,7 +10909,8 @@
    "fontes": [
     "aad_acne",
     "rename",
-    "remume"
+    "remume",
+    "tsrs_derm2023"
    ]
   },
   {
@@ -10836,14 +10921,15 @@
    "fontes": [
     "herpes_labial",
     "rename",
-    "remume"
+    "remume",
+    "cab28"
    ]
   },
   {
    "id": "onicocriptose",
    "nome": "Unha encravada (onicocriptose)",
    "modulo": "de",
-   "nv": 0,
+   "nv": 1,
    "fontes": [
     "cochrane_unha",
     "rename",
@@ -11083,7 +11169,9 @@
     "pcdt_ist22",
     "cdc_ist",
     "rename",
-    "remume"
+    "remume",
+    "pcdt_ist2022",
+    "tsrs_derm2023"
    ]
   },
   {
@@ -11095,7 +11183,8 @@
     "pcdt_ist22",
     "cdc_ist",
     "rename",
-    "remume"
+    "remume",
+    "pcdt_ist2022"
    ]
   },
   {

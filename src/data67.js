@@ -356,11 +356,11 @@ const FOTO_PELE2 = {
           ["Média", "Valerato de betametasona 0,1%, furoato de mometasona 0,1%, dipropionato de betametasona 0,05% creme [F]"],
           ["Alta", "Dipropionato de betametasona 0,05% pomada [F]"],
           ["Muito alta", "Propionato de clobetasol 0,05% [F]"]
-        ]}, nota: "Só a dexametasona 0,1% creme está na REMUME [F]. Exposição no trabalho: registrar como dermatose ocupacional e orientar o afastamento do agente [NV: periodicidade de notificação vigente]."},
-        {ref: ["tsrs_derm2023", "rename", "remume"]}
+        ]}, nota: "Só a dexametasona 0,1% creme está na REMUME [F]. Exposição no trabalho: **dermatose ocupacional é de notificação semanal** (Portaria GM/MS 11.211/2026, Anexo I) [F]; orientar o afastamento do agente e acionar o CEREST da região [NV]."},
+        {ref: ["tsrs_derm2023", "port11211", "rename", "remume"]}
       ]}
     ]
-  }, {fontes: ["tsrs_derm2023"], nv: ["Dermatose ocupacional: conferir se e como entra na lista de notificação vigente (Portaria 11.211/2026) e o fluxo do CEREST da região."]});
+  }, {fontes: ["tsrs_derm2023", "port11211"], nv: ["Fluxo do CEREST da região de Betim para dermatose ocupacional."]});
 
   // ── 8. Ferimento e tétano
   G("ferida", {

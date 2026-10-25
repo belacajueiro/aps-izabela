@@ -27481,11 +27481,11 @@ const FOTO_PELE2 = {
           ["Média", "Valerato de betametasona 0,1%, furoato de mometasona 0,1%, dipropionato de betametasona 0,05% creme [F]"],
           ["Alta", "Dipropionato de betametasona 0,05% pomada [F]"],
           ["Muito alta", "Propionato de clobetasol 0,05% [F]"]
-        ]}, nota: "Só a dexametasona 0,1% creme está na REMUME [F]. Exposição no trabalho: registrar como dermatose ocupacional e orientar o afastamento do agente [NV: periodicidade de notificação vigente]."},
-        {ref: ["tsrs_derm2023", "rename", "remume"]}
+        ]}, nota: "Só a dexametasona 0,1% creme está na REMUME [F]. Exposição no trabalho: **dermatose ocupacional é de notificação semanal** (Portaria GM/MS 11.211/2026, Anexo I) [F]; orientar o afastamento do agente e acionar o CEREST da região [NV]."},
+        {ref: ["tsrs_derm2023", "port11211", "rename", "remume"]}
       ]}
     ]
-  }, {fontes: ["tsrs_derm2023"], nv: ["Dermatose ocupacional: conferir se e como entra na lista de notificação vigente (Portaria 11.211/2026) e o fluxo do CEREST da região."]});
+  }, {fontes: ["tsrs_derm2023", "port11211"], nv: ["Fluxo do CEREST da região de Betim para dermatose ocupacional."]});
 
   // ── 8. Ferimento e tétano
   G("ferida", {
@@ -27643,6 +27643,892 @@ const FOTO_PELE2 = {
       ]}
     ]
   });
+})();
+// ───────────── data68.js – v55: Guia Clínico – lote 5 (Pele, parte 2: 11 itens sem guia).
+// Conferido em 25/10/2026: TelessaúdeRS Dermatologia 2023 (Protocolos 1 e 11; Quadros 1, 2, 13, 17, 28 e 29), CAB 28 vol. II (herpes simples,
+// doenças exantemáticas, anafilaxia), GVS 6ª ed. rev. 2024 vol. 3 (acidentes por himenópteros, Quadro 1), Portaria GM/MS 11.211/2026 (Anexo I),
+// REMUME Betim (arquivo do Projeto).
+Object.assign(FONTES, {
+  gvs3_himenop: {s: "GVS 6ª ed. (2024) vol. 3 – acidentes por himenópteros", t: "Ministério da Saúde. Guia de Vigilância em Saúde, 6ª ed. rev., 2024, vol. 3 – Acidente por himenópteros (abelhas, vespas e formigas): reação tóxica local (dor, eritema, edema por horas); reação tóxica sistêmica por múltiplas picadas (em geral > 100 em adultos e algumas dezenas em crianças) com hemólise, rabdomiólise e injúria renal; síndrome de envenenamento em geral com > 500 picadas; reação alérgica local extensa (edema por até alguns dias); Quadro 1 – graus I a IV das reações alérgicas sistêmicas (III e IV com risco de vida); após reação só local, risco de reação sistêmica grave em nova picada < 10% e de anafilaxia grave < 3%; tratamento: gelo, analgésico, anti-histamínico; antibiótico só se infecção; anafilaxia: adrenalina 1 mg/mL 0,01 mg/kg IM na coxa (máx. 0,5 mg adulto, 0,3 mg criança), repetir a cada 5–15 min; não há soro antiapílico disponível (em fase de testes) (manual MS).", f: "F", url: "https://bvsms.saude.gov.br/bvs/publicacoes/guia_vigilancia_saude_6edrev_v3.pdf"}
+});
+
+const FOTO_PELE3 = {
+  seborreica: ["Dermatite seborreica no couro cabeludo: placas eritematosas com descamação fina", "Rusty.t.miller · Wikimedia Commons · CC BY 3.0"],
+  "larva-migrans": ["Larva migrans cutânea: trajeto serpiginoso elevado no dorso do pé", "CDC (cortesia Vince Conte, MD) · Wikimedia Commons · domínio público"],
+  tungiase: ["Tungíase maciça nos dedos dos pés, com lesões escurecidas (campanha no Quênia)", "R. Schuster · Wikimedia Commons · CC BY-SA 3.0"],
+  verruga: ["Verrugas vulgares: pápulas ásperas e queratósicas que interrompem as linhas da pele", "Abbassyma · Wikimedia Commons · domínio público"],
+  acne: ["Acne inflamatória: pápulas, pústulas e nódulos na face", "Sedef94 · Wikimedia Commons · CC BY-SA 4.0"],
+  "herpes-labial": ["Herpes labial: vesículas agrupadas no lábio inferior", "Metju12 · Wikimedia Commons · domínio público"],
+  "unha-encravada": ["Unha encravada no hálux: inflamação e tecido de granulação nas bordas laterais", "Julan Shirwod Nueva · Wikimedia Commons · CC BY-SA 4.0"]
+};
+
+(() => {
+  const get = id => CONDICOES.find(x => x.id === id);
+  const G = (id, guia, o = {}) => {
+    const c = get(id); if (!c) return;
+    c.guia = guia;
+    if (c.evid && o.fontes) c.evid.fontes = [...new Set([...(c.evid.fontes || []), ...o.fontes])];
+    (c.mudancas = c.mudancas || []).push("v55 (25/10/2026): Guia Clínico novo – " + (o.mud || "reconhecer, diferenciais, fluxograma e fontes") + ".");
+    if (o.nv) c.nv = [...(c.nv || []), ...o.nv];
+  };
+  const P3 = (typeof FOTO_PELE3 !== "undefined") ? FOTO_PELE3 : {};
+  const F1 = (...ks) => (typeof FIG === "function" && typeof FOTO !== "undefined") ? ks.filter(k => FOTO[k]).map(k => FIG(k)) : [];
+  const F3 = (...ks) => ks.filter(k => P3[k]).map(k => ({fig: {foto: true, src: "img/pele-" + k + ".webp", leg: P3[k][0], alt: P3[k][0], fonte: P3[k][1]}}));
+
+  // ── 1. Dermatite seborreica
+  G("seborreica", {
+    resumo: "Descamação oleosa e amarelada sobre base eritematosa em **couro cabeludo, sobrancelhas, sulcos nasogenianos, atrás das orelhas, centro do tórax e dobras**, com piora no frio e no estresse [C]. Crônica e recorrente: tratar a crise com **antifúngico** (± corticoide de baixa potência na face) e manter com antifúngico **1–2×/semana** [F]. Quadro **súbito e extenso** em adulto jovem: testar **HIV** [C].",
+    secoes: [
+      {t: "Reconhecer", b: [
+        {ul: [
+          "Lactente (crosta láctea): escamas aderentes no couro cabeludo nos primeiros meses, sem prurido, autolimitada [C].",
+          "Adulto: caspa com eritema, blefarite, placas na face e no tronco; mais grave na doença de Parkinson e no HIV [C].",
+          "Pouco prurido; sem vesículas [C]."
+        ]},
+        {det: {t: "Fisiopatologia", b: ["Resposta inflamatória à levedura Malassezia, comensal das áreas ricas em glândulas sebáceas. Não é infecção nem falta de higiene; por isso volta quando o antifúngico é suspenso, e a manutenção intermitente é parte do tratamento [C]."]}},
+        ...F3("seborreica")
+      ]},
+      {t: "Diferenciais", b: [
+        {tab: {h: ["Hipótese", "O que separa"], r: [
+          ["Psoríase", "Placas espessas, escama prateada, cotovelos, joelhos, unhas; pode coexistir (sebopsoríase) [C]"],
+          ["Rosácea", "Eritema centrofacial, telangiectasias, pápulas, sem escamas oleosas [C]"],
+          ["Dermatite atópica", "Prurido intenso, flexuras, atopia [C]"],
+          ["Tinea capitis (criança)", "Placas com queda de cabelo, cotos, linfonodos [C]"],
+          ["Lúpus cutâneo", "Eritema malar que **poupa** o sulco nasogeniano, fotossensível [C]"],
+          ["Dermatite de contato (tintura, xampu)", "Prurido, limites do contato [C]"]
+        ]}}
+      ]},
+      {t: "Tratar", b: [
+        {tab: {h: ["Local", "Crise (Quadro 13)", "Manutenção"], r: [
+          ["Couro cabeludo", "Cetoconazol 2% xampu, agir 3–5 min, 2–5×/semana por 2–4 semanas; casos graves: + corticoide em solução (betametasona ou clobetasol) 1–2×/dia por 2–4 semanas [F]", "Xampu 1–2×/semana [F]"],
+          ["Face e corpo", "Cetoconazol ou miconazol 2% creme 2×/dia até 4 semanas e/ou corticoide de baixa potência na face e dobras (média nas demais áreas), pelo menor tempo possível [F]", "Xampu de cetoconazol 1–2×/semana nas áreas acometidas [F]"]
+        ]}, nota: "TelessaúdeRS Dermatologia 2023, Quadro 13 [F]. REMUME: cetoconazol 2% creme e dexametasona 0,1% creme (baixa potência); o xampu de cetoconazol está na RENAME, mas não na REMUME [F]."},
+        {ul: ["Encaminhar: grave/extensa com prejuízo funcional (DLQI > 10) ou refratária ao tratamento otimizado (Protocolo 5) [F]."]},
+        {ref: ["tsrs_derm2023", "malassezia", "rename", "remume"]}
+      ]}
+    ]
+  }, {fontes: ["tsrs_derm2023"]});
+
+  // ── 2. Pitiríase versicolor
+  G("pitiriase-versicolor", {
+    resumo: "Manchas **hipo ou hipercrômicas** com **descamação fina** (que aparece ao esticar a pele – sinal de Zileri) no tronco, pescoço e braços de adolescentes e adultos, piores no calor [C]. Tópico na doença localizada; **oral** se extensa, recorrente ou refratária [F]. Avisar que **a cor demora meses** para voltar mesmo depois da cura [F]. Mancha com **alteração de sensibilidade** = pensar em hanseníase [C].",
+    secoes: [
+      {t: "Reconhecer e diferenciar", b: [
+        {tab: {h: ["Hipótese", "O que separa"], r: [
+          ["Pitiríase versicolor", "Descamação furfurácea, confluência no tronco superior, fluorescência amarelo-ouro à luz de Wood [C]"],
+          ["Vitiligo", "Acromia (branco como giz), sem escamas, bordas nítidas, mãos, face e periorificial [C]"],
+          ["Hanseníase", "Mancha hipocrômica com **diminuição da sensibilidade** térmica, dolorosa ou tátil; nervos espessados [C]"],
+          ["Pitiríase alba", "Criança atópica, face e braços, bordas imprecisas [C]"],
+          ["Hipocromia pós-inflamatória", "Local de lesão prévia [C]"],
+          ["Pitiríase rósea", "Medalhão inicial, lesões ovais seguindo as linhas de clivagem, autolimitada [C]"]
+        ]}},
+        ...F1("pitiriase-versicolor", "vitiligo", "hanseniase-manchas")
+      ]},
+      {t: "Decidir e tratar", b: [
+        {fluxo: [
+          {t: "Manchas descamativas no tronco"},
+          {t: "Sensibilidade diminuída na mancha?", ramos: [
+            {r: "Sim", n: [{t: "Investigar hanseníase", k: "stop"}]},
+            {r: "Não", n: [{t: "Extensão?"}]}
+          ]},
+          {t: "Extensão", ramos: [
+            {r: "Localizada", n: [{t: "Azol tópico 1–2×/dia por 1–4 semanas (ou xampu de cetoconazol no corpo)", k: "ok"}]},
+            {r: "Extensa, recorrente ou refratária", n: [{t: "Fluconazol 300 mg/semana 2–4 semanas ou itraconazol 200 mg/dia 5–7 dias", k: "warn"}]}
+          ]},
+          {t: "Recorrente: xampu de cetoconazol no corpo, 10 min, 1×/mês nos meses quentes", k: "ok"}
+        ], nota: "TelessaúdeRS Dermatologia 2023, Quadro 17 [F]. Cetoconazol oral: evitar [F]. REMUME: cetoconazol creme, fluconazol 150 mg e itraconazol 100 mg [F]."},
+        {ir: [["hanseniase", "Hanseníase"], ["pele-vitiligo", "Vitiligo"], ["tinea", "Dermatofitose"]]},
+        {ref: ["tsrs_derm2023", "malassezia", "rename", "remume"]}
+      ]}
+    ]
+  }, {fontes: ["tsrs_derm2023"]});
+
+  // ── 3. Larva migrans
+  G("larva-migrans", {
+    resumo: "**Trajeto serpiginoso, elevado e muito pruriginoso** que avança alguns milímetros a centímetros por dia, em pés, nádegas ou mãos, após contato com **areia ou solo com fezes de cães e gatos** [C]. Diagnóstico clínico. **Ivermectina dose única** ou **albendazol por 3 dias** [C]. Autolimitada em semanas a meses, mas o tratamento encurta o prurido e o risco de infecção secundária [C].",
+    secoes: [
+      {t: "Reconhecer e diferenciar", b: [
+        {det: {t: "Fisiopatologia", b: ["Larvas de ancilóstomos de cães e gatos (Ancylostoma braziliense, A. caninum) penetram a pele, mas o ser humano é hospedeiro acidental: a larva não consegue atravessar a membrana basal e migra na epiderme até morrer. O trajeto é a própria larva; o prurido é a reação inflamatória [C]."]}},
+        {tab: {h: ["Hipótese", "O que separa"], r: [
+          ["Larva currens (estrongiloidíase)", "Trajeto urticariforme que avança **muito rápido** (cm por hora), perianal, nádegas e tronco; risco de **hiperinfecção** em imunossuprimido e com corticoide [C]"],
+          ["Tinea", "Anel com borda descamativa, crescimento lento, sem trajeto linear [C]"],
+          ["Escabiose", "Sulcos curtos (~1 cm), punhos e interdigitais, contactantes [C]"],
+          ["Fitofotodermatose / dermatite de contato linear", "Linhas de queimadura ou eczema após limão/planta e sol, sem progressão [C]"],
+          ["Miíase migratória", "Rara; nódulo que se desloca [C]"]
+        ]}},
+        ...F3("larva-migrans")
+      ]},
+      {t: "Decidir e tratar", b: [
+        {fluxo: [
+          {t: "Trajeto serpiginoso pruriginoso após contato com areia/solo"},
+          {t: "Gestante, lactante ou < 15 kg?", ramos: [
+            {r: "Sim", n: [{t: "Tiabendazol tópico (manipulado) ou adiar; evitar ivermectina e albendazol", k: "warn"}]},
+            {r: "Não", n: [{t: "Ivermectina 200 mcg/kg dose única ou albendazol 400 mg/dia por 3 dias (REMUME)", k: "ok"}]}
+          ]},
+          {t: "Anti-histamínico para o prurido; tratar infecção secundária se houver", k: "ok"},
+          {t: "Prevenção: calçado na areia e no solo, cobrir caixas de areia, vermifugar cães e gatos", k: "ok"}
+        ], nota: "Revisões e CDC [C]; ivermectina e albendazol na REMUME [F]."},
+        {ref: ["ectoparasitoses", "rename", "remume"]}
+      ]}
+    ]
+  });
+
+  // ── 4. Tungíase
+  G("tungiase", {
+    resumo: "**Pápula esbranquiçada com ponto escuro central** (o abdome da pulga Tunga penetrans) nos pés – ao redor das unhas, calcanhares e plantas –, com dor e prurido [C]. **Retirar a pulga inteira** com agulha estéril, sem romper, e fazer antissepsia [C]. Lesão puntiforme = **ferimento de alto risco para tétano** [F]. A infestação maciça é marcador de pobreza e moradia com chão de terra: abordar a casa e os animais [C].",
+    secoes: [
+      {t: "Reconhecer", b: [
+        {ul: [
+          "Evolução: ponto vermelho → nódulo branco com centro negro → crosta escura quando a pulga morre (em cerca de 4–6 semanas) [C].",
+          "Complicações: infecção bacteriana, linfangite, tétano, deformidade e perda de unhas, dificuldade de andar nas infestações maciças [C].",
+          "Reservatórios: porcos, cães, gatos e ratos; solo arenoso e seco [C]."
+        ]},
+        {det: {t: "Fisiopatologia", b: ["A fêmea fecundada penetra a pele, fica com o abdome hipertrofiado cheio de ovos (até ~1 cm) e respira e elimina ovos pelo orifício central. Romper a pulga na retirada deixa restos que inflamam e infectam [C]."]}},
+        ...F3("tungiase")
+      ]},
+      {t: "Decidir e tratar", b: [
+        {fluxo: [
+          {t: "Nódulo branco com ponto negro nos pés"},
+          {t: "Infestação maciça, celulite ou paciente com DM/DAP?", ramos: [
+            {r: "Sim", n: [{t: "Retiradas seriadas na UBS, antibiótico se celulite; dimeticona tópica (compra) para matar as pulgas antes", k: "warn"}]},
+            {r: "Não", n: [{t: "Retirar com agulha estéril (ampliar o orifício e enuclear inteira); antissepsia", k: "ok"}]}
+          ]},
+          {t: "Tétano pelo Quadro 4 do GVS (puntiforme = alto risco)", k: "ok"},
+          {t: "Casa: calçados, piso cimentado, tratar animais; examinar os outros moradores", k: "ok"}
+        ], nota: "Revisões de Heukelbach e Feldmeier [C]; tétano: GVS 2024 [F]."},
+        {ir: [["ferida", "Profilaxia do tétano"]]},
+        {ref: ["ectoparasitoses", "gvs1_tetano"]}
+      ]}
+    ]
+  }, {fontes: ["gvs1_tetano"]});
+
+  // ── 5. Miíase
+  G("miiase", {
+    urg: "Miíase em **nariz, orelha, olho, boca ou genitais**, em ferida extensa ou em pessoa acamada, com demência ou deficiência: encaminhar (risco de destruição tecidual) e avaliar **negligência de cuidado** [C].",
+    resumo: "**Berne (miíase furunculoide)**: nódulo inflamatório com **orifício central** que drena secreção serosa, com sensação de ferroada ou movimento – larva da Dermatobia hominis [C]. Diferente da **bicheira** (miíase de ferida, dezenas de larvas). Tratamento: **ocluir o orifício** (vaselina ou esparadrapo) para a larva subir e **retirá-la inteira**, ou extrair sob anestesia local [C]. Tétano conforme o GVS [F].",
+    secoes: [
+      {t: "Reconhecer e diferenciar", b: [
+        {tab: {h: ["Tipo", "Como é"], r: [
+          ["Furunculoide (berne)", "Um ou poucos nódulos com poro central, em áreas expostas (couro cabeludo, braços, pernas) [C]"],
+          ["De ferida (bicheira)", "Larvas visíveis em úlcera, ferida ou cavidade; odor; mosca-varejeira (Cochliomyia) [C]"],
+          ["Cavitária", "Nariz, seios da face, orelha, olho – urgência [C]"]
+        ]}},
+        {tab: {h: ["Hipótese", "O que separa"], r: [
+          ["Furúnculo", "Ponto de pus, sem orifício respiratório com bolhas ao aplicar água/vaselina [C]"],
+          ["Cisto epidérmico inflamado", "Poro com queratina, nódulo antigo [C]"],
+          ["Tungíase", "Pés, ponto negro, pápula branca [C]"],
+          ["Corpo estranho", "História de penetração [C]"]
+        ]}},
+        {det: {t: "Biologia", b: ["A mosca Dermatobia captura um mosquito e deposita ovos nele; quando o mosquito pica, as larvas entram na pele e crescem por 5–10 semanas, respirando pelo orifício. Bloquear o orifício força a larva a subir [C]."]}},
+        ...F3("miiase")
+      ]},
+      {t: "Decidir e tratar", b: [
+        {fluxo: [
+          {t: "Nódulo com orifício central e secreção"},
+          {t: "Cavidade, ferida extensa ou pessoa vulnerável?", ramos: [
+            {r: "Sim", n: [{t: "Encaminhar; avaliar cuidado/negligência", k: "stop"}]},
+            {r: "Não", n: [{t: "Ocluir com vaselina ou esparadrapo por 3–24 h e retirar com pinça, por pressão lateral"}]}
+          ]},
+          {t: "Não saiu?", ramos: [
+            {r: "Sim", n: [{t: "Lidocaína 2% e pequena incisão para extrair inteira", k: "warn"}]},
+            {r: "Saiu inteira", n: [{t: "Lavar 2×/dia; antibiótico só se infecção", k: "ok"}]}
+          ]},
+          {t: "Tétano pelo Quadro 4 do GVS", k: "ok"}
+        ], nota: "Séries de casos [C]; lidocaína 2% na REMUME [F]; tétano: GVS 2024 [F]."},
+        {ref: ["ectoparasitoses", "gvs1_tetano", "remume"]}
+      ]}
+    ]
+  }, {fontes: ["gvs1_tetano"]});
+
+  // ── 6. Picada de inseto
+  G("picada-inseto", {
+    urg: "Após picada: urticária generalizada com **dispneia, chiado, estridor, rouquidão, hipotensão, síncope, vômitos** (graus III–IV) = **anafilaxia** – adrenalina 1 mg/mL **0,01 mg/kg IM** na coxa (máx. 0,5 mg adulto, 0,3 mg criança), repetir em 5–15 min se preciso, e urgência [F]. **Muitas picadas de abelha** (dezenas em criança, > 100 em adulto) = risco de **envenenamento** (hemólise, rabdomiólise, injúria renal): urgência mesmo sem alergia [F]. Picada na boca ou garganta: observação [F].",
+    resumo: "A maioria é **reação local** (dor, vermelhidão, edema por horas) e só precisa de gelo, analgésico e anti-histamínico [F]. **Reação local extensa** (edema grande que dura alguns dias) **não é infecção** nem anafilaxia; o risco de reação sistêmica grave numa próxima picada é **< 10%** [F]. Em criança com pápulas pruriginosas recorrentes nas áreas expostas, pensar em **estrófulo** [C]. Retirar o ferrão raspando [C].",
+    secoes: [
+      {t: "Classificar", b: [
+        {tab: {h: ["Reação", "Como é", "Conduta"], r: [
+          ["Local", "Dor, eritema, edema por horas [F]", "Gelo, analgésico, anti-histamínico [F]"],
+          ["Local extensa", "Edema contíguo grande, até alguns dias; às vezes bolha [F]", "Anti-histamínico, corticoide tópico; corticoide oral curto se muito extensa [C]"],
+          ["Sistêmica grau I", "Urticária generalizada, prurido, mal-estar, ansiedade [F]", "Anti-histamínico, observar; orientar risco [F/C]"],
+          ["Sistêmica grau II", "+ angioedema (sozinho define grau II), broncoconstrição leve, náuseas, vômitos, dor abdominal, tontura [F]", "Considerar adrenalina; observação prolongada [C]"],
+          ["Sistêmica grau III–IV", "Dispneia, sibilos, estridor, disfagia, rouquidão, confusão; queda da PA, colapso, perda de consciência, cianose [F]", "Adrenalina IM e urgência [F]"],
+          ["Tóxica (múltiplas picadas)", "Dezenas (criança) ou > 100 (adulto) picadas de abelha [F]", "Urgência: CK, função renal, hemólise [F]"]
+        ]}, nota: "GVS 2024 vol. 3, acidentes por himenópteros, Quadro 1 [F]. Não há soro antiapílico disponível (em testes) [F]."},
+        {det: {t: "Estrófulo (prurigo por picadas)", b: ["Criança de 1–7 anos com pápulas e seropápulas pruriginosas, às vezes com vesícula central, em surtos nas áreas expostas, em quem convive com pulgas, percevejos ou mosquitos. É hipersensibilidade às picadas; os outros da casa não reagem. Tratar com anti-histamínico, corticoide tópico curto e controle dos insetos (animais, frestas, mosquiteiro) [C]."]}}
+      ]},
+      {t: "Decidir", b: [
+        {fluxo: [
+          {t: "Picada de inseto"},
+          {t: "Sintomas fora da pele ou múltiplas picadas de abelha?", ramos: [
+            {r: "Sim", n: [{t: "Anafilaxia/envenenamento: adrenalina IM se alérgico, urgência", k: "stop"}]},
+            {r: "Não", n: [{t: "Retirar ferrão raspando; gelo; anti-histamínico; corticoide tópico", k: "ok"}]}
+          ]},
+          {t: "Edema crescente com febre e dor após 48 h → pensar em celulite", k: "warn"},
+          {t: "Reação sistêmica (grau ≥ II) no passado → alergologia (imunoterapia com veneno) e plano de emergência", k: "warn"}
+        ], nota: "GVS 2024 vol. 3 [F]; demais [C]."},
+        {ir: [["anafilaxia", "Anafilaxia"], ["urticaria", "Urticária aguda"], ["celulite", "Celulite"]]},
+        {ref: ["gvs3_himenop", "cab28", "eaaci_urt", "rename", "remume"]}
+      ]}
+    ]
+  }, {fontes: ["gvs3_himenop"]});
+
+  // ── 7. Verrugas e molusco
+  G("verrugas", {
+    resumo: "**Verruga vulgar**: pápula áspera que interrompe as linhas da pele, com pontos pretos (capilares trombosados) [C]. **Molusco**: pápulas peroladas, umbilicadas, em crianças ou na região genital de adultos [C]. Muitas regridem sozinhas (molusco em **6–12 meses**) [F]. Tratar se incômodo, dor, disseminação, genital no adulto ou imunossupressão [F]. **Muitas lesões ou lesões na face em adulto**: teste rápido de **HIV** [F/C]. Lesões genitais em criança: considerar **abuso sexual** [F].",
+    secoes: [
+      {t: "Reconhecer e diferenciar", b: [
+        {tab: {h: ["Hipótese", "O que separa"], r: [
+          ["Verruga plantar × calo", "Verruga interrompe as linhas e tem pontos pretos; dói ao **apertar dos lados**. Calo mantém as linhas e dói à **pressão direta** [C]"],
+          ["Verruga plana", "Pápulas lisas, pequenas, na face, mãos e pernas (lâmina de barbear espalha) [F/C]"],
+          ["Molusco", "Umbilicação central, conteúdo branco ao espremer [C]"],
+          ["Condiloma", "Anogenital, couve-flor – seguir o item de IST [C]"],
+          ["Ceratose seborreica", "Adulto, 'colada', marrom [C]"],
+          ["CEC / ceratoacantoma", "Idoso, área exposta, crescimento rápido ou ulceração [C]"]
+        ]}},
+        ...F3("verruga", "molusco")
+      ]},
+      {t: "Tratar", b: [
+        {tab: {h: ["Lesão", "Tratamento (Quadros 28 e 29)"], r: [
+          ["Vulgar e palmoplantar", "Ácido salicílico 20% + láctico 15% em colódio: após banho ou imersão, lixar, proteger a pele ao redor, aplicar, ocluir com esparadrapo; trocar a cada 24–48 h por 1–3 meses; **não usar na face nem com neuropatia** [F]. Palmoplantar resistente: salicílico até 40% (manipulado) ou ATA 50–80% na UBS a cada 7–10 dias por até 8 semanas [F]"],
+          ["Plana", "Tretinoína tópica à noite, na maior concentração tolerada; imiquimode 5% [F]"],
+          ["Filiforme", "Shaving e eletrocoagulação sob anestesia local, se houver material [F]"],
+          ["Molusco", "Opcional na criança imunocompetente; tratar adultos com lesões genitais e imunossuprimidos: KOH 5–10% (manipulado) ou tretinoína [F]"]
+        ]}, nota: "TelessaúdeRS Dermatologia 2023 [F]. Nenhum desses produtos está na REMUME; a RENAME tem só ácido salicílico 5% pomada [F]. Lesões perioculares: não tratar topicamente – dermatologia [F]."},
+        {fluxo: [
+          {t: "Verruga ou molusco"},
+          {t: "Imunossuprimido, face (exceto verruga plana), periocular, genital em criança com múltiplas lesões ou sintomas?", ramos: [
+            {r: "Sim", n: [{t: "Dermatologia (e proteção, se suspeita de abuso)", k: "warn"}]},
+            {r: "Não", n: [{t: "Expectante ou tratamento tópico"}]}
+          ]},
+          {t: "Refratária após 3 meses (1 mês no imunossuprimido) → dermatologia", k: "warn"}
+        ], nota: "Protocolo 11 [F]."},
+        {ref: ["tsrs_derm2023", "cochrane_verruga", "rename", "remume"]}
+      ]}
+    ]
+  }, {fontes: ["tsrs_derm2023"]});
+
+  // ── 8. Exantema agudo
+  G("exantema", {
+    urg: "**Petéquias ou púrpura com febre** (meningococcemia), bolhas ou descolamento com lesões de mucosa (Stevens-Johnson/NET), exantema com hipotensão, ou febre + exantema + eosinofilia + linfonodos + fígado após medicamento novo nas últimas 8 semanas (DRESS): **urgência** [C]. **Febre + exantema maculopapular** = **caso suspeito de sarampo/rubéola**: notificação **imediata** ao MS, SES e SMS, precaução por aerossóis e coleta no 1º atendimento [F].",
+    resumo: "Organize pelo **tipo de lesão** (maculopapular, vesicular, petequial, difuso em lixa), pela **relação com a febre**, pela **vacinação** e pela **epidemiologia** (dengue, Zika, chikungunya, sarampo) [C/F]. Exantema em **palmas e plantas**: sífilis secundária, mão-pé-boca, riquetsiose, eritema multiforme [C]. Evite AAS e AINE até afastar dengue [F].",
+    secoes: [
+      {t: "Exantemas da infância (CAB 28)", b: [
+        {tab: {h: ["Doença", "Pistas", "Atenção"], r: [
+          ["Sarampo", "Febre alta, tosse, coriza, conjuntivite por 3–5 dias; **Koplik**; exantema retroauricular → craniocaudal, confluente [F]", "Notificação imediata; vitamina A; transmite até 4 dias após o exantema (GVS) [F]"],
+          ["Rubéola", "Febre baixa, **linfonodos retroauriculares e occipitais**, exantema róseo craniocaudal que some em 1 semana [F]", "Notificação imediata; gestante: síndrome da rubéola congênita [F]"],
+          ["Varicela", "Polimorfismo: máculas, pápulas, vesículas e crostas juntas; prurido [F]", "Notificação imediata à SES e à SMS [F]"],
+          ["Eritema infeccioso (parvovírus B19)", "**Face esbofeteada**, depois rendilhado no tronco e membros que volta com sol e calor; artralgia no adulto [F]", "Gestante: risco de hidropisia fetal [F]"],
+          ["Exantema súbito (HHV-6/7)", "3–4 dias de **febre alta** em lactente; o exantema aparece **quando a febre cede** [F]", "Convulsão febril possível [C]"],
+          ["Escarlatina", "Febre, faringite, exantema **áspero (em lixa)**, Filatov, Pastia, **língua em framboesa**, descamação [F]", "Antibiótico como na faringite estreptocócica [F]"]
+        ]}}
+      ]},
+      {t: "Outras causas", b: [
+        {tab: {h: ["Hipótese", "Pistas"], r: [
+          ["Dengue", "Exantema no 3º–6º dia, prurido, prova do laço [F]"],
+          ["Zika", "Exantema pruriginoso precoce (1º–2º dia), conjuntivite não purulenta, febre baixa [F]"],
+          ["Chikungunya", "Poliartralgia intensa e simétrica; exantema 2º–5º dia, inclusive palmoplantar [F]"],
+          ["Sífilis secundária", "Máculas e pápulas acobreadas em **palmas e plantas**, sem prurido, linfonodos – teste rápido [C]"],
+          ["Mononucleose (+ amoxicilina)", "Faringite, linfonodos, esplenomegalia; exantema após amoxicilina [C]"],
+          ["Farmacodermia", "Medicamento novo 4–14 dias antes; prurido; eosinofilia [C]"],
+          ["Doença de Kawasaki", "Criança com febre ≥ 5 dias + conjuntivite, lábios e língua vermelhos, edema de mãos e pés, linfonodo cervical – urgência pediátrica [C]"]
+        ]}, nota: "Arboviroses: Guia prático MS 2024, Quadro 13 [F]."},
+        ...(typeof FOTO_INF !== "undefined" ? [{fig: {foto: true, src: "img/inf-sarampo.webp", leg: FOTO_INF.sarampo[0], alt: FOTO_INF.sarampo[0], fonte: FOTO_INF.sarampo[1]}}] : [])
+      ]},
+      {t: "Decidir", b: [
+        {fluxo: [
+          {t: "Exantema agudo"},
+          {t: "Petéquias com febre, mucosas com bolhas, hipotensão ou DRESS?", ramos: [
+            {r: "Sim", n: [{t: "Urgência", k: "stop"}]},
+            {r: "Não", n: [{t: "Febre + exantema maculopapular?"}]}
+          ]},
+          {t: "Maculopapular febril", ramos: [
+            {r: "Sim", n: [{t: "Suspeita de sarampo/rubéola: máscara, notificar já, coletar sangue + swab + urina; avaliar dengue/Zika/chikungunya", k: "warn"}]},
+            {r: "Não", n: [{t: "Pelo tipo: vesicular (varicela, mão-pé-boca), em lixa (escarlatina), palmoplantar (sífilis)", k: "q"}]}
+          ]},
+          {t: "Gestante com exantema: sarampo, rubéola, Zika, sífilis e parvovírus", k: "warn"}
+        ], nota: "CAB 28 [F]; GVS 2024 e NT 324/2026 (sarampo) [F]; Portaria 11.211/2026 [F]."},
+        {ir: [["sarampo", "Sarampo"], ["varicela", "Varicela"], ["maopeboca", "Mão-pé-boca"], ["zika", "Zika"], ["chikungunya", "Chikungunya"], ["dengue-a", "Dengue"]]},
+        {ref: ["cab28", "gvs1_sarampo", "nt324_sarampo", "port11211", "ms_arbo_aps2024", "ms_dengue"]}
+      ]}
+    ]
+  }, {fontes: ["cab28", "gvs1_sarampo", "port11211", "ms_arbo_aps2024"], mud: "tabela dos exantemas da infância (CAB 28), arboviroses, sífilis e Kawasaki, notificação imediata de sarampo, rubéola e varicela (Portaria 11.211/2026)"});
+
+  // ── 9. Acne
+  G("acne", {
+    urg: "**Acne fulminans** (nódulos e placas súbitos, crostas hemorrágicas, febre, artralgia): iniciar **prednisona 0,5–1 mg/kg/dia** na APS e discutir com a dermatologia já [F].",
+    resumo: "Classificar pela lesão predominante: **comedoniana** (cravos), **papulopustulosa** e **nodular/conglobata** [F]. Base de todos os graus: **retinoide tópico** e/ou **peróxido de benzoíla** [F]. Antibiótico oral (doxiciclina) **nunca sozinho** e por **3–4 meses no máximo** [F]. Manutenção com retinoide tópico [F]. Isotretinoína pela dermatologia (Protocolo de Uso/CEAF) na grave ou refratária; **não associar tetraciclina** (pseudotumor cerebral) [F].",
+    secoes: [
+      {t: "Classificar e tratar (Quadro 1)", b: [
+        {tab: {h: ["Gravidade", "Acne", "1ª escolha", "Manutenção"], r: [
+          ["Leve", "Comedoniana", "Retinoide tópico [F]", "Retinoide tópico [F]"],
+          ["Leve", "Mista/papulopustulosa", "Retinoide + antibiótico tópico; ou antibiótico tópico + peróxido; ou retinoide + peróxido [F]", "Retinoide ± peróxido [F]"],
+          ["Moderada", "Papulopustulosa / nodular", "Antibiótico oral + retinoide tópico e/ou peróxido [F]", "Retinoide ± peróxido [F]"],
+          ["Grave", "Conglobata", "Isotretinoína (± corticoide oral) ou antibiótico oral + retinoide + peróxido [F]", "Retinoide ± peróxido [F]"]
+        ]}, nota: "TelessaúdeRS Dermatologia 2023, Quadros 1 e 2 [F]. Gestação: ácido azelaico ou clindamicina tópicos; moderada a grave: azitromicina 500 mg/dia 3 dias por mês, 3–4 ciclos [F]. Mulheres: anticoncepcional com progestógeno antiandrogênico ou espironolactona 100–200 mg/dia [F]."},
+        {tab: {h: ["Medicamento", "Uso"], r: [
+          ["Tretinoína / adapaleno", "Uma ervilha para toda a face, à noite; irrita no início [F]"],
+          ["Peróxido de benzoíla 2,5–5% gel", "1–2×/dia; descolore tecidos [F]"],
+          ["Doxiciclina 100 mg", "1–2×/dia após a refeição; contraindicada na gestação e < 8 anos [F]; REMUME [F]"],
+          ["Tetraciclina 500 mg", "2×/dia longe das refeições [F]"]
+        ]}},
+        {trio: {ideal: "Retinoide tópico + peróxido de benzoíla como base; doxiciclina associada na moderada; isotretinoína na grave.", sus: "REMUME: doxiciclina, minociclina e levonorgestrel + etinilestradiol; tópicos não constam (peróxido e clindamicina tópica só na RENAME); isotretinoína no CEAF.", ponte: "Tópicos de baixo custo por compra; doxiciclina do SUS sempre com tópico; dermatologia para isotretinoína."}},
+        ...F3("acne")
+      ]},
+      {t: "Decidir", b: [
+        {fluxo: [
+          {t: "Acne"},
+          {t: "Fulminans ou conglobata?", ramos: [
+            {r: "Sim", n: [{t: "Fulminans: prednisona agora + dermatologia; conglobata: dermatologia", k: "stop"}]},
+            {r: "Não", n: [{t: "Tratar pelo Quadro 1 e reavaliar em 8–12 semanas"}]}
+          ]},
+          {t: "Leve a moderada com prejuízo na qualidade de vida e falha após ≥ 4 meses de tratamento otimizado (antibiótico oral + tópicos) → dermatologia", k: "warn"}
+        ], nota: "Protocolo 1 [F]."},
+        {ul: ["Diferenciais: rosácea (sem comedões, eritema difuso), dermatite perioral, foliculite, hiperandrogenismo (SOP: irregularidade menstrual, hirsutismo – investigar), acne por corticoide ou anabolizante (lesões monomórficas) [C]."]},
+        {ref: ["tsrs_derm2023", "aad_acne", "rename", "remume"]}
+      ]}
+    ]
+  }, {fontes: ["tsrs_derm2023"]});
+
+  // ── 10. Herpes labial
+  G("herpes-labial", {
+    urg: "Lesões perto do olho ou olho vermelho e doloroso (ceratite), **eczema herpético** (vesículas e erosões sobre dermatite atópica, com febre), recém-nascido ou imunossuprimido com lesões extensas: **avaliação urgente** [F/C].",
+    resumo: "**Ardor ou formigamento** (pródromo) e depois **vesículas agrupadas sobre base eritematosa** que ulceram e formam crosta em 3–5 dias, **sempre no mesmo lugar** [F]. Gatilhos: sol, febre, estresse, menstruação, imunossupressão [F]. Antiviral oral funciona melhor se iniciado **no pródromo**; o tópico ajuda pouco [F]. Recorrências frequentes: **supressão** [F].",
+    secoes: [
+      {t: "Reconhecer e diferenciar", b: [
+        {tab: {h: ["Hipótese", "O que separa"], r: [
+          ["Impetigo", "Crostas melicéricas, sem pródromo de ardor, pode espalhar [C]"],
+          ["Afta", "Dentro da boca, mucosa não queratinizada, sem vesículas [C]"],
+          ["Queilite angular", "Fissuras nos cantos da boca, prótese, cândida [C]"],
+          ["Herpes-zóster (V par)", "Dermátomo, dor mais intensa, unilateral extensa [C]"],
+          ["Eritema multiforme", "Lesões em alvo dias após o herpes – recorrente [C]"]
+        ]}},
+        {det: {t: "Fisiopatologia", b: ["Depois da primoinfecção (muitas vezes gengivoestomatite na infância), o HSV-1 fica latente no gânglio trigeminal e reativa por gatilhos, descendo pelo nervo até o mesmo ponto da pele. Transmite pelo contato com as lesões e, menos, pela saliva sem lesão [F/C]."]}},
+        ...F3("herpes-labial")
+      ]},
+      {t: "Tratar", b: [
+        {tab: {h: ["Esquema", "Dose"], r: [
+          ["Aciclovir (recorrência) – CAB 28", "200 mg 5×/dia (4/4 h, omitindo a dose da noite) por 5 dias [F]"],
+          ["Aciclovir (primoinfecção) – CAB 28", "200 mg 5×/dia por 7–10 dias [F]"],
+          ["Valaciclovir (recorrência) – CAB 28", "500 mg 2×/dia por 5 dias [F]"],
+          ["Valaciclovir em 1 dia (ECR)", "2 g 12/12 h por 1 dia, iniciado no pródromo [C]"],
+          ["Supressão – CAB 28", "Aciclovir 400 mg/dia [F]"],
+          ["Penciclovir 1% creme", "5×/dia [F]; tópico tem efeito pequeno [F]"]
+        ]}, nota: "Divergência de dose: o CAB 28 usa aciclovir 200 mg 5×/dia na recorrência; a receita do app usa 400 mg 5×/dia por 5 dias, esquema de referências internacionais [C]. Supressão com aciclovir 400 mg/dia no CAB 28 × 400 mg 2×/dia nas referências internacionais [C]. A gestação exige pesar risco e benefício (CAB 28) [F]."},
+        {fluxo: [
+          {t: "Herpes labial"},
+          {t: "Olho, eczema herpético, RN ou imunossuprimido extenso?", ramos: [
+            {r: "Sim", n: [{t: "Urgência / oftalmologia", k: "stop"}]},
+            {r: "Não", n: [{t: "Pródromo ou < 72 h?"}]}
+          ]},
+          {t: "Antiviral", ramos: [
+            {r: "Sim", n: [{t: "Aciclovir oral (REMUME) ou valaciclovir", k: "ok"}]},
+            {r: "Não", n: [{t: "Cuidados locais; protetor labial com filtro solar", k: "ok"}]}
+          ]},
+          {t: "≥ 6 episódios/ano ou graves → supressão diária", k: "warn"}
+        ], nota: "CAB 28 vol. II [F]."},
+        {ref: ["cab28", "herpes_labial", "rename", "remume"]}
+      ]}
+    ]
+  }, {fontes: ["cab28"]});
+
+  // ── 11. Unha encravada
+  G("onicocriptose", {
+    urg: "**Diabético ou com doença arterial periférica** com unha encravada infectada: avaliar pulsos e sensibilidade, tratar a infecção cedo e não fazer procedimento sem avaliação do pé (risco de úlcera e osteomielite) [C].",
+    resumo: "A borda lateral da unha penetra a prega, quase sempre no **hálux**, por **corte arredondado ou curto demais**, calçado apertado, sudorese ou unha curvada [C]. Estágio 1 (dor e edema): medidas conservadoras. Estágios 2–3 (pus, granuloma) ou recorrência: **cantoplastia parcial com fenolização da matriz**, que reduz a recidiva (Cochrane) [C]. Antibiótico oral **não substitui** a retirada da espícula [C].",
+    secoes: [
+      {t: "Classificar", b: [
+        {tab: {h: ["Estágio", "Achado", "Conduta"], r: [
+          ["1 – inflamatório", "Dor, eritema, edema leve da prega [C]", "Banho morno, algodão ou fio dental sob a borda, calçado largo, corte reto [C]"],
+          ["2 – infeccioso", "Secreção purulenta, edema maior [C]", "Cantoplastia parcial + fenol; antibiótico só se celulite [C]"],
+          ["3 – granuloma", "Tecido de granulação recobrindo a borda [C]", "Cantoplastia parcial + fenol, remover o granuloma [C]"]
+        ]}},
+        ...F3("unha-encravada")
+      ]},
+      {t: "Decidir", b: [
+        {fluxo: [
+          {t: "Dor na borda da unha do pé"},
+          {t: "DM/DAP com infecção ou celulite que sobe?", ramos: [
+            {r: "Sim", n: [{t: "Avaliação do pé, antibiótico, cuidado redobrado", k: "stop"}]},
+            {r: "Não", n: [{t: "Estágio?"}]}
+          ]},
+          {t: "Estágio", ramos: [
+            {r: "1", n: [{t: "Conservador por 2–4 semanas", k: "ok"}]},
+            {r: "2–3 ou recorrente", n: [{t: "Bloqueio digital (lidocaína sem vasoconstritor) + retirada da espícula lateral + fenolização da matriz", k: "warn"}]}
+          ]},
+          {t: "Ensinar o corte reto, sem aprofundar os cantos", k: "ok"}
+        ], nota: "Cochrane 2012 [C]; lidocaína 2% sem vasoconstritor na REMUME [F]."},
+        {ul: ["Diferenciais: paroníquia aguda (dedos da mão, sem espícula), exostose subungueal (dor na ponta, RX), onicomicose com unha em telha, tumor subungueal [C]."]},
+        {ir: [["paroniquia", "Paroníquia"], ["pele-onicomicose", "Onicomicose"]]},
+        {ref: ["cochrane_unha", "rename", "remume"]}
+      ]}
+    ]
+  }, {nv: ["Fenol e material de cantoplastia nas UBS de Betim."]});
+})();
+// ───────────── data69.js – v56: Guia Clínico – lote 6 (Geniturinário e saúde sexual: 13 itens sem guia).
+// Conferido em 25/10/2026 no texto integral do PCDT IST 2022 (Quadros 15, 29–31, 33–35, 37–39, 51; Figuras 11–14 e 16; seção 5.7),
+// NT 14/2023-DATHI/SVSA/MS (intervalo de 9 dias na gestante, via Agência Gov 19/07/2023), TelessaúdeRS Urologia 2023 (Protocolos 1, 5 e 8;
+// Quadros 2, 5 e 11), Portaria GM/MS 11.211/2026 (Anexo I) e REMUME Betim.
+Object.assign(FONTES, {
+  pcdt_ist2022: {s: "PCDT IST 2022 (texto integral)", t: "Ministério da Saúde. Protocolo Clínico e Diretrizes Terapêuticas para Atenção Integral às Pessoas com IST, 2022 (cópia na base clínica): Quadro 15 (sífilis: recente 2,4 milhões UI dose única; tardia 2,4 milhões UI/semana por 3 semanas; alternativa doxiciclina 15/30 dias, exceto gestantes; intervalo máximo de 14 dias fora da gestação); seção 5.7 (resposta adequada: queda de 2 diluições em 6 meses na recente e 12 meses na tardia; retratamento se não cair, se subir 2 diluições ou se sintomas); Quadros 31 e 37 (ceftriaxona 500 mg IM + azitromicina 1 g; 2ª opção ceftriaxona + doxiciclina 7 dias; retratamento gonocócico com azitromicina 2 g ou gentamicina 240 mg IM + azitromicina 2 g); Quadro 33 (candidíase: miconazol 7 noites ou nistatina 100.000 UI 14 noites; fluconazol 150 mg ou itraconazol 200 mg 2×/dia por 1 dia; recorrente: indução e manutenção 6 meses; gestante só via vaginal); Quadro 34 (vaginose: metronidazol 500 mg 2×/dia 7 dias ou gel 5 noites; clindamicina 300 mg 2×/dia 7 dias; recorrente 10–14 dias + supressão); Quadro 35 (tricomoníase: metronidazol 2 g dose única ou 500 mg 2×/dia 7 dias; tratar parcerias; evitar álcool); Quadro 38 (herpes genital: 1º episódio aciclovir 400 mg 3×/dia ou 200 mg 5×/dia 7–10 dias; recidiva 400 mg 3×/dia ou 800 mg 2×/dia 5 dias; supressão 400 mg 2×/dia até 6 meses–2 anos; gestante: supressão a partir de 36 semanas com 400 mg 3×/dia); Quadro 39 (cancroide: azitromicina 1 g); Quadro 51 (levonorgestrel 1,5 mg ou 0,75 mg 12/12 h até 5 dias); Figuras 11–14 e 16 (fluxogramas de corrimento vaginal, cervicite, corrimento uretral, úlcera genital e verrugas anogenitais); verrugas: ATA 80–90% e crioterapia podem ser usados na gestação, podofilina e imiquimode não; testes de HPV não indicados (protocolo; cópia na base clínica).", f: "F", url: "https://www.gov.br/aids/pt-br/central-de-conteudo/pcdts/2022/ist/pcdt-ist-2022_isbn-1.pdf"},
+  nt14_2023: {s: "NT 14/2023-DATHI/SVSA/MS – intervalo de penicilina na gestante", t: "Ministério da Saúde. Nota Técnica nº 14/2023-DATHI/SVSA/MS: atualização do intervalo entre doses de benzilpenicilina benzatina para sífilis em gestantes – ideal 7 dias, máximo 9 dias; se uma dose for perdida ou o intervalo passar de 9 dias, reiniciar o esquema (conferido pela notícia da Agência Gov de 19/07/2023 e pelo título no Portal de Boas Práticas/Fiocruz; texto da NT não aberto).", f: "F", url: "https://agenciagov.ebc.com.br/noticias/202307/ministerio-da-saude-atualiza-recomendacao-sobre-o-intervalo-entre-doses-de-penicilina-para-tratamento-de-sifilis-em-gestantes"}
+});
+
+(() => {
+  const get = id => CONDICOES.find(x => x.id === id);
+  const G = (id, guia, o = {}) => {
+    const c = get(id); if (!c) return;
+    c.guia = guia;
+    if (c.evid && o.fontes) c.evid.fontes = [...new Set([...(c.evid.fontes || []), ...o.fontes])];
+    (c.mudancas = c.mudancas || []).push("v56 (25/10/2026): Guia Clínico novo – " + (o.mud || "reconhecer, diferenciais, fluxograma e fontes") + ".");
+    if (o.nv) c.nv = [...(c.nv || []), ...o.nv];
+  };
+  const IST_GERAL = {ul: [
+    "Oferecer testes rápidos de HIV, sífilis e hepatites B e C; vacinação de hepatite B e HPV quando indicada; prevenção combinada (preservativo, PrEP, PEP) [F].",
+    "Tratar e orientar as parcerias; notificar quando indicado [F]."
+  ]};
+
+  // Fluxograma de corrimento vaginal (Figura 11 do PCDT), usado em 3 itens
+  const FLUXO_CORRIMENTO = {fluxo: [
+    {t: "Queixa de corrimento vaginal: anamnese + exame especular"},
+    {t: "Dor à mobilização do colo, muco purulento no orifício, edema ou sangramento cervical ao toque?", ramos: [
+      {r: "Sim", n: [{t: "Cervicite/DIP: tratar clamídia e gonorreia", k: "stop"}]},
+      {r: "Não", n: [{t: "Microscopia a fresco na consulta?"}]}
+    ]},
+    {t: "Recursos", ramos: [
+      {r: "Microscopia", n: [{t: "Clue cells → vaginose; Trichomonas → tricomoníase; hifas → candidíase", k: "ok"}]},
+      {r: "Só pH/KOH", n: [{t: "pH > 4,5 e/ou KOH (+) → vaginose e/ou tricomoníase; pH < 4,5 + grumos/eritema → candidíase", k: "ok"}]},
+      {r: "Nenhum", n: [{t: "Tratar pela clínica: grumoso/prurido → candidíase; homogêneo com odor → vaginose ± tricomoníase", k: "warn"}]}
+    ]},
+    {t: "Oferecer testagem para HIV, sífilis, hepatites; checar o preventivo", k: "ok"}
+  ], nota: "PCDT IST 2022, Figura 11 [F]."};
+
+  const TAB_CORRIMENTO = {tab: {h: ["", "Candidíase", "Vaginose", "Tricomoníase"], r: [
+    ["Corrimento", "Branco, grumoso, aderido [C]", "Branco-acinzentado, homogêneo, fino, odor de peixe [C]", "Amarelo-esverdeado, bolhoso, abundante [C]"],
+    ["Sintomas", "Prurido, ardor, disúria externa, dispareunia [C]", "Odor pior após o coito e a menstruação; pouco prurido [C]", "Prurido, disúria, colo em framboesa [C]"],
+    ["pH vaginal", "< 4,5 [F]", "> 4,5 [F]", "> 4,5 [F]"],
+    ["Teste das aminas (KOH)", "Negativo [C]", "Positivo [F/C]", "Pode ser positivo [C]"],
+    ["Microscopia", "Hifas/pseudo-hifas [F]", "Clue cells [F]", "Protozoário móvel [F]"],
+    ["Parceria", "Só se sintomática [F]", "Não tratar [F]", "Tratar sempre [F]"]
+  ]}};
+
+  // ── 1. Anticoncepção de emergência
+  G("ae", {
+    urg: "Relação **não consentida**: além da AE, seguir o fluxo de violência sexual – PEP em até 72 h, profilaxia de IST (Quadro 50 do PCDT IST), notificação e rede de proteção [F].",
+    resumo: "**Quanto mais cedo, mais eficaz** [F]. Levonorgestrel **1,5 mg dose única** (ou 0,75 mg 12/12 h) **até 5 dias** após a relação [F]. O **DIU de cobre** em até 5 dias é o método mais eficaz e já fica como contracepção [C]. AE atrasa ou impede a ovulação; **não interrompe gravidez já implantada** [C]. Uso repetido diminui a eficácia: aproveitar a consulta para um método regular [F].",
+    calcs: ["ae"],
+    secoes: [
+      {t: "Decidir", b: [
+        {fluxo: [
+          {t: "Relação desprotegida ou falha do método"},
+          {t: "Violência sexual?", ramos: [
+            {r: "Sim", n: [{t: "Fluxo de violência: PEP, IST, notificação, rede", k: "stop"}]},
+            {r: "Não", n: [{t: "Tempo desde a relação?"}]}
+          ]},
+          {t: "Opções", ramos: [
+            {r: "≤ 5 dias e deseja DIU", n: [{t: "DIU de cobre (mais eficaz)", k: "ok"}]},
+            {r: "≤ 72 h", n: [{t: "Levonorgestrel 1,5 mg (REMUME: 2 × 0,75 mg juntos)", k: "ok"}]},
+            {r: "72–120 h, IMC ≥ 30 ou indutor enzimático", n: [{t: "Preferir DIU; ulipristal (compra) é mais eficaz que levonorgestrel nesse cenário", k: "warn"}]}
+          ]},
+          {t: "Testes rápidos; iniciar método regular (quick start) + preservativo 7 dias (14 dias após ulipristal para hormonal)", k: "ok"},
+          {t: "Menstruação atrasou > 7 dias → teste de gravidez", k: "warn"}
+        ], nota: "PCDT IST 2022, Quadro 51 [F]; DIU, ulipristal e IMC: evidência consolidada [C]; ulipristal registrado no Brasil (bula) [F]."},
+        {ul: ["Sem contraindicação médica ao levonorgestrel de emergência; pode ser dado a adolescentes [C].", "Vômito em até 3 h do comprimido: repetir a dose [C]."]},
+        {ir: [["pep", "PEP – violência sexual"], ["mu-metodos", "Escolha do método contraceptivo"]]},
+        {ref: ["pcdt_ist2022", "ulip_bula", "rename", "remume"]}
+      ]}
+    ]
+  }, {fontes: ["pcdt_ist2022"]});
+
+  // ── 2. Balanopostite
+  G("balanopostite", {
+    urg: "**Parafimose** (prepúcio retraído preso atrás da glande, com edema): redução manual imediata ou urgência [C].",
+    resumo: "Inflamação da glande e do prepúcio, quase sempre em **não circuncidados**: candidíase (eritema com pápulas e pústulas satélites, após o coito ou com diabetes), irritativa (sabonete, higiene excessiva ou insuficiente), bacteriana e dermatoses [C]. **Glicemia** em todo caso de candidíase; testes rápidos de IST [C]. **Lesão que persiste > 4–6 semanas** ou placa branca esclerótica: biópsia (**líquen escleroso**, neoplasia) [C].",
+    secoes: [
+      {t: "Diferenciais", b: [
+        {tab: {h: ["Hipótese", "Pistas"], r: [
+          ["Candidíase", "Eritema brilhante, pápulas/pústulas satélites, prurido; DM, antibiótico, parceria com candidíase [C]"],
+          ["Irritativa", "Ardor após sabonete, antisséptico, lubrificante; sem satélites [C]"],
+          ["Bacteriana (estreptococo, anaeróbios)", "Secreção fétida, edema intenso [C]"],
+          ["Líquen escleroso", "Placa branca, atrófica, fimose adquirida, estenose de meato – risco de CEC [C]"],
+          ["Balanite de Zoon", "Placa vermelho-alaranjada brilhante em idoso não circuncidado [C]"],
+          ["Eritroplasia de Queyrat (CEC in situ)", "Placa vermelha aveludada persistente – biópsia [C]"],
+          ["Herpes, sífilis, erupção fixa por droga", "Vesículas/úlceras; cancro indolor; lesão que volta com o mesmo fármaco [C]"],
+          ["Psoríase", "Placa bem delimitada sem escama na glande; lesões em outros locais [C]"]
+        ]}}
+      ]},
+      {t: "Decidir", b: [
+        {fluxo: [
+          {t: "Glande e prepúcio inflamados"},
+          {t: "Parafimose?", ramos: [
+            {r: "Sim", n: [{t: "Reduzir / urgência", k: "stop"}]},
+            {r: "Não", n: [{t: "Higiene com água morna e secagem; suspender irritantes; glicemia e testes rápidos"}]}
+          ]},
+          {t: "Aspecto", ramos: [
+            {r: "Satélites / candidíase", n: [{t: "Azol tópico 2×/dia 7–14 dias (± corticoide de baixa potência 3–5 dias)", k: "ok"}]},
+            {r: "Úlcera ou vesícula", n: [{t: "Fluxo de úlcera genital (sífilis, herpes)", k: "warn"}]}
+          ]},
+          {t: "Persistente > 4–6 semanas, placa branca ou recorrente com fimose → urologia (biópsia, postectomia)", k: "warn"}
+        ], nota: "BASHH 2015 [C]; azóis e dexametasona creme na REMUME [F]."},
+        {ref: ["bashh_balano", "rename", "remume"]}
+      ]}
+    ]
+  });
+
+  // ── 3. Candidíase vulvovaginal
+  G("candidiase", {
+    resumo: "Prurido, ardor, corrimento **branco grumoso**, eritema e edema vulvar, **pH < 4,5** [F/C]. Não é IST: **parceria só trata se tiver sintomas** [F]. Tópico vaginal 7 noites ou fluconazol 150 mg dose única [F]. **Gestante e lactante: só via vaginal** [F]. **Recorrente** (≥ 4 episódios/ano): indução + manutenção por 6 meses, glicemia e revisão de fatores [F/C].",
+    secoes: [
+      {t: "Diferenciar", b: [TAB_CORRIMENTO, FLUXO_CORRIMENTO,
+        {ul: ["Fatores predisponentes (Quadro 29): gestação, DM descompensado, obesidade, antibiótico, corticoide, imunossupressão, hábitos de higiene e vestuário que aumentam umidade e calor local [F].", "Diferenciais de prurido vulvar sem corrimento: dermatite de contato, líquen escleroso (placas brancas, idosas), líquen simples, psoríase [C]."]}
+      ]},
+      {t: "Tratar", b: [
+        {tab: {h: ["Situação", "Esquema (Quadro 33)"], r: [
+          ["1ª opção", "Miconazol 2% creme vaginal 7 noites ou nistatina 100.000 UI vaginal 14 noites [F]"],
+          ["2ª opção", "Fluconazol 150 mg dose única ou itraconazol 200 mg 2×/dia por 1 dia [F]"],
+          ["Complicada / recorrente – indução", "Fluconazol 150 mg dias 1, 4 e 7, ou itraconazol 200 mg 2×/dia 1 dia, ou miconazol vaginal 10–14 dias [F]"],
+          ["Recorrente – manutenção", "Fluconazol 150 mg/semana por 6 meses, ou miconazol vaginal 2×/semana, ou óvulo 1×/semana por 6 meses [F]"],
+          ["Gestante / lactante", "Só via vaginal; oral contraindicado [F]"]
+        ]}, nota: "REMUME: miconazol creme vaginal, nistatina creme vaginal 25.000 UI/g (um aplicador de ~4 g ≈ 100.000 UI [I]), fluconazol 150 mg e itraconazol 100 mg [F]. Recorrente sem resposta: pensar em espécie não albicans (cultura) → ginecologia [C]."},
+        IST_GERAL,
+        {ref: ["pcdt_ist2022", "pcdt_ist", "rename", "remume"]}
+      ]}
+    ]
+  }, {fontes: ["pcdt_ist2022"]});
+
+  // ── 4. Cervicite
+  G("cervicite", {
+    urg: "Dor pélvica com **dor à mobilização do colo**, anexos dolorosos ou febre: **DIP** – tratar e avaliar critérios de internação [F].",
+    resumo: "Geralmente **assintomática**; quando há sintomas: corrimento, sangramento intermenstrual ou pós-coito, dispareunia, disúria [F]. Ao exame: **muco cervical turvo ou amarelado, friabilidade, edema e sangramento ao toque da espátula** [F]. Tratar **clamídia e gonorreia** no mesmo dia, sem esperar exame: **ceftriaxona 500 mg IM + azitromicina 1 g** [F]. Parcerias tratadas [F].",
+    secoes: [
+      {t: "Decidir e tratar", b: [
+        {fluxo: [
+          {t: "Corrimento, sangramento pós-coito/intermenstrual, dispareunia ou fator de risco"},
+          {t: "Exame especular: muco turvo, friabilidade, edema, sangramento ao toque?", ramos: [
+            {r: "Sim", n: [{t: "Tratar clamídia + gonorreia; coletar biologia molecular se houver", k: "warn"}]},
+            {r: "Não", n: [{t: "Seguir fluxo de corrimento vaginal", k: "ok"}]}
+          ]},
+          {t: "Dor à mobilização do colo/anexos → DIP", k: "stop"},
+          {t: "Parcerias, abstinência até o fim do tratamento de todos, testes rápidos", k: "ok"}
+        ], nota: "PCDT IST 2022, Figura 12 [F]. Fatores de risco: < 30 anos, parcerias novas ou múltiplas, parceria com IST, IST prévia, preservativo irregular [F]."},
+        {tab: {h: ["Infecção", "Tratamento (Quadro 31)"], r: [
+          ["Gonococo não complicado (colo, uretra, reto, faringe)", "Ceftriaxona 500 mg IM dose única + azitromicina 1 g VO dose única [F]"],
+          ["Clamídia", "Azitromicina 1 g dose única ou doxiciclina 100 mg 2×/dia por 7 dias (exceto gestantes) [F]"],
+          ["Gonococo disseminado", "Ceftriaxona 1 g IM/IV por ≥ 7 dias + azitromicina 1 g – hospital [F]"]
+        ]}, nota: "REMUME: ceftriaxona 1 g IM (usar 500 mg), azitromicina 500 mg e doxiciclina 100 mg [F]. Clamídia e gonorreia não constam da lista nacional de notificação; sífilis, HIV e hepatites sim [F]."},
+        IST_GERAL,
+        {ir: [["dip", "DIP"], ["uretrite", "Corrimento uretral (parceria)"]]},
+        {ref: ["pcdt_ist2022", "cdc_ist", "rename", "remume"]}
+      ]}
+    ]
+  }, {fontes: ["pcdt_ist2022"]});
+
+  // ── 5. Cólica renal
+  G("colica-renal", {
+    urg: "**Febre** com cólica renal (obstrução infectada – urgência urológica), anúria, rim único ou transplantado, gestante, dor que não cede com o tratamento otimizado: **urgência** [F/C]. **> 60 anos com 'primeira cólica renal'**, hipotensão ou massa pulsátil: pensar em **aneurisma de aorta** [C].",
+    resumo: "Dor lombar em cólica, intensa, que irradia para o flanco, a virilha ou o genital, com inquietação, náuseas e hematúria [C]. **AINE é a 1ª escolha** na analgesia [C]. Tratamento otimizado na APS: **analgesia + alfabloqueador** (doxazosina 4 mg ou tansulosina 0,4 mg/dia) se cálculo ureteral **≤ 10 mm** [F]. Encaminhar se **> 10 mm** ou **não eliminado em 4 semanas** [F].",
+    secoes: [
+      {t: "Diferenciais", b: [
+        {tab: {h: ["Hipótese", "Pistas"], r: [
+          ["Aneurisma de aorta roto", "Idoso, hipotensão, massa pulsátil, dor contínua – urgência [C]"],
+          ["Pielonefrite", "Febre, disúria, Giordano + com dor contínua [C]"],
+          ["Apendicite / diverticulite", "Dor que migra, febre, peritonismo [C]"],
+          ["Gravidez ectópica / torção ovariana", "Atraso menstrual, β-hCG; dor pélvica súbita [C]"],
+          ["Torção testicular", "Dor escrotal, testículo alto [C]"],
+          ["Cólica biliar / pancreatite", "Hipocôndrio direito/epigástrio, pós-prandial [C]"],
+          ["Herpes-zóster pré-eruptivo, lombalgia mecânica", "Dor em faixa ou que muda com o movimento [C]"]
+        ]}}
+      ]},
+      {t: "Decidir e tratar", b: [
+        {fluxo: [
+          {t: "Cólica lombar com irradiação"},
+          {t: "Febre, anúria, rim único, gestante, sinais de AAA?", ramos: [
+            {r: "Sim", n: [{t: "Urgência", k: "stop"}]},
+            {r: "Não", n: [{t: "AINE IV/IM ± dipirona; antiemético; EAS e β-hCG se aplicável"}]}
+          ]},
+          {t: "Dor controlada?", ramos: [
+            {r: "Não", n: [{t: "Urgência (dor refratária)", k: "stop"}]},
+            {r: "Sim", n: [{t: "Imagem (TC sem contraste ou USG) pela regulação; analgesia em casa"}]}
+          ]},
+          {t: "Cálculo ureteral ≤ 10 mm → alfabloqueador até 4 semanas; repetir imagem", k: "ok"},
+          {t: "> 10 mm, não eliminado em 4 semanas, renal sintomático, coraliforme ou vesical → urologia", k: "warn"},
+          {t: "≥ 2 episódios, múltiplos cálculos ou história familiar forte → avaliação metabólica (Quadro 5)", k: "q"}
+        ], nota: "TelessaúdeRS Urologia 2023, Protocolo 5 e Quadro 5 [F]; analgesia: Cochrane/EAU [C]."},
+        {trio: {ideal: "Tansulosina 0,4 mg/dia para cálculo ureteral distal de 5–10 mm (maior eliminação).", sus: "REMUME: doxazosina 2 mg; o protocolo do TelessaúdeRS aceita doxazosina 4 mg/dia como alfabloqueador da terapia expulsiva.", ponte: "Doxazosina 4 mg (2 comprimidos de 2 mg) à noite, com orientação sobre hipotensão postural; tansulosina por compra se houver tontura."}},
+        {ul: ["Hidratação habitual, sem forçar volume na crise [C].", "Avaliação metabólica (Quadro 5): composição do cálculo, EAS, eletrólitos, creatinina, cálcio, albumina, fósforo, ácido úrico, 25-OH-vitamina D, TSH (PTH se cálcio alto/limítrofe) e urina de 24 h em 2 ocasiões [F]."]},
+        {ref: ["tsrs_uro2023", "eau_litiase", "rename", "remume"]}
+      ]}
+    ]
+  }, {fontes: ["tsrs_uro2023"]});
+  const cr = get("colica-renal");
+  if (cr && cr.idealsus) cr.idealsus.sus = "Analgesia (AINE IV/oral, dipirona) disponível em Betim. Tansulosina não consta na RENAME nem na REMUME; doxazosina 2 mg consta, e o TelessaúdeRS (2023) aceita doxazosina 4 mg/dia como alternativa na terapia expulsiva.";
+
+  // ── 6. Condiloma
+  G("condiloma", {
+    urg: "Lesão **pigmentada, ulcerada, endurecida, que sangra** ou que não responde: **biópsia** [C]. Verruga anogenital em **criança**: considerar **abuso sexual** e acionar a rede de proteção [F].",
+    resumo: "Pápulas ou vegetações em **couve-flor**, únicas ou múltiplas, achatadas ou papulosas, na região anogenital (HPV 6 e 11) [F/C]. Tratamento ambulatorial (**ATA 80–90%**, podofilina, crioterapia, eletrocauterização, exérese) ou domiciliar (**imiquimode, podofilotoxina**) [F]. **Gestante: só ATA, crioterapia ou exérese** [F]. Recorrência é comum; **testes de HPV não são indicados** [F]. Examinar parcerias e testar outras IST [F].",
+    secoes: [
+      {t: "Diferenciais", b: [
+        {tab: {h: ["Hipótese", "Pistas"], r: [
+          ["Pápulas perladas do pênis", "Fileiras regulares na coroa da glande – normais [C]"],
+          ["Papilomatose vestibular", "Projeções simétricas, finas, no vestíbulo – normal [C]"],
+          ["Molusco contagioso", "Pápulas umbilicadas peroladas [C]"],
+          ["Condiloma plano (sífilis secundária)", "Placas úmidas, lisas, perianais – VDRL/teste rápido [C]"],
+          ["Neoplasia intraepitelial / CEC", "Pigmentada, ulcerada, endurecida – biópsia [C]"]
+        ]}}
+      ]},
+      {t: "Decidir e tratar", b: [
+        {fluxo: [
+          {t: "Verruga anogenital sugestiva de HPV"},
+          {t: "Caso especial: gestante, criança, imunossuprimido, grande volume, disseminada?", ramos: [
+            {r: "Sim", n: [{t: "Referenciar (gestante pode fazer ATA/crioterapia)", k: "warn"}]},
+            {r: "Não", n: [{t: "Escolher com a pessoa"}]}
+          ]},
+          {t: "Tratamento", ramos: [
+            {r: "Na unidade", n: [{t: "ATA 80–90% semanal; podofilina 10–25%; crioterapia; eletrocauterização; exérese", k: "ok"}]},
+            {r: "Em casa", n: [{t: "Imiquimode 5% 3×/semana até 16 semanas ou podofilotoxina 2×/dia 3 dias + 4 de pausa, até 4 ciclos", k: "ok"}]}
+          ]},
+          {t: "Novas lesões ou sem melhora → mudar a terapia e manter seguimento", k: "warn"}
+        ], nota: "PCDT IST 2022, Figura 16 e seção 11.5 [F]."},
+        {tab: {h: ["Método", "Observações (PCDT IST 2022)"], r: [
+          ["ATA 80–90%", "Pequena quantidade só na lesão até branquear; semanal; pode na gestação; nunca para uso domiciliar [F]"],
+          ["Podofilina 10–25%", "Semanal; máx. 0,5 mL e 10 cm² por sessão; contraindicada na gestação [F]"],
+          ["Crioterapia", "Atóxica, pode na gestação; boa para lesões isoladas e queratinizadas [F]"],
+          ["Imiquimode 5%", "Menos irritação que a podofilotoxina, porém tratamento mais longo; não usar na gestação [F]"],
+          ["Exérese tangencial", "Lesões volumosas/pedunculadas; permite histologia [F]"]
+        ]}, nota: "REMUME: nenhum desses produtos consta; a RENAME tem podofilotoxina, imiquimode e podofilina [F]. ATA e crioterapia em Betim: [NV]."},
+        IST_GERAL,
+        {ref: ["pcdt_ist2022", "tsrs_derm2023", "cdc_ist", "rename", "remume"]}
+      ]}
+    ]
+  }, {fontes: ["pcdt_ist2022", "tsrs_derm2023"]});
+
+  // ── 7. Hematúria
+  G("hematuria", {
+    urg: "Hematúria macroscópica com **retenção por coágulos**, instabilidade, sepse urinária ou dor de difícil controle: **urgência** [F]. Hematúria com **edema, HAS, oligúria e creatinina subindo** (glomerulonefrite rapidamente progressiva): urgência [C].",
+    resumo: "Primeiro **descartar causas benignas**: ITU, febre, exercício intenso, trauma, menstruação [F]. Microscópica = **≥ 3 hemácias/campo**, **confirmada em 2 EAS com 6 semanas** de intervalo [F]. Separar **glomerular** (dismorfismo, acantócitos, proteinúria, cilindros hemáticos, creatinina alta) → nefrologia de **não glomerular** → urologia conforme **fatores de risco para neoplasia urotelial** [F]. Anticoagulante não explica hematúria: investigar igual [C].",
+    secoes: [
+      {t: "Classificar", b: [
+        {tab: {h: ["Achado glomerular (Quadro 11)", "Fatores de risco para neoplasia urotelial"], r: [
+          ["Hemácias dismórficas (> 70% = glomerular; < 30% = não glomerular; 30–70% = indeterminado) [F]", "Mulher ≥ 50 anos ou homem ≥ 40 anos [F]"],
+          ["Acantócitos [F]", "Tabagismo atual ou prévio [F]"],
+          ["Proteinúria [F]", "Sintomas irritativos sem ITU, cistite crônica [F]"],
+          ["Cilindros hemáticos [F]", "Radioterapia pélvica; sonda vesical [F]"],
+          ["Creatinina/ureia elevadas [F]", "Exposição a corantes, borracha, couro, tintas; pintores, mecânicos, cabeleireiros, caminhoneiros [F]"],
+          ["História familiar de nefrite hereditária ou rins policísticos [F]", "—"]
+        ]}, nota: "TelessaúdeRS Urologia 2023, Protocolo 8 e Quadro 11 [F]."}
+      ]},
+      {t: "Decidir", b: [
+        {fluxo: [
+          {t: "Hematúria"},
+          {t: "Coágulos com retenção, instabilidade, sepse, dor intratável?", ramos: [
+            {r: "Sim", n: [{t: "Urgência", k: "stop"}]},
+            {r: "Não", n: [{t: "Afastar ITU, exercício, menstruação, trauma; tratar e repetir EAS"}]}
+          ]},
+          {t: "Tipo", ramos: [
+            {r: "Macroscópica com coágulos", n: [{t: "Urologia", k: "warn"}]},
+            {r: "Macroscópica sem coágulos", n: [{t: "Achado glomerular? Sim → nefrologia; não → urologia", k: "warn"}]},
+            {r: "Microscópica (2 EAS / 6 semanas)", n: [{t: "Dismorfismo, creatinina, proteinúria/creatininúria, USG"}]}
+          ]},
+          {t: "Microscópica não glomerular: com fator de risco → urologia; sem fator de risco → repetir em 6–12 meses e encaminhar se persistir", k: "q"}
+        ], nota: "TelessaúdeRS Urologia 2023, Protocolo 8 [F]."},
+        {ref: ["tsrs_uro2023", "aua_hematuria"]}
+      ]}
+    ]
+  }, {fontes: ["tsrs_uro2023"]});
+
+  // ── 8. Herpes genital
+  G("herpes-genital", {
+    urg: "Retenção urinária, sinais de meningite, lesões disseminadas, imunossuprimido com lesões extensas (aciclovir IV) ou gestante no fim da gestação com lesão ativa: **urgência/obstetrícia** [F/C].",
+    resumo: "**Vesículas agrupadas e dolorosas** que viram **úlceras rasas**, com ardor ou formigamento antes (pródromo), adenopatia inguinal dolorosa; o 1º episódio tem febre e mal-estar [C/F]. Toda úlcera genital: **teste de sífilis** [F]. **Aciclovir** o mais cedo possível; recidiva de preferência no pródromo [F]. **≥ 6 episódios/ano**: supressão [F]. Não há associação entre herpes genital e câncer [F].",
+    secoes: [
+      {t: "Úlcera genital (Figura 14)", b: [
+        {fluxo: [
+          {t: "Úlcera genital: anamnese e exame"},
+          {t: "IST como causa provável?", ramos: [
+            {r: "Não", n: [{t: "Investigar outras causas (trauma, Behçet, farmacodermia, neoplasia)", k: "q"}]},
+            {r: "Sim", n: [{t: "Laboratório disponível?"}]}
+          ]},
+          {t: "Sem laboratório", ramos: [
+            {r: "Vesículas ativas", n: [{t: "Tratar herpes genital", k: "ok"}]},
+            {r: "Sem vesículas", n: [{t: "Tratar sífilis primária e cancroide (penicilina benzatina 2,4 milhões + azitromicina 1 g)", k: "warn"}]},
+            {r: "> 4 semanas", n: [{t: "Pensar em donovanose, LGV, neoplasia – biópsia/referência", k: "warn"}]}
+          ]},
+          {t: "Persiste após 14 dias → referenciar", k: "warn"}
+        ], nota: "PCDT IST 2022, Figura 14 e Quadro 39 [F]."}
+      ]},
+      {t: "Tratar", b: [
+        {tab: {h: ["Situação", "Aciclovir (Quadro 38)"], r: [
+          ["1º episódio", "400 mg 3×/dia ou 200 mg 5×/dia por 7–10 dias (prolongar se não cicatrizou) [F]"],
+          ["Recidiva", "400 mg 3×/dia ou 800 mg 2×/dia por 5 dias, iniciando no pródromo [F]"],
+          ["Supressão (≥ 6 episódios/ano)", "400 mg 2×/dia por até 6 meses, podendo chegar a 2 anos; função renal e hepática periódicas [F]"],
+          ["Imunossuprimido com lesões extensas", "5–10 mg/kg IV 8/8 h [F]"],
+          ["Gestante", "Tratar o 1º episódio em qualquer trimestre; supressão a partir de 36 semanas com 400 mg 3×/dia se primoinfecção na gestação ou recidivas frequentes [F]"]
+        ]}, nota: "Compressas de soro ou degermante para higiene; analgésico; retorno em 1 semana [F]. Valaciclovir não consta no PCDT nem na REMUME (opção de compra com 2 tomadas ao dia) [F/C]."},
+        IST_GERAL,
+        {ref: ["pcdt_ist2022", "bvs_herpes", "cdc_ist", "rename", "remume"]}
+      ]}
+    ]
+  }, {fontes: ["pcdt_ist2022"], mud: "fluxograma de úlcera genital (Figura 14 do PCDT IST 2022) e doses do Quadro 38 conferidas no texto integral"});
+  const hg = get("herpes-genital");
+  if (hg) hg.nv = (hg.nv || []).filter(x => !/conferido em fonte voltada a gestantes/.test(x));
+
+  // ── 9. Incontinência urinária
+  G("incontinencia", {
+    urg: "Retenção urinária aguda, déficit neurológico novo (cauda equina, medula), hematúria ou perda de função renal com resíduo alto: **urgência/encaminhamento** [F/C].",
+    resumo: "Classificar pela história: **esforço** (tosse, espirro, exercício), **urgência** (vontade súbita, não dá tempo), **mista**, **transbordamento** (gotejamento, jato fraco, bexiga palpável) e **funcional** (mobilidade, cognição) [C]. **Tratamento clínico** para todas: estilo de vida, **exercícios do assoalho pélvico** e **treinamento vesical** [F]. Sem resposta em **3 meses** ou incontinência complicada → urologia/ginecologia [F].",
+    secoes: [
+      {t: "Avaliar", b: [
+        {ul: [
+          "EAS/urocultura; diário miccional; glicemia; revisar medicamentos (diuréticos, alfabloqueador em mulher, sedativos, anticolinérgicos que causam retenção, IECA pela tosse) [C].",
+          "Exame: prolapso, atrofia genital, toque retal (fecaloma, próstata), sensibilidade perineal, resíduo pós-miccional se houver suspeita de retenção [C].",
+          "Retenção crônica = resíduo > 300 mL em 2 ocasiões por ≥ 6 meses [F]."
+        ]}
+      ]},
+      {t: "Tratar (Quadro 2)", b: [
+        {tab: {h: ["Medida", "Como"], r: [
+          ["Estilo de vida", "Perder peso, reduzir cafeína e álcool, parar de fumar, tratar constipação [F]"],
+          ["Exercícios de Kegel", "Contrações de 6–10 s, 8–12 repetições, 3×/dia, pelo menos 3–4 dias/semana (ideal todo dia); aprender interrompendo o jato, mas não praticar ao urinar [F]"],
+          ["Treinamento vesical (urgência)", "Diário de 24 h → urinar 'pelo relógio' no menor intervalo (geralmente 1 h) → controlar a urgência (distração, respiração, contrações rápidas) → aumentar 15–30 min a cada 2–7 dias bons, até 2–4 h; melhora em até 6 semanas [F]"]
+        ]}, nota: "TelessaúdeRS Urologia 2023, Quadro 2 [F]."},
+        {fluxo: [
+          {t: "Incontinência urinária"},
+          {t: "Sinal de alarme (retenção, hematúria, neuro, ITU recorrente, dor pélvica, cirurgia/radioterapia pélvica)?", ramos: [
+            {r: "Sim", n: [{t: "Incontinência complicada → urologia/ginecologia", k: "warn"}]},
+            {r: "Não", n: [{t: "Tipo pela história + tratamento clínico por 3 meses"}]}
+          ]},
+          {t: "Urgência sem melhora → antimuscarínico (oxibutinina na REMUME; evitar em idoso frágil) ou mirabegrona (compra)", k: "q"},
+          {t: "Sem resposta em 3 meses → urologia/ginecologia; fisioterapia pélvica se houver", k: "warn"}
+        ], nota: "TelessaúdeRS Urologia 2023, Protocolo 1 [F]; fármacos: NICE NG123 [C]."},
+        {ref: ["tsrs_uro2023", "prolapso", "rename", "remume"]}
+      ]}
+    ]
+  }, {fontes: ["tsrs_uro2023"]});
+
+  // ── 10. Sífilis adquirida
+  G("sifilis", {
+    urg: "Sintomas **neurológicos, oculares ou auditivos** (cefaleia, alteração visual, uveíte, zumbido, perda auditiva, paralisia de nervo craniano) em pessoa com sífilis: **neurossífilis** – urgência/infectologia [F]. **Gestante**: tratar no mesmo dia do teste rápido reagente [F].",
+    resumo: "Benzilpenicilina benzatina é o tratamento de todas as fases e **o único que trata o feto** [F]. **Recente** (até 1 ano): 2,4 milhões UI dose única; **tardia ou duração ignorada**: 2,4 milhões UI/semana por 3 semanas [F]. Coletar o **teste não treponêmico no dia do tratamento** e repetir a cada 3 meses (mensal na gestante) [F]. Resposta adequada: **queda de 2 diluições** em 6 meses (recente) ou 12 meses (tardia) [F]. Notificação **semanal** (adquirida, gestante e congênita) [F].",
+    secoes: [
+      {t: "Reconhecer as fases", b: [
+        {tab: {h: ["Fase", "Achados"], r: [
+          ["Primária", "Cancro duro: úlcera única, indolor, base limpa e endurecida, 10–90 dias após o contato; adenopatia [C]"],
+          ["Secundária", "6 semanas a 6 meses: exantema (roséola), lesões palmoplantares acobreadas, condiloma plano, alopecia em clareira, febre, linfonodos [C]"],
+          ["Latente", "Sem sinais; recente se < 1 ano, tardia se > 1 ano ou duração ignorada [F/C]"],
+          ["Terciária", "Gomas, aortite, tabes, demência – anos depois [C]"]
+        ]}},
+        {tab: {h: ["Treponêmico (TR)", "Não treponêmico (VDRL)", "Interpretação (Quadro 14)"], r: [
+          ["Reagente", "Reagente", "Sífilis (estadiar e tratar) ou cicatriz sorológica se tratamento prévio documentado com queda ≥ 2 diluições [F]"],
+          ["Reagente", "Não reagente", "Sífilis recente/latente ou cicatriz, ou falso reagente – 3º teste treponêmico de outra metodologia; sem ele, decidir por exposição, sintomas e tratamento prévio [F]"]
+        ]}, nota: "Na gestante, o TR reagente basta para tratar no mesmo dia, sem esperar o VDRL [F/C]."}
+      ]},
+      {t: "Tratar e seguir", b: [
+        {tab: {h: ["Estágio (Quadro 15)", "Esquema", "Alternativa (exceto gestante)"], r: [
+          ["Recente: primária, secundária, latente ≤ 1 ano", "Benzatina 2,4 milhões UI IM dose única (1,2 milhão em cada glúteo) [F]", "Doxiciclina 100 mg 12/12 h por 15 dias [F]"],
+          ["Tardia: latente > 1 ano, duração ignorada, terciária", "Benzatina 2,4 milhões UI IM 1×/semana por 3 semanas (7,2 milhões) [F]", "Doxiciclina 100 mg 12/12 h por 30 dias [F]"],
+          ["Neurossífilis", "Penicilina cristalina 18–24 milhões UI/dia IV por 14 dias – hospital [F]", "Ceftriaxona 2 g IV/dia por 10–14 dias [F]"]
+        ]}, nota: "**Intervalo entre doses:** fora da gestação, até 14 dias (PCDT 2022) [F]; na gestante, até **9 dias** (NT 14/2023, que ampliou os 7 dias do PCDT 2022) – passou disso ou perdeu dose, reiniciar [F]. Na sífilis recente da gestante, alguns especialistas dão uma 2ª dose de 2,4 milhões após 1 semana (PCDT) [F]."},
+        {tab: {h: ["Seguimento (seção 5.7)", ""], r: [
+          ["Teste não treponêmico", "No 1º dia do tratamento e depois a cada 3 meses (mensal na gestante), sempre pelo mesmo método (VDRL com VDRL) [F]"],
+          ["Resposta adequada", "Não reagente ou queda de 2 diluições (ex.: 1:64 → 1:16) em até 6 meses (recente) ou 12 meses (tardia) [F]"],
+          ["Retratar", "Sem queda de 2 diluições no prazo, aumento de 2 diluições ou mais, ou sinais/sintomas que persistem ou voltam – investigar reinfecção e neurossífilis [F]"],
+          ["Cicatriz sorológica", "Títulos baixos estáveis após tratamento adequado com queda prévia ≥ 2 diluições, sem nova exposição – não é falha [F]"]
+        ]}},
+        {fluxo: [
+          {t: "Teste rápido reagente"},
+          {t: "Gestante?", ramos: [
+            {r: "Sim", n: [{t: "1ª dose de benzatina hoje + VDRL; parceria tratada", k: "warn"}]},
+            {r: "Não", n: [{t: "VDRL; estadiar pela história (último teste não reagente, lesões)"}]}
+          ]},
+          {t: "Sintoma neurológico, ocular ou auditivo?", ramos: [
+            {r: "Sim", n: [{t: "Neurossífilis: referência", k: "stop"}]},
+            {r: "Não", n: [{t: "Tratar pelo estágio; notificar; testar HIV e hepatites; parcerias", k: "ok"}]}
+          ]}
+        ], nota: "PCDT IST 2022, Figura 6 [F]."},
+        {ir: [["in-sifilis", "Sífilis: estadiamento e seguimento (Infectologia)"], ["herpes-genital", "Úlcera genital"]]},
+        {ref: ["pcdt_ist2022", "nt14_2023", "port11211", "sp_sifilis", "betim_pn2024", "rename", "remume"]}
+      ]}
+    ]
+  }, {fontes: ["pcdt_ist2022", "nt14_2023", "port11211"], mud: "fases, interpretação de testes (Quadro 14), esquemas do Quadro 15, critérios de resposta e retratamento (seção 5.7) e intervalo de 9 dias na gestante (NT 14/2023)"});
+  const sf = get("sifilis");
+  if (sf) {
+    sf.nv = (sf.nv || []).filter(x => !/Doxiciclina para alérgicos/.test(x));
+    if (sf.alerta) sf.alerta = sf.alerta.replace("conferir esquema e intervalo no PCDT IST vigente; intervalo máximo de 9 dias entre doses semanais (MS, 2023)", "intervalo máximo de 9 dias entre doses semanais (NT 14/2023-DATHI/SVSA/MS)");
+  }
+
+  // ── 11. Tricomoníase
+  G("tricomoniase", {
+    resumo: "Corrimento **amarelo-esverdeado, bolhoso**, com prurido, disúria e **colo em framboesa**; pH > 4,5 [C/F]. É IST: **tratar sempre as parcerias** e testar HIV, sífilis e hepatites [F]. **Metronidazol 2 g dose única ou 500 mg 2×/dia por 7 dias**, inclusive na gestação e lactação [F]. Pode alterar a citologia: tratar e **repetir o preventivo em 3 meses** se houver alteração [F].",
+    secoes: [
+      {t: "Diferenciar", b: [TAB_CORRIMENTO, FLUXO_CORRIMENTO]},
+      {t: "Tratar", b: [
+        {tab: {h: ["Esquema (Quadro 35)", "Observação"], r: [
+          ["Metronidazol 2 g VO dose única", "PCDT: 5 comprimidos de 400 mg; em Betim só há 250 mg (8 comprimidos) [F]"],
+          ["Metronidazol 500 mg 2×/dia por 7 dias", "2 comprimidos de 250 mg; nas mulheres, o esquema de 7 dias curou mais que a dose única em ECR (CDC 2021 prefere) [F/C]"],
+          ["Parcerias", "Mesmo esquema, de preferência presencial [F]"]
+        ]}, nota: "PVHIV em uso de ritonavir: 2 h de intervalo entre metronidazol e ritonavir [F]. Álcool: o PCDT manda evitar (efeito antabuse) [F]; o CDC 2021 deixou de exigir abstinência por falta de evidência [C]. Manter o tratamento na menstruação e suspender relações durante o tratamento [F]."},
+        IST_GERAL,
+        {ref: ["pcdt_ist2022", "pcdt_ist", "cdc_ist", "rename", "remume"]}
+      ]}
+    ]
+  }, {fontes: ["pcdt_ist2022"]});
+
+  // ── 12. Corrimento uretral
+  G("uretrite", {
+    urg: "Uretrite com **dor e edema escrotal** e febre (orquiepididimite com sinais de gravidade), artrite séptica ou lesões cutâneas (gonococcemia): **urgência** [C/F].",
+    resumo: "Corrimento **mucopurulento**, disúria, prurido uretral [F]. Sem laboratório: tratar **gonococo + clamídia** no mesmo dia – **ceftriaxona 500 mg IM + azitromicina 1 g** (1ª opção) ou **+ doxiciclina 7 dias** (2ª opção do PCDT; preferida pelo CDC) [F]. Parcerias dos últimos 60 dias, abstinência por 7 dias e testes rápidos [F/C]. Os sintomas podem levar até 7 dias para passar [F].",
+    secoes: [
+      {t: "Decidir", b: [
+        {fluxo: [
+          {t: "Corrimento uretral: anamnese e exame"},
+          {t: "Laboratório disponível na consulta?", ramos: [
+            {r: "Não", n: [{t: "Tratar clamídia e gonorreia", k: "warn"}]},
+            {r: "Sim", n: [{t: "Gram: diplococos gram-negativos intracelulares → gonococo + clamídia; ausentes → clamídia (± M. genitalium/Trichomonas)", k: "ok"}]}
+          ]},
+          {t: "Persiste após 7 dias do fim do tratamento → reexposição? adesão? M. genitalium, Trichomonas, resistência", k: "q"}
+        ], nota: "PCDT IST 2022, Figura 13 [F]."},
+        {tab: {h: ["Condição (Quadro 37)", "1ª opção", "2ª opção"], r: [
+          ["Sem agente identificado", "Ceftriaxona 500 mg IM + azitromicina 1 g VO [F]", "Ceftriaxona 500 mg IM + doxiciclina 100 mg 2×/dia 7 dias [F]"],
+          ["Não gonocócica / clamídia", "Azitromicina 1 g dose única [F]", "Doxiciclina 100 mg 2×/dia 7 dias [F]"],
+          ["Retratamento gonocócico (falha)", "Ceftriaxona 500 mg IM + azitromicina 2 g [F]", "Gentamicina 240 mg IM + azitromicina 2 g [F]"],
+          ["Mycoplasma genitalium", "Azitromicina 1 g [F]", "—"],
+          ["Trichomonas", "Metronidazol 500 mg 2×/dia 7 dias [F]", "Clindamicina 300 mg 2×/dia 7 dias [F]"]
+        ]}, nota: "Reinfecção trata com as doses habituais; o retratamento é para falha [F]. REMUME: ceftriaxona 1 g IM, azitromicina 500 mg, doxiciclina 100 mg, gentamicina 80 mg/2 mL (3 ampolas = 240 mg), metronidazol 250 mg e clindamicina 300 mg [F]."},
+        IST_GERAL,
+        {ir: [["cervicite", "Cervicite (parceria)"], ["escroto-agudo", "Escroto agudo / epididimite"]]},
+        {ref: ["pcdt_ist2022", "cdc_ist", "rename", "remume"]}
+      ]}
+    ]
+  }, {fontes: ["pcdt_ist2022"], mud: "fluxograma de corrimento uretral (Figura 13) e Quadro 37 do PCDT IST 2022 conferidos no texto integral – a doxiciclina é a 2ª opção oficial"});
+  const ur = get("uretrite");
+  if (ur) {
+    ur.nv = (ur.nv || []).filter(x => !/Quadro de doses do PCDT IST 2022 não aberto/.test(x));
+    if (ur.idealsus) ur.idealsus.sus = "PCDT IST 2022 (Quadro 37): 1ª opção ceftriaxona 500 mg IM + azitromicina 1 g dose única; 2ª opção ceftriaxona + doxiciclina 7 dias. Todos disponíveis em Betim.";
+  }
+
+  // ── 13. Vaginose bacteriana
+  G("vaginose", {
+    resumo: "Corrimento **branco-acinzentado, fino e homogêneo**, com **odor de peixe** que piora após a relação e a menstruação; pouco prurido; **pH > 4,5** [C/F]. Não é IST clássica: **parceria não é tratada** [F]. **Metronidazol 500 mg 2×/dia por 7 dias** ou **gel vaginal 5 noites**, inclusive na gestação e lactação [F]. Recorrente: 10–14 dias e supressão [F].",
+    secoes: [
+      {t: "Diferenciar", b: [TAB_CORRIMENTO,
+        {tab: {h: ["Critérios de Amsel (3 de 4)", ""], r: [
+          ["Corrimento homogêneo, fino, branco-acinzentado", "[C]"], ["pH vaginal > 4,5", "[C]"], ["Teste das aminas positivo (odor com KOH 10%)", "[C]"], ["Clue cells na microscopia", "[C]"]
+        ]}, nota: "Critérios de Amsel citados de memória [C]; o PCDT traz o escore de Nugent (Gram, Quadro 30) para laboratório [F]."},
+        FLUXO_CORRIMENTO
+      ]},
+      {t: "Tratar", b: [
+        {tab: {h: ["Situação (Quadro 34)", "Esquema"], r: [
+          ["1ª opção (inclusive gestantes e lactantes)", "Metronidazol 250 mg, 2 comprimidos 2×/dia por 7 dias, ou gel vaginal 100 mg/g, 1 aplicador à noite por 5 noites [F]"],
+          ["2ª opção", "Clindamicina 300 mg 2×/dia por 7 dias [F]"],
+          ["Recorrente", "Metronidazol oral 10–14 dias, ou gel 10 dias seguido de ácido bórico vaginal 600 mg/dia por 21 dias e gel 2×/semana por 4–6 meses (o PCDT diz que esse regime ainda requer validação) [F]"],
+          ["Puérpera", "Mesmo tratamento da gestante [F]"]
+        ]}, nota: "REMUME: metronidazol 250 mg, gel vaginal 100 mg/g e clindamicina 300 mg; ácido bórico não consta (manipulado) [F/C]."},
+        IST_GERAL,
+        {ref: ["pcdt_ist2022", "pcdt_ist", "cdc_ist", "rename", "remume"]}
+      ]}
+    ]
+  }, {fontes: ["pcdt_ist2022"]});
+  const vb = get("vaginose");
+  if (vb) vb.nv = (vb.nv || []).filter(x => !/Esquema para gestantes: conferir/.test(x));
 })();
 
 </script>

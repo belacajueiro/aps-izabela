@@ -4,7 +4,7 @@
 // Conferido em 25/10/2026: NICE NG158 (TEV), NICE NG143 (febre < 5 anos, Tabela 2), NICE NG224 (ITU < 16 anos), SBC IC 2026 (cap. 7 e 8, base clínica),
 // CAB 28 vol. II (dor abdominal, base clínica), SBD 2025 (SHHNC; manejo da terapia no DM2 – R16; diagnóstico), consenso ADA/EASD 2024 de crises
 // hiperglicêmicas (pela revisão do CCJM 2025), TelessaúdeRS Urologia 2023 (base clínica), Barbosa 2013 (TWIST, PubMed), CDC STI 2021 (epididimite),
-// ASAM 2020 (abstinência alcoólica), Portaria GM/MS 6.734/2025 (base clínica), NICE CG103 (atualização 2023: 4AT), PCDT IST 2022 (sem esquema de epididimite).
+// ASAM 2020 (abstinência alcoólica), Portaria GM/MS 6.734/2025 (base clínica; substituída na tabela pela 11.211/2026 – ver data65.js), NICE CG103 (atualização 2023: 4AT), PCDT IST 2022 (sem esquema de epididimite).
 Object.assign(FONTES, {
   nice_ng158: {s: "NICE NG158 – TEV: diagnóstico e tratamento", t: "NICE. Venous thromboembolic diseases: diagnosis, management and thrombophilia testing (NG158, 2020; emendas até 2023). Wells TVP em 2 níveis (≥ 2 provável): doppler proximal com resultado em até 4 h; se não for possível, D-dímero + anticoagulação interina e doppler em até 24 h; doppler negativo com D-dímero positivo → repetir em 6–8 dias. TVP improvável: D-dímero em até 4 h. Wells TEP em 2 níveis (> 4 provável); PERC quando a suspeita é baixa; D-dímero ajustado à idade > 50 anos. Tratamento: apixabana ou rivaroxabana de 1ª linha; HBPM ≥ 5 dias seguida de dabigatrana/edoxabana ou de AVK até INR ≥ 2,0 em 2 leituras; ClCr < 15: HBPM/HNF ± AVK; câncer ativo: DOAC ou HBPM; duração mínima de 3 meses (3–6 no câncer); provocada: parar em 3 meses se o fator resolveu; não provocada: considerar estender, pesando sangramento (HAS-BLED) (diretriz; conferida em 25/10/2026).", f: "F", url: "https://www.nice.org.uk/guidance/NG158/chapter/Recommendations"},
   nice_ng224: {s: "NICE NG224 – ITU em < 16 anos (2022)", t: "NICE. Urinary tract infection in under 16s: diagnosis and management (NG224, jul/2022; última alteração nov/2025). Colher urina antes do antibiótico (jato limpo; coletor tipo almofada se não der; sondagem ou punção suprapúbica se necessário); < 3 meses: encaminhar ao pediatra/especialista para microscopia, cultura e antibiótico parenteral; 3 meses a < 3 anos: fita com LE e nitrito negativos → sem antibiótico; qualquer positivo → cultura e antibiótico; ≥ 3 anos: tabela de fita; ITU alta = bacteriúria + febre ≥ 38 °C (ou < 38 °C com dor lombar); PCR não diferencia; ITU atípica (grave, jato fraco, massa, creatinina elevada, septicemia, sem resposta em 48 h, não E. coli) e recorrente (≥ 2 altas; 1 alta + ≥ 1 baixa; ≥ 3 baixas); imagem por idade (< 6 meses: USG em 6 semanas se boa resposta; 6 meses–3 anos e ≥ 3 anos: sem imagem de rotina se boa resposta); sem profilaxia de rotina após a 1ª ITU; bacteriúria assintomática não se trata (diretriz; conferida em 25/10/2026).", f: "F", url: "https://www.nice.org.uk/guidance/ng224"},
@@ -329,7 +329,7 @@ FONTES.nice_febre = {s: "NICE NG143 – febre em < 5 anos", t: "NICE NG143. Feve
       ]},
       {t: "Diferenciais", b: [
         {tab: {h: ["Hipótese", "O que separa", "Conduta"], r: [
-          ["Orquite por caxumba", "Parotidite dias antes; pós-púbere", "Sintomáticos [C]; caxumba não consta da lista nacional (Portaria 6.734/2025) – surtos seguem a vigilância local [NV]"],
+          ["Orquite por caxumba", "Parotidite dias antes; pós-púbere", "Sintomáticos [C]; caxumba entrou na lista nacional em 2026 – notificação imediata (Portaria GM/MS 11.211/2026, art. 2º) [F]"],
           ["Hérnia inguinal encarcerada", "Massa que não se separa do anel inguinal; vômitos, distensão", "Urgência cirúrgica [C]"],
           ["Trauma/hematoma", "História de trauma", "USG; urgência se ruptura [C]"],
           ["Tumor testicular", "Massa endurecida, em geral indolor (dor se hemorragia)", "USG e urologia com prioridade [C]"],
@@ -417,7 +417,7 @@ FONTES.nice_febre = {s: "NICE NG143 – febre em < 5 anos", t: "NICE NG143. Feve
   // ── 8. Risco de suicídio
   G("risco-suicida", {
     urg: "Plano estruturado, intenção, acesso a meio letal, tentativa recente, preparativos, psicose, intoxicação ou incapacidade de garantir a própria segurança: **não deixar a pessoa sozinha** → SAMU/urgência psiquiátrica; envolver a família.",
-    resumo: "**Perguntar diretamente não aumenta o risco** [C]. Escalas organizam a conversa, mas **não preveem suicídio** nem decidem a conduta (NICE NG225) [C]. A decisão vem da avaliação clínica – ideação, plano, intenção, meios, tentativa prévia e proteção – e do **plano de segurança** com restrição de meios e retorno próximo. Tentativa de suicídio é de **notificação imediata (até 24 h) à SMS** [F].",
+    resumo: "**Perguntar diretamente não aumenta o risco** [C]. Escalas organizam a conversa, mas **não preveem suicídio** nem decidem a conduta (NICE NG225) [C]. A decisão vem da avaliação clínica – ideação, plano, intenção, meios, tentativa prévia e proteção – e do **plano de segurança** com restrição de meios e retorno próximo. Tentativa de suicídio é de **notificação imediata (até 24 h) à SMS** (Portaria GM/MS 11.211/2026) [F].",
     calcs: ["sc:cssrs", "sc:phq9"],
     secoes: [
       {t: "Reconhecer", b: [
@@ -441,15 +441,15 @@ FONTES.nice_febre = {s: "NICE NG143 – febre em < 5 anos", t: "NICE NG143. Feve
             {r: "Ideação passiva", n: [{t: "Plano de segurança, tratar a condição de base, retorno em até 1–2 semanas", k: "ok"}]}
           ]},
           {t: "Qualquer tentativa: notificação imediata à SMS (até 24 h) + ficha de violência interpessoal/autoprovocada", k: "stop"}
-        ], nota: "Portaria GM/MS 6.734/2025 – violência sexual e tentativa de suicídio: notificação imediata à SMS [F]. Intervalos de retorno: inferência clínica [I]."}
+        ], nota: "Portaria GM/MS 11.211/2026 (lista vigente, que alterou a 6.734/2025) – violência sexual e tentativa de suicídio: notificação imediata à SMS [F]. Intervalos de retorno: inferência clínica [I]."}
       ]},
       {t: "Cuidar", b: [
         {ul: ["**Plano de segurança** escrito com a pessoa (modelo na aba Prescrição) [C].", "**Restrição de meios:** familiar guarda os remédios, armas fora de casa, pesticidas trancados – é a medida com melhor evidência populacional [C].", "**Antidepressivo:** ISRS, em quantidades pequenas e com um familiar responsável; evitar tricíclicos pela letalidade na superdosagem [C].", "**< 25 anos:** monitorar ideação nas primeiras semanas de antidepressivo [C].", "**Contato de seguimento** (ligação, visita do ACS) depois da consulta e se faltar ao retorno [C].", "CVV 188 (24 h, gratuito) [C]."]},
         {ir: [["depressao", "Depressão"], ["cr-depressao", "Depressão (seguimento)"], ["pp-depressao", "Depressão perinatal"], ["po-violencia-vulneraveis", "Violência"]]},
-        {ref: ["suicidio", "port6734", "cab34", "nice_depressao", "cssrs"]}
+        {ref: ["suicidio", "port11211", "cab34", "nice_depressao", "cssrs"]}
       ]}
     ]
-  }, {fontes: ["port6734", "cab34", "cssrs"], mud: "avaliação em escada, triagem C-SSRS, fluxograma por nível de risco, notificação imediata (Portaria 6.734/2025) e cuidado"});
+  }, {fontes: ["port6734", "cab34", "cssrs"], mud: "avaliação em escada, triagem C-SSRS, fluxograma por nível de risco, notificação imediata (Portaria 11.211/2026) e cuidado"});
 
   // ── 9. Abstinência alcoólica
   G("abstinencia-alcool", {

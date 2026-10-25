@@ -1,11 +1,11 @@
 {
- "gerado": "2026-10-25T15:31:36.664Z",
+ "gerado": "2026-10-25T16:28:06.305Z",
  "cmed": {
   "data": "09/10/2026",
   "fonte": "cmed_pmc2026",
   "icms": "PMC com ICMS de Minas Gerais: 12% para genéricos e 18% para os demais"
  },
- "n_fontes": 640,
+ "n_fontes": 655,
  "n_itens": 365,
  "sem_url": [
   "remume",
@@ -266,7 +266,16 @@
   "sbd_trat2025",
   "alvarado1986",
   "cssrs",
-  "mckee1971"
+  "mckee1971",
+  "nt324_sarampo",
+  "ms_arbo_aps2024",
+  "pcdt_hiv2024",
+  "pcdt_pep2023",
+  "ms_tb2019",
+  "gvs3_lepto",
+  "gvs3_raiva",
+  "gvs3_pecon",
+  "gvs2_malaria"
  ],
  "nao_conferidas": [
   "aap_oma",
@@ -1329,6 +1338,7 @@
     "dip",
     "escroto-agudo",
     "in-ist",
+    "pep",
     "sifilis",
     "uretrite"
    ]
@@ -8703,6 +8713,190 @@
    "usado_em": [
     "ic-descompensada"
    ]
+  },
+  {
+   "k": "port11211",
+   "s": "Portaria GM/MS 11.211/2026 – lista de notificação compulsória",
+   "t": "Ministério da Saúde. Portaria GM/MS nº 11.211, de 13/05/2026 (DOU 14/05/2026), que altera o Anexo 1 do Anexo V da Portaria de Consolidação nº 4/2017: inclui caxumba (notificação imediata, art. 2º) e febre do oropouche; retira a covid-19 como item próprio. Tabela do anexo – imediata (até 24 h) à SMS: acidente por animal peçonhento, acidente por animal potencialmente transmissor da raiva, leptospirose, violência sexual e tentativa de suicídio; imediata à SES e à SMS: coqueluche, Zika em gestante; imediata ao MS, à SES e à SMS: sarampo, raiva humana, malária na região extra-amazônica, óbito suspeito por dengue, chikungunya ou Zika, chikungunya em área sem transmissão, febre amarela, febre maculosa; semanal: dengue, chikungunya e Zika (casos), hepatites virais, HIV/aids, tuberculose, violência doméstica (norma; cópia do DOU publicada por secretaria estadual, conferida em 25/10/2026).",
+   "f": "F",
+   "url": "https://www.in.gov.br/",
+   "ano": 2026,
+   "usado_em": [
+    "acidente-ofidico",
+    "chikungunya",
+    "coqueluche",
+    "escorpiao",
+    "hepatites-tr",
+    "hiv-diagnostico",
+    "leptospirose",
+    "malaria",
+    "pep",
+    "raiva",
+    "risco-suicida",
+    "sarampo",
+    "tb-sr",
+    "zika"
+   ]
+  },
+  {
+   "k": "gvs1_coq",
+   "s": "GVS 6ª ed. (2024) vol. 1 – coqueluche",
+   "t": "Ministério da Saúde. Guia de Vigilância em Saúde, 6ª ed. rev., 2024, vol. 1 – Coqueluche: fases catarral (1–2 semanas), paroxística (2–6 semanas, 5–10 tossidas numa expiração, guincho, vômito, cianose, apneia) e convalescença (2–6 semanas, até 3 meses); formas atípicas em vacinados há > 5 anos e adultos; caso suspeito < 6 meses = tosse ≥ 10 dias + paroxismo, guincho, vômito pós-tosse, cianose, apneia ou engasgo; ≥ 6 meses = tosse ≥ 14 dias + paroxismo, guincho ou vômito pós-tosse; ou tosse com contato de caso confirmado; cultura/PCR de nasofaringe antes ou até 3 dias do antibiótico; leucocitose com linfocitose; diferencial com B. parapertussis, Mycoplasma, Chlamydia, adenovírus (manual MS).",
+   "f": "F",
+   "url": "https://bvsms.saude.gov.br/bvs/publicacoes/guia_vigilancia_saude_6edrev_v1.pdf",
+   "ano": 2024,
+   "usado_em": [
+    "coqueluche"
+   ]
+  },
+  {
+   "k": "gvs1_sarampo",
+   "s": "GVS 6ª ed. (2024) vol. 1 – sarampo",
+   "t": "Ministério da Saúde. Guia de Vigilância em Saúde, 6ª ed. rev., 2024, vol. 1 – Sarampo: caso suspeito = febre + exantema maculopapular morbiliforme de direção cefalocaudal + tosse e/ou coriza e/ou conjuntivite, independentemente da idade e da vacinação; transmissão de 6 dias antes até 4 dias após o exantema; manchas de Koplik antes do exantema; complicações (otite, diarreia, pneumonia, laringotraqueobronquite; encefalite 1–4/1.000) mais frequentes < 5 anos, gestantes, imunossuprimidos, > 20 anos e desnutridos; febre > 3 dias após o exantema = alerta; sorologia IgM até 30 dias do exantema; sangue, swab naso/orofaríngeo e urina no 1º atendimento; diferencial com rubéola, exantema súbito, dengue, parvovírus B19, chikungunya, Zika, enteroviroses e riquetsioses (manual MS).",
+   "f": "F",
+   "url": "https://bvsms.saude.gov.br/bvs/publicacoes/guia_vigilancia_saude_6edrev_v1.pdf",
+   "ano": 2024,
+   "usado_em": [
+    "sarampo"
+   ]
+  },
+  {
+   "k": "nt324_sarampo",
+   "s": "NT Conjunta 324/2026 – sarampo",
+   "t": "Ministério da Saúde. Nota Técnica Conjunta nº 324/2026-SVSA/MS: notificação imediata (até 24 h) de todo caso suspeito, sem aguardar confirmação; precaução por aerossóis desde o 1º contato; coleta oportuna; vitamina A para crianças com suspeita; isolamento domiciliar; bloqueio vacinal oportuno; 15 casos confirmados no Brasil até a SE 28/2026 em 4 surtos (norma; cópia na base clínica).",
+   "f": "F",
+   "url": "",
+   "ano": 2026,
+   "usado_em": [
+    "sarampo"
+   ]
+  },
+  {
+   "k": "gvs2_arbo",
+   "s": "GVS 6ª ed. (2024) vol. 2 – dengue, chikungunya e Zika",
+   "t": "Ministério da Saúde. Guia de Vigilância em Saúde, 6ª ed. rev., 2024, vol. 2, cap. 7: chikungunya – caso suspeito = febre > 38,5 °C de início súbito + artralgia ou artrite intensa aguda, com residência ou visita a área de transmissão até 2 semanas antes; fase aguda de 5 a 14 dias, pós-aguda até 3 meses, crônica > 3 meses (artralgia crônica em > 50%); Zika – caso suspeito = exantema maculopapular pruriginoso + febre (≤ 38,5 °C), hiperemia conjuntival não purulenta, artralgia ou edema periarticular; descarte em gestantes, crianças, idosos e graves só com 2 sorologias não reagentes ou PRNT (manual MS).",
+   "f": "F",
+   "url": "https://bvsms.saude.gov.br/bvs/publicacoes/guia_vigilancia_saude_v2_6edrev.pdf",
+   "ano": 2024,
+   "usado_em": [
+    "chikungunya",
+    "zika"
+   ]
+  },
+  {
+   "k": "ms_arbo_aps2024",
+   "s": "MS 2024 – Guia prático de arboviroses urbanas (APS)",
+   "t": "Ministério da Saúde. Guia prático de arboviroses urbanas – Atenção Primária à Saúde, 2024 (cópia na base clínica): Quadro 13 – diferencial entre dengue, Zika, chikungunya, oropouche, febre amarela e covid-19 (febre, artralgia, edema articular, exantema – Zika 1º–2º dia, chikungunya 2º–5º, dengue 3º–6º –, conjuntivite 50–90% na Zika, dor retro-orbital); chikungunya: poliartralgia em > 90%, simétrica, pequenas e grandes articulações, com edema e tenossinovite; exantema também palmoplantar; transmissão vertical intraparto ~49%, RN de mãe virêmica internado até 7 dias; AINE e corticoide proibidos na fase aguda; IgM a partir do 6º dia (manual MS).",
+   "f": "F",
+   "url": "",
+   "ano": 2024,
+   "usado_em": [
+    "chikungunya",
+    "zika"
+   ]
+  },
+  {
+   "k": "gvs2_hiv",
+   "s": "GVS 6ª ed. (2024) vol. 2 – HIV e hepatites virais",
+   "t": "Ministério da Saúde. Guia de Vigilância em Saúde, 6ª ed. rev., 2024, vol. 2, cap. 4: HIV – janela imunológica média de 30 dias (maior em uso de PEP/PrEP); fluxograma com 2 testes (o 1º mais sensível, o 2º mais específico); não reagente com suspeita → nova amostra em 30 dias; coletar CV e CD4 antes da TARV, sem atrasá-la. Hepatites – HBsAg detectável 30–45 dias após a infecção, > 6 meses = crônica; Quadro 3 (HBsAg + anti-HBc total → anti-HBc IgM; HBsAg isolado → HBV-DNA); anti-HCV reagente indica contato prévio (8–12 semanas para positivar), confirmar com HCV-RNA (manual MS).",
+   "f": "F",
+   "url": "https://bvsms.saude.gov.br/bvs/publicacoes/guia_vigilancia_saude_v2_6edrev.pdf",
+   "ano": 2024,
+   "usado_em": [
+    "hepatites-tr",
+    "hiv-diagnostico"
+   ]
+  },
+  {
+   "k": "pcdt_hiv2024",
+   "s": "PCDT HIV em adultos 2024 – módulo 1 (tratamento)",
+   "t": "Ministério da Saúde. PCDT para Manejo da Infecção pelo HIV em Adultos – Módulo 1: Tratamento, 2024 (cópia na base clínica): TARV no mesmo dia ou em até 7 dias após o diagnóstico, mesmo antes de CD4 e carga viral; esquema preferencial tenofovir/lamivudina + dolutegravir; tenofovir contraindicado com doença renal prévia, lesão renal aguda ou TFGe < 60 mL/min (substituir por abacavir com HLA-B*5701 negativo ou zidovudina); TB-HIV: TARV em até 7 dias se CD4 ≤ 50, e em 4–6 semanas na meningite tuberculosa (norma).",
+   "f": "F",
+   "url": "",
+   "ano": 2024,
+   "usado_em": [
+    "hiv-diagnostico"
+   ]
+  },
+  {
+   "k": "pcdt_pep2023",
+   "s": "PCDT PEP 2023 (resumido)",
+   "t": "Ministério da Saúde. PCDT de Profilaxia Pós-Exposição de risco à infecção pelo HIV, IST e hepatites virais, versão resumida 2023 (cópia na base clínica): 4 perguntas (material de risco; exposição percutânea, mucosa ou pele não íntegra; até 72 h; exposto não reagente) → PEP por 28 dias com TDF/3TC + DTG; fonte com TR não reagente: PEP só se exposição de risco da fonte nos últimos 30 dias; repetir HIV 30 dias após a exposição; profilaxia de IST só na violência sexual – penicilina benzatina 2,4 milhões UI IM dose única, ceftriaxona 500 mg IM + azitromicina 1 g VO dose única, metronidazol 2 g VO dose única (adiar se contracepção de emergência ou ARV; não no 1º trimestre); hepatite B: vacinar suscetíveis; IGHAHB + vacina na violência sexual ou exposição a hepatite B aguda (norma).",
+   "f": "F",
+   "url": "",
+   "ano": 2023,
+   "usado_em": [
+    "hiv-diagnostico",
+    "pep"
+   ]
+  },
+  {
+   "k": "ms_tb2019",
+   "s": "MS – Manual de recomendações para o controle da TB (2019)",
+   "t": "Ministério da Saúde. Manual de Recomendações para o Controle da Tuberculose no Brasil, 2ª ed. atualizada, 2019 (cópia na base clínica): Quadro de busca de sintomáticos respiratórios – população geral na busca ativa do território: tosse ≥ 3 semanas; população geral que procura o serviço de saúde: tosse ≥ 2 semanas; contatos de TB pulmonar, PVHIV, privados de liberdade, pessoas em situação de rua, instituições, indígenas, profissionais de saúde e imigrantes: tosse de qualquer duração (manual MS).",
+   "f": "F",
+   "url": "",
+   "ano": 2019,
+   "usado_em": [
+    "tb-sr"
+   ]
+  },
+  {
+   "k": "gvs3_lepto",
+   "s": "GVS 6ª ed. (2024) vol. 3 – leptospirose",
+   "t": "Ministério da Saúde. Guia de Vigilância em Saúde, 6ª ed. rev., 2024, vol. 3 – Leptospirose: fase precoce (85–90%, febre, cefaleia, mialgia, sufusão conjuntival em ~30%, dor em panturrilhas) e fase tardia (~15%, síndrome de Weil – icterícia rubínica, insuficiência renal não oligúrica com hipocalemia, hemorragia; hemorragia pulmonar com letalidade > 50%); Figura 1: sinais de alerta (dispneia/tosse/taquipneia, oligúria, hemorragia incluindo escarro hemoptoico, hipotensão, alteração de consciência, vômitos frequentes, arritmia, icterícia) → hospital; sem alerta → leucograma de urgência e tratamento ambulatorial com doxiciclina 100 mg 12/12 h ou amoxicilina 500 mg 8/8 h (criança 50 mg/kg/dia) por 5–7 dias, retorno em 24–72 h; antibiótico desde a suspeita; ELISA-IgM a partir do 7º dia; diferencial com dengue, influenza, malária, riquetsioses, hepatites, hantavirose, febre amarela (manual MS).",
+   "f": "F",
+   "url": "",
+   "ano": 2024,
+   "usado_em": [
+    "leptospirose"
+   ]
+  },
+  {
+   "k": "gvs3_raiva",
+   "s": "GVS 6ª ed. (2024) vol. 3 – raiva",
+   "t": "Ministério da Saúde. Guia de Vigilância em Saúde, 6ª ed. rev., 2024, vol. 3 – Raiva: lavar com água e sabão; antisséptico (PVP-I, clorexidina) só no 1º atendimento; não suturar (se necessário, pontos isolados e soro infiltrado 1 h antes); acidente leve (superficial em tronco ou membros, exceto mãos e pés; lambedura de lesão superficial) × grave (mucosas, cabeça, mãos, pés; múltiplo, extenso ou profundo; lambedura de lesão profunda ou mucosa; mamífero silvestre); contato indireto não é acidente de risco; Quadro 2 e Figura 3 – cão/gato observável sem sinais: observar 10 dias sem profilaxia; não observável ou com sinais e animais de produção: leve → vacina 0-3-7-14, grave → vacina + soro; silvestres: vacina + soro; morcego: vacina + soro em qualquer exposição, inclusive contato indireto; SAR 40 UI/kg ou IGHAR 20 UI/kg infiltrados no dia 0 ou até 7 dias após a 1ª dose; faltoso não reinicia (manual MS).",
+   "f": "F",
+   "url": "",
+   "ano": 2024,
+   "usado_em": [
+    "raiva"
+   ]
+  },
+  {
+   "k": "gvs3_pecon",
+   "s": "GVS 6ª ed. (2024) vol. 3 – acidentes por animais peçonhentos",
+   "t": "Ministério da Saúde. Guia de Vigilância em Saúde, 6ª ed. rev., 2024, vol. 3, cap. 11 – Ofidismo: botrópico (dor, edema, equimose, bolhas, sangramentos; necrose, síndrome compartimental, IRA), laquético (+ manifestações vagais), crotálico (pouco local; fácies miastênica, ptose, turvação visual, mialgia, urina escura; IRA nas primeiras 48 h), elapídico (paralisia, risco respiratório); tempo de coagulação para diagnóstico e controle; Quadro 1 – ampolas: botrópico leve 2–4, moderado 4–8, grave 12; crotálico 5/10/20; elapídico 10; laquético 10/20; não fazer torniquete, cortar, sugar ou aplicar substâncias. Escorpionismo: Tityus serrulatus (amarelo); crianças até 9 anos (sobretudo < 7) com maior risco; leve = dor e parestesia local (sem soro); moderado e grave com soro (GVS: 2–3 ampolas no moderado) (manual MS).",
+   "f": "F",
+   "url": "",
+   "ano": 2024,
+   "usado_em": [
+    "acidente-ofidico",
+    "escorpiao"
+   ]
+  },
+  {
+   "k": "gvs2_malaria",
+   "s": "GVS 6ª ed. (2024) vol. 2 – malária",
+   "t": "Ministério da Saúde. Guia de Vigilância em Saúde, 6ª ed. rev., 2024, vol. 2 – Malária: caso suspeito = residência ou deslocamento para área com possibilidade de transmissão 8 a 30 dias antes dos sintomas + febre (± cefaleia, calafrios, sudorese, cansaço, mialgia); casos após 30 dias são possíveis; Quadro 1 – malária grave (dor abdominal intensa, icterícia, palidez intensa, diurese < 400 mL/24 h, vômitos persistentes, sangramento, dispneia, cianose, taquicardia, convulsão ou desorientação, prostração em crianças, comorbidade descompensada); notificação imediata (24 h) na região extra-amazônica; primaquina contraindicada em gestantes, puérperas até 1 mês e < 6 meses (manual MS).",
+   "f": "F",
+   "url": "",
+   "ano": 2024,
+   "usado_em": [
+    "malaria"
+   ]
+  },
+  {
+   "k": "wm_inf",
+   "s": "Wikimedia Commons – fotos de infecciosas e peçonhentos",
+   "t": "Fotos da Wikimedia Commons sob licenças livres (CC BY, CC BY-SA) ou domínio público (CDC/PHIL), redimensionadas para o app; autor e licença na legenda de cada figura (acervo de imagens).",
+   "f": "F",
+   "url": "https://commons.wikimedia.org/",
+   "ano": null,
+   "usado_em": [
+    "acidente-ofidico",
+    "sarampo"
+   ]
   }
  ],
  "itens": [
@@ -9074,7 +9268,9 @@
    "fontes": [
     "nt_raiva",
     "rename",
-    "remume"
+    "remume",
+    "gvs3_raiva",
+    "port11211"
    ]
   },
   {
@@ -9294,7 +9490,10 @@
     "ms_dengue",
     "rename",
     "remume",
-    "betim_nt_arbo2025"
+    "betim_nt_arbo2025",
+    "gvs2_arbo",
+    "ms_arbo_aps2024",
+    "port11211"
    ]
   },
   {
@@ -9490,7 +9689,9 @@
    "fontes": [
     "pcdt_escorpiao",
     "rename",
-    "remume"
+    "remume",
+    "gvs3_pecon",
+    "port11211"
    ]
   },
   {
@@ -9654,7 +9855,10 @@
     "pcdt_hiv",
     "ms_diag_hiv",
     "rename",
-    "betim_pn2024"
+    "betim_pn2024",
+    "pcdt_hiv2024",
+    "gvs2_hiv",
+    "port11211"
    ]
   },
   {
@@ -9664,12 +9868,14 @@
    "nv": 1,
    "fontes": [
     "pcdt_hep",
-    "rename"
+    "rename",
+    "gvs2_hiv",
+    "port11211"
    ]
   },
   {
    "id": "tb-sr",
-   "nome": "Tosse ≥ 3 semanas – investigação de tuberculose",
+   "nome": "Tosse ≥ 2 semanas – investigação de tuberculose",
    "modulo": "de",
    "nv": 0,
    "fontes": [
@@ -9678,7 +9884,9 @@
     "rename",
     "remume",
     "tb_doseplena",
-    "betim_tb2026"
+    "betim_tb2026",
+    "ms_tb2019",
+    "port11211"
    ]
   },
   {
@@ -9868,11 +10076,13 @@
    "id": "coqueluche",
    "nome": "Coqueluche – suspeita",
    "modulo": "de",
-   "nv": 1,
+   "nv": 0,
    "fontes": [
     "nt_coqueluche",
     "rename",
-    "remume"
+    "remume",
+    "gvs1_coq",
+    "port11211"
    ]
   },
   {
@@ -9883,7 +10093,9 @@
    "fontes": [
     "lepto",
     "rename",
-    "remume"
+    "remume",
+    "gvs3_lepto",
+    "port11211"
    ]
   },
   {
@@ -10240,7 +10452,9 @@
    "nv": 1,
    "fontes": [
     "malaria_bh",
-    "rename"
+    "rename",
+    "gvs2_malaria",
+    "port11211"
    ]
   },
   {
@@ -10252,7 +10466,10 @@
     "nt_sarampo",
     "vita_sarampo",
     "rename",
-    "sesmg_sarampo2026"
+    "sesmg_sarampo2026",
+    "gvs1_sarampo",
+    "nt324_sarampo",
+    "port11211"
    ]
   },
   {
@@ -10265,7 +10482,10 @@
     "ms_dengue",
     "rename",
     "remume",
-    "betim_nt_arbo2025"
+    "betim_nt_arbo2025",
+    "gvs2_arbo",
+    "ms_arbo_aps2024",
+    "port11211"
    ]
   },
   {
@@ -10432,11 +10652,13 @@
    "id": "pep",
    "nome": "Exposição de risco ao HIV – PEP",
    "modulo": "de",
-   "nv": 2,
+   "nv": 3,
    "fontes": [
     "pep_2024",
     "pcdt_pep",
-    "rename"
+    "rename",
+    "pcdt_pep2023",
+    "port11211"
    ]
   },
   {
@@ -10447,7 +10669,9 @@
    "fontes": [
     "ofidico",
     "gvs_tetano",
-    "rename"
+    "rename",
+    "gvs3_pecon",
+    "port11211"
    ]
   },
   {
@@ -10460,7 +10684,8 @@
     "nice_depressao",
     "port6734",
     "cab34",
-    "cssrs"
+    "cssrs",
+    "port11211"
    ]
   },
   {

@@ -1695,7 +1695,21 @@ const SC = [
    {t:"Menor: derrame pleural", p:1},{t:"Menor: FC ≥ 120 bpm", p:1}],
    cab:s => `${Math.floor(s/10)} maior(es) · ${s%10} menor(es)`,
    interp:s => { const M = Math.floor(s/10), m = s%10; return (M>=2 || (M>=1 && m>=2)) ? "Critérios preenchidos: IC clinicamente provável – confirmar com peptídeo natriurético e ecocardiograma." : "Critérios não preenchidos: IC menos provável (não exclui)."; },
-   nota:"McKee et al., 1971 (critérios citados de memória). Critério menor só conta se não for explicado por outra condição."}
+   nota:"McKee et al., 1971 (critérios citados de memória). Critério menor só conta se não for explicado por outra condição."},
+ {id:"scq", nome:"Superfície corporal queimada – adulto (regra dos nove)", sp:true, itens:[
+   {t:"Cabeça e pescoço (9%)", p:9},{t:"Membro superior direito (9%)", p:9},{t:"Membro superior esquerdo (9%)", p:9},
+   {t:"Tronco anterior (18%)", p:18},{t:"Tronco posterior (18%)", p:18},{t:"Membro inferior direito (18%)", p:18},{t:"Membro inferior esquerdo (18%)", p:18},{t:"Genitais (1%)", p:1},
+   {t:"Áreas parciais: quantas palmas da mão do paciente (com os dedos ≈ 1% cada)?", sel:opt([["Nenhuma",0],["1",1],["2",2],["3",3],["4",4],["5",5],["7",7],["10",10]])}],
+   cab:s => s + "% de SCQ",
+   interp:s => "Contar só 2º e 3º graus (o 1º grau não entra). Remoção imediata (CAB 28): espessura parcial > 20% no adulto, 3º grau > 10%, ou qualquer queimadura de face, mãos, pés, genitais, períneo ou grandes articulações, elétrica, química ou com inalação.",
+   nota:"Regra dos nove (CAB 28 vol. II, 2013, Tabela 3). Marque só as regiões inteiramente queimadas e some as áreas parciais pelas palmas."},
+ {id:"scqc", nome:"Superfície corporal queimada – criança (regra dos nove)", sp:true, itens:[
+   {t:"Cabeça e pescoço (18%)", p:18},{t:"Membro superior direito (9%)", p:9},{t:"Membro superior esquerdo (9%)", p:9},
+   {t:"Tronco anterior (18%)", p:18},{t:"Tronco posterior (18%)", p:18},{t:"Membro inferior direito (14%)", p:14},{t:"Membro inferior esquerdo (14%)", p:14},
+   {t:"Áreas parciais: quantas palmas da mão da criança (com os dedos ≈ 1% cada)?", sel:opt([["Nenhuma",0],["1",1],["2",2],["3",3],["4",4],["5",5],["7",7],["10",10]])}],
+   cab:s => s + "% de SCQ",
+   interp:s => "Contar só 2º e 3º graus. Remoção imediata (CAB 28): espessura parcial > 10% na criança ou > 5% abaixo de 2 anos, 3º grau > 2%, ou face, mãos, pés, genitais, períneo, grandes articulações, elétrica, química, inalação ou suspeita de maus-tratos.",
+   nota:"Regra dos nove pediátrica (CAB 28 vol. II, 2013, Tabela 3). Em lactentes a tabela de Lund e Browder (Tabela 4) é mais precisa: cabeça 19% até 1 ano e 17% de 1 a 4 anos."}
 
 ];
 const SC_POR_ID = {"cr-prediabetes":"findrisc","cr-aga":"ivcf","cr-inapetencia":"mnasf","cr-fragilidade":"sarcf","po-idoso-vulneravel":"ivcf","po-acamado":"braden","po-pobreza":"savassi","pu-18m":"mchat","pu-24m":"mchat","pu-dnpm":"mchat","pp-depressao":"epds","pp-1semana":"epds","pp-consulta":"epds","cr-asma":"gina","cr-dpoc":"mmrc",faringite:"centor", pac:"curb65", tvp:"wells", "dor-toracica":"marburg", sepse:"qsofa", crupe:"westley", "abstinencia-alcool":"ciwa", depressao:"phq9", "risco-suicida":"phq9", tag:"gad7", panico:"gad7", delirium:"cam"};
@@ -2052,7 +2066,7 @@ function runScInline(el){
 function runCalc(el){ const id = el.dataset.calc; try { if (id.startsWith("sc:")) runScInline(el); else if (CALCS[id]) CALCS[id].run(el); } catch(e){ saida(el, vazio("Não foi possível calcular com esses dados.")); } }
 function initCalcs(root){ root.querySelectorAll("[data-calc]").forEach(runCalc); }
 ["input","change"].forEach(t => document.addEventListener(t, ev => { const el = ev.target.closest && ev.target.closest("[data-calc]"); if (el) runCalc(el); }));
-const CALC_MENU = [["pa","Pressão arterial"],["prevent","PREVENT e risco SBC"],["lipides","LDL e estatina"],["ckd","TFG, KDIGO e KFRE"],["antropo","IMC, cintura e peso ideal"],["glic","HbA1c e NPH"],["ferro","Déficit de ferro"],["calcio","Cálcio corrigido"],["fib4","FIB-4"],["sc:cha2ds2va","CHA₂DS₂-VA"],["sc:hasbled","HAS-BLED"],["sc:rankin","Rankin modificada"],["sc:barthel","Índice de Barthel"],["sc:gds15","GDS-15"],["sc:fagerstrom","Fagerström"],["sc:mmrc","mMRC"],["sc:gina","Controle da asma (GINA)"],["sc:childpugh","Child-Pugh"],["sc:phq9","PHQ-9"],["sc:wellstep","Wells TEP"],["sc:perc","PERC"],["sc:twist","TWIST"],["sc:alvarado","Alvarado"],["sc:q4at","4AT"],["sc:cssrs","C-SSRS (triagem)"],["sc:semaforo","Semáforo NICE (febre)"],["sc:framingham","Framingham (IC)"]];
+const CALC_MENU = [["pa","Pressão arterial"],["prevent","PREVENT e risco SBC"],["lipides","LDL e estatina"],["ckd","TFG, KDIGO e KFRE"],["antropo","IMC, cintura e peso ideal"],["glic","HbA1c e NPH"],["ferro","Déficit de ferro"],["calcio","Cálcio corrigido"],["fib4","FIB-4"],["sc:cha2ds2va","CHA₂DS₂-VA"],["sc:hasbled","HAS-BLED"],["sc:rankin","Rankin modificada"],["sc:barthel","Índice de Barthel"],["sc:gds15","GDS-15"],["sc:fagerstrom","Fagerström"],["sc:mmrc","mMRC"],["sc:gina","Controle da asma (GINA)"],["sc:childpugh","Child-Pugh"],["sc:phq9","PHQ-9"],["sc:wellstep","Wells TEP"],["sc:perc","PERC"],["sc:twist","TWIST"],["sc:alvarado","Alvarado"],["sc:q4at","4AT"],["sc:cssrs","C-SSRS (triagem)"],["sc:semaforo","Semáforo NICE (febre)"],["sc:framingham","Framingham (IC)"],["sc:scq","Queimadura: SCQ adulto"],["sc:scqc","Queimadura: SCQ criança"]];
 function openCalc(id){
   const s = $("#calc-sel"); if (id) s.value = id;
   $("#calc-box").innerHTML = calcHtml(s.value); initCalcs($("#calc-box")); $("#dlg-calc").showModal();

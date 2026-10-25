@@ -1,11 +1,11 @@
 {
- "gerado": "2026-10-25T16:39:51.880Z",
+ "gerado": "2026-10-25T16:50:03.174Z",
  "cmed": {
   "data": "09/10/2026",
   "fonte": "cmed_pmc2026",
   "icms": "PMC com ICMS de Minas Gerais: 12% para genéricos e 18% para os demais"
  },
- "n_fontes": 660,
+ "n_fontes": 663,
  "n_itens": 365,
  "sem_url": [
   "remume",
@@ -1231,6 +1231,7 @@
    "ano": 2026,
    "usado_em": [
     "bronquite",
+    "celulite",
     "conj-alergica",
     "conj-bact",
     "conj-viral",
@@ -1239,11 +1240,15 @@
     "escabiose",
     "fadiga",
     "hordeolo",
+    "impetigo",
     "maopeboca",
     "olho-vermelho-alarme",
     "parasitoses",
+    "queimadura",
     "resfriado",
-    "tensional"
+    "tensional",
+    "urticaria",
+    "zoster"
    ]
   },
   {
@@ -8408,6 +8413,7 @@
    "url": "https://www.ufrgs.br/telessauders/regulasus/#regulasus-protocolos",
    "ano": 2023,
    "usado_em": [
+    "dermatite-contato",
     "pele-alopecia",
     "pele-atlas",
     "pele-cancer",
@@ -8417,7 +8423,9 @@
     "pele-onicomicose",
     "pele-rosacea",
     "pele-urticaria-cronica",
-    "pele-vitiligo"
+    "pele-vitiligo",
+    "tinea",
+    "urticaria"
    ]
   },
   {
@@ -8955,6 +8963,40 @@
    "usado_em": [
     "pediculose"
    ]
+  },
+  {
+   "k": "gvs1_tetano",
+   "s": "GVS 6ª ed. (2024) vol. 1 – tétano acidental, Quadro 4",
+   "t": "Ministério da Saúde. Guia de Vigilância em Saúde, 6ª ed. rev., 2024, vol. 1 – Tétano acidental, Quadro 4 (esquema de condutas profiláticas conforme o ferimento e a situação vacinal): risco mínimo = superficial, limpo, sem corpo estranho ou tecido desvitalizado; alto risco = profundo ou superficial sujo, com corpo estranho ou tecido desvitalizado, queimaduras, feridas puntiformes ou por arma branca e de fogo, mordeduras, politraumatismo e fraturas expostas. Incerta ou < 3 doses: vacinar (e SAT/IGHAT no alto risco); ≥ 3 doses com última < 5 anos: nada; 5–10 anos: reforço só no alto risco; ≥ 10 anos: reforço em ambos; SAT/IGHAT adicional no imunodeprimido, desnutrido grave ou idoso, ou se os cuidados posteriores com a ferida não forem adequados; vacina e soro em locais diferentes (norma).",
+   "f": "F",
+   "url": "https://bvsms.saude.gov.br/bvs/publicacoes/guia_vigilancia_saude_6edrev_v1.pdf",
+   "ano": 2024,
+   "usado_em": [
+    "ferida",
+    "queimadura"
+   ]
+  },
+  {
+   "k": "gvs1_zoster",
+   "s": "GVS 6ª ed. (2024) vol. 1 – herpes-zóster",
+   "t": "Ministério da Saúde. Guia de Vigilância em Saúde, 6ª ed. rev., 2024, vol. 1 – Herpes-zóster: dor neurálgica, parestesia e ardor antecedendo vesículas sobre base eritematosa, unilaterais, em dermátomo; cura em 2–4 semanas; torácica 53%, cervical 20%, trigêmeo 15%, lombossacra 11%; lesões na ponta e asa do nariz sugerem ramo oftálmico; VII par = síndrome de Ramsay Hunt; disseminado ou recidivante: sorologia para HIV e pesquisa de neoplasia; antiviral em até 72 h reduz a neuralgia pós-herpética; corticoide na fase aguda reduz a neurite aguda, sem alterar a NPH; NPH: capsaicina, lidocaína 5%, amitriptilina 25–75 mg, carbamazepina 100–400 mg; zóster disseminado: hospitalizar com precaução de aerossóis e contato; não é doença de notificação compulsória (norma).",
+   "f": "F",
+   "url": "https://bvsms.saude.gov.br/bvs/publicacoes/guia_vigilancia_saude_6edrev_v1.pdf",
+   "ano": 2024,
+   "usado_em": [
+    "zoster"
+   ]
+  },
+  {
+   "k": "cff_zoster2026",
+   "s": "MS/CONITEC – vacina recombinante contra zóster não incorporada (jan/2026)",
+   "t": "Conselho Federal de Farmácia. Ministério da Saúde mantém vacina contra herpes-zóster fora do SUS, 15/01/2026: portaria publicada no DOU em janeiro de 2026 decide não incorporar a vacina recombinante adjuvada (avaliada para ≥ 80 anos e imunocomprometidos ≥ 18 anos) por custo-efetividade desfavorável e impacto orçamentário (cerca de R$ 1,2 bilhão/ano); prevê reavaliação (notícia; portaria não aberta).",
+   "f": "F",
+   "url": "https://site.cff.org.br/noticia/Noticias-gerais/15/01/2026/ministerio-da-saude-mantem-vacina-contra-herpes-zoster-fora-do-sus",
+   "ano": 2026,
+   "usado_em": [
+    "zoster"
+   ]
   }
  ],
  "itens": [
@@ -9437,7 +9479,10 @@
    "fontes": [
     "zoster_ecr",
     "rename",
-    "remume"
+    "remume",
+    "gvs1_zoster",
+    "cab28",
+    "cff_zoster2026"
    ]
   },
   {
@@ -9448,7 +9493,8 @@
    "fontes": [
     "idsa_pele",
     "rename",
-    "remume"
+    "remume",
+    "cab28"
    ]
   },
   {
@@ -9459,7 +9505,8 @@
    "fontes": [
     "cochrane_tinea",
     "rename",
-    "remume"
+    "remume",
+    "tsrs_derm2023"
    ]
   },
   {
@@ -9470,17 +9517,20 @@
    "fontes": [
     "eaaci_urt",
     "rename",
-    "remume"
+    "remume",
+    "cab28",
+    "tsrs_derm2023"
    ]
   },
   {
    "id": "dermatite-contato",
    "nome": "Dermatite de contato",
    "modulo": "de",
-   "nv": 1,
+   "nv": 2,
    "fontes": [
     "rename",
-    "remume"
+    "remume",
+    "tsrs_derm2023"
    ]
   },
   {
@@ -9764,7 +9814,8 @@
    "fontes": [
     "gvs_tetano",
     "rename",
-    "remume"
+    "remume",
+    "gvs1_tetano"
    ]
   },
   {
@@ -9775,7 +9826,9 @@
    "fontes": [
     "queimadura",
     "rename",
-    "remume"
+    "remume",
+    "cab28",
+    "gvs1_tetano"
    ]
   },
   {
@@ -9793,7 +9846,7 @@
    "id": "paroniquia",
    "nome": "Paroníquia aguda",
    "modulo": "de",
-   "nv": 1,
+   "nv": 2,
    "fontes": [
     "idsa_pele",
     "rename",

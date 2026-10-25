@@ -1,11 +1,11 @@
 {
- "gerado": "2026-10-22T20:31:54.389Z",
+ "gerado": "2026-10-25T15:31:36.664Z",
  "cmed": {
   "data": "09/10/2026",
   "fonte": "cmed_pmc2026",
   "icms": "PMC com ICMS de Minas Gerais: 12% para genéricos e 18% para os demais"
  },
- "n_fontes": 628,
+ "n_fontes": 640,
  "n_itens": 365,
  "sem_url": [
   "remume",
@@ -41,7 +41,6 @@
   "entorse",
   "acp_insonia",
   "stoffel",
-  "nice_febre",
   "aap_itu",
   "aap_bronq",
   "cochrane_ondans",
@@ -109,7 +108,6 @@
   "espghan_constip",
   "bashh_balano",
   "suicidio",
-  "asam_abst",
   "aad_acne",
   "herpes_labial",
   "cochrane_unha",
@@ -263,7 +261,12 @@
   "betim_fluxo_arbo",
   "betim_rx_dengue2024",
   "betim_arbo_apres2024",
-  "betim_nt14_2026"
+  "betim_nt14_2026",
+  "sbd_shh2025",
+  "sbd_trat2025",
+  "alvarado1986",
+  "cssrs",
+  "mckee1971"
  ],
  "nao_conferidas": [
   "aap_oma",
@@ -278,7 +281,6 @@
   "aaohns_oe",
   "cochrane_conj",
   "idsa_pele",
-  "cab28",
   "ahs_migranea",
   "acg_dispepsia",
   "hp_consenso",
@@ -298,7 +300,6 @@
   "entorse",
   "acp_insonia",
   "stoffel",
-  "nice_febre",
   "aap_itu",
   "aap_bronq",
   "cochrane_ondans",
@@ -370,7 +371,6 @@
   "espghan_constip",
   "bashh_balano",
   "suicidio",
-  "asam_abst",
   "aad_acne",
   "herpes_labial",
   "cochrane_unha",
@@ -493,7 +493,10 @@
   "roma4_lactente2016",
   "fda_denticao2018",
   "guia_telas2025",
-  "periop_multi2024"
+  "periop_multi2024",
+  "alvarado1986",
+  "cssrs",
+  "mckee1971"
  ],
  "fontes": [
   {
@@ -1210,17 +1213,18 @@
   },
   {
    "k": "cab28",
-   "s": "",
-   "t": "Ministério da Saúde. Cadernos de Atenção Básica nº 28, vol. II – Acolhimento à demanda espontânea: queixas mais comuns na Atenção Básica, 2012 (manual MS).",
-   "f": "C",
+   "s": "CAB 28 vol. II – Queixas comuns (MS)",
+   "t": "Ministério da Saúde. Cadernos de Atenção Básica nº 28, vol. II – Acolhimento à demanda espontânea: queixas mais comuns na Atenção Básica (2013; cópia na base clínica, conferida em 25/10/2026). Dor abdominal: Quadro 30 – classificação do abdome agudo (inflamatório, perfurante, obstrutivo, hemorrágico, vascular); Quadro 31 – causas abdominais e extra-abdominais; Quadro 32 – fatores de alto risco (> 60 anos, imunossupressão, álcool, doença cardiovascular, cirurgia prévia, gravidez recente; dor súbita e intensa, dor seguida de vômito, dor constante < 2 dias; choque, defesa, rigidez, Cullen/Grey-Turner, Blumberg, Rovsing, psoas, obturador, Murphy); Quadro 33 – causas por localização; na suspeita de abdome cirúrgico, não oferecer água ou comida e encaminhar ao pronto-socorro com cirurgia (manual MS).",
+   "f": "F",
    "url": "",
-   "ano": 2012,
+   "ano": 2026,
    "usado_em": [
     "bronquite",
     "conj-alergica",
     "conj-bact",
     "conj-viral",
     "diarreia",
+    "dor-abdominal",
     "escabiose",
     "fadiga",
     "hordeolo",
@@ -1323,6 +1327,7 @@
     "cervicite",
     "condiloma",
     "dip",
+    "escroto-agudo",
     "in-ist",
     "sifilis",
     "uretrite"
@@ -1562,11 +1567,11 @@
   },
   {
    "k": "nice_febre",
-   "s": "",
-   "t": "NICE NG143. Fever in under 5s: assessment and initial management, 2019 (atualizada 2021) (diretriz).",
-   "f": "C",
-   "url": "",
-   "ano": 2021,
+   "s": "NICE NG143 – febre em < 5 anos",
+   "t": "NICE NG143. Fever in under 5s: assessment and initial management (2019; atualizada em 26/11/2021, ajustes menores em 2024): semáforo (Tabela 2); < 3 meses com ≥ 38 °C = vermelho; 3–6 meses com ≥ 39 °C = pelo menos âmbar; > 6 meses: temperatura isolada não define gravidade; temperatura axilar com termômetro eletrônico em < 4 semanas; profissional não pediatra: vermelho → pediatra com urgência; âmbar sem diagnóstico → rede de segurança ou encaminhar; verde → casa com orientação; não dar antibiótico oral para febre sem foco; antitérmico só se a criança estiver desconfortável, não para prevenir convulsão, sem dar os dois juntos; febre ≥ 5 dias: avaliar Kawasaki (diretriz; conferida em 25/10/2026).",
+   "f": "F",
+   "url": "https://www.nice.org.uk/guidance/ng143",
+   "ano": 2026,
    "usado_em": [
     "febre-crianca",
     "febre-menor-3m"
@@ -2570,11 +2575,11 @@
   },
   {
    "k": "asam_abst",
-   "s": "",
-   "t": "ASAM Clinical Practice Guideline on Alcohol Withdrawal Management, 2020 (diretriz).",
-   "f": "C",
-   "url": "",
-   "ano": 2020,
+   "s": "ASAM 2020 – abstinência alcoólica",
+   "t": "ASAM Clinical Practice Guideline on Alcohol Withdrawal Management, 2020: CIWA-Ar leve < 10, moderada 10–18, grave ≥ 19; convulsão ou delirium = complicada; fatores de risco de abstinência complicada (delirium ou convulsão prévios, muitas abstinências, comorbidade grave/TCE, > 65 anos, uso pesado prolongado, convulsão no episódio atual, hiperatividade autonômica marcada, dependência de GABAérgicos); benzodiazepínico de 1ª linha (carbamazepina ou gabapentina como alternativas); ambulatorial com contato diário por até 5 dias; dose por sintomas só se o paciente ou cuidador monitorar com confiança, senão dose fixa com resgate; tiamina 100 mg VO/dia por 3–5 dias no ambulatorial (IM/IV se desnutrição ou complicação) (diretriz; conferida em 25/10/2026).",
+   "f": "F",
+   "url": "https://www.asam.org/quality-care/clinical-guidelines/alcohol-withdrawal-management-guideline",
+   "ano": 2026,
    "usado_em": [
     "abstinencia-alcool"
    ]
@@ -3320,7 +3325,8 @@
    "usado_em": [
     "cr-fa",
     "cr-ic",
-    "cr-icfep"
+    "cr-icfep",
+    "ic-descompensada"
    ]
   },
   {
@@ -5965,7 +5971,8 @@
    "ano": 2025,
    "usado_em": [
     "cr-dm2",
-    "cr-prediabetes"
+    "cr-prediabetes",
+    "hiperglicemia"
    ]
   },
   {
@@ -6928,11 +6935,13 @@
    "url": "",
    "ano": 2013,
    "usado_em": [
+    "abstinencia-alcool",
     "cr-ansiedade",
     "cr-bipolar",
     "cr-bzd",
     "cr-depressao",
-    "cr-esquizofrenia"
+    "cr-esquizofrenia",
+    "risco-suicida"
    ]
   },
   {
@@ -7067,7 +7076,8 @@
    "ano": 2026,
    "usado_em": [
     "cr-ic",
-    "cr-icfep"
+    "cr-icfep",
+    "ic-descompensada"
    ]
   },
   {
@@ -7116,7 +7126,8 @@
     "in-chagas",
     "in-esporotricose",
     "in-lt",
-    "in-lv"
+    "in-lv",
+    "risco-suicida"
    ]
   },
   {
@@ -8558,6 +8569,140 @@
     "cr-dm2-insulina",
     "cr-glargina"
    ]
+  },
+  {
+   "k": "nice_ng158",
+   "s": "NICE NG158 – TEV: diagnóstico e tratamento",
+   "t": "NICE. Venous thromboembolic diseases: diagnosis, management and thrombophilia testing (NG158, 2020; emendas até 2023). Wells TVP em 2 níveis (≥ 2 provável): doppler proximal com resultado em até 4 h; se não for possível, D-dímero + anticoagulação interina e doppler em até 24 h; doppler negativo com D-dímero positivo → repetir em 6–8 dias. TVP improvável: D-dímero em até 4 h. Wells TEP em 2 níveis (> 4 provável); PERC quando a suspeita é baixa; D-dímero ajustado à idade > 50 anos. Tratamento: apixabana ou rivaroxabana de 1ª linha; HBPM ≥ 5 dias seguida de dabigatrana/edoxabana ou de AVK até INR ≥ 2,0 em 2 leituras; ClCr < 15: HBPM/HNF ± AVK; câncer ativo: DOAC ou HBPM; duração mínima de 3 meses (3–6 no câncer); provocada: parar em 3 meses se o fator resolveu; não provocada: considerar estender, pesando sangramento (HAS-BLED) (diretriz; conferida em 25/10/2026).",
+   "f": "F",
+   "url": "https://www.nice.org.uk/guidance/NG158/chapter/Recommendations",
+   "ano": 2026,
+   "usado_em": [
+    "tvp"
+   ]
+  },
+  {
+   "k": "nice_ng224",
+   "s": "NICE NG224 – ITU em < 16 anos (2022)",
+   "t": "NICE. Urinary tract infection in under 16s: diagnosis and management (NG224, jul/2022; última alteração nov/2025). Colher urina antes do antibiótico (jato limpo; coletor tipo almofada se não der; sondagem ou punção suprapúbica se necessário); < 3 meses: encaminhar ao pediatra/especialista para microscopia, cultura e antibiótico parenteral; 3 meses a < 3 anos: fita com LE e nitrito negativos → sem antibiótico; qualquer positivo → cultura e antibiótico; ≥ 3 anos: tabela de fita; ITU alta = bacteriúria + febre ≥ 38 °C (ou < 38 °C com dor lombar); PCR não diferencia; ITU atípica (grave, jato fraco, massa, creatinina elevada, septicemia, sem resposta em 48 h, não E. coli) e recorrente (≥ 2 altas; 1 alta + ≥ 1 baixa; ≥ 3 baixas); imagem por idade (< 6 meses: USG em 6 semanas se boa resposta; 6 meses–3 anos e ≥ 3 anos: sem imagem de rotina se boa resposta); sem profilaxia de rotina após a 1ª ITU; bacteriúria assintomática não se trata (diretriz; conferida em 25/10/2026).",
+   "f": "F",
+   "url": "https://www.nice.org.uk/guidance/ng224",
+   "ano": 2026,
+   "usado_em": [
+    "febre-crianca",
+    "itu-crianca"
+   ]
+  },
+  {
+   "k": "ada_crises2024",
+   "s": "Consenso ADA/EASD 2024 – crises hiperglicêmicas",
+   "t": "Umpierrez GE et al. Hyperglycemic crises in adults with diabetes: a consensus report. Diabetes Care 2024 (ADA, EASD, JBDS, AACE, DTS), conferido pela revisão de Rodriguez Alvarez P et al., Cleve Clin J Med 2025;92(3):152-8, doi 10.3949/ccjm.92a.24089: CAD = glicemia ≥ 200 mg/dL ou DM conhecido + β-hidroxibutirato ≥ 3,0 mmol/L (ou cetonúria ≥ 2+) + pH < 7,3 e/ou bicarbonato < 18; EHH = glicemia ≥ 600 + osmolalidade efetiva > 300 (ou total > 320) + β-OHB < 3,0 + pH ≥ 7,3 e bicarbonato ≥ 15; DM conhecido como critério permite incluir a CAD euglicêmica (iSGLT2); gravidade leve/moderada/grave por β-OHB, pH, bicarbonato e consciência (consenso; conferido em revisão secundária).",
+   "f": "F",
+   "url": "https://www.ccjm.org/content/92/3/152",
+   "ano": 2025,
+   "usado_em": [
+    "hiperglicemia"
+   ]
+  },
+  {
+   "k": "sbd_shh2025",
+   "s": "SBD 2025 – síndrome hiperglicêmica hiperosmolar",
+   "t": "Santomauro Jr AC et al. Manejo da síndrome hiperglicêmica hiperosmolar não cetótica (SHHNC). Diretriz da SBD 2025, doi 10.29327/5660187.2025-5 (cópia na base clínica). Quadro 1: glicemia > 600 mg/dL, osmolaridade plasmática efetiva > 320 mOsmol/L, cetonemia < 3 mmol/L, pH > 7,30 e bicarbonato > 15 mmol/L; resolução: osmolalidade < 315 e glicemia < 250–300 (diretriz de sociedade).",
+   "f": "F",
+   "url": "",
+   "ano": 2025,
+   "usado_em": [
+    "hiperglicemia"
+   ]
+  },
+  {
+   "k": "sbd_trat2025",
+   "s": "SBD 2025 – manejo da terapia antidiabética no DM2",
+   "t": "Sociedade Brasileira de Diabetes. Manejo da terapia antidiabética no DM2, Diretriz 2025 (cópia na base clínica): R16 – DM2 sem tratamento com sinais de insulinopenia (poliúria, polidipsia, perda de peso): terapia baseada em insulina, independentemente do risco (classe I, nível C); R17 – após a fase sintomática, terapia dupla ou tripla pode substituir a insulina (IIb, C); insulina preferencial em sintomáticos, situações agudas e internação (diretriz de sociedade).",
+   "f": "F",
+   "url": "",
+   "ano": 2025,
+   "usado_em": [
+    "hiperglicemia"
+   ]
+  },
+  {
+   "k": "tsrs_uro2023",
+   "s": "TelessaúdeRS – Urologia adulto (2023)",
+   "t": "TelessaúdeRS-UFRGS. Protocolos de encaminhamento – Urologia adulto, versão digital 2023 (cópia na base clínica): STUI com retenção urinária aguda → urgência/emergência; retenção crônica = resíduo pós-miccional > 300 mL em 2 ocasiões e por ≥ 6 meses; tratamento otimizado para HPB = alfabloqueador ≥ 30 dias (doxazosina 2–8 mg/dia) + finasterida 5 mg/dia ≥ 6 meses se próstata > 40 g ou PSA > 1,4 ng/mL; encaminhar à urologia retenção aguda na vigência de tratamento otimizado (após a emergência), retenção crônica, ITU recorrente, litíase vesical, doença neurológica ou cirurgia/radioterapia pélvica; suspeita de torção testicular → urgência (referência técnica de outro estado; em Betim a teleconsultoria é a do Telessaúde UFMG).",
+   "f": "F",
+   "url": "https://www.ufrgs.br/telessauders/regulacao/protocolos-de-encaminhamento/",
+   "ano": 2023,
+   "usado_em": [
+    "escroto-agudo",
+    "retencao-urinaria"
+   ]
+  },
+  {
+   "k": "twist2013",
+   "s": "Barbosa 2013 – escore TWIST (J Urol)",
+   "t": "Barbosa JA, Tiseo BC, Barayan GA, et al. Development and initial validation of a scoring system to diagnose testicular torsion in children. J Urol 2013;189(5):1859-64, doi 10.1016/j.juro.2012.10.056: edema testicular (2), testículo endurecido (2), reflexo cremastérico ausente (1), náuseas/vômitos (1), testículo alto (1); cortes de baixo e alto risco em 2 e 5 pontos, com VPN e VPP de 100% na coorte prospectiva de 338 pacientes (51 torções); validação prospectiva ainda necessária (estudo de derivação; conferido no PubMed).",
+   "f": "F",
+   "url": "https://doi.org/10.1016/j.juro.2012.10.056",
+   "ano": 2013,
+   "usado_em": [
+    "escroto-agudo"
+   ]
+  },
+  {
+   "k": "cdc_epid2021",
+   "s": "CDC 2021 – epididimite",
+   "t": "CDC. STI Treatment Guidelines 2021 – Epididymitis: risco de clamídia/gonococo → ceftriaxona 500 mg IM dose única + doxiciclina 100 mg VO 12/12 h por 10 dias; prática anal insertiva (IST + enterobactérias) → ceftriaxona 500 mg IM + levofloxacino 500 mg/dia por 10 dias; só enterobactérias → levofloxacino 500 mg/dia por 10 dias; ceftriaxona 1 g se ≥ 150 kg (diretriz; conferida em 25/10/2026).",
+   "f": "F",
+   "url": "https://www.cdc.gov/stiapp/epididymitis.html",
+   "ano": 2026,
+   "usado_em": [
+    "escroto-agudo"
+   ]
+  },
+  {
+   "k": "bgs_4at",
+   "s": "NICE CG103 (atualização 2023) – 4AT",
+   "t": "NICE CG103 – Delirium: prevention, diagnosis and management in hospital and long-term care; atualização de jan/2023 com novas recomendações de avaliação e diagnóstico (o 4AT passou a ser a ferramenta recomendada fora da UTI, conforme material da British Geriatrics Society); emenda de abr/2022 alertando para riscos do haloperidol no delirium em idosos (diretriz; conferida pela página de atualização da NICE e pelo pôster da BGS em 25/10/2026; itens do 4AT citados de memória).",
+   "f": "F",
+   "url": "https://www.nice.org.uk/guidance/cg103",
+   "ano": 2026,
+   "usado_em": [
+    "delirium"
+   ]
+  },
+  {
+   "k": "alvarado1986",
+   "s": "Alvarado 1986 – escore de apendicite",
+   "t": "Alvarado A. A practical score for the early diagnosis of acute appendicitis. Ann Emerg Med 1986;15(5):557-64 (estudo de derivação; itens e cortes citados de memória).",
+   "f": "C",
+   "url": "",
+   "ano": 1986,
+   "usado_em": [
+    "dor-abdominal"
+   ]
+  },
+  {
+   "k": "cssrs",
+   "s": "C-SSRS – triagem (Columbia)",
+   "t": "Posner K et al. Columbia–Suicide Severity Rating Scale (C-SSRS), versão de triagem; Am J Psychiatry 2011;168(12):1266-77 (instrumento; itens citados de memória, não conferidos nesta sessão).",
+   "f": "C",
+   "url": "",
+   "ano": 2011,
+   "usado_em": [
+    "risco-suicida"
+   ]
+  },
+  {
+   "k": "mckee1971",
+   "s": "Critérios de Framingham (McKee 1971)",
+   "t": "McKee PA, Castelli WP, McNamara PM, Kannel WB. The natural history of congestive heart failure: the Framingham study. N Engl J Med 1971;285:1441-6 (critérios maiores e menores; citados de memória).",
+   "f": "C",
+   "url": "",
+   "ano": 1971,
+   "usado_em": [
+    "ic-descompensada"
+   ]
   }
  ],
  "itens": [
@@ -9194,7 +9339,8 @@
     "nice_febre",
     "aap_itu",
     "rename",
-    "remume"
+    "remume",
+    "nice_ng224"
    ]
   },
   {
@@ -9411,7 +9557,11 @@
     "remume",
     "sbd_dispensacao",
     "fp_elenco2026",
-    "betim_nt14_2026"
+    "betim_nt14_2026",
+    "ada_crises2024",
+    "sbd_shh2025",
+    "sbd_trat2025",
+    "sbd_diag2025"
    ]
   },
   {
@@ -9438,7 +9588,9 @@
    "fontes": [
     "cochrane_dorabd",
     "rename",
-    "remume"
+    "remume",
+    "cab28",
+    "alvarado1986"
    ]
   },
   {
@@ -9971,11 +10123,12 @@
    "id": "retencao-urinaria",
    "nome": "Retenção urinária aguda",
    "modulo": "de",
-   "nv": 1,
+   "nv": 2,
    "fontes": [
     "aua_hpb",
     "rename",
-    "remume"
+    "remume",
+    "tsrs_uro2023"
    ]
   },
   {
@@ -10164,11 +10317,13 @@
    "id": "ic-descompensada",
    "nome": "Insuficiência cardíaca – piora leve (sem congestão grave)",
    "modulo": "de",
-   "nv": 2,
+   "nv": 3,
    "fontes": [
     "esc_ic",
     "rename",
-    "remume"
+    "remume",
+    "sbc_ic2026",
+    "mckee1971"
    ]
   },
   {
@@ -10233,7 +10388,8 @@
    "fontes": [
     "aap_itu",
     "rename",
-    "remume"
+    "remume",
+    "nice_ng224"
    ]
   },
   {
@@ -10266,7 +10422,10 @@
    "fontes": [
     "cdc_ist",
     "rename",
-    "remume"
+    "remume",
+    "twist2013",
+    "cdc_epid2021",
+    "tsrs_uro2023"
    ]
   },
   {
@@ -10298,7 +10457,10 @@
    "nv": 1,
    "fontes": [
     "suicidio",
-    "nice_depressao"
+    "nice_depressao",
+    "port6734",
+    "cab34",
+    "cssrs"
    ]
   },
   {
@@ -10309,7 +10471,8 @@
    "fontes": [
     "asam_abst",
     "rename",
-    "remume"
+    "remume",
+    "cab34"
    ]
   },
   {
@@ -10504,11 +10667,12 @@
    "id": "tvp",
    "nome": "Edema de perna – suspeita de TVP",
    "modulo": "de",
-   "nv": 2,
+   "nv": 4,
    "fontes": [
     "chest_tev",
     "rename",
-    "remume"
+    "remume",
+    "nice_ng158"
    ]
   },
   {
@@ -10528,7 +10692,7 @@
    "id": "febre-menor-3m",
    "nome": "Febre no lactente < 3 meses",
    "modulo": "de",
-   "nv": 1,
+   "nv": 3,
    "fontes": [
     "aap_febre_lactente",
     "nice_febre"
@@ -10553,7 +10717,8 @@
    "fontes": [
     "nice_delirium",
     "rename",
-    "remume"
+    "remume",
+    "bgs_4at"
    ]
   },
   {

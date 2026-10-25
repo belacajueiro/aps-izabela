@@ -1491,7 +1491,7 @@ const SC = [
    interp:s => s<=2 ? "Leve: dexametasona dose única e alta com orientações." : s<=5 ? "Moderado: dexametasona, observação; considerar adrenalina nebulizada/encaminhar." : s<=11 ? "Grave: urgência (adrenalina nebulizada, O₂)." : "Falência respiratória iminente: SAMU."},
  {id:"ciwa", nome:"CIWA-Ar (abstinência alcoólica)", itens:[
    {t:"Náuseas e vômitos (0–7)", sel:opt([0,1,2,3,4,5,6,7].map(n=>[String(n),n]))},{t:"Tremor (0–7)", sel:opt([0,1,2,3,4,5,6,7].map(n=>[String(n),n]))},{t:"Sudorese paroxística (0–7)", sel:opt([0,1,2,3,4,5,6,7].map(n=>[String(n),n]))},{t:"Ansiedade (0–7)", sel:opt([0,1,2,3,4,5,6,7].map(n=>[String(n),n]))},{t:"Agitação (0–7)", sel:opt([0,1,2,3,4,5,6,7].map(n=>[String(n),n]))},{t:"Distúrbios táteis (0–7)", sel:opt([0,1,2,3,4,5,6,7].map(n=>[String(n),n]))},{t:"Distúrbios auditivos (0–7)", sel:opt([0,1,2,3,4,5,6,7].map(n=>[String(n),n]))},{t:"Distúrbios visuais (0–7)", sel:opt([0,1,2,3,4,5,6,7].map(n=>[String(n),n]))},{t:"Cefaleia/peso na cabeça (0–7)", sel:opt([0,1,2,3,4,5,6,7].map(n=>[String(n),n]))},{t:"Orientação (0–4)", sel:opt([0,1,2,3,4].map(n=>[String(n),n]))}],
-   interp:s => s<10 ? "Abstinência leve (< 10): manejo ambulatorial possível se sem outros fatores de risco." : s<=15 ? "Moderada (10–15): benzodiazepínico e reavaliação próxima; considerar observação." : "Grave (> 15): tratamento hospitalar."},
+   interp:s => s<10 ? "Leve (< 10): manejo ambulatorial possível se não houver fator de risco de abstinência complicada, com acompanhante e contato diário com a equipe por até 5 dias (ASAM 2020)." : s<=18 ? "Moderada (10–18): benzodiazepínico; ambulatorial só com equipe experiente e monitoramento diário – em geral, encaminhar à urgência." : "Grave (≥ 19): tratamento hospitalar.", nota:"Cortes da ASAM 2020 (leve < 10, moderada 10–18, grave ≥ 19; convulsão ou delirium = complicada, em qualquer pontuação)."},
  {id:"phq9", nome:"PHQ-9 (depressão)", itens:["Pouco interesse ou prazer em fazer as coisas","Sentir-se para baixo, deprimido(a) ou sem perspectiva","Dificuldade para dormir ou dormir demais","Cansaço ou pouca energia","Falta ou excesso de apetite","Sentir-se mal consigo mesmo(a), um fracasso","Dificuldade de concentração","Lentidão ou agitação perceptível por outros","Pensamentos de que seria melhor estar morto(a) ou de se ferir"].map(t=>({t, sel:opt([["Nenhuma vez",0],["Vários dias",1],["Mais da metade dos dias",2],["Quase todos os dias",3]])})),
    interp:(s,v) => (v[8]>0 ? "ATENÇÃO: item 9 positivo – avaliar risco de suicídio hoje (modelo próprio). " : "") + (s<5 ? "Mínimo." : s<10 ? "Leve (5–9)." : s<15 ? "Moderado (10–14)." : s<20 ? "Moderadamente grave (15–19)." : "Grave (≥ 20)."), nota:"Nas últimas 2 semanas."},
  {id:"gad7", nome:"GAD-7 (ansiedade)", itens:["Sentir-se nervoso(a), ansioso(a) ou muito tenso(a)","Não conseguir parar ou controlar as preocupações","Preocupar-se demais com diversas coisas","Dificuldade para relaxar","Tão inquieto(a) que é difícil ficar parado(a)","Ficar facilmente aborrecido(a) ou irritado(a)","Sentir medo como se algo horrível fosse acontecer"].map(t=>({t, sel:opt([["Nenhuma vez",0],["Vários dias",1],["Mais da metade dos dias",2],["Quase todos os dias",3]])})),
@@ -1628,6 +1628,74 @@ const SC = [
    {t:"PSAP > 35 mmHg no ecocardiograma", p:1},{t:"Idade > 60 anos", p:1},{t:"E/e' > 9 no ecocardiograma", p:1}],
    interp:s => s>=6 ? "6–9: probabilidade alta – ICFEP confirmada; buscar etiologias específicas (SBC 2026, Figura 6.4)." : s>=2 ? "2–5: probabilidade intermediária – teste de estresse diastólico (eco de esforço ou invasivo) em centro de referência: discutir com a cardiologia." : "0–1: probabilidade baixa – ICFEP excluída; procurar outra causa da dispneia (pulmão, anemia, obesidade, descondicionamento, isquemia).",
    nota:"Escore de Reddy et al. (2018), recomendado pela Diretriz Brasileira de IC 2026 (Quadro 6.3; forte, moderada) para dispneia inexplicada com suspeita de ICFEP e FEVE ≥ 50%."}
+ ,{id:"wellstep", nome:"Wells (TEP, 2 níveis)", itens:[
+   {t:"Sinais clínicos de TVP (edema da perna e dor à palpação do trajeto venoso)", p:3},{t:"Diagnóstico alternativo menos provável que TEP", p:3},{t:"FC > 100 bpm", p:1.5},
+   {t:"Imobilização > 3 dias ou cirurgia nas últimas 4 semanas", p:1.5},{t:"TVP ou TEP prévio", p:1.5},{t:"Hemoptise", p:1},{t:"Câncer ativo (tratamento nos últimos 6 meses ou paliativo)", p:1}],
+   cab:s => String(s).replace(".", ",") + " ponto(s)",
+   interp:s => s>4 ? "> 4: TEP provável – urgência (SAMU) para angio-TC; anticoagulação interina se a imagem atrasar (NICE NG158)." : "≤ 4: TEP improvável – D-dímero em até 4 h; negativo afasta. Com suspeita clínica baixa, aplicar antes o PERC.",
+   nota:"NICE NG158 – escore de Wells para TEP em 2 níveis (conferido em 25/10/2026)."},
+ {id:"perc", nome:"PERC (afastar TEP sem exames)", itens:[
+   {t:"Idade ≥ 50 anos", p:1},{t:"FC ≥ 100 bpm", p:1},{t:"SpO₂ < 95% em ar ambiente", p:1},{t:"Hemoptise", p:1},{t:"Uso de estrogênio (contraceptivo ou terapia hormonal)", p:1},
+   {t:"TVP ou TEP prévio", p:1},{t:"Edema unilateral de perna", p:1},{t:"Cirurgia ou trauma com internação nas últimas 4 semanas", p:1}],
+   interp:s => s===0 ? "PERC negativo: se a probabilidade clínica de TEP já era BAIXA, dispensa o D-dímero." : "PERC positivo: não afasta TEP – seguir com o Wells TEP e D-dímero/urgência.",
+   nota:"Kline 2004 (itens citados de memória). Só vale quando a suspeita clínica de TEP já é baixa; a NICE NG158 admite considerá-lo nessa situação."},
+ {id:"twist", nome:"TWIST (torção testicular)", itens:[
+   {t:"Edema testicular", p:2},{t:"Testículo endurecido", p:2},{t:"Reflexo cremastérico ausente", p:1},{t:"Náuseas ou vômitos", p:1},{t:"Testículo elevado (alto)", p:1}],
+   interp:s => s>=5 ? "≥ 5: alto risco de torção – urgência urológica/cirurgia sem esperar USG." : s>=3 ? "3–4: risco intermediário – USG doppler de urgência (encaminhar já)." : "0–2: torção improvável – pensar em epididimite ou torção de apêndice testicular; reavaliar se piorar.",
+   nota:"Barbosa et al., J Urol 2013: derivado em 338 crianças e adolescentes; VPN e VPP de 100% nos cortes 2 e 5 na coorte de derivação. Na dúvida clínica, conduzir como torção."},
+ {id:"alvarado", nome:"Alvarado (apendicite)", itens:[
+   {t:"Dor que migrou para a fossa ilíaca direita", p:1},{t:"Anorexia", p:1},{t:"Náuseas ou vômitos", p:1},{t:"Dor à palpação da fossa ilíaca direita", p:2},
+   {t:"Descompressão brusca dolorosa", p:1},{t:"Temperatura ≥ 37,3 °C", p:1},{t:"Leucócitos > 10.000/mm³", p:2},{t:"Desvio à esquerda (neutrófilos > 75%)", p:1}],
+   interp:s => s<=4 ? "≤ 4: apendicite pouco provável – reavaliar em 12–24 h, com orientação escrita de retorno." : s<=6 ? "5–6: possível – avaliação cirúrgica ou USG no mesmo dia." : "≥ 7: provável – encaminhar à urgência cirúrgica.",
+   nota:"Alvarado 1986 (itens citados de memória). Sem hemograma, o máximo é 7. Menos acurado em mulheres em idade fértil, crianças e idosos; não substitui o exame seriado."},
+ {id:"q4at", nome:"4AT (delirium)", itens:[
+   {t:"1. Alerta", sel:opt([["Normal (inclui sonolência leve < 10 s ao acordar)",0],["Claramente anormal (sonolento demais ou agitado)",4]])},
+   {t:"2. AMT4: idade, data de nascimento, local, ano atual", sel:opt([["Sem erros",0],["1 erro",1],["≥ 2 erros ou não testável",2]])},
+   {t:"3. Atenção: meses do ano de trás para frente, começando em dezembro", sel:opt([["7 meses ou mais corretos",0],["Começa, mas < 7 meses, ou recusa",1],["Não testável (não consegue começar)",2]])},
+   {t:"4. Mudança aguda ou curso flutuante (atenção, cognição) nas últimas 2 semanas e ainda presente nas últimas 24 h", sel:opt([["Não",0],["Sim",4]])}],
+   interp:s => s>=4 ? "≥ 4: possível delirium (com ou sem comprometimento cognitivo) – buscar a causa hoje." : s>=1 ? "1–3: possível comprometimento cognitivo; delirium menos provável – completar a avaliação." : "0: delirium ou comprometimento cognitivo grave improváveis (delirium ainda possível se o item 4 estiver incompleto).",
+   nota:"4AT (Bellelli 2014), ferramenta recomendada pela NICE CG103 na atualização de 2023. Itens e cortes citados de memória."},
+ {id:"cssrs", nome:"C-SSRS – triagem de risco de suicídio", sp:true, itens:[
+   {t:"1. No último mês, desejou estar morto(a) ou dormir e não acordar?", sel:opt([["Não",0],["Sim",1]])},
+   {t:"2. No último mês, teve pensamentos de se matar?", sel:opt([["Não",0],["Sim",1]])},
+   {t:"3. Pensou em como faria (um método)?", sel:opt([["Não",0],["Sim",1]])},
+   {t:"4. Teve alguma intenção de agir sobre esses pensamentos?", sel:opt([["Não",0],["Sim",1]])},
+   {t:"5. Começou a planejar os detalhes ou pretende executar o plano?", sel:opt([["Não",0],["Sim",1]])},
+   {t:"6. Já fez, começou ou se preparou para fazer algo para acabar com a vida?", sel:opt([["Não",0],["Sim, há mais de 3 meses",1],["Sim, nos últimos 3 meses",2]])}],
+   cab:(s,v) => (v[3] || v[4] || v[5]===2) ? "Risco alto" : (v[2] || v[5]===1) ? "Risco moderado" : (v[0] || v[1]) ? "Risco baixo" : "Sem ideação relatada",
+   interp:(s,v) => (v[3] || v[4] || v[5]===2) ? "Não deixar a pessoa sozinha; retirar meios; acionar SAMU/urgência psiquiátrica e a família." : (v[2] || v[5]===1) ? "Plano de segurança, restrição de meios, retorno em 24–72 h e matriciamento/CAPS." : (v[0] || v[1]) ? "Plano de segurança, tratar a condição de base e retorno próximo." : "Manter a escuta; reperguntar se o quadro mudar.",
+   nota:"Columbia Suicide Severity Rating Scale, versão de triagem (itens citados de memória). Organiza a urgência da avaliação; não prevê suicídio e não substitui a avaliação clínica (NICE NG225)."},
+ {id:"semaforo", nome:"Semáforo NICE (febre < 5 anos)", sp:true, itens:[
+   {t:"Vermelho: pálida, mosqueada, acinzentada ou cianótica", p:100},
+   {t:"Vermelho: não responde a estímulos sociais ou parece grave ao profissional", p:100},
+   {t:"Vermelho: não acorda ou, se acordada, não se mantém acordada", p:100},
+   {t:"Vermelho: choro fraco, agudo ou contínuo", p:100},
+   {t:"Vermelho: gemência, FR > 60 irpm ou tiragem moderada/grave", p:100},
+   {t:"Vermelho: turgor da pele diminuído", p:100},
+   {t:"Vermelho: < 3 meses com temperatura ≥ 38 °C", p:100},
+   {t:"Vermelho: manchas que não desaparecem à pressão, fontanela abaulada ou rigidez de nuca", p:100},
+   {t:"Vermelho: estado de mal epiléptico, sinal neurológico focal ou convulsão focal", p:100},
+   {t:"Âmbar: palidez relatada pelos pais", p:1},
+   {t:"Âmbar: não responde normalmente a estímulos sociais, sem sorriso, só acorda com estímulo prolongado ou atividade diminuída", p:1},
+   {t:"Âmbar: batimento de asa nasal, SpO₂ ≤ 95% em ar ambiente ou crepitações", p:1},
+   {t:"Âmbar: FR > 50 (6–12 meses) ou > 40 irpm (> 12 meses)", p:1},
+   {t:"Âmbar: FC > 160 (< 12 meses), > 150 (12–24 meses) ou > 140 bpm (2–5 anos)", p:1},
+   {t:"Âmbar: TEC ≥ 3 s, mucosas secas, má aceitação (lactente) ou diurese diminuída", p:1},
+   {t:"Âmbar: 3–6 meses com temperatura ≥ 39 °C", p:1},
+   {t:"Âmbar: febre há 5 dias ou mais", p:1},
+   {t:"Âmbar: calafrios", p:1},
+   {t:"Âmbar: edema de membro ou articulação, não apoia o membro ou não usa uma extremidade", p:1}],
+   cab:s => s>=100 ? "VERMELHO – alto risco" : s>=1 ? "ÂMBAR – risco intermediário" : "VERDE – baixo risco",
+   interp:s => s>=100 ? "Encaminhar com urgência a serviço pediátrico (SAMU se houver risco imediato à vida). Suspeita de meningococcemia: antibiótico parenteral o quanto antes." : s>=1 ? "Sem diagnóstico definido: rede de segurança (orientação escrita e retorno marcado) ou encaminhar ao pediatra/urgência. Febre sem foco: testar a urina." : "Cuidados em casa, com orientação escrita de quando voltar.",
+   nota:"NICE NG143 (2019, rev. 2021), Tabela 2, conferida em 25/10/2026. Antibiótico oral para febre sem foco não é recomendado."},
+ {id:"framingham", nome:"Framingham (diagnóstico clínico de IC)", sp:true, itens:[
+   {t:"Maior: dispneia paroxística noturna ou ortopneia", p:10},{t:"Maior: turgência jugular", p:10},{t:"Maior: estertores pulmonares", p:10},{t:"Maior: cardiomegalia (RX)", p:10},
+   {t:"Maior: edema agudo de pulmão", p:10},{t:"Maior: terceira bulha (B3)", p:10},{t:"Maior: refluxo hepatojugular", p:10},{t:"Maior: perda ≥ 4,5 kg em 5 dias com o tratamento", p:10},
+   {t:"Menor: edema bilateral de tornozelos", p:1},{t:"Menor: tosse noturna", p:1},{t:"Menor: dispneia aos esforços habituais", p:1},{t:"Menor: hepatomegalia", p:1},
+   {t:"Menor: derrame pleural", p:1},{t:"Menor: FC ≥ 120 bpm", p:1}],
+   cab:s => `${Math.floor(s/10)} maior(es) · ${s%10} menor(es)`,
+   interp:s => { const M = Math.floor(s/10), m = s%10; return (M>=2 || (M>=1 && m>=2)) ? "Critérios preenchidos: IC clinicamente provável – confirmar com peptídeo natriurético e ecocardiograma." : "Critérios não preenchidos: IC menos provável (não exclui)."; },
+   nota:"McKee et al., 1971 (critérios citados de memória). Critério menor só conta se não for explicado por outra condição."}
 
 ];
 const SC_POR_ID = {"cr-prediabetes":"findrisc","cr-aga":"ivcf","cr-inapetencia":"mnasf","cr-fragilidade":"sarcf","po-idoso-vulneravel":"ivcf","po-acamado":"braden","po-pobreza":"savassi","pu-18m":"mchat","pu-24m":"mchat","pu-dnpm":"mchat","pp-depressao":"epds","pp-1semana":"epds","pp-consulta":"epds","cr-asma":"gina","cr-dpoc":"mmrc",faringite:"centor", pac:"curb65", tvp:"wells", "dor-toracica":"marburg", sepse:"qsofa", crupe:"westley", "abstinencia-alcool":"ciwa", depressao:"phq9", "risco-suicida":"phq9", tag:"gad7", panico:"gad7", delirium:"cam"};
@@ -1636,8 +1704,8 @@ function renderScore(){
   const sc = SC.find(x => x.id === scSel) || SC[0];
   $("#sc-sel").value = sc.id;
   $("#sc-form").innerHTML = (sc.nota ? `<p class="hint" style="margin:0 0 6px">${esc(sc.nota)}</p>` : "") + sc.itens.map((it,i) => it.sel
-    ? `<label class="f sc-row">${esc(it.t)}<select data-sc="${i}">${it.sel.map(o=>`<option value="${o.p}">${esc(o.t)}${typeof o.p==="number" && (it.sel.length>2||o.p!==0)?` (${o.p>0?"+":""}${o.p})`:""}</option>`).join("")}</select></label>`
-    : `<label class="sc-chk"><input type="checkbox" data-sc="${i}"> <span>${esc(it.t)} <b>(${it.p>0?"+":""}${it.p})</b></span></label>`).join("");
+    ? `<label class="f sc-row">${esc(it.t)}<select data-sc="${i}">${it.sel.map(o=>`<option value="${o.p}">${esc(o.t)}${!sc.sp && typeof o.p==="number" && (it.sel.length>2||o.p!==0)?` (${o.p>0?"+":""}${o.p})`:""}</option>`).join("")}</select></label>`
+    : `<label class="sc-chk"><input type="checkbox" data-sc="${i}"> <span>${esc(it.t)}${sc.sp ? "" : ` <b>(${it.p>0?"+":""}${it.p})</b>`}</span></label>`).join("");
   calcScore();
 }
 function calcScore(){
@@ -1646,8 +1714,9 @@ function calcScore(){
   if (sc.exige && v.some(x => isNaN(x))){ const n = v.filter(x => isNaN(x)).length; $("#sc-res").innerHTML = `<div>Responda todos os itens para obter o resultado (faltam ${n}).</div>`; $("#sc-copy").dataset.cpped = ""; return; }
   const s = v.reduce((a,b)=>a+b,0); const txt = sc.interp(s, v);
   const pos = sc.itens.map((it,i)=> it.sel ? `${it.t}: ${it.sel.find(o=>o.p===v[i])?.t}` : (v[i] ? it.t : null)).filter(Boolean);
-  $("#sc-res").innerHTML = `<div class="res">${s} ponto(s)</div><div>${esc(txt)}</div>`;
-  $("#sc-copy").dataset.cpped = `${sc.nome}: ${s} ponto(s). ${txt}${pos.length?` Itens: ${pos.join("; ")}.`:""}`;
+  const cab = sc.cab ? sc.cab(s, v) : `${s} ponto(s)`;
+  $("#sc-res").innerHTML = `<div class="res">${esc(cab)}</div><div>${esc(txt)}</div>`;
+  $("#sc-copy").dataset.cpped = `${sc.nome}: ${cab}. ${txt}${pos.length?` Itens: ${pos.join("; ")}.`:""}`;
 }
 $("#sc-sel").innerHTML = SC.map(x => `<option value="${x.id}">${esc(x.nome)}</option>`).join("");
 $("#sc-sel").addEventListener("change", e => { scSel = e.target.value; renderScore(); });
@@ -1969,21 +2038,21 @@ const optLabel = (it, o) => `${esc(o.t)}${typeof o.p === "number" && (it.sel.len
 function scInlineHtml(id){
   const sc = SC.find(x => x.id === id); if (!sc) return "";
   return `<div class="calc" data-calc="sc:${id}"><h4>${esc(sc.nome)}</h4>${sc.nota?`<p class="cd">${esc(sc.nota)}</p>`:""}<div class="sc-form">${sc.itens.map((it,i) => it.sel
-    ? `<label class="f sc-row">${esc(it.t)}<select data-si="${i}">${it.sel.map(o=>`<option value="${o.p}">${optLabel(it,o)}</option>`).join("")}</select></label>`
-    : `<label class="sc-chk"><input type="checkbox" data-si="${i}"> <span>${esc(it.t)} <b>(${it.p>0?"+":""}${it.p})</b></span></label>`).join("")}</div><div class="calc-res" aria-live="polite" style="margin-top:10px"></div></div>`;
+    ? `<label class="f sc-row">${esc(it.t)}<select data-si="${i}">${it.sel.map(o=>`<option value="${o.p}">${sc.sp ? esc(o.t) : optLabel(it,o)}</option>`).join("")}</select></label>`
+    : `<label class="sc-chk"><input type="checkbox" data-si="${i}"> <span>${esc(it.t)}${sc.sp ? "" : ` <b>(${it.p>0?"+":""}${it.p})</b>`}</span></label>`).join("")}</div><div class="calc-res" aria-live="polite" style="margin-top:10px"></div></div>`;
 }
 function runScInline(el){
   const sc = SC.find(x => x.id === el.dataset.calc.slice(3)); if (!sc) return;
   const v = sc.itens.map((it,i) => { const e = el.querySelector(`[data-si="${i}"]`); return it.sel ? +e.value : (e.checked ? it.p : 0); });
   if (sc.exige && v.some(x => isNaN(x))) return saida(el, vazio(`Responda todos os itens (faltam ${v.filter(x=>isNaN(x)).length}).`));
-  const s = v.reduce((a,b)=>a+b, 0), txt = sc.interp(s, v);
+  const s = v.reduce((a,b)=>a+b, 0), txt = sc.interp(s, v), cab = sc.cab ? sc.cab(s, v) : `${s} ponto(s)`;
   const pos = sc.itens.map((it,i) => it.sel ? `${it.t}: ${(it.sel.find(o=>o.p===v[i])||{}).t}` : (v[i] ? it.t : null)).filter(Boolean);
-  saida(el, `<div class="res">${s} ponto(s)</div><div>${esc(txt)}</div>`, `${sc.nome}: ${s} ponto(s). ${txt}${pos.length && pos.length <= 12 ? ` Itens: ${pos.join("; ")}.` : ""}`);
+  saida(el, `<div class="res">${esc(cab)}</div><div>${esc(txt)}</div>`, `${sc.nome}: ${cab}. ${txt}${pos.length && pos.length <= 12 ? ` Itens: ${pos.join("; ")}.` : ""}`);
 }
 function runCalc(el){ const id = el.dataset.calc; try { if (id.startsWith("sc:")) runScInline(el); else if (CALCS[id]) CALCS[id].run(el); } catch(e){ saida(el, vazio("Não foi possível calcular com esses dados.")); } }
 function initCalcs(root){ root.querySelectorAll("[data-calc]").forEach(runCalc); }
 ["input","change"].forEach(t => document.addEventListener(t, ev => { const el = ev.target.closest && ev.target.closest("[data-calc]"); if (el) runCalc(el); }));
-const CALC_MENU = [["pa","Pressão arterial"],["prevent","PREVENT e risco SBC"],["lipides","LDL e estatina"],["ckd","TFG, KDIGO e KFRE"],["antropo","IMC, cintura e peso ideal"],["glic","HbA1c e NPH"],["ferro","Déficit de ferro"],["calcio","Cálcio corrigido"],["fib4","FIB-4"],["sc:cha2ds2va","CHA₂DS₂-VA"],["sc:hasbled","HAS-BLED"],["sc:rankin","Rankin modificada"],["sc:barthel","Índice de Barthel"],["sc:gds15","GDS-15"],["sc:fagerstrom","Fagerström"],["sc:mmrc","mMRC"],["sc:gina","Controle da asma (GINA)"],["sc:childpugh","Child-Pugh"],["sc:phq9","PHQ-9"]];
+const CALC_MENU = [["pa","Pressão arterial"],["prevent","PREVENT e risco SBC"],["lipides","LDL e estatina"],["ckd","TFG, KDIGO e KFRE"],["antropo","IMC, cintura e peso ideal"],["glic","HbA1c e NPH"],["ferro","Déficit de ferro"],["calcio","Cálcio corrigido"],["fib4","FIB-4"],["sc:cha2ds2va","CHA₂DS₂-VA"],["sc:hasbled","HAS-BLED"],["sc:rankin","Rankin modificada"],["sc:barthel","Índice de Barthel"],["sc:gds15","GDS-15"],["sc:fagerstrom","Fagerström"],["sc:mmrc","mMRC"],["sc:gina","Controle da asma (GINA)"],["sc:childpugh","Child-Pugh"],["sc:phq9","PHQ-9"],["sc:wellstep","Wells TEP"],["sc:perc","PERC"],["sc:twist","TWIST"],["sc:alvarado","Alvarado"],["sc:q4at","4AT"],["sc:cssrs","C-SSRS (triagem)"],["sc:semaforo","Semáforo NICE (febre)"],["sc:framingham","Framingham (IC)"]];
 function openCalc(id){
   const s = $("#calc-sel"); if (id) s.value = id;
   $("#calc-box").innerHTML = calcHtml(s.value); initCalcs($("#calc-box")); $("#dlg-calc").showModal();

@@ -1729,10 +1729,19 @@ const SC = [
    {t:"Incapaz de apoiar o peso e dar 4 passos logo após o trauma e na consulta", p:1}],
    cab:s => s>0 ? "Ottawa POSITIVO – pedir radiografia" : "Ottawa negativo",
    interp:s => s>0 ? "Radiografia do tornozelo (itens maleolares/apoio) e/ou do pé (5º metatarso/navicular)." : "Fratura muito improvável: dispensa radiografia; tratar como entorse e reavaliar se não melhorar em 1 semana.",
-   nota:"Stiell et al. (regras validadas para ≥ 18 anos; itens citados de memória). Sensibilidade próxima de 100% para fraturas significativas; não aplicar em intoxicados, com lesão distraidora ou alteração de sensibilidade."}
+   nota:"Stiell et al. (regras validadas para ≥ 18 anos; itens citados de memória). Sensibilidade próxima de 100% para fraturas significativas; não aplicar em intoxicados, com lesão distraidora ou alteração de sensibilidade."},
+ {id:"roma", nome:"Exacerbação de DPOC – gravidade (Roma, GOLD 2026)", sp:true, itens:[
+   {t:"Dispneia ≥ 5 na escala visual de 0 a 10", p:1},
+   {t:"Frequência respiratória ≥ 24 irpm", p:1},
+   {t:"Frequência cardíaca ≥ 95 bpm", p:1},
+   {t:"SpO₂ em repouso < 92% (ar ambiente ou O₂ habitual) e/ou queda > 3% do basal", p:1},
+   {t:"PCR ≥ 10 mg/L (se disponível)", p:1}],
+   cab:s => s>=3 ? "Moderada (ou grave)" : "Leve",
+   interp:s => s>=3 ? "≥ 3 de 5 critérios: exacerbação moderada – prednisona 40 mg por 5 dias + broncodilatador; grave se gasometria com PaO₂ ≤ 60 mmHg e/ou hipercapnia com acidose (na APS: alteração mental, esforço respiratório ou SpO₂ < 88% apesar de O₂ → urgência). Antibiótico se ≥ 2 de dispneia, volume e purulência do escarro, sendo a purulência um deles." : "Exacerbação leve: intensificar broncodilatador de curta ação e reavaliar em 48 h; afastar pneumonia, TEP, IC e pneumotórax.",
+   nota:"GOLD 2026, Figura 4.2 (classificação de Roma) [F]. Sem PCR, contar só os 4 critérios clínicos (3 deles bastam para moderada) [I]."}
 
 ];
-const SC_POR_ID = {"cr-prediabetes":"findrisc","cr-aga":"ivcf","cr-inapetencia":"mnasf","cr-fragilidade":"sarcf","po-idoso-vulneravel":"ivcf","po-acamado":"braden","po-pobreza":"savassi","pu-18m":"mchat","pu-24m":"mchat","pu-dnpm":"mchat","pp-depressao":"epds","pp-1semana":"epds","pp-consulta":"epds","cr-asma":"gina","cr-dpoc":"mmrc",faringite:"centor", pac:"curb65", tvp:"wells", "dor-toracica":"marburg", sepse:"qsofa", crupe:"westley", "abstinencia-alcool":"ciwa", depressao:"phq9", "risco-suicida":"phq9", tag:"gad7", panico:"gad7", delirium:"cam"};
+const SC_POR_ID = {"cr-prediabetes":"findrisc","cr-aga":"ivcf","cr-inapetencia":"mnasf","cr-fragilidade":"sarcf","po-idoso-vulneravel":"ivcf","po-acamado":"braden","po-pobreza":"savassi","pu-18m":"mchat","pu-24m":"mchat","pu-dnpm":"mchat","pp-depressao":"epds","pp-1semana":"epds","pp-consulta":"epds","cr-asma":"gina","cr-dpoc":"mmrc", "dpoc-exac":"roma",faringite:"centor", pac:"curb65", tvp:"wells", "dor-toracica":"marburg", sepse:"qsofa", crupe:"westley", "abstinencia-alcool":"ciwa", depressao:"phq9", "risco-suicida":"phq9", tag:"gad7", panico:"gad7", delirium:"cam"};
 let scSel = "centor";
 function renderScore(){
   const sc = SC.find(x => x.id === scSel) || SC[0];
@@ -2086,7 +2095,7 @@ function runScInline(el){
 function runCalc(el){ const id = el.dataset.calc; try { if (id.startsWith("sc:")) runScInline(el); else if (CALCS[id]) CALCS[id].run(el); } catch(e){ saida(el, vazio("Não foi possível calcular com esses dados.")); } }
 function initCalcs(root){ root.querySelectorAll("[data-calc]").forEach(runCalc); }
 ["input","change"].forEach(t => document.addEventListener(t, ev => { const el = ev.target.closest && ev.target.closest("[data-calc]"); if (el) runCalc(el); }));
-const CALC_MENU = [["pa","Pressão arterial"],["prevent","PREVENT e risco SBC"],["lipides","LDL e estatina"],["ckd","TFG, KDIGO e KFRE"],["antropo","IMC, cintura e peso ideal"],["glic","HbA1c e NPH"],["ferro","Déficit de ferro"],["calcio","Cálcio corrigido"],["fib4","FIB-4"],["sc:cha2ds2va","CHA₂DS₂-VA"],["sc:hasbled","HAS-BLED"],["sc:rankin","Rankin modificada"],["sc:barthel","Índice de Barthel"],["sc:gds15","GDS-15"],["sc:fagerstrom","Fagerström"],["sc:mmrc","mMRC"],["sc:gina","Controle da asma (GINA)"],["sc:childpugh","Child-Pugh"],["sc:phq9","PHQ-9"],["sc:wellstep","Wells TEP"],["sc:perc","PERC"],["sc:twist","TWIST"],["sc:alvarado","Alvarado"],["sc:q4at","4AT"],["sc:cssrs","C-SSRS (triagem)"],["sc:semaforo","Semáforo NICE (febre)"],["sc:framingham","Framingham (IC)"],["sc:scq","Queimadura: SCQ adulto"],["sc:scqc","Queimadura: SCQ criança"],["sc:gota2015","Gota (ACR/EULAR 2015)"],["sc:ottawa","Regras de Ottawa"]];
+const CALC_MENU = [["pa","Pressão arterial"],["prevent","PREVENT e risco SBC"],["lipides","LDL e estatina"],["ckd","TFG, KDIGO e KFRE"],["antropo","IMC, cintura e peso ideal"],["glic","HbA1c e NPH"],["ferro","Déficit de ferro"],["calcio","Cálcio corrigido"],["fib4","FIB-4"],["sc:cha2ds2va","CHA₂DS₂-VA"],["sc:hasbled","HAS-BLED"],["sc:rankin","Rankin modificada"],["sc:barthel","Índice de Barthel"],["sc:gds15","GDS-15"],["sc:fagerstrom","Fagerström"],["sc:mmrc","mMRC"],["sc:gina","Controle da asma (GINA)"],["sc:childpugh","Child-Pugh"],["sc:phq9","PHQ-9"],["sc:wellstep","Wells TEP"],["sc:perc","PERC"],["sc:twist","TWIST"],["sc:alvarado","Alvarado"],["sc:q4at","4AT"],["sc:cssrs","C-SSRS (triagem)"],["sc:semaforo","Semáforo NICE (febre)"],["sc:framingham","Framingham (IC)"],["sc:scq","Queimadura: SCQ adulto"],["sc:scqc","Queimadura: SCQ criança"],["sc:gota2015","Gota (ACR/EULAR 2015)"],["sc:ottawa","Regras de Ottawa"],["sc:roma","DPOC: gravidade da exacerbação (Roma)"]];
 function openCalc(id){
   const s = $("#calc-sel"); if (id) s.value = id;
   $("#calc-box").innerHTML = calcHtml(s.value); initCalcs($("#calc-box")); $("#dlg-calc").showModal();

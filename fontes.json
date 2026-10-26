@@ -1,11 +1,11 @@
 {
- "gerado": "2026-10-26T15:51:05.838Z",
+ "gerado": "2026-10-26T16:07:23.674Z",
  "cmed": {
   "data": "09/10/2026",
   "fonte": "cmed_pmc2026",
   "icms": "PMC com ICMS de Minas Gerais: 12% para genéricos e 18% para os demais"
  },
- "n_fontes": 673,
+ "n_fontes": 682,
  "n_itens": 365,
  "sem_url": [
   "remume",
@@ -1049,7 +1049,9 @@
    "url": "https://goias.gov.br/saude/wp-content/uploads/sites/34/2012/06/guia_tratamento-influenza-2023-d45.pdf",
    "ano": 2023,
    "usado_em": [
+    "covid",
     "gripal",
+    "resfriado",
     "urg-abordagem"
    ]
   },
@@ -9169,6 +9171,114 @@
     "cefaleia-abuso",
     "crise-convulsiva"
    ]
+  },
+  {
+   "k": "cab28_rs",
+   "s": "CAB 28 vol. II – rinossinusites e síndrome gripal",
+   "t": "Ministério da Saúde. Cadernos de Atenção Básica nº 28, vol. II, 2013, cap. 2.18: resfriado com pico até o 3º dia e regressão do 7º ao 10º dia; secreção espessa e esverdeada após os primeiros dias não indica bactéria; suspeitar de bacteriana se sintomas > 10–14 dias ou piora após o 5º dia; analgésicos/antitérmicos, hidratação, solução salina; não se recomenda AINE nem corticoide; descongestionante tópico por no máximo 3 dias e nunca em lactentes; anti-histamínico sem eficácia em não atópicos; mucolíticos sem vantagem sobre hidratação; vitamina C sem benefício; sinais de alerta de complicação (edema periorbitário, cefaleia intensa, alteração visual, toxemia, irritação meníngea); critérios de encaminhamento hospitalar na síndrome gripal (adulto: alteração de consciência, FR > 30, PAS < 90 ou PAD < 60) (manual MS). Cap. 2.20: interpretação dos testes de Weber e Rinne.",
+   "f": "F",
+   "url": "https://bvsms.saude.gov.br/bvs/publicacoes/acolhimento_demanda_espontanea_queixas_comuns_cab28v2.pdf",
+   "ano": 2013,
+   "usado_em": [
+    "bronquite",
+    "cerume",
+    "covid",
+    "resfriado"
+   ]
+  },
+  {
+   "k": "cab28_odonto",
+   "s": "CAB 28 vol. II – urgências odontológicas",
+   "t": "Ministério da Saúde. Cadernos de Atenção Básica nº 28, vol. II, 2013, cap. 2.21: dores dentinopulpares (cárie – dor sempre provocada; pulpite reversível – dor provocada que persiste após o estímulo; pulpite irreversível – dor intensa, contínua, espontânea, pior em decúbito), periapicais (pericementite – sensível à percussão, testes térmicos negativos; abscesso periapical – dor pulsátil, dente 'crescido', tumefação; antibiótico quando houver edema associado), periodontais (abscesso periodontal, GUN/PUN, pericoronarite), alveolite; Quadro 61 (paracetamol 3–4 g/dia; amoxicilina 250–500 mg 8/8h; ibuprofeno 200–400 mg 4–6h; nistatina) (manual MS).",
+   "f": "F",
+   "url": "https://bvsms.saude.gov.br/bvs/publicacoes/acolhimento_demanda_espontanea_queixas_comuns_cab28v2.pdf",
+   "ano": 2013,
+   "usado_em": [
+    "odontalgia"
+   ]
+  },
+  {
+   "k": "cab28_olho",
+   "s": "CAB 28 vol. II – olho vermelho",
+   "t": "Ministério da Saúde. Cadernos de Atenção Básica nº 28, vol. II, 2013, cap. 2.22: exame em 7 passos (acuidade visual com Snellen, padrão da hiperemia, fluoresceína, câmara anterior, pupila, tensão ocular digital, secreção); as quatro grandes ameaças à visão (ceratite, iridociclite, glaucoma agudo, trauma); hemorragia subconjuntival após esforço ou pico hipertensivo, com resolução espontânea; blefarite como inflamação crônica das bordas palpebrais por estafilococos; corpo estranho: colírio anestésico, irrigação com SF 0,9%, everter a pálpebra superior, uma única tentativa com cotonete, pomada antibiótica, oclusão e oftalmologia; lesão corneana sem melhora em 24 h – pensar em úlcera, oftalmologia urgente; queimadura química – irrigação imediata e abundante (manual MS).",
+   "f": "F",
+   "url": "https://bvsms.saude.gov.br/bvs/publicacoes/acolhimento_demanda_espontanea_queixas_comuns_cab28v2.pdf",
+   "ano": 2013,
+   "usado_em": [
+    "blefarite",
+    "corpo-estranho-ocular",
+    "hemorragia-subconj",
+    "hordeolo"
+   ]
+  },
+  {
+   "k": "gold2026",
+   "s": "GOLD 2026",
+   "t": "Global Initiative for Chronic Obstructive Lung Disease. Global Strategy for Prevention, Diagnosis and Management of COPD, relatório 2026 (cópia na base clínica), cap. 4: exacerbação como piora em até 14 dias de dispneia e/ou tosse e escarro; diferenciais (pneumonia, TEP, IC aguda, pneumotórax); classificação de gravidade de Roma (Figura 4.2); SABA ± SAMA; corticoide sistêmico por até 5 dias; antibiótico se ≥ 2 de aumento de dispneia, volume ou purulência do escarro (sendo a purulência um deles), cultura prévia positiva ou ventilação mecânica; aminopenicilina com clavulanato, macrolídeo ou tetraciclina; duração ≤ 5 dias no ambulatório (diretriz internacional).",
+   "f": "F",
+   "url": "https://goldcopd.org/2026-gold-report/",
+   "ano": 2026,
+   "usado_em": [
+    "dpoc-exac"
+   ]
+  },
+  {
+   "k": "aborl_rinite2024",
+   "s": "V Consenso Brasileiro sobre Rinites 2024",
+   "t": "ABORL-CCF, ASBAI e SBP. V Consenso Brasileiro sobre Rinites – 2024 (cópia na base clínica): classificação (alérgica, infecciosa, não alérgica – Tabela 1); intermitente (< 4 dias/semana ou < 4 semanas/ano) × persistente; corticosteroide intranasal como medicamento mais eficaz e primeira linha na rinite alérgica persistente e/ou moderada a grave, por no mínimo 60–90 dias para suprimir a inflamação; anti-H1 de nova geração preferidos aos clássicos em todas as idades; descongestionantes sem indicação na rinite alérgica; montelucaste com risco de eventos psiquiátricos; Tabela 8 (posologias dos corticoides intranasais no Brasil) (consenso de sociedades).",
+   "f": "F",
+   "url": "https://aborlccf.org.br/",
+   "ano": 2024,
+   "usado_em": [
+    "rinite"
+   ]
+  },
+  {
+   "k": "tsrs_oft2023",
+   "s": "TelessaúdeRS – Oftalmologia adulto (2023)",
+   "t": "TelessaúdeRS-UFRGS. Protocolos de encaminhamento – Oftalmologia adulto, 2023 (cópia na base clínica): Protocolo 5 (pálpebras, vias lacrimais e órbita – hordéolo recorrente ou calázio sem resposta ao tratamento clínico; calor local 5–10 min 3–5×/dia com leve compressão e pomada antibiótica se necessário; hordéolos recorrentes e blefarite crônica em idosos: considerar neoplasia palpebral; emergência se laceração palpebral, suspeita de corpo estranho intraorbitário, dacriocistite aguda); Protocolo 6 (glaucoma agudo); Protocolo 7 (córnea e superfície ocular – emergência: queimadura química, trauma por radiação sem melhora ou corpo estranho não removido na APS, olho vermelho com hiperemia perilímbica ou setorial, conjuntivite hiperaguda, qualquer sintoma agudo em usuário de lente de contato) (referência técnica de outro estado).",
+   "f": "F",
+   "url": "https://www.ufrgs.br/telessauders/regulasus/#regulasus-protocolos",
+   "ano": 2023,
+   "usado_em": [
+    "blefarite",
+    "corpo-estranho-ocular",
+    "hordeolo"
+   ]
+  },
+  {
+   "k": "tsrs_pneumo2023",
+   "s": "TelessaúdeRS – Pneumologia adulto (2023)",
+   "t": "TelessaúdeRS-UFRGS. Protocolos de encaminhamento – Pneumologia adulto, 2023 (cópia na base clínica), Protocolo 4 (tosse crônica e dispneia): encaminhar após investigação inconclusiva na APS e falha do tratamento empírico das causas comuns (IECA, síndrome da tosse de vias aéreas superiores, asma, DRGE, DPOC, tuberculose); trocar o IECA e encaminhar se a tosse persistir > 4 semanas após a suspensão; guia com imagem de tórax, espirometria e duas baciloscopias ou TRM-TB (referência técnica de outro estado).",
+   "f": "F",
+   "url": "https://www.ufrgs.br/telessauders/regulasus/#regulasus-protocolos",
+   "ano": 2023,
+   "usado_em": [
+    "tosse-subaguda"
+   ]
+  },
+  {
+   "k": "tb_sr2019",
+   "s": "Manual de TB 2019 – sintomático respiratório",
+   "t": "Ministério da Saúde. Manual de Recomendações para o Controle da Tuberculose no Brasil, 2ª ed. atualizada, 2019: sintomático respiratório é quem tem tosse por 3 semanas ou mais (população geral); Quadro 51 – privados de liberdade, profissionais de saúde, pessoas vivendo com HIV, pessoas em situação de rua e indígenas: investigar com tosse de qualquer duração (manual MS).",
+   "f": "F",
+   "url": "http://bvsms.saude.gov.br/bvs/publicacoes/manual_recomendacoes_controle_tuberculose_brasil_2_ed.pdf",
+   "ano": 2019,
+   "usado_em": [
+    "bronquite",
+    "tosse-subaguda"
+   ]
+  },
+  {
+   "k": "bh_nt13_2026",
+   "s": "NT SMSA-BH 13/2026 – nirmatrelvir/ritonavir",
+   "t": "Secretaria Municipal de Saúde de Belo Horizonte. Nota Técnica nº 013/2026 (27/04/2026), com base no Guia do MS para uso de nirmatrelvir/ritonavir em pacientes de alto risco (2025): ≥ 65 anos (independente da vacinação) ou ≥ 18 anos imunossuprimido; 1º ao 5º dia de sintomas; quadro leve a moderado sem O₂; teste de antígeno ou RT-PCR de serviço (autoteste não vale); contraindicações: > 5 dias, peso < 40 kg, ClCr < 30 ou diálise, hepatopatia grave; TFG 30–59: 1 comprimido de nirmatrelvir + 1 de ritonavir 12/12h (norma municipal de outro município da RMBH).",
+   "f": "F",
+   "url": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/saude/2026/29-04-26-smsa-nt-013-2026-nirma-riton.pdf",
+   "ano": 2026,
+   "usado_em": [
+    "covid"
+   ]
   }
  ],
  "itens": [
@@ -9239,7 +9349,8 @@
    "nv": 2,
    "fontes": [
     "cochrane_resfriado",
-    "cab28"
+    "cab28",
+    "cab28_rs"
    ]
   },
   {
@@ -9570,7 +9681,9 @@
    "nv": 0,
    "fontes": [
     "cochrane_bronq",
-    "cab28"
+    "cab28",
+    "cab28_rs",
+    "tb_sr2019"
    ]
   },
   {
@@ -9583,18 +9696,20 @@
     "pcdt_dpoc2025",
     "rename",
     "remume",
-    "pack2025"
+    "pack2025",
+    "gold2026"
    ]
   },
   {
    "id": "rinite",
    "nome": "Rinite alérgica",
    "modulo": "de",
-   "nv": 1,
+   "nv": 2,
    "fontes": [
     "aria",
     "rename",
-    "remume"
+    "remume",
+    "aborl_rinite2024"
    ]
   },
   {
@@ -9974,7 +10089,7 @@
    "id": "epistaxe",
    "nome": "Epistaxe anterior",
    "modulo": "de",
-   "nv": 1,
+   "nv": 2,
    "fontes": [
     "epistaxe",
     "rename",
@@ -10027,7 +10142,8 @@
    "fontes": [
     "ada_dente",
     "rename",
-    "remume"
+    "remume",
+    "cab28_odonto"
    ]
   },
   {
@@ -10047,7 +10163,9 @@
    "modulo": "de",
    "nv": 0,
    "fontes": [
-    "cab28"
+    "cab28",
+    "tsrs_oft2023",
+    "cab28_olho"
    ]
   },
   {
@@ -10356,11 +10474,14 @@
    "id": "covid",
    "nome": "COVID-19 leve",
    "modulo": "de",
-   "nv": 1,
+   "nv": 3,
    "fontes": [
     "nt_nmvr",
     "rename",
-    "remume"
+    "remume",
+    "bh_nt13_2026",
+    "guia_influenza",
+    "cab28_rs"
    ]
   },
   {
@@ -10383,7 +10504,9 @@
     "chest_tosse",
     "cochrane_resfriado",
     "rename",
-    "remume"
+    "remume",
+    "tb_sr2019",
+    "tsrs_pneumo2023"
    ]
   },
   {
@@ -11084,7 +11207,8 @@
    "fontes": [
     "aao_blef",
     "rename",
-    "remume"
+    "remume",
+    "cab28_olho"
    ]
   },
   {
@@ -11095,7 +11219,9 @@
    "fontes": [
     "aao_blef",
     "rename",
-    "remume"
+    "remume",
+    "cab28_olho",
+    "tsrs_oft2023"
    ]
   },
   {
@@ -11106,16 +11232,19 @@
    "fontes": [
     "aao_blef",
     "rename",
-    "remume"
+    "remume",
+    "cab28_olho",
+    "tsrs_oft2023"
    ]
   },
   {
    "id": "cerume",
    "nome": "Cerume impactado (rolha de cera)",
    "modulo": "de",
-   "nv": 0,
+   "nv": 1,
    "fontes": [
-    "nice_cerume"
+    "nice_cerume",
+    "cab28_rs"
    ]
   },
   {

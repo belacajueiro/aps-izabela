@@ -1,11 +1,11 @@
 {
- "gerado": "2026-10-26T16:07:23.674Z",
+ "gerado": "2026-10-26T16:14:49.472Z",
  "cmed": {
   "data": "09/10/2026",
   "fonte": "cmed_pmc2026",
   "icms": "PMC com ICMS de Minas Gerais: 12% para genéricos e 18% para os demais"
  },
- "n_fontes": 682,
+ "n_fontes": 687,
  "n_itens": 365,
  "sem_url": [
   "remume",
@@ -277,7 +277,8 @@
   "gvs3_pecon",
   "gvs2_malaria",
   "crie2023_vz",
-  "pcdt_endo2025"
+  "pcdt_endo2025",
+  "betim_ferro2024"
  ],
  "nao_conferidas": [
   "aap_oma",
@@ -5931,14 +5932,15 @@
   },
   {
    "k": "wfg2022",
-   "s": "World Falls Guidelines 2022",
-   "t": "Montero-Odasso M et al. World guidelines for falls prevention and management for older adults: a global initiative. Age Ageing 2022;51(9) – velocidade de marcha ≤ 0,8 m/s (GRADE 1A) ou TUG ≥ 15 s (1B) para estratificar; avaliação cognitiva na avaliação multifatorial; exercício de equilíbrio e multicomponente inclusive em CCL/demência leve-moderada (pontos conferidos em apresentação oficial dos autores; algoritmo completo não aberto) (diretriz).",
+   "s": "World Guidelines for Falls Prevention 2022",
+   "t": "Montero-Odasso M et al. World guidelines for falls prevention and management for older adults: a global initiative. Age Ageing 2022;51(9):afac205. DOI 10.1093/ageing/afac205 (PMC9523684): estratificação – alto risco se queda com lesão que exigiu tratamento, ≥ 2 quedas em 12 meses, fragilidade, ficar no chão sem conseguir levantar por ≥ 1 h ou suspeita de perda transitória de consciência; risco intermediário se queda única não grave com alteração de marcha/equilíbrio (velocidade de marcha < 0,8 m/s ou TUG > 15 s); 'três perguntas-chave'; avaliação multifatorial e intervenção multidomínio no alto risco; exercício de equilíbrio, funcional e força ≥ 3×/semana, progressivo, por ≥ 12 semanas; revisão e desprescrição de fármacos que aumentam o risco de queda (STOPPFall) (diretriz internacional).",
    "f": "F",
-   "url": "https://www.nottingham.ac.uk/praised/documents/dissemination-event/main-presentations/p8-world-falls-guidelines.pdf",
+   "url": "https://doi.org/10.1093/ageing/afac205",
    "ano": 2022,
    "usado_em": [
     "cr-aga",
-    "cr-quedas"
+    "cr-quedas",
+    "queda-idoso"
    ]
   },
   {
@@ -9279,6 +9281,67 @@
    "usado_em": [
     "covid"
    ]
+  },
+  {
+   "k": "cab28_dv",
+   "s": "CAB 28 vol. II – diarreia e vômito",
+   "t": "Ministério da Saúde. Cadernos de Atenção Básica nº 28, vol. II, 2013, cap. 2.5: Quadro 14 (diarreia aguda < 14 dias, persistente ≥ 14 dias, crônica > 30 dias); Quadro 15 (etiologias; crônica: cólon irritável, tuberculose, parasitoses, enteropatia por glúten); Quadros 16–18 (desidratação e planos A, B e C); Quadro 20 (giardíase: secnidazol ou tinidazol 2 g dose única no adulto, 30 mg/kg em crianças, máx. 2 g; metronidazol 250 mg por dose 2×/dia por 5 dias, criança 15 mg/kg/dia); amebíase intestinal (secnidazol 2 g dose única; metronidazol 500 mg 3×/dia 5 dias; formas graves 750 mg 3×/dia 10 dias; teclozana nas formas leves); antidiarreicos não devem ser usados; Quadro 21 (pistas da anamnese no vômito: medicamentos, gravidez, relação com refeições, conteúdo e odor, vômito em jato) (manual MS).",
+   "f": "F",
+   "url": "https://bvsms.saude.gov.br/bvs/publicacoes/acolhimento_demanda_espontanea_queixas_comuns_cab28v2.pdf",
+   "ano": 2013,
+   "usado_em": [
+    "dii-suspeita",
+    "nauseas",
+    "parasitoses"
+   ]
+  },
+  {
+   "k": "cab28_has",
+   "s": "CAB 28 vol. II – HAS: alterações agudas",
+   "t": "Ministério da Saúde. Cadernos de Atenção Básica nº 28, vol. II, 2013, cap. 2.14: emergência hipertensiva (lesão aguda progressiva de órgão-alvo – encaminhar via SAMU), urgência hipertensiva (elevação importante, em geral PAD > 120, sem lesão aguda – controle em 24–48 h com medicação oral), pseudocrise (elevação desencadeada por dor, desconforto ou ansiedade – tratar com sintomáticos, não com anti-hipertensivos) e elevação eventual (achado de rotina – iniciar ou ajustar tratamento); manifestações das emergências (edema agudo de pulmão, SCA, dissecção, encefalopatia, hipertensão maligna, AVC, eclâmpsia); Quadro 47 (conduta na APS) (manual MS).",
+   "f": "F",
+   "url": "https://bvsms.saude.gov.br/bvs/publicacoes/acolhimento_demanda_espontanea_queixas_comuns_cab28v2.pdf",
+   "ano": 2013,
+   "usado_em": [
+    "pa-elevada"
+   ]
+  },
+  {
+   "k": "sc_gastro2022",
+   "s": "SES-SC – Protocolo Gastroenterologia adulto (2022)",
+   "t": "Secretaria de Estado da Saúde de Santa Catarina (SUR/GERAM). Protocolo de Acesso e Regulação – Consulta em Gastroenterologia e Hepatologia – Adulto, atualização mar/2022: DRGE – encaminhar se refratária a medidas comportamentais e IBP em dose plena por 2 meses (vermelho se disfagia, hemorragia, anemia ferropriva ou emagrecimento); dispepsia – refratária a IBP por 8 semanas e à erradicação do H. pylori; constipação e SII refratárias; diarreia > 3 semanas após investigação inicial na UBS; suspeita de DII – todos os casos com dúvida diagnóstica; sangramento baixo ou hemorroidário – proctologia, com resultado do exame proctológico; hemorragia digestiva baixa e anemia importante com sangramento – emergência (protocolo estadual de outro estado).",
+   "f": "F",
+   "url": "https://saude.sc.gov.br/index.php/pt/regulacao/protocolo-de-acesso-e-classificacao-de-risco/gastroenterologia-e-hepatologia-adulto/download",
+   "ano": 2022,
+   "usado_em": [
+    "anemia-ferropriva",
+    "constipacao",
+    "dii-suspeita",
+    "drge",
+    "hemorroida"
+   ]
+  },
+  {
+   "k": "tsrs_card2022",
+   "s": "TelessaúdeRS – Cardiologia adulto (2022)",
+   "t": "TelessaúdeRS-UFRGS. Protocolos de encaminhamento – Cardiologia adulto, 2022 (cópia na base clínica), Protocolo 3 (arritmias): urgência se hipoperfusão, síncope, dispneia, suspeita de SCA ou ECG de risco (Quadro 6: TV, TSV paroxística, FA/flutter de alta resposta, QT curto ou longo, Brugada, BAV 2º grau Mobitz II/3º grau, bradicardia < 40, pausas > 3 s); cardiologia para palpitação recorrente de origem indeterminada após investigação inicial na APS (anamnese, exame físico, ECG, hemograma, função tireoidiana, eletrólitos, afastar causas psicogênicas e exógenas), TSV recorrente sem resposta, flutter, FA selecionada (referência técnica de outro estado).",
+   "f": "F",
+   "url": "https://www.ufrgs.br/telessauders/regulasus/#regulasus-protocolos",
+   "ano": 2022,
+   "usado_em": [
+    "palpitacoes"
+   ]
+  },
+  {
+   "k": "betim_ferro2024",
+   "s": "Circular DUE-DIOP 003/2024 – ferro EV (Betim)",
+   "t": "SMS Betim, Diretoria de Urgência e Emergência/Diretoria Operacional da Saúde. Circular DUE-DIOP 003/2024, de 29/11/2024: sacarato de hidróxido férrico 20 mg/mL injetável não é padronizado na REMUME para dispensação nas UBS (nas UPAs, só para pacientes em observação); o medicamento adquirido pelo paciente é administrado na UBS de referência, com médico e enfermeiro presentes; hipertensão descompensada, asma moderada a grave, DPOC e uso de betabloqueador → administrar na UPA; aos sábados, domingos e feriados ou sem médico/enfermeiro → UPA; tempo mínimo de infusão por dose (100 mg 15 min; 200 mg 30 min; 300 mg 1,5 h; 400 mg 2,5 h; 500 mg 3,5 h), dose única máxima 7 mg/kg em ≥ 3,5 h (documento anexado ao Projeto).",
+   "f": "F",
+   "url": "",
+   "ano": 2024,
+   "usado_em": [
+    "anemia-ferropriva"
+   ]
   }
  ],
  "itens": [
@@ -9625,7 +9688,8 @@
    "fontes": [
     "dbha2025",
     "rename",
-    "remume"
+    "remume",
+    "cab28_has"
    ]
   },
   {
@@ -9838,7 +9902,8 @@
    "fontes": [
     "cochrane_constip",
     "rename",
-    "remume"
+    "remume",
+    "sc_gastro2022"
    ]
   },
   {
@@ -9849,18 +9914,20 @@
    "fontes": [
     "hemor",
     "rename",
-    "remume"
+    "remume",
+    "sc_gastro2022"
    ]
   },
   {
    "id": "parasitoses",
    "nome": "Enteroparasitoses",
    "modulo": "de",
-   "nv": 1,
+   "nv": 2,
    "fontes": [
     "cab28",
     "rename",
-    "remume"
+    "remume",
+    "cab28_dv"
    ]
   },
   {
@@ -9932,7 +9999,9 @@
    "fontes": [
     "stoffel",
     "rename",
-    "remume"
+    "remume",
+    "betim_ferro2024",
+    "sc_gastro2022"
    ]
   },
   {
@@ -10637,7 +10706,8 @@
     "acg_drge",
     "acg_dispepsia",
     "rename",
-    "remume"
+    "remume",
+    "sc_gastro2022"
    ]
   },
   {
@@ -10649,7 +10719,8 @@
     "nausea",
     "cochrane_ondans",
     "rename",
-    "remume"
+    "remume",
+    "cab28_dv"
    ]
   },
   {
@@ -10680,18 +10751,19 @@
    "id": "palpitacoes",
    "nome": "Palpitações / extrassístoles",
    "modulo": "de",
-   "nv": 1,
+   "nv": 2,
    "fontes": [
     "palpitacoes",
     "rename",
-    "remume"
+    "remume",
+    "tsrs_card2022"
    ]
   },
   {
    "id": "ivc",
    "nome": "Insuficiência venosa crônica / varizes",
    "modulo": "de",
-   "nv": 0,
+   "nv": 1,
    "fontes": [
     "ivc",
     "betim_feridas2026"
@@ -11430,7 +11502,8 @@
    "fontes": [
     "quedas_2022",
     "rename",
-    "remume"
+    "remume",
+    "wfg2022"
    ]
   },
   {
@@ -11478,7 +11551,9 @@
    "nv": 1,
    "fontes": [
     "dii",
-    "rename"
+    "rename",
+    "cab28_dv",
+    "sc_gastro2022"
    ]
   },
   {

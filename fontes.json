@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-26T16:28:23.583Z",
+ "gerado": "2026-10-26T20:25:18.332Z",
  "cmed": {
   "data": "09/10/2026",
   "fonte": "cmed_pmc2026",
@@ -3670,6 +3670,7 @@
    "ano": 2026,
    "usado_em": [
     "pu-3a5a",
+    "pu-4a",
     "pu-vacinas"
    ]
   },
@@ -3706,6 +3707,10 @@
    "ano": 2026,
    "usado_em": [
     "pu-12m",
+    "pu-15m",
+    "pu-1m",
+    "pu-2m",
+    "pu-4m",
     "pu-6m",
     "pu-9m",
     "pu-checkup",
@@ -3723,10 +3728,14 @@
    "url": "https://www.sbp.com.br/fileadmin/11/DC_HipovitD_diagn-tratam-prevenc_Atualiz.pdf",
    "ano": 2024,
    "usado_em": [
+    "pu-12m",
     "pu-1m",
     "pu-2m",
+    "pu-4m",
+    "pu-9m",
     "pu-checkup",
     "pu-guiada",
+    "pu-prematuro",
     "pu-rn",
     "pu-suplementacao"
    ]
@@ -6883,6 +6892,7 @@
     "pu-4m",
     "pu-6m",
     "pu-9m",
+    "pu-dnpm",
     "pu-guiada"
    ]
   },
@@ -7604,6 +7614,7 @@
     "pu-5a",
     "pu-6m",
     "pu-9m",
+    "pu-crescimento",
     "pu-rn"
    ]
   },

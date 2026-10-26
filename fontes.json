@@ -1,11 +1,11 @@
 {
- "gerado": "2026-10-26T16:14:49.472Z",
+ "gerado": "2026-10-26T16:21:39.584Z",
  "cmed": {
   "data": "09/10/2026",
   "fonte": "cmed_pmc2026",
   "icms": "PMC com ICMS de Minas Gerais: 12% para genéricos e 18% para os demais"
  },
- "n_fontes": 687,
+ "n_fontes": 689,
  "n_itens": 365,
  "sem_url": [
   "remume",
@@ -278,7 +278,8 @@
   "gvs2_malaria",
   "crie2023_vz",
   "pcdt_endo2025",
-  "betim_ferro2024"
+  "betim_ferro2024",
+  "betim_info2026"
  ],
  "nao_conferidas": [
   "aap_oma",
@@ -3129,9 +3130,7 @@
    "f": "F",
    "url": "https://app.wiki.saude.es.gov.br/vigilancia/sistemas/portaria_gm_ms_n%C2%BA_6.734_de_18_de_mar%C3%A7o_de_2025_-_esporotricose_humana_na_lista_nacional.pdf",
    "ano": 2025,
-   "usado_em": [
-    "pn-toxo"
-   ]
+   "usado_em": []
   },
   {
    "k": "acog700",
@@ -6972,7 +6971,13 @@
     "cr-bzd",
     "cr-depressao",
     "cr-esquizofrenia",
-    "risco-suicida"
+    "depressao",
+    "fadiga",
+    "insonia",
+    "panico",
+    "risco-suicida",
+    "tag",
+    "toc"
    ]
   },
   {
@@ -8765,6 +8770,7 @@
     "leptospirose",
     "malaria",
     "pep",
+    "pn-toxo",
     "raiva",
     "risco-suicida",
     "sarampo",
@@ -9342,6 +9348,28 @@
    "usado_em": [
     "anemia-ferropriva"
    ]
+  },
+  {
+   "k": "cab28_sm",
+   "s": "CAB 28 vol. II – saúde mental na demanda espontânea",
+   "t": "Ministério da Saúde. Cadernos de Atenção Básica nº 28, vol. II, 2013, cap. 2.23: risco de suicídio (fatores maiores: transtorno mental e tentativa prévia; perguntas sobre plano, meios e data; risco baixo = pensamentos sem plano, médio = pensamentos e plano sem intenção imediata, alto = plano, meios e intenção – não deixar só, acionar CAPS/hospital e transporte); triagem de depressão (2 perguntas + 7; 3–4 positivas leve, 5–7 moderada, 8–9 grave); latência de 2–6 semanas, meta de remissão em 2 meses; Quadro 65 (amitriptilina 10–25 → 100–300 mg; nortriptilina 10–25 → 50–100 mg; fluoxetina 10–20 → 20–80 mg); crise de ansiedade: sintomas por sistema, diferenciais orgânicos (hiper/hipotireoidismo, hiperparatireoidismo, asma, cardiovascular, hipoglicemia) e medicamentosos (anfetaminas, cafeína, corticoides, levotiroxina); antidepressivo é 1ª linha (Quadro 66: fluoxetina 20–80 mg em pânico, TAG, TOC, TEPT); clonazepam 0,25–0,5 mg SL como SOS na UBS; uso contínuo de benzodiazepínico com cautela (manual MS).",
+   "f": "F",
+   "url": "https://bvsms.saude.gov.br/bvs/publicacoes/acolhimento_demanda_espontanea_queixas_comuns_cab28v2.pdf",
+   "ano": 2013,
+   "usado_em": [
+    "depressao",
+    "panico",
+    "tag"
+   ]
+  },
+  {
+   "k": "betim_info2026",
+   "s": "Oferta local informada pela médica da UBS (Betim)",
+   "t": "Informação direta da médica da UBS Bueno Franco, Betim, em 26/10/2026: a rede de Betim oferece Holter e ecocardiograma; não fornece meias de compressão (informação da usuária, não é documento oficial).",
+   "f": "F",
+   "url": "",
+   "ano": 2026,
+   "usado_em": []
   }
  ],
  "itens": [
@@ -9973,11 +10001,13 @@
    "id": "panico",
    "nome": "Crise de ansiedade / ataque de pânico",
    "modulo": "de",
-   "nv": 2,
+   "nv": 3,
    "fontes": [
     "nice_ansiedade",
     "rename",
-    "remume"
+    "remume",
+    "cab28_sm",
+    "cab34"
    ]
   },
   {
@@ -9988,7 +10018,8 @@
    "fontes": [
     "acp_insonia",
     "rename",
-    "remume"
+    "remume",
+    "cab34"
    ]
   },
   {
@@ -10301,7 +10332,8 @@
    "modulo": "de",
    "nv": 0,
    "fontes": [
-    "cab28"
+    "cab28",
+    "cab34"
    ]
   },
   {
@@ -10388,7 +10420,9 @@
     "nice_depressao",
     "cipriani",
     "rename",
-    "remume"
+    "remume",
+    "cab28_sm",
+    "cab34"
    ]
   },
   {
@@ -10751,7 +10785,7 @@
    "id": "palpitacoes",
    "nome": "Palpitações / extrassístoles",
    "modulo": "de",
-   "nv": 2,
+   "nv": 1,
    "fontes": [
     "palpitacoes",
     "rename",
@@ -10763,7 +10797,7 @@
    "id": "ivc",
    "nome": "Insuficiência venosa crônica / varizes",
    "modulo": "de",
-   "nv": 1,
+   "nv": 0,
    "fontes": [
     "ivc",
     "betim_feridas2026"
@@ -10777,7 +10811,9 @@
    "fontes": [
     "nice_ansiedade",
     "rename",
-    "remume"
+    "remume",
+    "cab28_sm",
+    "cab34"
    ]
   },
   {
@@ -10872,7 +10908,8 @@
    "fontes": [
     "nice_toc",
     "rename",
-    "remume"
+    "remume",
+    "cab34"
    ]
   },
   {
@@ -11730,7 +11767,7 @@
    "nv": 1,
    "fontes": [
     "toxo_rede",
-    "notif2025",
+    "port11211",
     "sesmg_risco",
     "rename",
     "remume",
@@ -14043,7 +14080,7 @@
    "id": "pele-eczemas",
    "nome": "Eczema disidrótico (mãos e pés) e eczema de estase (pernas)",
    "modulo": "de",
-   "nv": 2,
+   "nv": 1,
    "fontes": [
     "tsrs_derm2023",
     "betim_feridas2026",

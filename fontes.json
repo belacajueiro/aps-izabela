@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-26T16:21:39.584Z",
+ "gerado": "2026-10-26T16:28:23.583Z",
  "cmed": {
   "data": "09/10/2026",
   "fonte": "cmed_pmc2026",
@@ -2919,6 +2919,7 @@
     "pn-dmg",
     "pn-guiada",
     "pn-has",
+    "pn-queixas",
     "pn-rh",
     "pn-risco",
     "pn-tireoide",
@@ -9346,7 +9347,8 @@
    "url": "",
    "ano": 2024,
    "usado_em": [
-    "anemia-ferropriva"
+    "anemia-ferropriva",
+    "pn-anemia"
    ]
   },
   {
@@ -11745,7 +11747,8 @@
     "rename",
     "remume",
     "betim_pn2024",
-    "pack2025"
+    "pack2025",
+    "betim_ferro2024"
    ]
   },
   {

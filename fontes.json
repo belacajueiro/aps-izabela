@@ -1,11 +1,11 @@
 {
- "gerado": "2026-10-25T17:14:37.099Z",
+ "gerado": "2026-10-26T15:46:38.760Z",
  "cmed": {
   "data": "09/10/2026",
   "fonte": "cmed_pmc2026",
   "icms": "PMC com ICMS de Minas Gerais: 12% para genéricos e 18% para os demais"
  },
- "n_fontes": 666,
+ "n_fontes": 671,
  "n_itens": 365,
  "sem_url": [
   "remume",
@@ -276,7 +276,8 @@
   "gvs3_raiva",
   "gvs3_pecon",
   "gvs2_malaria",
-  "crie2023_vz"
+  "crie2023_vz",
+  "pcdt_endo2025"
  ],
  "nao_conferidas": [
   "aap_oma",
@@ -1843,6 +1844,7 @@
    "url": "https://www.gov.br/conitec/pt-br/midias/relatorios/2026/relatorio-final/relatorio-de-recomendacao-no-1066-acido-tranexamico-e-dispositivo-intrauterino-liberador-de-levonorgestrel-diu-lng",
    "ano": 2026,
    "usado_em": [
+    "endometriose",
     "miomas",
     "sua"
    ]
@@ -6535,6 +6537,8 @@
     "in-hepatites",
     "in-hiv",
     "in-sifilis",
+    "nvg",
+    "pa-gestante",
     "pn-1consulta",
     "pn-2tri",
     "pn-3tri",
@@ -6553,7 +6557,9 @@
     "pp-depressao",
     "pp-guiada",
     "pp-pos-gestacao-risco",
-    "sifilis"
+    "sangramento-1tri",
+    "sifilis",
+    "teste-gravidez-positivo"
    ]
   },
   {
@@ -9041,6 +9047,7 @@
     "candidiase",
     "cervicite",
     "condiloma",
+    "dip",
     "herpes-genital",
     "sifilis",
     "tricomoniase",
@@ -9057,6 +9064,82 @@
    "ano": 2023,
    "usado_em": [
     "sifilis"
+   ]
+  },
+  {
+   "k": "pab_mulher2016",
+   "s": "Protocolos da Atenção Básica – Saúde das Mulheres (MS, 2016)",
+   "t": "Ministério da Saúde/Instituto Sírio-Libanês. Protocolos da Atenção Básica: Saúde das Mulheres, 2016 (cópia na base clínica): Fluxograma 1 e Quadros 1–5 (sangramento uterino anormal: aumentado, irregular e intermenstrual; manejo agudo – estrogênio, ACO 6/6 h, AINE, ácido tranexâmico 500 mg 8/8 h até 7 dias; crônico – AINE reduz ~49%, tranexâmico ~58%, ACO ~43%, medroxiprogesterona 10 mg do 5º ao 26º dia ~83%, DIU-LNG ~95%); Fluxogramas 2–4 e Quadro 6 (atraso menstrual e amenorreia; teste da progesterona com medroxiprogesterona 5–10 mg por 5–10 dias); Fluxograma 5 (sintomas pré-menstruais; ISRS contínuo ou na fase lútea; espironolactona 100 mg na fase lútea para edema); Fluxograma 10 e Quadros 8–9 (dor pélvica: dismenorreia com AINE, endometriose com ACO contínuo, progestágeno injetável ou noretisterona 10 mg/dia); Fluxograma 11 (imagens anexais: cisto funcional < 5 cm sem seguimento; ≥ 5 cm repetir USG em até 12 semanas; complexo → ginecologia; ascite/bilateral/septações grosseiras → oncologia com urgência); Fluxograma 12 (miomas); Parte 2, Fluxogramas 2, 9 e 12 (náusea e vômitos com metoclopramida ou dimenidrinato + piridoxina; síndromes hemorrágicas; síndromes hipertensivas); Quadro 15 (intercorrências do aleitamento: ingurgitamento, fissuras, candidíase, mastite com cefalexina/amoxicilina/amoxicilina-clavulanato/eritromicina 10 dias, abscesso); Parte 6, Quadros 4–5 (climatério: não hormonal e TH, contraindicações, seguimento) (protocolo MS).",
+   "f": "F",
+   "url": "https://bvsms.saude.gov.br/bvs/publicacoes/protocolos_atencao_basica_saude_mulheres.pdf",
+   "ano": 2016,
+   "usado_em": [
+    "amamentacao",
+    "amenorreia",
+    "cisto-ovariano",
+    "climaterio",
+    "dismenorreia",
+    "endometriose",
+    "mastite",
+    "miomas",
+    "nvg",
+    "pa-gestante",
+    "sangramento-1tri",
+    "sop",
+    "sua",
+    "teste-gravidez-positivo",
+    "tpm"
+   ]
+  },
+  {
+   "k": "tsrs_gin2023",
+   "s": "TelessaúdeRS – Ginecologia (2023)",
+   "t": "TelessaúdeRS-UFRGS. Protocolos de encaminhamento – Ginecologia, versão digital 2023 (cópia na base clínica): Protocolo 1 (SUA: urgência se anemia sintomática/instabilidade; ginecologia se refratário a 3 meses de tratamento otimizado, mioma submucoso, pólipo ou endométrio ≥ 12 mm, ≥ 45 anos ou fator de risco para câncer de endométrio; pós-menopausa → oncologia ginecológica); Protocolo 3 (massa anexial com critérios por tamanho e aspecto na menacme e na menopausa; sólida, complexa, sintomática ou com ascite → oncologia ginecológica); Protocolo 4 (miomatose); Protocolo 5 (prolapso: fisioterapia pélvica para todas; ginecologia se sintomático com desejo cirúrgico); Protocolo 7 (dor pélvica crônica, endometriose); Protocolo 8 e Quadro 5 (climatério); Protocolo 11 e Quadros 7–8 (amenorreia: 3 ciclos ou 6 meses; teste do progestágeno; hiperprolactinemia) (referência técnica de outro estado).",
+   "f": "F",
+   "url": "https://www.ufrgs.br/telessauders/regulasus/#regulasus-protocolos",
+   "ano": 2023,
+   "usado_em": [
+    "amenorreia",
+    "cisto-ovariano",
+    "climaterio",
+    "endometriose",
+    "miomas",
+    "prolapso",
+    "sua"
+   ]
+  },
+  {
+   "k": "pcdt_sop2019",
+   "s": "PCDT Síndrome dos Ovários Policísticos (MS, 2019)",
+   "t": "Ministério da Saúde. PCDT da Síndrome dos Ovários Policísticos, 2019 (cópia na base clínica): Rotterdam – 2 de 3 (≤ 9 ciclos/ano; hiperandrogenismo clínico ou laboratorial; > 12 folículos de 2–9 mm ou volume ≥ 10 cm³, com a observação de que aparelhos de maior resolução elevam o corte para > 25); adolescentes: os 3 critérios; excluir com 17-OHP, TSH, prolactina e FSH; TOTG em obesas ou com história familiar; ACO 21/7; medroxiprogesterona 10 mg por 10–12 dias/mês; ciproterona 12,5–50 mg associada ao ACO; metformina 500 mg até 2.550 mg/dia; espironolactona com potássio monitorado; endocrinologia se virilização ou testosterona > 2 DP (protocolo).",
+   "f": "F",
+   "url": "https://www.gov.br/conitec/pt-br/midias/protocolos/pcdt_sop.pdf",
+   "ano": 2019,
+   "usado_em": [
+    "sop"
+   ]
+  },
+  {
+   "k": "pcdt_endo2025",
+   "s": "PCDT Endometriose (Relatório CONITEC 1050, set/2025)",
+   "t": "Ministério da Saúde/CONITEC. Protocolo Clínico e Diretrizes Terapêuticas – Endometriose, Relatório de Recomendação nº 1050, setembro de 2025 (cópia na base clínica): CA-125 deve ser abandonado no diagnóstico; tratamento empírico com ACO, desogestrel, medroxiprogesterona ou DIU-LNG se dismenorreia/dispareunia progressivas > 6 meses sem resposta a AINE ou dor pélvica crônica com imagem/exame compatível; DIU-LNG para quem tem contraindicação ou não adere ao ACO (Portaria SECTICS 41/2025); 1ª linha: etinilestradiol 0,03 + levonorgestrel 0,15 mg (21/7), medroxiprogesterona 10 mg VO 3×/dia contínuo ou 150 mg IM a cada 12–13 semanas, desogestrel 75 mcg contínuo, DIU-LNG 52 mg; 2ª linha (confirmação laparoscópica): análogos de GnRH com add-back e danazol (protocolo; versão do relatório, publicação final não conferida).",
+   "f": "F",
+   "url": "",
+   "ano": 2025,
+   "usado_em": [
+    "dismenorreia",
+    "endometriose"
+   ]
+  },
+  {
+   "k": "mgar2022",
+   "s": "Manual de Gestação de Alto Risco (MS, 2022)",
+   "t": "Ministério da Saúde. Manual de Gestação de Alto Risco, 2022 (cópia na base clínica): pré-eclâmpsia com sinais de gravidade – PA ≥ 160/110 confirmada em 15 min, HELLP, iminência de eclâmpsia, eclâmpsia, edema agudo de pulmão, dor torácica, creatinina ≥ 1,2; PA ≥ 160/110 mesmo sem sintomas indica sulfato de magnésio; Quadro 2 – hidralazina 5 mg IV a cada 20 min (máx. 30 mg) ou nifedipino 10 mg VO a cada 20–30 min (máx. 30 mg), meta de reduzir 15–25% na 1ª hora; Quadro 7 – sulfato de magnésio: Zuspan 4 g IV em 5–10 min + 1–2 g/h, ou Pritchard 4 g IV + 10 g IM (5 g em cada glúteo) e 5 g IM a cada 4 h; IM não usar na HELLP com plaquetopenia; Quadro 8 – manter se diurese ≥ 25 mL/h, reflexos presentes, FR ≥ 12; gluconato de cálcio 10% 1 g IV como antídoto (manual MS).",
+   "f": "F",
+   "url": "https://bvsms.saude.gov.br/bvs/publicacoes/manual_gestacao_alto_risco.pdf",
+   "ano": 2022,
+   "usado_em": [
+    "pa-gestante"
    ]
   }
  ],
@@ -9805,7 +9888,8 @@
    "fontes": [
     "cochrane_dismen",
     "rename",
-    "remume"
+    "remume",
+    "pab_mulher2016"
    ]
   },
   {
@@ -9816,7 +9900,8 @@
    "fontes": [
     "abm_mastite",
     "rename",
-    "remume"
+    "remume",
+    "pab_mulher2016"
    ]
   },
   {
@@ -9839,7 +9924,9 @@
    "fontes": [
     "acog_nvg",
     "rename",
-    "remume"
+    "remume",
+    "pab_mulher2016",
+    "betim_pn2024"
    ]
   },
   {
@@ -10133,7 +10220,9 @@
     "conitec_diulng",
     "endometriose_news",
     "rename",
-    "remume"
+    "remume",
+    "pab_mulher2016",
+    "tsrs_gin2023"
    ]
   },
   {
@@ -10143,18 +10232,21 @@
    "nv": 0,
    "fontes": [
     "nice_hmb",
-    "conitec_diulng"
+    "conitec_diulng",
+    "pab_mulher2016",
+    "tsrs_gin2023"
    ]
   },
   {
    "id": "prolapso",
    "nome": "Prolapso genital – avaliação e encaminhamento",
    "modulo": "de",
-   "nv": 1,
+   "nv": 2,
    "fontes": [
     "prolapso",
     "rename",
-    "remume"
+    "remume",
+    "tsrs_gin2023"
    ]
   },
   {
@@ -10165,7 +10257,8 @@
    "fontes": [
     "sop_2023",
     "rename",
-    "remume"
+    "remume",
+    "pcdt_sop2019"
    ]
   },
   {
@@ -10176,7 +10269,8 @@
    "fontes": [
     "cochrane_tpm",
     "rename",
-    "remume"
+    "remume",
+    "pab_mulher2016"
    ]
   },
   {
@@ -10477,7 +10571,9 @@
    "fontes": [
     "menopausa",
     "rename",
-    "remume"
+    "remume",
+    "pab_mulher2016",
+    "tsrs_gin2023"
    ]
   },
   {
@@ -10490,14 +10586,15 @@
     "pcdt_ist22",
     "rename",
     "remume",
-    "tele_dip"
+    "tele_dip",
+    "pcdt_ist2022"
    ]
   },
   {
    "id": "bartholinite",
    "nome": "Bartholinite / abscesso de Bartholin",
    "modulo": "de",
-   "nv": 1,
+   "nv": 2,
    "fontes": [
     "bartholin",
     "rename",
@@ -10705,7 +10802,9 @@
    "modulo": "de",
    "nv": 1,
    "fontes": [
-    "oradss"
+    "oradss",
+    "tsrs_gin2023",
+    "pab_mulher2016"
    ]
   },
   {
@@ -10717,7 +10816,9 @@
     "eshre_endo",
     "endometriose_news",
     "rename",
-    "remume"
+    "remume",
+    "pcdt_endo2025",
+    "tsrs_gin2023"
    ]
   },
   {
@@ -10729,7 +10830,9 @@
     "amenorreia",
     "sop_2023",
     "rename",
-    "remume"
+    "remume",
+    "pab_mulher2016",
+    "tsrs_gin2023"
    ]
   },
   {
@@ -10821,7 +10924,8 @@
    "fontes": [
     "abm_mastite",
     "rename",
-    "remume"
+    "remume",
+    "pab_mulher2016"
    ]
   },
   {
@@ -11066,7 +11170,8 @@
    "modulo": "de",
    "nv": 1,
    "fontes": [
-    "sangramento_1tri"
+    "sangramento_1tri",
+    "pab_mulher2016"
    ]
   },
   {
@@ -11077,7 +11182,9 @@
    "fontes": [
     "iff_eclampsia",
     "rename",
-    "remume"
+    "remume",
+    "mgar2022",
+    "betim_pn2024"
    ]
   },
   {
@@ -11088,7 +11195,8 @@
    "fontes": [
     "prenatal",
     "rename",
-    "remume"
+    "remume",
+    "pab_mulher2016"
    ]
   },
   {

@@ -1709,7 +1709,27 @@ const SC = [
    {t:"Áreas parciais: quantas palmas da mão da criança (com os dedos ≈ 1% cada)?", sel:opt([["Nenhuma",0],["1",1],["2",2],["3",3],["4",4],["5",5],["7",7],["10",10]])}],
    cab:s => s + "% de SCQ",
    interp:s => "Contar só 2º e 3º graus. Remoção imediata (CAB 28): espessura parcial > 10% na criança ou > 5% abaixo de 2 anos, 3º grau > 2%, ou face, mãos, pés, genitais, períneo, grandes articulações, elétrica, química, inalação ou suspeita de maus-tratos.",
-   nota:"Regra dos nove pediátrica (CAB 28 vol. II, 2013, Tabela 3). Em lactentes a tabela de Lund e Browder (Tabela 4) é mais precisa: cabeça 19% até 1 ano e 17% de 1 a 4 anos."}
+   nota:"Regra dos nove pediátrica (CAB 28 vol. II, 2013, Tabela 3). Em lactentes a tabela de Lund e Browder (Tabela 4) é mais precisa: cabeça 19% até 1 ano e 17% de 1 a 4 anos."},
+ {id:"gota2015", nome:"Gota – critérios ACR/EULAR 2015", itens:[
+   {t:"Articulação/bursa acometida em algum episódio", sel:opt([["Outra (nem tornozelo/médio pé nem 1ª MTF)",0],["Tornozelo ou médio pé (sem 1ª MTF)",1],["1ª metatarsofalangeana (podagra)",2]])},
+   {t:"Características do episódio: eritema; não suporta toque/pressão; grande dificuldade para andar ou usar a articulação", sel:opt([["Nenhuma",0],["Uma",1],["Duas",2],["Três",3]])},
+   {t:"Curso temporal: ≥ 2 de (dor máxima < 24 h; resolução ≤ 14 dias; normalização entre episódios)", sel:opt([["Nenhum episódio típico",0],["Um episódio típico",1],["Episódios típicos recorrentes",2]])},
+   {t:"Tofo clínico", sel:opt([["Ausente",0],["Presente",4]])},
+   {t:"Ácido úrico sérico (maior valor, idealmente fora da crise e sem hipouricemiante)", sel:opt([["4 a < 6 mg/dL",0],["< 4 mg/dL",-4],["6 a < 8 mg/dL",2],["8 a < 10 mg/dL",3],["≥ 10 mg/dL",4]])},
+   {t:"Líquido sinovial", sel:opt([["Não avaliado",0],["Cristais de urato negativos",-2]])},
+   {t:"Imagem: depósito de urato (USG duplo contorno ou DECT)", sel:opt([["Ausente/não feita",0],["Presente",4]])},
+   {t:"Radiografia de mãos/pés com erosão típica de gota", sel:opt([["Ausente/não feita",0],["Presente",4]])}],
+   interp:s => s>=8 ? "≥ 8 pontos: classificada como gota (critério de inclusão: pelo menos 1 episódio de dor/edema em articulação periférica ou bursa). Cristais no líquido ou no tofo bastam sozinhos." : "< 8 pontos: não preenche a classificação – considerar outras artrites (séptica, pseudogota, reativa, artrite reumatoide) e, se possível, artrocentese.",
+   nota:"Neogi et al., 2015 (ACR/EULAR), reproduzido no TelessaúdeRS Reumatologia 2022, Quadro 11. Critério de classificação: não substitui a punção quando há suspeita de artrite séptica."},
+ {id:"ottawa", nome:"Regras de Ottawa (tornozelo e pé)", sp:true, itens:[
+   {t:"Dor na região maleolar + dor à palpação da borda posterior ou da ponta do maléolo LATERAL (6 cm distais)", p:1},
+   {t:"Dor na região maleolar + dor à palpação da borda posterior ou da ponta do maléolo MEDIAL (6 cm distais)", p:1},
+   {t:"Dor no médio pé + dor à palpação da base do 5º metatarso", p:1},
+   {t:"Dor no médio pé + dor à palpação do navicular", p:1},
+   {t:"Incapaz de apoiar o peso e dar 4 passos logo após o trauma e na consulta", p:1}],
+   cab:s => s>0 ? "Ottawa POSITIVO – pedir radiografia" : "Ottawa negativo",
+   interp:s => s>0 ? "Radiografia do tornozelo (itens maleolares/apoio) e/ou do pé (5º metatarso/navicular)." : "Fratura muito improvável: dispensa radiografia; tratar como entorse e reavaliar se não melhorar em 1 semana.",
+   nota:"Stiell et al. (regras validadas para ≥ 18 anos; itens citados de memória). Sensibilidade próxima de 100% para fraturas significativas; não aplicar em intoxicados, com lesão distraidora ou alteração de sensibilidade."}
 
 ];
 const SC_POR_ID = {"cr-prediabetes":"findrisc","cr-aga":"ivcf","cr-inapetencia":"mnasf","cr-fragilidade":"sarcf","po-idoso-vulneravel":"ivcf","po-acamado":"braden","po-pobreza":"savassi","pu-18m":"mchat","pu-24m":"mchat","pu-dnpm":"mchat","pp-depressao":"epds","pp-1semana":"epds","pp-consulta":"epds","cr-asma":"gina","cr-dpoc":"mmrc",faringite:"centor", pac:"curb65", tvp:"wells", "dor-toracica":"marburg", sepse:"qsofa", crupe:"westley", "abstinencia-alcool":"ciwa", depressao:"phq9", "risco-suicida":"phq9", tag:"gad7", panico:"gad7", delirium:"cam"};
@@ -2066,7 +2086,7 @@ function runScInline(el){
 function runCalc(el){ const id = el.dataset.calc; try { if (id.startsWith("sc:")) runScInline(el); else if (CALCS[id]) CALCS[id].run(el); } catch(e){ saida(el, vazio("Não foi possível calcular com esses dados.")); } }
 function initCalcs(root){ root.querySelectorAll("[data-calc]").forEach(runCalc); }
 ["input","change"].forEach(t => document.addEventListener(t, ev => { const el = ev.target.closest && ev.target.closest("[data-calc]"); if (el) runCalc(el); }));
-const CALC_MENU = [["pa","Pressão arterial"],["prevent","PREVENT e risco SBC"],["lipides","LDL e estatina"],["ckd","TFG, KDIGO e KFRE"],["antropo","IMC, cintura e peso ideal"],["glic","HbA1c e NPH"],["ferro","Déficit de ferro"],["calcio","Cálcio corrigido"],["fib4","FIB-4"],["sc:cha2ds2va","CHA₂DS₂-VA"],["sc:hasbled","HAS-BLED"],["sc:rankin","Rankin modificada"],["sc:barthel","Índice de Barthel"],["sc:gds15","GDS-15"],["sc:fagerstrom","Fagerström"],["sc:mmrc","mMRC"],["sc:gina","Controle da asma (GINA)"],["sc:childpugh","Child-Pugh"],["sc:phq9","PHQ-9"],["sc:wellstep","Wells TEP"],["sc:perc","PERC"],["sc:twist","TWIST"],["sc:alvarado","Alvarado"],["sc:q4at","4AT"],["sc:cssrs","C-SSRS (triagem)"],["sc:semaforo","Semáforo NICE (febre)"],["sc:framingham","Framingham (IC)"],["sc:scq","Queimadura: SCQ adulto"],["sc:scqc","Queimadura: SCQ criança"]];
+const CALC_MENU = [["pa","Pressão arterial"],["prevent","PREVENT e risco SBC"],["lipides","LDL e estatina"],["ckd","TFG, KDIGO e KFRE"],["antropo","IMC, cintura e peso ideal"],["glic","HbA1c e NPH"],["ferro","Déficit de ferro"],["calcio","Cálcio corrigido"],["fib4","FIB-4"],["sc:cha2ds2va","CHA₂DS₂-VA"],["sc:hasbled","HAS-BLED"],["sc:rankin","Rankin modificada"],["sc:barthel","Índice de Barthel"],["sc:gds15","GDS-15"],["sc:fagerstrom","Fagerström"],["sc:mmrc","mMRC"],["sc:gina","Controle da asma (GINA)"],["sc:childpugh","Child-Pugh"],["sc:phq9","PHQ-9"],["sc:wellstep","Wells TEP"],["sc:perc","PERC"],["sc:twist","TWIST"],["sc:alvarado","Alvarado"],["sc:q4at","4AT"],["sc:cssrs","C-SSRS (triagem)"],["sc:semaforo","Semáforo NICE (febre)"],["sc:framingham","Framingham (IC)"],["sc:scq","Queimadura: SCQ adulto"],["sc:scqc","Queimadura: SCQ criança"],["sc:gota2015","Gota (ACR/EULAR 2015)"],["sc:ottawa","Regras de Ottawa"]];
 function openCalc(id){
   const s = $("#calc-sel"); if (id) s.value = id;
   $("#calc-box").innerHTML = calcHtml(s.value); initCalcs($("#calc-box")); $("#dlg-calc").showModal();

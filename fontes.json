@@ -1,11 +1,11 @@
 {
- "gerado": "2026-10-26T15:46:38.760Z",
+ "gerado": "2026-10-26T15:51:05.838Z",
  "cmed": {
   "data": "09/10/2026",
   "fonte": "cmed_pmc2026",
   "icms": "PMC com ICMS de Minas Gerais: 12% para genéricos e 18% para os demais"
  },
- "n_fontes": 671,
+ "n_fontes": 673,
  "n_itens": 365,
  "sem_url": [
   "remume",
@@ -9141,6 +9141,34 @@
    "usado_em": [
     "pa-gestante"
    ]
+  },
+  {
+   "k": "tsrs_reum2022",
+   "s": "TelessaúdeRS – Reumatologia adulto (2022)",
+   "t": "TelessaúdeRS-UFRGS. Protocolos de encaminhamento – Reumatologia adulto, 2022 (cópia na base clínica): Protocolo 5 e Quadro 10 (dor lombar; suspeita de cauda equina/compressão medular); Protocolo 6 e Quadro 11 (gota: critérios ACR/EULAR 2015 ≥ 8 pontos; reumatologia se ≥ 3 crises/ano apesar de tratamento otimizado – profilaxia com colchicina, AINE ou corticoide em dose baixa + alopurinol até 800 mg/dia; medicina interna/nefrologia se hiperuricemia de origem incerta ou TFG < 30; ortopedia se tofos complicados); Protocolo 7, Quadros 12–13 (osteoartrite: dor mecânica, rigidez < 30 min, sem sintomas constitucionais; tópicos – capsaicina 0,025–0,075% ou AINE gel – no manejo inicial de joelho e mão; perda ≥ 10% do peso; exercícios; AINE sistêmicos na menor dose com IBP se risco; encaminhar após 6 meses de tratamento otimizado); Protocolo 9 (bursite/tendinite: ortopedia após 4 meses de tratamento otimizado com cinesioterapia; saúde do trabalhador se relação laboral > 3 meses); Protocolo 10 (dor miofascial) (referência técnica de outro estado).",
+   "f": "F",
+   "url": "https://www.ufrgs.br/telessauders/regulasus/#regulasus-protocolos",
+   "ano": 2022,
+   "usado_em": [
+    "artrite-aguda",
+    "cervicalgia",
+    "fascite",
+    "gota",
+    "oa-joelho",
+    "ombro"
+   ]
+  },
+  {
+   "k": "cab28_neuro",
+   "s": "CAB 28 vol. II – cefaleia e crise epiléptica",
+   "t": "Ministério da Saúde. Cadernos de Atenção Básica nº 28, vol. II, 2013, cap. 2.2 e 2.3: Quadro 1 (sinais de alerta da cefaleia); limitar analgésicos a no máximo 3 vezes por semana e ergóticos a 2 vezes por semana para prevenir cefaleia crônica diária; cefaleia por abuso de medicação sempre no diferencial; profilaxia da migrânea com propranolol 40 mg ou amitriptilina 25 mg; Quadros 7–9 (classificação das crises, causas por idade – em adultos > 35 anos doença cerebrovascular, tumor, abstinência alcoólica, distúrbios metabólicos; fármacos que podem causar crises: betalactâmicos, quinolonas, isoniazida, tramadol, meperidina, antidepressivos, antipsicóticos, lítio, teofilina, abstinência de álcool, benzodiazepínicos e barbitúricos, cocaína, anfetaminas) (manual MS).",
+   "f": "F",
+   "url": "https://bvsms.saude.gov.br/bvs/publicacoes/acolhimento_demanda_espontanea_queixas_comuns_cab28v2.pdf",
+   "ano": 2013,
+   "usado_em": [
+    "cefaleia-abuso",
+    "crise-convulsiva"
+   ]
   }
  ],
  "itens": [
@@ -9728,7 +9756,8 @@
    "fontes": [
     "gota_ecr",
     "rename",
-    "remume"
+    "remume",
+    "tsrs_reum2022"
    ]
   },
   {
@@ -10195,7 +10224,8 @@
    "fontes": [
     "ichd3",
     "rename",
-    "remume"
+    "remume",
+    "cab28_neuro"
    ]
   },
   {
@@ -10282,7 +10312,8 @@
     "ombro",
     "entorse",
     "rename",
-    "remume"
+    "remume",
+    "tsrs_reum2022"
    ]
   },
   {
@@ -10293,7 +10324,8 @@
    "fontes": [
     "nice_lombar",
     "rename",
-    "remume"
+    "remume",
+    "tsrs_reum2022"
    ]
   },
   {
@@ -10316,7 +10348,8 @@
    "fontes": [
     "oarsi",
     "rename",
-    "remume"
+    "remume",
+    "tsrs_reum2022"
    ]
   },
   {
@@ -10560,7 +10593,8 @@
    "fontes": [
     "fascite",
     "rename",
-    "remume"
+    "remume",
+    "tsrs_reum2022"
    ]
   },
   {
@@ -10654,7 +10688,8 @@
    "fontes": [
     "ilae_crise",
     "rename",
-    "remume"
+    "remume",
+    "cab28_neuro"
    ]
   },
   {
@@ -10672,12 +10707,13 @@
    "id": "artrite-aguda",
    "nome": "Monoartrite / artralgia aguda",
    "modulo": "de",
-   "nv": 1,
+   "nv": 2,
    "fontes": [
     "monoartrite",
     "gota_ecr",
     "rename",
-    "remume"
+    "remume",
+    "tsrs_reum2022"
    ]
   },
   {
@@ -10704,7 +10740,7 @@
    "id": "tunel-carpo",
    "nome": "Síndrome do túnel do carpo",
    "modulo": "de",
-   "nv": 1,
+   "nv": 2,
    "fontes": [
     "tunel_carpo",
     "cochrane_b12",

@@ -125,6 +125,17 @@
     ir: [["tremor", "Tremor"], ["queda-idoso", "Queda no idoso"], ["cr-demencia", "Demência"], ["cr-polifarmacia", "Polifarmácia"]]
   });
   AUG("cr-artralgia", {
+    dif: {fluxo: [
+      {t: "Padrão inflamatório"},
+      {t: "Quantas articulações?", ramos: [
+        {r: "Mono", n: [{t: "Séptica? gota? → ver monoartrite aguda", k: "stop"}]},
+        {r: "Oligo (2–4)", n: [{t: "Espondiloartrite, reativa, gota, psoriásica", k: "warn"}]},
+        {r: "Poli (≥ 5)", n: [{t: "AR, LES, viral (chikungunya, parvovírus), psoriásica", k: "warn"}]}
+      ]},
+      {t: "Artrite > 6 semanas → reumatologia", k: "warn"}
+    ], nota: "Conhecimento consolidado [C]."},
+    difT: "Quantas articulações?",
+    mud: "fluxograma por número de articulações e links",
     ir: [["artrite-aguda", "Monoartrite aguda"], ["cr-ar", "Artrite reumatoide"], ["oa-joelho", "Osteoartrite"], ["chikungunya", "Chikungunya"], ["cr-fibromialgia", "Fibromialgia"]]
   });
   AUG("cr-ar", {

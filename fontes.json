@@ -1,12 +1,12 @@
 {
- "gerado": "2026-10-27T00:30:43.619Z",
+ "gerado": "2026-10-27T22:53:28.820Z",
  "cmed": {
   "data": "09/10/2026",
   "fonte": "cmed_pmc2026",
   "icms": "PMC com ICMS de Minas Gerais: 12% para genéricos e 18% para os demais"
  },
- "n_fontes": 690,
- "n_itens": 365,
+ "n_fontes": 716,
+ "n_itens": 388,
  "sem_url": [
   "remume",
   "aap_oma",
@@ -279,7 +279,11 @@
   "crie2023_vz",
   "pcdt_endo2025",
   "betim_ferro2024",
-  "betim_info2026"
+  "betim_info2026",
+  "memento_fito_betim2022",
+  "protocolo_fito_farm_betim2022",
+  "formulario_fito_anvisa2026",
+  "memento_fb2016"
  ],
  "nao_conferidas": [
   "aap_oma",
@@ -510,7 +514,9 @@
   "alvarado1986",
   "cssrs",
   "mckee1971",
-  "aap_piolho2022"
+  "aap_piolho2022",
+  "formulario_fito_anvisa2026",
+  "memento_fb2016"
  ],
  "fontes": [
   {
@@ -650,6 +656,11 @@
     "febre-crianca",
     "febre-maculosa",
     "ferida",
+    "fi-constipacao",
+    "fi-dispepsia",
+    "fi-dor-articular",
+    "fi-prescrever",
+    "fi-tosse",
     "gengivoestomatite",
     "gota",
     "gripal",
@@ -893,6 +904,26 @@
     "febre-crianca",
     "febre-maculosa",
     "ferida",
+    "fi-acne",
+    "fi-ansiedade-sono",
+    "fi-boca-garganta",
+    "fi-colicas",
+    "fi-constipacao",
+    "fi-contusao",
+    "fi-depressao",
+    "fi-dispepsia",
+    "fi-dor-articular",
+    "fi-enxaqueca",
+    "fi-feridas",
+    "fi-fissura-mamilo",
+    "fi-fralda",
+    "fi-herpes-labial",
+    "fi-pele-seca",
+    "fi-pernas-pesadas",
+    "fi-picadas",
+    "fi-prescrever",
+    "fi-queimadura",
+    "fi-tosse",
     "gengivoestomatite",
     "gota",
     "gripal",
@@ -1246,6 +1277,7 @@
     "escabiose",
     "exantema",
     "fadiga",
+    "fi-queimadura",
     "herpes-labial",
     "hordeolo",
     "impetigo",
@@ -1280,7 +1312,8 @@
    "ano": 2017,
    "usado_em": [
     "dispepsia",
-    "drge"
+    "drge",
+    "fi-dispepsia"
    ]
   },
   {
@@ -1302,6 +1335,7 @@
    "url": "",
    "ano": null,
    "usado_em": [
+    "fi-resfriado",
     "resfriado",
     "tosse-subaguda"
    ]
@@ -1668,7 +1702,8 @@
    "url": "",
    "ano": 2015,
    "usado_em": [
-    "dismenorreia"
+    "dismenorreia",
+    "fi-colicas"
    ]
   },
   {
@@ -8439,6 +8474,8 @@
     "acne",
     "condiloma",
     "dermatite-contato",
+    "fi-acne",
+    "fi-pele-seca",
     "pele-alopecia",
     "pele-atlas",
     "pele-cancer",
@@ -9101,6 +9138,7 @@
     "climaterio",
     "dismenorreia",
     "endometriose",
+    "fi-fissura-mamilo",
     "mastite",
     "miomas",
     "nvg",
@@ -9393,6 +9431,357 @@
    "usado_em": [
     "escroto-agudo"
    ]
+  },
+  {
+   "k": "memento_fito_betim2022",
+   "s": "Memento Terapêutico Fitoterápico do SUS/Betim, 1ª ed., 2022",
+   "t": "SMS Betim / Diretoria de Assistência Farmacêutica e Insumos. Memento Terapêutico Fitoterápico do SUS/Betim, 1ª edição, 2022 (documento municipal): 27 plantas padronizadas na Farmácia Viva SUS-Betim, formulações, indicações, posologia, contraindicações, interações, reações adversas, prescritores por categoria (dentista, enfermeiro, farmacêutico, médico, nutricionista) e regras da receita em 2 vias (1ª via para a Farmácia Viva manipular; 2ª via com o usuário para retirada na farmácia da unidade). Arquivo no Drive da usuária, lido na íntegra em 27/10/2026. Não localizei edição posterior em busca na web.",
+   "f": "F",
+   "url": "",
+   "ano": 2026,
+   "usado_em": [
+    "acne",
+    "aftas",
+    "amamentacao",
+    "bronquite",
+    "caimbras",
+    "cistite",
+    "constipacao",
+    "cr-ansiedade",
+    "cr-depressao",
+    "cr-pe-diabetico",
+    "cr-polifarmacia",
+    "depressao",
+    "dermatite-atopica",
+    "dermatite-fraldas",
+    "dismenorreia",
+    "dispepsia",
+    "distensao",
+    "entorse",
+    "faringite",
+    "ferida",
+    "fi-acne",
+    "fi-ansiedade-sono",
+    "fi-boca-garganta",
+    "fi-colicas",
+    "fi-constipacao",
+    "fi-contusao",
+    "fi-depressao",
+    "fi-dispepsia",
+    "fi-dor-articular",
+    "fi-enxaqueca",
+    "fi-feridas",
+    "fi-fissura-mamilo",
+    "fi-fralda",
+    "fi-herpes-labial",
+    "fi-pele-seca",
+    "fi-pernas-pesadas",
+    "fi-picadas",
+    "fi-prescrever",
+    "fi-queimadura",
+    "fi-resfriado",
+    "fi-tosse",
+    "fi-urinario",
+    "fi-zumbido-tontura",
+    "gengivoestomatite",
+    "herpes-labial",
+    "insonia",
+    "ivc",
+    "lombalgia",
+    "migranea",
+    "oa-joelho",
+    "panico",
+    "picada-inseto",
+    "po-acamado",
+    "prurido",
+    "pu-amamentacao",
+    "pu-sol-repelente",
+    "queimadura",
+    "resfriado",
+    "seborreica",
+    "tag",
+    "tontura",
+    "tosse-subaguda",
+    "vppb"
+   ]
+  },
+  {
+   "k": "protocolo_fito_farm_betim2022",
+   "s": "Protocolo de Prescrição Farmacêutica de Fitoterápicos no SUS/Betim, 2ª ed., 2022",
+   "t": "SMS Betim. Protocolo de Prescrição Farmacêutica de Fitoterápicos no SUS/Betim, 2ª ed., 2022 (Portaria Municipal GAPR nº 159/18 e Resolução CFF nº 586/13): 21 plantas prescritíveis pelo farmacêutico do SUS-Betim após o curso municipal; posologias conferidas iguais às do Memento 2022, com diferenças só de redação. Arquivo no Drive da usuária, lido em 27/10/2026.",
+   "f": "F",
+   "url": "",
+   "ano": 2026,
+   "usado_em": [
+    "fi-prescrever"
+   ]
+  },
+  {
+   "k": "formulario_fito_anvisa2026",
+   "s": "ANVISA – Formulário de Fitoterápicos da Farmacopeia Brasileira, 3ª ed., 2026",
+   "t": "ANVISA. Formulário de Fitoterápicos da Farmacopeia Brasileira, 3ª ed., 2026 (referência oficial das preparações magistrais e oficinais). Arquivo no Drive da usuária; não aberto nesta revisão.",
+   "f": "C",
+   "url": "",
+   "ano": 2026,
+   "usado_em": [
+    "fi-prescrever"
+   ]
+  },
+  {
+   "k": "memento_fb2016",
+   "s": "ANVISA – Memento Fitoterápico da Farmacopeia Brasileira, 2016",
+   "t": "ANVISA. Memento Fitoterápico da Farmacopeia Brasileira, 1ª ed., 2016 (monografias com evidência e posologia). Arquivo no Drive da usuária; não aberto nesta revisão.",
+   "f": "C",
+   "url": "",
+   "ano": 2016,
+   "usado_em": []
+  },
+  {
+   "k": "cochrane_hiperico2008",
+   "s": "Linde K et al. Cochrane 2008 – hipérico na depressão maior",
+   "t": "Linde K, Berner MM, Kriston L. St John's wort for major depression. Cochrane Database Syst Rev 2008;(4):CD000448 (RS, 29 ECR, 5.489 pacientes): extratos de hipérico > placebo (RR de resposta 1,28 nos 9 ECR maiores; 1,87 nos menores), semelhantes a tricíclicos (RR 1,02) e ISRS (RR 1,00), com menos abandono por efeito adverso que ISRS (OR 0,53); heterogeneidade e efeito maior em ECR de países de língua alemã.",
+   "f": "F",
+   "url": "https://doi.org/10.1002/14651858.CD000448.pub3",
+   "ano": 2008,
+   "usado_em": [
+    "fi-depressao",
+    "fi-prescrever"
+   ]
+  },
+  {
+   "k": "cochrane_equinacea2014",
+   "s": "Karsch-Völk M et al. Cochrane 2014 – equinácea no resfriado",
+   "t": "Karsch-Völk M et al. Echinacea for preventing and treating the common cold. Cochrane Database Syst Rev 2014;(2):CD000530 (RS, 24 ECR duplo-cegos, 4.631 participantes): nenhum dos 12 ensaios de prevenção foi significativo (agrupamento post hoc sugere redução relativa de 10–20%); dos 7 ensaios de tratamento, só 1 encurtou o resfriado. Conclusão: não demonstrou benefício no tratamento.",
+   "f": "F",
+   "url": "https://doi.org/10.1002/14651858.CD000530.pub3",
+   "ano": 2014,
+   "usado_em": [
+    "fi-herpes-labial",
+    "fi-prescrever",
+    "fi-resfriado"
+   ]
+  },
+  {
+   "k": "cochrane_castanha2012",
+   "s": "Pittler MH, Ernst E. Cochrane 2012 – castanha-da-índia na IVC",
+   "t": "Pittler MH, Ernst E. Horse chestnut seed extract for chronic venous insufficiency. Cochrane Database Syst Rev 2012;11:CD003230 (RS): extrato oral padronizado reduziu dor nas pernas (6 de 7 ECR; DMP 42,4 mm em escala de 100 mm num ECR) e volume da perna (6 ECR, n = 502; −32,1 mL) vs placebo; um ECR sugeriu efeito semelhante à meia de compressão; eventos adversos leves. Tratamento eficaz e seguro a curto prazo, com ressalvas.",
+   "f": "F",
+   "url": "https://doi.org/10.1002/14651858.CD003230.pub4",
+   "ano": 2012,
+   "usado_em": [
+    "fi-pernas-pesadas",
+    "fi-prescrever"
+   ]
+  },
+  {
+   "k": "cochrane_tanaceto2015",
+   "s": "Wider B et al. Cochrane 2015 – tanaceto na prevenção da enxaqueca",
+   "t": "Wider B, Pittler MH, Ernst E. Feverfew for preventing migraine. Cochrane Database Syst Rev 2015;(4):CD002286 (RS, 6 ECR, 561 pacientes): o maior ECR (n = 218, extrato estável) mostrou 0,6 crise/mês a menos que o placebo (4,8 → 2,9 × 4,8 → 3,5); os demais, pequenos ou negativos. Evidência de baixa qualidade; eventos leves (gastrointestinais, aftas).",
+   "f": "F",
+   "url": "https://doi.org/10.1002/14651858.CD002286.pub3",
+   "ano": 2015,
+   "usado_em": [
+    "fi-enxaqueca"
+   ]
+  },
+  {
+   "k": "cochrane_ginkgo_zumbido2022",
+   "s": "Sereda M et al. Cochrane 2022 – ginkgo no zumbido",
+   "t": "Sereda M et al. Ginkgo biloba for tinnitus. Cochrane Database Syst Rev 2022;11:CD013514 (RS, 12 ECR, 1.915 participantes): pode ter pouco ou nenhum efeito sobre a gravidade do zumbido em 3–6 meses (THI −1,35; IC95% −8,26 a 5,55; certeza muito baixa); sem diferença em sangramento ou convulsão (certeza baixa).",
+   "f": "F",
+   "url": "https://doi.org/10.1002/14651858.CD013514.pub2",
+   "ano": 2022,
+   "usado_em": [
+    "fi-prescrever",
+    "fi-zumbido-tontura"
+   ]
+  },
+  {
+   "k": "cochrane_ginkgo_zumbido2013",
+   "s": "Hilton MP et al. Cochrane 2013 – ginkgo no zumbido",
+   "t": "Hilton MP, Zimmermann EF, Hunt WT. Ginkgo biloba for tinnitus. Cochrane Database Syst Rev 2013;(3):CD003852 (4 ECR, 1.543 participantes, baixo risco de viés): sem evidência de eficácia quando o zumbido é a queixa principal.",
+   "f": "F",
+   "url": "https://doi.org/10.1002/14651858.CD003852.pub3",
+   "ano": 2013,
+   "usado_em": [
+    "fi-zumbido-tontura"
+   ]
+  },
+  {
+   "k": "cochrane_herbal_lombalgia2014",
+   "s": "Oltean H et al. Cochrane 2014 – fitoterapia na lombalgia",
+   "t": "Oltean H et al. Herbal medicine for low-back pain. Cochrane Database Syst Rev 2014;(12):CD004504 (RS, 14 ECR, 2.050 participantes): Harpagophytum procumbens padronizado em 50 ou 100 mg de harpagosídeo/dia pode ser melhor que placebo para dor a curto prazo e uso de resgate (2 ECR, 315 pacientes, qualidade baixa); equivalência à rofecoxibe em 1 ECR de qualidade muito baixa.",
+   "f": "F",
+   "url": "https://doi.org/10.1002/14651858.CD004504.pub4",
+   "ano": 2014,
+   "usado_em": [
+    "fi-dor-articular"
+   ]
+  },
+  {
+   "k": "cochrane_alcachofra2013",
+   "s": "Wider B et al. Cochrane 2013 – alcachofra na hipercolesterolemia",
+   "t": "Wider B et al. Artichoke leaf extract for treating hypercholesterolaemia. Cochrane Database Syst Rev 2013;(3):CD003335 (3 ECR, 262 participantes): indício de redução do colesterol total (4,2% a 18,5%), mas evidência ainda não convincente.",
+   "f": "F",
+   "url": "https://doi.org/10.1002/14651858.CD003335.pub3",
+   "ano": 2013,
+   "usado_em": [
+    "fi-dispepsia"
+   ]
+  },
+  {
+   "k": "holtmann2003_alcachofra",
+   "s": "Holtmann G et al. 2003 – alcachofra na dispepsia funcional (ECR)",
+   "t": "Holtmann G et al. Efficacy of artichoke leaf extract in the treatment of patients with functional dyspepsia: a six-week placebo-controlled, double-blind, multicentre trial. Aliment Pharmacol Ther 2003;18:1099-105 (ECR, n = 247; extrato 640 mg 3×/dia): melhora global de sintomas e qualidade de vida (Nepean) maiores que placebo.",
+   "f": "F",
+   "url": "https://doi.org/10.1046/j.1365-2036.2003.01767.x",
+   "ano": 2003,
+   "usado_em": [
+    "fi-dispepsia"
+   ]
+  },
+  {
+   "k": "cochrane_passiflora2007",
+   "s": "Miyasaka LS et al. Cochrane 2007 – passiflora no transtorno de ansiedade",
+   "t": "Miyasaka LS, Atallah AN, Soares BGO. Passiflora for anxiety disorder. Cochrane Database Syst Rev 2007;(1):CD004518 (2 ECR, 198 participantes): ensaios poucos e pequenos para qualquer conclusão; num deles, sem diferença em relação a benzodiazepínico.",
+   "f": "F",
+   "url": "https://doi.org/10.1002/14651858.CD004518.pub2",
+   "ano": 2007,
+   "usado_em": [
+    "fi-ansiedade-sono"
+   ]
+  },
+  {
+   "k": "janda2020_passiflora",
+   "s": "Janda K et al. 2020 – passiflora em transtornos neuropsiquiátricos (RS)",
+   "t": "Janda K et al. Passiflora incarnata in Neuropsychiatric Disorders – A Systematic Review. Nutrients 2020;12:3894 (9 ECR de 1 a 30 dias): a maioria relatou menos ansiedade, com efeito menos evidente na ansiedade leve; sem eventos adversos relevantes.",
+   "f": "F",
+   "url": "https://doi.org/10.3390/nu12123894",
+   "ano": 2020,
+   "usado_em": [
+    "fi-ansiedade-sono"
+   ]
+  },
+  {
+   "k": "leach2015_insonia",
+   "s": "Leach MJ, Page AT. 2015 – fitoterapia na insônia (RS/MA)",
+   "t": "Leach MJ, Page AT. Herbal medicine for insomnia: a systematic review and meta-analysis. Sleep Med Rev 2015;24:1-12 (14 ECR, 1.602 participantes; valeriana, camomila, kava, wuling): nenhuma diferença estatística em relação ao placebo ou ao controle ativo em 13 desfechos de eficácia.",
+   "f": "F",
+   "url": "https://doi.org/10.1016/j.smrv.2014.12.003",
+   "ano": 2015,
+   "usado_em": [
+    "fi-ansiedade-sono"
+   ]
+  },
+  {
+   "k": "leite1986_capimlimao",
+   "s": "Leite JR et al. 1986 – capim-limão em humanos (ECR duplo-cego)",
+   "t": "Leite JR et al. Pharmacology of lemongrass (Cymbopogon citratus Stapf). III. Assessment of eventual toxic, hypnotic and anxiolytic effects on humans. J Ethnopharmacol 1986;17:75-83: chá de capim-limão não tóxico em 2 semanas; sem efeito hipnótico em 50 voluntários nem ansiolítico em 18 com ansiedade-traço alta (duplo-cego, vs placebo). Estudo brasileiro (CEBRID/UNIFESP).",
+   "f": "F",
+   "url": "https://doi.org/10.1016/0378-8741(86)90074-7",
+   "ano": 1986,
+   "usado_em": [
+    "fi-ansiedade-sono"
+   ]
+  },
+  {
+   "k": "tabach2017_espinheira",
+   "s": "Tabach R et al. 2017 – espinheira-santa, fase I",
+   "t": "Tabach R, Duarte-Almeida JM, Carlini EA. Pharmacological and Toxicological Study of Maytenus ilicifolia Leaf Extract Part II – Clinical Study (Phase I). Phytother Res 2017;31:921-6 (24 voluntários sadios, até 2.000 mg/dia): bem tolerado; xerostomia (16,7%) e poliúria (20,8%) reversíveis. Estudo de segurança, não de eficácia.",
+   "f": "F",
+   "url": "https://doi.org/10.1002/ptr.5816",
+   "ano": 2017,
+   "usado_em": [
+    "fi-dispepsia"
+   ]
+  },
+  {
+   "k": "carneiro2014_cavalinha",
+   "s": "Carneiro DM et al. 2014 – cavalinha, efeito diurético (ECR)",
+   "t": "Carneiro DM et al. Randomized, double-blind clinical trial to assess the acute diuretic effect of Equisetum arvense in healthy volunteers. Evid Based Complement Alternat Med 2014;2014:760683 (36 homens sadios, cruzado, 4 dias): extrato seco padronizado 900 mg/dia teve efeito diurético maior que placebo e equivalente à hidroclorotiazida 25 mg, sem alteração relevante de eletrólitos.",
+   "f": "F",
+   "url": "https://doi.org/10.1155/2014/760683",
+   "ano": 2014,
+   "usado_em": [
+    "fi-urinario"
+   ]
+  },
+  {
+   "k": "carneiro2022_cavalinha",
+   "s": "Carneiro DM et al. 2022 – cavalinha na HAS estágio 1 (ECR)",
+   "t": "Carneiro DM et al. Antihypertensive effect of Equisetum arvense L.: a double-blind, randomized efficacy and safety clinical trial. Phytomedicine 2022;99:153955 (58 pacientes, HAS estágio 1, 3 meses): extrato seco 900 mg/dia reduziu PAS/PAD 12,6/8,1 mmHg, sem diferença da hidroclorotiazida 25 mg.",
+   "f": "F",
+   "url": "https://doi.org/10.1016/j.phymed.2022.153955",
+   "ano": 2022,
+   "usado_em": [
+    "fi-urinario"
+   ]
+  },
+  {
+   "k": "aga_acg2023_constipacao",
+   "s": "AGA-ACG 2023 – tratamento farmacológico da constipação crônica",
+   "t": "Chang L et al. American Gastroenterological Association–American College of Gastroenterology Clinical Practice Guideline: Pharmacological Management of Chronic Idiopathic Constipation. Gastroenterology 2023;164:1086-106 (GRADE): recomendação forte para PEG, picossulfato, linaclotida, plecanatida e prucaloprida; condicional para fibra, lactulose, sene, óxido de magnésio e lubiprostona.",
+   "f": "F",
+   "url": "https://doi.org/10.1053/j.gastro.2023.03.214",
+   "ano": 2023,
+   "usado_em": [
+    "fi-constipacao"
+   ]
+  },
+  {
+   "k": "widrig2007_arnica",
+   "s": "Widrig R et al. 2007 – arnica gel × ibuprofeno gel na artrose de mãos (ECR)",
+   "t": "Widrig R et al. Choosing between NSAID and arnica for topical treatment of hand osteoarthritis in a randomised, double-blind study. Rheumatol Int 2007;27:585-91 (n = 204, 21 dias): gel de arnica (tintura 50 g/100 g) não inferior ao ibuprofeno gel 5% em dor e função; eventos adversos 4,8% × 6,1%.",
+   "f": "F",
+   "url": "https://doi.org/10.1007/s00296-007-0304-y",
+   "ano": 2007,
+   "usado_em": [
+    "fi-contusao"
+   ]
+  },
+  {
+   "k": "calendula_fraldas_ecr",
+   "s": "ECR de calêndula na dermatite de fraldas (Panahi 2012; Adib-Hajbaghery 2014)",
+   "t": "Panahi Y et al. ScientificWorldJournal 2012;2012:810234 (n = 66, < 3 anos): pomada de calêndula com menos lesões que creme de aloe. Adib-Hajbaghery M et al. J Res Med Sci 2014;19:314-8 (n = 60): cura completa em 3 dias 36,7% com calêndula × 90% com bentonita. Ensaios pequenos, de um só país, com comparadores pouco usados no Brasil.",
+   "f": "F",
+   "url": "https://doi.org/10.1100/2012/810234",
+   "ano": 2014,
+   "usado_em": [
+    "fi-fralda"
+   ]
+  },
+  {
+   "k": "salehi2020_enzimas",
+   "s": "Salehi SH et al. 2020 – enzimas desbridantes em queimaduras (RS)",
+   "t": "Salehi SH et al. Clinical value of debriding enzymes as an adjunct to standard early surgical excision in human burns: a systematic review. J Burn Care Res 2020;41:1224-30 (16 ensaios): evidência insuficiente para papaína; colagenase e bromelaína com algum respaldo.",
+   "f": "F",
+   "url": "https://doi.org/10.1093/jbcr/iraa074",
+   "ano": 2020,
+   "usado_em": [
+    "fi-feridas"
+   ]
+  },
+  {
+   "k": "rosamosqueta_ecr2019",
+   "s": "Aguirre-Romero AB et al. 2019 – óleo de rosa-mosqueta (ECR)",
+   "t": "Aguirre-Romero AB et al. Efficacy and safety of a rosehip seed oil extract in the prevention and treatment of skin lesions in the hands of patients with type 1 diabetes caused by finger prick. Endocrinol Diabetes Nutr 2019;67:186-93 (ECR aberto, 68 crianças/136 mãos): seguro, mas sem melhora das lesões.",
+   "f": "F",
+   "url": "https://doi.org/10.1016/j.endinu.2019.04.008",
+   "ano": 2019,
+   "usado_em": [
+    "fi-feridas"
+   ]
+  },
+  {
+   "k": "alecrim_dismen2019",
+   "s": "Tahoonian-Golkhatmy F et al. 2019 – alecrim × ácido mefenâmico na dismenorreia (ECR)",
+   "t": "Tahoonian-Golkhatmy F et al. Comparison of rosemary and mefenamic acid capsules on menstrual bleeding and primary dysmenorrhea: a clinical trial. Iran J Nurs Midwifery Res 2019;24:301-5 (n = 82 estudantes; cápsula 250 mg nos 3 primeiros dias): redução de dor semelhante nos dois grupos. ECR pequeno, com cápsula, não com tintura.",
+   "f": "F",
+   "url": "https://doi.org/10.4103/ijnmr.IJNMR_99_18",
+   "ano": 2019,
+   "usado_em": [
+    "fi-colicas"
+   ]
   }
  ],
  "itens": [
@@ -9464,7 +9853,8 @@
    "fontes": [
     "cochrane_resfriado",
     "cab28",
-    "cab28_rs"
+    "cab28_rs",
+    "memento_fito_betim2022"
    ]
   },
   {
@@ -9499,7 +9889,8 @@
     "idsa_faringite",
     "rename",
     "remume",
-    "fhemig_amigdalite"
+    "fhemig_amigdalite",
+    "memento_fito_betim2022"
    ]
   },
   {
@@ -9599,7 +9990,8 @@
     "rename",
     "remume",
     "tele_hp",
-    "hp_consenso5"
+    "hp_consenso5",
+    "memento_fito_betim2022"
    ]
   },
   {
@@ -9611,7 +10003,8 @@
     "idsa_itu",
     "rename",
     "remume",
-    "itu_bh2022"
+    "itu_bh2022",
+    "memento_fito_betim2022"
    ]
   },
   {
@@ -9694,7 +10087,8 @@
    "fontes": [
     "nice_lombar",
     "rename",
-    "remume"
+    "remume",
+    "memento_fito_betim2022"
    ]
   },
   {
@@ -9706,7 +10100,8 @@
     "ahs_migranea",
     "rename",
     "remume",
-    "sbce_profilaxia2022"
+    "sbce_profilaxia2022",
+    "memento_fito_betim2022"
    ]
   },
   {
@@ -9728,7 +10123,8 @@
    "fontes": [
     "aaohns_vppb",
     "rename",
-    "remume"
+    "remume",
+    "memento_fito_betim2022"
    ]
   },
   {
@@ -9798,7 +10194,8 @@
     "cochrane_bronq",
     "cab28",
     "cab28_rs",
-    "tb_sr2019"
+    "tb_sr2019",
+    "memento_fito_betim2022"
    ]
   },
   {
@@ -9954,7 +10351,8 @@
     "cochrane_constip",
     "rename",
     "remume",
-    "sc_gastro2022"
+    "sc_gastro2022",
+    "memento_fito_betim2022"
    ]
   },
   {
@@ -10001,7 +10399,8 @@
    "fontes": [
     "entorse",
     "rename",
-    "remume"
+    "remume",
+    "memento_fito_betim2022"
    ]
   },
   {
@@ -10030,7 +10429,8 @@
     "rename",
     "remume",
     "cab28_sm",
-    "cab34"
+    "cab34",
+    "memento_fito_betim2022"
    ]
   },
   {
@@ -10042,7 +10442,8 @@
     "acp_insonia",
     "rename",
     "remume",
-    "cab34"
+    "cab34",
+    "memento_fito_betim2022"
    ]
   },
   {
@@ -10144,7 +10545,8 @@
    "nv": 1,
    "fontes": [
     "rename",
-    "remume"
+    "remume",
+    "memento_fito_betim2022"
    ]
   },
   {
@@ -10156,7 +10558,8 @@
     "cochrane_dismen",
     "rename",
     "remume",
-    "pab_mulher2016"
+    "pab_mulher2016",
+    "memento_fito_betim2022"
    ]
   },
   {
@@ -10241,7 +10644,8 @@
     "gvs_tetano",
     "rename",
     "remume",
-    "gvs1_tetano"
+    "gvs1_tetano",
+    "memento_fito_betim2022"
    ]
   },
   {
@@ -10254,7 +10658,8 @@
     "rename",
     "remume",
     "cab28",
-    "gvs1_tetano"
+    "gvs1_tetano",
+    "memento_fito_betim2022"
    ]
   },
   {
@@ -10376,7 +10781,8 @@
    "fontes": [
     "prurido",
     "rename",
-    "remume"
+    "remume",
+    "memento_fito_betim2022"
    ]
   },
   {
@@ -10388,7 +10794,8 @@
     "tontura",
     "aaohns_vppb",
     "rename",
-    "remume"
+    "remume",
+    "memento_fito_betim2022"
    ]
   },
   {
@@ -10445,7 +10852,8 @@
     "rename",
     "remume",
     "cab28_sm",
-    "cab34"
+    "cab34",
+    "memento_fito_betim2022"
    ]
   },
   {
@@ -10593,7 +11001,8 @@
     "oarsi",
     "rename",
     "remume",
-    "tsrs_reum2022"
+    "tsrs_reum2022",
+    "memento_fito_betim2022"
    ]
   },
   {
@@ -10632,7 +11041,8 @@
     "rename",
     "remume",
     "tb_sr2019",
-    "tsrs_pneumo2023"
+    "tsrs_pneumo2023",
+    "memento_fito_betim2022"
    ]
   },
   {
@@ -10682,7 +11092,8 @@
     "malassezia",
     "rename",
     "remume",
-    "tsrs_derm2023"
+    "tsrs_derm2023",
+    "memento_fito_betim2022"
    ]
   },
   {
@@ -10739,7 +11150,8 @@
     "eaaci_urt",
     "rename",
     "remume",
-    "gvs3_himenop"
+    "gvs3_himenop",
+    "memento_fito_betim2022"
    ]
   },
   {
@@ -10788,7 +11200,8 @@
    "fontes": [
     "aftas",
     "rename",
-    "remume"
+    "remume",
+    "memento_fito_betim2022"
    ]
   },
   {
@@ -10823,7 +11236,8 @@
    "nv": 0,
    "fontes": [
     "ivc",
-    "betim_feridas2026"
+    "betim_feridas2026",
+    "memento_fito_betim2022"
    ]
   },
   {
@@ -10836,7 +11250,8 @@
     "rename",
     "remume",
     "cab28_sm",
-    "cab34"
+    "cab34",
+    "memento_fito_betim2022"
    ]
   },
   {
@@ -10977,7 +11392,8 @@
    "modulo": "de",
    "nv": 0,
    "fontes": [
-    "caimbras"
+    "caimbras",
+    "memento_fito_betim2022"
    ]
   },
   {
@@ -10988,7 +11404,8 @@
    "fontes": [
     "entorse",
     "rename",
-    "remume"
+    "remume",
+    "memento_fito_betim2022"
    ]
   },
   {
@@ -11180,7 +11597,8 @@
    "fontes": [
     "gengivo",
     "rename",
-    "remume"
+    "remume",
+    "memento_fito_betim2022"
    ]
   },
   {
@@ -11216,7 +11634,8 @@
     "abm_mastite",
     "rename",
     "remume",
-    "pab_mulher2016"
+    "pab_mulher2016",
+    "memento_fito_betim2022"
    ]
   },
   {
@@ -11305,7 +11724,8 @@
     "aad_acne",
     "rename",
     "remume",
-    "tsrs_derm2023"
+    "tsrs_derm2023",
+    "memento_fito_betim2022"
    ]
   },
   {
@@ -11317,7 +11737,8 @@
     "herpes_labial",
     "rename",
     "remume",
-    "cab28"
+    "cab28",
+    "memento_fito_betim2022"
    ]
   },
   {
@@ -11539,7 +11960,8 @@
    "fontes": [
     "da_guias",
     "rename",
-    "remume"
+    "remume",
+    "memento_fito_betim2022"
    ]
   },
   {
@@ -13040,7 +13462,8 @@
    "fontes": [
     "sbd_pe",
     "iwgdf2023",
-    "sbd_sus"
+    "sbd_sus",
+    "memento_fito_betim2022"
    ]
   },
   {
@@ -13099,7 +13522,8 @@
    "fontes": [
     "beers2023",
     "stopp3",
-    "desprescr_ibp"
+    "desprescr_ibp",
+    "memento_fito_betim2022"
    ]
   },
   {
@@ -13260,7 +13684,8 @@
     "npiap2019",
     "fp_elenco2026",
     "nt50_ad2026",
-    "betim_feridas2026"
+    "betim_feridas2026",
+    "memento_fito_betim2022"
    ]
   },
   {
@@ -13496,7 +13921,8 @@
     "cipriani",
     "cab34",
     "rename",
-    "remume"
+    "remume",
+    "memento_fito_betim2022"
    ]
   },
   {
@@ -13508,7 +13934,8 @@
     "nice_cg113",
     "cab34",
     "rename",
-    "remume"
+    "remume",
+    "memento_fito_betim2022"
    ]
   },
   {
@@ -13708,7 +14135,8 @@
     "sbp_ict2021",
     "sesmg_formula2021",
     "abm_mastite",
-    "remume"
+    "remume",
+    "memento_fito_betim2022"
    ]
   },
   {
@@ -13892,7 +14320,8 @@
    "fontes": [
     "sbp_pele2024",
     "sbp_picadas2025",
-    "sbp_repel2015"
+    "sbp_repel2015",
+    "memento_fito_betim2022"
    ]
   },
   {
@@ -14139,6 +14568,273 @@
     "betim_dm2026",
     "pcdt_dm2",
     "remume"
+   ]
+  },
+  {
+   "id": "fi-prescrever",
+   "nome": "Como prescrever fitoterápicos da Farmácia Viva de Betim (receita, segurança e interações)",
+   "modulo": "fi",
+   "nv": 4,
+   "fontes": [
+    "memento_fito_betim2022",
+    "protocolo_fito_farm_betim2022",
+    "rename",
+    "remume",
+    "cochrane_hiperico2008",
+    "cochrane_castanha2012",
+    "cochrane_equinacea2014",
+    "cochrane_ginkgo_zumbido2022"
+   ]
+  },
+  {
+   "id": "fi-ansiedade-sono",
+   "nome": "Ansiedade leve, irritabilidade e insônia leve: passiflora, melissa e erva-cidreira",
+   "modulo": "fi",
+   "nv": 2,
+   "fontes": [
+    "memento_fito_betim2022",
+    "cochrane_passiflora2007",
+    "janda2020_passiflora",
+    "leach2015_insonia",
+    "leite1986_capimlimao",
+    "remume"
+   ]
+  },
+  {
+   "id": "fi-depressao",
+   "nome": "Depressão leve a moderada: hipérico (erva-de-são-joão) – quando pode e quando não pode",
+   "modulo": "fi",
+   "nv": 4,
+   "fontes": [
+    "memento_fito_betim2022",
+    "cochrane_hiperico2008",
+    "remume"
+   ]
+  },
+  {
+   "id": "fi-dispepsia",
+   "nome": "Dispepsia, empachamento e gases: espinheira-santa, alcachofra e melissa",
+   "modulo": "fi",
+   "nv": 3,
+   "fontes": [
+    "memento_fito_betim2022",
+    "holtmann2003_alcachofra",
+    "cochrane_alcachofra2013",
+    "tabach2017_espinheira",
+    "rename",
+    "remume",
+    "acg_dispepsia"
+   ]
+  },
+  {
+   "id": "fi-constipacao",
+   "nome": "Constipação ocasional: sene (tintura)",
+   "modulo": "fi",
+   "nv": 3,
+   "fontes": [
+    "memento_fito_betim2022",
+    "aga_acg2023_constipacao",
+    "rename",
+    "remume"
+   ]
+  },
+  {
+   "id": "fi-colicas",
+   "nome": "Cólica menstrual e cólica intestinal leve: capim-limão, erva-cidreira e alecrim",
+   "modulo": "fi",
+   "nv": 2,
+   "fontes": [
+    "memento_fito_betim2022",
+    "alecrim_dismen2019",
+    "cochrane_dismen",
+    "remume"
+   ]
+  },
+  {
+   "id": "fi-tosse",
+   "nome": "Tosse e catarro de vias aéreas superiores: xarope de guaco",
+   "modulo": "fi",
+   "nv": 3,
+   "fontes": [
+    "memento_fito_betim2022",
+    "rename",
+    "remume"
+   ]
+  },
+  {
+   "id": "fi-resfriado",
+   "nome": "Resfriado comum e infecções respiratórias de repetição: equinácea (evidência contra o uso no tratamento)",
+   "modulo": "fi",
+   "nv": 2,
+   "fontes": [
+    "memento_fito_betim2022",
+    "cochrane_equinacea2014",
+    "cochrane_resfriado"
+   ]
+  },
+  {
+   "id": "fi-boca-garganta",
+   "nome": "Aftas, feridas na boca e dor de garganta: orabase de camomila, tanchagem, romã e barbatimão",
+   "modulo": "fi",
+   "nv": 2,
+   "fontes": [
+    "memento_fito_betim2022",
+    "remume"
+   ]
+  },
+  {
+   "id": "fi-herpes-labial",
+   "nome": "Herpes labial: gel de guaçatonga e hidratante labial",
+   "modulo": "fi",
+   "nv": 2,
+   "fontes": [
+    "memento_fito_betim2022",
+    "cochrane_equinacea2014",
+    "remume"
+   ]
+  },
+  {
+   "id": "fi-contusao",
+   "nome": "Contusão, entorse, hematoma e dor muscular localizada: arnica e castanha-da-índia tópicas",
+   "modulo": "fi",
+   "nv": 2,
+   "fontes": [
+    "memento_fito_betim2022",
+    "widrig2007_arnica",
+    "remume"
+   ]
+  },
+  {
+   "id": "fi-dor-articular",
+   "nome": "Dor articular leve e dor lombar: garra-do-diabo (harpagofito)",
+   "modulo": "fi",
+   "nv": 3,
+   "fontes": [
+    "memento_fito_betim2022",
+    "cochrane_herbal_lombalgia2014",
+    "rename",
+    "remume"
+   ]
+  },
+  {
+   "id": "fi-pernas-pesadas",
+   "nome": "Pernas pesadas e insuficiência venosa leve: castanha-da-índia",
+   "modulo": "fi",
+   "nv": 3,
+   "fontes": [
+    "memento_fito_betim2022",
+    "cochrane_castanha2012",
+    "remume"
+   ]
+  },
+  {
+   "id": "fi-enxaqueca",
+   "nome": "Prevenção da enxaqueca: tanaceto (não trata a crise)",
+   "modulo": "fi",
+   "nv": 2,
+   "fontes": [
+    "memento_fito_betim2022",
+    "cochrane_tanaceto2015",
+    "remume"
+   ]
+  },
+  {
+   "id": "fi-zumbido-tontura",
+   "nome": "Zumbido, tontura e câimbras: ginkgo (evidência contra o uso rotineiro)",
+   "modulo": "fi",
+   "nv": 2,
+   "fontes": [
+    "memento_fito_betim2022",
+    "cochrane_ginkgo_zumbido2013",
+    "cochrane_ginkgo_zumbido2022"
+   ]
+  },
+  {
+   "id": "fi-feridas",
+   "nome": "Feridas crônicas e curativos: papaína, óleo de girassol, barbatimão e rosa-mosqueta",
+   "modulo": "fi",
+   "nv": 4,
+   "fontes": [
+    "memento_fito_betim2022",
+    "salehi2020_enzimas",
+    "rosamosqueta_ecr2019",
+    "remume"
+   ]
+  },
+  {
+   "id": "fi-queimadura",
+   "nome": "Queimadura leve e queimadura solar: gel de calêndula e de camomila",
+   "modulo": "fi",
+   "nv": 2,
+   "fontes": [
+    "memento_fito_betim2022",
+    "cab28",
+    "remume"
+   ]
+  },
+  {
+   "id": "fi-pele-seca",
+   "nome": "Pele seca, dermatite atópica, dermatite seborreica e coceira: loções e cremes da Farmácia Viva",
+   "modulo": "fi",
+   "nv": 2,
+   "fontes": [
+    "memento_fito_betim2022",
+    "remume",
+    "tsrs_derm2023"
+   ]
+  },
+  {
+   "id": "fi-acne",
+   "nome": "Acne leve: gel de calêndula + barbatimão + copaíba",
+   "modulo": "fi",
+   "nv": 2,
+   "fontes": [
+    "memento_fito_betim2022",
+    "tsrs_derm2023",
+    "remume"
+   ]
+  },
+  {
+   "id": "fi-fralda",
+   "nome": "Dermatite de fralda no adulto e na criança ≥ 6 anos, pele periestoma: creme de calêndula + óxido de zinco",
+   "modulo": "fi",
+   "nv": 2,
+   "fontes": [
+    "memento_fito_betim2022",
+    "calendula_fraldas_ecr",
+    "remume"
+   ]
+  },
+  {
+   "id": "fi-picadas",
+   "nome": "Picadas de inseto e repelente da Farmácia Viva",
+   "modulo": "fi",
+   "nv": 3,
+   "fontes": [
+    "memento_fito_betim2022",
+    "remume"
+   ]
+  },
+  {
+   "id": "fi-fissura-mamilo",
+   "nome": "Fissura mamilar na amamentação: solução de calêndula 5%",
+   "modulo": "fi",
+   "nv": 2,
+   "fontes": [
+    "memento_fito_betim2022",
+    "remume",
+    "pab_mulher2016"
+   ]
+  },
+  {
+   "id": "fi-urinario",
+   "nome": "Queixas urinárias menores e retenção de líquido: cavalinha (não trata infecção urinária)",
+   "modulo": "fi",
+   "nv": 2,
+   "fontes": [
+    "memento_fito_betim2022",
+    "carneiro2014_cavalinha",
+    "carneiro2022_cavalinha"
    ]
   }
  ]

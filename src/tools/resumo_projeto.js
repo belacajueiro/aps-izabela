@@ -46,8 +46,8 @@ const cl = s => String(s || "").replace(/\*\*/g, "").replace(/_{3,}/g, "___").re
 const T = (s, n) => s.length > n ? s.slice(0, n - 1).replace(/\s+\S*$/, "") + "…" : s;
 const one = s => cl(s).replace(/\s*\n+\s*/g, " · ");
 const TR = {ambos: "evidência = SUS", evidencia: "melhor evidência", sus: "opção SUS", fora: "fora do SUS"};
-const MOD = {de: "Demanda espontânea", cr: "Crônicos", pn: "Pré-natal e puerpério", pu: "Puericultura", mu: "Saúde da mulher", pv: "Prevenção e rastreios", ho: "Saúde do homem", in: "Infecciosas (IST, HIV, hepatites, TB, hanseníase)", po: "Populações e atenção domiciliar", co: "Consulta guiada"};
-const ARQ = {de: "02-demanda-espontanea-*.md", cr: "03-cronicos.md (Saúde mental em 06-cronicos-saude-mental.md)", pn: "04-pre-natal-puericultura.md", pu: "04-pre-natal-puericultura.md", co: "04-pre-natal-puericultura.md", mu: "05-mulher-homem-prevencao-infecciosas-populacoes.md", pv: "05-mulher-homem-prevencao-infecciosas-populacoes.md", ho: "05-mulher-homem-prevencao-infecciosas-populacoes.md", in: "05-mulher-homem-prevencao-infecciosas-populacoes.md", po: "05-mulher-homem-prevencao-infecciosas-populacoes.md"};
+const MOD = {de: "Demanda espontânea", cr: "Crônicos", pn: "Pré-natal e puerpério", pu: "Puericultura", mu: "Saúde da mulher", pv: "Prevenção e rastreios", ho: "Saúde do homem", in: "Infecciosas (IST, HIV, hepatites, TB, hanseníase)", po: "Populações e atenção domiciliar", co: "Consulta guiada", fi: "Fitoterapia – Farmácia Viva"};
+const ARQ = {de: "02-demanda-espontanea-*.md", cr: "03-cronicos.md (Saúde mental em 06-cronicos-saude-mental.md)", pn: "04-pre-natal-puericultura.md", pu: "04-pre-natal-puericultura.md", co: "04-pre-natal-puericultura.md", mu: "05-mulher-homem-prevencao-infecciosas-populacoes.md", pv: "05-mulher-homem-prevencao-infecciosas-populacoes.md", ho: "05-mulher-homem-prevencao-infecciosas-populacoes.md", in: "05-mulher-homem-prevencao-infecciosas-populacoes.md", po: "05-mulher-homem-prevencao-infecciosas-populacoes.md", fi: "07-fitoterapia.md"};
 
 function rx(r) {
   const L = cl(r.texto).split("\n"), out = [];
@@ -105,13 +105,13 @@ function gerar(dir) {
 
 **Guia Clínico:** as linhas "Agir agora (guia)" e "Seções do guia" mostram o que existe no Guia Clínico de cada item; o conteúdo das seções está só no app.
 
-**Documentos desta série (gerados):** 00 (este índice e dados locais) · 02-demanda-espontanea-1 e -2 · 03-cronicos · 06-cronicos-saude-mental · 04-pre-natal-puericultura · 05-mulher-homem-prevencao-infecciosas-populacoes · fontes-do-app · precos-balcao. **Escritos à mão:** pendencias-do-app e os registros de versão (app-aps/NN-vXX-*.md).
+**Documentos desta série (gerados):** 00 (este índice e dados locais) · 02-demanda-espontanea-1 e -2 · 03-cronicos · 06-cronicos-saude-mental · 04-pre-natal-puericultura · 05-mulher-homem-prevencao-infecciosas-populacoes · 07-fitoterapia · fontes-do-app · precos-balcao. **Escritos à mão:** pendencias-do-app e os registros de versão (app-aps/NN-vXX-*.md).
 
 **Legenda das prescrições:** [evidência = SUS] a mesma opção é a melhor evidência e está no SUS; [melhor evidência] opção preferida pela evidência; [opção SUS] alternativa disponível no SUS; [fora do SUS] opção de compra.
 
 ## Índice de condições (${C.length})
 `;
-  for (const m of ["de", "cr", "pn", "pu", "mu", "pv", "ho", "in", "po", "co"]) {
+  for (const m of ["de", "cr", "pn", "pu", "mu", "pv", "ho", "in", "po", "co", "fi"]) {
     if (!g[m]) continue;
     const bySys = {}; g[m].forEach(c => (bySys[c.sistema] = bySys[c.sistema] || []).push(c));
     s += `\n### ${MOD[m]} (${g[m].length}) — em app-aps/${ARQ[m]}\n`;
@@ -135,6 +135,8 @@ function gerar(dir) {
     [["pn", "Pré-natal e puerpério"], ["pu", "Puericultura"], ["co", "Consulta guiada"]].map(([m, t]) => `\n# ${t}\n` + corpo(g[m] || []).join("")).join("");
   docs["05-mulher-homem-prevencao-infecciosas-populacoes.md"] = H("Saúde da mulher, saúde do homem, prevenção, infecciosas e populações") +
     [["mu", "Saúde da mulher"], ["ho", "Saúde do homem"], ["pv", "Prevenção e rastreios"], ["in", MOD.in], ["po", MOD.po]].map(([m, t]) => `\n# ${t}\n` + corpo(g[m] || []).join("")).join("");
+
+  docs["07-fitoterapia.md"] = H("Fitoterapia – Farmácia Viva de Betim (por queixa)") + corpo(g.fi || []).join("");
 
   // fontes
   const usadas = new Set(), js = JSON.stringify(C);

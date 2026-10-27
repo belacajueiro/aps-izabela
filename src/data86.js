@@ -8,11 +8,13 @@
 // Widrig 2007 (arnica), ECR de calêndula na dermatite de fraldas, Salehi 2020 (enzimas desbridantes). RENAME 2024 (12 fitoterápicos) no Projeto.
 // Doses e restrições: sempre as do Memento de Betim [F]. As tinturas da Farmácia Viva não declaram teor de marcador; os ECR usaram extratos
 // padronizados → aplicar à tintura é extrapolação, dita em cada item.
+// v74 (27/10/2026): conferência no Formulário de Fitoterápicos da Farmacopeia Brasileira, 3ª ed. (ANVISA, RDC 1.024/2026), lido na íntegra:
+// doses oficiais em mL, faixas etárias e contraindicações ao lado das do Memento; plantas sem monografia sinalizadas.
 
 Object.assign(FONTES, {
   memento_fito_betim2022: {s: "Memento Terapêutico Fitoterápico do SUS/Betim, 1ª ed., 2022", t: "SMS Betim / Diretoria de Assistência Farmacêutica e Insumos. Memento Terapêutico Fitoterápico do SUS/Betim, 1ª edição, 2022 (documento municipal): 27 plantas padronizadas na Farmácia Viva SUS-Betim, formulações, indicações, posologia, contraindicações, interações, reações adversas, prescritores por categoria (dentista, enfermeiro, farmacêutico, médico, nutricionista) e regras da receita em 2 vias (1ª via para a Farmácia Viva manipular; 2ª via com o usuário para retirada na farmácia da unidade). Arquivo no Drive da usuária, lido na íntegra em 27/10/2026. Não localizei edição posterior em busca na web.", f: "F", url: ""},
   protocolo_fito_farm_betim2022: {s: "Protocolo de Prescrição Farmacêutica de Fitoterápicos no SUS/Betim, 2ª ed., 2022", t: "SMS Betim. Protocolo de Prescrição Farmacêutica de Fitoterápicos no SUS/Betim, 2ª ed., 2022 (Portaria Municipal GAPR nº 159/18 e Resolução CFF nº 586/13): 21 plantas prescritíveis pelo farmacêutico do SUS-Betim após o curso municipal; posologias conferidas iguais às do Memento 2022, com diferenças só de redação. Arquivo no Drive da usuária, lido em 27/10/2026.", f: "F", url: ""},
-  formulario_fito_anvisa2026: {s: "ANVISA – Formulário de Fitoterápicos da Farmacopeia Brasileira, 3ª ed., 2026", t: "ANVISA. Formulário de Fitoterápicos da Farmacopeia Brasileira, 3ª ed., 2026 (referência oficial das preparações magistrais e oficinais). Arquivo no Drive da usuária; não aberto nesta revisão.", f: "C", url: ""},
+  formulario_fito_anvisa2026: {s: "ANVISA – Formulário de Fitoterápicos da Farmacopeia Brasileira, 3ª ed., 2026 (FFFB3)", t: "Agência Nacional de Vigilância Sanitária. Formulário de Fitoterápicos da Farmacopeia Brasileira, 3ª edição. Brasília: Anvisa; 2026. Aprovado pela RDC nº 1.024, de 14/05/2026. 85 monografias com formulações oficinais (preparação extemporânea, tintura, extrato fluido, cápsula, gel, pomada, creme, xarope), advertências, indicações e modo de usar; formulações para farmácias de manipulação e Farmácias Vivas, isentas de prescrição médica, e base da notificação de fitoterápicos. Doses de tintura em mL (nenhuma em gotas); tintura definida como 1:5 ou 1:10 droga:solvente, sem teor de marcador. Texto integral lido em 27/10/2026 (mesmo arquivo do Drive da usuária).", f: "F", url: "https://bibliotecadigital.anvisa.gov.br/jspui/handle/anvisa/21045"},
   memento_fb2016: {s: "ANVISA – Memento Fitoterápico da Farmacopeia Brasileira, 2016", t: "ANVISA. Memento Fitoterápico da Farmacopeia Brasileira, 1ª ed., 2016 (monografias com evidência e posologia). Arquivo no Drive da usuária; não aberto nesta revisão.", f: "C", url: ""},
   cochrane_hiperico2008: {s: "Linde K et al. Cochrane 2008 – hipérico na depressão maior", t: "Linde K, Berner MM, Kriston L. St John's wort for major depression. Cochrane Database Syst Rev 2008;(4):CD000448 (RS, 29 ECR, 5.489 pacientes): extratos de hipérico > placebo (RR de resposta 1,28 nos 9 ECR maiores; 1,87 nos menores), semelhantes a tricíclicos (RR 1,02) e ISRS (RR 1,00), com menos abandono por efeito adverso que ISRS (OR 0,53); heterogeneidade e efeito maior em ECR de países de língua alemã.", f: "F", url: "https://doi.org/10.1002/14651858.CD000448.pub3"},
   cochrane_equinacea2014: {s: "Karsch-Völk M et al. Cochrane 2014 – equinácea no resfriado", t: "Karsch-Völk M et al. Echinacea for preventing and treating the common cold. Cochrane Database Syst Rev 2014;(2):CD000530 (RS, 24 ECR duplo-cegos, 4.631 participantes): nenhum dos 12 ensaios de prevenção foi significativo (agrupamento post hoc sugere redução relativa de 10–20%); dos 7 ensaios de tratamento, só 1 encurtou o resfriado. Conclusão: não demonstrou benefício no tratamento.", f: "F", url: "https://doi.org/10.1002/14651858.CD000530.pub3"},
@@ -67,8 +69,8 @@ Object.assign(FONTES, {
     alarme: ["Falta de ar, inchaço no rosto ou na boca, manchas vermelhas pelo corpo depois de usar o remédio", "Sangramento sem motivo, manchas roxas", "Sonolência forte, desmaio ou queda de pressão", "Pele ou olhos amarelados"],
     encaminhar: "Suspeita de intoxicação por planta: Serviço de Toxicologia de MG (Hospital João XXIII). Reação alérgica grave: urgência.",
     sus: {nacional: SUS_NAC, betim: BETIM_FV},
-    evid: {resumo: "A oferta de Betim segue o Memento municipal (2022), que reúne indicações de uso tradicional e monografias oficiais. A evidência clínica varia muito de planta para planta: moderada para extratos padronizados de hipérico e castanha-da-índia, baixa para harpagofito, tanaceto e arnica tópica, e muito baixa ou ausente para a maioria. Para ginkgo no zumbido e equinácea no tratamento do resfriado, as revisões Cochrane não mostram benefício. As tinturas da Farmácia Viva não informam teor de marcador, e os ensaios usaram extratos padronizados, então aplicar os resultados às tinturas é extrapolação.", certeza: "Variável por planta (ver tabela do guia)", fontes: [M, "protocolo_fito_farm_betim2022", "rename", "remume", "cochrane_hiperico2008", "cochrane_castanha2012", "cochrane_equinacea2014", "cochrane_ginkgo_zumbido2022"]},
-    nv: NV_BASE.concat(["Telefones do Serviço de Toxicologia de MG citados no Memento 2022 (31 3239-9308 / 3239-9223 / 3239-9224 / 3224-4000): conferir se seguem válidos.", "Conversão gotas → mL das tinturas da Farmácia Viva (o Memento só dá gotas)."]),
+    evid: {resumo: "A oferta de Betim segue o Memento municipal (2022), que reúne indicações de uso tradicional e monografias oficiais. A evidência clínica varia muito de planta para planta: moderada para extratos padronizados de hipérico e castanha-da-índia, baixa para harpagofito, tanaceto e arnica tópica, e muito baixa ou ausente para a maioria. Para ginkgo no zumbido e equinácea no tratamento do resfriado, as revisões Cochrane não mostram benefício. As tinturas da Farmácia Viva não informam teor de marcador, e os ensaios usaram extratos padronizados, então aplicar os resultados às tinturas é extrapolação.", certeza: "Variável por planta (ver tabela do guia)", fontes: [M, "protocolo_fito_farm_betim2022", "formulario_fito_anvisa2026", "rename", "remume", "cochrane_hiperico2008", "cochrane_castanha2012", "cochrane_equinacea2014", "cochrane_ginkgo_zumbido2022"]},
+    nv: NV_BASE.concat(["Telefones do Serviço de Toxicologia de MG citados no Memento 2022 (31 3239-9308 / 3239-9223 / 3239-9224 / 3224-4000): conferir se seguem válidos.", "Volume da gota do conta-gotas da Farmácia Viva: o Memento equipara 90 gotas a 3 mL (cerca de 30 gotas/mL) e o Formulário ANVISA 2026 dá as doses em mL; conferir o conta-gotas em uso."]),
     guia: {
       resumo: "A REMUME de Betim **não lista fitoterápicos**; eles vêm da **Farmácia Viva SUS-Betim**, com **27 plantas** padronizadas no Memento municipal de 2022 [F]. A receita é feita em **2 vias**: a 1ª via vai para a Farmácia Viva manipular e o paciente retira na farmácia da unidade com a 2ª [F]. O médico pode prescrever todas as plantas; **ginkgo, hipérico e tanaceto são exclusivos do médico** [F]. Antes de prescrever, confira três coisas: **idade mínima** (as tinturas têm álcool e são proibidas abaixo de 18 anos), **gestação/lactação** (quase todas contraindicadas) e **interações**, principalmente com anticoagulantes, anticoncepcional, antidepressivos e antirretrovirais [F].",
       secoes: [
@@ -116,7 +118,8 @@ Object.assign(FONTES, {
             ["Benzodiazepínicos, sedativos, álcool", "Passiflora, melissa, Lippia alba, capim-limão: soma de sedação [F]."],
             ["Levotiroxina", "Melissa interfere com TSH/hormônio tireoidiano – contraindicada no hipotireoidismo [F]."],
             ["Insulina e hipoglicemiantes", "Castanha-da-índia e ginkgo intensificam; harpagofito tem leve efeito hipoglicemiante; alecrim pode elevar a glicemia [F]."],
-            ["Polifarmácia", "Espinheira-santa (inibe CYP e P-gp) deve ser evitada; equinácea: cuidado com fármacos de metabolização hepática e hepatotóxicos [F]."]
+            ["Polifarmácia", "Espinheira-santa (inibe CYP e P-gp) deve ser evitada; equinácea: cuidado com fármacos de metabolização hepática e hepatotóxicos [F]."],
+            ["Acréscimos do Formulário ANVISA 2026", "Guaco: não usar com AINE ou anticoagulante e evitar com antibiótico. Lippia alba: pode aumentar a toxicidade do paracetamol. Espinheira-santa: anabolizantes, metotrexato, amiodarona, cetoconazol, imunossupressores. Alcachofra: reduz o efeito de AAS e varfarina. Cavalinha: inibe CYP1A2 e interage com digitálicos. Guaçatonga: antagonista da vitamina K. Castanha-da-índia: evitar com nefrotóxicos (gentamicina) [F]."]
           ]}, nota: "Ver também o item 'Polifarmácia e desprescrição no idoso'."},
           {perola: {t: "Pergunte sempre pelo chá e pela garrafada", x: "Planta de uso por conta própria raramente aparece na lista de medicamentos. Perguntar ativamente e registrar no prontuário evita interação com varfarina, anticoncepcional e antidepressivo [I].", d: "menos interação não percebida.", l: "I"}}
         ]},
@@ -138,6 +141,32 @@ Object.assign(FONTES, {
             ["**Equinácea**", "Resfriado (tratamento e prevenção)", "**Cochrane 2014: sem benefício no tratamento**; prevenção não significativa [F]", "Moderada – **contra** o uso no tratamento"],
             ["**Ginkgo**", "Zumbido e vertigem", "**Cochrane 2013 e 2022: sem efeito** no zumbido [F]", "Muito baixa a baixa – **contra** o uso rotineiro"]
           ]}, nota: "Certeza estimada pelo app a partir das revisões citadas [I]. 'Contra o uso' significa que a melhor evidência disponível não mostrou benefício, não que a planta seja perigosa."}
+        ]},
+        {t: "Formulário ANVISA 2026 × Memento de Betim", b: [
+          {p: "O **Formulário de Fitoterápicos da Farmacopeia Brasileira, 3ª ed.** (ANVISA, RDC nº 1.024/2026) traz as formulações oficinais para farmácias de manipulação e **Farmácias Vivas**, com advertências, indicações e modo de usar [F]. Ele não avalia eficácia: as certezas da evidência do app não mudam [F]. As fórmulas são isentas de prescrição pela regra sanitária, mas quem prescreve cada planta na Farmácia Viva de Betim continua definido pelo Memento municipal [I]."},
+          {h: "Gotas e mililitros"},
+          {ul: ["O Formulário dá **todas as doses de tintura em mL**, nenhuma em gotas [F].", "O próprio Memento de Betim equipara **90 gotas a 3 mL** (garra-do-diabo), ou seja, cerca de **30 gotas por mL** [F]. Assim, os 30 a 40 gotas do Memento correspondem a cerca de **1 a 1,3 mL** (cálculo do app) [I].", "O volume real da gota depende do conta-gotas do frasco [C]."]},
+          {tab: {h: ["Planta", "Formulário 2026", "Memento 2022", "O que muda"], r: [
+            ["Passiflora", "Só P. incarnata; tintura 2 mL até 3×/dia; < 12 anos contraindicado [F]", "P. edulis/alata; 30–40 gotas 1–3×/dia", "Espécie diferente; dose oficial maior"],
+            ["Melissa", "Tintura 2–6 mL 1–3×/dia [F]", "30–40 gotas 1–3×/dia", "Dose do Memento abaixo da oficial"],
+            ["Lippia alba", "Só chá, **0,4–0,6 g** em 150 mL [F]", "Chá **1–3 g**; tintura", "Chá do Memento até 5× a dose oficial"],
+            ["Capim-limão", "Só chá, 1–3 g; contraindicado em cardiopatia, nefropatia, hepatopatia e doenças crônicas [F]", "Chá 1–3 g; tintura", "Contraindicações mais amplas"],
+            ["Espinheira-santa", "Chá e cápsula; **sem tintura** [F]", "Tintura", "Tintura fora das fórmulas oficiais"],
+            ["Alcachofra", "Chá e cápsula; **sem tintura**; ≥ 12 anos [F]", "Tintura; adulto", "Tintura fora das fórmulas oficiais"],
+            ["Guaco", "M. glomerata: chá e tintura, **uso adulto**; xarope ≥ 12 anos só para M. laevigata; até 15 dias [F]", "Xarope de M. glomerata ≥ 12 anos", "Faixa ≥ 12 anos sem respaldo para a espécie usada"],
+            ["Equinácea", "Tintura da raiz 3 mL 3×/dia; até 8 semanas; não em autoimune, TB, HIV, imunossupressão [F]", "30–40 gotas 3×/dia, 1–2 meses", "Dose oficial maior; mais contraindicações"],
+            ["Garra-do-diabo", "Tintura 0,5–1 mL 3×/dia; máx. 3 mL/dia; até 4 semanas [F]", "15–30 gotas 3×/dia; máx. 90 gotas", "Igual"],
+            ["Tanaceto", "Tintura 0,25–1 mL 1×/dia; só se refratária à medicação convencional [F]", "30 gotas 1×/dia", "Memento no teto da faixa oficial"],
+            ["Castanha-da-índia", "Oral só cápsula de extrato seco; tópico: IVC adulto, contusão ≥ 12 anos [F]", "Tintura oral; creme ≥ 12 anos", "Tintura oral fora das fórmulas oficiais"],
+            ["Arnica", "Tópica ≥ 12 anos, pele íntegra; reavaliar em 3–4 dias; sem indicação de IVC [F]", "Creme até 7 dias; gel para IVC", "Prazo menor; gel para IVC sem respaldo"],
+            ["Calêndula", "Cutânea ≥ 6 anos; oral/mucosa ≥ 12; **contraindicada na lactação** [F]", "Solução 5% para fissura mamilar", "Fissura mamilar contra a referência oficial"],
+            ["Camomila", "Cutânea e oromucosa ≥ 12 anos; permitida na lactação [F]", "Igual", "Igual"],
+            ["Cavalinha", "Chá 1–4 g ≥ 12 anos; sem tintura; até 2–4 semanas [F]", "Chá igual; tintura adulto", "Tintura fora das fórmulas oficiais"],
+            ["Tanchagem, romã, barbatimão", "Tanchagem e romã adulto (bochecho); romã até 15 dias; barbatimão pomada [F]", "Orabase e spray", "Formas da Farmácia Viva sem fórmula oficial"],
+            ["Guaçatonga", "Só chá oral para dispepsia, adulto; antagonista da vitamina K [F]", "Gel para herpes labial", "Indicação do Memento não consta"],
+            ["Alecrim", "Só dispepsia e espasmos digestivos; tintura 3–8,5 mL/dia [F]", "Tintura 30 gotas 3×/dia, inclusive depressão leve", "Indicações do Memento além do Formulário"]
+          ]}, nota: "**Sem monografia no Formulário 2026:** hipérico, ginkgo, sene, papaína, óleo de girassol, rosa-mosqueta, copaíba e a loção repelente (citronela, andiroba) – para esses, a referência é só o Memento de Betim [F]. O Formulário define a tintura como 1:5 ou 1:10 droga:solvente e não fixa teor de marcador [F]."},
+          {ref: ["formulario_fito_anvisa2026", M]}
         ]},
         {t: "Itens por queixa", b: [
           {ir: [["fi-ansiedade-sono", "Ansiedade e insônia leves"], ["fi-depressao", "Depressão leve (hipérico)"], ["fi-dispepsia", "Dispepsia e gases"], ["fi-constipacao", "Constipação ocasional"], ["fi-colicas", "Cólicas"], ["fi-tosse", "Tosse e catarro"], ["fi-resfriado", "Resfriado (equinácea)"], ["fi-boca-garganta", "Boca e garganta"], ["fi-herpes-labial", "Herpes labial"], ["fi-contusao", "Contusão e entorse"], ["fi-dor-articular", "Dor articular e lombar"], ["fi-pernas-pesadas", "Pernas pesadas"], ["fi-enxaqueca", "Prevenção da enxaqueca"], ["fi-zumbido-tontura", "Zumbido e tontura"], ["fi-feridas", "Feridas crônicas"], ["fi-queimadura", "Queimadura leve"], ["fi-pele-seca", "Pele seca e dermatites"], ["fi-acne", "Acne"], ["fi-fralda", "Dermatite de fralda (≥ 6 anos)"], ["fi-picadas", "Picadas e repelente"], ["fi-fissura-mamilo", "Fissura mamilar"], ["fi-urinario", "Queixas urinárias menores"], ["cr-polifarmacia", "Polifarmácia e desprescrição"]]},
@@ -961,6 +990,183 @@ Object.assign(FONTES, {
   })
   );
 
+  // ───────── v74: conferência no Formulário de Fitoterápicos da Farmacopeia Brasileira, 3ª ed. (ANVISA, 2026)
+  // Texto integral lido em 27/10/2026 (RDC nº 1.024/2026; 85 monografias). Para cada item: nota anexada às receitas (as cópias nos itens
+  // ligados herdam a nota, porque a ligação é feita depois) + seção "Formulário ANVISA 2026" no guia + fonte + registro de mudança.
+  const FF = "formulario_fito_anvisa2026";
+  const MUD74 = "v74 (27/10/2026): ";
+  const FFB = {
+    "fi-ansiedade-sono": {
+      rx: {
+        0: "FFFB3 2026 (FT056): só traz Passiflora incarnata – a Farmácia Viva usa P. edulis/alata (extrapolação de espécie). Tintura 1:8 em álcool 45%: 2 mL em 50 mL de água até 3 vezes ao dia; uso adulto; contraindicada na gestação, lactação e < 12 anos; não usar cronicamente nem com sedativos; procurar o médico se não melhorar em 2 semanas [F].",
+        1: "FFFB3 2026: a associação melissa + passiflora não consta. Melissa isolada (FT048): tintura 1:5 em álcool 45–53%, 2 a 6 mL 1 a 3 vezes ao dia (os 30–40 gotas do Memento, cerca de 1–1,3 mL, ficam abaixo); contraindicada no hipotireoidismo, glaucoma e HPB [F].",
+        2: "FFFB3 2026 (FT044): chá com 0,4 a 0,6 g de folha e flor em 150 mL, 2 a 3 vezes ao dia – o Memento usa 1 a 3 g (até 5 vezes mais). Uso adulto; evitar na gastrite/úlcera e na hipotensão; potencializa sedativos; pode aumentar a toxicidade do paracetamol; doses altas causam irritação gástrica, bradicardia e hipotensão [F]. Inferência clínica: preferir a menor quantidade do sachê [I]."
+      },
+      tab: [
+        ["Passiflora", "Só P. incarnata; tintura 2 mL até 3×/dia; contraindicada < 12 anos, gestação e lactação; não usar cronicamente [F]", "P. edulis/alata; 30–40 gotas 1–3×/dia; adulto", "Espécie diferente (extrapolação); dose oficial maior"],
+        ["Melissa", "Tintura 2–6 mL 1–3×/dia; hipotireoidismo, glaucoma e HPB contraindicam [F]", "30–40 gotas 1–3×/dia (só ou com passiflora)", "Dose do Memento abaixo da oficial; associação sem monografia"],
+        ["Lippia alba", "Só chá: 0,4–0,6 g em 150 mL, 2–3×/dia; adulto; paracetamol e sedativos [F]", "Chá com 1–3 g; tintura 30 gotas 1–3×/dia", "**Dose do chá do Memento até 5× a oficial**; tintura sem monografia"],
+        ["Capim-limão", "Só chá: 1–3 g em 150 mL, 3–4×/dia; adulto; contraindicado em cardiopatia, nefropatia, hepatopatia e outras doenças crônicas; não associar a depressores do SNC [F]", "Chá 1–3 g; tintura 30–40 gotas", "Chá igual; tintura sem monografia; contraindicações mais amplas"]
+      ],
+      nota: "O Formulário define as formulações oficiais das Farmácias Vivas, mas não testa eficácia: a certeza da evidência deste item não muda (muito baixa) [F]."
+    },
+    "fi-depressao": {
+      nota: "O FFFB3 2026 **não tem monografia de hipérico**: para a tintura, a referência continua sendo o Memento de Betim, e a evidência vem de extratos padronizados (extrapolação) [F]. Alecrim (FT068): o Formulário só o indica para dispepsia e espasmos digestivos leves (tintura 3 a 8,5 mL/dia; contraindicado < 12 anos, gestação, lactação; reduz o limiar convulsivo; pode alterar o sono se tomado à noite) – a indicação do Memento na depressão leve não consta [F]."
+    },
+    "fi-dispepsia": {
+      rx: {
+        0: "FFFB3 2026 (FT052, versão de 2023): **não há tintura de espinheira-santa** – só chá (1–2 g ou 3 g de folha em 150 mL, 1 hora antes das refeições) e cápsula de extrato seco. Uso adulto; contraindicada < 18 anos, na gestação e na lactação (reduz o leite); até 6 meses seguidos com pausa de 30 dias; evitar em polimedicados (inibe CYP e P-gp); interage com anabolizantes, metotrexato, amiodarona, cetoconazol e imunossupressores [F].",
+        1: "FFFB3 2026 (FT023): **não há tintura de alcachofra** – chá (1,5 g 4×/dia ou 3 g até 2×/dia) e cápsula de extrato seco. Uso ≥ 12 anos (tintura: < 18 anos contraindicado); contraindicada com cálculo ou obstrução biliar, colangite e hepatopatia; não usar com anticoagulante; pode reduzir o efeito do AAS e da varfarina; com diurético na HAS ou cardiopatia, só sob supervisão; procurar o médico se passar de 2 semanas [F].",
+        2: "FFFB3 2026 (FT048): tintura 2 a 6 mL 1 a 3 vezes ao dia; contraindicada no hipotireoidismo, glaucoma e HPB [F]."
+      },
+      tab: [
+        ["Espinheira-santa", "Chá e cápsula; **sem tintura**; adulto; até 6 meses [F]", "Tintura 30–40 gotas 2×/dia, 1 h antes das refeições", "Tintura fora das formulações oficiais"],
+        ["Alcachofra", "Chá e cápsula; **sem tintura**; ≥ 12 anos; não usar com anticoagulante [F]", "Tintura 30–40 gotas 1–3×/dia; adulto", "Tintura fora das formulações oficiais"],
+        ["Melissa", "Tintura 2–6 mL 1–3×/dia [F]", "30–40 gotas 1–3×/dia", "Dose do Memento abaixo da oficial"]
+      ],
+      nota: "As duas plantas da RENAME deste item (espinheira-santa e alcachofra) não têm tintura no Formulário: a RENAME as define por teor de marcador na dose diária, e a tintura da Farmácia Viva não informa esse teor [F]."
+    },
+    "fi-constipacao": {
+      nota: "O FFFB3 2026 **não tem monografia de sene**; a referência da tintura segue sendo o Memento de Betim [F]. A RENAME 2024 traz cáscara-sagrada e plantago como fitoterápicos laxantes (não oferecidos pela Farmácia Viva) [F]."
+    },
+    "fi-colicas": {
+      rx: {
+        0: "FFFB3 2026 (FT022): mesma dose do Memento (1 a 3 g em 150 mL, 3 a 4 vezes ao dia); uso adulto; contraindicado em cardiopatia, nefropatia, hepatopatia e outras doenças crônicas; não associar a depressores do SNC; doses altas causam síncope e sedação; o uso habitual pode estar relacionado a HPB [F].",
+        1: "FFFB3 2026 (FT044): chá com 0,4 a 0,6 g em 150 mL (o Memento usa 1 a 3 g); evitar na gastrite/úlcera e na hipotensão; interação com paracetamol e sedativos [F]."
+      },
+      nota: "Alecrim (FT068): o Formulário indica o chá e o extrato fluido para desordens espasmódicas leves do trato digestivo; não há indicação para cólica menstrual [F]. Capim-limão e Lippia alba: o Formulário só traz chá, sem tintura [F]."
+    },
+    "fi-tosse": {
+      rx: {
+        0: "FFFB3 2026: a Farmácia Viva usa Mikania glomerata, cuja monografia (FT050) só traz chá e tintura (1 a 3 mL 3×/dia), ambos de **uso adulto** (contraindicado < 18 anos). Xarope oficial só existe para M. laevigata (FT051: 10 mL de tintura a 20% em 100 mL de xarope; 15 mL 3×/dia; ≥ 12 anos; 7 dias nas afecções agudas). Para as duas espécies: até 15 dias seguidos, com pausa de 5 dias; não usar com AINE nem anticoagulante; evitar com antibiótico (interação potencial) [F].",
+        1: "FFFB3 2026: a associação guaco + maracujá não consta. Guaco: ver o xarope de guaco; passiflora (P. incarnata, FT056): contraindicada < 12 anos e com sedativos [F]."
+      },
+      tab: [
+        ["Guaco (M. glomerata)", "Chá e tintura (1–3 mL 3×/dia); **uso adulto** [F]", "Xarope 10%: adulto 15 mL 8/8 h; ≥ 12 anos 5 mL 8/8 h", "**Uso ≥ 12 anos do Memento não tem respaldo na monografia desta espécie**"],
+        ["Guaco (M. laevigata)", "Xarope 15 mL 3×/dia; ≥ 12 anos; 7 dias no quadro agudo [F]", "—", "Faixa ≥ 12 anos só para esta espécie"],
+        ["Ambas", "Até 15 dias seguidos (pausa de 5); não usar com AINE ou anticoagulante; evitar com antibiótico [F]", "Até 15 dias; AINE e anticoagulante", "Acrescenta antibiótico"]
+      ],
+      nota: "Inferência clínica: entre 12 e 17 anos, preferir medidas não farmacológicas e reservar o xarope de guaco a casos selecionados, conferindo a espécie usada pela Farmácia Viva [I]."
+    },
+    "fi-resfriado": {
+      rx: {
+        0: "FFFB3 2026 (FT026, raiz de E. purpurea): tintura 1:5 em álcool 55%, 3 mL em 50 mL 3×/dia (os 30–40 gotas do Memento, cerca de 1–1,3 mL, ficam abaixo). Procurar o médico se o resfriado passar de 10 dias ou houver febre alta; até 8 semanas, em ciclos; não usar em doença autoimune, tuberculose, HIV, imunossupressão ou doença hematológica dos leucócitos; pode piorar o controle do diabetes; evitar com hepatotóxicos; tintura contraindicada < 18 anos [F]."
+      },
+      nota: "O Formulário traz a indicação de prevenção e alívio do resfriado (uso tradicional), mas isso não muda a revisão Cochrane 2014, que não mostrou benefício no tratamento [F]."
+    },
+    "fi-boca-garganta": {
+      rx: {
+        0: "FFFB3 2026 (FT047): uso oromucoso só ≥ 12 anos (igual ao Memento); a orabase não consta (há bochecho ou gargarejo com chá de 1 a 5 g em 100 mL, 3×/dia); há relato de reação alérgica grave após contato de mucosa com preparações de camomila [F].",
+        1: "FFFB3 2026: a orabase não consta. Tanchagem (Plantago major, FT063): uso adulto; bochecho ou gargarejo com 2 a 4 mL da tintura em 50 mL; não usar na hipotensão; não engolir; dar 3 horas de intervalo de outros remédios. Barbatimão (FT075): pomada e bochecho com decocto; contraindicado na gestação e lactação [F].",
+        2: "FFFB3 2026: o spray não consta. Romã (FT067): uso adulto; bochecho ou gargarejo com 15 mL da tintura em 150 mL, 3×/dia; até 15 dias seguidos, com pausa de 7 [F]."
+      },
+      nota: "As três formulações de boca da Farmácia Viva (orabases e spray) não têm fórmula no Formulário; as plantas têm, como chá ou tintura para bochecho [F]."
+    },
+    "fi-herpes-labial": {
+      rx: {
+        0: "FFFB3 2026 (FT016): guaçatonga só tem chá oral para dispepsia (uso adulto); o gel para herpes labial não consta. Antagonista da vitamina K: uso prolongado pode causar sangramento e potencializa anticoagulante [F].",
+        1: "FFFB3 2026: a formulação não consta; calêndula cutânea ≥ 6 anos e contraindicada na gestação e lactação (FT015) [F]."
+      },
+      nota: "Nenhuma das duas formulações da Farmácia Viva para os lábios tem fórmula ou indicação no Formulário [F]."
+    },
+    "fi-contusao": {
+      rx: {
+        0: "FFFB3 2026 (FT012): gel ou pomada (tintura 20–25 mL em 100 g) 2 a 3×/dia; ≥ 12 anos; só pele íntegra; nunca por via oral; procurar o médico se passar de 3 a 4 dias (o Memento permite até 7); uso prolongado pode causar eczema [F].",
+        1: "FFFB3 2026 (FT004): gel ou pomada com tintura da semente (20 mL em 100 g) até 3×/dia; para contusão, ≥ 12 anos; procurar o médico se não melhorar em 5 dias; não usar em ferida aberta, mucosa ou perto dos olhos [F]."
+      },
+      nota: "Arnica e castanha-da-índia tópicas têm indicação oficial para contusão, com prazos de reavaliação mais curtos que os do Memento (3–4 dias e 5 dias) [F]."
+    },
+    "fi-dor-articular": {
+      rx: {
+        0: "FFFB3 2026 (FT038): tintura 1:5 em álcool 25%, 0,5 a 1 mL em 50 mL 3×/dia, máximo 3 mL/dia – equivalente ao Memento (15–30 gotas; máximo 90 gotas = 3 mL). Uso adulto; até 4 semanas na dor articular; contraindicada na úlcera gástrica ou duodenal, doença cardiovascular, gestação, lactação e < 18 anos; cálculo biliar: só após avaliação médica; dor com edema, vermelhidão ou febre exige exame; púrpura relatada com varfarina [F]."
+      },
+      nota: "Dose, duração e contraindicações da tintura de garra-do-diabo do Memento coincidem com o Formulário [F]."
+    },
+    "fi-pernas-pesadas": {
+      rx: {
+        0: "FFFB3 2026 (FT003 e FT004): **não há tintura oral de castanha-da-índia** – só cápsula de extrato seco da semente (99 mg 2×/dia; 198 mg/dia) ou de casca (275 mg 3 a 6×/dia), uso adulto. Não usar com anticoagulante nem com fármacos nefrotóxicos (gentamicina); procurar o médico se passar de 2 semanas [F].",
+        1: "FFFB3 2026 (FT004): gel ou pomada com tintura da semente; para distúrbio venoso leve, **uso adulto** (≥ 12 anos só na contusão); aplicar de baixo para cima; não usar em ferida aberta [F]."
+      },
+      tab: [
+        ["Castanha-da-índia oral", "Só cápsula de extrato seco (semente 198 mg/dia ou casca) [F]", "Tintura 30–40 gotas 3×/dia", "Tintura oral fora das formulações oficiais; os ECR usaram extrato padronizado"],
+        ["Castanha-da-índia tópica", "Gel/pomada: IVC só adulto [F]", "Creme 10%: ≥ 12 anos", "Faixa etária mais restrita no Formulário"],
+        ["Arnica (gel para IVC)", "Indicação só para contusão, entorse e dor muscular [F]", "Gel 10% para insuficiência venosa", "Indicação do Memento não consta"]
+      ],
+      nota: "Inferência clínica: na IVC, o produto com evidência é o extrato padronizado oral, que o SUS de Betim não oferece; a tintura e o creme da Farmácia Viva ficam como opção de baixa certeza [I]."
+    },
+    "fi-enxaqueca": {
+      rx: {
+        0: "FFFB3 2026 (FT077): tintura 1:5 em álcool 25%, 0,25 a 1 mL em 50 mL 1×/dia (os 30 gotas do Memento, cerca de 1 mL, ficam no teto). Uso adulto; iniciar só quando a enxaqueca não responde à medicação convencional e após excluir causas graves; efeito em 4 a 6 semanas; reavaliar em 2 meses; suspender aos poucos; não associar AAS ou varfarina; pode alterar o ciclo menstrual [F]."
+      },
+      nota: "O Formulário reforça que o tanaceto é opção de 2ª linha (enxaqueca refratária à medicação convencional) [F]."
+    },
+    "fi-zumbido-tontura": {
+      nota: "O FFFB3 2026 **não tem monografia de ginkgo**; a tintura segue apenas o Memento de Betim [F]."
+    },
+    "fi-feridas": {
+      rx: {
+        2: "FFFB3 2026 (FT075): barbatimão tem fórmula oficial de pomada (extrato seco das cascas), 1 a 2×/dia após higienização, como cicatrizante e antisséptico da pele e mucosas; contraindicado na gestação e lactação; não misturar com plantas ricas em alcaloides [F]."
+      },
+      nota: "Papaína, óleo de girassol, rosa-mosqueta e copaíba **não têm monografia** no FFFB3 2026; para esses produtos a referência é só o Memento de Betim (e o protocolo de feridas da enfermagem, se houver) [F]."
+    },
+    "fi-queimadura": {
+      rx: {
+        0: "FFFB3 2026 (FT015): cremes de calêndula para queimadura solar e ferimentos leves, 2 a 4×/dia; ≥ 6 anos; contraindicada na gestação e lactação; procurar o médico se não melhorar em 1 semana ou houver sinal de infecção [F].",
+        1: "FFFB3 2026 (FT047): uso cutâneo ≥ 12 anos; não usar em lesões profundas ou extensas; uso na gestação e lactação permitido (higienizar o mamilo antes de amamentar) [F]."
+      },
+      nota: "Faixas etárias e contraindicações do Memento coincidem com o Formulário para calêndula e camomila tópicas [F]."
+    },
+    "fi-pele-seca": {
+      rx: {
+        1: "FFFB3 2026: a loção não consta; calêndula cutânea ≥ 6 anos (FT015); cavalinha tópica (decocto, FT027) só para pequenas lesões superficiais e pode causar rash e edema facial [F].",
+        2: "FFFB3 2026 (FT015): calêndula ≥ 6 anos, contraindicada na gestação e lactação; a indicação de dermatite seborreica não consta (só inflamações leves da pele e ferimentos) [F]."
+      },
+      nota: "Polawax + girassol e óleo de girassol não têm monografia no Formulário [F]."
+    },
+    "fi-acne": {
+      rx: {
+        0: "FFFB3 2026: a formulação não consta; calêndula cutânea ≥ 6 anos (FT015) e barbatimão em pomada (FT075); copaíba sem monografia [F]."
+      },
+      nota: "A única preparação oficinal do Formulário com indicação de acne leve é a cápsula de extrato da raiz de equinácea (FT026), que a Farmácia Viva não oferece [F]."
+    },
+    "fi-fralda": {
+      rx: {
+        0: "FFFB3 2026 (FT015): calêndula cutânea contraindicada < 6 anos – confirma que o creme não serve para bebês [F]."
+      },
+      nota: "O Formulário confirma o limite de 6 anos para a calêndula cutânea [F]."
+    },
+    "fi-picadas": {
+      nota: "Copaíba e a loção repelente (citronela, andiroba) **não têm monografia** no FFFB3 2026 [F]. A arnica tem indicação oficial de compressa com chá (2 g em 100 mL, 2 a 3×/dia) para erupções por picada de inseto, ≥ 12 anos, só em pele íntegra (FT012) [F]."
+    },
+    "fi-fissura-mamilo": {
+      rx: {
+        0: "FFFB3 2026 (FT015): calêndula **contraindicada na gestação e na lactação** por falta de dados de segurança – a referência oficial reforça a contraindicação da monografia do Memento. A camomila tópica (FT047) é a única com uso na lactação permitido, higienizando o mamilo antes da mamada, mas não tem indicação de fissura [F]."
+      },
+      nota: "Com o Formulário, a solução de calêndula 5% da Farmácia Viva fica **contra a referência oficial** na lactação. Inferência clínica: priorizar a correção da pega e o leite materno no mamilo; se usar a calêndula, retirar sempre com água antes da mamada e suspender se houver irritação [I]."
+    },
+    "fi-urinario": {
+      rx: {
+        0: "FFFB3 2026 (FT027): chá na mesma dose do Memento (1 a 4 g em 150 mL, 3 a 4×/dia; máximo 3 a 12 g/dia), ≥ 12 anos; não há tintura (só extrato fluido, 1 a 4 mL 3×/dia, adulto). Procurar o médico se passar de 1 semana ou houver febre, disúria, cólica ou hematúria; uso típico de 2 a 4 semanas; não recomendado em doença cardíaca ou renal grave e obstrução urinária; não associar diurético; hipocalemia e falta de tiamina no uso prolongado; interação com digitálicos; inibe CYP1A2 [F]."
+      },
+      nota: "O Formulário exige teste contra adulteração por Equisetum palustre na matéria-prima – controle de qualidade da Farmácia Viva, não do prescritor [F]."
+    }
+  };
+  const addSecFF = (c, cfg) => {
+    const b = [];
+    if (cfg.tab) b.push({tab: {h: ["Planta", "Formulário ANVISA 2026 (3ª ed.)", "Memento SUS-Betim 2022", "O que muda"], r: cfg.tab}});
+    if (cfg.nota) b.push({nota: cfg.nota});
+    b.push({ref: [FF, M]});
+    c.guia = {...c.guia, secoes: [...(c.guia.secoes || []), {t: "Conferência no Formulário ANVISA 2026", b}]};
+  };
+  Object.entries(FFB).forEach(([id, cfg]) => {
+    const c = CONDICOES.find(x => x.id === id); if (!c) return;
+    if (cfg.rx) c.rx = (c.rx || []).map((r, i) => cfg.rx[i] ? {...r, nota: (r.nota || "").replace(/\s*$/, "") + " " + cfg.rx[i]} : r);
+    if (c.guia) addSecFF(c, cfg);
+    if (c.evid) c.evid = {...c.evid, fontes: [...new Set([...(c.evid.fontes || []), FF])]};
+    c.mudancas = [...(c.mudancas || []), MUD74 + "conferido no Formulário de Fitoterápicos da Farmacopeia Brasileira, 3ª ed. (ANVISA, 2026): formulações, doses em mL, faixas etárias e contraindicações ao lado das do Memento."];
+  });
+  { const c = CONDICOES.find(x => x.id === "fi-prescrever"); if (c) c.mudancas = [...(c.mudancas || []), MUD74 + "seção 'Formulário ANVISA 2026 × Memento de Betim' (tabela por planta, gotas × mL, plantas sem monografia) e acréscimos de interações do Formulário; Formulário aberto e conferido."]; }
+
   // ───────── Ligação com os itens existentes: opção da Farmácia Viva (com a certeza) e link para o item do módulo
   const get = id => CONDICOES.find(x => x.id === id);
   const fi = id => get(id);
@@ -1028,6 +1234,7 @@ Object.assign(FONTES, {
     else { const r = last.b.findIndex(b => b && b.ref); last.b.splice(r >= 0 ? r : last.b.length, 0, {ir: [par]}); }
   };
   const addBetim = (c, txt) => { if (!c.sus) c.sus = {}; c.sus = {...c.sus, betim: (c.sus.betim ? c.sus.betim.replace(/\s*$/, "") + " " : "") + txt}; };
+  const addFonteFF = c => { if (c.evid) c.evid = {...c.evid, fontes: [...new Set([...(c.evid.fontes || []), FF])]}; };
   const addFonte = c => { if (c.evid) { c.evid = {...c.evid, fontes: [...(c.evid.fontes || [])]}; if (!c.evid.fontes.includes(M)) c.evid.fontes.push(M); } };
   LIGA.forEach(([id, fid, idx, cert, desc]) => {
     const c = get(id), f = fi(fid); if (!c || !f) return;
@@ -1037,6 +1244,7 @@ Object.assign(FONTES, {
     addIr(c, fid, "Fitoterapia: " + f.nome.split(":")[0]);
     addFonte(c);
     c.mudancas = [...(c.mudancas || []), MUD + "opção fitoterápica da Farmácia Viva de Betim (" + desc + "), com a certeza da evidência e link para o módulo Fitoterapia."];
+    if (FFB[fid] && FFB[fid].rx && idx.some(i => FFB[fid].rx[i])) { c.mudancas.push(MUD74 + "nota da receita fitoterápica conferida no Formulário ANVISA 2026."); addFonteFF(c); }
   });
   SO_LINK.forEach(([id, fid, txt]) => {
     const c = get(id), f = fi(fid); if (!c || !f) return;

@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-27T22:53:28.820Z",
+ "gerado": "2026-10-27T23:18:38.154Z",
  "cmed": {
   "data": "09/10/2026",
   "fonte": "cmed_pmc2026",
@@ -282,7 +282,6 @@
   "betim_info2026",
   "memento_fito_betim2022",
   "protocolo_fito_farm_betim2022",
-  "formulario_fito_anvisa2026",
   "memento_fb2016"
  ],
  "nao_conferidas": [
@@ -515,7 +514,6 @@
   "cssrs",
   "mckee1971",
   "aap_piolho2022",
-  "formulario_fito_anvisa2026",
   "memento_fb2016"
  ],
  "fontes": [
@@ -9518,13 +9516,56 @@
   },
   {
    "k": "formulario_fito_anvisa2026",
-   "s": "ANVISA – Formulário de Fitoterápicos da Farmacopeia Brasileira, 3ª ed., 2026",
-   "t": "ANVISA. Formulário de Fitoterápicos da Farmacopeia Brasileira, 3ª ed., 2026 (referência oficial das preparações magistrais e oficinais). Arquivo no Drive da usuária; não aberto nesta revisão.",
-   "f": "C",
-   "url": "",
+   "s": "ANVISA – Formulário de Fitoterápicos da Farmacopeia Brasileira, 3ª ed., 2026 (FFFB3)",
+   "t": "Agência Nacional de Vigilância Sanitária. Formulário de Fitoterápicos da Farmacopeia Brasileira, 3ª edição. Brasília: Anvisa; 2026. Aprovado pela RDC nº 1.024, de 14/05/2026. 85 monografias com formulações oficinais (preparação extemporânea, tintura, extrato fluido, cápsula, gel, pomada, creme, xarope), advertências, indicações e modo de usar; formulações para farmácias de manipulação e Farmácias Vivas, isentas de prescrição médica, e base da notificação de fitoterápicos. Doses de tintura em mL (nenhuma em gotas); tintura definida como 1:5 ou 1:10 droga:solvente, sem teor de marcador. Texto integral lido em 27/10/2026 (mesmo arquivo do Drive da usuária).",
+   "f": "F",
+   "url": "https://bibliotecadigital.anvisa.gov.br/jspui/handle/anvisa/21045",
    "ano": 2026,
    "usado_em": [
-    "fi-prescrever"
+    "acne",
+    "aftas",
+    "amamentacao",
+    "bronquite",
+    "cr-ansiedade",
+    "dermatite-atopica",
+    "dismenorreia",
+    "dispepsia",
+    "distensao",
+    "entorse",
+    "fi-acne",
+    "fi-ansiedade-sono",
+    "fi-boca-garganta",
+    "fi-colicas",
+    "fi-constipacao",
+    "fi-contusao",
+    "fi-depressao",
+    "fi-dispepsia",
+    "fi-dor-articular",
+    "fi-enxaqueca",
+    "fi-feridas",
+    "fi-fissura-mamilo",
+    "fi-fralda",
+    "fi-herpes-labial",
+    "fi-pele-seca",
+    "fi-pernas-pesadas",
+    "fi-picadas",
+    "fi-prescrever",
+    "fi-queimadura",
+    "fi-resfriado",
+    "fi-tosse",
+    "fi-urinario",
+    "fi-zumbido-tontura",
+    "herpes-labial",
+    "insonia",
+    "ivc",
+    "lombalgia",
+    "migranea",
+    "oa-joelho",
+    "queimadura",
+    "resfriado",
+    "seborreica",
+    "tag",
+    "tosse-subaguda"
    ]
   },
   {
@@ -9854,7 +9895,8 @@
     "cochrane_resfriado",
     "cab28",
     "cab28_rs",
-    "memento_fito_betim2022"
+    "memento_fito_betim2022",
+    "formulario_fito_anvisa2026"
    ]
   },
   {
@@ -9991,7 +10033,8 @@
     "remume",
     "tele_hp",
     "hp_consenso5",
-    "memento_fito_betim2022"
+    "memento_fito_betim2022",
+    "formulario_fito_anvisa2026"
    ]
   },
   {
@@ -10088,7 +10131,8 @@
     "nice_lombar",
     "rename",
     "remume",
-    "memento_fito_betim2022"
+    "memento_fito_betim2022",
+    "formulario_fito_anvisa2026"
    ]
   },
   {
@@ -10101,7 +10145,8 @@
     "rename",
     "remume",
     "sbce_profilaxia2022",
-    "memento_fito_betim2022"
+    "memento_fito_betim2022",
+    "formulario_fito_anvisa2026"
    ]
   },
   {
@@ -10195,7 +10240,8 @@
     "cab28",
     "cab28_rs",
     "tb_sr2019",
-    "memento_fito_betim2022"
+    "memento_fito_betim2022",
+    "formulario_fito_anvisa2026"
    ]
   },
   {
@@ -10400,7 +10446,8 @@
     "entorse",
     "rename",
     "remume",
-    "memento_fito_betim2022"
+    "memento_fito_betim2022",
+    "formulario_fito_anvisa2026"
    ]
   },
   {
@@ -10443,7 +10490,8 @@
     "rename",
     "remume",
     "cab34",
-    "memento_fito_betim2022"
+    "memento_fito_betim2022",
+    "formulario_fito_anvisa2026"
    ]
   },
   {
@@ -10559,7 +10607,8 @@
     "rename",
     "remume",
     "pab_mulher2016",
-    "memento_fito_betim2022"
+    "memento_fito_betim2022",
+    "formulario_fito_anvisa2026"
    ]
   },
   {
@@ -10659,7 +10708,8 @@
     "remume",
     "cab28",
     "gvs1_tetano",
-    "memento_fito_betim2022"
+    "memento_fito_betim2022",
+    "formulario_fito_anvisa2026"
    ]
   },
   {
@@ -11002,7 +11052,8 @@
     "rename",
     "remume",
     "tsrs_reum2022",
-    "memento_fito_betim2022"
+    "memento_fito_betim2022",
+    "formulario_fito_anvisa2026"
    ]
   },
   {
@@ -11042,7 +11093,8 @@
     "remume",
     "tb_sr2019",
     "tsrs_pneumo2023",
-    "memento_fito_betim2022"
+    "memento_fito_betim2022",
+    "formulario_fito_anvisa2026"
    ]
   },
   {
@@ -11093,7 +11145,8 @@
     "rename",
     "remume",
     "tsrs_derm2023",
-    "memento_fito_betim2022"
+    "memento_fito_betim2022",
+    "formulario_fito_anvisa2026"
    ]
   },
   {
@@ -11201,7 +11254,8 @@
     "aftas",
     "rename",
     "remume",
-    "memento_fito_betim2022"
+    "memento_fito_betim2022",
+    "formulario_fito_anvisa2026"
    ]
   },
   {
@@ -11237,7 +11291,8 @@
    "fontes": [
     "ivc",
     "betim_feridas2026",
-    "memento_fito_betim2022"
+    "memento_fito_betim2022",
+    "formulario_fito_anvisa2026"
    ]
   },
   {
@@ -11251,7 +11306,8 @@
     "remume",
     "cab28_sm",
     "cab34",
-    "memento_fito_betim2022"
+    "memento_fito_betim2022",
+    "formulario_fito_anvisa2026"
    ]
   },
   {
@@ -11405,7 +11461,8 @@
     "entorse",
     "rename",
     "remume",
-    "memento_fito_betim2022"
+    "memento_fito_betim2022",
+    "formulario_fito_anvisa2026"
    ]
   },
   {
@@ -11635,7 +11692,8 @@
     "rename",
     "remume",
     "pab_mulher2016",
-    "memento_fito_betim2022"
+    "memento_fito_betim2022",
+    "formulario_fito_anvisa2026"
    ]
   },
   {
@@ -11725,7 +11783,8 @@
     "rename",
     "remume",
     "tsrs_derm2023",
-    "memento_fito_betim2022"
+    "memento_fito_betim2022",
+    "formulario_fito_anvisa2026"
    ]
   },
   {
@@ -11738,7 +11797,8 @@
     "rename",
     "remume",
     "cab28",
-    "memento_fito_betim2022"
+    "memento_fito_betim2022",
+    "formulario_fito_anvisa2026"
    ]
   },
   {
@@ -11961,7 +12021,8 @@
     "da_guias",
     "rename",
     "remume",
-    "memento_fito_betim2022"
+    "memento_fito_betim2022",
+    "formulario_fito_anvisa2026"
    ]
   },
   {
@@ -13935,7 +13996,8 @@
     "cab34",
     "rename",
     "remume",
-    "memento_fito_betim2022"
+    "memento_fito_betim2022",
+    "formulario_fito_anvisa2026"
    ]
   },
   {
@@ -14578,6 +14640,7 @@
    "fontes": [
     "memento_fito_betim2022",
     "protocolo_fito_farm_betim2022",
+    "formulario_fito_anvisa2026",
     "rename",
     "remume",
     "cochrane_hiperico2008",
@@ -14597,7 +14660,8 @@
     "janda2020_passiflora",
     "leach2015_insonia",
     "leite1986_capimlimao",
-    "remume"
+    "remume",
+    "formulario_fito_anvisa2026"
    ]
   },
   {
@@ -14608,7 +14672,8 @@
    "fontes": [
     "memento_fito_betim2022",
     "cochrane_hiperico2008",
-    "remume"
+    "remume",
+    "formulario_fito_anvisa2026"
    ]
   },
   {
@@ -14623,7 +14688,8 @@
     "tabach2017_espinheira",
     "rename",
     "remume",
-    "acg_dispepsia"
+    "acg_dispepsia",
+    "formulario_fito_anvisa2026"
    ]
   },
   {
@@ -14635,7 +14701,8 @@
     "memento_fito_betim2022",
     "aga_acg2023_constipacao",
     "rename",
-    "remume"
+    "remume",
+    "formulario_fito_anvisa2026"
    ]
   },
   {
@@ -14647,7 +14714,8 @@
     "memento_fito_betim2022",
     "alecrim_dismen2019",
     "cochrane_dismen",
-    "remume"
+    "remume",
+    "formulario_fito_anvisa2026"
    ]
   },
   {
@@ -14658,7 +14726,8 @@
    "fontes": [
     "memento_fito_betim2022",
     "rename",
-    "remume"
+    "remume",
+    "formulario_fito_anvisa2026"
    ]
   },
   {
@@ -14669,7 +14738,8 @@
    "fontes": [
     "memento_fito_betim2022",
     "cochrane_equinacea2014",
-    "cochrane_resfriado"
+    "cochrane_resfriado",
+    "formulario_fito_anvisa2026"
    ]
   },
   {
@@ -14679,7 +14749,8 @@
    "nv": 2,
    "fontes": [
     "memento_fito_betim2022",
-    "remume"
+    "remume",
+    "formulario_fito_anvisa2026"
    ]
   },
   {
@@ -14690,7 +14761,8 @@
    "fontes": [
     "memento_fito_betim2022",
     "cochrane_equinacea2014",
-    "remume"
+    "remume",
+    "formulario_fito_anvisa2026"
    ]
   },
   {
@@ -14701,7 +14773,8 @@
    "fontes": [
     "memento_fito_betim2022",
     "widrig2007_arnica",
-    "remume"
+    "remume",
+    "formulario_fito_anvisa2026"
    ]
   },
   {
@@ -14713,7 +14786,8 @@
     "memento_fito_betim2022",
     "cochrane_herbal_lombalgia2014",
     "rename",
-    "remume"
+    "remume",
+    "formulario_fito_anvisa2026"
    ]
   },
   {
@@ -14724,7 +14798,8 @@
    "fontes": [
     "memento_fito_betim2022",
     "cochrane_castanha2012",
-    "remume"
+    "remume",
+    "formulario_fito_anvisa2026"
    ]
   },
   {
@@ -14735,7 +14810,8 @@
    "fontes": [
     "memento_fito_betim2022",
     "cochrane_tanaceto2015",
-    "remume"
+    "remume",
+    "formulario_fito_anvisa2026"
    ]
   },
   {
@@ -14746,7 +14822,8 @@
    "fontes": [
     "memento_fito_betim2022",
     "cochrane_ginkgo_zumbido2013",
-    "cochrane_ginkgo_zumbido2022"
+    "cochrane_ginkgo_zumbido2022",
+    "formulario_fito_anvisa2026"
    ]
   },
   {
@@ -14758,7 +14835,8 @@
     "memento_fito_betim2022",
     "salehi2020_enzimas",
     "rosamosqueta_ecr2019",
-    "remume"
+    "remume",
+    "formulario_fito_anvisa2026"
    ]
   },
   {
@@ -14769,7 +14847,8 @@
    "fontes": [
     "memento_fito_betim2022",
     "cab28",
-    "remume"
+    "remume",
+    "formulario_fito_anvisa2026"
    ]
   },
   {
@@ -14780,7 +14859,8 @@
    "fontes": [
     "memento_fito_betim2022",
     "remume",
-    "tsrs_derm2023"
+    "tsrs_derm2023",
+    "formulario_fito_anvisa2026"
    ]
   },
   {
@@ -14791,7 +14871,8 @@
    "fontes": [
     "memento_fito_betim2022",
     "tsrs_derm2023",
-    "remume"
+    "remume",
+    "formulario_fito_anvisa2026"
    ]
   },
   {
@@ -14802,7 +14883,8 @@
    "fontes": [
     "memento_fito_betim2022",
     "calendula_fraldas_ecr",
-    "remume"
+    "remume",
+    "formulario_fito_anvisa2026"
    ]
   },
   {
@@ -14812,7 +14894,8 @@
    "nv": 3,
    "fontes": [
     "memento_fito_betim2022",
-    "remume"
+    "remume",
+    "formulario_fito_anvisa2026"
    ]
   },
   {
@@ -14823,7 +14906,8 @@
    "fontes": [
     "memento_fito_betim2022",
     "remume",
-    "pab_mulher2016"
+    "pab_mulher2016",
+    "formulario_fito_anvisa2026"
    ]
   },
   {
@@ -14834,7 +14918,8 @@
    "fontes": [
     "memento_fito_betim2022",
     "carneiro2014_cavalinha",
-    "carneiro2022_cavalinha"
+    "carneiro2022_cavalinha",
+    "formulario_fito_anvisa2026"
    ]
   }
  ]

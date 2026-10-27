@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-27T23:18:38.154Z",
+ "gerado": "2026-10-27T23:28:38.308Z",
  "cmed": {
   "data": "09/10/2026",
   "fonte": "cmed_pmc2026",
@@ -9524,7 +9524,6 @@
    "usado_em": [
     "acne",
     "aftas",
-    "amamentacao",
     "bronquite",
     "cr-ansiedade",
     "dermatite-atopica",
@@ -11692,8 +11691,7 @@
     "rename",
     "remume",
     "pab_mulher2016",
-    "memento_fito_betim2022",
-    "formulario_fito_anvisa2026"
+    "memento_fito_betim2022"
    ]
   },
   {
@@ -14653,7 +14651,7 @@
    "id": "fi-ansiedade-sono",
    "nome": "Ansiedade leve, irritabilidade e insônia leve: passiflora, melissa e erva-cidreira",
    "modulo": "fi",
-   "nv": 2,
+   "nv": 3,
    "fontes": [
     "memento_fito_betim2022",
     "cochrane_passiflora2007",
@@ -14709,7 +14707,7 @@
    "id": "fi-colicas",
    "nome": "Cólica menstrual e cólica intestinal leve: capim-limão, erva-cidreira e alecrim",
    "modulo": "fi",
-   "nv": 2,
+   "nv": 3,
    "fontes": [
     "memento_fito_betim2022",
     "alecrim_dismen2019",
@@ -14900,7 +14898,7 @@
   },
   {
    "id": "fi-fissura-mamilo",
-   "nome": "Fissura mamilar na amamentação: solução de calêndula 5%",
+   "nome": "Fissura mamilar na amamentação: pega e cuidados (calêndula da Farmácia Viva não é usada na lactação)",
    "modulo": "fi",
    "nv": 2,
    "fontes": [

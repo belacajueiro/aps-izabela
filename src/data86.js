@@ -65,12 +65,12 @@ Object.assign(FONTES, {
     A: "Uso/indicação de fitoterápico – avaliadas indicação, contraindicações, interações e idade mínima.",
     P: "- Fitoterápico da Farmácia Viva prescrito pelo nome científico ou popular, com concentração, forma farmacêutica, posologia e quantidade, em 2 vias (1ª via para a Farmácia Viva; 2ª via com o paciente para retirada na farmácia da unidade).\n- Conferidas contraindicações, interações e idade mínima (Memento SUS-Betim 2022).\n- Fitoterápico registrado na lista de medicamentos em uso.\n- Orientados modo de uso, tempo máximo de uso e quando suspender.",
     rx: [FV("Modelo de receita da Farmácia Viva", "USO ORAL (ou USO EXTERNO)\n1. Tintura de ______ (nome científico e popular) ______ 1 frasco de 50 mL\n   Diluir ___ gotas em 50 mL de água e tomar ___ vezes ao dia, por ___ dias.", "Memento SUS-Betim 2022, cap. 4: nome científico ou popular sem abreviaturas, concentração, forma farmacêutica, posologia, quantidade suficiente, assinatura e carimbo (ou nome legível e nº do conselho); vinculada ao prontuário. Recomendável incluir data de nascimento e telefone do paciente.")],
-    orient: "## Como funciona\n- O remédio de planta da prefeitura é feito na **Farmácia Viva**. A receita tem **2 vias**: uma vai para a Farmácia Viva e a outra fica com você.\n- Quando o remédio ficar pronto, você retira na farmácia da unidade com a sua via da receita.\n\n## Cuidados\n" + REMEDIO_PLANTA + "\n- Use só a planta e a dose da receita. Chá ou garrafada por conta própria pode fazer mal, principalmente na gravidez, na amamentação e em criança.\n- Se for operar ou fazer procedimento no dentista, avise que usa remédio de planta: alguns precisam ser parados dias antes.\n\n## Se passar mal\n- Ligue para o Serviço de Toxicologia de Minas Gerais (Hospital João XXIII) e leve a planta ou o frasco.",
+    orient: "## Como funciona\n- O remédio de planta da prefeitura é feito na **Farmácia Viva**. A receita tem **2 vias**: uma vai para a Farmácia Viva e a outra fica com você.\n- Quando o remédio ficar pronto, você retira na farmácia da unidade com a sua via da receita.\n\n## Cuidados\n" + REMEDIO_PLANTA + "\n- Use só a planta e a dose da receita. Chá ou garrafada por conta própria pode fazer mal, principalmente na gravidez, na amamentação e em criança.\n- Se for operar ou fazer procedimento no dentista, avise que usa remédio de planta: alguns precisam ser parados dias antes.\n\n## Se passar mal\n- Ligue para o **CIATox de Minas Gerais** (Hospital João XXIII): (31) 3239-9308, (31) 3239-9390 ou (31) 3224-4000. Ou para o **Disque-Intoxicação: 0800 722 6001** (ligação gratuita).\n- Tenha em mãos a planta ou o frasco do remédio.",
     alarme: ["Falta de ar, inchaço no rosto ou na boca, manchas vermelhas pelo corpo depois de usar o remédio", "Sangramento sem motivo, manchas roxas", "Sonolência forte, desmaio ou queda de pressão", "Pele ou olhos amarelados"],
-    encaminhar: "Suspeita de intoxicação por planta: Serviço de Toxicologia de MG (Hospital João XXIII). Reação alérgica grave: urgência.",
+    encaminhar: "Suspeita de intoxicação por planta: CIATox/MG – Hospital João XXIII, (31) 3239-9308, (31) 3239-9390 ou (31) 3224-4000; Disque-Intoxicação 0800 722 6001 (telefones informados pela médica da UBS em 27/10/2026). Reação alérgica grave: urgência.",
     sus: {nacional: SUS_NAC, betim: BETIM_FV},
     evid: {resumo: "A oferta de Betim segue o Memento municipal (2022), que reúne indicações de uso tradicional e monografias oficiais. A evidência clínica varia muito de planta para planta: moderada para extratos padronizados de hipérico e castanha-da-índia, baixa para harpagofito, tanaceto e arnica tópica, e muito baixa ou ausente para a maioria. Para ginkgo no zumbido e equinácea no tratamento do resfriado, as revisões Cochrane não mostram benefício. As tinturas da Farmácia Viva não informam teor de marcador, e os ensaios usaram extratos padronizados, então aplicar os resultados às tinturas é extrapolação.", certeza: "Variável por planta (ver tabela do guia)", fontes: [M, "protocolo_fito_farm_betim2022", "formulario_fito_anvisa2026", "rename", "remume", "cochrane_hiperico2008", "cochrane_castanha2012", "cochrane_equinacea2014", "cochrane_ginkgo_zumbido2022"]},
-    nv: NV_BASE.concat(["Telefones do Serviço de Toxicologia de MG citados no Memento 2022 (31 3239-9308 / 3239-9223 / 3239-9224 / 3224-4000): conferir se seguem válidos.", "Volume da gota do conta-gotas da Farmácia Viva: o Memento equipara 90 gotas a 3 mL (cerca de 30 gotas/mL) e o Formulário ANVISA 2026 dá as doses em mL; conferir o conta-gotas em uso."]),
+    nv: NV_BASE.concat(["Telefones do CIATox/MG atualizados pela médica da UBS (27/10/2026): (31) 3239-9308, 3239-9390, 3224-4000 e 0800 722 6001; os números 3239-9223 e 3239-9224 do Memento 2022 saíram. Não conferidos em fonte oficial on-line.", "Volume da gota do conta-gotas da Farmácia Viva: o Memento equipara 90 gotas a 3 mL (cerca de 30 gotas/mL) e o Formulário ANVISA 2026 dá as doses em mL; conferir o conta-gotas em uso."]),
     guia: {
       resumo: "A REMUME de Betim **não lista fitoterápicos**; eles vêm da **Farmácia Viva SUS-Betim**, com **27 plantas** padronizadas no Memento municipal de 2022 [F]. A receita é feita em **2 vias**: a 1ª via vai para a Farmácia Viva manipular e o paciente retira na farmácia da unidade com a 2ª [F]. O médico pode prescrever todas as plantas; **ginkgo, hipérico e tanaceto são exclusivos do médico** [F]. Antes de prescrever, confira três coisas: **idade mínima** (as tinturas têm álcool e são proibidas abaixo de 18 anos), **gestação/lactação** (quase todas contraindicadas) e **interações**, principalmente com anticoagulantes, anticoncepcional, antidepressivos e antirretrovirais [F].",
       secoes: [
@@ -98,10 +98,10 @@ Object.assign(FONTES, {
         ]},
         {t: "Segurança em um minuto", b: [
           {tab: {h: ["Situação", "Regra do Memento"], r: [
-            ["Gestação e lactação", "Contraindicadas para quase todas as plantas, inclusive de uso tópico (arnica, calêndula, barbatimão, guaçatonga) [F]. Exceções descritas: **camomila** tópica é permitida (higienizar o mamilo antes de amamentar) e a **solução de calêndula 5%** é indicada para fissura mamilar, embora a monografia da calêndula contraindique a lactação (divergência interna do Memento) [F]. Girassol e copaíba só têm hipersensibilidade como contraindicação; rosa-mosqueta, pele oleosa ou com acne [F]."],
+            ["Gestação e lactação", "Contraindicadas para quase todas as plantas, inclusive de uso tópico (arnica, calêndula, barbatimão, guaçatonga) [F]. Exceções descritas: **camomila** tópica é permitida (higienizar o mamilo antes de amamentar) e a **solução de calêndula 5%** é indicada para fissura mamilar, embora a monografia da calêndula contraindique a lactação (divergência interna do Memento) [F]; o Formulário ANVISA 2026 também contraindica a calêndula na lactação, e **o app não a prescreve na amamentação** (decisão da usuária, 27/10/2026). Girassol e copaíba só têm hipersensibilidade como contraindicação; rosa-mosqueta, pele oleosa ou com acne [F]."],
             ["Tinturas de uso oral (têm álcool)", "Uso adulto: contraindicadas abaixo de 18 anos; várias também no alcoolismo e no diabetes (alcachofra, ginkgo, harpagofito, melissa, passiflora, guaco, tanaceto) [F]."],
             ["Xaropes e spray oral", "Contêm açúcar: restrição em diabéticos (xarope de guaco + maracujá, spray de tanchagem + romã) [F]."],
-            ["Criança", "Uso oral praticamente só ≥ 12 anos (xaropes de guaco, chá de cavalinha) [F]. Tópicos: ≥ 6 anos (calêndula, barbatimão, rosa-mosqueta, repelente), ≥ 12 anos (arnica, camomila, castanha-da-índia, copaíba creme, guaco creme); **creme Polawax + girassol a partir de 2 anos** e **óleo de girassol**, descrito como de uso adulto e pediátrico, sem idade mínima definida [F]. Abaixo de 2 anos, o óleo de girassol é o único sem restrição explícita de idade [F]."],
+            ["Criança", "Uso oral praticamente só ≥ 12 anos (chá de cavalinha) [F]; os xaropes de guaco, que o Memento libera ≥ 12 anos, são **só para adultos no app** (Formulário ANVISA 2026) [F]. Tópicos: ≥ 6 anos (calêndula, barbatimão, rosa-mosqueta, repelente), ≥ 12 anos (arnica, camomila, castanha-da-índia, copaíba creme, guaco creme); **creme Polawax + girassol a partir de 2 anos** e **óleo de girassol**, descrito como de uso adulto e pediátrico, sem idade mínima definida [F]. Abaixo de 2 anos, o óleo de girassol é o único sem restrição explícita de idade [F]."],
             ["Cirurgia e procedimentos", "Suspender ginkgo ≥ 3 dias antes, guaco ≥ 1 semana e tanaceto 15 dias (inclusive odontológico) [F]."],
             ["Pele aberta", "Arnica e castanha-da-índia tópicas só em pele íntegra [F]."]
           ]}}
@@ -149,17 +149,17 @@ Object.assign(FONTES, {
           {tab: {h: ["Planta", "Formulário 2026", "Memento 2022", "O que muda"], r: [
             ["Passiflora", "Só P. incarnata; tintura 2 mL até 3×/dia; < 12 anos contraindicado [F]", "P. edulis/alata; 30–40 gotas 1–3×/dia", "Espécie diferente; dose oficial maior"],
             ["Melissa", "Tintura 2–6 mL 1–3×/dia [F]", "30–40 gotas 1–3×/dia", "Dose do Memento abaixo da oficial"],
-            ["Lippia alba", "Só chá, **0,4–0,6 g** em 150 mL [F]", "Chá **1–3 g**; tintura", "Chá do Memento até 5× a dose oficial"],
+            ["Lippia alba", "Só chá, **0,4–0,6 g** em 150 mL [F]", "Chá **1–3 g**; tintura", "**App adotou 0,4–0,6 g** (decisão da usuária)"],
             ["Capim-limão", "Só chá, 1–3 g; contraindicado em cardiopatia, nefropatia, hepatopatia e doenças crônicas [F]", "Chá 1–3 g; tintura", "Contraindicações mais amplas"],
             ["Espinheira-santa", "Chá e cápsula; **sem tintura** [F]", "Tintura", "Tintura fora das fórmulas oficiais"],
             ["Alcachofra", "Chá e cápsula; **sem tintura**; ≥ 12 anos [F]", "Tintura; adulto", "Tintura fora das fórmulas oficiais"],
-            ["Guaco", "M. glomerata: chá e tintura, **uso adulto**; xarope ≥ 12 anos só para M. laevigata; até 15 dias [F]", "Xarope de M. glomerata ≥ 12 anos", "Faixa ≥ 12 anos sem respaldo para a espécie usada"],
+            ["Guaco", "M. glomerata: chá e tintura, **uso adulto**; xarope ≥ 12 anos só para M. laevigata; até 15 dias [F]", "Xarope de M. glomerata ≥ 12 anos", "**App: só adulto** (decisão da usuária)"],
             ["Equinácea", "Tintura da raiz 3 mL 3×/dia; até 8 semanas; não em autoimune, TB, HIV, imunossupressão [F]", "30–40 gotas 3×/dia, 1–2 meses", "Dose oficial maior; mais contraindicações"],
             ["Garra-do-diabo", "Tintura 0,5–1 mL 3×/dia; máx. 3 mL/dia; até 4 semanas [F]", "15–30 gotas 3×/dia; máx. 90 gotas", "Igual"],
             ["Tanaceto", "Tintura 0,25–1 mL 1×/dia; só se refratária à medicação convencional [F]", "30 gotas 1×/dia", "Memento no teto da faixa oficial"],
             ["Castanha-da-índia", "Oral só cápsula de extrato seco; tópico: IVC adulto, contusão ≥ 12 anos [F]", "Tintura oral; creme ≥ 12 anos", "Tintura oral fora das fórmulas oficiais"],
             ["Arnica", "Tópica ≥ 12 anos, pele íntegra; reavaliar em 3–4 dias; sem indicação de IVC [F]", "Creme até 7 dias; gel para IVC", "Prazo menor; gel para IVC sem respaldo"],
-            ["Calêndula", "Cutânea ≥ 6 anos; oral/mucosa ≥ 12; **contraindicada na lactação** [F]", "Solução 5% para fissura mamilar", "Fissura mamilar contra a referência oficial"],
+            ["Calêndula", "Cutânea ≥ 6 anos; oral/mucosa ≥ 12; **contraindicada na lactação** [F]", "Solução 5% para fissura mamilar", "**App não usa na lactação** (decisão da usuária)"],
             ["Camomila", "Cutânea e oromucosa ≥ 12 anos; permitida na lactação [F]", "Igual", "Igual"],
             ["Cavalinha", "Chá 1–4 g ≥ 12 anos; sem tintura; até 2–4 semanas [F]", "Chá igual; tintura adulto", "Tintura fora das fórmulas oficiais"],
             ["Tanchagem, romã, barbatimão", "Tanchagem e romã adulto (bochecho); romã até 15 dias; barbatimão pomada [F]", "Orabase e spray", "Formas da Farmácia Viva sem fórmula oficial"],
@@ -188,7 +188,7 @@ Object.assign(FONTES, {
     rx: [
       FV("Passiflora (maracujá) – tintura", "USO ORAL\n1. Tintura de Passiflora edulis/alata (maracujá) ______ 1 frasco de 50 mL\n   Diluir 30 a 40 gotas em 50 mL de água e tomar 1 a 3 vezes ao dia (a última dose à noite). Reavaliar em 2 semanas.", "Memento SUS-Betim 2022: ansiedade e insônia leves; adulto. Contraindicada na gestação, lactação, < 18 anos, alcoolismo, diabetes (tintura) e hipotensão. Soma sedação com BZD/álcool; aumenta sangramento com varfarina, AAS, clopidogrel e AINE; potencializa anti-hipertensivos. Não dirigir se sonolento; não usar cronicamente. Certeza muito baixa (Cochrane 2007 inconclusiva)."),
       FV("Melissa + Passiflora – tintura", "USO ORAL\n1. Tintura de Melissa officinalis + Passiflora edulis/alata ______ 1 frasco de 50 mL\n   Diluir 30 a 40 gotas em 50 mL de água e tomar 1 a 3 vezes ao dia. Reavaliar em 2 semanas.", "Memento 2022: insônia, irritabilidade, ansiedade; adulto. Soma as contraindicações das duas plantas: melissa contraindicada no hipotireoidismo (interfere com levotiroxina), glaucoma e HPB. Certeza muito baixa."),
-      FV("Erva-cidreira-de-arbusto (Lippia alba) – chá", "USO ORAL\n1. Lippia alba (erva-cidreira) droga vegetal – sachê ______ 1 pacote\n   Preparar o chá: 1 a 3 g das folhas secas em 150 mL (1 xícara) de água fervente, abafar por 5 minutos e coar. Tomar 1 xícara 1 a 3 vezes ao dia (acima de 70 anos: meia xícara).", "Memento 2022: sachê sem álcool (alternativa à tintura); adulto. Contraindicada na gestação, lactação, < 18 anos, hipotensão, gastrite/úlcera. Potencializa sedativos e anti-hipertensivos. Certeza muito baixa (sem ECR localizado).")
+      FV("Erva-cidreira-de-arbusto (Lippia alba) – chá", "USO ORAL\n1. Lippia alba (erva-cidreira) droga vegetal – sachê ______ 1 pacote\n   Preparar o chá: 0,4 a 0,6 g de folhas e flores secas (cerca de meia colher de chá) em 150 mL (1 xícara) de água fervente, abafar por 5 minutos e coar. Tomar 1 xícara até 3 vezes ao dia (acima de 70 anos: meia xícara).", "Memento 2022: sachê sem álcool (alternativa à tintura); adulto. Contraindicada na gestação, lactação, < 18 anos, hipotensão, gastrite/úlcera. Potencializa sedativos e anti-hipertensivos. Certeza muito baixa (sem ECR localizado).")
     ],
     orient: "## O que você tem\n- Ansiedade e dificuldade para dormir **leves** costumam melhorar com mudanças na rotina. O remédio de planta é uma ajuda, não o tratamento principal.\n\n## Remédio de planta (Farmácia Viva)\n" + TINT_PAC + "\n- Pode dar sono: não dirija nem use máquinas se ficar sonolento. Não misture com bebida alcoólica nem com remédio para dormir.\n- Se não melhorar em 2 semanas, volte para reavaliar.\n\n## O que mais ajuda a dormir\n- Deitar e levantar sempre no mesmo horário, inclusive no fim de semana.\n- Sem café, chá preto, chimarrão ou refrigerante de cola depois das 14 h.\n- Desligar celular e TV 1 hora antes de deitar.\n- Se não dormir em uns 20 minutos, levantar, fazer algo calmo com pouca luz e voltar quando tiver sono.\n- Atividade física durante o dia, não perto da hora de dormir.\n\n" + REMEDIO_PLANTA,
     alarme: ["Pensamentos de morte ou de se machucar", "Ansiedade que impede trabalhar, estudar ou sair de casa", "Crises de falta de ar, aperto no peito ou palpitação", "Muito sono durante o dia, tontura ou desmaio"],
@@ -204,7 +204,7 @@ Object.assign(FONTES, {
             ["Tintura de passiflora 50 mL", "30–40 gotas em 50 mL de água, 1–3×/dia [F]", "Hipotensão; varfarina, AAS, clopidogrel, AINE (sangramento); BZD, álcool, anti-histamínicos (sedação); anti-hipertensivos; sem melhora em 2 semanas → reavaliar; não usar cronicamente [F]"],
             ["Tintura de melissa + passiflora 50 mL", "30–40 gotas em 50 mL de água, 1–3×/dia [F]", "Soma das duas plantas [F]"],
             ["Tintura de melissa 50 mL", "30–40 gotas em 50 mL de água, 1–3×/dia [F]", "Hipotireoidismo (interfere com TSH/levotiroxina), glaucoma, HPB, hipotensão; não dirigir [F]"],
-            ["Lippia alba: tintura 50 mL ou sachê", "Tintura 30 gotas 1–3×/dia; chá 1–3 g em 150 mL, 1–3×/dia (> 70 anos: 75 mL) [F]", "Hipotensão, gastrite, úlcera; sedativos, anti-hipertensivos, paracetamol [F]"],
+            ["Lippia alba: tintura 50 mL ou sachê", "Tintura 30 gotas 1–3×/dia; chá 0,4–0,6 g em 150 mL até 3×/dia pelo Formulário ANVISA 2026 (o Memento traz 1–3 g; > 70 anos: 75 mL) [F]", "Hipotensão, gastrite, úlcera; sedativos, anti-hipertensivos, paracetamol [F]"],
             ["Capim-limão: tintura ou sachê", "Tintura 30–40 gotas 2–3×/dia; chá 1–3 g, 3–4×/dia [F]", "**Não recomendado para ansiedade/insônia** (ECR negativo) [F/I]. Contraindicado em cardiopatia, nefro ou hepatopatia, glaucoma, HPB [F]"]
           ]}, nota: "Todas as tinturas: contraindicadas na gestação, lactação, < 18 anos e alcoolismo; melissa e passiflora também no diabetes, pelo teor alcoólico [F]. Sem álcool: sachê de Lippia alba (chá) [F]."}
         ]},
@@ -376,7 +376,7 @@ Object.assign(FONTES, {
     P: "- Calor local, atividade física.\n- Dismenorreia: AINE em horário fixo desde a véspera/1º dia (primeira linha).\n- Fitoterápico da Farmácia Viva (opcional, evidência muito baixa): ___, em 2 vias.\n- Sinais de causa secundária → ver itens de dismenorreia/dor abdominal.",
     rx: [
       FV("Capim-limão – chá (sachê)", "USO ORAL\n1. Cymbopogon citratus (capim-limão) droga vegetal – sachê ______ 1 pacote\n   Preparar o chá: 1 a 3 g das folhas secas em 150 mL (1 xícara) de água fervente; abafar e coar bem (pano ou coador de papel). Tomar 1 xícara 3 a 4 vezes ao dia nos dias de cólica.", "Memento SUS-Betim 2022: antiespasmódico na dismenorreia e na cólica intestinal; adulto. Contraindicado na gestação, lactação, < 18 anos, cardiopatia, nefropatia, hepatopatia, doença crônica, glaucoma, HPB. Coar bem (fibras podem ulcerar o esôfago). Potencializa sedativos e bloqueadores de canal de cálcio. Certeza muito baixa (sem ECR na cólica localizado)."),
-      FV("Erva-cidreira-de-arbusto (Lippia alba) – chá (sachê)", "USO ORAL\n1. Lippia alba (erva-cidreira) droga vegetal – sachê ______ 1 pacote\n   Preparar o chá: 1 a 3 g das folhas secas em 150 mL de água fervente, abafar por 5 minutos e coar. Tomar 1 xícara 1 a 3 vezes ao dia nos dias de cólica.", "Memento 2022: antiespasmódico em cólicas uterinas e intestinais; adulto. Contraindicada na gestação, lactação, < 18 anos, hipotensão, gastrite, úlcera. Certeza muito baixa.")
+      FV("Erva-cidreira-de-arbusto (Lippia alba) – chá (sachê)", "USO ORAL\n1. Lippia alba (erva-cidreira) droga vegetal – sachê ______ 1 pacote\n   Preparar o chá: 0,4 a 0,6 g de folhas e flores secas (cerca de meia colher de chá) em 150 mL de água fervente, abafar por 5 minutos e coar. Tomar 1 xícara até 3 vezes ao dia nos dias de cólica.", "Memento 2022: antiespasmódico em cólicas uterinas e intestinais; adulto. Contraindicada na gestação, lactação, < 18 anos, hipotensão, gastrite, úlcera. Certeza muito baixa.")
     ],
     orient: "## O que você tem\n- Cólica leve, sem sinal de gravidade.\n\n## Remédio de planta (Farmácia Viva)\n- Prepare o chá com a água fervendo, abafe por 5 minutos e **coe bem**.\n- Leve a 2ª via da receita à farmácia da unidade para pegar o sachê.\n- Na cólica menstrual, o anti-inflamatório começado na véspera ou no primeiro dia costuma funcionar melhor; o chá pode ajudar junto.\n\n## O que mais ajuda\n- Bolsa de água morna na barriga.\n- Atividade física regular.\n\n" + REMEDIO_PLANTA,
     alarme: ["Dor forte que não passa, febre ou vômitos", "Dor fora da menstruação ou na relação sexual", "Atraso menstrual com dor (pode ser gravidez)", "Sangue nas fezes ou diarreia com sangue"],
@@ -390,7 +390,7 @@ Object.assign(FONTES, {
         {t: "Opções e cuidados", b: [
           {tab: {h: ["Formulação (Memento 2022)", "Posologia", "Não usar / cuidado"], r: [
             ["Capim-limão: sachê ou tintura 50 mL", "Chá 1–3 g em 150 mL, 3–4×/dia; tintura 30–40 gotas 2–3×/dia [F]", "Gestação, lactação, < 18 anos, cardiopatia, nefro/hepatopatia, glaucoma, HPB; coar bem [F]"],
-            ["Lippia alba: sachê ou tintura 50 mL", "Chá 1–3 g em 150 mL, 1–3×/dia; tintura 30 gotas 1–3×/dia [F]", "Gestação, lactação, < 18 anos, hipotensão, gastrite, úlcera [F]"],
+            ["Lippia alba: sachê ou tintura 50 mL", "Chá 0,4–0,6 g em 150 mL até 3×/dia (Formulário ANVISA 2026; o Memento traz 1–3 g); tintura 30 gotas 1–3×/dia [F]", "Gestação, lactação, < 18 anos, hipotensão, gastrite, úlcera [F]"],
             ["Alecrim: tintura 50 mL", "30 gotas em 50 mL de água, 3×/dia [F]", "HAS, diabetes, epilepsia, doença biliar/hepática, anticoagulantes, lítio [F]"]
           ]}},
           {ir: [["dismenorreia", "Dismenorreia primária"], ["dor-abdominal", "Dor abdominal aguda"], ["endometriose", "Endometriose"], ["fi-prescrever", "Como prescrever na Farmácia Viva"]]},
@@ -411,22 +411,22 @@ Object.assign(FONTES, {
     A: "Tosse aguda de vias aéreas superiores, sem sinais de gravidade.",
     P: "- Hidratação, mel (≥ 1 ano), lavagem nasal.\n- Xarope de guaco da Farmácia Viva (opcional): ___, por até 15 dias, em 2 vias.\n- Tosse ≥ 2 semanas: investigar TB; sinais de pneumonia/asma → itens específicos.",
     rx: [
-      FV("Xarope de guaco 10% (tosse com catarro)", "USO ORAL\n1. Xarope de guaco (Mikania glomerata) 10% ______ 1 frasco de 100 mL\n   Adulto: tomar 15 mL de 8 em 8 horas. Acima de 12 anos: 5 mL de 8 em 8 horas. No máximo 15 dias seguidos.", "Memento SUS-Betim 2022: afecções produtivas das vias aéreas superiores; ≥ 12 anos. Contraindicado na gestação, lactação, hepatopatia, HAS grave, distúrbio de coagulação, anticoagulantes (cumarina), < 12 anos. Contém açúcar (cautela no diabetes). Interage com antirretrovirais (pancitopenia relatada), AINE e ipê-roxo. Pode aumentar o fluxo menstrual. Guaco consta da RENAME 2024. Nenhum ECR localizado: certeza muito baixa (uso tradicional)."),
-      FV("Xarope de guaco 7% + maracujá 3% (tosse seca)", "USO ORAL\n1. Xarope de guaco 7% + maracujá 3% ______ 1 frasco de 100 mL\n   Adulto: tomar 15 mL 3 vezes ao dia. Acima de 12 anos: 5 mL 2 a 3 vezes ao dia. No máximo 15 dias seguidos.", "Memento 2022: tosse seca e improdutiva; ≥ 12 anos. Não indicado no diabetes (açúcar). Soma os cuidados do guaco e da passiflora (sonolência, hipotensão, sedativos). Certeza muito baixa.")
+      FV("Xarope de guaco 10% (tosse com catarro)", "USO ORAL\n1. Xarope de guaco (Mikania glomerata) 10% ______ 1 frasco de 100 mL\n   Tomar 15 mL de 8 em 8 horas, por até 7 dias (no máximo 15 dias seguidos). Uso adulto.", "Memento SUS-Betim 2022: afecções produtivas das vias aéreas superiores; o Memento libera a partir de 12 anos, mas o app usa **só em adultos** (Formulário ANVISA 2026: M. glomerata é de uso adulto; decisão da usuária, 27/10/2026). Contraindicado na gestação, lactação, hepatopatia, HAS grave, distúrbio de coagulação, anticoagulantes (cumarina), < 12 anos. Contém açúcar (cautela no diabetes). Interage com antirretrovirais (pancitopenia relatada), AINE e ipê-roxo. Pode aumentar o fluxo menstrual. Guaco consta da RENAME 2024. Nenhum ECR localizado: certeza muito baixa (uso tradicional)."),
+      FV("Xarope de guaco 7% + maracujá 3% (tosse seca)", "USO ORAL\n1. Xarope de guaco 7% + maracujá 3% ______ 1 frasco de 100 mL\n   Tomar 15 mL 3 vezes ao dia, por até 7 dias (no máximo 15 dias seguidos). Uso adulto.", "Memento 2022: tosse seca e improdutiva; o app usa **só em adultos** (decisão da usuária, 27/10/2026; o Memento libera ≥ 12 anos). Não indicado no diabetes (açúcar). Soma os cuidados do guaco e da passiflora (sonolência, hipotensão, sedativos). Certeza muito baixa.")
     ],
-    orient: "## O que você tem\n- Tosse de resfriado ou gripe costuma melhorar sozinha em 1 a 3 semanas. Nenhum xarope cura mais rápido; o objetivo é aliviar.\n\n## Xarope de guaco (Farmácia Viva)\n- Tome a medida da receita com o copinho dosador ou colher de medida.\n- **No máximo 15 dias seguidos.**\n- Não use se estiver grávida ou amamentando, se tomar remédio para afinar o sangue, se tiver problema de fígado ou sangramento fácil. Tem açúcar: cuidado se tiver diabetes.\n- Leve a 2ª via da receita à farmácia da unidade para pegar o xarope.\n\n## O que mais ajuda\n- Beber bastante água; mel puro (1 colher) ajuda a tosse em quem tem mais de 1 ano.\n- Lavar o nariz com soro.\n- Não fumar e evitar fumaça.\n\n" + REMEDIO_PLANTA,
+    orient: "## O que você tem\n- Tosse de resfriado ou gripe costuma melhorar sozinha em 1 a 3 semanas. Nenhum xarope cura mais rápido; o objetivo é aliviar.\n\n## Xarope de guaco (Farmácia Viva)\n- É só para adultos.\n- Tome a medida da receita com o copinho dosador ou colher de medida.\n- **No máximo 15 dias seguidos.**\n- Não use se estiver grávida ou amamentando, se tomar remédio para afinar o sangue, se tiver problema de fígado ou sangramento fácil. Tem açúcar: cuidado se tiver diabetes.\n- Leve a 2ª via da receita à farmácia da unidade para pegar o xarope.\n\n## O que mais ajuda\n- Beber bastante água; mel puro (1 colher) ajuda a tosse em quem tem mais de 1 ano.\n- Lavar o nariz com soro.\n- Não fumar e evitar fumaça.\n\n" + REMEDIO_PLANTA,
     alarme: ["Falta de ar, chiado ou respiração rápida", "Febre alta ou que volta depois de melhorar", "Dor no peito", "Tosse há 2 semanas ou mais, com catarro, febre à tarde, suor à noite ou emagrecimento", "Sangue no catarro", "Manchas roxas ou sangramento"],
     encaminhar: "Tosse ≥ 2 semanas: investigar TB (item 'Tosse ≥ 2 semanas'). Pneumonia, asma ou DPOC: itens específicos.",
     sus: {nacional: "RENAME 2024: guaco (Mikania glomerata) em tintura, xarope ou solução oral, com 0,5 a 5 mg de cumarina por dia (Componente Básico).", betim: "Farmácia Viva (Memento 2022): xarope de guaco 10%, xarope de guaco 7% + maracujá 3% e tintura de guaco. REMUME não lista antitussígenos fitoterápicos."},
     evid: {resumo: "Não localizei ensaio clínico de guaco no PubMed. O guaco está na RENAME 2024 com teor de cumarina definido e no Memento de Betim como uso tradicional. A tosse aguda viral é autolimitada e nenhum xarope tem benefício robusto. O principal cuidado é a cumarina (anticoagulantes, coagulopatias, hepatopatia).", certeza: "Muito baixa (uso tradicional)", fontes: [M, "rename", "remume"]},
     nv: NV_BASE.concat(["Teor de cumarina do xarope de guaco da Farmácia Viva × faixa da RENAME (0,5–5 mg/dia)."]),
     guia: {
-      resumo: "O **guaco** é o fitoterápico de tosse da Farmácia Viva e também está na **RENAME 2024** [F]: **xarope 10%** para tosse com catarro e **xarope de guaco + maracujá** para tosse seca, a partir de **12 anos**, por **até 15 dias** [F]. Não localizei ensaio clínico: a indicação é de **uso tradicional** (certeza muito baixa) [F]. O cuidado principal é a **cumarina**: não usar com anticoagulante, coagulopatia, hepatopatia ou HAS grave, nem na gestação [F]. Antes de tratar tosse ≥ 2 semanas, **pensar em tuberculose** [F].",
+      resumo: "O **guaco** é o fitoterápico de tosse da Farmácia Viva e também está na **RENAME 2024** [F]: **xarope 10%** para tosse com catarro e **xarope de guaco + maracujá** para tosse seca, por **até 15 dias** [F]. O Memento libera a partir de 12 anos, mas no app o xarope é **só para adultos**: no Formulário ANVISA 2026 a espécie usada (Mikania glomerata) é de uso adulto [F] (decisão da usuária, 27/10/2026). Não localizei ensaio clínico: a indicação é de **uso tradicional** (certeza muito baixa) [F]. O cuidado principal é a **cumarina**: não usar com anticoagulante, coagulopatia, hepatopatia ou HAS grave, nem na gestação [F]. Antes de tratar tosse ≥ 2 semanas, **pensar em tuberculose** [F].",
       secoes: [
         {t: "Opções e cuidados", b: [
-          {tab: {h: ["Formulação (Memento 2022)", "Adulto", "> 12 anos", "Não usar"], r: [
-            ["Xarope de guaco 10%, 100 mL", "15 mL 8/8 h [F]", "5 mL 8/8 h [F]", "< 12 anos, gestação, lactação, anticoagulantes, coagulopatia, hepatopatia, HAS grave; diabetes (açúcar) [F]"],
-            ["Xarope de guaco 7% + maracujá 3%, 100 mL", "15 mL 3×/dia [F]", "5 mL 2–3×/dia [F]", "Idem + diabetes; sonolência [F]"],
+          {tab: {h: ["Formulação (Memento 2022)", "Adulto", "12 a 17 anos", "Não usar"], r: [
+            ["Xarope de guaco 10%, 100 mL", "15 mL 8/8 h [F]", "Não usar no app (Memento: 5 mL 8/8 h) [F]", "< 12 anos, gestação, lactação, anticoagulantes, coagulopatia, hepatopatia, HAS grave; diabetes (açúcar) [F]"],
+            ["Xarope de guaco 7% + maracujá 3%, 100 mL", "15 mL 3×/dia [F]", "Não usar no app (Memento: 5 mL 2–3×/dia) [F]", "Idem + diabetes; sonolência [F]"],
             ["Tintura de guaco 50 mL", "30–40 gotas em 50 mL de água, 3×/dia [F]", "—", "< 18 anos (tintura), alcoolismo, diabetes [F]"]
           ]}, nota: "Máximo de 15 dias seguidos; pode repetir após 5 dias de pausa. Afastar TB e câncer em quadro respiratório crônico não diagnosticado (Memento) [F]. Na monografia do maracujá, o xarope combinado para > 12 anos aparece como 5 mL 2–3×/dia; na do guaco, 5 mL 8/8 h (divergência interna do Memento) [F]."},
           {ir: [["resfriado", "Resfriado comum"], ["bronquite", "Bronquite aguda"], ["tosse-subaguda", "Tosse subaguda"], ["tb-sr", "Tosse ≥ 2 semanas – TB"], ["fi-resfriado", "Resfriado: equinácea"], ["fi-prescrever", "Como prescrever na Farmácia Viva"]]},
@@ -928,24 +928,22 @@ Object.assign(FONTES, {
 
   // ───────── 22. Fissura mamilar
   it({
-    id: "fi-fissura-mamilo", nome: "Fissura mamilar na amamentação: solução de calêndula 5%", sistema: "Pele e feridas", risco: "baixo",
+    id: "fi-fissura-mamilo", nome: "Fissura mamilar na amamentação: pega e cuidados (calêndula da Farmácia Viva não é usada na lactação)", sistema: "Pele e feridas", risco: "baixo",
     ciap: "W95", cid: "O92.1",
     tags: "fissura mamilar rachadura no bico do peito mamilo dor ao amamentar amamentação calêndula solução fitoterápico farmácia viva",
     S: "Dor e fissura em mamilo ___ há ___ dias. Pega/posição: ___. Febre, área endurecida/vermelha na mama ___. Frênulo do bebê ___.",
     O: "Fissura em mamilo ___, ___ (sangramento/crosta). Mama sem sinais de mastite ___. Observação da mamada: pega ___.",
     A: "Fissura mamilar por pega inadequada, sem mastite.",
-    P: "- Correção da pega e da posição (principal medida); leite materno no mamilo após a mamada; secar ao ar.\n- Solução de calêndula 5% da Farmácia Viva (opcional), removida antes de mamar, em 2 vias.\n- Retorno em 48–72 h para reavaliar a mamada.",
-    rx: [
-      FV("Solução de calêndula 5% (fissura mamilar)", "USO EXTERNO\n1. Solução de calêndula (Calendula officinalis) 5% ______ 1 frasco de 100 mL\n   Aplicar na aréola e no mamilo nos intervalos das mamadas. Lavar com água corrente para retirar todo o produto antes de amamentar.", "Memento SUS-Betim 2022: fissura mamária; adulto. Divergência interna do Memento: a monografia da calêndula contraindica a lactação, mas esta formulação é indicada para a fissura, com remoção antes da mamada. Alergia a Asteraceae. Certeza muito baixa; a correção da pega é a intervenção principal.")
-    ],
-    orient: "## O que você tem\n- Rachadura no bico do peito, quase sempre por causa da **pega** do bebê. Corrigindo a pega, a dor melhora em poucos dias.\n\n## Como o bebê deve pegar\n- Boca bem aberta, lábios virados para fora, queixo encostado no peito, pegando boa parte da aréola (a parte escura), não só o bico.\n- Barriga do bebê virada para a sua barriga.\n\n## Cuidados\n- Comece a mamada pelo peito que dói menos.\n- Depois de mamar, passe umas gotas do seu leite no bico e deixe secar ao ar.\n\n## Remédio de planta (Farmácia Viva)\n- Passe a solução de calêndula no bico **entre as mamadas** e **lave com água antes de o bebê mamar de novo**.\n- Leve a 2ª via da receita à farmácia da unidade.\n\n" + REMEDIO_PLANTA,
+    P: "- Correção da pega e da posição (principal medida); leite materno no mamilo após a mamada; secar ao ar.\n- Sem fitoterápico: a solução de calêndula 5% do Memento não é usada na lactação (contraindicada pelo Formulário ANVISA 2026).\n- Retorno em 48–72 h para reavaliar a mamada.",
+    rx: [],
+    orient: "## O que você tem\n- Rachadura no bico do peito, quase sempre por causa da **pega** do bebê. Corrigindo a pega, a dor melhora em poucos dias.\n\n## Como o bebê deve pegar\n- Boca bem aberta, lábios virados para fora, queixo encostado no peito, pegando boa parte da aréola (a parte escura), não só o bico.\n- Barriga do bebê virada para a sua barriga.\n\n## Cuidados\n- Comece a mamada pelo peito que dói menos.\n- Depois de mamar, passe umas gotas do seu leite no bico e deixe secar ao ar.\n- Não passe pomada, óleo ou chá no bico do peito sem orientação da equipe.\n\n" + REMEDIO_PLANTA,
     alarme: ["Febre, calafrio ou parte do peito vermelha, quente e dura", "Pus saindo do bico", "Dor que não melhora mesmo com a pega corrigida", "Bebê com pouco xixi ou perdendo peso"],
     encaminhar: "Mastite ou abscesso: ver item Mastite. Suspeita de anquiloglossia: avaliação do frênulo.",
-    sus: {nacional: "RENAME 2024: nenhum fitoterápico para fissura mamilar.", betim: "Farmácia Viva (Memento 2022): solução de calêndula 5%. Camomila tópica também é permitida na lactação pelo Memento (higienizar o mamilo antes da mamada)."},
-    evid: {resumo: "Não localizei revisão sistemática de calêndula na fissura mamilar. A correção da pega e da posição é a intervenção com maior efeito; leite materno no mamilo é medida de baixo custo. O Memento indica a solução de calêndula 5% apesar de contraindicar a calêndula na lactação na monografia geral.", certeza: "Muito baixa", fontes: [M, "remume", "pab_mulher2016"]},
+    sus: {nacional: "RENAME 2024: nenhum fitoterápico para fissura mamilar.", betim: "Farmácia Viva (Memento 2022): o Memento indica solução de calêndula 5% para fissura, mas o app não a usa na lactação: a calêndula é contraindicada na lactação pelo Formulário ANVISA 2026 e pela própria monografia do Memento (decisão da usuária, 27/10/2026)."},
+    evid: {resumo: "Não localizei revisão sistemática de calêndula na fissura mamilar. A correção da pega e da posição é a intervenção com maior efeito; leite materno no mamilo é medida de baixo custo. O Memento indica a solução de calêndula 5%, mas a calêndula é contraindicada na lactação na monografia do próprio Memento e no Formulário ANVISA 2026 (falta de dados de segurança); por isso o app não a prescreve.", certeza: "Muito baixa", fontes: [M, "remume", "pab_mulher2016"]},
     nv: NV_BASE.slice(),
     guia: {
-      resumo: "O tratamento da fissura é **corrigir a pega** [C]. A Farmácia Viva oferece **solução de calêndula 5%** entre as mamadas, **retirada com água antes de amamentar** [F]. Há uma **divergência interna no Memento**: a monografia da calêndula contraindica a lactação, mas esta formulação é indicada justamente para a fissura [F]. Evidência **muito baixa** [F]; use como complemento [I].",
+      resumo: "O tratamento da fissura é **corrigir a pega** [C]; leite materno no mamilo após a mamada é medida de baixo custo [C]. O Memento oferece **solução de calêndula 5%**, mas a calêndula é **contraindicada na lactação** na monografia do próprio Memento e no **Formulário ANVISA 2026** [F]. Por decisão da usuária (27/10/2026), o app **não prescreve** fitoterápico na fissura mamilar.",
       secoes: [
         {t: "Como decidir", b: [
           {ir: [["amamentacao", "Dor ao amamentar"], ["pu-amamentacao", "Amamentação: pega e problemas"], ["mastite", "Mastite"], ["fi-prescrever", "Como prescrever na Farmácia Viva"]]},
@@ -997,15 +995,16 @@ Object.assign(FONTES, {
   const MUD74 = "v74 (27/10/2026): ";
   const FFB = {
     "fi-ansiedade-sono": {
+      nv: ["Peso de folhas por sachê de Lippia alba da Farmácia Viva (para orientar 0,4–0,6 g por xícara)."],
       rx: {
         0: "FFFB3 2026 (FT056): só traz Passiflora incarnata – a Farmácia Viva usa P. edulis/alata (extrapolação de espécie). Tintura 1:8 em álcool 45%: 2 mL em 50 mL de água até 3 vezes ao dia; uso adulto; contraindicada na gestação, lactação e < 12 anos; não usar cronicamente nem com sedativos; procurar o médico se não melhorar em 2 semanas [F].",
         1: "FFFB3 2026: a associação melissa + passiflora não consta. Melissa isolada (FT048): tintura 1:5 em álcool 45–53%, 2 a 6 mL 1 a 3 vezes ao dia (os 30–40 gotas do Memento, cerca de 1–1,3 mL, ficam abaixo); contraindicada no hipotireoidismo, glaucoma e HPB [F].",
-        2: "FFFB3 2026 (FT044): chá com 0,4 a 0,6 g de folha e flor em 150 mL, 2 a 3 vezes ao dia – o Memento usa 1 a 3 g (até 5 vezes mais). Uso adulto; evitar na gastrite/úlcera e na hipotensão; potencializa sedativos; pode aumentar a toxicidade do paracetamol; doses altas causam irritação gástrica, bradicardia e hipotensão [F]. Inferência clínica: preferir a menor quantidade do sachê [I]."
+        2: "FFFB3 2026 (FT044): chá com 0,4 a 0,6 g de folha e flor em 150 mL, 2 a 3 vezes ao dia – o Memento usa 1 a 3 g (até 5 vezes mais). Uso adulto; evitar na gastrite/úlcera e na hipotensão; potencializa sedativos; pode aumentar a toxicidade do paracetamol; doses altas causam irritação gástrica, bradicardia e hipotensão [F]. O app adotou a dose do Formulário (decisão da usuária, 27/10/2026); meia colher de chá ≈ 0,5 g pela tabela de medidas do Memento (colher de chá = 1 g) [F]."
       },
       tab: [
         ["Passiflora", "Só P. incarnata; tintura 2 mL até 3×/dia; contraindicada < 12 anos, gestação e lactação; não usar cronicamente [F]", "P. edulis/alata; 30–40 gotas 1–3×/dia; adulto", "Espécie diferente (extrapolação); dose oficial maior"],
         ["Melissa", "Tintura 2–6 mL 1–3×/dia; hipotireoidismo, glaucoma e HPB contraindicam [F]", "30–40 gotas 1–3×/dia (só ou com passiflora)", "Dose do Memento abaixo da oficial; associação sem monografia"],
-        ["Lippia alba", "Só chá: 0,4–0,6 g em 150 mL, 2–3×/dia; adulto; paracetamol e sedativos [F]", "Chá com 1–3 g; tintura 30 gotas 1–3×/dia", "**Dose do chá do Memento até 5× a oficial**; tintura sem monografia"],
+        ["Lippia alba", "Só chá: 0,4–0,6 g em 150 mL, 2–3×/dia; adulto; paracetamol e sedativos [F]", "Chá com 1–3 g; tintura 30 gotas 1–3×/dia", "Chá do Memento até 5× a dose oficial – **app adotou 0,4–0,6 g**; tintura sem monografia"],
         ["Capim-limão", "Só chá: 1–3 g em 150 mL, 3–4×/dia; adulto; contraindicado em cardiopatia, nefropatia, hepatopatia e outras doenças crônicas; não associar a depressores do SNC [F]", "Chá 1–3 g; tintura 30–40 gotas", "Chá igual; tintura sem monografia; contraindicações mais amplas"]
       ],
       nota: "O Formulário define as formulações oficiais das Farmácias Vivas, mas não testa eficácia: a certeza da evidência deste item não muda (muito baixa) [F]."
@@ -1030,9 +1029,10 @@ Object.assign(FONTES, {
       nota: "O FFFB3 2026 **não tem monografia de sene**; a referência da tintura segue sendo o Memento de Betim [F]. A RENAME 2024 traz cáscara-sagrada e plantago como fitoterápicos laxantes (não oferecidos pela Farmácia Viva) [F]."
     },
     "fi-colicas": {
+      nv: ["Peso de folhas por sachê de Lippia alba da Farmácia Viva (para orientar 0,4–0,6 g por xícara)."],
       rx: {
         0: "FFFB3 2026 (FT022): mesma dose do Memento (1 a 3 g em 150 mL, 3 a 4 vezes ao dia); uso adulto; contraindicado em cardiopatia, nefropatia, hepatopatia e outras doenças crônicas; não associar a depressores do SNC; doses altas causam síncope e sedação; o uso habitual pode estar relacionado a HPB [F].",
-        1: "FFFB3 2026 (FT044): chá com 0,4 a 0,6 g em 150 mL (o Memento usa 1 a 3 g); evitar na gastrite/úlcera e na hipotensão; interação com paracetamol e sedativos [F]."
+        1: "FFFB3 2026 (FT044): chá com 0,4 a 0,6 g em 150 mL (o Memento usa 1 a 3 g; o app adotou a dose do Formulário); evitar na gastrite/úlcera e na hipotensão; interação com paracetamol e sedativos [F]."
       },
       nota: "Alecrim (FT068): o Formulário indica o chá e o extrato fluido para desordens espasmódicas leves do trato digestivo; não há indicação para cólica menstrual [F]. Capim-limão e Lippia alba: o Formulário só traz chá, sem tintura [F]."
     },
@@ -1042,11 +1042,11 @@ Object.assign(FONTES, {
         1: "FFFB3 2026: a associação guaco + maracujá não consta. Guaco: ver o xarope de guaco; passiflora (P. incarnata, FT056): contraindicada < 12 anos e com sedativos [F]."
       },
       tab: [
-        ["Guaco (M. glomerata)", "Chá e tintura (1–3 mL 3×/dia); **uso adulto** [F]", "Xarope 10%: adulto 15 mL 8/8 h; ≥ 12 anos 5 mL 8/8 h", "**Uso ≥ 12 anos do Memento não tem respaldo na monografia desta espécie**"],
+        ["Guaco (M. glomerata)", "Chá e tintura (1–3 mL 3×/dia); **uso adulto** [F]", "Xarope 10%: adulto 15 mL 8/8 h; ≥ 12 anos 5 mL 8/8 h", "**App adotou só adulto** (decisão da usuária, 27/10/2026)"],
         ["Guaco (M. laevigata)", "Xarope 15 mL 3×/dia; ≥ 12 anos; 7 dias no quadro agudo [F]", "—", "Faixa ≥ 12 anos só para esta espécie"],
         ["Ambas", "Até 15 dias seguidos (pausa de 5); não usar com AINE ou anticoagulante; evitar com antibiótico [F]", "Até 15 dias; AINE e anticoagulante", "Acrescenta antibiótico"]
       ],
-      nota: "Inferência clínica: entre 12 e 17 anos, preferir medidas não farmacológicas e reservar o xarope de guaco a casos selecionados, conferindo a espécie usada pela Farmácia Viva [I]."
+      nota: "Decisão da usuária (27/10/2026): seguir o Formulário e usar o xarope de guaco só em adultos. Entre 12 e 17 anos: hidratação, mel, lavagem nasal [C]."
     },
     "fi-resfriado": {
       rx: {
@@ -1139,10 +1139,7 @@ Object.assign(FONTES, {
       nota: "Copaíba e a loção repelente (citronela, andiroba) **não têm monografia** no FFFB3 2026 [F]. A arnica tem indicação oficial de compressa com chá (2 g em 100 mL, 2 a 3×/dia) para erupções por picada de inseto, ≥ 12 anos, só em pele íntegra (FT012) [F]."
     },
     "fi-fissura-mamilo": {
-      rx: {
-        0: "FFFB3 2026 (FT015): calêndula **contraindicada na gestação e na lactação** por falta de dados de segurança – a referência oficial reforça a contraindicação da monografia do Memento. A camomila tópica (FT047) é a única com uso na lactação permitido, higienizando o mamilo antes da mamada, mas não tem indicação de fissura [F]."
-      },
-      nota: "Com o Formulário, a solução de calêndula 5% da Farmácia Viva fica **contra a referência oficial** na lactação. Inferência clínica: priorizar a correção da pega e o leite materno no mamilo; se usar a calêndula, retirar sempre com água antes da mamada e suspender se houver irritação [I]."
+      nota: "FFFB3 2026 (FT015): calêndula **contraindicada na gestação e na lactação** por falta de dados de segurança [F]. A camomila tópica (FT047) é a única com uso na lactação permitido, higienizando o mamilo antes da mamada, mas não tem indicação de fissura [F]. Decisão da usuária (27/10/2026): o app retirou a receita de calêndula dos itens de amamentação."
     },
     "fi-urinario": {
       rx: {
@@ -1162,9 +1159,20 @@ Object.assign(FONTES, {
     const c = CONDICOES.find(x => x.id === id); if (!c) return;
     if (cfg.rx) c.rx = (c.rx || []).map((r, i) => cfg.rx[i] ? {...r, nota: (r.nota || "").replace(/\s*$/, "") + " " + cfg.rx[i]} : r);
     if (c.guia) addSecFF(c, cfg);
+    if (cfg.nv) c.nv = [...(c.nv || []), ...cfg.nv];
     if (c.evid) c.evid = {...c.evid, fontes: [...new Set([...(c.evid.fontes || []), FF])]};
     c.mudancas = [...(c.mudancas || []), MUD74 + "conferido no Formulário de Fitoterápicos da Farmacopeia Brasileira, 3ª ed. (ANVISA, 2026): formulações, doses em mL, faixas etárias e contraindicações ao lado das do Memento."];
   });
+  // v75: decisões da usuária (27/10/2026) sobre as divergências Memento × Formulário ANVISA 2026
+  const MUD75 = "v75 (27/10/2026): ";
+  const DEC75 = {
+    "fi-tosse": "xaropes de guaco só para adultos (Formulário ANVISA 2026: Mikania glomerata de uso adulto), por decisão da usuária.",
+    "fi-ansiedade-sono": "chá de Lippia alba com 0,4–0,6 g por xícara (dose do Formulário ANVISA 2026), por decisão da usuária.",
+    "fi-colicas": "chá de Lippia alba com 0,4–0,6 g por xícara (dose do Formulário ANVISA 2026), por decisão da usuária.",
+    "fi-fissura-mamilo": "receita de calêndula 5% retirada (contraindicada na lactação pelo Formulário ANVISA 2026), por decisão da usuária.",
+    "fi-prescrever": "decisões sobre guaco (só adulto), Lippia alba (0,4–0,6 g) e calêndula na lactação (não usar); telefones do CIATox/MG atualizados pela médica."
+  };
+  Object.entries(DEC75).forEach(([id, t]) => { const c = CONDICOES.find(x => x.id === id); if (c) c.mudancas = [...(c.mudancas || []), MUD75 + t]; });
   { const c = CONDICOES.find(x => x.id === "fi-prescrever"); if (c) c.mudancas = [...(c.mudancas || []), MUD74 + "seção 'Formulário ANVISA 2026 × Memento de Betim' (tabela por planta, gotas × mL, plantas sem monografia) e acréscimos de interações do Formulário; Formulário aberto e conferido."]; }
 
   // ───────── Ligação com os itens existentes: opção da Farmácia Viva (com a certeza) e link para o item do módulo
@@ -1188,9 +1196,9 @@ Object.assign(FONTES, {
     ["dispepsia", "fi-dispepsia", [0, 1], "baixa (alcachofra) a muito baixa (espinheira-santa)", "tinturas de espinheira-santa e alcachofra (ambas na RENAME) e melissa"],
     ["constipacao", "fi-constipacao", [0], "baixa; só uso ocasional (Memento contraindica na constipação crônica)", "tintura de sene"],
     ["dismenorreia", "fi-colicas", [0], "muito baixa", "chás de capim-limão e Lippia alba; tintura de alecrim"],
-    ["resfriado", "fi-tosse", [0], "muito baixa (uso tradicional)", "xaropes de guaco (≥ 12 anos); equinácea sem benefício no tratamento (Cochrane 2014)"],
-    ["bronquite", "fi-tosse", [0, 1], "muito baixa (uso tradicional)", "xaropes de guaco e de guaco + maracujá (≥ 12 anos)"],
-    ["tosse-subaguda", "fi-tosse", [1], "muito baixa (uso tradicional)", "xarope de guaco + maracujá (≥ 12 anos)"],
+    ["resfriado", "fi-tosse", [0], "muito baixa (uso tradicional)", "xaropes de guaco (só adultos); equinácea sem benefício no tratamento (Cochrane 2014)"],
+    ["bronquite", "fi-tosse", [0, 1], "muito baixa (uso tradicional)", "xaropes de guaco e de guaco + maracujá (só adultos)"],
+    ["tosse-subaguda", "fi-tosse", [1], "muito baixa (uso tradicional)", "xarope de guaco + maracujá (só adultos)"],
     ["aftas", "fi-boca-garganta", [0, 1], "muito baixa", "pomadas orabase de camomila (≥ 12 anos), tanchagem + barbatimão e guaçatonga"],
     ["herpes-labial", "fi-herpes-labial", [0], "muito baixa", "gel de guaçatonga e hidratante labial de cavalinha + calêndula"],
     ["entorse", "fi-contusao", [0], "baixa (indireta)", "creme de arnica 10% (≥ 12 anos, pele íntegra, até 7 dias)"],
@@ -1204,7 +1212,6 @@ Object.assign(FONTES, {
     ["seborreica", "fi-pele-seca", [2], "muito baixa", "solução de calêndula 10% para o couro cabeludo (≥ 6 anos)"],
     ["acne", "fi-acne", [0], "muito baixa", "gel de calêndula + barbatimão + copaíba (≥ 12 anos)"],
     ["picada-inseto", "fi-picadas", [0, 1], "muito baixa", "creme de copaíba (≥ 12 anos), creme de calêndula (≥ 6 anos) e loção repelente (≥ 6 anos)"],
-    ["amamentacao", "fi-fissura-mamilo", [0], "muito baixa", "solução de calêndula 5% entre as mamadas (retirar antes de amamentar)"],
     ["po-acamado", "fi-feridas", [1], "muito baixa", "papaína gel, óleo de girassol, barbatimão, creme de guaco para prevenção de LPP"],
     ["cr-pe-diabetico", "fi-feridas", [], "muito baixa", "papaína gel 4/6/10%, óleo de girassol, barbatimão (curativo conforme a fase do leito)"]
   ];
@@ -1219,7 +1226,8 @@ Object.assign(FONTES, {
     ["prurido", "fi-pele-seca", "Farmácia Viva: creme de guaco 10% para reações pruriginosas (≥ 12 anos) e emolientes; investigar a causa do prurido generalizado."],
     ["cistite", "fi-urinario", "Farmácia Viva: cavalinha (diurético) não trata ITU; não substitui antibiótico."],
     ["ferida", "fi-feridas", "Farmácia Viva: creme de barbatimão + girassol e óleo de girassol na fase de granulação (ver Feridas crônicas)."],
-    ["pu-amamentacao", "fi-fissura-mamilo", "Farmácia Viva: solução de calêndula 5% para fissura mamilar, retirada antes da mamada."],
+    ["amamentacao", "fi-fissura-mamilo", "Farmácia Viva: a solução de calêndula 5% do Memento para fissura não é usada na lactação (contraindicada pelo Formulário ANVISA 2026); tratar com correção da pega."],
+    ["pu-amamentacao", "fi-fissura-mamilo", "Farmácia Viva: a solução de calêndula 5% do Memento para fissura não é usada na lactação (contraindicada pelo Formulário ANVISA 2026); tratar com correção da pega."],
     ["pu-sol-repelente", "fi-picadas", "Farmácia Viva: loção repelente de citronela (≥ 6 anos; proteção curta, reaplicar 4–6×/dia)."],
     ["panico", "fi-ansiedade-sono", "Farmácia Viva: passiflora e melissa só para ansiedade leve; não tratam crise de pânico."],
     ["cr-polifarmacia", "fi-prescrever", "Farmácia Viva: perguntar por fitoterápicos e chás; interações principais na tabela do item 'Como prescrever fitoterápicos'."]
@@ -1245,6 +1253,7 @@ Object.assign(FONTES, {
     addFonte(c);
     c.mudancas = [...(c.mudancas || []), MUD + "opção fitoterápica da Farmácia Viva de Betim (" + desc + "), com a certeza da evidência e link para o módulo Fitoterapia."];
     if (FFB[fid] && FFB[fid].rx && idx.some(i => FFB[fid].rx[i])) { c.mudancas.push(MUD74 + "nota da receita fitoterápica conferida no Formulário ANVISA 2026."); addFonteFF(c); }
+    if (DEC75[fid] && fid !== "fi-prescrever") c.mudancas.push(MUD75 + DEC75[fid]);
   });
   SO_LINK.forEach(([id, fid, txt]) => {
     const c = get(id), f = fi(fid); if (!c || !f) return;
@@ -1252,5 +1261,6 @@ Object.assign(FONTES, {
     addIr(c, fid, "Fitoterapia: " + f.nome.split(":")[0]);
     addFonte(c);
     c.mudancas = [...(c.mudancas || []), MUD + "nota sobre fitoterápico da Farmácia Viva e link para o módulo Fitoterapia."];
+    if (id === "amamentacao" || id === "pu-amamentacao") c.mudancas.push(MUD75 + "receita de calêndula 5% da Farmácia Viva não é usada na lactação (Formulário ANVISA 2026), por decisão da usuária.");
   });
 })();

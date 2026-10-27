@@ -1,11 +1,11 @@
 {
- "gerado": "2026-10-27T00:14:33.573Z",
+ "gerado": "2026-10-27T00:19:19.495Z",
  "cmed": {
   "data": "09/10/2026",
   "fonte": "cmed_pmc2026",
   "icms": "PMC com ICMS de Minas Gerais: 12% para genéricos e 18% para os demais"
  },
- "n_fontes": 689,
+ "n_fontes": 690,
  "n_itens": 365,
  "sem_url": [
   "remume",
@@ -7167,15 +7167,7 @@
    "f": "F",
    "url": "https://www.in.gov.br/en/web/dou/-/portaria-gm/ms-n-6.734-de-18-de-marco-de-2025-620767223",
    "ano": 2025,
-   "usado_em": [
-    "febre-amarela",
-    "febre-maculosa",
-    "in-chagas",
-    "in-esporotricose",
-    "in-lt",
-    "in-lv",
-    "risco-suicida"
-   ]
+   "usado_em": []
   },
   {
    "k": "crie2023",
@@ -8766,7 +8758,7 @@
   {
    "k": "port11211",
    "s": "Portaria GM/MS 11.211/2026 – lista de notificação compulsória",
-   "t": "Ministério da Saúde. Portaria GM/MS nº 11.211, de 13/05/2026 (DOU 14/05/2026), que altera o Anexo 1 do Anexo V da Portaria de Consolidação nº 4/2017: inclui caxumba (notificação imediata, art. 2º) e febre do oropouche; retira a covid-19 como item próprio. Tabela do anexo – imediata (até 24 h) à SMS: acidente por animal peçonhento, acidente por animal potencialmente transmissor da raiva, leptospirose, violência sexual e tentativa de suicídio; imediata à SES e à SMS: coqueluche, Zika em gestante; imediata ao MS, à SES e à SMS: sarampo, raiva humana, malária na região extra-amazônica, óbito suspeito por dengue, chikungunya ou Zika, chikungunya em área sem transmissão, febre amarela, febre maculosa; semanal: dengue, chikungunya e Zika (casos), hepatites virais, HIV/aids, tuberculose, violência doméstica (norma; cópia do DOU publicada por secretaria estadual, conferida em 25/10/2026).",
+   "t": "Ministério da Saúde. Portaria GM/MS nº 11.211, de 13/05/2026 (DOU 14/05/2026), que altera o Anexo 1 do Anexo V da Portaria de Consolidação nº 4/2017: inclui caxumba (art. 2º: imediata; Anexo: semanal – o MS informou em ago/2026, via LAI, que vale o Anexo e que corrigirá o texto) e febre do oropouche; retira a covid-19 como item próprio. Tabela do anexo – imediata (até 24 h) à SMS: acidente por animal peçonhento, acidente por animal potencialmente transmissor da raiva, leptospirose, violência sexual e tentativa de suicídio; imediata à SES e à SMS: coqueluche, Zika em gestante; imediata ao MS, à SES e à SMS: sarampo, raiva humana, malária na região extra-amazônica, óbito suspeito por dengue, chikungunya ou Zika, chikungunya em área sem transmissão, febre amarela, febre maculosa; semanal: dengue, chikungunya e Zika (casos), hepatites virais, HIV/aids, tuberculose, violência doméstica (norma; cópia do DOU publicada por secretaria estadual, conferida em 25/10/2026).",
    "f": "F",
    "url": "https://www.in.gov.br/",
    "ano": 2026,
@@ -8777,8 +8769,14 @@
     "dermatite-contato",
     "escorpiao",
     "exantema",
+    "febre-amarela",
+    "febre-maculosa",
     "hepatites-tr",
     "hiv-diagnostico",
+    "in-chagas",
+    "in-esporotricose",
+    "in-lt",
+    "in-lv",
     "leptospirose",
     "malaria",
     "pep",
@@ -8996,7 +8994,8 @@
    "url": "https://doi.org/10.1002/jpn3.70447",
    "ano": 2026,
    "usado_em": [
-    "constipacao-infantil"
+    "constipacao-infantil",
+    "pu-constipacao"
    ]
   },
   {
@@ -9383,6 +9382,17 @@
    "url": "",
    "ano": 2026,
    "usado_em": []
+  },
+  {
+   "k": "estrategia_caxumba2026",
+   "s": "Estratégia MED 2026 – MS confirma erro na portaria da caxumba",
+   "t": "Estratégia MED. Ministério da Saúde confirma erro em portaria sobre notificação de caxumba. Notícia, ago/2026: resposta do MS (Fala.BR) – inconsistência entre o art. 2º, I (imediata) e o Anexo I (semanal) da Portaria GM/MS 11.211/2026; correto: notificação semanal; novo ato normativo previsto, sem data (fonte secundária; conferida em 26/10/2026).",
+   "f": "F",
+   "url": "https://med.estrategia.com/portal/noticias/ministerio-da-saude-reconhece-erro-em-portaria-sobre-notificacao-de-caxumba/",
+   "ano": 2026,
+   "usado_em": [
+    "escroto-agudo"
+   ]
   }
  ],
  "itens": [
@@ -11001,7 +11011,7 @@
    "fontes": [
     "fa_mg",
     "gvs2_fa",
-    "port6734",
+    "port11211",
     "pni_adulto2026"
    ]
   },
@@ -11231,7 +11241,8 @@
     "remume",
     "twist2013",
     "cdc_epid2021",
-    "tsrs_uro2023"
+    "tsrs_uro2023",
+    "estrategia_caxumba2026"
    ]
   },
   {
@@ -11268,10 +11279,9 @@
    "fontes": [
     "suicidio",
     "nice_depressao",
-    "port6734",
+    "port11211",
     "cab34",
-    "cssrs",
-    "port11211"
+    "cssrs"
    ]
   },
   {
@@ -13644,7 +13654,7 @@
     "nt88_2025",
     "nt49_2026",
     "nt97_2022",
-    "port6734",
+    "port11211",
     "caf_sp2023",
     "rj_fm2025",
     "cdc_rmsf",
@@ -13758,6 +13768,7 @@
    "modulo": "pu",
    "nv": 2,
    "fontes": [
+    "espghan_constip2026",
     "espghan_constip",
     "roma4_lactente2016",
     "caderneta_crianca",
@@ -13932,7 +13943,7 @@
     "gvs2_chagas",
     "nt240_2025",
     "bula_benz",
-    "port6734",
+    "port11211",
     "rename",
     "remume"
    ]
@@ -13946,7 +13957,7 @@
     "gvs2_esporo",
     "nt20_2025_esporo",
     "fda_itra",
-    "port6734",
+    "port11211",
     "rename",
     "remume"
    ]
@@ -13960,7 +13971,7 @@
     "gvs2_lt",
     "mlt2013",
     "paho_leish2022",
-    "port6734",
+    "port11211",
     "rename",
     "remume"
    ]
@@ -13972,7 +13983,7 @@
    "nv": 3,
    "fontes": [
     "gvs2_lv",
-    "port6734",
+    "port11211",
     "rename",
     "remume"
    ]

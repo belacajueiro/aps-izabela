@@ -1,0 +1,5 @@
+# Artefatos gerados por src/build.py (o site publicado fica na raiz)
+src/check.js
+src/index.html
+src/site/
+__pycache__/

@@ -1742,7 +1742,15 @@ const SC = [
    {t:"PCR ≥ 10 mg/L (se disponível)", p:1}],
    cab:s => s>=3 ? "Moderada (ou grave)" : "Leve",
    interp:s => s>=3 ? "≥ 3 de 5 critérios: exacerbação moderada – prednisona 40 mg por 5 dias + broncodilatador; grave se gasometria com PaO₂ ≤ 60 mmHg e/ou hipercapnia com acidose (na APS: alteração mental, esforço respiratório ou SpO₂ < 88% apesar de O₂ → urgência). Antibiótico se ≥ 2 de dispneia, volume e purulência do escarro, sendo a purulência um deles." : "Exacerbação leve: intensificar broncodilatador de curta ação e reavaliar em 48 h; afastar pneumonia, TEP, IC e pneumotórax.",
-   nota:"GOLD 2026, Figura 4.2 (classificação de Roma) [F]. Sem PCR, contar só os 4 critérios clínicos (3 deles bastam para moderada) [I]."}
+   nota:"GOLD 2026, Figura 4.2 (classificação de Roma) [F]. Sem PCR, contar só os 4 critérios clínicos (3 deles bastam para moderada) [I]."},
+ {id:"kocher", nome:"Quadril irritável na criança – critérios de Kocher", sp:true, itens:[
+   {t:"Febre referida (história de febre)", p:1},
+   {t:"Não apoia o membro (não consegue sustentar o peso)", p:1},
+   {t:"VHS ≥ 40 mm/h", p:1},
+   {t:"Leucócitos > 12.000/mm³", p:1}],
+   cab:s => s + " de 4 preditores",
+   interp:s => ["< 0,2%","3%","40%","93%","99,6%"][s] + " de probabilidade de artrite séptica na série original. " + (s>=2 ? "2 ou mais: tratar como possível artrite séptica – urgência pediátrica/ortopedia no mesmo dia (punção)." : s===1 ? "1 preditor: não exclui; febre ou não apoio já justificam avaliação no mesmo dia." : "0: baixa probabilidade (sinovite transitória mais provável); reavaliar em 24–48 h e orientar retorno se febre ou piora."),
+   nota:"Kocher MS et al., J Bone Joint Surg Am 1999 (estudo retrospectivo de derivação; resumo conferido no PubMed) [F]. Em outros serviços o desempenho foi menor [C]. Sem exames, os 2 critérios clínicos sozinhos não bastam para afastar. Não substitui a avaliação da criança nem a punção."}
 
 ];
 const SC_POR_ID = {"cr-prediabetes":"findrisc","cr-aga":"ivcf","cr-inapetencia":"mnasf","cr-fragilidade":"sarcf","po-idoso-vulneravel":"ivcf","po-acamado":"braden","po-pobreza":"savassi","pu-18m":"mchat","pu-24m":"mchat","pu-dnpm":"mchat","pp-depressao":"epds","pp-1semana":"epds","pp-consulta":"epds","cr-asma":"gina","cr-dpoc":"mmrc", "dpoc-exac":"roma",faringite:"centor", pac:"curb65", tvp:"wells", "dor-toracica":"marburg", sepse:"qsofa", crupe:"westley", "abstinencia-alcool":"ciwa", depressao:"phq9", "risco-suicida":"phq9", tag:"gad7", panico:"gad7", delirium:"cam"};
@@ -2465,7 +2473,8 @@ Object.assign(CALCS, {
    if (ho && okN(f0) && okN(f3)) L.push(["FC", f3 - f0 < 15 ? "Aumento da FC < 15 bpm: sugere causa neurogênica (ex.: Parkinson, neuropatia diabética) <span class=\"lab C\">C</span>" : "Aumento da FC ≥ 15 bpm: favorece hipovolemia ou fármacos <span class=\"lab C\">C</span>"]);
    saida(el, kv(L), `PA deitado ${nF(a)}/${nF(b)}; em pé ${q1 ? `1 min ${nF(s1)}/${nF(d1)}` : ""}${q3 ? ` 3 min ${nF(s3)}/${nF(d3)}` : ""}: ${ho ? "hipotensão ortostática presente" : "sem hipotensão ortostática"}.`); }}
 });
-CALC_MENU.push(["ho","Hipotensão ortostática"]);
+CALC_MENU.push(["ho","Hipotensão ortostática"])
+CALC_MENU.push(["sc:kocher","Quadril irritável na criança (Kocher)"]);
 $("#calc-sel").innerHTML = CALC_MENU.map(([v,t])=>`<option value="${v}">${esc(t)}</option>`).join("");
 $("#calc-sel").addEventListener("change", () => { $("#calc-box").innerHTML = calcHtml($("#calc-sel").value); initCalcs($("#calc-box")); });
 

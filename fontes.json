@@ -1,12 +1,12 @@
 {
- "gerado": "2026-10-27T23:28:38.308Z",
+ "gerado": "2026-10-28T16:12:59.944Z",
  "cmed": {
   "data": "09/10/2026",
   "fonte": "cmed_pmc2026",
   "icms": "PMC com ICMS de Minas Gerais: 12% para genéricos e 18% para os demais"
  },
- "n_fontes": 716,
- "n_itens": 388,
+ "n_fontes": 720,
+ "n_itens": 389,
  "sem_url": [
   "remume",
   "aap_oma",
@@ -514,7 +514,8 @@
   "cssrs",
   "mckee1971",
   "aap_piolho2022",
-  "memento_fb2016"
+  "memento_fb2016",
+  "jones2015"
  ],
  "fontes": [
   {
@@ -737,6 +738,7 @@
     "pn-vacinas",
     "po-paliativos",
     "po-substancias",
+    "poliartrite-aguda",
     "pp-contracepcao",
     "pp-depressao",
     "pp-pos-gestacao-risco",
@@ -1008,6 +1010,7 @@
     "po-rua",
     "po-substancias",
     "po-trans",
+    "poliartrite-aguda",
     "pp-contracepcao",
     "pp-depressao",
     "pp-pos-gestacao-risco",
@@ -1399,7 +1402,8 @@
    "url": "https://www.saude.mg.gov.br/wp-content/uploads/2025/01/Fluxograma-manejo-chikungunya-no-adulto.pdf",
    "ano": 2025,
    "usado_em": [
-    "chikungunya"
+    "chikungunya",
+    "poliartrite-aguda"
    ]
   },
   {
@@ -2466,9 +2470,7 @@
    "f": "C",
    "url": "",
    "ano": 2016,
-   "usado_em": [
-    "artrite-aguda"
-   ]
+   "usado_em": []
   },
   {
    "k": "oradss",
@@ -8580,6 +8582,7 @@
    "usado_em": [
     "chikungunya",
     "dengue-a",
+    "poliartrite-aguda",
     "zika"
    ]
   },
@@ -8869,6 +8872,7 @@
    "ano": 2024,
    "usado_em": [
     "chikungunya",
+    "poliartrite-aguda",
     "zika"
    ]
   },
@@ -8882,6 +8886,7 @@
    "usado_em": [
     "chikungunya",
     "exantema",
+    "poliartrite-aguda",
     "zika"
    ]
   },
@@ -9100,11 +9105,13 @@
    "ano": 2022,
    "usado_em": [
     "ae",
+    "artrite-aguda",
     "candidiase",
     "cervicite",
     "condiloma",
     "dip",
     "herpes-genital",
+    "poliartrite-aguda",
     "sifilis",
     "tricomoniase",
     "uretrite",
@@ -9212,7 +9219,8 @@
     "fascite",
     "gota",
     "oa-joelho",
-    "ombro"
+    "ombro",
+    "poliartrite-aguda"
    ]
   },
   {
@@ -9821,6 +9829,50 @@
    "ano": 2019,
    "usado_em": [
     "fi-colicas"
+   ]
+  },
+  {
+   "k": "margaretten2007",
+   "s": "Margaretten 2007 – Does this adult patient have septic arthritis? (JAMA)",
+   "t": "Margaretten ME, Kohlwes J, Moore D, Bent S. Does this adult patient have septic arthritis? JAMA 2007;297(13):1478-88, doi 10.1001/jama.297.13.1478 (RS de acurácia; 14 estudos, 6.242 pacientes, 653 com artrite séptica não gonocócica): aumentam a probabilidade idade, diabetes, artrite reumatoide, cirurgia articular, prótese de quadril ou joelho, infecção de pele e HIV; dor articular (sensibilidade 85%), história de edema (78%) e febre (57%) são os únicos achados em mais da metade; calafrios 19%; leucócitos no líquido sinovial < 25.000/µL RV 0,32; ≥ 25.000 RV 2,9; > 50.000 RV 7,7; > 100.000 RV 28; polimorfonucleares ≥ 90% RV 3,4 e < 90% RV 0,34 (conferido no PubMed em 28/10/2026).",
+   "f": "F",
+   "url": "https://doi.org/10.1001/jama.297.13.1478",
+   "ano": 2026,
+   "usado_em": [
+    "artrite-aguda"
+   ]
+  },
+  {
+   "k": "sanjo2023",
+   "s": "EBJIS 2023 – diretriz de artrite séptica em articulação nativa (SANJO)",
+   "t": "Ravn C, Neyt J, Benito N, et al. Guideline for management of septic arthritis in native joints (SANJO). J Bone Jt Infect 2023;8(1):29-37, doi 10.5194/jbji-8-29-2023 (diretriz, recomendações graduadas): Rec. 1 – identificar sepse ou choque séptico (atenção imediata); considerar TB na artrite subaguda ou crônica em quem tem ligação com área endêmica; Rec. 2 – nenhum exame de sangue confirma ou exclui; PCR para apoiar o diagnóstico e acompanhar a resposta; Rec. 3 – puncionar o mais rápido possível; Rec. 4 – prioridade do líquido: identificação bacteriana, depois leucócitos e cristais; Rec. 5 – leucócitos > 50.000/µL sugerem, mas sozinhos não bastam; < 25.000 reduzem a probabilidade sem excluir; cortes podem não valer em imunossuprimidos; cristais não excluem infecção; Rec. 6 – radiografia para doença prévia; USG, TC ou RM para derrame e abscesso; Rec. 7 – ao menos 2 pares de hemoculturas se febre, suspeita de bacteremia ou sepse; Rec. 9 – ≥ 1 mL em tubo estéril para cultura; Gram mesmo com sensibilidade limitada; Rec. 12 – antibiótico após a punção, exceto na sepse, em que começa o quanto antes (PDF integral, conferido em 28/10/2026).",
+   "f": "F",
+   "url": "https://boris.unibe.ch/178599/1/jbji-8-29-2023.pdf",
+   "ano": 2026,
+   "usado_em": [
+    "artrite-aguda"
+   ]
+  },
+  {
+   "k": "kocher1999",
+   "s": "Kocher 1999 – artrite séptica × sinovite transitória do quadril na criança (JBJS)",
+   "t": "Kocher MS, Zurakowski D, Kasser JR. Differentiating between septic arthritis and transient synovitis of the hip in children: an evidence-based clinical prediction algorithm. J Bone Joint Surg Am 1999;81(12):1662-70, doi 10.2106/00004623-199912000-00002 (estudo retrospectivo de derivação, hospital pediátrico terciário): 4 preditores – febre referida, não apoiar o membro, VHS ≥ 40 mm/h e leucócitos > 12.000/mm³; probabilidade de artrite séptica < 0,2% com 0, 3% com 1, 40% com 2, 93,1% com 3 e 99,6% com 4 preditores (resumo conferido no PubMed em 28/10/2026). Validações posteriores em outros serviços mostraram desempenho menor [C].",
+   "f": "F",
+   "url": "https://doi.org/10.2106/00004623-199912000-00002",
+   "ano": 2026,
+   "usado_em": [
+    "artrite-aguda"
+   ]
+  },
+  {
+   "k": "jones2015",
+   "s": "AHA 2015 – revisão dos critérios de Jones (febre reumática)",
+   "t": "Gewitz MH et al. Revision of the Jones Criteria for the diagnosis of acute rheumatic fever in the era of Doppler echocardiography: a scientific statement from the American Heart Association. Circulation 2015;131(20):1806-18, doi 10.1161/CIR.0000000000000205 (declaração científica): define populações de baixo e de moderado/alto risco, com critérios diferentes, e inclui a ecocardiografia com Doppler para cardite subclínica (resumo conferido no PubMed em 28/10/2026; os critérios por população vêm do texto integral, não aberto – citados de memória [C]).",
+   "f": "C",
+   "url": "https://doi.org/10.1161/CIR.0000000000000205",
+   "ano": 2026,
+   "usado_em": [
+    "poliartrite-aguda"
    ]
   }
  ],
@@ -11430,15 +11482,35 @@
   },
   {
    "id": "artrite-aguda",
-   "nome": "Monoartrite / artralgia aguda",
+   "nome": "Monoartrite aguda (articulação quente e inchada)",
    "modulo": "de",
-   "nv": 2,
+   "nv": 3,
    "fontes": [
-    "monoartrite",
+    "margaretten2007",
+    "sanjo2023",
+    "kocher1999",
+    "pcdt_ist2022",
     "gota_ecr",
+    "tsrs_reum2022",
     "rename",
-    "remume",
-    "tsrs_reum2022"
+    "remume"
+   ]
+  },
+  {
+   "id": "poliartrite-aguda",
+   "nome": "Poliartralgia / poliartrite aguda (< 6 semanas)",
+   "modulo": "de",
+   "nv": 3,
+   "fontes": [
+    "ms_arbo_aps2024",
+    "gvs2_arbo",
+    "betim_nt_arbo2025",
+    "ses_chik",
+    "tsrs_reum2022",
+    "jones2015",
+    "pcdt_ist2022",
+    "rename",
+    "remume"
    ]
   },
   {

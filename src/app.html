@@ -697,10 +697,10 @@ const norm = s => String(s||"").normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerC
 const MODULOS = [
   {id:"co", nome:"Consulta guiada", curto:"Consulta", titulo:"Consulta", sub:"Anamnese guiada, exame e conduta do APS numa evolução só", ordem:["Consulta"], atalhos:[]},
   {id:"de", nome:"Demanda espontânea", curto:"Demanda", titulo:"Demanda Espontânea", sub:"SOAP e prescrição para a APS",
-   ordem:["Urgências na UBS","Respiratório e ORL","Olhos","Digestivo","Geniturinário e saúde sexual","Pele","Musculoesquelético e neurológico","Cardiovascular","Saúde mental","Sangue e metabolismo","Pediatria","Saúde da mulher","Infecciosas e vigilância","Saúde do idoso","Sintomas gerais (investigação)"], atalhos:[]},
+   ordem:["Urgências na UBS","Respiratório e ORL","Olhos","Digestivo","Geniturinário e saúde sexual","Pele","Musculoesquelético e neurológico","Cardiovascular","Saúde mental","Sangue e metabolismo","Pediatria","Saúde da mulher","Infecciosas e vigilância","Saúde do idoso","Sintomas gerais (investigação)"], atalhos:[,"cr-exames-ubs"]},
   {id:"pn", nome:"Pré-natal e puerpério", curto:"Pré-natal", titulo:"Pré-natal e Puerpério", sub:"Consultas programadas, exames e intercorrências",
    ordem:["Consulta guiada","Primeira consulta e risco","Seguimento por trimestre","Exames alterados e condições","Puerpério"],
-   atalhos:["teste-gravidez-positivo","sangramento-1tri","nvg","itu-gestante","pa-gestante","sifilis","amamentacao","mastite"]},
+   atalhos:["teste-gravidez-positivo","sangramento-1tri","nvg","itu-gestante","pa-gestante","sifilis","amamentacao","mastite","cr-exames-ubs"]},
   {id:"cr", nome:"Crônicos", curto:"Crônicos", titulo:"Condições Crônicas", sub:"Guias de decisão clínica, fluxos e calculadoras",
    ordem:["HAS","DM","Doença cardiovascular","Dislipidemias","Asma e DPOC","Obesidade","DRC","AVC","Tireoide","Fígado","Reumatologia e osso","Saúde da pessoa idosa","Saúde mental","Deficiências nutricionais","Outras condições crônicas","Escalas e calculadoras"],
    atalhos:["pa-elevada","hiperglicemia","hipoglicemia","ic-descompensada","palpitacoes","dor-toracica","asma-crise","dpoc-exac","gota","queda-idoso","delirium","depressao","tremor","perda-peso","incontinencia","constipacao","insonia","po-idoso-vulneravel","po-acamado","tabagismo"]},
@@ -709,16 +709,16 @@ const MODULOS = [
    atalhos:["febre-crianca","febre-menor-3m","bronquiolite","diarreia-crianca","colica-lactente","moniliase-oral","dermatite-fraldas","constipacao-infantil","itu-crianca","asma-crianca","crupe","oma","dermatite-atopica","gengivoestomatite","maopeboca","varicela","pediculose","escabiose","parasitoses","impetigo","amamentacao","violencia"]},
   {id:"mu", nome:"Saúde da mulher", curto:"Mulher", titulo:"Saúde da Mulher", sub:"Rastreios, planejamento reprodutivo, climatério e ginecologia",
    ordem:["Consulta de rotina","Rastreio de colo e mama","Climatério","Planejamento reprodutivo","Saúde reprodutiva e ginecologia","Violência contra a mulher"],
-   atalhos:["ae","sua","miomas","endometriose","sop","climaterio","dismenorreia","tpm","amenorreia","cisto-ovariano","vaginose","candidiase","tricomoniase","cervicite","dip","bartholinite","incontinencia","prolapso","mastite","violencia","pep","teste-gravidez-positivo"]},
+   atalhos:["ae","sua","miomas","endometriose","sop","climaterio","dismenorreia","tpm","amenorreia","cisto-ovariano","vaginose","candidiase","tricomoniase","cervicite","dip","bartholinite","incontinencia","prolapso","mastite","violencia","pep","teste-gravidez-positivo","cr-exames-ubs"]},
   {id:"pv", nome:"Prevenção e rastreios", curto:"Rastreios", titulo:"Prevenção e Rastreios", sub:"Check-up do adulto e do idoso, cânceres, infecções, vacinas e álcool",
    ordem:["Rastreios gerais","Rastreio de câncer","Vacinação"],
-   atalhos:["mu-colo","mu-mama","cr-osteoporose","cr-dislipidemia","cr-dm2","tabagismo","hiv-diagnostico","hepatites-tr","pep","abstinencia-alcool","depressao"]},
+   atalhos:["mu-colo","mu-mama","cr-osteoporose","cr-dislipidemia","cr-dm2","tabagismo","hiv-diagnostico","hepatites-tr","pep","abstinencia-alcool","depressao","cr-exames-ubs"]},
   {id:"ho", nome:"Saúde do homem", curto:"Homem", titulo:"Saúde do Homem", sub:"Consulta do homem, próstata, saúde sexual e saúde mental",
    ordem:["Consulta do homem","Próstata e trato urinário","Saúde sexual","Saúde mental"],
-   atalhos:["pv-checkup","pv-colorretal","pv-alcool","mu-laqueadura","mu-infertilidade","uretrite","balanopostite","escroto-agudo","retencao-urinaria","hematuria","colica-renal","incontinencia","depressao","risco-suicida","abstinencia-alcool","tabagismo"]},
+   atalhos:["pv-checkup","pv-colorretal","pv-alcool","mu-laqueadura","mu-infertilidade","uretrite","balanopostite","escroto-agudo","retencao-urinaria","hematuria","colica-renal","incontinencia","depressao","risco-suicida","abstinencia-alcool","tabagismo","cr-exames-ubs"]},
   {id:"in", nome:"Infectologia na APS", curto:"Infecto", titulo:"Infectologia na APS", sub:"IST e sífilis, HIV e PrEP, hepatites, tuberculose, hanseníase e endemias regionais",
    ordem:["IST e sífilis","HIV e PrEP","Hepatites","Tuberculose","Hanseníase","Endemias e zoonoses"],
-   atalhos:["sifilis","uretrite","cervicite","herpes-genital","tricomoniase","dip","condiloma","pep","hiv-diagnostico","hepatites-tr","tb-sr","hanseniase","febre-amarela","febre-maculosa","leptospirose","dengue-a","chikungunya","raiva","escorpiao","acidente-ofidico","malaria","pv-infecciosas","pv-vacinas","mu-violencia"]},
+   atalhos:["sifilis","uretrite","cervicite","herpes-genital","tricomoniase","dip","condiloma","pep","hiv-diagnostico","hepatites-tr","tb-sr","hanseniase","febre-amarela","febre-maculosa","leptospirose","dengue-a","chikungunya","raiva","escorpiao","acidente-ofidico","malaria","pv-infecciosas","pv-vacinas","mu-violencia","cr-exames-ubs"]},
   {id:"po", nome:"Equidade e populações", curto:"Equidade", titulo:"Equidade e Populações", sub:"LGBTQIAPN+, populações vulneráveis, visita domiciliar e cuidados paliativos",
    ordem:["LGBTQIAPN+","Populações vulneráveis","Visita e atenção domiciliar"],
    atalhos:["abstinencia-alcool","queda-idoso","cr-aga","cr-quedas","cr-polifarmacia","cr-demencia","cr-alzheimer","in-prep","in-ist","in-hiv","mu-colo","mu-mama","ho-psa","pv-vacinas","risco-suicida","depressao","violencia","tabagismo","mu-metodos"]},
@@ -2473,6 +2473,62 @@ Object.assign(CALCS, {
    if (ho && okN(f0) && okN(f3)) L.push(["FC", f3 - f0 < 15 ? "Aumento da FC < 15 bpm: sugere causa neurogênica (ex.: Parkinson, neuropatia diabética) <span class=\"lab C\">C</span>" : "Aumento da FC ≥ 15 bpm: favorece hipovolemia ou fármacos <span class=\"lab C\">C</span>"]);
    saida(el, kv(L), `PA deitado ${nF(a)}/${nF(b)}; em pé ${q1 ? `1 min ${nF(s1)}/${nF(d1)}` : ""}${q3 ? ` 3 min ${nF(s3)}/${nF(d3)}` : ""}: ${ho ? "hipotensão ortostática presente" : "sem hipotensão ortostática"}.`); }}
 });
+// ── Memo 047/2026 (Betim): consulta da tabela de exames laboratoriais que a UBS autoriza (EXAMES_UBS, em data88.js)
+const EX_ALIAS = {
+  "eas": ["sedimento da urina"], "urina rotina": ["sedimento da urina"], "urina 1": ["sedimento da urina"], "urina tipo 1": ["sedimento da urina"], "sumario de urina": ["sedimento da urina"],
+  "urocultura": ["cultura de bacterias"], "cultura de urina": ["cultura de bacterias"], "cultura": ["cultura"],
+  "glicemia": ["dosagem de glicose"], "glicemia de jejum": ["dosagem de glicose"], "glicose": ["dosagem de glicose"],
+  "hba1c": ["hba1c"], "hemoglobina glicada": ["hba1c"], "hemoglobina glicosilada": ["hba1c"], "glicada": ["hba1c"],
+  "ast": ["(tgo"], "tgo": ["(tgo"], "alt": ["(tgp"], "tgp": ["(tgp"],
+  "vhs": ["hemossedimenta"], "vsg": ["hemossedimenta"],
+  "beta hcg": ["gonadotrofina"], "bhcg": ["gonadotrofina"], "hcg": ["gonadotrofina"], "teste de gravidez": ["gonadotrofina"],
+  "vit d": ["25 hidroxivitamina d"], "vitamina d": ["25 hidroxivitamina d"], "25 oh vitamina d": ["25 hidroxivitamina d"],
+  "rni": ["protrombina"], "inr": ["protrombina"], "tap": ["protrombina"], "tempo de protrombina": ["protrombina"],
+  "ttpa": ["tromboplastina parcial"], "kptt": ["tromboplastina parcial"],
+  "epf": ["ovos e cistos"], "parasitologico": ["ovos e cistos"], "protoparasitologico": ["ovos e cistos"], "fezes": ["fezes"],
+  "fan": ["antinucleo"], "anti nucleo": ["antinucleo"],
+  "ttg": ["transglutaminase"], "anti ttg": ["transglutaminase"], "antitransglutaminase": ["transglutaminase"],
+  "bnp": ["natriureticos"], "nt probnp": ["natriureticos"], "ntprobnp": ["natriureticos"],
+  "litemia": ["litio"], "litio": ["litio"], "digoxina": ["digitalicos"], "digoxinemia": ["digitalicos"],
+  "cpk": ["creatinofosfoquinase"], "ck": ["creatinofosfoquinase"], "fit": ["sangue oculto"],
+  "microalbuminuria": ["microalbumina"], "pth": ["paratormonio"], "t4l": ["tiroxina livre"], "t4 livre": ["tiroxina livre"],
+  "k": ["potassio"], "na": ["sodio"], "ldl": ["colesterol ldl"], "hdl": ["colesterol hdl"], "colesterol total": ["colesterol total"],
+  "triglicerides": ["trigliceridios"], "triglicerideos": ["trigliceridios"], "tg": ["trigliceridios"],
+  "hbsag": ["hbsag"], "anti hcv": ["anti hcv"], "toxoplasmose": ["toxoplasma"], "rubeola": ["rubeola"], "citomegalovirus": ["citomegalovirus"]
+};
+const EX_STOP = new Set(["de", "da", "do", "dos", "das", "e", "em", "para", "por", "a", "o", "no", "na"]);
+let EX_N = null;
+function exMatch(term){
+  if (!EX_N) EX_N = EXAMES_UBS.map(r => norm(r[1]));
+  const t = norm(term).replace(/[.\-_/]+/g, " ").replace(/\s+/g, " ").trim(); if (!t) return null;
+  const toks = EX_ALIAS[t] || t.split(" ").filter(w => w.length > 1 && !EX_STOP.has(w));
+  if (!toks.length) return [];
+  const out = []; EX_N.forEach((nm, i) => { if (toks.every(k => nm.includes(k))) out.push(EXAMES_UBS[i]); });
+  return out;
+}
+const exBR = v => "R$ " + v.toFixed(2).replace(".", ",");
+Object.assign(CALCS, {
+ exames_ubs: {nome: "Exames laboratoriais: a UBS autoriza? (Memo 047/2026)",
+  desc: "Digite um exame por linha (ou separados por vírgula). Compara com a tabela anexa do Memo 047/2026 de Betim (429 procedimentos SIGTAP). Se um só exame da guia não constar, a guia inteira vai à DIREG com justificativa.",
+  html: () => `<label class="f">Exames da guia<textarea data-k="lista" rows="5" placeholder="ex.:&#10;hemograma&#10;TSH&#10;urocultura&#10;PCR&#10;D-dímero" style="width:100%"></textarea></label>`,
+  run(el){
+   const raw = (el.querySelector('[data-k="lista"]').value || "").split(/[\n;,]+/).map(x => x.trim()).filter(Boolean);
+   if (!raw.length) return saida(el, vazio("Digite os exames pedidos para conferir com a tabela."));
+   const dentro = [], fora = [], L = [];
+   raw.forEach(term => {
+     const m = exMatch(term) || [];
+     if (!m.length){ fora.push(term); L.push([term, `<span class="lab NV">não localizado</span> Confira o nome SIGTAP; se realmente não constar, a guia vai à DIREG com justificativa.`]); return; }
+     dentro.push(term);
+     const lista = m.slice(0, 6).map(r => `<div><code>${esc(r[0])}</code> ${esc(r[1])} · ${exBR(r[2])}</div>`).join("") + (m.length > 6 ? `<div class="empty">+ ${m.length - 6} procedimentos: refine o nome.</div>` : "");
+     L.push([term, `<span class="lab F">consta${m.length > 1 ? " (" + m.length + " opções: escolha o procedimento certo)" : ""}</span>${lista}`]);
+   });
+   const resumo = fora.length
+     ? `<div class="fn warn" style="padding:8px 10px;border:1px solid;border-radius:8px;margin-bottom:8px">${fora.length} exame(s) não localizado(s) na tabela: a <b>guia inteira</b> (inclusive os que constam) vai à DIREG, com justificativa, no dia designado da UBS, sem CMCE <span class="lab F">F</span></div>`
+     : `<div class="fn ok" style="padding:8px 10px;border:1px solid;border-radius:8px;margin-bottom:8px">Todos constam na tabela: a UBS autoriza (nome, matrícula e validade do autorizador), avaliando justificativa e exame recente <span class="lab F">F</span></div>`;
+   saida(el, resumo + kv(L), `Exames (Memo 047/2026 de Betim) – na tabela da UBS: ${dentro.join(", ") || "nenhum"}.${fora.length ? " Não localizados na tabela: " + fora.join(", ") + " → guia inteira à DIREG com justificativa." : " Autorização pela UBS."}`);
+  }}
+});
+CALC_MENU.push(["exames_ubs", "Exames da UBS (Memo 047/2026)"]);
 CALC_MENU.push(["ho","Hipotensão ortostática"])
 CALC_MENU.push(["sc:kocher","Quadril irritável na criança (Kocher)"]);
 $("#calc-sel").innerHTML = CALC_MENU.map(([v,t])=>`<option value="${v}">${esc(t)}</option>`).join("");

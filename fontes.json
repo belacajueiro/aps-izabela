@@ -1,12 +1,12 @@
 {
- "gerado": "2026-10-29T22:31:25.414Z",
+ "gerado": "2026-10-30T21:15:15.236Z",
  "cmed": {
   "data": "09/10/2026",
   "fonte": "cmed_pmc2026",
   "icms": "PMC com ICMS de Minas Gerais: 12% para genéricos e 18% para os demais"
  },
- "n_fontes": 720,
- "n_itens": 389,
+ "n_fontes": 721,
+ "n_itens": 390,
  "sem_url": [
   "remume",
   "aap_oma",
@@ -282,7 +282,8 @@
   "betim_info2026",
   "memento_fito_betim2022",
   "protocolo_fito_farm_betim2022",
-  "memento_fb2016"
+  "memento_fb2016",
+  "betim_memo047_2026"
  ],
  "nao_conferidas": [
   "aap_oma",
@@ -7457,6 +7458,7 @@
    "url": "",
    "ano": 2026,
    "usado_em": [
+    "cr-exames-ubs",
     "cr-osteoporose",
     "pv-checkup",
     "pv-checkup-idoso",
@@ -9873,6 +9875,17 @@
    "ano": 2026,
    "usado_em": [
     "poliartrite-aguda"
+   ]
+  },
+  {
+   "k": "betim_memo047_2026",
+   "s": "SMS Betim – Memorando 047/2026 (exames laboratoriais autorizados pela UBS)",
+   "t": "SMS Betim, Diretoria IV de Regulação, Controle e Avaliação (DIREG) e Diretoria IV de Atenção Primária à Saúde (DAPS). Memorando nº 047/2026 – CSSC, 27/01/2026, aos Diretores da APS: novo fluxo (Colegiado Gestor) de autorização dos exames laboratoriais dos laboratórios contratados da Rede SUS Betim; tabela anexa 'Exames autorizados pelas UBS' com 429 procedimentos SIGTAP e valor unitário. Exames fora da tabela: guia com justificativa entregue fisicamente à DIREG no dia designado da UBS, sem cadastro no CMCE; exames autorizados pela UBS contam na cota da UBS (os autorizados pela DIREG não); autorização diária, sem distribuição de senhas; vedada a transcrição ou o agendamento de pedido da rede particular (documento municipal anexado; arquivo da pasta DIA A DIA).",
+   "f": "F",
+   "url": "",
+   "ano": 2026,
+   "usado_em": [
+    "cr-exames-ubs"
    ]
   }
  ],
@@ -13292,7 +13305,7 @@
    "id": "pv-checkup",
    "nome": "Check-up do adulto: o que rastrear e o que não pedir",
    "modulo": "pv",
-   "nv": 1,
+   "nv": 2,
    "fontes": [
     "conitec_ccr2026",
     "pcdt_hcv2026",
@@ -13307,7 +13320,7 @@
    "id": "pv-colorretal",
    "nome": "Câncer colorretal: rastreamento com FIT",
    "modulo": "pv",
-   "nv": 2,
+   "nv": 3,
    "fontes": [
     "conitec_ccr2026",
     "fit_sus2026",
@@ -14226,7 +14239,7 @@
    "id": "pv-checkup-idoso",
    "nome": "Check-up da pessoa idosa: o que rastrear, quando parar e o que não pedir",
    "modulo": "pv",
-   "nv": 4,
+   "nv": 5,
    "fontes": [
     "lee_ttb2013",
     "inca_colo2025",
@@ -14990,6 +15003,16 @@
     "carneiro2014_cavalinha",
     "carneiro2022_cavalinha",
     "formulario_fito_anvisa2026"
+   ]
+  },
+  {
+   "id": "cr-exames-ubs",
+   "nome": "Exames laboratoriais em Betim: o que a UBS autoriza sozinha (Memo 047/2026)",
+   "modulo": "cr",
+   "nv": 4,
+   "fontes": [
+    "betim_memo047_2026",
+    "betim_exames2026"
    ]
   }
  ]

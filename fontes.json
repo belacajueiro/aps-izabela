@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-30T21:15:15.236Z",
+ "gerado": "2026-11-01T11:03:34.491Z",
  "cmed": {
   "data": "09/10/2026",
   "fonte": "cmed_pmc2026",
@@ -8626,7 +8626,7 @@
    "s": "MS – Dengue: manual de enfermagem, 3ª ed. 2026",
    "t": "Ministério da Saúde. Dengue: manual de enfermagem. 3ª ed. Brasília: MS, 2026 (cita a 6ª ed. 2024 de 'Dengue: diagnóstico e manejo clínico' como referência; grupo B com retorno diário até 48 h após a queda da febre).",
    "f": "F",
-   "url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/guias-e-manuais/2026/dengue-manual-de-enfermagem.pdf",
+   "url": "https://bvsms.saude.gov.br/bvs/publicacoes/dengue_manual_enfermagem_3ed_rev.pdf",
    "ano": 2026,
    "usado_em": [
     "dengue-a"
@@ -9179,7 +9179,7 @@
    "s": "PCDT Síndrome dos Ovários Policísticos (MS, 2019)",
    "t": "Ministério da Saúde. PCDT da Síndrome dos Ovários Policísticos, 2019 (cópia na base clínica): Rotterdam – 2 de 3 (≤ 9 ciclos/ano; hiperandrogenismo clínico ou laboratorial; > 12 folículos de 2–9 mm ou volume ≥ 10 cm³, com a observação de que aparelhos de maior resolução elevam o corte para > 25); adolescentes: os 3 critérios; excluir com 17-OHP, TSH, prolactina e FSH; TOTG em obesas ou com história familiar; ACO 21/7; medroxiprogesterona 10 mg por 10–12 dias/mês; ciproterona 12,5–50 mg associada ao ACO; metformina 500 mg até 2.550 mg/dia; espironolactona com potássio monitorado; endocrinologia se virilização ou testosterona > 2 DP (protocolo).",
    "f": "F",
-   "url": "https://www.gov.br/conitec/pt-br/midias/protocolos/pcdt_sop.pdf",
+   "url": "https://www.gov.br/conitec/pt-br/midias/protocolos/pcdt-sindrome-dos-ovrios-policsticos.pdf",
    "ano": 2019,
    "usado_em": [
     "sop"

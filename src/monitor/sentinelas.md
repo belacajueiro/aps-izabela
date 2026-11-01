@@ -1,42 +1,203 @@
-# Sentinelas – 2026-10-14
+# Sentinelas – 2026-11-01
 
-Estado anterior: nenhum (primeira execução: só cria a linha de base)
+Estado anterior: 2026-10-14
 
 ## Páginas vigiadas
 
-- CMED – lista de preços (PMC): linha de base criada (1 links).
-- Farmácia Popular – elenco (PDF): linha de base criada (0 links).
-- Farmácia Popular – página: linha de base criada (1 links).
-- CONITEC – PCDT publicados: linha de base criada (60 links).
-- CONITEC – PCDT em elaboração: linha de base criada (63 links).
-- CONITEC – recomendações: linha de base criada (1 links).
-- CONITEC – DDT: linha de base criada (60 links).
-- CONITEC – consultas públicas vigentes: linha de base criada (94 links).
-- MS – notas técnicas 2026: linha de base criada (146 links).
-- MS – Calendário Nacional de Vacinação: linha de base criada (5 links).
-- MS – RENAME: linha de base criada (227 links).
-- GINA – relatórios: linha de base criada (4 links).
-- GOLD – relatório: linha de base criada (3 links).
-- SBD – Diretriz: linha de base criada (111 links).
-- KDIGO – diretrizes: linha de base criada (36 links).
-- Prefeitura de Betim: linha de base criada (0 links).
-- SES-MG: linha de base criada (1 links).
+- 🔔 **CMED – lista de preços (PMC)** mudou – rodar tools/cmed_update.sh e revisar o No balcão. https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/cmed/precos
+  - novo: https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/cmed/precos/arquivos/lista_pmc__20261009_115232673.xlsx/@@download/file
+  - saiu: https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/cmed/precos/arquivos/lista_pmc__20261009_115232671.xlsx/@@download/file
+- Farmácia Popular – elenco (PDF): sem mudança.
+- Farmácia Popular – página: sem mudança.
+- 🔔 **CONITEC – PCDT publicados** mudou. https://www.gov.br/conitec/pt-br/protocolos-clinicos-e-diretrizes-terapeuticas/protocolos-clinicos-e-diretrizes-terapeuticas
+  - novo: https://www.gov.br/conitec/pt-br/centrais-de-conteudo/boletim-conitec
+  - novo: https://www.gov.br/conitec/static/css/client.81233072.css
+  - novo: https://www.gov.br/conitec/static/js/client.e8db9d48.js
+  - novo: https://www.gov.br/conitec/static/js/runtime~client.0c606b70.js
+  - saiu: https://www.gov.br/conitec/static/css/client.ef35f764.css
+  - saiu: https://www.gov.br/conitec/static/js/client.39c478e1.js
+  - saiu: https://www.gov.br/conitec/static/js/runtime~client.6ba753dd.js
+- 🔔 **CONITEC – PCDT em elaboração** mudou. https://www.gov.br/conitec/pt-br/protocolos-clinicos-e-diretrizes-terapeuticas/pcdt-em-elaboracao
+  - novo: https://www.gov.br/conitec/pt-br/centrais-de-conteudo/boletim-conitec
+  - novo: https://www.gov.br/conitec/static/css/client.81233072.css
+  - novo: https://www.gov.br/conitec/static/js/client.e8db9d48.js
+  - novo: https://www.gov.br/conitec/static/js/runtime~client.0c606b70.js
+  - saiu: https://www.gov.br/conitec/static/css/client.ef35f764.css
+  - saiu: https://www.gov.br/conitec/static/js/client.39c478e1.js
+  - saiu: https://www.gov.br/conitec/static/js/runtime~client.6ba753dd.js
+- 🔔 **CONITEC – recomendações** mudou – abrir a planilha nova e ver recomendações publicadas desde o último mês. https://www.gov.br/conitec/pt-br/assuntos/avaliacao-de-tecnologias-em-saude/recomendacoes-conitec
+  - novo: https://www.gov.br/conitec/pt-br/midias/dados-em-excel/recomendacoesdaconitec_20261026.xlsx/@@download/file
+  - saiu: https://www.gov.br/conitec/pt-br/midias/dados-em-excel/recomendacoesdaconitec_20260615.xlsx/@@download/file
+- 🔔 **CONITEC – DDT** mudou. https://www.gov.br/conitec/pt-br/protocolos-clinicos-e-diretrizes-terapeuticas/ddt
+  - novo: https://www.gov.br/conitec/pt-br/centrais-de-conteudo/boletim-conitec
+  - novo: https://www.gov.br/conitec/static/css/client.81233072.css
+  - novo: https://www.gov.br/conitec/static/js/client.e8db9d48.js
+  - novo: https://www.gov.br/conitec/static/js/runtime~client.0c606b70.js
+  - saiu: https://www.gov.br/conitec/static/css/client.ef35f764.css
+  - saiu: https://www.gov.br/conitec/static/js/client.39c478e1.js
+  - saiu: https://www.gov.br/conitec/static/js/runtime~client.6ba753dd.js
+- 🔔 **CONITEC – consultas públicas vigentes** mudou. https://www.gov.br/conitec/pt-br/assuntos/participacao-social/consultas-publicas/vigentes
+  - novo: https://brasilparticipativo.presidencia.gov.br/processes/consultas-publicas-conitec/f/5940/
+  - novo: https://brasilparticipativo.presidencia.gov.br/processes/consultas-publicas-conitec/f/5941/
+  - novo: https://brasilparticipativo.presidencia.gov.br/processes/consultas-publicas-conitec/f/6023/
+  - novo: https://www.gov.br/conitec/pt-br/centrais-de-conteudo/boletim-conitec
+  - novo: https://www.gov.br/conitec/pt-br/midias/consultas/2026/consulta-publica-sctie-ms-no-105-de-20-de-outubro-de-2026.pdf/@@display-file/file
+  - novo: https://www.gov.br/conitec/pt-br/midias/consultas/2026/consulta-publica-sctie-ms-no-106-de-20-de-outubro-de-2026.pdf/@@display-file/file
+  - novo: https://www.gov.br/conitec/pt-br/midias/consultas/2026/consulta-publica-sctie-ms-no-107-de-27-de-outubro-de-2026.pdf/@@display-file/file
+  - novo: https://www.gov.br/conitec/pt-br/midias/consultas/dossie/2026/dossie-cp-105-riociguate.pdf/@@display-file/file
+  - novo: https://www.gov.br/conitec/pt-br/midias/consultas/dossie/2026/dossie-vutrisirana-cp-107.pdf/@@display-file/file
+  - novo: https://www.gov.br/conitec/pt-br/midias/consultas/relatorios/2026/relatorio-preliminar-riociguate-cp-105.pdf/@@display-file/file
+  - novo: https://www.gov.br/conitec/pt-br/midias/consultas/relatorios/2026/relatorio-preliminar-transplante-alogenico-de-celulas-tronco-hematopoieticas-cp-106.pdf/@@display-file/file
+  - novo: https://www.gov.br/conitec/pt-br/midias/consultas/relatorios/2026/relatorio-preliminar-vutrisirana-sodica-estagio-i-cp-107.pdf/@@display-file/file
+  - novo: https://www.gov.br/conitec/pt-br/midias/consultas/relatorios/2026/sociedade/relatorio-para-sociedade-no-760-riociguate-hptec.pdf/@@display-file/file
+  - novo: https://www.gov.br/conitec/pt-br/midias/consultas/relatorios/2026/sociedade/relatorio-para-sociedade-no-761-tcth-linfoma-hodgkin.pdf/@@display-file/file
+  - novo: https://www.gov.br/conitec/pt-br/midias/consultas/relatorios/2026/sociedade/relatorio-para-sociedade-no-762-vutrisirana-amiloidose-estagioi.pdf/@@display-file/file
+  - novo: https://www.gov.br/conitec/static/css/client.81233072.css
+  - novo: https://www.gov.br/conitec/static/js/client.e8db9d48.js
+  - novo: https://www.gov.br/conitec/static/js/runtime~client.0c606b70.js
+  - saiu: https://brasilparticipativo.presidencia.gov.br/processes/consultas-publicas-conitec/f/5684/
+  - saiu: https://brasilparticipativo.presidencia.gov.br/processes/consultas-publicas-conitec/f/5685/
+  - saiu: https://brasilparticipativo.presidencia.gov.br/processes/consultas-publicas-conitec/f/5686/
+  - saiu: https://brasilparticipativo.presidencia.gov.br/processes/consultas-publicas-conitec/f/5687/
+  - saiu: https://brasilparticipativo.presidencia.gov.br/processes/consultas-publicas-conitec/f/5713/
+  - saiu: https://brasilparticipativo.presidencia.gov.br/processes/consultas-publicas-conitec/f/5812/
+  - saiu: https://brasilparticipativo.presidencia.gov.br/processes/consultas-publicas-conitec/f/5813/
+  - saiu: https://www.gov.br/conitec/pt-br/midias/consultas/2026/consulta-publica-sctie-ms-no-100-de-28-de-setembro-de-2026.pdf/@@display-file/file
+  - saiu: https://www.gov.br/conitec/pt-br/midias/consultas/2026/consulta-publica-sctie-ms-no-101-de-28-de-setembro-de-2026.pdf/@@display-file/file
+  - saiu: https://www.gov.br/conitec/pt-br/midias/consultas/2026/consulta-publica-sctie-ms-no-103-de-2-de-outubro-de-2026.pdf/@@display-file/file
+- 🔔 **MS – notas técnicas 2026** mudou – abrir as notas novas e ver se tocam temas do app. https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026
+  - novo: https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-106-2026-saes-anvisa-conasems.pdf/view
+  - novo: https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-256-2026.pdf/view
+  - novo: https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-329.pdf/view
+  - novo: https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-3542026.pdf/view
+  - novo: https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-360-2026-dgci-desf-depros-saps-ms.pdf/view
+  - novo: https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-01-2026-svsa.pdf/view
+  - novo: https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-12-2026.pdf/view
+  - novo: https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-47-2026.pdf/view
+- MS – Calendário Nacional de Vacinação: sem mudança.
+- 🔔 **MS – RENAME** mudou. https://www.gov.br/saude/pt-br/composicao/sectics/rename
+  - novo: https://www.flickr.com/photos/ministeriodasaude/albums
+  - novo: https://www.gov.br/pt-br/noticias/agricultura-e-pecuaria
+  - novo: https://www.gov.br/pt-br/noticias/assistencia-social
+  - novo: https://www.gov.br/pt-br/noticias/ciencia-e-tecnologia
+  - novo: https://www.gov.br/pt-br/noticias/comunicacao
+  - novo: https://www.gov.br/pt-br/noticias/cultura-artes-historia-e-esportes
+  - novo: https://www.gov.br/pt-br/noticias/educacao-e-pesquisa
+  - novo: https://www.gov.br/pt-br/noticias/energia-minerais-e-combustiveis
+  - novo: https://www.gov.br/pt-br/noticias/financas-impostos-e-gestao-publica
+  - novo: https://www.gov.br/pt-br/noticias/forcas-armadas
+  - novo: https://www.gov.br/pt-br/noticias/justica-e-seguranca
+  - novo: https://www.gov.br/pt-br/noticias/meio-ambiente-e-clima
+  - novo: https://www.gov.br/pt-br/noticias/saude-e-vigilancia-sanitaria
+  - novo: https://www.gov.br/pt-br/noticias/trabalho-e-previdencia
+  - novo: https://www.gov.br/pt-br/noticias/trabalho-e-previdencia/direitos-do-trabalhador
+  - novo: https://www.gov.br/pt-br/noticias/trabalho-e-previdencia/fgts
+  - novo: https://www.gov.br/pt-br/noticias/transito-e-transportes
+  - novo: https://www.gov.br/pt-br/noticias/viagens-e-turismo
+  - novo: https://www.gov.br/pt-br/noticias/viagens-e-turismo/direitos-do-viajante
+  - novo: https://www.gov.br/pt-br/noticias/viagens-e-turismo/viaje-o-brasil
+  - novo: https://www.gov.br/saude/++theme++padrao_govbr/govbrtheme-1b543ca.css
+  - novo: https://www.gov.br/saude/pt-br/assuntos/noticias
+  - novo: https://www.gov.br/saude/pt-br/assuntos/noticias-para-os-estados
+  - novo: https://www.gov.br/saude/pt-br/assuntos/noticias-para-os-estados/acre
+  - novo: https://www.gov.br/saude/pt-br/assuntos/noticias-para-os-estados/alagoas
+  - saiu: https://www.gov.br/saude/++theme++padrao_govbr/govbrtheme-37d29fa.css
+  - saiu: https://www.gov.br/saude/pt-br/assuntos/noticias-ms
+  - saiu: https://www.gov.br/saude/pt-br/assuntos/noticias-ms/noticias-para-os-estados
+  - saiu: https://www.gov.br/saude/pt-br/centrais-de-conteudo/apresentacao
+  - saiu: https://www.gov.br/saude/pt-br/search?origem=termos&SearchableText=inss
+- 🔔 **GINA – relatórios** mudou. https://ginasthma.org/reports/
+  - novo: https://ginasthma.org/2026-gina-strategy-report-executive-summary-published/
+- GOLD – relatório: sem mudança.
+- SBD – Diretriz: sem mudança.
+- KDIGO – diretrizes: sem mudança.
+- 🔔 **Prefeitura de Betim** mudou. https://www.betim.mg.gov.br/
+  - novo: https://www.betim.mg.gov.br/portal/secretarias-paginas/89/unidades-basicas-de-saude
+- SES-MG: sem mudança.
 
-## Fontes do app (242 com URL; 232 sem URL; 218 não conferidas)
+## Fontes do app (445 com URL; 276 sem URL; 231 não conferidas)
 
-- ⚠ **caderneta2026** link quebrado (404) – documento mudou de endereço ou foi retirado; usada em pn-1consulta, pn-2tri, pn-3tri, pn-guiada, pn-rh, pn-risco: https://www.gov.br/saude/pt-br/composicao/saps/publicacoes/cadernetas-e-cartoes/caderneta-brasileira-da-gestante.pdf
-- ⚠ **coelho_savassi** link quebrado (404) – documento mudou de endereço ou foi retirado; usada em po-pobreza, po-vd: https://app4.unasus.gov.br/ppuplayer4_idoso/uploads/recursos/SE_UNASUS_0002_IDOSO_ACOES_ESTRATEGICAS/8/assets/lib/docs/Vulnerabilidade_Familiar_Escala_Coelho_Savassi.pdf
-- ⚠ **febrasgo_rh** link quebrado (404) – documento mudou de endereço ou foi retirado; usada em pn-rh: https://www.febrasgo.org.br/fluxopdf/assets/pdf/Isoimunizacao.pdf
-- ⚠ **mg_brca** link quebrado (404) – documento mudou de endereço ou foi retirado; usada em mu-mama: https://www.agenciaminas.mg.gov.br/news/pdf/128015.pdf
-- ⚠ **mg_hpv** link quebrado (404) – documento mudou de endereço ou foi retirado; usada em mu-colo, mu-rotina: https://agenciaminas.mg.gov.br/news/pdf/129541.pdf
-- ⚠ **ms_dengue** link quebrado (404) – documento mudou de endereço ou foi retirado; usada em chikungunya, dengue-a, exantema, febre-adulto, zika: https://portaldeboaspraticas.iff.fiocruz.br/wp-content/uploads/2024/02/dengue-manejo-clinico.pdf
-- ⚠ **nt_raiva** link quebrado (404) – documento mudou de endereço ou foi retirado; usada em raiva: https://familia.sbim.org.br/images/files/notas-tecnicas/cgzv-deidt-svs-ms-protocoloraiva-100322.pdf
-- ⚠ **pcdt_asma2023** link quebrado (404) – documento mudou de endereço ou foi retirado; usada em asma-crianca, asma-crise: https://www.gov.br/saude/pt-br/assuntos/pcdt/arquivos/2023/portaria-conjunta-saes-sectics-no-32-pcdt-asma.pdf
-- ⚠ **pcdt_disl** link quebrado (404) – documento mudou de endereço ou foi retirado; usada em cr-dac, cr-dislipidemia: https://www.gov.br/saude/pt-br/assuntos/pcdt/arquivos/2022/portaria-conjunta-no-08-pcdt-dislipidemia.pdf
-- ⚠ **pcdt_dpoc** link quebrado (404) – documento mudou de endereço ou foi retirado; usada em dpoc-exac: https://www.gov.br/saude/pt-br/assuntos/pcdt/arquivos/2022/portal-portaria-conjunta_no-19_2021_pcdt_dpoc__.pdf
-- ⚠ **pcdt_tabaco** link quebrado (404) – documento mudou de endereço ou foi retirado; usada em tabagismo: https://www.gov.br/saude/pt-br/assuntos/pcdt/arquivos/2020/pcdt_tabagismo.pdf
-- ⚠ **pni2026** link quebrado (404) – documento mudou de endereço ou foi retirado; usada em pu-12m, pu-18m, pu-1m, pu-24m, pu-2m, pu-3a5a: https://www.gov.br/saude/pt-br/vacinacao/calendario-tecnico/calendario-tecnico-nacional-de-vacinacao-crianca
-- ⚠ **sbce_profilaxia2022** link quebrado (404) – documento mudou de endereço ou foi retirado; usada em migranea: https://thieme-connect.de/products/ejournals/html/10.1055/s-0042-1756441
-- ⚠ **sbd_metas** link quebrado (404) – documento mudou de endereço ou foi retirado; usada em cr-dm2, cr-prediabetes: https://doi.org/10.29327/557753.2022-3
-- ⚠ **sbd_sus** link quebrado (404) – documento mudou de endereço ou foi retirado; usada em cr-b12, cr-dm2, cr-dm2-insulina, cr-pe-diabetico, cr-polifarmacia: https://doi.org/10.29327/5412848.2024-3
-- Não verificáveis daqui (bloqueio do site, limite ou tempo esgotado – conferir pela busca web se necessário): aha2025_bls, aha2025_pals, alyne, bmj_tsh, bula_fostair, caderneta_crianca, cdc_dip, cfm_bariatrica, cochrane_calcio2025, diu_pp, epds_br, guia_menor2, inca_colo2025, ivcf_moraes, lepto, mec_cdc2024, mec_cdc_chc, mec_cdc_diu, notif_viol, pbf_port38, pcdt_ist, port11_2016, prevent_aha, rename, ress_sifilis, ress_uretral, sarcf, sbc_calc, sca_sorocaba, tb_manual2019, tele_dip, tele_hp, tele_varf_ini, tele_varf_rni, ucsf_fem, ucsf_masc, vsr_sus.
+- ⚠ **ms_dengue_enf2026** link quebrado (404) – documento mudou de endereço ou foi retirado; usada em dengue-a: https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/guias-e-manuais/2026/dengue-manual-de-enfermagem.pdf
+- ⚠ **pcdt_sop2019** link quebrado (404) – documento mudou de endereço ou foi retirado; usada em sop: https://www.gov.br/conitec/pt-br/midias/protocolos/pcdt_sop.pdf
+- ⚠ **sbce_profilaxia2022** link quebrado (404) – documento mudou de endereço ou foi retirado; usada em migranea: https://doi.org/10.1055/s-0042-1756441
+- Não verificáveis daqui (bloqueio do site, limite ou tempo esgotado – conferir pela busca web se necessário): aap_hemang2019, aap_ict2022, aap_piolho2022, aha2025_bls, aha2025_pals, aha_ei2021, azari2013_conj, bad_sjs2016, bliss_cresc2017, bliss_engasgo2016, bmj_tsh, bula_dipirona, bula_fostair, bula_sro, bvs_herpes, calendula_fraldas_ecr, carneiro2014_cavalinha, cdc_dip, cdc_epid2021, cdc_marcos2022, cdc_rmsf, cochrane_alcachofra2013, cochrane_castanha2012, cochrane_colica2016, cochrane_crupe2023, cochrane_equinacea2014, cochrane_ginkgo_zumbido2013, cochrane_ginkgo_zumbido2022, cochrane_glarg2020, cochrane_herbal_lombalgia2014, cochrane_hiperico2008, cochrane_oe2010, cochrane_passiflora2007, cochrane_tanaceto2015, diu_pp, epds_br, esc_ic2026, espghan_constip2026, essence2025, flow2024, holtmann2003_alcachofra, hp_consenso5, hu2021_conj, improve_it, inca_colo2025, ivcf_moraes, janda2020_passiflora, jonas2014, jones2015, lee_ttb2013, lepto, lilly_contracep, margaretten2007, mec_cdc2024, mec_cdc_chc, mec_cdc_diu, naspghan_drge2018, notif_viol, nt_psa2023, obeid2015_b12, patel2007_conj, pbf_port38, pcdt_ist, port11211, port11_2016, port6734, prevent_aha, rename, ress_sifilis, ress_uretral, rj_fm2025, salehi2020_enzimas, sarcf, sbd_luso2023, sbem_tsh, sca_sorocaba, select2023, sesmg_formula2021, soul2025, step1_2021, step1ext2022, stephfpef2023, summit2024, sung2018_reuteri, surmount1_2022, surmount4_2024, surmount5_2025, surmountosa2024, tabach2017_espinheira, tele_dip, tele_hp, tele_varf_ini, tele_varf_rni, tsrs_card2022, tsrs_derm2023, tsrs_gin2023, tsrs_oft2023, tsrs_pneumo2023, tsrs_reum2022, tsrs_uro2023, twist2013, ucsf_fem, ucsf_masc, vsr_sus, west_bmj2026, wfg2022.
+- 🔔 **acr_gota** mudou desde 2026-10-14 – usada em cr-gota: https://portal.afya.com.br/reumatologia/novos-guidelines-acr-para-o-manejo-da-gota
+- 🔔 **ada2026_s3** mudou desde 2026-10-14 – usada em cr-prediabetes: https://globalrph.com/2026/07/prediabetes-in-2026-evidence-thresholds-for-lifestyle-intervention-metformin-and-anti-obesity-pharmacotherapy/
+- 🔔 **aes_eme** mudou desde 2026-10-14 – usada em convulsao-ativa: https://mdedge.com/neurology/epilepsyresourcecenter/article/106211/epilepsy-seizures/aes-publishes-guideline
+- 🔔 **ats_pac_aafp** mudou desde 2026-10-14 – usada em pac: https://www.aafp.org/afp/2020/0715/p121
+- 🔔 **bb_pos_iam2025** mudou desde 2026-10-14 – usada em cr-dac: https://www.acc.org/Latest-in-Cardiology/Articles/2025/08/26/11/47/sat-520am-bb-esc-2025
+- 🔔 **beers2023** mudou desde 2026-10-14 – usada em cr-aga, cr-alzheimer, cr-bzd, cr-demencia, cr-inapetencia, cr-parkinson: https://dig.pharmacy.uic.edu/faqs/2023-2/september-2023-faqs/a-summary-of-the-2023-american-geriatrics-society-updated-beers-criteria-for-potentially-inappropriate-medication-use-in-the-elderly
+- 🔔 **cabotegravir2026** mudou desde 2026-10-14 – usada em in-prep: https://site.cff.org.br/noticia/Noticias-gerais/11/08/2026/conitec-recomenda-incorporacao-de-cabotegravir-injetavel-ao-sus-para-prevencao-do-hiv
+- 🔔 **cmed_pmc2026** mudou desde 2026-10-14 – usada em cr-asma, cr-b12, cr-glp1, otite-externa: https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/cmed/precos
+- 🔔 **cochrane_b12** mudou desde 2026-10-14 – usada em cr-b12, parestesias, tunel-carpo: https://www.cochrane.org/evidence/CD004655_oral-vitamin-b12-compared-intramuscular-vitamin-b12-vitamin-b12-deficiency
+- 🔔 **cochrane_fimose** mudou desde 2026-10-14 – usada em pu-fimose: https://cochranelibrary.com/cdsr/doi/10.1002/14651858.CD008973.pub3/pdf/CDSR/CD008973/CD008973_abstract.pdf
+- 🔔 **conitec_1002** mudou desde 2026-10-14 – usada em mu-endometriose, mu-larc: https://www.gov.br/conitec/pt-br/midias/relatorios/2025/relatorio-de-recomendacao-no-1002-dispositivo-intrauterino-liberador-de-levonorgestrel
+- 🔔 **conitec_1066** mudou desde 2026-10-14 – usada em mu-larc, mu-sua: https://www.gov.br/conitec/pt-br/midias/relatorios/2026/relatorio-final/relatorio-de-recomendacao-no-1066-acido-tranexamico-e-dispositivo-intrauterino-liberador-de-levonorgestrel-diu-lng
+- 🔔 **conitec_diulng** mudou desde 2026-10-14 – usada em endometriose, miomas, sua: https://www.gov.br/conitec/pt-br/midias/relatorios/2026/relatorio-final/relatorio-de-recomendacao-no-1066-acido-tranexamico-e-dispositivo-intrauterino-liberador-de-levonorgestrel-diu-lng
+- 🔔 **conitec_sdr** mudou desde 2026-10-14 – usada em in-hansen: https://www.gov.br/conitec/pt-br/midias/consultas/relatorios/2020/sociedade/resoc197_rifampicina_hanseniase.pdf
+- 🔔 **doxipep2026** mudou desde 2026-10-14 – usada em in-ist, in-prep: https://portal.afya.com.br/infectologia/doxiciclina-e-incluida-na-profilaxia-pos-exposicao-para-prevencao-de-ists
+- 🔔 **eca13** mudou desde 2026-10-14 – usada em po-violencia-vulneraveis: https://www.planalto.gov.br/ccivil_03/leis/l8069.htm
+- 🔔 **endo_pa2025** mudou desde 2026-10-14 – usada em cr-has, cr-has-resistente: https://www.endocrine.org/clinical-practice-guidelines/primary-aldosteronism-2
+- 🔔 **esc_ccs2024** mudou desde 2026-10-14 – usada em cr-dac: https://www.campus.sanofi/se/artiklar/kardiologi/dyslipidemi/ar/esc-guidelines-management-chronic-coronary-syndromes-2024
+- 🔔 **esc_fa2024** mudou desde 2026-10-14 – usada em cr-escalas, cr-fa, cr-pos-avc: https://pmc.ncbi.nlm.nih.gov/articles/PMC11574616
+- 🔔 **esc_fa_acc** mudou desde 2026-10-14 – usada em cr-fa: https://www.acc.org/Latest-in-Cardiology/ten-points-to-remember/2024/09/17/04/05/2024-esc-guidelines-for-af-esc-2024
+- 🔔 **eular_les2023** mudou desde 2026-10-14 – usada em cr-artralgia, cr-les: https://rheumnow.com/news/2023-eular-lupus-management-recommendations
+- 🔔 **fda_th2025** mudou desde 2026-10-14 – usada em mu-climaterio: https://www.contemporaryobgyn.net/view/fda-initiates-removal-of-boxed-warnings-from-hormone-therapy-for-menopause
+- 🔔 **fezolinetante** mudou desde 2026-10-14 – usada em mu-climaterio: https://site.cff.org.br/noticia/Noticias-gerais/25/06/2026/anvisa-aprova-novo-medicamento-sem-hormonios-para-aliviar-sintomas-da-menopausa
+- 🔔 **fit_sus2026** mudou desde 2026-10-14 – usada em pv-checkup-idoso, pv-colorretal: https://site.cff.org.br/noticia/Noticias-gerais/25/05/2026/sus-adota-novo-exame-para-detectar-cancer-de-intestino-antes-dos-sintomas
+- 🔔 **fp_elenco2026** mudou desde 2026-10-14 – usada em cr-asma, cr-dac, cr-dm2, cr-icfep, cr-parkinson, hiperglicemia: https://www.gov.br/saude/pt-br/composicao/sectics/farmacia-popular
+- 🔔 **frax** mudou desde 2026-10-14 – usada em cr-escalas, cr-osteoporose: https://frax.shef.ac.uk/FRAX/
+- 🔔 **glucagon_bula** mudou desde 2026-10-14 – usada em hipoglicemia: https://www.bulas.med.br/p/bula/2790/glucagon.htm
+- 🔔 **gvs_tetano** mudou desde 2026-10-14 – usada em acidente-ofidico, ferida, miiase, tungiase: https://saude.prefeitura.rio/wp-content/uploads/sites/47/2023/06/Quadro_tetano_profilaxia_raiva.pdf
+- 🔔 **hanseniase** mudou desde 2026-10-14 – usada em hanseniase: https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/h/hanseniase/tratamento
+- 🔔 **hcv_aps2026** mudou desde 2026-10-14 – usada em in-hepatites: https://portal.afya.com.br/infectologia/pcdt-de-hepatite-c-amplia-rastreio-e-simplifica-cuidado
+- 🔔 **hipo_cbmfc** mudou desde 2026-10-14 – usada em hipoglicemia: https://portal.afya.com.br/medicina-de-familia/cbmfc-2025-abordagem-da-hipoglicemia-e-da-hiperglicemia-na-aps
+- 🔔 **hpv_vac2026** mudou desde 2026-10-14 – usada em in-hiv, mu-colo, mu-rotina, mu-violencia, pu-checkup, pv-vacinas: https://saude.es.gov.br/media/Imuniza%C3%A7%C3%A3o/nota-tecnica/nota_tecnica_no_056_2026_-_sesa_ssvs_gevs_nei_-_atualizacao_da_estrategia_de_vacina_contra_o_hpv-docx.pdf
+- 🔔 **icms_mg_med** mudou desde 2026-10-14 – usada em cr-glp1: https://simtax.com.br/?p=56709
+- 🔔 **idoso19** mudou desde 2026-10-14 – usada em po-idoso-vulneravel, po-violencia-vulneraveis: https://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm
+- 🔔 **idsa_cuti2025** mudou desde 2026-10-14 – usada em pielonefrite: https://www.idsociety.org/practice-guideline/complicated-urinary-tract-infections/
+- 🔔 **inca_pulmao2026** mudou desde 2026-10-14 – usada em pv-checkup-idoso, pv-pulmao: https://portal.afya.com.br/saude/inca-inicia-estudo-para-viabilizar-rastreamento-de-cancer-de-pulmao-no-sus
+- 🔔 **kfre** mudou desde 2026-10-14 – usada em cr-drc, cr-escalas: https://loinc.org/85626-0
+- 🔔 **lei_10778** mudou desde 2026-10-14 – usada em mu-violencia, po-violencia-vulneraveis, violencia: https://www.planalto.gov.br/ccivil_03/leis/2003/l10.778.htm
+- 🔔 **lei_13931** mudou desde 2026-10-14 – usada em violencia: https://www.dizerodireito.com.br/2019/12/lei-139312019-profissionais-de-saude.html
+- 🔔 **lei_14443** mudou desde 2026-10-14 – usada em mu-laqueadura: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14443.htm
+- 🔔 **lei_fm2025** mudou desde 2026-10-14 – usada em cr-fibromialgia: https://www.cnnbrasil.com.br/saude/fibromialgia-passa-a-ser-reconhecida-por-lei-como-deficiencia-entenda/
+- 🔔 **malaria_bh** mudou desde 2026-10-14 – usada em malaria: https://prefeitura.pbh.gov.br/saude/informacoes/vigilancia/vigilancia-epidemiologica/doencas-transmissiveis/malaria
+- 🔔 **masld2025** mudou desde 2026-10-14 – usada em cr-masld: https://news.gastro.org/issues/2025/september/global-consensus-streamlines-masldmash-care/
+- 🔔 **mec_who2025** mudou desde 2026-10-14 – usada em mu-mec, mu-metodos, pp-contracepcao, pp-guiada: https://www.who.int/publications/i/item/9789240115583
+- 🔔 **ms_drc_enc** mudou desde 2026-10-14 – usada em cr-drc: https://aps-repo.bvs.br/aps/como-realizar-a-avaliacao-inicial-de-um-paciente-hipertenso-e-diabetico-com-suspeita-de-doenca-renal-cronica-2/
+- 🔔 **ofidico** mudou desde 2026-10-14 – usada em acidente-ofidico: https://saude.prefeitura.rio/wp-content/uploads/sites/47/2022/07/FolderOfideos.pdf
+- 🔔 **paes_poptrans** mudou desde 2026-10-14 – usada em po-trans: https://portal.afya.com.br/saude/saude-lanca-programa-de-atencao-a-saude-da-populacao-trans
+- 🔔 **pcdt_apso2026** mudou desde 2026-10-14 – usada em cr-apso: https://www.gov.br/conitec/pt-br/midias/protocolos/pcdt-da-artrite-psoriasica
+- 🔔 **pcdt_dm2** mudou desde 2026-10-14 – usada em cr-dm2, cr-dm2-insulina, cr-glargina, cr-glp1, cr-icfep, cr-polifarmacia: https://www.gov.br/conitec/pt-br/midias/protocolos/2026/pcdt-diabete-melito-tipo-2/@@display-file/file
+- 🔔 **pcdt_ea2018** mudou desde 2026-10-14 – usada em cr-espondilo: https://www.gov.br/saude/pt-br/composicao/saes/doencas-raras/pcdt/aprovados/espondilite-ancilosante
+- 🔔 **pcdt_hcv2026** mudou desde 2026-10-14 – usada em ho-rotina, in-hepatites, pv-checkup, pv-checkup-idoso, pv-infecciosas: https://portal.afya.com.br/infectologia/pcdt-de-hepatite-c-amplia-rastreio-e-simplifica-cuidado
+- 🔔 **pcdt_hiv** mudou desde 2026-10-14 – usada em hiv-diagnostico, in-hiv: https://www.gov.br/conitec/pt-br/midias/protocolos/PCDTManejodaInfecopeloHIVemAdultosMdulo1Tratamento.pdf
+- 🔔 **pcdt_ist22** mudou desde 2026-10-14 – usada em cervicite, condiloma, dip, escroto-agudo, in-ist, pep: https://portaldeboaspraticas.iff.fiocruz.br/biblioteca/pcdt-para-atencao-as-pessoas-com-ist/
+- 🔔 **pcdt_osteo2025** mudou desde 2026-10-14 – usada em cr-osteoporose, pv-checkup, pv-checkup-idoso: https://www.gov.br/conitec/pt-br/midias/relatorios/2025/pcdt-osteoporose.pdf
+- 🔔 **pcdt_pep** mudou desde 2026-10-14 – usada em in-prep, mu-violencia, pep, pv-infecciosas, violencia: https://www.gov.br/conitec/pt-br/midias/protocolos/resumidos/20230208_PCDT_Resumido_PEP_final.pdf
+- 🔔 **pcdt_pso2021** mudou desde 2026-10-14 – usada em cr-psoriase: https://www.gov.br/conitec/pt-br/midias/relatorios/2021/20211021_relatorio_652_pcdt_psoriase.pdf
+- 🔔 **pep_2024** mudou desde 2026-10-14 – usada em in-prep, pep, po-lgbt: https://www.poder360.com.br/poder-saude/ministerio-da-saude-atualiza-recomendacoes-sobre-a-profilaxia-pep/
+- 🔔 **perreault2012** mudou desde 2026-10-14 – usada em cr-prediabetes: https://pace-cme.org/2012/06/11/normal-glucose-regulation-in-prediabetes-associated-with-reduced-risk-for-disease-progression
+- 🔔 **port2561_rev** mudou desde 2026-10-14 – usada em mu-aborto-legal: https://www.jornalopcao.com.br/brasil/ministerio-da-saude-revoga-portaria-que-previa-aviso-a-policia-em-caso-de-aborto-legal-458311/
+- 🔔 **precos_cf2026** mudou desde 2026-10-14 – usada em po-paliativos, po-substancias: https://www.cliquefarma.com.br/preco/naltrexona
+- 🔔 **precos_ger2026** mudou desde 2026-10-14 – usada em cr-alzheimer, cr-inapetencia, cr-parkinson: https://www.cliquefarma.com.br/medicamentos/medicamentos-a-z/cloridrato-de-donepezila-10mg-30-comprimidos-ache-generico
+- 🔔 **sbc_fa2025** mudou desde 2026-10-14 – usada em cr-fa: https://portal.afya.com.br/cardiologia/sbc-2025-nova-diretriz-brasileira-de-fibrilacao-atrial
+- 🔔 **sbd2026_sus** mudou desde 2026-10-14 – usada em cr-dm2, cr-dm2-insulina: https://diretriz.diabetes.org.br/tratamento-do-dm2/
+- 🔔 **sbd_diag2025** mudou desde 2026-10-14 – usada em cr-dm2, cr-prediabetes, hiperglicemia: https://portal.afya.com.br/endocrinologia/sbd-atualiza-diretriz-de-diagnostico-do-diabetes-tipo-2
+- 🔔 **sbd_dispensacao** mudou desde 2026-10-14 – usada em cr-dac, cr-dm2, hiperglicemia: https://diretriz.diabetes.org.br/dispensacao-de-medicamentos-e-insumos-para-o-tratamento-do-diabetes-mellitus-no-sus/
+- 🔔 **sbd_dmg** mudou desde 2026-10-14 – usada em mu-preconcepcional, pn-2tri, pn-dmg, pp-pos-gestacao-risco: https://diretriz.diabetes.org.br/tratamento-farmacologico-do-diabetes-na-gestacao/
+- 🔔 **sbd_idoso2025** mudou desde 2026-10-14 – usada em cr-fragilidade: https://diretriz.diabetes.org.br/o-paciente-idoso-com-diabetes/
+- 🔔 **sbd_pe** mudou desde 2026-10-14 – usada em cr-pe-diabetico: https://doi.org/10.29327/5412848.2024-11
+- 🔔 **sbd_prediab** mudou desde 2026-10-14 – usada em cr-dm2, cr-prediabetes: https://diretriz.diabetes.org.br/tratamento-farmacologico-do-pre-diabetes/
+- 🔔 **sbp_oma** mudou desde 2026-10-14 – usada em oma: https://www.sbp.com.br/pediatria-para-familias/doencas/otite-media/
+- 🔔 **sbu_psa** mudou desde 2026-10-14 – usada em ho-psa: https://portal.afya.com.br/urologia/novembro-azul-o-que-as-diretrizes-recomendam-sobre-o-rastreio-de-cancer-de-prostata
+- 🔔 **toxicologia_mg** mudou desde 2026-10-14 – usada em intoxicacao: https://www.mg.gov.br/servico/solicitar-atendimento-vitimas-de-intoxicacao-quimica-auto-exterminio-envenenamento-ou
+- 🔔 **ulip_bula** mudou desde 2026-10-14 – usada em ae, mu-hormonal: https://bula.com.br/ulip
+- 🔔 **who_ferro** mudou desde 2026-10-14 – usada em pn-1consulta: https://www.who.int/tools/elena/interventions/daily-iron-pregnancy
+
+## Radar (fontes secundárias – só apontam o que conferir na fonte primária)
+
+- Tá de Clinicagem – conteúdos novos: linha de base criada (23 links).
+- Tá de Clinicagem – blog: linha de base criada (12 links).
+- Portal Afya (ex-PEBMED) – artigos: linha de base criada (46 links).

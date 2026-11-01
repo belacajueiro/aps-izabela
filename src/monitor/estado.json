@@ -1,12 +1,12 @@
 {
-"data": "2026-10-14",
+"data": "2026-11-01",
 "paginas": {
 "cmed_precos": {
 "hash": "d508990a846ee1a6",
 "links": [
-"https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/cmed/precos/arquivos/lista_pmc__20261009_115232671.xlsx/@@download/file"
+"https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/cmed/precos/arquivos/lista_pmc__20261009_115232673.xlsx/@@download/file"
 ],
-"tam": 464050
+"tam": 466016
 },
 "fp_elenco": {
 "hash": "24817892bbdf8a16",
@@ -14,11 +14,11 @@
 "tam": 73620
 },
 "fp_pagina": {
-"hash": "9bc3257c7a74e90f",
+"hash": "63aedc8c1708804b",
 "links": [
 "https://www.gov.br/saude/pt-br/composicao/sectics/farmacia-popular/arquivos/elenco-de-medicamentos-e-insumos-pfpb.pdf"
 ],
-"tam": 150971
+"tam": 169144
 },
 "conitec_pcdt": {
 "hash": "7493ed890163ebcd",
@@ -68,6 +68,7 @@
 "https://www.gov.br/conitec/pt-br/canais_atendimento/fale_conosco",
 "https://www.gov.br/conitec/pt-br/centrais-de-conteudo",
 "https://www.gov.br/conitec/pt-br/centrais-de-conteudo/biblioteca-virtual",
+"https://www.gov.br/conitec/pt-br/centrais-de-conteudo/boletim-conitec",
 "https://www.gov.br/conitec/pt-br/centrais-de-conteudo/glossario-conitec",
 "https://www.gov.br/conitec/pt-br/centrais-de-conteudo/imagens-1",
 "https://www.gov.br/conitec/pt-br/centrais-de-conteudo/videos",
@@ -80,11 +81,11 @@
 "https://www.gov.br/conitec/pt-br/protocolos-clinicos-e-diretrizes-terapeuticas/protocolos-clinicos-e-diretrizes-terapeuticas",
 "https://www.gov.br/conitec/pt-br/protocolos-clinicos-e-diretrizes-terapeuticas/protocolos-de-uso",
 "https://www.gov.br/conitec/site.webmanifest",
-"https://www.gov.br/conitec/static/css/client.ef35f764.css",
-"https://www.gov.br/conitec/static/js/client.39c478e1.js",
-"https://www.gov.br/conitec/static/js/runtime~client.6ba753dd.js"
+"https://www.gov.br/conitec/static/css/client.81233072.css",
+"https://www.gov.br/conitec/static/js/client.e8db9d48.js",
+"https://www.gov.br/conitec/static/js/runtime~client.0c606b70.js"
 ],
-"tam": 238741
+"tam": 241246
 },
 "conitec_pcdt_elab": {
 "hash": "ff6b79569e557c76",
@@ -134,6 +135,7 @@
 "https://www.gov.br/conitec/pt-br/canais_atendimento/fale_conosco",
 "https://www.gov.br/conitec/pt-br/centrais-de-conteudo",
 "https://www.gov.br/conitec/pt-br/centrais-de-conteudo/biblioteca-virtual",
+"https://www.gov.br/conitec/pt-br/centrais-de-conteudo/boletim-conitec",
 "https://www.gov.br/conitec/pt-br/centrais-de-conteudo/glossario-conitec",
 "https://www.gov.br/conitec/pt-br/centrais-de-conteudo/imagens-1",
 "https://www.gov.br/conitec/pt-br/centrais-de-conteudo/videos",
@@ -149,18 +151,18 @@
 "https://www.gov.br/conitec/search?origem=keyword&SearchableText=DDT",
 "https://www.gov.br/conitec/search?origem=keyword&SearchableText=PCDT",
 "https://www.gov.br/conitec/site.webmanifest",
-"https://www.gov.br/conitec/static/css/client.ef35f764.css",
-"https://www.gov.br/conitec/static/js/client.39c478e1.js",
-"https://www.gov.br/conitec/static/js/runtime~client.6ba753dd.js"
+"https://www.gov.br/conitec/static/css/client.81233072.css",
+"https://www.gov.br/conitec/static/js/client.e8db9d48.js",
+"https://www.gov.br/conitec/static/js/runtime~client.0c606b70.js"
 ],
-"tam": 250458
+"tam": 252963
 },
 "conitec_recom": {
-"hash": "bf28c58fa93e5500",
+"hash": "b62abad9bc753107",
 "links": [
-"https://www.gov.br/conitec/pt-br/midias/dados-em-excel/recomendacoesdaconitec_20260615.xlsx/@@download/file"
+"https://www.gov.br/conitec/pt-br/midias/dados-em-excel/recomendacoesdaconitec_20261026.xlsx/@@download/file"
 ],
-"tam": 239546
+"tam": 242051
 },
 "conitec_ddt": {
 "hash": "7493ed890163ebcd",
@@ -210,6 +212,7 @@
 "https://www.gov.br/conitec/pt-br/canais_atendimento/fale_conosco",
 "https://www.gov.br/conitec/pt-br/centrais-de-conteudo",
 "https://www.gov.br/conitec/pt-br/centrais-de-conteudo/biblioteca-virtual",
+"https://www.gov.br/conitec/pt-br/centrais-de-conteudo/boletim-conitec",
 "https://www.gov.br/conitec/pt-br/centrais-de-conteudo/glossario-conitec",
 "https://www.gov.br/conitec/pt-br/centrais-de-conteudo/imagens-1",
 "https://www.gov.br/conitec/pt-br/centrais-de-conteudo/videos",
@@ -222,25 +225,21 @@
 "https://www.gov.br/conitec/pt-br/protocolos-clinicos-e-diretrizes-terapeuticas/protocolos-clinicos-e-diretrizes-terapeuticas",
 "https://www.gov.br/conitec/pt-br/protocolos-clinicos-e-diretrizes-terapeuticas/protocolos-de-uso",
 "https://www.gov.br/conitec/site.webmanifest",
-"https://www.gov.br/conitec/static/css/client.ef35f764.css",
-"https://www.gov.br/conitec/static/js/client.39c478e1.js",
-"https://www.gov.br/conitec/static/js/runtime~client.6ba753dd.js"
+"https://www.gov.br/conitec/static/css/client.81233072.css",
+"https://www.gov.br/conitec/static/js/client.e8db9d48.js",
+"https://www.gov.br/conitec/static/js/runtime~client.0c606b70.js"
 ],
-"tam": 238756
+"tam": 241953
 },
 "conitec_cp": {
-"hash": "de1cb69e65b55fda",
+"hash": "1396e8b5bece36da",
 "links": [
 "http://www.facebook.com/sharer.php?u=https://www.gov.br/conitec/pt-br/assuntos/participacao-social/consultas-publicas/vigentes",
 "https://api.whatsapp.com/send?text=https://www.gov.br/conitec/pt-br/assuntos/participacao-social/consultas-publicas/vigentes",
 "https://barra.sistema.gov.br/v1/fonts/rawline/css/rawline.css",
-"https://brasilparticipativo.presidencia.gov.br/processes/consultas-publicas-conitec/f/5684/",
-"https://brasilparticipativo.presidencia.gov.br/processes/consultas-publicas-conitec/f/5685/",
-"https://brasilparticipativo.presidencia.gov.br/processes/consultas-publicas-conitec/f/5686/",
-"https://brasilparticipativo.presidencia.gov.br/processes/consultas-publicas-conitec/f/5687/",
-"https://brasilparticipativo.presidencia.gov.br/processes/consultas-publicas-conitec/f/5713/",
-"https://brasilparticipativo.presidencia.gov.br/processes/consultas-publicas-conitec/f/5812/",
-"https://brasilparticipativo.presidencia.gov.br/processes/consultas-publicas-conitec/f/5813/",
+"https://brasilparticipativo.presidencia.gov.br/processes/consultas-publicas-conitec/f/5940/",
+"https://brasilparticipativo.presidencia.gov.br/processes/consultas-publicas-conitec/f/5941/",
+"https://brasilparticipativo.presidencia.gov.br/processes/consultas-publicas-conitec/f/6023/",
 "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css",
 "https://creativecommons.org/licenses/by-nd/3.0/deed.pt_BR",
 "https://linkedin.com/shareArticle/?url=https://www.gov.br/conitec/pt-br/assuntos/participacao-social/consultas-publicas/vigentes",
@@ -286,34 +285,22 @@
 "https://www.gov.br/conitec/pt-br/canais_atendimento/fale_conosco",
 "https://www.gov.br/conitec/pt-br/centrais-de-conteudo",
 "https://www.gov.br/conitec/pt-br/centrais-de-conteudo/biblioteca-virtual",
+"https://www.gov.br/conitec/pt-br/centrais-de-conteudo/boletim-conitec",
 "https://www.gov.br/conitec/pt-br/centrais-de-conteudo/glossario-conitec",
 "https://www.gov.br/conitec/pt-br/centrais-de-conteudo/imagens-1",
 "https://www.gov.br/conitec/pt-br/centrais-de-conteudo/videos",
 "https://www.gov.br/conitec/pt-br/judicializacao",
-"https://www.gov.br/conitec/pt-br/midias/consultas/2026/consulta-publica-sctie-ms-no-100-de-28-de-setembro-de-2026.pdf/@@display-file/file",
-"https://www.gov.br/conitec/pt-br/midias/consultas/2026/consulta-publica-sctie-ms-no-101-de-28-de-setembro-de-2026.pdf/@@display-file/file",
-"https://www.gov.br/conitec/pt-br/midias/consultas/2026/consulta-publica-sctie-ms-no-103-de-2-de-outubro-de-2026.pdf/@@display-file/file",
-"https://www.gov.br/conitec/pt-br/midias/consultas/2026/consulta-publica-sctie-ms-no-104-de-2-de-outubro-de-2026.pdf/@@display-file/file",
-"https://www.gov.br/conitec/pt-br/midias/consultas/2026/consulta-publica-sctie-ms-no-97-de-28-de-setembro-de-2026.pdf/@@display-file/file",
-"https://www.gov.br/conitec/pt-br/midias/consultas/2026/consulta-publica-sctie-ms-no-98-de-28-de-setembro-de-2026.pdf/@@display-file/file",
-"https://www.gov.br/conitec/pt-br/midias/consultas/2026/consulta-publica-sctie-ms-no-99-de-28-de-setembro-de-2026.pdf/@@display-file/file",
-"https://www.gov.br/conitec/pt-br/midias/consultas/dossie/2026/dossie-empresa-cp-101.pdf/@@display-file/file",
-"https://www.gov.br/conitec/pt-br/midias/consultas/dossie/2026/dossie-empresa-cp-103.pdf/@@display-file/file",
-"https://www.gov.br/conitec/pt-br/midias/consultas/dossie/2026/dossie-empresa-cp-104.pdf/@@display-file/file",
-"https://www.gov.br/conitec/pt-br/midias/consultas/dossie/2026/dossie-empresa-cp-97.pdf/@@display-file/file",
-"https://www.gov.br/conitec/pt-br/midias/consultas/dossie/2026/dossie-empresa-cp-99.pdf/@@display-file/file",
-"https://www.gov.br/conitec/pt-br/midias/consultas/relatorios/2026/relatorio-preliminar-dostarlimabe-cancer-do-endometrio-primario-avancado-cp-104.pdf/@@display-file/file",
-"https://www.gov.br/conitec/pt-br/midias/consultas/relatorios/2026/relatorio-preliminar-omaveloxolona-cp-101.pdf/@@display-file/file",
-"https://www.gov.br/conitec/pt-br/midias/consultas/relatorios/2026/relatorio-preliminar-pcdt-do-cancer-de-pulmao-cp-100.pdf/@@display-file/file",
-"https://www.gov.br/conitec/pt-br/midias/consultas/relatorios/2026/relatorio-preliminar-pcdt-hepatite-b-e-coinfeccoes-cp-98.pdf/@@display-file/file",
-"https://www.gov.br/conitec/pt-br/midias/consultas/relatorios/2026/relatorio-preliminar-pcr-multiplex-rapido-cp-99.pdf/@@display-file/file",
-"https://www.gov.br/conitec/pt-br/midias/consultas/relatorios/2026/relatorio-preliminar-risedronato-sodico-cp-97.pdf/@@display-file/file",
-"https://www.gov.br/conitec/pt-br/midias/consultas/relatorios/2026/relatorio-preliminar-vutrisirana-sodica-cp-103.pdf/@@display-file/file",
-"https://www.gov.br/conitec/pt-br/midias/consultas/relatorios/2026/sociedade/elatorio-para-sociedade-no-758-vutrisirana-amiloidose-estagioii-1.pdf/@@display-file/file",
-"https://www.gov.br/conitec/pt-br/midias/consultas/relatorios/2026/sociedade/elatorio-para-sociedade-no-759-dostarlimabe-cancer-endometrio.pdf/@@display-file/file",
-"https://www.gov.br/conitec/pt-br/midias/consultas/relatorios/2026/sociedade/relatorio-para-sociedade-n-755-risedronato-osteoporose.pdf/@@display-file/file",
-"https://www.gov.br/conitec/pt-br/midias/consultas/relatorios/2026/sociedade/relatorio-para-sociedade-n-756-pcr.pdf/@@display-file/file",
-"https://www.gov.br/conitec/pt-br/midias/consultas/relatorios/2026/sociedade/relatorio-para-sociedade-no-757-omaveloxolona.pdf/@@display-file/file",
+"https://www.gov.br/conitec/pt-br/midias/consultas/2026/consulta-publica-sctie-ms-no-105-de-20-de-outubro-de-2026.pdf/@@display-file/file",
+"https://www.gov.br/conitec/pt-br/midias/consultas/2026/consulta-publica-sctie-ms-no-106-de-20-de-outubro-de-2026.pdf/@@display-file/file",
+"https://www.gov.br/conitec/pt-br/midias/consultas/2026/consulta-publica-sctie-ms-no-107-de-27-de-outubro-de-2026.pdf/@@display-file/file",
+"https://www.gov.br/conitec/pt-br/midias/consultas/dossie/2026/dossie-cp-105-riociguate.pdf/@@display-file/file",
+"https://www.gov.br/conitec/pt-br/midias/consultas/dossie/2026/dossie-vutrisirana-cp-107.pdf/@@display-file/file",
+"https://www.gov.br/conitec/pt-br/midias/consultas/relatorios/2026/relatorio-preliminar-riociguate-cp-105.pdf/@@display-file/file",
+"https://www.gov.br/conitec/pt-br/midias/consultas/relatorios/2026/relatorio-preliminar-transplante-alogenico-de-celulas-tronco-hematopoieticas-cp-106.pdf/@@display-file/file",
+"https://www.gov.br/conitec/pt-br/midias/consultas/relatorios/2026/relatorio-preliminar-vutrisirana-sodica-estagio-i-cp-107.pdf/@@display-file/file",
+"https://www.gov.br/conitec/pt-br/midias/consultas/relatorios/2026/sociedade/relatorio-para-sociedade-no-760-riociguate-hptec.pdf/@@display-file/file",
+"https://www.gov.br/conitec/pt-br/midias/consultas/relatorios/2026/sociedade/relatorio-para-sociedade-no-761-tcth-linfoma-hodgkin.pdf/@@display-file/file",
+"https://www.gov.br/conitec/pt-br/midias/consultas/relatorios/2026/sociedade/relatorio-para-sociedade-no-762-vutrisirana-amiloidose-estagioi.pdf/@@display-file/file",
 "https://www.gov.br/conitec/pt-br/protocolos-clinicos-e-diretrizes-terapeuticas",
 "https://www.gov.br/conitec/pt-br/protocolos-clinicos-e-diretrizes-terapeuticas/ddt",
 "https://www.gov.br/conitec/pt-br/protocolos-clinicos-e-diretrizes-terapeuticas/diretrizes-nacionais-brasileiras",
@@ -322,18 +309,19 @@
 "https://www.gov.br/conitec/pt-br/protocolos-clinicos-e-diretrizes-terapeuticas/protocolos-clinicos-e-diretrizes-terapeuticas",
 "https://www.gov.br/conitec/pt-br/protocolos-clinicos-e-diretrizes-terapeuticas/protocolos-de-uso",
 "https://www.gov.br/conitec/site.webmanifest",
-"https://www.gov.br/conitec/static/css/client.ef35f764.css",
-"https://www.gov.br/conitec/static/js/client.39c478e1.js",
-"https://www.gov.br/conitec/static/js/runtime~client.6ba753dd.js"
+"https://www.gov.br/conitec/static/css/client.81233072.css",
+"https://www.gov.br/conitec/static/js/client.e8db9d48.js",
+"https://www.gov.br/conitec/static/js/runtime~client.0c606b70.js"
 ],
-"tam": 307578
+"tam": 278226
 },
 "ms_notas": {
-"hash": "75fd8c1d182f87f8",
+"hash": "4aeb8c77a76dce69",
 "links": [
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/anexo-da-nota-tecnica-no-62-2026.xlsx/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-informativa-no-2-2025-cglab-svsa-ms.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-105-2026-saes-anvisa-conasems.pdf/view",
+"https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-106-2026-saes-anvisa-conasems.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-110-2026-cocani-cgcan-decan-saes-ms.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-111-2026-daf-sctie-saps-e-conasems.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-116-2026-dpni-svsa-ms.pdf/view",
@@ -352,6 +340,7 @@
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-236.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-244-2025-depros-saps-ms.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-255-2026-coae-cgesco-desf-saps-ms.pdf/view",
+"https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-256-2026.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-270-2026.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-276-uso-acido-tranexamico.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-304.pdf/view",
@@ -361,9 +350,12 @@
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-32-2026-depros-saps-daet-saes-ms.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-324-2026-cgvdi-dpni-svsa-ms.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-325-2026-covisi-cggas-dapsi-sesai-ms.pdf/view",
+"https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-329.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-335-2026.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-34-2026-cgvdi-dpni-svsa-ms.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-35-2026-cggi-cgici-dpni-cgzha-dedt-svsa-ms-e-cgzha-dedt-svsa-ms.pdf/view",
+"https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-3542026.pdf/view",
+"https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-360-2026-dgci-desf-depros-saps-ms.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-361-2026.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-407-2025-cgici-dpni-svsa-ms.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-43-2026-saps-saes-svsa-ms.pdf/view",
@@ -377,6 +369,7 @@
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-74-2026-cgfam-cgici-ngi-dpni-svsa-ms.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-87-2026-svsa-saps-saes-sesai-ms.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-99-2026-cocip-copid-dgci-saps-ms.pdf/view",
+"https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-01-2026-svsa.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-02-2026-cgspd-daet-saes-ms.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-1-2026-cggi-dpni-svsa-ms.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-1-2026-cgma-demas-seidigi-ms.pdf/view",
@@ -389,6 +382,7 @@
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-11-2026.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-12-2026-cgadom-dahud-saes-ms.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-12-2026-deaps-saps-ms.pdf/view",
+"https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-12-2026.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-124-2026-dahud-saes-ms.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-13-2026.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-14-2026-cgici-dpni-svsa-ms.pdf/view",
@@ -430,6 +424,7 @@
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-46-2026-cgvdi-dpni-svsa-ms.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-47-2026-cgici-dpni-svsa-ms.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-47-2026-dahud-saes-ms.pdf/view",
+"https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-47-2026.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-49-2026.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-5-2026-cgcovid-dedt-svsa-ms.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-5-2026-cgici-dpni-svsa-ms.pdf/view",
@@ -478,10 +473,10 @@
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-98-2026.pdf/view",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-99-2026-dahud-saes-ms.pdf/view"
 ],
-"tam": 898934
+"tam": 1031329
 },
 "ms_calendario": {
-"hash": "5a4e95cab2dde4aa",
+"hash": "f7e37b28c972e557",
 "links": [
 "https://www.gov.br/saude/pt-br/vacinacao/arquivos/calendario-nacional-de-vacinacao-adolescentes-jovens",
 "https://www.gov.br/saude/pt-br/vacinacao/arquivos/calendario-nacional-de-vacinacao-adulto",
@@ -489,10 +484,10 @@
 "https://www.gov.br/saude/pt-br/vacinacao/arquivos/calendario-nacional-de-vacinacao-gestante",
 "https://www.gov.br/saude/pt-br/vacinacao/arquivos/calendario-nacional-de-vacinacao-idoso"
 ],
-"tam": 244713
+"tam": 268379
 },
 "rename": {
-"hash": "885908fc079890bc",
+"hash": "2c649a6258e14d1e",
 "links": [
 "http://ads.saude.gov.br/servlet/mstrWeb?Server=SRVBIPDF03&Project=DMBnafar&Port=0&evt=3140&src=mstrWeb.3140&documentID=642B02B14CCFA8D7D876F3A50C77313B&uid=publico_bnafar&pwd=Bn@f@r$2077",
 "http://conselho.saude.gov.br/",
@@ -506,6 +501,7 @@
 "https://soundcloud.com/min_saude",
 "https://www.facebook.com/minsaude",
 "https://www.flickr.com/ministeriodasaude/albums",
+"https://www.flickr.com/photos/ministeriodasaude/albums",
 "https://www.gov.br/",
 "https://www.gov.br/acessoainformacao/pt-br",
 "https://www.gov.br/conitec/pt-br",
@@ -526,6 +522,25 @@
 "https://www.gov.br/pt-br/guia-de-edicao-de-servicos-do-gov.br/bem-vindo-editor",
 "https://www.gov.br/pt-br/navegacao",
 "https://www.gov.br/pt-br/noticias",
+"https://www.gov.br/pt-br/noticias/agricultura-e-pecuaria",
+"https://www.gov.br/pt-br/noticias/assistencia-social",
+"https://www.gov.br/pt-br/noticias/ciencia-e-tecnologia",
+"https://www.gov.br/pt-br/noticias/comunicacao",
+"https://www.gov.br/pt-br/noticias/cultura-artes-historia-e-esportes",
+"https://www.gov.br/pt-br/noticias/educacao-e-pesquisa",
+"https://www.gov.br/pt-br/noticias/energia-minerais-e-combustiveis",
+"https://www.gov.br/pt-br/noticias/financas-impostos-e-gestao-publica",
+"https://www.gov.br/pt-br/noticias/forcas-armadas",
+"https://www.gov.br/pt-br/noticias/justica-e-seguranca",
+"https://www.gov.br/pt-br/noticias/meio-ambiente-e-clima",
+"https://www.gov.br/pt-br/noticias/saude-e-vigilancia-sanitaria",
+"https://www.gov.br/pt-br/noticias/trabalho-e-previdencia",
+"https://www.gov.br/pt-br/noticias/trabalho-e-previdencia/direitos-do-trabalhador",
+"https://www.gov.br/pt-br/noticias/trabalho-e-previdencia/fgts",
+"https://www.gov.br/pt-br/noticias/transito-e-transportes",
+"https://www.gov.br/pt-br/noticias/viagens-e-turismo",
+"https://www.gov.br/pt-br/noticias/viagens-e-turismo/direitos-do-viajante",
+"https://www.gov.br/pt-br/noticias/viagens-e-turismo/viaje-o-brasil",
 "https://www.gov.br/pt-br/orgaos-do-governo",
 "https://www.gov.br/pt-br/orgaos/ministerio-da-saude",
 "https://www.gov.br/pt-br/participacao-social",
@@ -569,7 +584,7 @@
 "https://www.gov.br/saude/++theme++padrao_govbr/favicons/favicon-32x32.png",
 "https://www.gov.br/saude/++theme++padrao_govbr/favicons/favicon-48x48.png",
 "https://www.gov.br/saude/++theme++padrao_govbr/favicons/safari-pinned-tab.svg",
-"https://www.gov.br/saude/++theme++padrao_govbr/govbrtheme-37d29fa.css",
+"https://www.gov.br/saude/++theme++padrao_govbr/govbrtheme-1b543ca.css",
 "https://www.gov.br/saude/portal_css/Sunburst%20Theme/IEFixes-cachekey-4f26c9988135cdb1b979fb2d49c060e8.css",
 "https://www.gov.br/saude/portal_css/Sunburst%20Theme/base-cachekey-35d7c070cb8b5065511c8867c3e6b340.css",
 "https://www.gov.br/saude/portal_css/Sunburst%20Theme/embedder-cachekey-6a9478783d6868567b28742c773a75c9.css",
@@ -642,8 +657,35 @@
 "https://www.gov.br/saude/pt-br/acesso-a-informacao/transparencia-e-prestacao-de-contas",
 "https://www.gov.br/saude/pt-br/assuntos",
 "https://www.gov.br/saude/pt-br/assuntos/brasil-saudavel",
-"https://www.gov.br/saude/pt-br/assuntos/noticias-ms",
-"https://www.gov.br/saude/pt-br/assuntos/noticias-ms/noticias-para-os-estados",
+"https://www.gov.br/saude/pt-br/assuntos/noticias",
+"https://www.gov.br/saude/pt-br/assuntos/noticias-para-os-estados",
+"https://www.gov.br/saude/pt-br/assuntos/noticias-para-os-estados/acre",
+"https://www.gov.br/saude/pt-br/assuntos/noticias-para-os-estados/alagoas",
+"https://www.gov.br/saude/pt-br/assuntos/noticias-para-os-estados/amapa",
+"https://www.gov.br/saude/pt-br/assuntos/noticias-para-os-estados/amazonas",
+"https://www.gov.br/saude/pt-br/assuntos/noticias-para-os-estados/bahia",
+"https://www.gov.br/saude/pt-br/assuntos/noticias-para-os-estados/ceara",
+"https://www.gov.br/saude/pt-br/assuntos/noticias-para-os-estados/distrito-federal",
+"https://www.gov.br/saude/pt-br/assuntos/noticias-para-os-estados/espirito-santo",
+"https://www.gov.br/saude/pt-br/assuntos/noticias-para-os-estados/goias",
+"https://www.gov.br/saude/pt-br/assuntos/noticias-para-os-estados/maranhao",
+"https://www.gov.br/saude/pt-br/assuntos/noticias-para-os-estados/mato-grosso",
+"https://www.gov.br/saude/pt-br/assuntos/noticias-para-os-estados/mato-grosso-do-sul",
+"https://www.gov.br/saude/pt-br/assuntos/noticias-para-os-estados/minas-gerais",
+"https://www.gov.br/saude/pt-br/assuntos/noticias-para-os-estados/para",
+"https://www.gov.br/saude/pt-br/assuntos/noticias-para-os-estados/paraiba",
+"https://www.gov.br/saude/pt-br/assuntos/noticias-para-os-estados/parana",
+"https://www.gov.br/saude/pt-br/assuntos/noticias-para-os-estados/pernambuco",
+"https://www.gov.br/saude/pt-br/assuntos/noticias-para-os-estados/piaui",
+"https://www.gov.br/saude/pt-br/assuntos/noticias-para-os-estados/rio-de-janeiro",
+"https://www.gov.br/saude/pt-br/assuntos/noticias-para-os-estados/rio-grande-do-norte",
+"https://www.gov.br/saude/pt-br/assuntos/noticias-para-os-estados/rio-grande-do-sul",
+"https://www.gov.br/saude/pt-br/assuntos/noticias-para-os-estados/rondonia",
+"https://www.gov.br/saude/pt-br/assuntos/noticias-para-os-estados/roraima",
+"https://www.gov.br/saude/pt-br/assuntos/noticias-para-os-estados/santa-catarina",
+"https://www.gov.br/saude/pt-br/assuntos/noticias-para-os-estados/sao-paulo",
+"https://www.gov.br/saude/pt-br/assuntos/noticias-para-os-estados/sergipe",
+"https://www.gov.br/saude/pt-br/assuntos/noticias-para-os-estados/tocantins",
 "https://www.gov.br/saude/pt-br/assuntos/novo-pac-saude",
 "https://www.gov.br/saude/pt-br/assuntos/pcdt",
 "https://www.gov.br/saude/pt-br/assuntos/saude-com-ciencia",
@@ -675,14 +717,17 @@
 "https://www.gov.br/saude/pt-br/canais-de-atendimento/ouvsus",
 "https://www.gov.br/saude/pt-br/canais-de-atendimento/sala-de-imprensa",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo",
-"https://www.gov.br/saude/pt-br/centrais-de-conteudo/apresentacao",
+"https://www.gov.br/saude/pt-br/centrais-de-conteudo/apresentacoes",
+"https://www.gov.br/saude/pt-br/centrais-de-conteudo/manual-de-marcas",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/boletins",
+"https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/cartilhas",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/estudos-e-notas-informativas",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/guias-e-manuais",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/relatorios",
 "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/svsa",
+"https://www.gov.br/saude/pt-br/centrais-de-conteudo/uso-da-marca-do-ms",
 "https://www.gov.br/saude/pt-br/composicao",
 "https://www.gov.br/saude/pt-br/composicao/conjur",
 "https://www.gov.br/saude/pt-br/composicao/denasus",
@@ -706,8 +751,8 @@
 "https://www.gov.br/saude/pt-br/se",
 "https://www.gov.br/saude/pt-br/search?origem=termos&SearchableText=Desenrola Brasil",
 "https://www.gov.br/saude/pt-br/search?origem=termos&SearchableText=assinatura",
+"https://www.gov.br/saude/pt-br/search?origem=termos&SearchableText=enem",
 "https://www.gov.br/saude/pt-br/search?origem=termos&SearchableText=imposto de renda",
-"https://www.gov.br/saude/pt-br/search?origem=termos&SearchableText=inss",
 "https://www.gov.br/saude/pt-br/search?origem=termos&SearchableText=mei",
 "https://www.gov.br/saude/pt-br/sus",
 "https://www.gov.br/saude/pt-br/vacinacao",
@@ -722,26 +767,27 @@
 "https://www.youtube.com/minsaudebr",
 "tel://136"
 ],
-"tam": 129010
+"tam": 147183
 },
 "gina": {
-"hash": "abe4f2fa613a4c0e",
+"hash": "40112d7623866473",
 "links": [
 "https://ginasthma.org/2026-gina-severe-asthma-guide/",
 "https://ginasthma.org/2026-gina-slide-sets/",
+"https://ginasthma.org/2026-gina-strategy-report-executive-summary-published/",
 "https://ginasthma.org/2026-gina-strategy-report/",
 "https://ginasthma.org/2026-gina-summary-guide/"
 ],
-"tam": 86692
+"tam": 90380
 },
 "gold": {
-"hash": "abe9eb28e1e12fac",
+"hash": "e15b128cdd2ea8d8",
 "links": [
 "https://goldcopd.org/wp-content/uploads/2025/11/KEY-CHANGES-GOLD-2026-10Nov2025.pdf",
 "https://goldcopd.org/wp-content/uploads/2026/01/GOLD-Pocket-Guide-2026-v1.1-20Nov2025_WMV2.pdf",
 "https://goldcopd.org/wp-content/uploads/2026/01/GOLD-REPORT-2026-v1.3-8Dec2025_WMV2.pdf"
 ],
-"tam": 62061
+"tam": 61989
 },
 "sbd": {
 "hash": "109c135818a648a7",
@@ -858,7 +904,7 @@
 "https://www.mdcalc.com/calc/91/serum-osmolality-osmolarity",
 "https://www.openevidence.com/"
 ],
-"tam": 248603
+"tam": 247232
 },
 "kdigo": {
 "hash": "fcfa194673964efe",
@@ -900,35 +946,132 @@
 "https://kdigo.org/guidelines/transplant-recipient/",
 "https://kdigo.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fkdigo.org%2Fguidelines%2F"
 ],
-"tam": 84168
+"tam": 84332
 },
 "betim": {
-"hash": "fa1e765833a47527",
-"links": [],
-"tam": 414056
+"hash": "417222b6b576fd58",
+"links": [
+"https://www.betim.mg.gov.br/portal/secretarias-paginas/89/unidades-basicas-de-saude"
+],
+"tam": 431239
 },
 "sesmg": {
-"hash": "1aed9fe34c86fcf0",
+"hash": "ab377dd3f6ddb72d",
 "links": [
 "https://www.saude.mg.gov.br/wp-content/uploads/2026/08/Protocolo_TAVI_SES_MG.pdf.pdf"
 ],
-"tam": 548590
+"tam": 552045
+},
+"tdc_home": {
+"hash": "67d07b50473c4f4b",
+"links": [
+"https://www.tadeclinicagem.com.br/content/instagram/choque-septico-cirrose-hepatica-qual-a-meta-de-pam-veja-o-video-completo-no-yt-do-tdc-bismuto-para-h-pylori-falha-de-extubacao-e-trombocitemia-imune-t/",
+"https://www.tadeclinicagem.com.br/content/instagram/pergunta-clinica-direto-do-guiatdc-leia-o-topico-completo-gratis-no-guiatdc-ao-se-cadstrar-no-link-da-bio-2/",
+"https://www.tadeclinicagem.com.br/content/instagram/saaaaiiiiuuuuu-novo-episodio-do-tdc-diretamente-do-guia-com-a-nova-definicao-de-infarto-agudo-do-miocardio-confere-no-seu-tocador-de-podcast-favorito/",
+"https://www.tadeclinicagem.com.br/content/podcast/plano/",
+"https://www.tadeclinicagem.com.br/content/podcast/tdc-357-analogos-de-glp-1-na-pratica-4-clinicagens/",
+"https://www.tadeclinicagem.com.br/content/podcast/tdc-358-nova-definicao-de-infarto-agudo-do-miocardio/",
+"https://www.tadeclinicagem.com.br/content/podcast/tdc-a-beira-leito-04-esse-paciente-tem-cirrose/",
+"https://www.tadeclinicagem.com.br/content/youtube/a-medicina-pela-literatura-alucinacoes-musicais-oliver-sacks-da-nossa-estante-3/",
+"https://www.tadeclinicagem.com.br/content/youtube/como-otimizar-antihipertensivo-ajuste-de-insulina-e-exames-desnecessarios-tdc-responde/",
+"https://www.tadeclinicagem.com.br/content/youtube/quais-problemas-o-uso-da-ia-pode-trazer-para-o-aprendizado-na-medicina/",
+"https://www.tadeclinicagem.com.br/guia/calculadoras/",
+"https://www.tadeclinicagem.com.br/guia/casos/",
+"https://www.tadeclinicagem.com.br/guia/colecoes/",
+"https://www.tadeclinicagem.com.br/guia/edition/",
+"https://www.tadeclinicagem.com.br/guia/editorial-context/",
+"https://www.tadeclinicagem.com.br/guia/faq/",
+"https://www.tadeclinicagem.com.br/guia/favoritos/",
+"https://www.tadeclinicagem.com.br/guia/feed/",
+"https://www.tadeclinicagem.com.br/guia/flashcard/",
+"https://www.tadeclinicagem.com.br/guia/fluxogramas/",
+"https://www.tadeclinicagem.com.br/guia/glossario/",
+"https://www.tadeclinicagem.com.br/guia/landing/",
+"https://www.tadeclinicagem.com.br/guia/revisoes/"
+],
+"tam": 104492
+},
+"tdc_blog": {
+"hash": "25319833bfce850b",
+"links": [
+"https://www.tadeclinicagem.com.br/blog/antibioticos-inalatorios-quando-e-por-que-prescrever/",
+"https://www.tadeclinicagem.com.br/blog/causas-e-diagnostico-de-hipercalcemia-o-que-voce-precisa-saber/",
+"https://www.tadeclinicagem.com.br/blog/como-utilizar-na-avaliacao-de-tontura-persistente/",
+"https://www.tadeclinicagem.com.br/blog/conheca-as-principais-bacterias-multirresistentes/",
+"https://www.tadeclinicagem.com.br/blog/dor-toracica-e-dispneia-no-paciente-falciforme-abordagem-clinica/",
+"https://www.tadeclinicagem.com.br/blog/entenda-as-diferencas-entre-igra-e-ppd-no-diagnostico-de-tuberculose-latente/",
+"https://www.tadeclinicagem.com.br/blog/estatina-para-dac-sempre-necessaria-de-alta-potencia/",
+"https://www.tadeclinicagem.com.br/blog/febre-de-origem-central-causas-e-diagnostico-em-neurocriticos/",
+"https://www.tadeclinicagem.com.br/blog/fratura-atipica-de-femur-em-pacientes-com-osteoporose/",
+"https://www.tadeclinicagem.com.br/blog/interacoes-medicamentosas-com-varfarina-o-que-saber/",
+"https://www.tadeclinicagem.com.br/blog/manejo-de-paciente-com-pneumonia-recorrente-abordagem-clinica/",
+"https://www.tadeclinicagem.com.br/blog/sindrome-neuroleptica-entenda-os-sintomas-e-tratamentos/"
+],
+"tam": 143815
+},
+"afya_portal": {
+"hash": "19517522c3ce1226",
+"links": [
+"https://portal.afya.com.br/anestesiologia/exposicao-a-anestesia-geral-e-o-declinio-cognitivo",
+"https://portal.afya.com.br/cardiologia/acc-orienta-a-prescricao-de-exercicio-na-prevencao-cardiaca-primaria-e-secundaria",
+"https://portal.afya.com.br/cardiologia/estudo-associa-controle-da-hipertensao-a-menos-internacoes-por-avcs",
+"https://portal.afya.com.br/cardiologia/o-que-ha-de-novidade-no-cha-2-ds-2--va",
+"https://portal.afya.com.br/cardiologia/sbc-2025-nova-diretriz-brasileira-de-dislipidemias",
+"https://portal.afya.com.br/cardiologia/sem-supra-st-mas-com-coronaria-ocluida-estudo-testa-ia-no-ecg",
+"https://portal.afya.com.br/cardiologia/suporte-circulatorio-mecanico-nao-melhora-desfechos-na-icp-complexa-de-alto-risco",
+"https://portal.afya.com.br/cardiologia/vitamina-b12-tres-clinicagens-medicas-que-todo-profissional-deve-conhecer",
+"https://portal.afya.com.br/carreira/calendario-de-residencia-medica-2025-2026",
+"https://portal.afya.com.br/cirurgia/dobesilato-calcio-doenca-venosa-cronica",
+"https://portal.afya.com.br/colunistas/vitor-henrique-de-oliveira",
+"https://portal.afya.com.br/endocrinologia/5-novas-canetas-de-glp-1-ganham-registro-para-diabetes-e-obesidade",
+"https://portal.afya.com.br/endocrinologia/casos-de-anorexia-e-bulimia-crescem-e-ampliam-desafio-diagnostico",
+"https://portal.afya.com.br/endocrinologia/deficiencia-de-vitamina-b12-em-pacientes-em-uso-de-agonistas-do-receptor-de-glp-1",
+"https://portal.afya.com.br/endocrinologia/instituto-afya-qual-a-relacao-entre-obesidade-e-cancer-de-mama",
+"https://portal.afya.com.br/endocrinologia/pros-e-contras-da-tibolona-na-menopausa",
+"https://portal.afya.com.br/endocrinologia/retatrutida-supera-semaglutida-no-controle-glicemico-em-estudo-de-fase-3",
+"https://portal.afya.com.br/endocrinologia/retinopatia-diabetica-no-brasil-prevalencia-evidencias-cientificas-e-manejo",
+"https://portal.afya.com.br/endocrinologia/uso-da-testosterona-na-mulher",
+"https://portal.afya.com.br/especialidades/ginecologia-e-obstetricia",
+"https://portal.afya.com.br/ginecologia-e-obstetricia/entidades-medicas-divulgam-orientacoes-para-pedidos-de-mamografia-digital",
+"https://portal.afya.com.br/ginecologia-e-obstetricia/estrogenio-e-menopausa-o-que-as-evidencias-mostram-sobre-vida-sexual",
+"https://portal.afya.com.br/ginecologia-e-obstetricia/ferro-intravenoso-na-anemia-gestacional-eficacia-clinica",
+"https://portal.afya.com.br/ginecologia-e-obstetricia/sintomas-de-menopausa-acog-atualiza-diretriz-clinica",
+"https://portal.afya.com.br/neurologia/alem-do-esquecimento-sinais-de-comprometimento-cognitivo-na-consulta-de-rotina",
+"https://portal.afya.com.br/oncologia/vacina-experimental-contra-cancer-de-pancreas-ativa-celulas-t-em-989",
+"https://portal.afya.com.br/pediatria/aap-2026-puericultura",
+"https://portal.afya.com.br/pediatria/cfm-reforca-vacinacao-com-avanco-do-sarampo-nas-americas",
+"https://portal.afya.com.br/pediatria/consumo-de-frutas-e-bebidas-acucaradas-e-associado-a-saude-mental-de-adolescentes",
+"https://portal.afya.com.br/pediatria/criancas-e-adolescentes-com-tdah-criterios-de-transicao-para-nao-estimulantes",
+"https://portal.afya.com.br/pediatria/estudo-associa-dieta-na-gestacao-a-colica-com-eczema-em-bebes",
+"https://portal.afya.com.br/pediatria/impacto-psicossocial-da-sindrome-de-dravet-na-familia",
+"https://portal.afya.com.br/pediatria/o-uso-de-ivermectina-em-criancas-e-recomendado-entenda",
+"https://portal.afya.com.br/psiquiatria/afya-participa-do-xliii-congresso-brasileiro-de-psiquiatria",
+"https://portal.afya.com.br/psiquiatria/algoritmos-das-redes-sociais-podem-intensificar-sofrimento-emocional",
+"https://portal.afya.com.br/psiquiatria/saude-mental-no-brasil-revela-diferencas-importantes-entre-faixas-etarias",
+"https://portal.afya.com.br/psiquiatria/tdah-mortalidade-e-tratamento-o-que-revela-nova-metanalise-publicada-no-jama",
+"https://portal.afya.com.br/saude/anvisa-aprova-risdiplam-em-comprimido-para-tratar-ame-5q",
+"https://portal.afya.com.br/saude/bronquiolite-anvisa-amplia-vacinacao-para-adultos-a-partir-de-18-anos",
+"https://portal.afya.com.br/terapia-intensiva/hidrocortisona-no-choque-septico-o-que-muda-com-a-associacao-de-fludrocortisona",
+"https://portal.afya.com.br/terapia-intensiva/protocolo-vexus-acuracia-diagnostica-e-prognostico-em-pacientes-graves",
+"https://portal.afya.com.br/terapia-intensiva/sepse-fungica-em-pacientes-sem-neutropenia-diretrizes-para-locais-de-menor-renda",
+"https://portal.afya.com.br/terapia-intensiva/ultrassom-pode-ajudar-na-decisao-de-decanulacao-da-traqueostomia",
+"https://portal.afya.com.br/videos/ginecologia-e-obstetricia/anvisa-amplia-para-cinco-anos-o-uso-do-implante-contraceptivo-implanon-nxt",
+"https://portal.afya.com.br/videos/ginecologia-e-obstetricia/infertilidade-feminina-quando-investigar-e-como-conduzir-no-consultorio",
+"https://portal.afya.com.br/videos/ginecologia-e-obstetricia/teste-dna-hpv-aponta-hpv-oncogenico-em-9-904-amostras-do-sus"
+],
+"tam": 468401
 }
 },
 "fontes": {
 "ms_dengue": {
-"st": 404,
-"etag": "",
-"lm": "",
-"tam": "",
-"url": "https://portaldeboaspraticas.iff.fiocruz.br/wp-content/uploads/2024/02/dengue-manejo-clinico.pdf"
+"st": 200,
+"h": "382dd09986d21a79",
+"url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/svsa/dengue/dengue-diagnostico-e-manejo-clinico-adulto-e-crianca"
 },
 "nt_raiva": {
-"st": 404,
-"etag": "",
-"lm": "",
-"tam": "",
-"url": "https://familia.sbim.org.br/images/files/notas-tecnicas/cgzv-deidt-svs-ms-protocoloraiva-100322.pdf"
+"st": 200,
+"h": "55b165b3a0ff2630",
+"url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/r/raiva/notas-tecnicas-e-informativas/nota-tecnica-no-8-2022-cgzv-deidt-svs-ms"
 },
 "rename": {
 "st": 0,
@@ -947,7 +1090,7 @@
 },
 "sbp_oma": {
 "st": 200,
-"h": "2ef39796c70b1428",
+"h": "16cbc4dac9847a6c",
 "url": "https://www.sbp.com.br/pediatria-para-familias/doencas/otite-media/"
 },
 "nice_lombar": {
@@ -960,7 +1103,7 @@
 "ulip_bula": {
 "st": 200,
 "etag": "",
-"lm": "Wed, 14 Oct 2026 22:41:27 GMT",
+"lm": "Sun, 01 Nov 2026 10:57:05 GMT",
 "tam": "",
 "url": "https://bula.com.br/ulip"
 },
@@ -972,15 +1115,14 @@
 "url": "https://prefeitura.sp.gov.br/documents/d/saude/nota-tecnica-n-02-2025-orientacoes-sobre-o-uso-e-registro-de-dispensacao-de-benzilpenicilina-benzatina-1-200-000-ui-no-tratamento-da-sifilis-pdf"
 },
 "bvs_herpes": {
-"st": 200,
-"h": "1acf41d1aaca2da3",
+"st": 0,
 "url": "https://aps-repo.bvs.br/aps/qual-a-conduta-para-lesoes-herpeticas-genitais-na-gestacao-no-caso-de-primoinfeccao-ou-recidivante/"
 },
 "pcdt_ist22": {
 "st": 200,
-"etag": "\"10436-65dd4a72b420e\"",
-"lm": "Wed, 14 Oct 2026 22:42:59 GMT",
-"tam": "66614",
+"etag": "\"10823-65f3391090fe0\"",
+"lm": "Sun, 01 Nov 2026 09:22:21 GMT",
+"tam": "67619",
 "url": "https://portaldeboaspraticas.iff.fiocruz.br/biblioteca/pcdt-para-atencao-as-pessoas-com-ist/"
 },
 "ses_chik": {
@@ -990,9 +1132,12 @@
 "tam": "644392",
 "url": "https://www.saude.mg.gov.br/wp-content/uploads/2025/01/Fluxograma-manejo-chikungunya-no-adulto.pdf"
 },
-"pcdt_dpoc": {
-"st": 404,
-"url": "https://www.gov.br/saude/pt-br/assuntos/pcdt/arquivos/2022/portal-portaria-conjunta_no-19_2021_pcdt_dpoc__.pdf"
+"nice_ansiedade": {
+"st": 200,
+"etag": "W/34EEEC13AAC023D06670A3A99FFA7E4D",
+"lm": "",
+"tam": "23815",
+"url": "https://www.nice.org.uk/guidance/cg113"
 },
 "pcdt_escorpiao": {
 "st": 200,
@@ -1003,9 +1148,9 @@
 },
 "gvs_tetano": {
 "st": 200,
-"etag": "\"25fb8-629bc02fe4567\"",
-"lm": "Fri, 20 Dec 2024 23:29:01 GMT",
-"tam": "155576",
+"etag": "",
+"lm": "",
+"tam": "244",
 "url": "https://saude.prefeitura.rio/wp-content/uploads/sites/47/2023/06/Quadro_tetano_profilaxia_raiva.pdf"
 },
 "ms_diarreia": {
@@ -1015,9 +1160,17 @@
 "tam": "155197",
 "url": "https://goias.gov.br/saude/wp-content/uploads/sites/34/2013/08/cartaz-do-manejo-de-paciente-com-diarreia-aguda-fb3.pdf"
 },
+"nice_febre": {
+"st": 200,
+"etag": "W/94CC6991BF71B2E887EB7A651854B154",
+"lm": "",
+"tam": "21974",
+"url": "https://www.nice.org.uk/guidance/ng143"
+},
 "pcdt_tabaco": {
-"st": 404,
-"url": "https://www.gov.br/saude/pt-br/assuntos/pcdt/arquivos/2020/pcdt_tabagismo.pdf"
+"st": 200,
+"h": "827f36029e5c85be",
+"url": "https://www.gov.br/saude/pt-br/assuntos/pcdt/t/tabagismo"
 },
 "tb_fluxo": {
 "st": 200,
@@ -1028,14 +1181,14 @@
 },
 "pcdt_hiv": {
 "st": 200,
-"etag": "W/\"373f5-Nz+8g4kXE6c1NaJxg7uZJGHBTRs\"",
+"etag": "W/\"37db6-hO8NOTDm8o+fyfHJLyzivTS0iO4\"",
 "lm": "",
-"tam": "226293",
+"tam": "228790",
 "url": "https://www.gov.br/conitec/pt-br/midias/protocolos/PCDTManejodaInfecopeloHIVemAdultosMdulo1Tratamento.pdf"
 },
 "conitec_diulng": {
 "st": 200,
-"etag": "W/\"38796-JU3R+JSUst3RtMuBML2R/cG2PSc:dtagent10345260810170330uDFB:dtagent10345260810170330uDFB\"",
+"etag": "W/\"39157-7nWbRDQGPp4+bvWV8+tO6zP3VXY:dtagent10345260810170330uDFB:dtagent10345260810170330uDFB\"",
 "lm": "",
 "tam": "",
 "url": "https://www.gov.br/conitec/pt-br/midias/relatorios/2026/relatorio-final/relatorio-de-recomendacao-no-1066-acido-tranexamico-e-dispositivo-intrauterino-liberador-de-levonorgestrel-diu-lng"
@@ -1047,6 +1200,13 @@
 "tam": "112872",
 "url": "https://www.tribunapr.com.br/saude-e-bem-estar/sus-disponibiliza-novos-tratamentos-para-mulheres-com-endometriose/amp/"
 },
+"nice_depressao": {
+"st": 200,
+"etag": "W/3330653100821CCA66F3732BEA72C80D",
+"lm": "",
+"tam": "27284",
+"url": "https://www.nice.org.uk/guidance/ng222"
+},
 "nice_ciatica": {
 "st": 200,
 "etag": "W/9976DDCE6514139546A0359D2422AFED",
@@ -1056,9 +1216,9 @@
 },
 "cochrane_b12": {
 "st": 200,
-"etag": "W/\"1791962196-gzip\"",
-"lm": "Wed, 14 Oct 2026 07:16:36 GMT",
-"tam": "67771",
+"etag": "W/\"1792048325-gzip\"",
+"lm": "Thu, 15 Oct 2026 07:12:05 GMT",
+"tam": "67779",
 "url": "https://www.cochrane.org/evidence/CD004655_oral-vitamin-b12-compared-intramuscular-vitamin-b12-vitamin-b12-deficiency"
 },
 "nt_nmvr": {
@@ -1097,7 +1257,7 @@
 },
 "hanseniase": {
 "st": 200,
-"h": "5c768b38db185102",
+"h": "e4c31c8f77c51382",
 "url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/h/hanseniase/tratamento"
 },
 "fa_mg": {
@@ -1109,31 +1269,38 @@
 },
 "malaria_bh": {
 "st": 200,
-"etag": "\"1792017690\"",
-"lm": "Wed, 14 Oct 2026 22:41:30 GMT",
+"etag": "\"1793530628\"",
+"lm": "Sun, 01 Nov 2026 10:57:08 GMT",
 "tam": "",
 "url": "https://prefeitura.pbh.gov.br/saude/informacoes/vigilancia/vigilancia-epidemiologica/doencas-transmissiveis/malaria"
 },
 "pep_2024": {
 "st": 200,
 "etag": "",
-"lm": "Mon, 12 Oct 2026 12:08:00 GMT",
+"lm": "Fri, 30 Oct 2026 10:31:59 GMT",
 "tam": "",
 "url": "https://www.poder360.com.br/poder-saude/ministerio-da-saude-atualiza-recomendacoes-sobre-a-profilaxia-pep/"
 },
 "pcdt_pep": {
 "st": 200,
-"etag": "W/\"37409-GHVQy56lZxhQWxh8V6EYC3pQQss\"",
+"etag": "W/\"37dca-W4XHc9TBeKtCGuLMvNwlVhFYtCI\"",
 "lm": "",
-"tam": "226313",
+"tam": "228810",
 "url": "https://www.gov.br/conitec/pt-br/midias/protocolos/resumidos/20230208_PCDT_Resumido_PEP_final.pdf"
 },
 "ofidico": {
 "st": 200,
-"etag": "\"1bb22a-629bbd706be77\"",
-"lm": "Fri, 20 Dec 2024 23:16:43 GMT",
-"tam": "1815082",
+"etag": "",
+"lm": "",
+"tam": "244",
 "url": "https://saude.prefeitura.rio/wp-content/uploads/sites/47/2022/07/FolderOfideos.pdf"
+},
+"asam_abst": {
+"st": 200,
+"etag": "",
+"lm": "",
+"tam": "67632",
+"url": "https://www.asam.org/quality-care/clinical-guidelines/alcohol-withdrawal-management-guideline"
 },
 "sbp_anafilaxia": {
 "st": 200,
@@ -1151,27 +1318,28 @@
 },
 "toxicologia_mg": {
 "st": 200,
-"etag": "\"1792017690\"",
-"lm": "Wed, 14 Oct 2026 22:41:30 GMT",
-"tam": "121546",
+"etag": "\"1793340884\"",
+"lm": "Fri, 30 Oct 2026 06:14:44 GMT",
+"tam": "121910",
 "url": "https://www.mg.gov.br/servico/solicitar-atendimento-vitimas-de-intoxicacao-quimica-auto-exterminio-envenenamento-ou"
 },
 "lei_13931": {
 "st": 200,
-"etag": "\"d457677f-0487-4dfd-acde-12258e542b34\"",
-"lm": "Wed, 14 Oct 2026 18:43:00 GMT",
+"etag": "\"33a8e5cf-1398-4002-bd13-bd933d272e78\"",
+"lm": "Sun, 01 Nov 2026 02:08:59 GMT",
 "tam": "0",
 "url": "https://www.dizerodireito.com.br/2019/12/lei-139312019-profissionais-de-saude.html"
 },
 "caderneta2026": {
-"st": 404,
-"url": "https://www.gov.br/saude/pt-br/composicao/saps/publicacoes/cadernetas-e-cartoes/caderneta-brasileira-da-gestante.pdf"
+"st": 200,
+"h": "60ff604bd70c87bb",
+"url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/s/saude-da-mulher/publicacoes/caderneta-brasileira-da-gestante.pdf"
 },
 "alyne": {
-"st": 503,
-"etag": "",
-"lm": "",
-"tam": "",
+"st": 200,
+"etag": "\"15c35-65db9388f3dea\"",
+"lm": "Tue, 13 Oct 2026 13:59:19 GMT",
+"tam": "89141",
 "url": "https://bvsms.saude.gov.br/bvs/saudelegis/gm/2024/prt5350_13_09_2024.html"
 },
 "sesmg_risco": {
@@ -1198,7 +1366,7 @@
 "who_ferro": {
 "st": 200,
 "etag": "",
-"lm": "Wed, 14 Oct 2026 21:13:28 GMT",
+"lm": "Sat, 31 Oct 2026 13:00:36 GMT",
 "tam": "",
 "url": "https://www.who.int/tools/elena/interventions/daily-iron-pregnancy"
 },
@@ -1220,16 +1388,9 @@
 "tam": "64342",
 "url": "https://sbim.org.br/images/Nirsevimabe_Nota_Tecnica_109.pdf_2025-10-02.pdf"
 },
-"febrasgo_rh": {
-"st": 404,
-"etag": "",
-"lm": "",
-"tam": "",
-"url": "https://www.febrasgo.org.br/fluxopdf/assets/pdf/Isoimunizacao.pdf"
-},
 "sbd_dmg": {
 "st": 200,
-"h": "e7612a3d81565f36",
+"h": "db49f69730f994b9",
 "url": "https://diretriz.diabetes.org.br/tratamento-farmacologico-do-diabetes-na-gestacao/"
 },
 "consenso_dmg": {
@@ -1242,7 +1403,7 @@
 "mec_who2025": {
 "st": 200,
 "etag": "",
-"lm": "Wed, 14 Oct 2026 22:35:45 GMT",
+"lm": "Sun, 01 Nov 2026 10:43:17 GMT",
 "tam": "",
 "url": "https://www.who.int/publications/i/item/9789240115583"
 },
@@ -1293,28 +1454,28 @@
 },
 "pcdt_dm2": {
 "st": 200,
-"etag": "W/\"1939ed-OW8k4WxPos1QBntjJBS4hk5R0RQ:dtagent10345260810170330uDFB:dtagent10345260810170330uDFB\"",
+"etag": "W/\"1bdfa7-Xmf2n9RJ2Z4qMKJU0s0ND5d1Hwg:dtagent10345260810170330uDFB:dtagent10345260810170330uDFB\"",
 "lm": "",
-"tam": "1653229",
-"url": "https://www.gov.br/conitec/pt-br/midias/protocolos/PCDTDM2.pdf/@@display-file/file"
+"tam": "1826727",
+"url": "https://www.gov.br/conitec/pt-br/midias/protocolos/2026/pcdt-diabete-melito-tipo-2/@@display-file/file"
 },
 "sbd2026_sus": {
 "st": 200,
-"h": "cfeb2119da84370f",
+"h": "c9453bbfa3151d3b",
 "url": "https://diretriz.diabetes.org.br/tratamento-do-dm2/"
 },
 "sbd_luso2023": {
-"st": 200,
+"st": 429,
 "etag": "",
 "lm": "",
-"tam": "3038",
+"tam": "",
 "url": "https://doi.org/10.1186/s13098-023-01121-x"
 },
 "sbd_rastreio2025": {
 "st": 200,
-"etag": "",
+"etag": "W/\"5b3710091bc2ff3ad4f3aa5c2363d5a3\"",
 "lm": "",
-"tam": "3038",
+"tam": "",
 "url": "https://doi.org/10.1186/s13098-024-01572-w"
 },
 "pcdt_drc": {
@@ -1333,7 +1494,7 @@
 },
 "ms_drc_enc": {
 "st": 200,
-"h": "3a5e585df3aadb5a",
+"h": "5a60329e1aff5401",
 "url": "https://aps-repo.bvs.br/aps/como-realizar-a-avaliacao-inicial-de-um-paciente-hipertenso-e-diabetico-com-suspeita-de-doenca-renal-cronica-2/"
 },
 "pcdt_ic": {
@@ -1352,12 +1513,15 @@
 },
 "dbdisl2025": {
 "st": 200,
-"h": "be4d41c862d6e7b8",
+"etag": "",
+"lm": "",
+"tam": "0",
 "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12674852"
 },
 "pcdt_disl": {
-"st": 404,
-"url": "https://www.gov.br/saude/pt-br/assuntos/pcdt/arquivos/2022/portaria-conjunta-no-08-pcdt-dislipidemia.pdf"
+"st": 200,
+"h": "3166ce0fac681bce",
+"url": "https://www.gov.br/saude/pt-br/assuntos/pcdt/d/dislipidemia"
 },
 "conitec_eze": {
 "st": 200,
@@ -1395,7 +1559,10 @@
 "url": "https://www.gov.br/conitec/pt-br/midias/relatorios/2025/relatorio-de-recomendacao-com-decisao-final-no-1033-semaglutida/@@display-file/file"
 },
 "cfm_bariatrica": {
-"st": 0,
+"st": 200,
+"etag": "\"4586c-659cac2bdb42d\"",
+"lm": "Mon, 24 Aug 2026 13:14:05 GMT",
+"tam": "284780",
 "url": "https://sistemas.cfm.org.br/normas/arquivos/resolucoes/BR/2025/2429_2025.pdf"
 },
 "ms_bariatrica": {
@@ -1406,8 +1573,7 @@
 "url": "https://bvsms.saude.gov.br/bvs/saudelegis/gm/2013/prt0425_19_03_2013.html"
 },
 "sbem_tsh": {
-"st": 200,
-"h": "4d916b3f8b6d8259",
+"st": 403,
 "url": "https://www.scielo.br/j/abem/a/rtN69TFwHzvnYhHR7KZq6mg/?lang=en"
 },
 "bmj_tsh": {
@@ -1415,15 +1581,16 @@
 "url": "https://doi.org/10.1136/bmj.l2006"
 },
 "caderneta_crianca": {
-"st": 503,
-"etag": "",
-"lm": "",
-"tam": "",
+"st": 200,
+"etag": "\"af47eb-63a365d67e980\"",
+"lm": "Fri, 18 Jul 2025 16:10:30 GMT",
+"tam": "11487211",
 "url": "https://bvsms.saude.gov.br/bvs/publicacoes/caderneta_crianca_menina_passaporte_cidadania_7edrev.pdf"
 },
 "pni2026": {
-"st": 404,
-"url": "https://www.gov.br/saude/pt-br/vacinacao/calendario-tecnico/calendario-tecnico-nacional-de-vacinacao-crianca"
+"st": 200,
+"h": "593b202f63ee86d7",
+"url": "https://www.gov.br/saude/pt-br/composicao/svsa/pni/calendario-tecnico/calendario-tecnico-nacional-de-vacinacao-crianca"
 },
 "nt64_vip": {
 "st": 200,
@@ -1527,16 +1694,16 @@
 "url": "https://bvsms.saude.gov.br/bvs/publicacoes/orientacoes_coleta_analise_dados_antropometricos.pdf"
 },
 "guia_menor2": {
-"st": 503,
-"etag": "",
-"lm": "",
-"tam": "",
+"st": 200,
+"etag": "\"7c43a3-5b97e27f5eec0\"",
+"lm": "Fri, 22 Jan 2021 14:39:31 GMT",
+"tam": "8143779",
 "url": "https://bvsms.saude.gov.br/bvs/publicacoes/guia_alimentar_crianca_brasileira_versao_resumida.pdf"
 },
 "cochrane_fimose": {
 "st": 200,
 "etag": "",
-"lm": "Wed, 14 Oct 2026 22:44:28 GMT",
+"lm": "Sun, 01 Nov 2026 07:41:37 GMT",
 "tam": "",
 "url": "https://cochranelibrary.com/cdsr/doi/10.1002/14651858.CD008973.pub3/pdf/CDSR/CD008973/CD008973_abstract.pdf"
 },
@@ -1560,46 +1727,40 @@
 },
 "kfre": {
 "st": 200,
-"h": "cb884adb62948760",
+"h": "e58ae0745d22c98c",
 "url": "https://loinc.org/85626-0"
 },
 "endo_pa2025": {
 "st": 200,
-"h": "71e50833ff9d2d38",
+"h": "b80ee628a1ed091c",
 "url": "https://www.endocrine.org/clinical-practice-guidelines/primary-aldosteronism-2"
 },
 "esc_fa2024": {
 "st": 200,
-"h": "3736fb7456bd04fe",
+"h": "3baaad25a8d55547",
 "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11574616"
 },
 "pcdt_dpoc2025": {
 "st": 200,
-"etag": "W/\"37acb-9n3GNPnrrzqlkjxZ5s3GXS+MlJ0:dtagent10345260810170330uDFB:dtagent10345260810170330uDFB\"",
-"lm": "",
-"tam": "",
-"url": "https://www.gov.br/conitec/pt-br/midias/relatorios/2025/relatorio-de-recomendacao-no-1-046-pcdt-da-doenca-pulmonar-obstrutiva-cronica"
+"h": "53ec1544d853ace9",
+"url": "https://www.gov.br/saude/pt-br/assuntos/pcdt/d/doenca-pulmonar-obstrutiva-cronica"
 },
 "pcdt_osteo2025": {
 "st": 200,
-"etag": "W/\"36d85-HaWoL8xHFx17V8sHByoxyfLrRw0\"",
+"etag": "W/\"37746-CgUhkrKiHElwQ6AbErwoxN4WFAw\"",
 "lm": "",
-"tam": "224645",
+"tam": "227142",
 "url": "https://www.gov.br/conitec/pt-br/midias/relatorios/2025/pcdt-osteoporose.pdf"
 },
 "sbd_metas": {
-"st": 404,
-"etag": "",
-"lm": "",
-"tam": "",
-"url": "https://doi.org/10.29327/557753.2022-3"
+"st": 200,
+"h": "f534c47a4ac4819b",
+"url": "https://diretriz.diabetes.org.br/metas-de-controle-glicemico/"
 },
 "sbd_sus": {
-"st": 404,
-"etag": "",
-"lm": "",
-"tam": "",
-"url": "https://doi.org/10.29327/5412848.2024-3"
+"st": 200,
+"h": "c9453bbfa3151d3b",
+"url": "https://diretriz.diabetes.org.br/tratamento-do-dm2-no-sistema-unico-de-saude-sus/"
 },
 "conitec_fine": {
 "st": 200,
@@ -1610,11 +1771,14 @@
 },
 "frax": {
 "st": 200,
-"h": "23ba47560e64fa9c",
+"h": "4d58f21820e41837",
 "url": "https://frax.shef.ac.uk/FRAX/"
 },
 "sbc_calc": {
-"st": 0,
+"st": 200,
+"etag": "\"14579f64be0d51:0\"",
+"lm": "Mon, 10 Feb 2020 19:48:11 GMT",
+"tam": "1459",
 "url": "http://departamentos.cardiol.br/sbc-da/2015/CALCULADORAER2020/index.html"
 },
 "hearts": {
@@ -1628,40 +1792,31 @@
 "st": 0,
 "url": "https://ninho.inca.gov.br/jspui/bitstream/123456789/17858/3/Diretrizes%20para%20o%20Rastreamento%20do%20c%c3%a2ncer%20do%20colo%20do%20%c3%batero_2025_completo.pdf"
 },
-"mg_hpv": {
-"st": 404,
-"etag": "",
-"lm": "",
-"tam": "",
-"url": "https://agenciaminas.mg.gov.br/news/pdf/129541.pdf"
-},
 "nt_mama2025": {
 "st": 200,
 "h": "a9d34d5a7ea6fc1e",
 "url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2025/nota-tecnica-no-626-2025-cgcan-decan-saes-ms.pdf"
 },
 "mg_brca": {
-"st": 404,
-"etag": "",
-"lm": "",
-"tam": "",
-"url": "https://www.agenciaminas.mg.gov.br/news/pdf/128015.pdf"
+"st": 200,
+"h": "55448f76196e61d3",
+"url": "https://www.agenciaminas.mg.gov.br/noticia/governo-de-minas-passa-a-oferecer-teste-genetico-gratuito-para-deteccao-de-cancer-de-mama-e-de-ovario"
 },
 "hpv_vac2026": {
 "st": 200,
-"etag": "\"1dd5c17135df548\"",
-"lm": "Wed, 14 Oct 2026 20:03:27 GMT",
+"etag": "\"1dd69e43395fe48\"",
+"lm": "Sun, 01 Nov 2026 09:34:33 GMT",
 "tam": "173256",
 "url": "https://saude.es.gov.br/media/Imuniza%C3%A7%C3%A3o/nota-tecnica/nota_tecnica_no_056_2026_-_sesa_ssvs_gevs_nei_-_atualizacao_da_estrategia_de_vacina_contra_o_hpv-docx.pdf"
 },
 "fda_th2025": {
 "st": 200,
-"h": "4a4dc3bfe224697b",
+"h": "48cb7d2ac43a4a6f",
 "url": "https://www.contemporaryobgyn.net/view/fda-initiates-removal-of-boxed-warnings-from-hormone-therapy-for-menopause"
 },
 "fezolinetante": {
 "st": 200,
-"h": "13269e7b28433b06",
+"h": "9fa4c0eaf31317a4",
 "url": "https://site.cff.org.br/noticia/Noticias-gerais/25/06/2026/anvisa-aprova-novo-medicamento-sem-hormonios-para-aliviar-sintomas-da-menopausa"
 },
 "mec_cdc_chc": {
@@ -1679,21 +1834,21 @@
 },
 "lei_14443": {
 "st": 200,
-"etag": "\"369f-6502916ea9114\"",
-"lm": "Thu, 23 Apr 2026 23:34:28 GMT",
-"tam": "13983",
+"etag": "",
+"lm": "",
+"tam": "814",
 "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14443.htm"
 },
 "conitec_1066": {
 "st": 200,
-"etag": "W/\"38796-V+4YDeBofWIoyJYTcAOdCOerU7Y:dtagent10345260810170330uDFB:dtagent10345260810170330uDFB\"",
+"etag": "W/\"39157-wn53Ux52ai8kLaaGM1F3WENe22g:dtagent10345260810170330uDFB:dtagent10345260810170330uDFB\"",
 "lm": "",
 "tam": "",
 "url": "https://www.gov.br/conitec/pt-br/midias/relatorios/2026/relatorio-final/relatorio-de-recomendacao-no-1066-acido-tranexamico-e-dispositivo-intrauterino-liberador-de-levonorgestrel-diu-lng"
 },
 "conitec_1002": {
 "st": 200,
-"etag": "W/\"37fce-47xg6WPtGB73gJEvDovEEZqu85k:dtagent10345260810170330uDFB:dtagent10345260810170330uDFB\"",
+"etag": "W/\"3898f-R39PlTp8Jueg81O6q06sODT4tK8:dtagent10345260810170330uDFB:dtagent10345260810170330uDFB\"",
 "lm": "",
 "tam": "",
 "url": "https://www.gov.br/conitec/pt-br/midias/relatorios/2025/relatorio-de-recomendacao-no-1002-dispositivo-intrauterino-liberador-de-levonorgestrel"
@@ -1714,9 +1869,9 @@
 },
 "lei_10778": {
 "st": 200,
-"etag": "\"2613-65028c0025a5b\"",
-"lm": "Thu, 23 Apr 2026 23:10:10 GMT",
-"tam": "9747",
+"etag": "",
+"lm": "",
+"tam": "814",
 "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.778.htm"
 },
 "port78_2021": {
@@ -1732,7 +1887,7 @@
 },
 "port2561_rev": {
 "st": 200,
-"h": "86ba6ad179d9e97e",
+"h": "33a93710ed2e939a",
 "url": "https://www.jornalopcao.com.br/brasil/ministerio-da-saude-revoga-portaria-que-previa-aviso-a-policia-em-caso-de-aborto-legal-458311/"
 },
 "conitec_ccr2026": {
@@ -1744,17 +1899,17 @@
 },
 "fit_sus2026": {
 "st": 200,
-"h": "dc49ed878f12574c",
+"h": "b8b19010b3ed674a",
 "url": "https://site.cff.org.br/noticia/Noticias-gerais/25/05/2026/sus-adota-novo-exame-para-detectar-cancer-de-intestino-antes-dos-sintomas"
 },
 "inca_pulmao2026": {
 "st": 200,
-"h": "26db3970cf2f4303",
+"h": "25519443279fa2db",
 "url": "https://portal.afya.com.br/saude/inca-inicia-estudo-para-viabilizar-rastreamento-de-cancer-de-pulmao-no-sus"
 },
 "pcdt_hcv2026": {
 "st": 200,
-"h": "e132fc48ca6cded6",
+"h": "646927f690f0afb0",
 "url": "https://portal.afya.com.br/infectologia/pcdt-de-hepatite-c-amplia-rastreio-e-simplifica-cuidado"
 },
 "pni_adulto2026": {
@@ -1768,15 +1923,12 @@
 "url": "https://www.gov.br/saude/pt-br/composicao/svsa/pni/calendario-tecnico/calendario-tecnico-nacional-de-vacinacao-idoso/@@download/file"
 },
 "nt_psa2023": {
-"st": 200,
-"etag": "\"653ab343-3a8f8\"",
-"lm": "Thu, 26 Oct 2023 18:43:15 GMT",
-"tam": "239864",
+"st": 0,
 "url": "https://antigo.inca.gov.br/sites/ufu.sti.inca.local/files//media/document//notatecnica_rastreio_cancer_de_prostata_2023.pdf"
 },
 "sbu_psa": {
 "st": 200,
-"h": "4a79fccab7ff9111",
+"h": "cb07a1cce8ad865b",
 "url": "https://portal.afya.com.br/urologia/novembro-azul-o-que-as-diretrizes-recomendam-sobre-o-rastreio-de-cancer-de-prostata"
 },
 "ress_sifilis": {
@@ -1789,12 +1941,12 @@
 },
 "doxipep2026": {
 "st": 200,
-"h": "abbd7909c906af15",
+"h": "e24d966d4716fd83",
 "url": "https://portal.afya.com.br/infectologia/doxiciclina-e-incluida-na-profilaxia-pos-exposicao-para-prevencao-de-ists"
 },
 "cabotegravir2026": {
 "st": 200,
-"h": "9908117617f9bc06",
+"h": "670e144208091377",
 "url": "https://site.cff.org.br/noticia/Noticias-gerais/11/08/2026/conitec-recomenda-incorporacao-de-cabotegravir-injetavel-ao-sus-para-prevencao-do-hiv"
 },
 "pcdt_prep": {
@@ -1813,11 +1965,14 @@
 },
 "hcv_aps2026": {
 "st": 200,
-"h": "39fe905bcb8bf66c",
+"h": "0232194013b1b560",
 "url": "https://portal.afya.com.br/infectologia/pcdt-de-hepatite-c-amplia-rastreio-e-simplifica-cuidado"
 },
 "tb_manual2019": {
-"st": 0,
+"st": 200,
+"etag": "\"395bb3-58cc6e40ca340\"",
+"lm": "Wed, 03 Jul 2019 13:32:21 GMT",
+"tam": "3759027",
 "url": "http://bvsms.saude.gov.br/bvs/publicacoes/manual_recomendacoes_controle_tuberculose_brasil_2_ed.pdf"
 },
 "tb_doseplena": {
@@ -1857,21 +2012,21 @@
 },
 "conitec_sdr": {
 "st": 200,
-"etag": "W/\"381c1-2EzYOwhhP6WEUXq1etiPTdhwd1o\"",
+"etag": "W/\"38b82-Js2/AL4iiCUs1YyajcW6LpxXOEU\"",
 "lm": "",
-"tam": "229825",
+"tam": "232322",
 "url": "https://www.gov.br/conitec/pt-br/midias/consultas/relatorios/2020/sociedade/resoc197_rifampicina_hanseniase.pdf"
 },
 "sbc_fa2025": {
 "st": 200,
-"h": "38c5ae49190406c0",
+"h": "66ae25e39996c9ea",
 "url": "https://portal.afya.com.br/cardiologia/sbc-2025-nova-diretriz-brasileira-de-fibrilacao-atrial"
 },
 "esc_fa_acc": {
 "st": 200,
 "etag": "",
 "lm": "",
-"tam": "266889",
+"tam": "265442",
 "url": "https://www.acc.org/Latest-in-Cardiology/ten-points-to-remember/2024/09/17/04/05/2024-esc-guidelines-for-af-esc-2024"
 },
 "port11_2016": {
@@ -1890,34 +2045,32 @@
 "st": 200,
 "etag": "",
 "lm": "",
-"tam": "296473",
+"tam": "296094",
 "url": "https://www.acc.org/Latest-in-Cardiology/Articles/2025/08/26/11/47/sat-520am-bb-esc-2025"
 },
 "esc_ccs2024": {
 "st": 200,
-"h": "a4f52d4475530bf4",
+"h": "aad8d8e52278a99d",
 "url": "https://www.campus.sanofi/se/artiklar/kardiologi/dyslipidemi/ar/esc-guidelines-management-chronic-coronary-syndromes-2024"
 },
 "sbd_pe": {
 "st": 200,
-"h": "100967760a37bfd8",
+"h": "c959dffc5ca5c3be",
 "url": "https://doi.org/10.29327/5412848.2024-11"
 },
 "iwgdf2023": {
 "st": 200,
-"etag": "",
-"lm": "Wed, 14 Oct 2026 13:37:49 GMT",
-"tam": "",
+"h": "28e042f144db7126",
 "url": "https://iwgdfguidelines.org/"
 },
 "acr_gota": {
 "st": 200,
-"h": "4c672816d09912e0",
+"h": "9fd7292035790805",
 "url": "https://portal.afya.com.br/reumatologia/novos-guidelines-acr-para-o-manejo-da-gota"
 },
 "masld2025": {
 "st": 200,
-"h": "98784511b7631a92",
+"h": "ede620fdfb0a4a17",
 "url": "https://news.gastro.org/issues/2025/september/global-consensus-streamlines-masldmash-care/"
 },
 "pcdt_alz2025": {
@@ -1936,23 +2089,21 @@
 },
 "tele_hiper": {
 "st": 200,
-"etag": "W/\"4f50f-ExUIqawCu1xEDksNFMUwAsBJwxQ\"",
-"lm": "",
-"tam": "324879",
+"h": "511ecfa63a1340ce",
 "url": "https://ares.unasus.gov.br/acervo/bitstream/ARES/10276/1/TelessaudeUFRGS_hipertireoidismo.pdf"
 },
 "beers2023": {
 "st": 200,
 "etag": "",
 "lm": "",
-"tam": "200442",
+"tam": "281810",
 "url": "https://dig.pharmacy.uic.edu/faqs/2023-2/september-2023-faqs/a-summary-of-the-2023-american-geriatrics-society-updated-beers-criteria-for-potentially-inappropriate-medication-use-in-the-elderly"
 },
 "eular_les2023": {
 "st": 200,
 "etag": "",
 "lm": "",
-"tam": "93555",
+"tam": "93660",
 "url": "https://rheumnow.com/news/2023-eular-lupus-management-recommendations"
 },
 "pcdt_les2022": {
@@ -1978,7 +2129,7 @@
 },
 "paes_poptrans": {
 "st": 200,
-"h": "bdb17d66705b3e83",
+"h": "fc8fcbdbad7977fd",
 "url": "https://portal.afya.com.br/saude/saude-lanca-programa-de-atencao-a-saude-da-populacao-trans"
 },
 "poa_hormon2024": {
@@ -2005,7 +2156,7 @@
 },
 "idsa_cuti2025": {
 "st": 200,
-"h": "0eb75739d4fa639d",
+"h": "29784e2d12d6a668",
 "url": "https://www.idsociety.org/practice-guideline/complicated-urinary-tract-infections/"
 },
 "doxipep_conitec": {
@@ -2017,7 +2168,7 @@
 },
 "fp_elenco2026": {
 "st": 200,
-"h": "e7a00edca54b054a",
+"h": "8d178abc7a48342a",
 "url": "https://www.gov.br/saude/pt-br/composicao/sectics/farmacia-popular"
 },
 "ivcf_ms": {
@@ -2032,11 +2183,11 @@
 "url": "https://scielosp.org/pdf/rsp/2016.v50/81/pt"
 },
 "coelho_savassi": {
-"st": 404,
-"etag": "",
+"st": 200,
+"etag": "\"3940566897-identity\"",
 "lm": "",
-"tam": "",
-"url": "https://app4.unasus.gov.br/ppuplayer4_idoso/uploads/recursos/SE_UNASUS_0002_IDOSO_ACOES_ESTRATEGICAS/8/assets/lib/docs/Vulnerabilidade_Familiar_Escala_Coelho_Savassi.pdf"
+"tam": "47358",
+"url": "https://rbmfc.org.br/rbmfc/article/view/104"
 },
 "nt50_ad2026": {
 "st": 200,
@@ -2061,16 +2212,16 @@
 },
 "eca13": {
 "st": 200,
-"etag": "\"a9c60-65c238ab0be93\"",
-"lm": "Wed, 23 Sep 2026 09:59:40 GMT",
-"tam": "695392",
+"etag": "",
+"lm": "",
+"tam": "814",
 "url": "https://www.planalto.gov.br/ccivil_03/leis/l8069.htm"
 },
 "idoso19": {
 "st": 200,
-"etag": "\"33b08-65028bffb557b\"",
-"lm": "Thu, 23 Apr 2026 23:10:10 GMT",
-"tam": "211720",
+"etag": "",
+"lm": "",
+"tam": "814",
 "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm"
 },
 "mg_migrantes": {
@@ -2087,19 +2238,17 @@
 },
 "naltrexona_bula": {
 "st": 200,
-"etag": "",
-"lm": "",
-"tam": "464308",
+"h": "0fb8ed914ed7fb1a",
 "url": "https://cristalia.com.br/produto/150/bula-profissional"
 },
 "precos_cf2026": {
 "st": 200,
-"h": "bcab878c3baa3819",
+"h": "3b6edf4f8c96a402",
 "url": "https://www.cliquefarma.com.br/preco/naltrexona"
 },
 "sbd_dispensacao": {
 "st": 200,
-"h": "6b4e707de1e99c6c",
+"h": "c7381d23c9745004",
 "url": "https://diretriz.diabetes.org.br/dispensacao-de-medicamentos-e-insumos-para-o-tratamento-do-diabetes-mellitus-no-sus/"
 },
 "pcdt_parkinson2025": {
@@ -2143,55 +2292,55 @@
 },
 "sbd_idoso2025": {
 "st": 200,
-"h": "b1c7217b6e02884a",
+"h": "253ccaee7b176b6b",
 "url": "https://diretriz.diabetes.org.br/o-paciente-idoso-com-diabetes/"
 },
 "wfg2022": {
-"st": 200,
-"etag": "",
-"lm": "Fri, 24 Feb 2023 15:05:33 GMT",
-"tam": "2736567",
-"url": "https://www.nottingham.ac.uk/praised/documents/dissemination-event/main-presentations/p8-world-falls-guidelines.pdf"
+"st": 403,
+"url": "https://doi.org/10.1093/ageing/afac205"
 },
 "precos_ger2026": {
 "st": 200,
-"h": "9adc061732cb8955",
+"h": "f8b5f1fbbd12398b",
 "url": "https://www.cliquefarma.com.br/medicamentos/medicamentos-a-z/cloridrato-de-donepezila-10mg-30-comprimidos-ache-generico"
 },
 "sbd_diag2025": {
 "st": 200,
-"h": "4adc4d2271a70549",
+"h": "5ececb58d3f0560d",
 "url": "https://portal.afya.com.br/endocrinologia/sbd-atualiza-diretriz-de-diagnostico-do-diabetes-tipo-2"
 },
 "sbd_prediab": {
 "st": 200,
-"h": "018f31de9acd4072",
+"h": "f3adf69ee7c8a57e",
 "url": "https://diretriz.diabetes.org.br/tratamento-farmacologico-do-pre-diabetes/"
 },
 "perreault2012": {
 "st": 200,
 "etag": "",
 "lm": "",
-"tam": "96909",
+"tam": "98630",
 "url": "https://pace-cme.org/2012/06/11/normal-glucose-regulation-in-prediabetes-associated-with-reduced-risk-for-disease-progression"
 },
 "ada2026_s3": {
 "st": 200,
 "etag": "",
-"lm": "Wed, 14 Oct 2026 22:41:59 GMT",
+"lm": "Sun, 01 Nov 2026 04:26:35 GMT",
 "tam": "",
 "url": "https://globalrph.com/2026/07/prediabetes-in-2026-evidence-thresholds-for-lifestyle-intervention-metformin-and-anti-obesity-pharmacotherapy/"
 },
 "pcdt_asma2023": {
-"st": 404,
-"url": "https://www.gov.br/saude/pt-br/assuntos/pcdt/arquivos/2023/portaria-conjunta-saes-sectics-no-32-pcdt-asma.pdf"
+"st": 200,
+"etag": "W/\"4a22ee-2mf42zHhlqwQy6nO5b9XfrHnLhA:dtagent10345260810170330uDFB:dtagent10345260810170330uDFB\"",
+"lm": "",
+"tam": "4858606",
+"url": "https://www.gov.br/conitec/pt-br/midias/relatorios/2023/20230524_relatorio_pcdtasma_785_final.pdf/@@download/file"
 },
 "sbce_profilaxia2022": {
 "st": 404,
 "etag": "",
 "lm": "",
 "tam": "",
-"url": "https://thieme-connect.de/products/ejournals/html/10.1055/s-0042-1756441"
+"url": "https://doi.org/10.1055/s-0042-1756441"
 },
 "vsr_sbim2026": {
 "st": 200,
@@ -2202,9 +2351,9 @@
 },
 "ats_pac_aafp": {
 "st": 200,
-"etag": "\"274aqn4c5n7qrm\"",
+"etag": "\"8eeaf68wvm7szd\"",
 "lm": "",
-"tam": "361582",
+"tam": "364453",
 "url": "https://www.aafp.org/afp/2020/0715/p121"
 },
 "tele_dip": {
@@ -2216,15 +2365,14 @@
 "url": "https://www.ufrgs.br/telessauders/?p=20355"
 },
 "hp_consenso5": {
-"st": 200,
-"h": "1b0796f46fe5040c",
+"st": 403,
 "url": "https://www.scielo.br/j/ag/a/G9BpZdBB8tHTKdF9b5nmSbp/?lang=en"
 },
 "glucagon_bula": {
 "st": 200,
 "etag": "",
 "lm": "",
-"tam": "133875",
+"tam": "133559",
 "url": "https://www.bulas.med.br/p/bula/2790/glucagon.htm"
 },
 "hcufmg_pcr": {
@@ -2249,7 +2397,7 @@
 },
 "aes_eme": {
 "st": 200,
-"h": "fc3cd259228d5efc",
+"h": "f84f153034d5d147",
 "url": "https://mdedge.com/neurology/epilepsyresourcecenter/article/106211/epilepsy-seizures/aes-publishes-guideline"
 },
 "sca_sorocaba": {
@@ -2268,14 +2416,14 @@
 },
 "hipo_cbmfc": {
 "st": 200,
-"h": "a8c16e99a7aab016",
+"h": "635ec8dbeefda7b3",
 "url": "https://portal.afya.com.br/medicina-de-familia/cbmfc-2025-abordagem-da-hipoglicemia-e-da-hiperglicemia-na-aps"
 },
 "cochrane_calcio2025": {
-"st": 203,
+"st": 200,
 "etag": "",
 "lm": "",
-"tam": "5591",
+"tam": "167263",
 "url": "https://pubmed.ncbi.nlm.nih.gov/41330480/"
 },
 "cochrane_news_calcio": {
@@ -2306,21 +2454,21 @@
 },
 "pcdt_apso2026": {
 "st": 200,
-"etag": "W/\"36af0-zeT6CkIwSVYyVEkW6XBl+j/DUUA:dtagent10345260810170330uDFB:dtagent10345260810170330uDFB\"",
+"etag": "W/\"374b1-729GhERqjcUpWbItlN5oT5iRsZM:dtagent10345260810170330uDFB:dtagent10345260810170330uDFB\"",
 "lm": "",
 "tam": "",
 "url": "https://www.gov.br/conitec/pt-br/midias/protocolos/pcdt-da-artrite-psoriasica"
 },
 "pcdt_pso2021": {
 "st": 200,
-"etag": "W/\"37284-RiKzaoHxOC8mLa1ZdjFF7Ua3yHs\"",
+"etag": "W/\"37c45-XwClV08chbtgA1ZWDUea46YnL+Y\"",
 "lm": "",
-"tam": "225924",
+"tam": "228421",
 "url": "https://www.gov.br/conitec/pt-br/midias/relatorios/2021/20211021_relatorio_652_pcdt_psoriase.pdf"
 },
 "pcdt_ea2018": {
 "st": 200,
-"h": "f9002e8468966fec",
+"h": "dd79f4113f5af80b",
 "url": "https://www.gov.br/saude/pt-br/composicao/saes/doencas-raras/pcdt/aprovados/espondilite-ancilosante"
 },
 "pcdt_epa2025": {
@@ -2332,16 +2480,16 @@
 },
 "sbr_fm2026a": {
 "st": 200,
-"etag": "",
+"etag": "W/\"b2bdece54e4aa6f735a06663e58dd63e\"",
 "lm": "",
-"tam": "3038",
+"tam": "",
 "url": "https://doi.org/10.1186/s42358-025-00507-x"
 },
 "sbr_fm2026b": {
 "st": 200,
-"etag": "",
+"etag": "W/\"a1bc55fe270f98ea90383d4c6a98ac7e\"",
 "lm": "",
-"tam": "3038",
+"tam": "",
 "url": "https://doi.org/10.1186/s42358-025-00483-2"
 },
 "lei_fm2023": {
@@ -2351,7 +2499,7 @@
 },
 "lei_fm2025": {
 "st": 200,
-"h": "3f4c4cdcc308371b",
+"h": "cc6c3921ce8c93ed",
 "url": "https://www.cnnbrasil.com.br/saude/fibromialgia-passa-a-ser-reconhecida-por-lei-como-deficiencia-entenda/"
 },
 "eular_pmr2025": {
@@ -2363,7 +2511,7 @@
 },
 "cmed_pmc2026": {
 "st": 200,
-"etag": "W/\"712e0-tzwnolxJICi1q/EFqAoISAD0IuY:dtagent103452608101703306nty:dtagent103452608101703306nty\"",
+"etag": "W/\"71ac8-8DU8lc7wN0wR8HORIfapReb6CR8:dtagent103452608101703306nty:dtagent103452608101703306nty\"",
 "lm": "",
 "tam": "",
 "url": "https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/cmed/precos"
@@ -2371,7 +2519,7 @@
 "icms_mg_med": {
 "st": 200,
 "etag": "",
-"lm": "Tue, 13 Oct 2026 07:37:31 GMT",
+"lm": "Sat, 31 Oct 2026 17:03:26 GMT",
 "tam": "",
 "url": "https://simtax.com.br/?p=56709"
 },
@@ -2385,6 +2533,1136 @@
 "bula_fostair": {
 "st": 403,
 "url": "https://www.drogaraia.com.br/bulas/fostair"
+},
+"obeid2015_b12": {
+"st": 403,
+"url": "https://doi.org/10.1002/mnfr.201500019"
+},
+"bula_mecobe": {
+"st": 200,
+"h": "8a88ed222c364aa0",
+"url": "https://www.araujo.com.br/bula/Mecobe-1000mcg-com-30-Comprimidos-Sublinguais"
+},
+"cochrane_oe2010": {
+"st": 403,
+"url": "https://doi.org/10.1002/14651858.CD004740.pub2"
+},
+"bula_otobetnovate": {
+"st": 200,
+"etag": "\"41650c843e97db8f65ca1eb052163fae\"",
+"lm": "Wed, 12 May 2021 06:15:33 GMT",
+"tam": "82072",
+"url": "https://img.drogasil.com.br/raiadrogasil_bula/OTOBETNOVATE.pdf"
+},
+"patel2007_conj": {
+"st": 403,
+"url": "https://doi.org/10.1197/j.aem.2006.08.006"
+},
+"azari2013_conj": {
+"st": 403,
+"url": "https://doi.org/10.1001/jama.2013.280318"
+},
+"hu2021_conj": {
+"st": 429,
+"etag": "",
+"lm": "",
+"tam": "",
+"url": "https://doi.org/10.1038/s41598-020-79680-6"
+},
+"improve_it": {
+"st": 403,
+"url": "https://doi.org/10.1056/NEJMoa1410489"
+},
+"racing2022": {
+"st": 200,
+"etag": "",
+"lm": "",
+"tam": "2800",
+"url": "https://doi.org/10.1016/S0140-6736(22)00916-3"
+},
+"ctt2010": {
+"st": 200,
+"etag": "",
+"lm": "",
+"tam": "2697",
+"url": "https://doi.org/10.1016/S0140-6736(10)61350-5"
+},
+"cdc_marcos2022": {
+"st": 403,
+"url": "https://doi.org/10.1542/peds.2021-052138"
+},
+"oms_telas2019": {
+"st": 200,
+"h": "45ea07df051aefca",
+"url": "https://www.sbp.com.br/?p=13811"
+},
+"pcdt_tab2016": {
+"st": 200,
+"etag": "W/\"74fed-+GvhKqM7da1PPkYs2+i+GJfx3K4:dtagent10345260810170330uDFB:dtagent10345260810170330uDFB\"",
+"lm": "",
+"tam": "479213",
+"url": "https://www.gov.br/conitec/pt-br/midias/protocolos/pcdt_transtornoafetivobipolar_tipoi.pdf/@@download/file"
+},
+"pcdt_esq2013": {
+"st": 200,
+"h": "d180f196daccf4ad",
+"url": "https://www.gov.br/saude/pt-br/assuntos/pcdt/e/esquizofrenia"
+},
+"pcdt_tdah2022": {
+"st": 200,
+"etag": "W/\"5786f1-KTusOy+zLlBxC6aH2hjg3ys5mqs:dtagent10345260810170330uDFB:dtagent10345260810170330uDFB\"",
+"lm": "",
+"tam": "5736177",
+"url": "https://www.gov.br/conitec/pt-br/midias/protocolos/portariaconjuntan14pcdttranstornododeficitdeatencaocomhiperatividadetdah.pdf/@@download/file"
+},
+"pcdt_tea2022": {
+"st": 200,
+"h": "d63c8450f6bfe9f5",
+"url": "https://www.gov.br/saude/pt-br/assuntos/pcdt/c/comportamento-agressivo-no-transtorno-do-espectro-do-autismo"
+},
+"ceaf_mg2026": {
+"st": 200,
+"h": "7b9ed4a8182a31dd",
+"url": "https://www.saude.mg.gov.br/obtermedicamentos/ceaf/lista-de-medicamentos-por-doenca/"
+},
+"nice_ng222": {
+"st": 200,
+"etag": "W/3330653100821CCA66F3732BEA72C80D",
+"lm": "",
+"tam": "27284",
+"url": "https://www.nice.org.uk/guidance/ng222"
+},
+"nice_cg113": {
+"st": 200,
+"etag": "W/34EEEC13AAC023D06670A3A99FFA7E4D",
+"lm": "",
+"tam": "23815",
+"url": "https://www.nice.org.uk/guidance/cg113"
+},
+"nice_cg185": {
+"st": 200,
+"etag": "W/12C894062266032DC059D8E8262A7743",
+"lm": "",
+"tam": "25926",
+"url": "https://www.nice.org.uk/guidance/cg185"
+},
+"nice_ng87": {
+"st": 200,
+"etag": "W/8ACDAC19CED39DF810CDED1C00AFCC08",
+"lm": "",
+"tam": "23847",
+"url": "https://www.nice.org.uk/guidance/ng87"
+},
+"nice_ng134": {
+"st": 200,
+"etag": "17BF462FF03ECF460F2848E3EAE0DBA9",
+"lm": "",
+"tam": "22785",
+"url": "https://www.nice.org.uk/guidance/ng134"
+},
+"pottie2018": {
+"st": 200,
+"h": "7494c243902d3505",
+"url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5951648/"
+},
+"jonas2014": {
+"st": 403,
+"url": "https://doi.org/10.1001/jama.2014.3628"
+},
+"decrescenzo2018": {
+"st": 200,
+"h": "729b2212cfa11c0d",
+"url": "https://doi.org/10.1371/journal.pmed.1002715"
+},
+"chan2019": {
+"st": 200,
+"etag": "W/\"a8351a7239e1367e651e3b7ab8cbd67b\"",
+"lm": "",
+"tam": "",
+"url": "https://doi.org/10.1007/s11606-019-05074-8"
+},
+"cortese2018": {
+"st": 200,
+"etag": "",
+"lm": "",
+"tam": "2733",
+"url": "https://doi.org/10.1016/S2215-0366(18)30269-4"
+},
+"esc_ic2026": {
+"st": 403,
+"url": "https://academic.oup.com/eurheartj/advance-article/doi/10.1093/eurheartj/ehag100/8766302"
+},
+"sbc_ic2026": {
+"st": 200,
+"h": "af2c7e96fc2832ec",
+"url": "https://abccardiol.org/en/article/brazilian-guideline-for-heart-failure-2026/"
+},
+"sbc_fa2025b": {
+"st": 200,
+"h": "06b2d629e57be326",
+"url": "https://doi.org/10.36660/abc.20250618i"
+},
+"port6734": {
+"st": 403,
+"url": "https://www.in.gov.br/en/web/dou/-/portaria-gm/ms-n-6.734-de-18-de-marco-de-2025-620767223"
+},
+"conitec1067": {
+"st": 200,
+"etag": "W/\"2890b2-PoRlhQn6oPMdN4kccyUIelsJr64:dtagent10345260810170330uDFB:dtagent10345260810170330uDFB\"",
+"lm": "",
+"tam": "2658482",
+"url": "https://www.gov.br/conitec/pt-br/midias/relatorios/2025/relatorio-de-recomendacao-no-1067-dapagliflozina/@@display-file/file"
+},
+"sbc_valv2020": {
+"st": 200,
+"h": "0f118cbf3677adfb",
+"url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8386977"
+},
+"sbc_valv2026": {
+"st": 200,
+"etag": "\"36622422ee7c29c4a3caf6d383553c52\"",
+"lm": "Sun, 01 Nov 2026 10:00:50 GMT",
+"tam": "",
+"url": "https://doi.org/10.36660/abc.20260796"
+},
+"esc_valv2025": {
+"st": 200,
+"h": "fe56d4db69d82b8e",
+"url": "https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines/All-ESC-Practice-Guidelines/Valvular-Heart-Disease"
+},
+"invictus": {
+"st": 200,
+"etag": "",
+"lm": "",
+"tam": "264188",
+"url": "https://www.acc.org/Latest-in-Cardiology/Clinical-Trials/2022/08/27/04/07/INVICTUS"
+},
+"sbc_fr2009": {
+"st": 200,
+"etag": "",
+"lm": "Sun, 01 Nov 2026 10:57:57 GMT",
+"tam": "",
+"url": "https://www.medway.com.br/conteudos/tratamento-e-profilaxia-da-febre-reumatica/"
+},
+"goal_rhd": {
+"st": 200,
+"h": "23f4c11d63919304",
+"url": "https://portal.afya.com.br/cardiologia/penicilina-benzatina-e-eficaz-em-retardar-a-evolucao-da-cardite-reumatica"
+},
+"oms_fr2024": {
+"st": 200,
+"h": "865c62b407a8c35d",
+"url": "https://www.who.int/publications/i/item/9789240100077"
+},
+"aha_ei2021": {
+"st": 403,
+"url": "https://professional.heart.org/en/science-news/Prevention-of-Viridans-Group-Streptococcal-Infective-Endocarditis/commentary"
+},
+"nt88_2025": {
+"st": 200,
+"h": "840b4c08e9803639",
+"url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2025/nota-tecnica-no-88-2025-cgzv-dedt-svsa-ms.pdf"
+},
+"nt49_2026": {
+"st": 200,
+"h": "56f591bbbe997442",
+"url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-49-2026.pdf"
+},
+"nt97_2022": {
+"st": 200,
+"h": "1c2d707df6315d8f",
+"url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2022/sei_ms-0029017249-nota-tecnica.pdf"
+},
+"caf_sp2023": {
+"st": 200,
+"etag": "",
+"lm": "Fri, 30 Jun 2023 12:02:28 GMT",
+"tam": "59380",
+"url": "https://www.cosemssp.org.br/wp-content/uploads/2023/06/NOTA-TECNICA-TRATAMENTO-FEBRE-MACULOSA.pdf"
+},
+"rj_fm2025": {
+"st": 500,
+"etag": "",
+"lm": "",
+"tam": "",
+"url": "https://www.rj.gov.br/saude/sites/default/files/arquivo_pagina_basica/SEI_94178164_Nota_Tecnica.pdf"
+},
+"cdc_rmsf": {
+"st": 403,
+"url": "https://www.cdc.gov/rocky-mountain-spotted-fever/hcp/clinical-care/"
+},
+"sesmg_fm2025": {
+"st": 200,
+"h": "7d18ced6115cc374",
+"url": "https://www.itatiaia.com.br/brasil/sudeste/mg/febre-maculosa-em-mg-governo-divulga-lista-de-cidades-com-casos-confirmados-em-2025/"
+},
+"lee_ttb2013": {
+"st": 403,
+"url": "https://doi.org/10.1136/bmj.e8441"
+},
+"uspstf_quedas2024": {
+"st": 200,
+"etag": "f15569e5c1a43f259afd172080878bd3",
+"lm": "Wed, 12 Jun 2024 21:30:34 GMT",
+"tam": "0",
+"url": "https://healio.com/news/primary-care/20240604/uspstf-finalizes-recommendation-on-exercise-for-fall-prevention-among-older-adults"
+},
+"zoster_sus2026": {
+"st": 200,
+"etag": "",
+"lm": "Sun, 01 Nov 2026 10:57:58 GMT",
+"tam": "",
+"url": "https://www.poder360.com.br/poder-saude/sus-rejeita-inclusao-de-vacina-contra-herpes-zoster/"
+},
+"guia_menor2_cons": {
+"st": 200,
+"etag": "\"7c43a3-5b97e27f5eec0\"",
+"lm": "Fri, 22 Jan 2021 14:39:31 GMT",
+"tam": "8143779",
+"url": "https://bvsms.saude.gov.br/bvs/publicacoes/guia_alimentar_crianca_brasileira_versao_resumida.pdf"
+},
+"bliss_cresc2017": {
+"st": 403,
+"url": "https://doi.org/10.1001/jamapediatrics.2017.1284"
+},
+"bliss_engasgo2016": {
+"st": 403,
+"url": "https://doi.org/10.1542/peds.2016-0772"
+},
+"sbp_blw2017": {
+"st": 200,
+"h": "d852df1199761bfc",
+"url": "https://www.sbp.com.br/imprensa/detalhe/nid/blw-sociedade-brasileira-de-pediatria-lanca-guia-sobre-alimentacao-complementar/"
+},
+"oms_mgrs2006": {
+"st": 200,
+"etag": "",
+"lm": "Sun, 01 Nov 2026 07:53:20 GMT",
+"tam": "",
+"url": "https://www.who.int/tools/child-growth-standards"
+},
+"ig_rn2014": {
+"st": 200,
+"etag": "",
+"lm": "",
+"tam": "2720",
+"url": "https://doi.org/10.1016/S0140-6736(14)60932-6"
+},
+"bula_paracetamol": {
+"st": 200,
+"etag": "\"dfc394dfcc5888d19dda074d6b3b7a11\"",
+"lm": "Wed, 12 May 2021 06:15:36 GMT",
+"tam": "147966",
+"url": "https://img.drogasil.com.br/raiadrogasil_bula/Paracetamol200mgPrati.pdf"
+},
+"bula_dipirona": {
+"st": 403,
+"url": "https://drconsulta.com/conteudo/dipirona-sodica-medquimica-bula/"
+},
+"bula_simeticona": {
+"st": 200,
+"h": "f60db780757c877a",
+"url": "https://bula.com.br/original/simeticona-gotas-75-mgml"
+},
+"bula_colidis": {
+"st": 200,
+"h": "7504e1341b2bf8e9",
+"url": "https://bula.com.br/original/colidis"
+},
+"sung2018_reuteri": {
+"st": 403,
+"url": "https://doi.org/10.1542/peds.2017-1811"
+},
+"cochrane_colica2016": {
+"st": 403,
+"url": "https://doi.org/10.1002/14651858.CD009999.pub2"
+},
+"cab23_2015": {
+"st": 200,
+"etag": "\"a68223-51ba445c9e8c0\"",
+"lm": "Fri, 24 Jul 2015 19:47:23 GMT",
+"tam": "10912291",
+"url": "https://bvsms.saude.gov.br/bvs/publicacoes/saude_crianca_aleitamento_materno_cab23.pdf"
+},
+"guia_menor2_2019": {
+"st": 200,
+"etag": "\"8093261245ad61:0\"",
+"lm": "Tue, 14 Jul 2020 21:18:55 GMT",
+"tam": "7559617",
+"url": "http://189.28.128.100/dab/docs/portaldab/publicacoes/guia_da_crianca_2019.pdf"
+},
+"sbp_ict2021": {
+"st": 200,
+"etag": "\"66a42ad2-338ab3\"",
+"lm": "Fri, 26 Jul 2024 23:01:38 GMT",
+"tam": "3377843",
+"url": "https://www.sbp.com.br/fileadmin/user_upload/23176c-MO_Hiperbilirrubinemia_indireta_periodo_neo.pdf"
+},
+"aap_ict2022": {
+"st": 403,
+"url": "https://doi.org/10.1542/peds.2022-058859"
+},
+"naspghan_drge2018": {
+"st": 403,
+"url": "https://doi.org/10.1097/MPG.0000000000001889"
+},
+"roma4_lactente2016": {
+"st": 200,
+"etag": "",
+"lm": "",
+"tam": "2636",
+"url": "https://doi.org/10.1053/j.gastro.2016.02.016"
+},
+"sbp_pele2024": {
+"st": 200,
+"etag": "\"66a5aa36-68cf80\"",
+"lm": "Sun, 28 Jul 2024 02:17:26 GMT",
+"tam": "6868864",
+"url": "https://www.sbp.com.br/fileadmin/user_upload/24424g-GPA_ISBN_-_Cuidado_Pele_e_Anexos_do_RN.pdf"
+},
+"aap_hemang2019": {
+"st": 403,
+"url": "https://doi.org/10.1542/peds.2018-3475"
+},
+"sbp_picadas2025": {
+"st": 200,
+"h": "fbac58f549a86b39",
+"url": "https://www.sbp.com.br/?p=31436"
+},
+"conitec_aplv2018": {
+"st": 200,
+"etag": "W/\"38194-DdUPmBSOhaT7WkCFTh6Yti2YpR0\"",
+"lm": "",
+"tam": "229780",
+"url": "https://www.gov.br/conitec/pt-br/midias/relatorios/2018/recomendacao/relatorio_formulasnutricionais_aplv.pdf"
+},
+"sesmg_formula2021": {
+"st": 401,
+"etag": "",
+"lm": "",
+"tam": "",
+"url": "https://portal-hml.saude.mg.gov.br/wp-content/uploads/2025/01/Nota-Tecnica-Formulas-Infantis.pdf"
+},
+"precos_formula2026": {
+"st": 200,
+"h": "194aa18dce0b3d5b",
+"url": "https://www.cliquefarma.com.br/bebe-e-gestante/alimentacao-infantil/formulas-infantis"
+},
+"esavi2020": {
+"st": 200,
+"etag": "\"66e478cd-202db3\"",
+"lm": "Fri, 13 Sep 2024 17:39:25 GMT",
+"tam": "2108851",
+"url": "https://sbim.org.br/images/files/manual-vigilancia-epidemiologica-eventos-vacinacao-4ed.pdf"
+},
+"sbp_transito2021": {
+"st": 200,
+"h": "5585eb5e89d633e8",
+"url": "https://www.sbp.com.br/?p=17645"
+},
+"sbp_sono2021": {
+"st": 200,
+"etag": "\"66a43c8e-cce85\"",
+"lm": "Sat, 27 Jul 2024 00:17:18 GMT",
+"tam": "839301",
+"url": "https://www.sbp.com.br/fileadmin/user_upload/23196c-DC_Higiene_do_Sono_-_Atualizacao_2021.pdf"
+},
+"sbp_desfralde2019": {
+"st": 200,
+"etag": "\"66a41228-e7776\"",
+"lm": "Fri, 26 Jul 2024 21:16:24 GMT",
+"tam": "948086",
+"url": "https://www.sbp.com.br/fileadmin/user_upload/22076c-MO_-_Treinamento_Esfincteriano.pdf"
+},
+"bula_nafazolina": {
+"st": 200,
+"etag": "\"5f0632d9-24f0a\"",
+"lm": "Wed, 08 Jul 2020 20:55:53 GMT",
+"tam": "151306",
+"url": "https://cimedremedios.com.br/wp-content/uploads/2020/03/Medicamento_Bula_Paciente-NARIX-GOTAS.pdf"
+},
+"sbp_repel2015": {
+"st": 200,
+"etag": "\"66a3d632-614e7\"",
+"lm": "Fri, 26 Jul 2024 17:00:34 GMT",
+"tam": "398567",
+"url": "https://www.sbp.com.br/fileadmin/user_upload/2012/12/Repelentes-2015.pdf"
+},
+"guia_telas2025": {
+"st": 200,
+"h": "88a517cdea25d912",
+"url": "https://www.cnnbrasil.com.br/educacao/governo-lanca-guia-sobre-uso-de-telas-por-criancas-e-adolescentes-confira/"
+},
+"abeso2026": {
+"st": 200,
+"etag": "",
+"lm": "Tue, 31 Mar 2026 23:25:41 GMT",
+"tam": "2471525",
+"url": "https://abeso.org.br/wp-content/uploads/2026/03/Diretrizes-ABESO_completo_20260320.pdf"
+},
+"bula_wegovy2026": {
+"st": 200,
+"etag": "",
+"lm": "Fri, 15 May 2026 14:05:26 GMT",
+"tam": "819270",
+"url": "https://www.novonordisk.com.br/content/dam/nncorp/br/pt/pdfs/bulas/hcp/Wegovy_Bula_Profissional.pdf"
+},
+"bula_ozempic2026": {
+"st": 200,
+"etag": "",
+"lm": "Fri, 24 Apr 2026 18:33:25 GMT",
+"tam": "995214",
+"url": "https://www.novonordisk.com.br/content/dam/nncorp/br/pt/pdfs/bulas/hcp/Ozempic_3mL_1mg_Bula_Profissional.pdf"
+},
+"bula_rybelsus2026": {
+"st": 200,
+"etag": "",
+"lm": "Wed, 23 Sep 2026 20:41:34 GMT",
+"tam": "584536",
+"url": "https://www.novonordisk.com.br/content/dam/nncorp/br/pt/pdfs/bulas/hcp/Rybelsus_Bula_PROFISSIONAL.pdf"
+},
+"bula_victoza2024": {
+"st": 200,
+"etag": "",
+"lm": "Thu, 22 May 2025 23:15:20 GMT",
+"tam": "924979",
+"url": "https://www.novonordisk.com.br/content/dam/nncorp/br/pt/pdfs/bulas/hcp/Victoza_Bula_Profissional-05-01.pdf"
+},
+"bula_saxenda2021": {
+"st": 200,
+"etag": "",
+"lm": "Thu, 22 May 2025 23:15:18 GMT",
+"tam": "1570986",
+"url": "https://www.novonordisk.com.br/content/dam/nncorp/br/pt/pdfs/bulas/hcp/Saxenda_Bula_Profissional.pdf"
+},
+"bula_trulicity2019": {
+"st": 200,
+"etag": "\"dbc1f3cb9194fdd20caa385f4f8a9235\"",
+"lm": "Wed, 12 May 2021 06:15:46 GMT",
+"tam": "714937",
+"url": "https://img.drogasil.com.br/raiadrogasil_bula/Trulicity.pdf"
+},
+"bula_mounjaro": {
+"st": 200,
+"etag": "",
+"lm": "",
+"tam": "256798",
+"url": "https://www.bulas.med.br/p/substancias/bula/1502615/Mounjaro.html"
+},
+"ema_mounjaro": {
+"st": 200,
+"etag": "\"ef32c9b690a3612ac9011132a13a9b269d6eb58777f41405b23ce43a76fb084e\"",
+"lm": "Thu, 08 Oct 2026 09:18:19 GMT",
+"tam": "0",
+"url": "https://www.ema.europa.eu/pt/documents/product-information/mounjaro-epar-product-information_pt.pdf"
+},
+"lilly_contracep": {
+"st": 403,
+"url": "https://medical.lilly.com/us/products/answers/can-adults-with-obesity-or-overweight-taking-zepbound-tirzepatide-also-take-oral-contraceptives-211019"
+},
+"anvisa_glp1_2025": {
+"st": 200,
+"etag": "W/\"af8cb-I6uymOHZKbpb6Gf1FqVpf9e+rUk:dtagent103452608101703306nty:dtagent103452608101703306nty\"",
+"lm": "",
+"tam": "719051",
+"url": "https://www.gov.br/anvisa/pt-br/centraisdeconteudo/publicacoes/monitoramento/farmacovigilancia/perguntas-e-respostas/perguntas-respostas-mudancas-na-comercializacao-e-escrituracao-dos-medicamentos-inibidores-glp-1"
+},
+"ms_conitec_glp1_2026": {
+"st": 200,
+"h": "efd87bcd8b51e3b8",
+"url": "https://agenciagov.ebc.com.br/noticias/202609/ministerio-da-saude-protocola-na-conitec-pedido-de-analise-para-incorporacao-de-canetas-emagrecedoras-no-sus"
+},
+"liraglutida_generico2026": {
+"st": 200,
+"etag": "",
+"lm": "Sun, 01 Nov 2026 10:58:03 GMT",
+"tam": "",
+"url": "https://mercadoeconsumo.com.br/10/09/2026/economia/anvisa-aprova-genericos-de-medicamentos-contra-diabetes-e-obesidade/"
+},
+"select2023": {
+"st": 403,
+"url": "https://doi.org/10.1056/NEJMoa2307563"
+},
+"flow2024": {
+"st": 403,
+"url": "https://doi.org/10.1056/NEJMoa2403347"
+},
+"soul2025": {
+"st": 403,
+"url": "https://doi.org/10.1056/NEJMoa2501006"
+},
+"step1_2021": {
+"st": 403,
+"url": "https://doi.org/10.1056/NEJMoa2032183"
+},
+"step1ext2022": {
+"st": 403,
+"url": "https://doi.org/10.1111/dom.14725"
+},
+"surmount1_2022": {
+"st": 403,
+"url": "https://doi.org/10.1056/NEJMoa2206038"
+},
+"surmount4_2024": {
+"st": 403,
+"url": "https://doi.org/10.1001/jama.2023.24945"
+},
+"surmount5_2025": {
+"st": 403,
+"url": "https://doi.org/10.1056/NEJMoa2416394"
+},
+"stephfpef2023": {
+"st": 403,
+"url": "https://doi.org/10.1056/NEJMoa2306963"
+},
+"summit2024": {
+"st": 403,
+"url": "https://doi.org/10.1056/NEJMoa2410027"
+},
+"essence2025": {
+"st": 403,
+"url": "https://doi.org/10.1056/NEJMoa2413258"
+},
+"surmountosa2024": {
+"st": 403,
+"url": "https://doi.org/10.1056/NEJMoa2404881"
+},
+"west_bmj2026": {
+"st": 403,
+"url": "https://doi.org/10.1136/bmj-2025-085304"
+},
+"periop_bja2025": {
+"st": 200,
+"etag": "",
+"lm": "",
+"tam": "2686",
+"url": "https://doi.org/10.1016/j.bjane.2025.844668"
+},
+"periop_multi2024": {
+"st": 200,
+"etag": "",
+"lm": "",
+"tam": "2677",
+"url": "https://doi.org/10.1016/j.soard.2024.08.033"
+},
+"gvs2_chagas": {
+"st": 200,
+"h": "1d4f16189f67862f",
+"url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/svsa/vigilancia/guia-de-vigilancia-em-saude-volume-2-6a-edicao/view"
+},
+"pcdt_chagas2018": {
+"st": 200,
+"etag": "W/\"37a33-97zpDKh3RTXy52/ibtIgdiGDrOc\"",
+"lm": "",
+"tam": "227891",
+"url": "https://www.gov.br/conitec/pt-br/midias/protocolos/pcdt_doenca_de_chagas.pdf"
+},
+"nt240_2025": {
+"st": 200,
+"etag": "\"146bb0-64a2b786428f3\"",
+"lm": "Fri, 06 Feb 2026 17:53:44 GMT",
+"tam": "1338288",
+"url": "https://lacen.saude.pr.gov.br/sites/lacen/arquivos_restritos/files/documento/2026-02/nota_tecnica_conjunta_no_2402025-cgzvdedtsvsams-doencas_de_chagas.pdf"
+},
+"bula_benz": {
+"st": 200,
+"etag": "",
+"lm": "Sun, 01 Nov 2026 10:58:05 GMT",
+"tam": "",
+"url": "https://bula.com.br/benznidazol-lafepe"
+},
+"gvs2_esporo": {
+"st": 200,
+"h": "1d4f16189f67862f",
+"url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/svsa/vigilancia/guia-de-vigilancia-em-saude-volume-2-6a-edicao/view"
+},
+"nt20_2025_esporo": {
+"st": 200,
+"etag": "W/\"591fb-NIz/ikZ284+Xi+dFipLoNYG3OgU\"",
+"lm": "",
+"tam": "365051",
+"url": "https://www.gov.br/aids/pt-br/central-de-conteudo/notas-tecnicas/2026/nota-tecnica-no-20_2025-cgtm_dathi_svsa_ms.pdf"
+},
+"fda_itra": {
+"st": 200,
+"etag": "\"053d4fc5652db1:0\"",
+"lm": "Thu, 19 Dec 2024 20:45:50 GMT",
+"tam": "649745",
+"url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/020083s070lbl.pdf"
+},
+"gvs2_lt": {
+"st": 200,
+"h": "1d4f16189f67862f",
+"url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/svsa/vigilancia/guia-de-vigilancia-em-saude-volume-2-6a-edicao/view"
+},
+"mlt2013": {
+"st": 200,
+"etag": "",
+"lm": "",
+"tam": "244",
+"url": "https://saude.prefeitura.rio/wp-content/uploads/sites/47/2023/04/manual_vigilancia_leishmaniose_tegumentar_americana_2edicao.pdf"
+},
+"paho_leish2022": {
+"st": 200,
+"etag": "W/\"1793530686\"",
+"lm": "Sun, 01 Nov 2026 10:58:06 GMT",
+"tam": "51392",
+"url": "https://www.paho.org/pt/documentos/diretrizes-para-tratamento-das-leishmanioses-na-regiao-das-americas-segunda-edicao"
+},
+"gvs2_lv": {
+"st": 200,
+"h": "1d4f16189f67862f",
+"url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/svsa/vigilancia/guia-de-vigilancia-em-saude-volume-2-6a-edicao/view"
+},
+"gvs2_fa": {
+"st": 200,
+"h": "1d4f16189f67862f",
+"url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/svsa/vigilancia/guia-de-vigilancia-em-saude-volume-2-6a-edicao/view"
+},
+"gvs2_hansen": {
+"st": 200,
+"h": "778644379c188217",
+"url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/svsa/vigilancia/guia-de-vigilancia-em-saude-volume-2-6a-edicao/view"
+},
+"tsrs_derm2023": {
+"st": 0,
+"url": "https://www.ufrgs.br/telessauders/regulasus/#regulasus-protocolos"
+},
+"abd_pr2008": {
+"st": 200,
+"h": "9410d8bb6d823f25",
+"url": "https://www.scielo.br/j/abd/a/Y8BVHW77CHDRzpFxPzhxmvS/?lang=pt"
+},
+"msd_pr2025": {
+"st": 200,
+"etag": "\"lt8sc8ep1t7fix\"",
+"lm": "",
+"tam": "347024",
+"url": "https://www.msdmanuals.com/professional/dermatologic-disorders/psoriasis-and-other-papulosquamous-disorders/pityriasis-rosea"
+},
+"bad_sjs2016": {
+"st": 403,
+"url": "https://academic.oup.com/bjd/article/174/6/1194/6617016"
+},
+"wm_commons_pele": {
+"st": 200,
+"etag": "",
+"lm": "Sun, 01 Nov 2026 02:00:19 GMT",
+"tam": "254448",
+"url": "https://commons.wikimedia.org/"
+},
+"bula_sro": {
+"st": 0,
+"url": "https://portal.saude.sp.gov.br/resources/ses/perfil/gestor/assistencia-farmaceutica/medicamentos-das-unidades-farmacia-dose-certa/sais_reidratacao_set2024_final_atualizado.pdf"
+},
+"ms_criadouros2024": {
+"st": 200,
+"h": "d27c9a8ba78972b2",
+"url": "https://agenciagov.ebc.com.br/noticias/202402/confira-10-passos-para-eliminar-focos-do-mosquito-da-dengue"
+},
+"ms_dengue_enf2026": {
+"st": 404,
+"url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/guias-e-manuais/2026/dengue-manual-de-enfermagem.pdf"
+},
+"cochrane_glarg2020": {
+"st": 403,
+"url": "https://doi.org/10.1002/14651858.CD005613.pub4"
+},
+"nice_ng158": {
+"st": 200,
+"etag": "W/375156A7BE000907CFFE3F90C3A54342",
+"lm": "",
+"tam": "",
+"url": "https://www.nice.org.uk/guidance/NG158/chapter/Recommendations"
+},
+"nice_ng224": {
+"st": 200,
+"etag": "W/77B59ECF0003368E5940D79054AB3EB3",
+"lm": "",
+"tam": "20672",
+"url": "https://www.nice.org.uk/guidance/ng224"
+},
+"ada_crises2024": {
+"st": 200,
+"etag": "",
+"lm": "Sun, 01 Nov 2026 10:58:21 GMT",
+"tam": "",
+"url": "https://www.ccjm.org/content/92/3/152"
+},
+"tsrs_uro2023": {
+"st": 0,
+"url": "https://www.ufrgs.br/telessauders/regulacao/protocolos-de-encaminhamento/"
+},
+"twist2013": {
+"st": 403,
+"url": "https://doi.org/10.1016/j.juro.2012.10.056"
+},
+"cdc_epid2021": {
+"st": 403,
+"url": "https://www.cdc.gov/stiapp/epididymitis.html"
+},
+"bgs_4at": {
+"st": 200,
+"etag": "W/E4D91AD4740419A0B26D2092E88A1E6A",
+"lm": "",
+"tam": "21616",
+"url": "https://www.nice.org.uk/guidance/cg103"
+},
+"port11211": {
+"st": 403,
+"url": "https://www.in.gov.br/"
+},
+"gvs1_coq": {
+"st": 200,
+"etag": "\"4265fa-616da6d052800\"",
+"lm": "Wed, 24 Apr 2024 16:47:28 GMT",
+"tam": "4351482",
+"url": "https://bvsms.saude.gov.br/bvs/publicacoes/guia_vigilancia_saude_6edrev_v1.pdf"
+},
+"gvs1_sarampo": {
+"st": 200,
+"etag": "\"4265fa-616da6d052800\"",
+"lm": "Wed, 24 Apr 2024 16:47:28 GMT",
+"tam": "4351482",
+"url": "https://bvsms.saude.gov.br/bvs/publicacoes/guia_vigilancia_saude_6edrev_v1.pdf"
+},
+"gvs2_arbo": {
+"st": 200,
+"etag": "\"3fa5a6-616ef4328b500\"",
+"lm": "Thu, 25 Apr 2024 17:39:00 GMT",
+"tam": "4171174",
+"url": "https://bvsms.saude.gov.br/bvs/publicacoes/guia_vigilancia_saude_v2_6edrev.pdf"
+},
+"gvs2_hiv": {
+"st": 200,
+"etag": "\"3fa5a6-616ef4328b500\"",
+"lm": "Thu, 25 Apr 2024 17:39:00 GMT",
+"tam": "4171174",
+"url": "https://bvsms.saude.gov.br/bvs/publicacoes/guia_vigilancia_saude_v2_6edrev.pdf"
+},
+"wm_inf": {
+"st": 200,
+"etag": "",
+"lm": "Sun, 01 Nov 2026 02:00:19 GMT",
+"tam": "254448",
+"url": "https://commons.wikimedia.org/"
+},
+"gvs1_varicela": {
+"st": 200,
+"etag": "\"4265fa-616da6d052800\"",
+"lm": "Wed, 24 Apr 2024 16:47:28 GMT",
+"tam": "4351482",
+"url": "https://bvsms.saude.gov.br/bvs/publicacoes/guia_vigilancia_saude_6edrev_v1.pdf"
+},
+"cochrane_crupe2023": {
+"st": 403,
+"url": "https://doi.org/10.1002/14651858.CD001955.pub5"
+},
+"espghan_constip2026": {
+"st": 403,
+"url": "https://doi.org/10.1002/jpn3.70447"
+},
+"aap_piolho2022": {
+"st": 403,
+"url": "https://doi.org/10.1542/peds.2022-059282"
+},
+"gvs1_tetano": {
+"st": 200,
+"etag": "\"4265fa-616da6d052800\"",
+"lm": "Wed, 24 Apr 2024 16:47:28 GMT",
+"tam": "4351482",
+"url": "https://bvsms.saude.gov.br/bvs/publicacoes/guia_vigilancia_saude_6edrev_v1.pdf"
+},
+"gvs1_zoster": {
+"st": 200,
+"etag": "\"4265fa-616da6d052800\"",
+"lm": "Wed, 24 Apr 2024 16:47:28 GMT",
+"tam": "4351482",
+"url": "https://bvsms.saude.gov.br/bvs/publicacoes/guia_vigilancia_saude_6edrev_v1.pdf"
+},
+"cff_zoster2026": {
+"st": 200,
+"h": "044e2fe331d58d61",
+"url": "https://site.cff.org.br/noticia/Noticias-gerais/15/01/2026/ministerio-da-saude-mantem-vacina-contra-herpes-zoster-fora-do-sus"
+},
+"gvs3_himenop": {
+"st": 200,
+"etag": "\"131881-616da6d32eec0\"",
+"lm": "Wed, 24 Apr 2024 16:47:31 GMT",
+"tam": "1251457",
+"url": "https://bvsms.saude.gov.br/bvs/publicacoes/guia_vigilancia_saude_6edrev_v3.pdf"
+},
+"pcdt_ist2022": {
+"st": 200,
+"etag": "W/\"56fa2-KJG7MBDITGnK+jRglcxdZ94IFlA\"",
+"lm": "",
+"tam": "356258",
+"url": "https://www.gov.br/aids/pt-br/central-de-conteudo/pcdts/2022/ist/pcdt-ist-2022_isbn-1.pdf"
+},
+"nt14_2023": {
+"st": 200,
+"h": "4fd3f6e4d09428f1",
+"url": "https://agenciagov.ebc.com.br/noticias/202307/ministerio-da-saude-atualiza-recomendacao-sobre-o-intervalo-entre-doses-de-penicilina-para-tratamento-de-sifilis-em-gestantes"
+},
+"pab_mulher2016": {
+"st": 200,
+"etag": "\"4a8a5d-53089bf60d3c0\"",
+"lm": "Fri, 15 Apr 2016 17:57:43 GMT",
+"tam": "4885085",
+"url": "https://bvsms.saude.gov.br/bvs/publicacoes/protocolos_atencao_basica_saude_mulheres.pdf"
+},
+"tsrs_gin2023": {
+"st": 0,
+"url": "https://www.ufrgs.br/telessauders/regulasus/#regulasus-protocolos"
+},
+"pcdt_sop2019": {
+"st": 404,
+"etag": "",
+"lm": "",
+"tam": "",
+"url": "https://www.gov.br/conitec/pt-br/midias/protocolos/pcdt_sop.pdf"
+},
+"mgar2022": {
+"st": 200,
+"etag": "\"4904b6-5e9aea87e8b00\"",
+"lm": "Tue, 27 Sep 2022 20:40:44 GMT",
+"tam": "4785334",
+"url": "https://bvsms.saude.gov.br/bvs/publicacoes/manual_gestacao_alto_risco.pdf"
+},
+"tsrs_reum2022": {
+"st": 0,
+"url": "https://www.ufrgs.br/telessauders/regulasus/#regulasus-protocolos"
+},
+"cab28_neuro": {
+"st": 200,
+"etag": "\"84c262-5293b1b193780\"",
+"lm": "Wed, 13 Jan 2016 18:11:58 GMT",
+"tam": "8700514",
+"url": "https://bvsms.saude.gov.br/bvs/publicacoes/acolhimento_demanda_espontanea_queixas_comuns_cab28v2.pdf"
+},
+"cab28_rs": {
+"st": 200,
+"etag": "\"84c262-5293b1b193780\"",
+"lm": "Wed, 13 Jan 2016 18:11:58 GMT",
+"tam": "8700514",
+"url": "https://bvsms.saude.gov.br/bvs/publicacoes/acolhimento_demanda_espontanea_queixas_comuns_cab28v2.pdf"
+},
+"cab28_odonto": {
+"st": 200,
+"etag": "\"84c262-5293b1b193780\"",
+"lm": "Wed, 13 Jan 2016 18:11:58 GMT",
+"tam": "8700514",
+"url": "https://bvsms.saude.gov.br/bvs/publicacoes/acolhimento_demanda_espontanea_queixas_comuns_cab28v2.pdf"
+},
+"cab28_olho": {
+"st": 200,
+"etag": "\"84c262-5293b1b193780\"",
+"lm": "Wed, 13 Jan 2016 18:11:58 GMT",
+"tam": "8700514",
+"url": "https://bvsms.saude.gov.br/bvs/publicacoes/acolhimento_demanda_espontanea_queixas_comuns_cab28v2.pdf"
+},
+"gold2026": {
+"st": 200,
+"h": "9c717fb193e33d89",
+"url": "https://goldcopd.org/2026-gold-report/"
+},
+"aborl_rinite2024": {
+"st": 200,
+"h": "159c7f7c653d119c",
+"url": "https://aborlccf.org.br/"
+},
+"tsrs_oft2023": {
+"st": 0,
+"url": "https://www.ufrgs.br/telessauders/regulasus/#regulasus-protocolos"
+},
+"tsrs_pneumo2023": {
+"st": 0,
+"url": "https://www.ufrgs.br/telessauders/regulasus/#regulasus-protocolos"
+},
+"tb_sr2019": {
+"st": 200,
+"etag": "\"395bb3-58cc6e40ca340\"",
+"lm": "Wed, 03 Jul 2019 13:32:21 GMT",
+"tam": "3759027",
+"url": "http://bvsms.saude.gov.br/bvs/publicacoes/manual_recomendacoes_controle_tuberculose_brasil_2_ed.pdf"
+},
+"bh_nt13_2026": {
+"st": 200,
+"etag": "\"28f1b2-6509d18ea9b37\"",
+"lm": "Wed, 29 Apr 2026 17:58:38 GMT",
+"tam": "2683314",
+"url": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/saude/2026/29-04-26-smsa-nt-013-2026-nirma-riton.pdf"
+},
+"cab28_dv": {
+"st": 200,
+"etag": "\"84c262-5293b1b193780\"",
+"lm": "Wed, 13 Jan 2016 18:11:58 GMT",
+"tam": "8700514",
+"url": "https://bvsms.saude.gov.br/bvs/publicacoes/acolhimento_demanda_espontanea_queixas_comuns_cab28v2.pdf"
+},
+"cab28_has": {
+"st": 200,
+"etag": "\"84c262-5293b1b193780\"",
+"lm": "Wed, 13 Jan 2016 18:11:58 GMT",
+"tam": "8700514",
+"url": "https://bvsms.saude.gov.br/bvs/publicacoes/acolhimento_demanda_espontanea_queixas_comuns_cab28v2.pdf"
+},
+"sc_gastro2022": {
+"st": 200,
+"etag": "",
+"lm": "",
+"tam": "789020",
+"url": "https://saude.sc.gov.br/index.php/pt/regulacao/protocolo-de-acesso-e-classificacao-de-risco/gastroenterologia-e-hepatologia-adulto/download"
+},
+"tsrs_card2022": {
+"st": 0,
+"url": "https://www.ufrgs.br/telessauders/regulasus/#regulasus-protocolos"
+},
+"cab28_sm": {
+"st": 200,
+"etag": "\"84c262-5293b1b193780\"",
+"lm": "Wed, 13 Jan 2016 18:11:58 GMT",
+"tam": "8700514",
+"url": "https://bvsms.saude.gov.br/bvs/publicacoes/acolhimento_demanda_espontanea_queixas_comuns_cab28v2.pdf"
+},
+"estrategia_caxumba2026": {
+"st": 200,
+"etag": "",
+"lm": "Sun, 01 Nov 2026 10:58:20 GMT",
+"tam": "",
+"url": "https://med.estrategia.com/portal/noticias/ministerio-da-saude-reconhece-erro-em-portaria-sobre-notificacao-de-caxumba/"
+},
+"formulario_fito_anvisa2026": {
+"st": 200,
+"etag": "",
+"lm": "Wed, 01 Jul 2026 15:34:16 GMT",
+"tam": "",
+"url": "https://bibliotecadigital.anvisa.gov.br/jspui/handle/anvisa/21045"
+},
+"cochrane_hiperico2008": {
+"st": 403,
+"url": "https://doi.org/10.1002/14651858.CD000448.pub3"
+},
+"cochrane_equinacea2014": {
+"st": 403,
+"url": "https://doi.org/10.1002/14651858.CD000530.pub3"
+},
+"cochrane_castanha2012": {
+"st": 403,
+"url": "https://doi.org/10.1002/14651858.CD003230.pub4"
+},
+"cochrane_tanaceto2015": {
+"st": 403,
+"url": "https://doi.org/10.1002/14651858.CD002286.pub3"
+},
+"cochrane_ginkgo_zumbido2022": {
+"st": 403,
+"url": "https://doi.org/10.1002/14651858.CD013514.pub2"
+},
+"cochrane_ginkgo_zumbido2013": {
+"st": 403,
+"url": "https://doi.org/10.1002/14651858.CD003852.pub3"
+},
+"cochrane_herbal_lombalgia2014": {
+"st": 403,
+"url": "https://doi.org/10.1002/14651858.CD004504.pub4"
+},
+"cochrane_alcachofra2013": {
+"st": 403,
+"url": "https://doi.org/10.1002/14651858.CD003335.pub3"
+},
+"holtmann2003_alcachofra": {
+"st": 403,
+"url": "https://doi.org/10.1046/j.1365-2036.2003.01767.x"
+},
+"cochrane_passiflora2007": {
+"st": 403,
+"url": "https://doi.org/10.1002/14651858.CD004518.pub2"
+},
+"janda2020_passiflora": {
+"st": 403,
+"url": "https://doi.org/10.3390/nu12123894"
+},
+"leach2015_insonia": {
+"st": 200,
+"etag": "",
+"lm": "",
+"tam": "2704",
+"url": "https://doi.org/10.1016/j.smrv.2014.12.003"
+},
+"leite1986_capimlimao": {
+"st": 200,
+"etag": "",
+"lm": "",
+"tam": "2744",
+"url": "https://doi.org/10.1016/0378-8741(86)90074-7"
+},
+"tabach2017_espinheira": {
+"st": 403,
+"url": "https://doi.org/10.1002/ptr.5816"
+},
+"carneiro2014_cavalinha": {
+"st": 403,
+"url": "https://doi.org/10.1155/2014/760683"
+},
+"carneiro2022_cavalinha": {
+"st": 200,
+"etag": "",
+"lm": "",
+"tam": "2726",
+"url": "https://doi.org/10.1016/j.phymed.2022.153955"
+},
+"aga_acg2023_constipacao": {
+"st": 200,
+"etag": "",
+"lm": "",
+"tam": "2740",
+"url": "https://doi.org/10.1053/j.gastro.2023.03.214"
+},
+"widrig2007_arnica": {
+"st": 200,
+"etag": "W/\"69ec5f8d1b04a8186d67a65f9852ebd2\"",
+"lm": "",
+"tam": "",
+"url": "https://doi.org/10.1007/s00296-007-0304-y"
+},
+"calendula_fraldas_ecr": {
+"st": 403,
+"url": "https://doi.org/10.1100/2012/810234"
+},
+"salehi2020_enzimas": {
+"st": 403,
+"url": "https://doi.org/10.1093/jbcr/iraa074"
+},
+"rosamosqueta_ecr2019": {
+"st": 200,
+"etag": "",
+"lm": "",
+"tam": "2883",
+"url": "https://doi.org/10.1016/j.endinu.2019.04.008"
+},
+"alecrim_dismen2019": {
+"st": 200,
+"h": "555702f55f445880",
+"url": "https://doi.org/10.4103/ijnmr.IJNMR_99_18"
+},
+"margaretten2007": {
+"st": 403,
+"url": "https://doi.org/10.1001/jama.297.13.1478"
+},
+"sanjo2023": {
+"st": 200,
+"h": "133b6bb98af215fc",
+"url": "https://boris.unibe.ch/178599/1/jbji-8-29-2023.pdf"
+},
+"kocher1999": {
+"st": 200,
+"h": "8ff665b9aa13615b",
+"url": "https://doi.org/10.2106/00004623-199912000-00002"
+},
+"jones2015": {
+"st": 403,
+"url": "https://doi.org/10.1161/CIR.0000000000000205"
 }
 }
 }

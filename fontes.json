@@ -1,12 +1,12 @@
 {
- "gerado": "2026-10-30T21:15:15.236Z",
+ "gerado": "2026-11-01T21:40:03.893Z",
  "cmed": {
   "data": "09/10/2026",
   "fonte": "cmed_pmc2026",
   "icms": "PMC com ICMS de Minas Gerais: 12% para genéricos e 18% para os demais"
  },
- "n_fontes": 721,
- "n_itens": 390,
+ "n_fontes": 736,
+ "n_itens": 392,
  "sem_url": [
   "remume",
   "aap_oma",
@@ -599,6 +599,7 @@
     "cr-dac",
     "cr-depressao",
     "cr-dislipidemia",
+    "cr-dm1",
     "cr-dm2",
     "cr-dm2-insulina",
     "cr-dpoc",
@@ -615,6 +616,7 @@
     "cr-hipotireoidismo",
     "cr-ic",
     "cr-icfep",
+    "cr-lada",
     "cr-les",
     "cr-osteoporose",
     "cr-parkinson",
@@ -843,6 +845,7 @@
     "cr-dac",
     "cr-depressao",
     "cr-dislipidemia",
+    "cr-dm1",
     "cr-dm2",
     "cr-dm2-insulina",
     "cr-dpoc",
@@ -863,6 +866,7 @@
     "cr-ic",
     "cr-icfep",
     "cr-inapetencia",
+    "cr-lada",
     "cr-les",
     "cr-osteoporose",
     "cr-parkinson",
@@ -2949,6 +2953,7 @@
    "url": "https://www.saude.mg.gov.br/wp-content/uploads/2025/01/12-11-Estratificacao-de-Risco-final-1.pdf",
    "ano": 2024,
    "usado_em": [
+    "cr-dm1",
     "pn-1consulta",
     "pn-3tri",
     "pn-anemia",
@@ -3298,6 +3303,7 @@
     "cr-glargina",
     "cr-glp1",
     "cr-icfep",
+    "cr-lada",
     "cr-polifarmacia"
    ]
   },
@@ -6352,6 +6358,7 @@
    "url": "https://portal.afya.com.br/medicina-de-familia/cbmfc-2025-abordagem-da-hipoglicemia-e-da-hiperglicemia-na-aps",
    "ano": 2025,
    "usado_em": [
+    "cr-dm1",
     "hipoglicemia"
    ]
   },
@@ -6473,6 +6480,7 @@
    "url": "",
    "ano": 2025,
    "usado_em": [
+    "cr-dm1",
     "cr-dm2",
     "pn-risco"
    ]
@@ -6485,6 +6493,7 @@
    "url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-169-2026-dafsctie-deprossaps-daetsaes-ms.pdf",
    "ano": 2026,
    "usado_em": [
+    "cr-dm1",
     "cr-dm2",
     "cr-dm2-insulina",
     "cr-glargina"
@@ -6498,6 +6507,7 @@
    "url": "",
    "ano": 2026,
    "usado_em": [
+    "cr-dm1",
     "cr-dm2",
     "cr-dm2-insulina",
     "cr-glargina"
@@ -8640,6 +8650,7 @@
    "url": "",
    "ano": 2026,
    "usado_em": [
+    "cr-dm1",
     "cr-dm2",
     "cr-dm2-insulina",
     "cr-glargina",
@@ -8689,6 +8700,7 @@
    "url": "https://www.ccjm.org/content/92/3/152",
    "ano": 2025,
    "usado_em": [
+    "cr-dm1",
     "hiperglicemia"
    ]
   },
@@ -8711,6 +8723,7 @@
    "url": "",
    "ano": 2025,
    "usado_em": [
+    "cr-dm1",
     "hiperglicemia"
    ]
   },
@@ -9885,7 +9898,180 @@
    "url": "",
    "ano": 2026,
    "usado_em": [
-    "cr-exames-ubs"
+    "cr-dm1",
+    "cr-exames-ubs",
+    "cr-lada"
+   ]
+  },
+  {
+   "k": "pcdt_dm1_2019",
+   "s": "PCDT DM1 2019 (Portaria Conjunta 17/2019)",
+   "t": "Ministério da Saúde. Protocolo Clínico e Diretrizes Terapêuticas do Diabete Melito Tipo 1 – Portaria Conjunta SAES/SCTIE nº 17, de 12/11/2019 (revoga a Portaria Conjunta 8/2018): diagnóstico (GJ ≥ 126 em 2 ocasiões, glicemia ao acaso > 200 com sintomas, HbA1c ≥ 6,5% em 2 ocasiões); suspeita de LADA com peptídeo C + ao menos 1 marcador (ICA ou IAA); metas (HbA1c < 7,5% criança/adolescente, < 7,0% adulto, 7,5–8,5% idoso, < 6,0% gestante); doses (0,5–1 UI/kg/dia no início; lua de mel < 0,5; basal 40–60%); critérios de análogo de ação rápida e prolongada (uso prévio ≥ 3 meses, hipoglicemia grave, ≥ 2 não graves/semana, > 1 noturna/semana ou mau controle persistente em 12 meses, AMG ≥ 3×/dia, seguimento ≥ 2×/ano), manutenção e suspensão; rastreio anual de complicações a partir do 5º ano ou na puberdade (norma; texto integral lido). Em 2026 a CONITEC informa o PCDT 'em atualização' (parecer técnico NAT-Jus, jan/2026).",
+   "f": "F",
+   "url": "https://www.gov.br/saude/pt-br/assuntos/pcdt/arquivos/2021/portaria-conjunta-17_2019_pcdt_diabete-melito-1.pdf",
+   "ano": 2026,
+   "usado_em": [
+    "cr-dm1",
+    "cr-lada"
+   ]
+  },
+  {
+   "k": "ceaf_mg_dm1_2025",
+   "s": "Farmácia de Minas – análogos de insulina no DM1 (jul/2025)",
+   "t": "SES-MG, Farmácia de Minas. Orientações para solicitação de insulina análoga de ação rápida e de ação prolongada (DM1), atualizado em 08/07/2025: asparte (idade 1 a 3 anos, conforme o documento), lispro (≥ 3 anos), glargina (≥ 2 anos); abertura com documentos pessoais, LME, prescrição pela DCB, formulário específico do DM1 e termo; glicemia (2 HbA1c ou 2 glicemias de jejum nos últimos 6 meses, ou 1 glicemia ao acaso ou de 2 h); só para LADA: peptídeo C e ao menos 1 marcador de autoimunidade (anti-ICA ou anti-IAA); critérios de hipoglicemia ou mau controle (HbA1c dos últimos 12 meses), uso prévio de NPH/regular > 3 meses, AMG ≥ 3×/dia, seguimento ≥ 2×/ano; renovação a cada 6 meses com HbA1c de até 3 meses; sem retirada por 6 meses = inativação; pedido na farmácia do município, análise em ~30 dias (norma estadual; documento lido).",
+   "f": "F",
+   "url": "https://www.saude.mg.gov.br/wp-content/uploads/2025/07/DIABETES-MELLITUS-TIPO-1.pdf",
+   "ano": 2025,
+   "usado_em": [
+    "cr-dm1",
+    "cr-lada"
+   ]
+  },
+  {
+   "k": "sbd_classif2023",
+   "s": "SBD – Classificação do diabetes (2023)",
+   "t": "Sociedade Brasileira de Diabetes. Classificação do diabetes. Diretriz Oficial (revisão 14/12/2023; DOI 10.29327/557753.2022-1): R1 diferenciar DM1 × DM2 primeiro pela clínica (IIa, B); R2 autoanticorpos na suspeita de DM1 no adulto – positivos confirmam (I, B); R3 peptídeo C ao acaso se anticorpos negativos e dúvida persistir – < 0,6 ng/mL após ≥ 5 anos sugere DM1B, > 0,6 sugere DM2 ou monogênico (I, C); R4 LADA = adulto com anticorpo positivo sem necessidade de insulina por ≥ 6 meses (I, C); critérios de Fourlanos (idade < 50, sintomas agudos, IMC < 25, autoimunidade pessoal ou familiar; ≥ 2 = sensibilidade 90%, especificidade 71%); anti-insulina pouco confiável após o início da insulina; R5 MODY (início < 25 anos, 2–3 gerações, anticorpos negativos, peptídeo C > 0,6 após 5 anos) (diretriz de sociedade; página lida).",
+   "f": "F",
+   "url": "https://diretriz.diabetes.org.br/classificacao-do-diabetes/",
+   "ano": 2023,
+   "usado_em": [
+    "cr-dm1",
+    "cr-lada"
+   ]
+  },
+  {
+   "k": "sbd_dm1sus2023",
+   "s": "SBD – Tratamento do DM1 no SUS (2023)",
+   "t": "Melo KFS, Almeida-Pititto B, Pedrosa HC. Tratamento do diabetes mellitus tipo 1 no SUS. Diretriz Oficial da SBD (revisão 12/04/2023; DOI 10.29327/5238993.2023-12): basal-bolus com NPH em 2–3 (às vezes 4) doses – antes do café, antes do almoço e ao deitar (~22 h, ~8 h antes de acordar; NPH antes do jantar causa hipoglicemia noturna) – e regular 30 min antes das refeições principais; basal < 50% da dose total; doses por fase (Tabela 3); escalonamento NPH + análogo rápido → análogo prolongado + rápido → ultralongo → tecnologias; AMG 3–4×/dia, registro de 15–30 dias se não houver download; HbA1c a cada 3 meses (6 se ótimo); tiras conforme regra local; agulhas ≥ 1/dia para cada insulina; APS como ordenadora do cuidado, endocrinologista ≥ 2×/ano quando possível; rastreio de complicações anual a partir de 5 anos ou na puberdade (diretriz de sociedade; página lida).",
+   "f": "F",
+   "url": "https://diretriz.diabetes.org.br/tratamento-do-diabetes-mellitus-tipo-1-no-sus/",
+   "ano": 2023,
+   "usado_em": [
+    "cr-dm1"
+   ]
+  },
+  {
+   "k": "sbd_diasdoenca2023",
+   "s": "SBD – Manejo dos dias de doença no DM1 (2023)",
+   "t": "Rodrigues MLD, Calliari LE, Rodacki M. Manejo dos dias de doença no DM1. Diretriz Oficial da SBD (revisão 17/08/2023; DOI 10.29327/5238993.2023-1): glicemia a cada 1–4 h; cetonas se glicemia > 300 mg/dL em 2 medidas com 1–2 h de intervalo após correção (cetonemia preferível à cetonúria; repetir a cada 1–2 h até < 0,6 mmol/L); doses extras por cetonemia (0,7–1,4: +5% da dose total diária por bolus; 1,5–2,9: +10%; > 3,0: +20–50%, com glicemia 180–250; maiores se > 250); não suspender a basal (I, C); hidratação com sais; procurar emergência se vômitos > 2 h, desidratação, alteração de consciência, dor abdominal importante, Kussmaul, hálito cetônico, cetonemia > 1,5 ou cetonúria alta apesar das medidas, glicemia subindo ou < 70 que não se mantém, criança < 5 anos ou família sem condição de acompanhar (diretriz de sociedade; página lida).",
+   "f": "F",
+   "url": "https://diretriz.diabetes.org.br/manejo-dos-dias-de-doenca-no-dm1/",
+   "ano": 2023,
+   "usado_em": [
+    "cr-dm1"
+   ]
+  },
+  {
+   "k": "sbd_autoimunes2023",
+   "s": "SBD – Comorbidades autoimunes no DM1 (2023)",
+   "t": "Sociedade Brasileira de Diabetes. Rastreamento de comorbidades autoimunes no DM1. Diretriz Oficial (revisão 13/04/2023; DOI 10.29327/557753.2022-7): TSH e anticorpos antitireoidianos (anti-TPO) ao diagnóstico e a cada 1–2 anos (I, B); doença celíaca na criança ao diagnóstico e no 2º e 5º ano (anti-tTG IgA ou antiendomísio IgA, sem deficiência de IgA) (I, B); no adulto, investigar se sintomas gastrointestinais, perda de peso, mau controle ou hipoglicemia sem explicação (I, B); insuficiência adrenal e gastrite autoimune só com suspeita clínica (III, C) (diretriz de sociedade; página lida).",
+   "f": "F",
+   "url": "https://diretriz.diabetes.org.br/rastreamento-de-comorbidades-autoimunes-no-dm1/",
+   "ano": 2023,
+   "usado_em": [
+    "cr-dm1",
+    "cr-lada"
+   ]
+  },
+  {
+   "k": "sbd_imun2025",
+   "s": "SBD 2025 – Imunização no diabetes",
+   "t": "Sáfadi MAP et al. Imunização no diabetes. Diretriz SBD 2025 (DOI 10.29327/5660187.2025-8; PDF no Drive da usuária): influenza anual a partir de 6 meses para todas as pessoas com DM; covid-19 a partir de 6 meses; pneumocócica conjugada (VPC20 preferencial; alternativas VPC15/VPC13 + VPP23); hepatite B para todas as idades; VSR ≥ 60 anos e zóster recombinante ≥ 50 anos (rede privada); vacinas especiais do SUS pelos CRIE, com encaminhamento médico (diretriz de sociedade; texto lido).",
+   "f": "F",
+   "url": "https://diretriz.diabetes.org.br/imunizacao-no-diabetes/",
+   "ano": 2025,
+   "usado_em": [
+    "cr-dm1"
+   ]
+  },
+  {
+   "k": "sbd_rastreio_dm1_2025",
+   "s": "SBD 2025 – Rastreamento do DM1 (resumo)",
+   "t": "Rodacki M et al. Rastreamento no diabetes mellitus tipo 1. Diretriz SBD 2025, conferida por resumo secundário (Portal Afya): rastrear parentes de 1º grau com anti-GAD, anti-IA2, anti-insulina e anti-ZnT8 (anticorpos pouco disponíveis no Brasil para a população geral); estágio 1 = ≥ 2 anticorpos e normoglicemia; estágio 2 = ≥ 2 anticorpos e disglicemia (GJ 100–125, TOTG 140–199, HbA1c 5,7–6,4% ou aumento de 10% em 3–12 meses); estágio 3 = critério de diabetes (resumo secundário; diretriz original não aberta).",
+   "f": "F",
+   "url": "https://portal.afya.com.br/endocrinologia/nova-diretriz-da-sbd-sobre-rastreamento-do-dm-tipo-1",
+   "ano": 2025,
+   "usado_em": [
+    "cr-dm1"
+   ]
+  },
+  {
+   "k": "ada_easd_dm1_2026",
+   "s": "ADA/EASD 2026 – DM1 no adulto (consenso)",
+   "t": "Holt RIG et al. The management of type 1 diabetes in adults. The updated 2026 consensus report by the ADA and the EASD. Diabetes Care 2026 (doi 10.2337/dci26-0122) e Diabetologia 2026 (doi 10.1007/s00125-026-06833-z; errata doi 10.1007/s00125-026-06893-1). Detalhes conferidos por resumo secundário (Portal Afya, 29/09/2026): pistas de DM1 no adulto (< 35 anos, IMC < 25, perda de peso, CAD, glicemia > 360, insulina em até 3 anos); anti-GAD primeiro, depois IA-2/ZnT8; peptídeo C ao acaso com glicemia pareada, até 5 h após refeição: < 200 pmol/L = deficiência de insulina, > 600 sugere DM2; CGM como padrão, cetonas para todos; HbA1c < 7%, TIR > 70%; iSGLT2 aumenta CAD 2,6–6×; estatina após 40 anos ou 20–39 se risco > 10% (consenso; texto integral não acessado).",
+   "f": "F",
+   "url": "https://doi.org/10.2337/dci26-0122",
+   "ano": 2026,
+   "usado_em": [
+    "cr-dm1",
+    "cr-lada"
+   ]
+  },
+  {
+   "k": "ada2026_dm1",
+   "s": "ADA Standards of Care 2026 (DM1 – factsheet)",
+   "t": "American Diabetes Association. Standards of Care in Diabetes – 2026, resumo das mudanças (factsheet Diabetes on the Net): rastreio de autoanticorpos em quem tem história familiar ou alto risco genético; ≥ 2 anticorpos sem diabetes manifesto → especialista para estadiamento e possível teplizumabe; CGM desde o diagnóstico; bomba/AID sem exigir peptídeo C (resumo secundário).",
+   "f": "F",
+   "url": "https://diabetesonthenet.com/wp-content/uploads/4.-Factsheet_ADA-standards-2026.pdf",
+   "ano": 2026,
+   "usado_em": [
+    "cr-dm1"
+   ]
+  },
+  {
+   "k": "buzzetti2020",
+   "s": "Buzzetti 2020 – consenso internacional de LADA",
+   "t": "Buzzetti R, Tuomi T, Mauricio D, et al. Management of latent autoimmune diabetes in adults: a consensus statement from an international expert panel. Diabetes 2020;69(10):2037-47. doi 10.2337/dbi20-0017 (texto integral no PMC): critérios > 30 anos, anticorpo positivo, sem insulina por ≥ 6 meses; anti-GAD o marcador mais sensível (~90%); propõe anti-GAD em todo DM2 recém-diagnosticado ou, com restrição de custo, se história familiar de DM1/autoimunidade, IMC < 27, início < 60 anos ou mau controle; peptídeo C com glicemia 80–180 mg/dL; < 0,3 nmol/L = múltiplas doses de insulina; 0,3–0,7 = 'zona cinzenta', algoritmo do DM2 modificado, considerar insulina; > 0,7 = algoritmo do DM2 modificado com monitorização do peptídeo C; sulfonilureias não recomendadas; iSGLT2 com atenção à CAD (IMC ≤ 27); metformina, iDPP-4 e aGLP-1 aceitáveis (consenso de especialistas; ECR pequenos).",
+   "f": "F",
+   "url": "https://doi.org/10.2337/dbi20-0017",
+   "ano": 2037,
+   "usado_em": [
+    "cr-lada"
+   ]
+  },
+  {
+   "k": "lundholm2025_lada",
+   "s": "Lundholm & Zhou 2025 – LADA (revisão, CCJM)",
+   "t": "Lundholm MD, Zhou K. Latent autoimmune diabetes in adults: not type 1, not type 2, a little of both. Cleve Clin J Med 2025;92(12):757-63. doi 10.3949/ccjm.92a.25069: 4–14% dos 'DM2' podem ser LADA; pistas IMC ≤ 27, diagnóstico < 50 anos, autoimunidade pessoal/familiar, piora rápida com orais; anti-GAD positivo em ~90% (ELISA > 5,0 U/mL na maioria dos ensaios); peptídeo C > 0,7 nmol/L: anual; 0,3–0,7: a cada 6 meses; < 0,3: insulina, sem repetir; evitar sulfonilureia; iSGLT2 com cautela; HbA1c a cada 3 meses; TSH e anti-TPO de rotina; celíaca e B12 conforme sintomas (revisão narrativa).",
+   "f": "F",
+   "url": "https://www.ccjm.org/content/92/12/757",
+   "ano": 2025,
+   "usado_em": [
+    "cr-lada"
+   ]
+  },
+  {
+   "k": "hoogwerf2025_lada",
+   "s": "Hoogwerf 2025 – insulina já no diagnóstico do LADA (editorial)",
+   "t": "Hoogwerf BJ. LADA: a case for starting insulin therapy at diagnosis. Cleve Clin J Med 2025 (editorial à revisão de Lundholm & Zhou): defende insulina desde o diagnóstico (DM1 lento, menos CAD com iSGLT2, insulina barata, evita peptídeo C seriado); reconhece dados insuficientes para recomendação universal (opinião).",
+   "f": "F",
+   "url": "https://www.ccjm.org/content/92/12/764",
+   "ano": 2025,
+   "usado_em": [
+    "cr-lada"
+   ]
+  },
+  {
+   "k": "anvisa_teplizumabe2026",
+   "s": "ANVISA 2026 – teplizumabe (notícia)",
+   "t": "Conselho Federal de Farmácia. Anvisa aprova o primeiro medicamento para diabetes tipo 1 do Brasil (16/03/2026): teplizumabe para retardar a progressão para o estágio 3 em pessoas a partir de 8 anos com sinais iniciais de DM1 (notícia; registro e bula não abertos; não incorporado ao SUS até onde verificado).",
+   "f": "F",
+   "url": "https://site.cff.org.br/noticia/Noticias-gerais/16/03/2026/anvisa-aprova-o-primeiro-medicamento-para-diabetes-tipo-1-do-brasil",
+   "ano": 2026,
+   "usado_em": [
+    "cr-dm1"
+   ]
+  },
+  {
+   "k": "glucagen_bula",
+   "s": "GlucaGen HypoKit – bula (Novo Nordisk, Brasil)",
+   "t": "GlucaGen HypoKit (glucagon 1 mg; Novo Nordisk), bula transcrita em bula.com.br (página atualizada em 08/09/2026; não é o arquivo da ANVISA): hipoglicemia grave – adultos e crianças com mais de 25 kg (ou maiores de 6 a 8 anos): 1 mL da solução reconstituída (1 mg); crianças abaixo de 25 kg (ou menores de 6 a 8 anos): 1/2 mL (0,5 mg); via subcutânea ou intramuscular; sem resposta em 10 minutos, procurar assistência médica. Conferida em 01/11/2026.",
+   "f": "F",
+   "url": "https://bula.com.br/glucagen-hypokit",
+   "ano": 2026,
+   "usado_em": [
+    "cr-dm1",
+    "hipoglicemia"
    ]
   }
  ],
@@ -10841,7 +11027,8 @@
     "glucagon_bula",
     "hipo_cbmfc",
     "fhemig_eme",
-    "pack2025"
+    "pack2025",
+    "glucagen_bula"
    ]
   },
   {
@@ -15013,6 +15200,53 @@
    "fontes": [
     "betim_memo047_2026",
     "betim_exames2026"
+   ]
+  },
+  {
+   "id": "cr-dm1",
+   "nome": "DM1 (criança, adolescente e adulto): diagnóstico, insulina no SUS, CEAF e cuidado na APS",
+   "modulo": "cr",
+   "nv": 9,
+   "fontes": [
+    "pcdt_dm1_2019",
+    "ceaf_mg_dm1_2025",
+    "sbd_dm1sus2023",
+    "sbd_classif2023",
+    "sbd_diasdoenca2023",
+    "sbd_autoimunes2023",
+    "sbd_imun2025",
+    "sbd_rastreio_dm1_2025",
+    "ada_easd_dm1_2026",
+    "ada2026_dm1",
+    "anvisa_teplizumabe2026",
+    "ntc169_2026",
+    "betim_nt14_2026",
+    "betim_memo047_2026",
+    "betim_retino2025",
+    "betim_dm2026",
+    "sesmg_risco",
+    "glucagen_bula",
+    "rename",
+    "remume"
+   ]
+  },
+  {
+   "id": "cr-lada",
+   "nome": "LADA (diabetes autoimune latente do adulto): quando suspeitar, anticorpos, peptídeo C e tratamento",
+   "modulo": "cr",
+   "nv": 5,
+   "fontes": [
+    "buzzetti2020",
+    "lundholm2025_lada",
+    "hoogwerf2025_lada",
+    "sbd_classif2023",
+    "pcdt_dm1_2019",
+    "ceaf_mg_dm1_2025",
+    "ada_easd_dm1_2026",
+    "pcdt_dm2",
+    "betim_memo047_2026",
+    "rename",
+    "remume"
    ]
   }
  ]

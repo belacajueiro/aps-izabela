@@ -1,104 +1,150 @@
-# Sentinelas – 2026-10-26
+# Sentinelas – 2026-11-02
 
-Estado anterior: 2026-10-19
+Estado anterior: 2026-10-26
 
 ## Páginas vigiadas
 
-- CMED – lista de preços (PMC): sem mudança.
+- 🔔 **CMED – lista de preços (PMC)** mudou – rodar tools/cmed_update.sh e revisar o No balcão. https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/cmed/precos
+  - novo: https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/cmed/precos/arquivos/lista_pmc__20261009_115232673.xlsx/@@download/file
+  - saiu: https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/cmed/precos/arquivos/lista_pmc__20261009_115232671.xlsx/@@download/file
 - Farmácia Popular – elenco (PDF): sem mudança.
 - Farmácia Popular – página: sem mudança.
-- CONITEC – PCDT publicados: sem mudança.
-- CONITEC – PCDT em elaboração: sem mudança.
-- CONITEC – recomendações: sem mudança.
-- CONITEC – DDT: sem mudança.
+- 🔔 **CONITEC – PCDT publicados** mudou. https://www.gov.br/conitec/pt-br/protocolos-clinicos-e-diretrizes-terapeuticas/protocolos-clinicos-e-diretrizes-terapeuticas
+  - novo: https://www.gov.br/conitec/pt-br/centrais-de-conteudo/boletim-conitec
+  - novo: https://www.gov.br/conitec/static/css/client.81233072.css
+  - novo: https://www.gov.br/conitec/static/js/client.e8db9d48.js
+  - novo: https://www.gov.br/conitec/static/js/runtime~client.0c606b70.js
+  - saiu: https://www.gov.br/conitec/static/css/client.ef35f764.css
+  - saiu: https://www.gov.br/conitec/static/js/client.39c478e1.js
+  - saiu: https://www.gov.br/conitec/static/js/runtime~client.6ba753dd.js
+- 🔔 **CONITEC – PCDT em elaboração** mudou. https://www.gov.br/conitec/pt-br/protocolos-clinicos-e-diretrizes-terapeuticas/pcdt-em-elaboracao
+  - novo: https://www.gov.br/conitec/pt-br/centrais-de-conteudo/boletim-conitec
+  - novo: https://www.gov.br/conitec/static/css/client.81233072.css
+  - novo: https://www.gov.br/conitec/static/js/client.e8db9d48.js
+  - novo: https://www.gov.br/conitec/static/js/runtime~client.0c606b70.js
+  - saiu: https://www.gov.br/conitec/static/css/client.ef35f764.css
+  - saiu: https://www.gov.br/conitec/static/js/client.39c478e1.js
+  - saiu: https://www.gov.br/conitec/static/js/runtime~client.6ba753dd.js
+- 🔔 **CONITEC – recomendações** mudou – abrir a planilha nova e ver recomendações publicadas desde o último mês. https://www.gov.br/conitec/pt-br/assuntos/avaliacao-de-tecnologias-em-saude/recomendacoes-conitec
+  - novo: https://www.gov.br/conitec/pt-br/midias/dados-em-excel/recomendacoesdaconitec_20261026.xlsx/@@download/file
+  - saiu: https://www.gov.br/conitec/pt-br/midias/dados-em-excel/recomendacoesdaconitec_20260615.xlsx/@@download/file
+- 🔔 **CONITEC – DDT** mudou. https://www.gov.br/conitec/pt-br/protocolos-clinicos-e-diretrizes-terapeuticas/ddt
+  - novo: https://www.gov.br/conitec/pt-br/centrais-de-conteudo/boletim-conitec
+  - novo: https://www.gov.br/conitec/static/css/client.81233072.css
+  - novo: https://www.gov.br/conitec/static/js/client.e8db9d48.js
+  - novo: https://www.gov.br/conitec/static/js/runtime~client.0c606b70.js
+  - saiu: https://www.gov.br/conitec/static/css/client.ef35f764.css
+  - saiu: https://www.gov.br/conitec/static/js/client.39c478e1.js
+  - saiu: https://www.gov.br/conitec/static/js/runtime~client.6ba753dd.js
 - 🔔 **CONITEC – consultas públicas vigentes** mudou. https://www.gov.br/conitec/pt-br/assuntos/participacao-social/consultas-publicas/vigentes
-  - novo: https://brasilparticipativo.presidencia.gov.br/processes/consultas-publicas-conitec/f/5940/
-  - novo: https://brasilparticipativo.presidencia.gov.br/processes/consultas-publicas-conitec/f/5941/
-  - novo: https://www.gov.br/conitec/pt-br/midias/consultas/2026/consulta-publica-sctie-ms-no-105-de-20-de-outubro-de-2026.pdf/@@display-file/file
-  - novo: https://www.gov.br/conitec/pt-br/midias/consultas/2026/consulta-publica-sctie-ms-no-106-de-20-de-outubro-de-2026.pdf/@@display-file/file
-  - novo: https://www.gov.br/conitec/pt-br/midias/consultas/dossie/2026/dossie-cp-105-riociguate.pdf/@@display-file/file
-  - novo: https://www.gov.br/conitec/pt-br/midias/consultas/relatorios/2026/relatorio-preliminar-riociguate-cp-105.pdf/@@display-file/file
-  - novo: https://www.gov.br/conitec/pt-br/midias/consultas/relatorios/2026/relatorio-preliminar-transplante-alogenico-de-celulas-tronco-hematopoieticas-cp-106.pdf/@@display-file/file
-  - novo: https://www.gov.br/conitec/pt-br/midias/consultas/relatorios/2026/sociedade/relatorio-para-sociedade-no-760-riociguate-hptec.pdf/@@display-file/file
-  - novo: https://www.gov.br/conitec/pt-br/midias/consultas/relatorios/2026/sociedade/relatorio-para-sociedade-no-761-tcth-linfoma-hodgkin.pdf/@@display-file/file
-  - saiu: https://brasilparticipativo.presidencia.gov.br/processes/consultas-publicas-conitec/f/5684/
-  - saiu: https://brasilparticipativo.presidencia.gov.br/processes/consultas-publicas-conitec/f/5685/
-  - saiu: https://brasilparticipativo.presidencia.gov.br/processes/consultas-publicas-conitec/f/5686/
-  - saiu: https://brasilparticipativo.presidencia.gov.br/processes/consultas-publicas-conitec/f/5687/
-  - saiu: https://brasilparticipativo.presidencia.gov.br/processes/consultas-publicas-conitec/f/5713/
-  - saiu: https://www.gov.br/conitec/pt-br/midias/consultas/2026/consulta-publica-sctie-ms-no-100-de-28-de-setembro-de-2026.pdf/@@display-file/file
-  - saiu: https://www.gov.br/conitec/pt-br/midias/consultas/2026/consulta-publica-sctie-ms-no-101-de-28-de-setembro-de-2026.pdf/@@display-file/file
-  - saiu: https://www.gov.br/conitec/pt-br/midias/consultas/2026/consulta-publica-sctie-ms-no-97-de-28-de-setembro-de-2026.pdf/@@display-file/file
-  - saiu: https://www.gov.br/conitec/pt-br/midias/consultas/2026/consulta-publica-sctie-ms-no-98-de-28-de-setembro-de-2026.pdf/@@display-file/file
-  - saiu: https://www.gov.br/conitec/pt-br/midias/consultas/2026/consulta-publica-sctie-ms-no-99-de-28-de-setembro-de-2026.pdf/@@display-file/file
+  - novo: https://brasilparticipativo.presidencia.gov.br/processes/consultas-publicas-conitec/f/6023/
+  - novo: https://www.gov.br/conitec/pt-br/centrais-de-conteudo/boletim-conitec
+  - novo: https://www.gov.br/conitec/pt-br/midias/consultas/2026/consulta-publica-sctie-ms-no-107-de-27-de-outubro-de-2026.pdf/@@display-file/file
+  - novo: https://www.gov.br/conitec/pt-br/midias/consultas/dossie/2026/dossie-vutrisirana-cp-107.pdf/@@display-file/file
+  - novo: https://www.gov.br/conitec/pt-br/midias/consultas/relatorios/2026/relatorio-preliminar-vutrisirana-sodica-estagio-i-cp-107.pdf/@@display-file/file
+  - novo: https://www.gov.br/conitec/pt-br/midias/consultas/relatorios/2026/sociedade/relatorio-para-sociedade-no-762-vutrisirana-amiloidose-estagioi.pdf/@@display-file/file
+  - novo: https://www.gov.br/conitec/static/css/client.81233072.css
+  - novo: https://www.gov.br/conitec/static/js/client.e8db9d48.js
+  - novo: https://www.gov.br/conitec/static/js/runtime~client.0c606b70.js
+  - saiu: https://brasilparticipativo.presidencia.gov.br/processes/consultas-publicas-conitec/f/5812/
+  - saiu: https://brasilparticipativo.presidencia.gov.br/processes/consultas-publicas-conitec/f/5813/
+  - saiu: https://www.gov.br/conitec/pt-br/midias/consultas/2026/consulta-publica-sctie-ms-no-103-de-2-de-outubro-de-2026.pdf/@@display-file/file
+  - saiu: https://www.gov.br/conitec/pt-br/midias/consultas/2026/consulta-publica-sctie-ms-no-104-de-2-de-outubro-de-2026.pdf/@@display-file/file
+  - saiu: https://www.gov.br/conitec/pt-br/midias/consultas/dossie/2026/dossie-empresa-cp-103.pdf/@@display-file/file
+  - saiu: https://www.gov.br/conitec/pt-br/midias/consultas/dossie/2026/dossie-empresa-cp-104.pdf/@@display-file/file
+  - saiu: https://www.gov.br/conitec/pt-br/midias/consultas/relatorios/2026/relatorio-preliminar-dostarlimabe-cancer-do-endometrio-primario-avancado-cp-104.pdf/@@display-file/file
+  - saiu: https://www.gov.br/conitec/pt-br/midias/consultas/relatorios/2026/relatorio-preliminar-vutrisirana-sodica-cp-103.pdf/@@display-file/file
+  - saiu: https://www.gov.br/conitec/pt-br/midias/consultas/relatorios/2026/sociedade/elatorio-para-sociedade-no-758-vutrisirana-amiloidose-estagioii-1.pdf/@@display-file/file
+  - saiu: https://www.gov.br/conitec/pt-br/midias/consultas/relatorios/2026/sociedade/elatorio-para-sociedade-no-759-dostarlimabe-cancer-endometrio.pdf/@@display-file/file
 - 🔔 **MS – notas técnicas 2026** mudou – abrir as notas novas e ver se tocam temas do app. https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026
-  - novo: https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-01-2026-svsa.pdf/view
-  - novo: https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-12-2026.pdf/view
-  - novo: https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-no-47-2026.pdf/view
+  - novo: https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2026/nota-tecnica-conjunta-no-3542026.pdf/view
 - MS – Calendário Nacional de Vacinação: sem mudança.
-- MS – RENAME: sem mudança.
-- 🔔 **GINA – relatórios** mudou. https://ginasthma.org/reports/
-  - novo: https://ginasthma.org/2026-gina-strategy-report-executive-summary-published/
+- 🔔 **MS – RENAME** mudou. https://www.gov.br/saude/pt-br/composicao/sectics/rename
+  - novo: https://www.flickr.com/photos/ministeriodasaude/albums
+  - novo: https://www.gov.br/pt-br/noticias/agricultura-e-pecuaria
+  - novo: https://www.gov.br/pt-br/noticias/assistencia-social
+  - novo: https://www.gov.br/pt-br/noticias/ciencia-e-tecnologia
+  - novo: https://www.gov.br/pt-br/noticias/comunicacao
+  - novo: https://www.gov.br/pt-br/noticias/cultura-artes-historia-e-esportes
+  - novo: https://www.gov.br/pt-br/noticias/educacao-e-pesquisa
+  - novo: https://www.gov.br/pt-br/noticias/energia-minerais-e-combustiveis
+  - novo: https://www.gov.br/pt-br/noticias/financas-impostos-e-gestao-publica
+  - novo: https://www.gov.br/pt-br/noticias/forcas-armadas
+  - novo: https://www.gov.br/pt-br/noticias/justica-e-seguranca
+  - novo: https://www.gov.br/pt-br/noticias/meio-ambiente-e-clima
+  - novo: https://www.gov.br/pt-br/noticias/saude-e-vigilancia-sanitaria
+  - novo: https://www.gov.br/pt-br/noticias/trabalho-e-previdencia
+  - novo: https://www.gov.br/pt-br/noticias/trabalho-e-previdencia/direitos-do-trabalhador
+  - novo: https://www.gov.br/pt-br/noticias/trabalho-e-previdencia/fgts
+  - novo: https://www.gov.br/pt-br/noticias/transito-e-transportes
+  - novo: https://www.gov.br/pt-br/noticias/viagens-e-turismo
+  - novo: https://www.gov.br/pt-br/noticias/viagens-e-turismo/direitos-do-viajante
+  - novo: https://www.gov.br/pt-br/noticias/viagens-e-turismo/viaje-o-brasil
+  - novo: https://www.gov.br/saude/++theme++padrao_govbr/govbrtheme-1b543ca.css
+  - novo: https://www.gov.br/saude/pt-br/assuntos/noticias
+  - novo: https://www.gov.br/saude/pt-br/assuntos/noticias-para-os-estados
+  - novo: https://www.gov.br/saude/pt-br/assuntos/noticias-para-os-estados/acre
+  - novo: https://www.gov.br/saude/pt-br/assuntos/noticias-para-os-estados/alagoas
+  - saiu: https://www.gov.br/saude/++theme++padrao_govbr/govbrtheme-37d29fa.css
+  - saiu: https://www.gov.br/saude/pt-br/assuntos/noticias-ms
+  - saiu: https://www.gov.br/saude/pt-br/assuntos/noticias-ms/noticias-para-os-estados
+  - saiu: https://www.gov.br/saude/pt-br/centrais-de-conteudo/apresentacao
+  - saiu: https://www.gov.br/saude/pt-br/search?origem=termos&SearchableText=cnh
+- GINA – relatórios: sem mudança.
 - GOLD – relatório: sem mudança.
 - SBD – Diretriz: sem mudança.
 - KDIGO – diretrizes: sem mudança.
 - 🔔 **Prefeitura de Betim** mudou. https://www.betim.mg.gov.br/
-  - novo: https://www.betim.mg.gov.br/portal/noticias/0/3/15708/unidades-basicas-de-saude-de-betim-realizam-dia-d-do-outubro-rosa-neste-sabado-24
+  - novo: https://www.betim.mg.gov.br/portal/secretarias-paginas/89/unidades-basicas-de-saude
+  - saiu: https://www.betim.mg.gov.br/portal/noticias/0/3/15708/unidades-basicas-de-saude-de-betim-realizam-dia-d-do-outubro-rosa-neste-sabado-24
 - SES-MG: sem mudança.
 
 ## Radar (fontes secundárias – só apontam o que conferir na fonte primária)
 
 - 🔔 **Tá de Clinicagem – conteúdos novos** mudou. https://www.tadeclinicagem.com.br/
-  - novo: https://www.tadeclinicagem.com.br/content/instagram/comentando-questoes-do-enamed-20262027-condutas-na-fa-no-pronto-socorro-video-completo-no-yt-do-tdc-correcao-da-prova-de-clinica-medica-do-enamed-2026/
-  - novo: https://www.tadeclinicagem.com.br/content/instagram/ja-viu-o-episodio-dessa-semana-tema-super-da-pratica-e-que-vai-chegar-no-seu-consultorio-entao-corre-pra-ouvir-no-seu-agregador-de-podcast-favorito/
-  - novo: https://www.tadeclinicagem.com.br/content/instagram/pergunta-clinica-direto-do-guiatdc-leia-o-topico-completo-gratis-no-guiatdc-ao-se-cadstrar-no-link-da-bio/
-  - novo: https://www.tadeclinicagem.com.br/content/podcast/tdc-357-analogos-de-glp-1-na-pratica-4-clinicagens/
-  - novo: https://www.tadeclinicagem.com.br/content/podcast/tdc-a-beira-leito-04-esse-paciente-tem-cirrose/
-  - novo: https://www.tadeclinicagem.com.br/content/youtube/como-avaliar-a-probabilidade-pre-teste-de-determinada-doenca/
-  - novo: https://www.tadeclinicagem.com.br/content/youtube/medtermo-desafiando-o-tdc-parte-2-o-que-o-pedro-alvares-cabral-tem-a-ver-com-medicina/
-  - novo: https://www.tadeclinicagem.com.br/content/youtube/quando-internar-na-cirrose-cuidados-com-semaglutida-remedios-que-nao-prescrevemos-tdc-responde/
-  - saiu: https://www.tadeclinicagem.com.br/content/instagram/comentando-questoes-do-enamed-20262027-nessa-questao-de-dor-toracica-pedro-aproveitou-pra-comentar-sobre-a-abordagem-da-dor-toracica-com-base-na-diret/
-  - saiu: https://www.tadeclinicagem.com.br/content/instagram/hipertensao-assintomatica-no-ps-3-coisas-para-nao-esquecer-veja-o-video-completo-no-yt-do-tdc-aas-para-prevencao-primaria-180x120-de-pa-no-ps-e-nomes/
-  - saiu: https://www.tadeclinicagem.com.br/content/instagram/por-tras-de-cada-conteudo-podcast-topico-revisao-e-discussao-de-casos-clinicos-ha-medicos-que-atuam-diretamente-na-assistencia-em-todos-os-ambientes-d/
-  - saiu: https://www.tadeclinicagem.com.br/content/podcast/tdc-355-caso-clinico-de-insuficiencia-respiratoria-no-imunossuprimido/
-  - saiu: https://www.tadeclinicagem.com.br/content/podcast/tdc-a-beira-leito-03-essa-sincope-e-de-origem-cardiaca/
-  - saiu: https://www.tadeclinicagem.com.br/content/youtube/bismuto-para-h-pylori-falha-de-extubacao-e-trombocitemia-imune-tdc-responde/
-  - saiu: https://www.tadeclinicagem.com.br/content/youtube/comentando-questoes-do-enamed-20262027/
-  - saiu: https://www.tadeclinicagem.com.br/content/youtube/hipertensao-assintomatica-no-ps-3-coisas-para-nao-esquecer/
+  - novo: https://www.tadeclinicagem.com.br/content/instagram/choque-septico-cirrose-hepatica-qual-a-meta-de-pam-veja-o-video-completo-no-yt-do-tdc-bismuto-para-h-pylori-falha-de-extubacao-e-trombocitemia-imune-t/
+  - novo: https://www.tadeclinicagem.com.br/content/instagram/ia-na-medicina-parte-1-quais-problemas-o-uso-da-ia-pode-trazer-para-o-aprendizado-ja-ouviu-falar-de-deskilling-never-skilling-e-mis-skilling-veja-o-vi/
+  - novo: https://www.tadeclinicagem.com.br/content/instagram/pessoal-estamos-divulgando-a-residencia-em-nutrologia-dos-colegas-do-ganep-na-beneficencia-portuguesa-sao-diversos-cenarios-da-nutricao-hospitalar-esp/
+  - novo: https://www.tadeclinicagem.com.br/content/podcast/tdc-358-nova-definicao-de-infarto-agudo-do-miocardio/
+  - novo: https://www.tadeclinicagem.com.br/content/youtube/como-otimizar-antihipertensivo-ajuste-de-insulina-e-exames-desnecessarios-tdc-responde/
+  - novo: https://www.tadeclinicagem.com.br/content/youtube/ia-na-medicina-parte-2-exemplos-de-como-usar-a-ia-para-facilitar-o-dia-a-dia/
+  - novo: https://www.tadeclinicagem.com.br/content/youtube/quais-problemas-o-uso-da-ia-pode-trazer-para-o-aprendizado-na-medicina/
+  - saiu: https://www.tadeclinicagem.com.br/content/instagram/comentando-questoes-do-enamed-20262027-condutas-na-fa-no-pronto-socorro-video-completo-no-yt-do-tdc-correcao-da-prova-de-clinica-medica-do-enamed-2026/
+  - saiu: https://www.tadeclinicagem.com.br/content/instagram/ja-viu-o-episodio-dessa-semana-tema-super-da-pratica-e-que-vai-chegar-no-seu-consultorio-entao-corre-pra-ouvir-no-seu-agregador-de-podcast-favorito/
+  - saiu: https://www.tadeclinicagem.com.br/content/instagram/pergunta-clinica-direto-do-guiatdc-leia-o-topico-completo-gratis-no-guiatdc-ao-se-cadstrar-no-link-da-bio/
+  - saiu: https://www.tadeclinicagem.com.br/content/podcast/tdc-356-manejo-de-choque-circulatorio/
+  - saiu: https://www.tadeclinicagem.com.br/content/youtube/como-avaliar-a-probabilidade-pre-teste-de-determinada-doenca/
+  - saiu: https://www.tadeclinicagem.com.br/content/youtube/medtermo-desafiando-o-tdc-parte-2-o-que-o-pedro-alvares-cabral-tem-a-ver-com-medicina/
+  - saiu: https://www.tadeclinicagem.com.br/content/youtube/quando-internar-na-cirrose-cuidados-com-semaglutida-remedios-que-nao-prescrevemos-tdc-responde/
 - Tá de Clinicagem – blog: sem mudança.
 - 🔔 **Portal Afya (ex-PEBMED) – artigos** mudou. https://portal.afya.com.br/
-  - novo: https://portal.afya.com.br/cardiologia/cardiopapers-experience-2026-reune-novidades-da-cardiologia
-  - novo: https://portal.afya.com.br/cardiologia/cigarro-eletronico-e-saude-vascular-estudo-associa-uso-a-menor-funcao-em-jovens
-  - novo: https://portal.afya.com.br/cardiologia/metanalise-avalia-relacao-entre-tirzepatida-e-fibrilacao-atrial
-  - novo: https://portal.afya.com.br/cardiologia/quase-3-em-cada-10-estudantes-tem-pressao-na-faixa-de-hipertensao-aponta-sbc
-  - novo: https://portal.afya.com.br/cardiologia/vitamina-b12-tres-clinicagens-medicas-que-todo-profissional-deve-conhecer
-  - novo: https://portal.afya.com.br/clinica-medica/a-pratica-de-atividade-fisica-e-um-dos-pilares-do-cuidado-em-ccnts
-  - novo: https://portal.afya.com.br/endocrinologia/biomarcadores-de-sarcopenia-e-obesidade-sarcopenica
-  - novo: https://portal.afya.com.br/endocrinologia/ceus-e-elastografia-refinam-analise-de-nodulos-tireoidianos
-  - novo: https://portal.afya.com.br/endocrinologia/deficiencia-de-vitamina-b12-em-pacientes-em-uso-de-agonistas-do-receptor-de-glp-1
-  - novo: https://portal.afya.com.br/ginecologia-e-obstetricia/adesivo-hormonal-de-uso-semanal-recebe-registro-da-fda
-  - novo: https://portal.afya.com.br/ginecologia-e-obstetricia/ferro-intravenoso-na-anemia-gestacional-eficacia-clinica
-  - novo: https://portal.afya.com.br/ginecologia-e-obstetricia/sintomas-de-menopausa-acog-atualiza-diretriz-clinica
-  - novo: https://portal.afya.com.br/ginecologia-e-obstetricia/teste-hpv-pos-tratamento
-  - novo: https://portal.afya.com.br/oncologia/vacina-de-mrna-reduz-risco-de-recidiva-ou-morte-por-melanoma-em-42
-  - novo: https://portal.afya.com.br/pediatria/aap-2026-puericultura
-  - novo: https://portal.afya.com.br/pediatria/cfm-reforca-vacinacao-com-avanco-do-sarampo-nas-americas
-  - novo: https://portal.afya.com.br/pediatria/consumo-de-frutas-e-bebidas-acucaradas-e-associado-a-saude-mental-de-adolescentes
-  - novo: https://portal.afya.com.br/pediatria/estudo-associa-dieta-na-gestacao-a-colica-com-eczema-em-bebes
-  - novo: https://portal.afya.com.br/pediatria/impacto-psicossocial-da-sindrome-de-dravet-na-familia
-  - novo: https://portal.afya.com.br/pneumologia/diretriz-ers-esrs-2026-quando-indicar-cpap-na-apneia-obstrutiva-do-sono-do-adulto
-  - novo: https://portal.afya.com.br/psiquiatria/algoritmos-das-redes-sociais-podem-intensificar-sofrimento-emocional
-  - novo: https://portal.afya.com.br/psiquiatria/tdah-mortalidade-e-tratamento-o-que-revela-nova-metanalise-publicada-no-jama
-  - novo: https://portal.afya.com.br/saude/resolucao-veta-uso-e-venda-de-tiras-de-glicemia-falsificadas
-  - novo: https://portal.afya.com.br/terapia-intensiva/sepse-fungica-em-pacientes-sem-neutropenia-diretrizes-para-locais-de-menor-renda
-  - novo: https://portal.afya.com.br/urologia/cancer-de-prostata-nice-apoia-uso-de-ia-para-auxiliar-diagnostico-na-inglaterra
-  - saiu: https://portal.afya.com.br/cardiologia/acc-propoe-roteiro-pratico-para-a-hipertensao-resistente
-  - saiu: https://portal.afya.com.br/cardiologia/controle-da-hipertensao-pode-evitar-518-mil-mortes-cardiovasculares-ao-ano
-  - saiu: https://portal.afya.com.br/cardiologia/risco-cardiovascular-perioperatorio-exige-decisao-seletiva
-  - saiu: https://portal.afya.com.br/cardiologia/sindrome-coronariana-aguda-exige-decisoes-individualizadas
-  - saiu: https://portal.afya.com.br/carreira/qualidade-de-vida-dos-medicos-pesquisa-aponta-o-peso-do-estresse-renda-e-jornada
-  - saiu: https://portal.afya.com.br/endocrinologia/agonistas-de-glp-1-o-que-influencia-a-perda-de-peso-na-obesidade
-  - saiu: https://portal.afya.com.br/endocrinologia/atraso-no-diagnostico-de-doencas-autoimunes-afeta-mais-as-mulheres-alerta-estudo
-  - saiu: https://portal.afya.com.br/ginecologia-e-obstetricia/fezolinetanto-se-associa-a-melhora-do-sono-na-menopausa
-  - saiu: https://portal.afya.com.br/ginecologia-e-obstetricia/infertilidade-feminina-conduta-clinica-propedeutica-e-cuidado-multiprofissional
-  - saiu: https://portal.afya.com.br/ginecologia-e-obstetricia/oms-lanca-roteiro-global-contra-hipertensao-na-gestacao
+  - novo: https://portal.afya.com.br/cardiologia/acc-orienta-a-prescricao-de-exercicio-na-prevencao-cardiaca-primaria-e-secundaria
+  - novo: https://portal.afya.com.br/cardiologia/estudo-associa-controle-da-hipertensao-a-menos-internacoes-por-avcs
+  - novo: https://portal.afya.com.br/cardiologia/sem-supra-st-mas-com-coronaria-ocluida-estudo-testa-ia-no-ecg
+  - novo: https://portal.afya.com.br/cardiologia/suporte-circulatorio-mecanico-nao-melhora-desfechos-na-icp-complexa-de-alto-risco
+  - novo: https://portal.afya.com.br/cirurgia/dobesilato-calcio-doenca-venosa-cronica
+  - novo: https://portal.afya.com.br/endocrinologia/5-novas-canetas-de-glp-1-ganham-registro-para-diabetes-e-obesidade
+  - novo: https://portal.afya.com.br/endocrinologia/casos-de-anorexia-e-bulimia-crescem-e-ampliam-desafio-diagnostico
+  - novo: https://portal.afya.com.br/endocrinologia/instituto-afya-qual-a-relacao-entre-obesidade-e-cancer-de-mama
+  - novo: https://portal.afya.com.br/endocrinologia/retatrutida-supera-semaglutida-no-controle-glicemico-em-estudo-de-fase-3
+  - novo: https://portal.afya.com.br/endocrinologia/retinopatia-diabetica-no-brasil-prevalencia-evidencias-cientificas-e-manejo
+  - novo: https://portal.afya.com.br/ginecologia-e-obstetricia/entidades-medicas-divulgam-orientacoes-para-pedidos-de-mamografia-digital
+  - novo: https://portal.afya.com.br/ginecologia-e-obstetricia/estrogenio-e-menopausa-o-que-as-evidencias-mostram-sobre-vida-sexual
+  - novo: https://portal.afya.com.br/oncologia/vacina-experimental-contra-cancer-de-pancreas-ativa-celulas-t-em-989
+  - novo: https://portal.afya.com.br/psiquiatria/afya-participa-do-xliii-congresso-brasileiro-de-psiquiatria
+  - novo: https://portal.afya.com.br/psiquiatria/saude-mental-no-brasil-revela-diferencas-importantes-entre-faixas-etarias
+  - novo: https://portal.afya.com.br/saude/anvisa-aprova-risdiplam-em-comprimido-para-tratar-ame-5q
+  - novo: https://portal.afya.com.br/terapia-intensiva/hidrocortisona-no-choque-septico-o-que-muda-com-a-associacao-de-fludrocortisona
+  - novo: https://portal.afya.com.br/videos/ginecologia-e-obstetricia/anvisa-amplia-para-cinco-anos-o-uso-do-implante-contraceptivo-implanon-nxt
+  - novo: https://portal.afya.com.br/videos/ginecologia-e-obstetricia/infertilidade-feminina-quando-investigar-e-como-conduzir-no-consultorio
+  - novo: https://portal.afya.com.br/videos/ginecologia-e-obstetricia/teste-dna-hpv-aponta-hpv-oncogenico-em-9-904-amostras-do-sus
+  - saiu: https://portal.afya.com.br/cardiologia/abordagem-clinica-e-estrategia-terapeutica-no-manejo-da-insonia-na-pratica-medica
+  - saiu: https://portal.afya.com.br/cardiologia/cardiopapers-experience-2026-reune-novidades-da-cardiologia
+  - saiu: https://portal.afya.com.br/cardiologia/cigarro-eletronico-e-saude-vascular-estudo-associa-uso-a-menor-funcao-em-jovens
+  - saiu: https://portal.afya.com.br/cardiologia/metanalise-avalia-relacao-entre-tirzepatida-e-fibrilacao-atrial
+  - saiu: https://portal.afya.com.br/cardiologia/quase-3-em-cada-10-estudantes-tem-pressao-na-faixa-de-hipertensao-aponta-sbc
+  - saiu: https://portal.afya.com.br/clinica-medica/a-pratica-de-atividade-fisica-e-um-dos-pilares-do-cuidado-em-ccnts
+  - saiu: https://portal.afya.com.br/clinica-medica/conexao-microvascular-entre-diabetes-e-insuficiencia-venosa-cronica
+  - saiu: https://portal.afya.com.br/endocrinologia/biomarcadores-de-sarcopenia-e-obesidade-sarcopenica
+  - saiu: https://portal.afya.com.br/endocrinologia/ceus-e-elastografia-refinam-analise-de-nodulos-tireoidianos
+  - saiu: https://portal.afya.com.br/endocrinologia/easd-lanca-diretriz-sobre-sofrimento-emocional-no-diabetes

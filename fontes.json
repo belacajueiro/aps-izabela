@@ -1,11 +1,11 @@
 {
- "gerado": "2026-11-01T22:02:01.394Z",
+ "gerado": "2026-11-03T20:49:52.528Z",
  "cmed": {
   "data": "09/10/2026",
   "fonte": "cmed_pmc2026",
   "icms": "PMC com ICMS de Minas Gerais: 12% para genéricos e 18% para os demais"
  },
- "n_fontes": 736,
+ "n_fontes": 738,
  "n_itens": 392,
  "sem_url": [
   "remume",
@@ -10073,6 +10073,30 @@
     "cr-dm1",
     "hipoglicemia"
    ]
+  },
+  {
+   "k": "anvisa_implanon5a",
+   "s": "ANVISA 2026 – Implanon por 5 anos (RE 4.184/2026)",
+   "t": "Agência Nacional de Vigilância Sanitária. Anvisa aprova ampliação do uso do Implanon para cinco anos (notícia, 26/10/2026; Resolução RE nº 4.184, de 22/10/2026, DOU): período de eficácia contraceptiva do Implanon NXT (etonogestrel 68 mg) ampliado de três para cinco anos de uso contínuo do mesmo implante, com base em dados clínicos do 4º e 5º anos (sem gestações no estudo principal); quem já usa pode estender até o novo limite, com orientação médica; aprovada também a inserção imediatamente após o parto e após o aborto, inclusive de 1º e 2º trimestres (regulatória).",
+   "f": "F",
+   "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-aprova-ampliacao-do-uso-do-implanon-para-cinco-anos",
+   "ano": 2026,
+   "usado_em": [
+    "mu-larc",
+    "pp-contracepcao"
+   ]
+  },
+  {
+   "k": "nexplanon_5a_2026",
+   "s": "Organon/FDA 2026 – etonogestrel por 5 anos (NCT04626596)",
+   "t": "Organon. Organon announces US FDA approval of supplemental NDA extending duration of use of NEXPLANON (etonogestrel implant 68 mg) – comunicado de 16/01/2026: uso por até 5 anos; estudo NCT04626596 multicêntrico, braço único, aberto, EUA, 399 mulheres (idade média 27 anos); Pearl Index nos anos 4 e 5 = 0,0 por 100 mulheres-ano (IC95% 0,00–0,69); IMC 17,2–64,3 kg/m² (média 29,4; 38,1% ≥ 30 e 10,0% ≥ 40). Comunicado do fabricante sobre estudo de braço único (sem comparador).",
+   "f": "F",
+   "url": "https://www.businesswire.com/news/home/20260116204496/en/Organon-Announces-US-Food-and-Drug-Administration-Approval-of-Supplemental-New-Drug-Application-Extending-Duration-of-Use-of-NEXPLANON-etonogestrel-implant-68-mg-Radiopaque",
+   "ano": 2026,
+   "usado_em": [
+    "mu-larc",
+    "pp-contracepcao"
+   ]
   }
  ],
  "itens": [
@@ -12602,7 +12626,9 @@
     "implante_sus",
     "diu_pp",
     "rename",
-    "remume"
+    "remume",
+    "anvisa_implanon5a",
+    "nexplanon_5a_2026"
    ]
   },
   {
@@ -13375,14 +13401,16 @@
    "id": "mu-larc",
    "nome": "DIU e implante na APS: inserção, seguimento e intercorrências",
    "modulo": "mu",
-   "nv": 2,
+   "nv": 3,
    "fontes": [
     "mec_cdc_diu",
     "cdc_spr2024",
     "nt52_2026",
     "implante_sus",
     "conitec_1002",
-    "conitec_1066"
+    "conitec_1066",
+    "anvisa_implanon5a",
+    "nexplanon_5a_2026"
    ]
   },
   {

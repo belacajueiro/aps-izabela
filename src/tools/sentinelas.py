@@ -3,7 +3,7 @@
 # 2) Confere se as URLs das fontes do app (site/fontes.json) ainda respondem e se mudaram (ETag/Last-Modified/tamanho).
 # Compara com monitor/estado.json (estado do mês anterior), grava o novo estado e escreve monitor/sentinelas.md.
 # Uso: python3 tools/sentinelas.py [--sem-fontes] [--estado monitor/estado_semanal.json] [--rel monitor/sentinelas_semanal.md]
-import json, os, re, sys, hashlib, html, urllib.request, urllib.parse, datetime, concurrent.futures as cf
+import json, os, re, sys, hashlib, html, subprocess, tempfile, urllib.request, urllib.parse, datetime, concurrent.futures as cf
 D = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 M = os.path.join(D, 'monitor')
 UA = {'User-Agent': 'Mozilla/5.0 (monitor APS Betim)'}
@@ -33,6 +33,25 @@ def links(b, base, padrao):
         if not padrao or re.search(padrao, u, re.I): out.add(u)
     return sorted(out)
 
+DOC = re.compile(r'(\.pdf($|/)|@@download|@@display-file)', re.I)
+NAO_DOC = re.compile(r'\.(css|js|xlsx?|csv|zip|png|jpe?g)($|/)', re.I)
+
+def trecho(u, n=450):
+    """Abre o documento novo e devolve o início do texto (título, órgão, data), para avaliar o impacto sem abrir o link à mão."""
+    u2 = re.sub(r'/view$', '', u)
+    r = get(u2, limite=15_000_000)
+    if r['st'] != 200: return f"(não abriu: {r['st']} {r.get('erro','')})"
+    b = r['corpo']
+    if b[:5] == b'%PDF-' or 'pdf' in r.get('tipo', ''):
+        with tempfile.NamedTemporaryFile(suffix='.pdf') as f:
+            f.write(b); f.flush()
+            try: t = subprocess.run(['pdftotext', '-l', '2', '-layout', f.name, '-'], capture_output=True, timeout=60).stdout.decode('utf-8', 'ignore')
+            except Exception as e: return f"(PDF baixado, mas pdftotext falhou: {type(e).__name__})"
+    else:
+        t = texto(b)
+    t = re.sub(r'\s+', ' ', t).strip()
+    return (t[:n] + '…') if len(t) > n else (t or '(sem texto extraível – PDF escaneado?)')
+
 def main():
     hoje = datetime.date.today().isoformat()
     arg = lambda k, d: sys.argv[sys.argv.index(k) + 1] if k in sys.argv else d
@@ -41,6 +60,7 @@ def main():
     vig = json.load(open(os.path.join(M, 'vigiar.json')))['paginas']
     novo = {'data': hoje, 'paginas': {}, 'fontes': {}}
     rel = [f'# Sentinelas – {hoje}', '', f'Estado anterior: {ant.get("data") or "nenhum (primeira execução: só cria a linha de base)"}', '', '## Páginas vigiadas', '']
+    n_trechos = [0]
     radar = ['', '## Radar (fontes secundárias – só apontam o que conferir na fonte primária)', '']
     for p in vig:
         alvo_rel = radar if p.get('tipo') == 'radar' else rel
@@ -64,7 +84,11 @@ def main():
         add = [u for u in lk if u not in set(a.get('links', []))]; rem = [u for u in a.get('links', []) if u not in set(lk)]
         if add or rem or (h != a.get('hash') and not p.get('docs')):  # com 'docs', só links novos contam (evita ruído de notícias)
             alvo_rel.append(f"- 🔔 **{p['nome']}** mudou" + (f" – {p['acao']}" if p.get('acao') else '') + f". {p['url']}")
-            alvo_rel += [f"  - novo: {u}" for u in add[:25]] + [f"  - saiu: {u}" for u in rem[:10]]
+            for u in add[:25]:
+                alvo_rel.append(f"  - novo: {u}")
+                if alvo_rel is rel and DOC.search(u) and not NAO_DOC.search(u) and n_trechos[0] < 10:
+                    n_trechos[0] += 1; alvo_rel.append(f"    > trecho: {trecho(u)}")
+            alvo_rel += [f"  - saiu: {u}" for u in rem[:10]]
             if not add and not rem: alvo_rel.append('  - (texto da página mudou; nenhum link novo de documento)')
         else:
             alvo_rel.append(f"- {p['nome']}: sem mudança.")

@@ -3,3 +3,6 @@ src/check.js
 src/index.html
 src/site/
 __pycache__/
+
+# Pasta temporária da cópia do app para o Projeto (gerada pela sentinela semanal)
+.copia-projeto/

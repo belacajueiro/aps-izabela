@@ -28,7 +28,7 @@ function estado() { try { return JSON.parse(fs.readFileSync(ESTADO, "utf8")); } 
 function versao() {
   try {
     const s = cp.execSync('git log -1 --format="%h|%ci|%s" -- "src/data*.js" src/app.html', {cwd: ROOT}).toString().trim();
-    const [h, d, msg] = s.split("|"); const v = (msg.match(/^v[\d.]+/) || [""])[0];
+    const [h, d, msg] = s.split("|"); const v = (msg.match(/\bv\d+(?:\.\d+)*\b/) || [""])[0];
     return {commit: h, data: d.slice(0, 16), v: v || "(versão não identificada)"};
   } catch { return {commit: "?", data: "", v: "(versão não identificada)"}; }
 }

@@ -533,7 +533,7 @@ details.gdet[open]>summary{border-bottom:1px solid var(--line);margin-bottom:10p
         <div class="btns"><button class="btn sm gohome" id="go-home" title="Início" aria-label="Início"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-7 8 7"/><path d="M6 9.5V20h12V9.5"/></svg></button><button class="btn sm menubtn" id="menu-btn" aria-expanded="false" aria-controls="menu">Ferramentas <span aria-hidden="true">▾</span></button></div>
       </div>
       <div class="menu" id="menu" hidden>
-        <div class="tools" role="group" aria-label="Ferramentas"><button class="btn sm" id="t-ped" data-mods="co de pu">Dose pediátrica</button><button class="btn sm" id="t-cri" data-mods="pu">Calendário da criança</button><button class="btn sm" id="t-ig" data-mods="pn">Idade gestacional</button><button class="btn sm" id="t-calc" data-mods="co cr mu pv ho in po de">Calculadoras</button><button class="btn sm" id="t-sc">Escores</button><button class="btn sm" id="t-rede">Rede de Betim</button><button class="btn sm" id="t-bal">Nomes no balcão</button></div>
+        <div class="tools" role="group" aria-label="Ferramentas"><button class="btn sm" id="t-ped" data-mods="co de pu">Dose pediátrica</button><button class="btn sm" id="t-cri" data-mods="pu">Calendário da criança</button><button class="btn sm" id="t-ig" data-mods="pn">Idade gestacional</button><button class="btn sm" id="t-calc" data-mods="co cr mu pv ho in po de">Calculadoras</button><button class="btn sm" id="t-sc">Escores</button><button class="btn sm" id="t-rce">Receita de controle especial</button><button class="btn sm" id="t-rede">Rede de Betim</button><button class="btn sm" id="t-bal">Nomes no balcão</button></div>
         <div class="menu-sep">Manutenção do app</div>
         <div class="tools"><button class="btn sm" id="t-pend">Pendências<span class="n" id="pend-n"></span></button><button class="btn sm" id="novo" hidden>+ Nova condição</button></div>
         <small id="dbstate">Carregando suas edições…</small>
@@ -1058,7 +1058,7 @@ function renderPanel(c, legend){
     const filt = (has("evidencia")||has("sus")) ? `<div class="chips rxf" role="group" aria-label="Filtrar prescrições">${[["todas","Todas"],["evid","Melhor evidência"],["sus","SUS Betim"]].map(([k,l])=>`<button class="chip" aria-pressed="${state.rxf===k}" data-rxf="${k}">${l}</button>`).join("")}</div>` : "";
     const av = avisosReceita(vis.map(b=>b.texto).join("\n"));
     const avHtml = av.length ? `<div class="avisos"><b>Receituário:</b> ${av.map(esc).join(" ")}</div>` : "";
-    const prBtn = vis.length && temRemedio ? `<div class="actions" style="margin:0 0 12px"><button class="btn sm" id="pr-rx">Imprimir receita (blocos marcados)</button></div>` : "";
+    const prBtn = vis.length && temRemedio ? `<div class="actions" style="margin:0 0 12px"><button class="btn sm" id="pr-rx">Imprimir receita (blocos marcados)</button>${CONTROLE_C.test(vis.map(b=>b.texto).join("\n")) ? `<button class="btn sm" id="pr-rce" title="Abre o gerador da Receita de Controle Especial (2 vias, A4 paisagem)">Receita de controle especial (2 vias)</button>` : ""}</div>` : "";
     const acesso = temRemedio ? `<div class="acesso"><b>Acesso real:</b> estar na RENAME/REMUME não garante estoque na farmácia da UBS – confira antes. Quando o item está na Farmácia Popular (gratuito, receita do SUS ou particular + documento com CPF), aparece um selo verde no bloco; em "No balcão" aparecem as marcas, o genérico e o preço-teto (PMC) da lista CMED de ${BALCAO_INFO.data} – o preço real costuma ser menor. Prescreva pelo nome genérico; a farmácia pode trocar a marca de referência pelo genérico.</div>` : "";
     p.innerHTML = calcPacHtml(c) + decide + filt + avHtml + acesso + prBtn + (vis.length ? `<div class="rx">${vis.map(b=>`
       <div class="rxb ${TRILHA[b.trilha][1]}"><div class="rxb-h"><div class="rxt"><span class="trilha ${TRILHA[b.trilha][1]}">${TRILHA[b.trilha][0]}</span><h4>${esc(b.titulo)}</h4></div><div class="actions">${b.dose?`<span class="lab ${esc(b.dose)}" title="Procedência da dose">dose ${esc(b.dose)}</span>`:""}${temRemedio?`<label class="inc"><input type="checkbox" class="rx-inc" data-i="${b.i}" ${vis[0]&&vis[0].i===b.i?"checked":""}> imprimir</label>`:""}<button class="btn sm" data-cprx="${b.i}">Copiar</button></div></div>
@@ -1197,6 +1197,7 @@ document.addEventListener("click", ev => {
     case "t-rede": openRede(); break;
     case "t-bal": $("#bal-q").value = ""; renderBal(); $("#dlg-bal").showModal(); break;
     case "t-sc": openScore(); break;
+    case "t-rce": case "pr-rce": RCE.open(); break;
     case "open-sc": openScore(t.dataset.scId); break;
     case "pr-rx": imprimirReceita(c); break;
     case "pr-pac": imprimirOrientacoes(c); break;

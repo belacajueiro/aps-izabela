@@ -123,12 +123,19 @@ const RCE = (() => {
     else if (dias != null) excede = dias > max;
     return {dias, origem, max, excede, semCalculo: dias == null && q > 0 && item.unidade !== 'ampola'};
   }
+  // identificação do paciente: CPF, "NÃO POSSUI" ou, se estrangeiro, número do passaporte
+  const normPassaporte = v => String(v || '').toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 20);
+  const idPaciente = p => p.estrangeiro ? {rotulo: 'Passaporte nº', valor: normPassaporte(p.passaporte)} : {rotulo: 'CPF', valor: p.semCpf ? 'NÃO POSSUI' : formatCPF(onlyDigits(p.cpf))};
+  const idTexto = p => p.estrangeiro ? `passaporte ${normPassaporte(p.passaporte) || 'não informado'}` : p.semCpf ? 'sem CPF' : (formatCPF(p.cpf) || 'CPF não informado');
+  const pacienteDados = p => ({nome: p.nome, cpf: p.cpf || '', semCpf: !!p.semCpf, estrangeiro: !!p.estrangeiro, passaporte: p.passaporte || '', endereco: p.endereco || ''});
   const emitenteCompleto = s => !!(s && s.profNome && s.crm && s.crmUF);
   function validateReceita(rx, hoje) {
     const errors = [], warnings = [], p = rx.patient || {};
     if (!p.nome || !p.nome.trim()) errors.push('Informe o nome completo do paciente.');
     if (!p.endereco || !p.endereco.trim()) errors.push('Informe o endereço completo do paciente.');
-    if (!p.semCpf) {
+    if (p.estrangeiro) {
+      if (!normPassaporte(p.passaporte)) errors.push('Informe o número do passaporte do paciente estrangeiro.');
+    } else if (!p.semCpf) {
       if (!onlyDigits(p.cpf)) errors.push('Informe o CPF do paciente (ou marque “paciente sem CPF”).');
       else if (!validCPF(p.cpf)) warnings.push('O CPF informado não passa na verificação dos dígitos. Confira antes de imprimir.');
     }
@@ -267,7 +274,7 @@ const RCE = (() => {
   }
   function viaHTML(label, rx, showLogo) {
     const em = rx.emitente || {}, p = rx.patient || {};
-    const cpf = p.semCpf ? 'NÃO POSSUI' : formatCPF(onlyDigits(p.cpf));
+    const idp = idPaciente(p);
     const just = (rx.justificativa || '').trim() ? `<div class="rce-rx-just"><b>Justificativa/CID:</b> ${esc(rx.justificativa.trim())}</div>` : '';
     const logo = showLogo ? `<div class="rce-logos"><img class="rce-logo" src="${LOGOS.sus}" alt="SUS"><img class="rce-logo" src="${LOGOS.betim}" alt="Prefeitura de Betim"></div>` : '';
     const sm = (l) => `<div class="rce-sm-line"><span class="rce-sm-l">${l}</span><span class="rce-sm-v"></span></div>`;
@@ -282,18 +289,16 @@ const RCE = (() => {
       <div class="rce-box"><div class="rce-box-title">IDENTIFICAÇÃO DO PACIENTE</div>
         <div class="rce-fl"><span class="rce-fl-l">Nome completo:</span><span class="rce-fl-v">${esc(p.nome || '')}</span></div>
         <div class="rce-fl"><span class="rce-fl-l">Endereço completo:</span><span class="rce-fl-v">${esc(p.endereco || '')}</span></div>
-        <div class="rce-fl"><span class="rce-fl-l">CPF ou, se estrangeiro, passaporte nº:</span><span class="rce-fl-v rce-short">${esc(cpf)}</span></div></div>
+        <div class="rce-fl"><span class="rce-fl-l">${idp.rotulo}:</span><span class="rce-fl-v rce-short">${esc(idp.valor)}</span></div></div>
       <div class="rce-box rce-grow"><div class="rce-box-title">PRESCRIÇÃO</div>
         <div class="rce-rx-body">${corpoHTML(rx.items || [])}${just}</div>
         <div class="rce-sign-row">
           <div class="rce-date-cell"><span class="rce-fl-l">Data de emissão:</span><span class="rce-fl-v rce-short"><b>${esc(formatDateBR(rx.issuedAt))}</b></span></div>
-          <div class="rce-sign-cell"><div class="rce-sign-cap">Identificação e assinatura do prescritor</div><div class="rce-sign-name">${esc((em.profNome || '').toUpperCase())}</div><div class="rce-sign-reg">CRM-${esc(em.crmUF || '')} ${esc(em.crm || '')}${em.cns ? ' <span class="rce-nw">| CNS ' + esc(em.cns) + '</span>' : ''}</div></div>
+          <div class="rce-sign-cell"><div class="rce-sign-name">${esc((em.profNome || '').toUpperCase())}</div><div class="rce-sign-reg">CRM-${esc(em.crmUF || '')} ${esc(em.crm || '')}${em.cns ? ' <span class="rce-nw">| CNS ' + esc(em.cns) + '</span>' : ''}</div></div>
         </div></div>
       <div class="rce-box rce-smbox"><div class="rce-sm-head"><span>IDENTIFICAÇÃO DO COMPRADOR</span><span>ESTABELECIMENTO DISPENSADOR</span></div>
         <div class="rce-sm-grid"><div class="rce-sm-col">${['Nome completo:', 'CPF ou passaporte nº:', 'Endereço completo:', 'Cidade/UF:', 'Telefone:'].map(sm).join('')}</div>
-        <div class="rce-sm-col">${['Nome completo:', 'CNPJ ou CNES:', 'Responsável pela dispensação:', 'Assinatura:', 'Data:'].map(sm).join('')}</div></div>
-        <div class="rce-sm-note">Preenchimento opcional na impressão: a farmácia pode apor estes dados por carimbo (Portaria 6/99, art. 85, c). Lote e quantidade dispensada: anotar no verso.</div></div>
-      <div class="rce-printdate">Data de impressão deste receituário: ${rx.printedAt ? esc(formatDateBR(rx.printedAt)) : '____ / ____ / ______'} (recomendável)</div>
+        <div class="rce-sm-col">${['Nome completo:', 'CNPJ ou CNES:', 'Responsável pela dispensação:', 'Assinatura:', 'Data:'].map(sm).join('')}</div></div></div>
     </section>`;
   }
   const renderSheet = (rx, showLogo = true) => `<div class="rce-sheet">${VIAS_TXT.map(v => viaHTML(v, rx, showLogo)).join('')}</div>`;
@@ -403,7 +408,6 @@ table.rce-cat tr.off{opacity:.5}
 .rce-sm-head{display:grid;grid-template-columns:1fr 1fr;background:#d9d9d9;font-weight:700}.rce-sm-head span{padding:.5mm 1.5mm}
 .rce-sm-head span:last-child,.rce-sm-col:last-child{border-left:.3mm solid #000}
 .rce-sm-grid{display:grid;grid-template-columns:1fr 1fr}
-.rce-sign-cap{font-size:6pt;letter-spacing:.2px;color:#444}.rce-sm-note{font-size:5.8pt;font-style:italic;padding:.4mm 1.5mm .6mm;border-top:.15mm solid #7f7f7f;color:#333}.rce-printdate{font-size:6.2pt;font-style:italic;text-align:right;color:#333}
 .rce-sm-line{display:flex;align-items:flex-end;padding:.3mm 1.5mm;height:4.5mm}.rce-sm-l{white-space:nowrap;margin-right:1mm}.rce-sm-v{flex:1;border-bottom:.15mm solid #7f7f7f;height:3mm}
 
 /* impressão: só a folha (a página A4 paisagem é definida na hora de imprimir, para não afetar as outras impressões do app) */
@@ -463,7 +467,7 @@ table.rce-cat tr.off{opacity:.5}
     if (!opts.keepScroll) viewEl.scrollTop = 0;
   }
   const blankItem = () => ({catalogId: '', dcb: '', concentracao: '', forma: '', unidade: 'comprimido', via: 'oral', lista: 'C1', longoPrazo: false, dose: 1, vezes: 1, obs: '', posologia: '', posoEdited: false, quantidade: '', diasManual: ''});
-  const newDraft = () => ({id: null, patientId: null, patient: {nome: '', cpf: '', semCpf: false, endereco: ''}, issuedAt: todayISO(), items: [blankItem()], justificativa: ''});
+  const newDraft = () => ({id: null, patientId: null, patient: {nome: '', cpf: '', semCpf: false, estrangeiro: false, passaporte: '', endereco: ''}, issuedAt: todayISO(), items: [blankItem()], justificativa: ''});
   const buildRx = () => ({patient: S.draft.patient, emitente: emitenteSnapshot(), items: S.draft.items, justificativa: S.draft.justificativa, issuedAt: S.draft.issuedAt});
 
   function render() {
@@ -490,8 +494,10 @@ table.rce-cat tr.off{opacity:.5}
       <section class="rce-card"><h2>Paciente</h2>
         <label class="f">Nome completo<input id="rce-p-nome" list="rce-pt-list" autocomplete="off" value="${esc(d.patient.nome)}" placeholder="Digite para buscar um paciente salvo ou cadastrar um novo"></label>
         <datalist id="rce-pt-list">${patientOptions()}</datalist>
-        <div class="rce-g2"><label class="f">CPF<input id="rce-p-cpf" inputmode="numeric" autocomplete="off" value="${esc(formatCPF(d.patient.cpf))}" ${d.patient.semCpf ? 'disabled' : ''}></label>
-          <label class="rce-check" style="align-self:end;padding-bottom:12px"><input type="checkbox" id="rce-p-semcpf" ${d.patient.semCpf ? 'checked' : ''}> Paciente sem CPF</label></div>
+        <div class="rce-g2"><label class="f"><span id="rce-p-idl">${d.patient.estrangeiro ? 'Passaporte nº' : 'CPF'}</span><input id="rce-p-cpf" inputmode="${d.patient.estrangeiro ? 'text' : 'numeric'}" autocomplete="off" value="${esc(d.patient.estrangeiro ? d.patient.passaporte : formatCPF(d.patient.cpf))}" ${!d.patient.estrangeiro && d.patient.semCpf ? 'disabled' : ''}></label>
+          <div style="align-self:end;padding-bottom:8px;display:flex;flex-direction:column;gap:2px">
+            <label class="rce-check"><input type="checkbox" id="rce-p-estr" ${d.patient.estrangeiro ? 'checked' : ''}> Paciente estrangeiro</label>
+            <label class="rce-check" id="rce-p-semcpf-l" style="${d.patient.estrangeiro ? 'display:none' : ''}"><input type="checkbox" id="rce-p-semcpf" ${d.patient.semCpf ? 'checked' : ''}> Paciente sem CPF</label></div></div>
         <label class="f">Endereço completo<input id="rce-p-end" autocomplete="off" value="${esc(d.patient.endereco)}" placeholder="Rua, número, bairro, cidade/UF"></label>
         <div id="rce-repeat"></div></section>
       <section class="rce-card"><h2>Prescrição</h2>
@@ -507,13 +513,21 @@ table.rce-cat tr.off{opacity:.5}
       <p class="hint">Só gera o papel para assinatura manual. Receita eletrônica de controlados exige plataforma integrada ao SNCR e assinatura ICP-Brasil. Confira sempre a norma vigente (Portaria SVS/MS 344/98; RDC 1.000/2025). Benzodiazepínicos e zolpidem usam Notificação de Receita B (azul), fora deste modelo.</p>`;
     bindNova(); renderItems(); renderRepeat(); refreshAlerts();
   }
+  function syncId() { // atualiza rótulo e valor do campo CPF/passaporte conforme o paciente do rascunho
+    const pt = S.draft.patient, el = $('#rce-p-cpf'); if (!el) return;
+    $('#rce-p-idl').textContent = pt.estrangeiro ? 'Passaporte nº' : 'CPF';
+    el.inputMode = pt.estrangeiro ? 'text' : 'numeric';
+    el.value = pt.estrangeiro ? (pt.passaporte || '') : formatCPF(pt.cpf);
+    el.disabled = !pt.estrangeiro && !!pt.semCpf;
+    $('#rce-p-estr').checked = !!pt.estrangeiro; $('#rce-p-semcpf').checked = !!pt.semCpf;
+    $('#rce-p-semcpf-l').style.display = pt.estrangeiro ? 'none' : '';
+  }
   function selectPatient(id) {
     const p = S.patients.find(x => x.id === id); if (!p) return;
     const d = S.draft; d.patientId = id;
-    d.patient = {nome: p.nome, cpf: p.cpf || '', semCpf: !!p.semCpf, endereco: p.endereco || ''};
-    $('#rce-p-nome').value = p.nome; $('#rce-p-cpf').value = formatCPF(p.cpf); $('#rce-p-cpf').disabled = !!p.semCpf;
-    $('#rce-p-semcpf').checked = !!p.semCpf; $('#rce-p-end').value = p.endereco || '';
-    renderRepeat(); refreshAlerts();
+    d.patient = pacienteDados(p);
+    $('#rce-p-nome').value = p.nome; $('#rce-p-end').value = p.endereco || '';
+    syncId(); renderRepeat(); refreshAlerts();
   }
   function renderRepeat() {
     const box = $('#rce-repeat'); if (!box) return;
@@ -526,7 +540,7 @@ table.rce-cat tr.off{opacity:.5}
   function repeatRx(rx) {
     const p = S.patients.find(x => x.id === rx.patientId);
     S.draft = newDraft(); S.draft.patientId = rx.patientId;
-    S.draft.patient = p ? {nome: p.nome, cpf: p.cpf || '', semCpf: !!p.semCpf, endereco: p.endereco || ''} : {...rx.patient};
+    S.draft.patient = p ? pacienteDados(p) : {...pacienteDados(rx.patient)};
     S.draft.items = JSON.parse(JSON.stringify(rx.items)); S.draft.justificativa = rx.justificativa || '';
     go('nova'); toast('Receita anterior copiada. Confira a data e a quantidade.');
   }
@@ -548,8 +562,13 @@ table.rce-cat tr.off{opacity:.5}
       if (m.length === 1) selectPatient(m[0].id);
     });
     const cpf = $('#rce-p-cpf');
-    cpf.addEventListener('input', () => { d.patient.cpf = onlyDigits(cpf.value).slice(0, 11); cpf.value = formatCPF(d.patient.cpf); refreshAlerts(); });
-    $('#rce-p-semcpf').addEventListener('change', e => { d.patient.semCpf = e.target.checked; cpf.disabled = e.target.checked; if (e.target.checked) { d.patient.cpf = ''; cpf.value = ''; } refreshAlerts(); });
+    cpf.addEventListener('input', () => {
+      if (d.patient.estrangeiro) { d.patient.passaporte = normPassaporte(cpf.value); cpf.value = d.patient.passaporte; }
+      else { d.patient.cpf = onlyDigits(cpf.value).slice(0, 11); cpf.value = formatCPF(d.patient.cpf); }
+      refreshAlerts();
+    });
+    $('#rce-p-semcpf').addEventListener('change', e => { d.patient.semCpf = e.target.checked; if (e.target.checked) d.patient.cpf = ''; syncId(); refreshAlerts(); });
+    $('#rce-p-estr').addEventListener('change', e => { d.patient.estrangeiro = e.target.checked; d.patient.semCpf = false; syncId(); refreshAlerts(); if (!cpf.disabled) cpf.focus(); });
     $('#rce-p-end').addEventListener('input', e => { d.patient.endereco = e.target.value; refreshAlerts(); });
     $('#rce-issued').addEventListener('input', e => { d.issuedAt = e.target.value || todayISO(); refreshAlerts(); });
     $('#rce-just').addEventListener('input', e => { d.justificativa = e.target.value; refreshAlerts(); });
@@ -662,7 +681,7 @@ table.rce-cat tr.off{opacity:.5}
     const d = S.draft, v = validateReceita(buildRx(), todayISO());
     if (v.errors.length) { toast('Resolva as pendências antes de salvar.'); return null; }
     const now = nowISO();
-    const pdata = {nome: d.patient.nome.trim().replace(/\s+/g, ' '), cpf: d.patient.semCpf ? '' : onlyDigits(d.patient.cpf), semCpf: !!d.patient.semCpf, endereco: d.patient.endereco.trim()};
+    const pdata = {nome: d.patient.nome.trim().replace(/\s+/g, ' '), cpf: d.patient.semCpf || d.patient.estrangeiro ? '' : onlyDigits(d.patient.cpf), semCpf: !d.patient.estrangeiro && !!d.patient.semCpf, estrangeiro: !!d.patient.estrangeiro, passaporte: d.patient.estrangeiro ? normPassaporte(d.patient.passaporte) : '', endereco: d.patient.endereco.trim()};
     let pat = d.patientId ? S.patients.find(p => p.id === d.patientId) : null;
     pat = pat ? {...pat, ...pdata, updatedAt: now, deleted: false} : {id: uuid(), ...pdata, createdAt: now, updatedAt: now, deleted: false};
     try {
@@ -681,7 +700,7 @@ table.rce-cat tr.off{opacity:.5}
     const rx = S.preview;
     viewEl.innerHTML = `<div class="rce-pv-bar"><button type="button" class="btn pri" id="rce-do-print">Imprimir / salvar em PDF</button><button type="button" class="btn" id="rce-back">← Voltar</button><button type="button" class="btn" id="rce-new-after">Nova receita</button></div>
       <p class="hint">Imprima em A4 <b>paisagem</b>, escala 100%, sem cabeçalhos/rodapés do navegador. Para gerar arquivo, escolha “Salvar como PDF”. Depois de impressa, assine e carimbe cada via.</p>
-      <div id="rce-overflow"></div><div class="rce-sheet-wrap" id="rce-sheet-wrap"><div id="rce-sheet-holder">${renderSheet({...rx, printedAt: todayISO()}, S.settings.showLogo)}</div></div>`;
+      <div id="rce-overflow"></div><div class="rce-sheet-wrap" id="rce-sheet-wrap"><div id="rce-sheet-holder">${renderSheet(rx, S.settings.showLogo)}</div></div>`;
     fitSheet();
     $('#rce-do-print').addEventListener('click', () => printRx(rx));
     $('#rce-back').addEventListener('click', () => go(S.prevView, {keepScroll: true}));
@@ -701,7 +720,7 @@ table.rce-cat tr.off{opacity:.5}
   function removePageStyle() { const s = document.getElementById('rce-page-style'); if (s) s.remove(); }
   async function printRx(rx) {
     const pa = document.getElementById('rce-print');
-    pa.innerHTML = renderSheet({...rx, printedAt: todayISO()}, S.settings.showLogo);
+    pa.innerHTML = renderSheet(rx, S.settings.showLogo);
     try { await Promise.all([...pa.querySelectorAll('img')].map(i => (i.decode ? i.decode().catch(() => {}) : null))); } catch (e) {}
     addPageStyle(); document.body.classList.add('rce-printing');
     const old = document.title; document.title = `Receita - ${rx.patient.nome} - ${formatDateBR(rx.issuedAt)}`;
@@ -714,12 +733,12 @@ table.rce-cat tr.off{opacity:.5}
   function renderPacientes() {
     if (S.openPatientId) return renderPaciente();
     const q = normalize(S.ptFilter), qd = onlyDigits(S.ptFilter);
-    const list = activePatients().filter(p => !q || normalize(p.nome).includes(q) || (qd && onlyDigits(p.cpf).includes(qd))).sort(byName);
+    const list = activePatients().filter(p => !q || normalize(p.nome).includes(q) || (qd && onlyDigits(p.cpf).includes(qd)) || (q && normalize(p.passaporte || '').includes(q))).sort(byName);
     viewEl.innerHTML = `<section class="rce-card"><h2>Pacientes <span class="rce-muted rce-small">(${activePatients().length})</span></h2>
-      <label class="f">Buscar por nome ou CPF<input id="rce-pt-q" value="${esc(S.ptFilter)}" autocomplete="off"></label>
+      <label class="f">Buscar por nome, CPF ou passaporte<input id="rce-pt-q" value="${esc(S.ptFilter)}" autocomplete="off"></label>
       ${list.length ? `<ul class="rce-list">${list.map(p => {
         const rxs = patientRx(p.id), ult = rxs[0] ? ` · última receita ${formatDateBR(rxs[0].issuedAt)}` : '';
-        return `<li><div class="m"><b>${esc(p.nome)}</b><span class="rce-muted rce-small">${p.semCpf ? 'sem CPF' : esc(formatCPF(p.cpf) || 'CPF não informado')} · ${rxs.length} receita${rxs.length === 1 ? '' : 's'}${ult}</span></div>
+        return `<li><div class="m"><b>${esc(p.nome)}</b><span class="rce-muted rce-small">${esc(idTexto(p))} · ${rxs.length} receita${rxs.length === 1 ? '' : 's'}${ult}</span></div>
           <div class="bt"><button type="button" class="btn sm" data-open="${esc(p.id)}">Abrir</button><button type="button" class="btn sm pri" data-new="${esc(p.id)}">Nova receita</button></div></li>`;
       }).join('')}</ul>` : '<p class="rce-muted">Nenhum paciente encontrado. Os pacientes são salvos automaticamente quando você salva uma receita.</p>'}</section>`;
     $('#rce-pt-q').addEventListener('input', e => { S.ptFilter = e.target.value; const pos = e.target.selectionStart; renderPacientes(); const el = $('#rce-pt-q'); el.focus(); el.setSelectionRange(pos, pos); });
@@ -733,8 +752,10 @@ table.rce-cat tr.off{opacity:.5}
     viewEl.innerHTML = `<p><button type="button" class="rce-link" id="rce-back-list">← Todos os pacientes</button></p>
       <section class="rce-card"><h2>${esc(p.nome)}</h2>
         <label class="f">Nome completo<input id="rce-e-nome" value="${esc(p.nome)}"></label>
-        <div class="rce-g2"><label class="f">CPF<input id="rce-e-cpf" inputmode="numeric" value="${esc(formatCPF(p.cpf))}" ${p.semCpf ? 'disabled' : ''}></label>
-          <label class="rce-check" style="align-self:end;padding-bottom:12px"><input type="checkbox" id="rce-e-semcpf" ${p.semCpf ? 'checked' : ''}> Paciente sem CPF</label></div>
+        <div class="rce-g2"><label class="f"><span id="rce-e-idl">${p.estrangeiro ? 'Passaporte nº' : 'CPF'}</span><input id="rce-e-cpf" inputmode="${p.estrangeiro ? 'text' : 'numeric'}" value="${esc(p.estrangeiro ? normPassaporte(p.passaporte) : formatCPF(p.cpf))}" ${!p.estrangeiro && p.semCpf ? 'disabled' : ''}></label>
+          <div style="align-self:end;padding-bottom:8px;display:flex;flex-direction:column;gap:2px">
+            <label class="rce-check"><input type="checkbox" id="rce-e-estr" ${p.estrangeiro ? 'checked' : ''}> Paciente estrangeiro</label>
+            <label class="rce-check" id="rce-e-semcpf-l" style="${p.estrangeiro ? 'display:none' : ''}"><input type="checkbox" id="rce-e-semcpf" ${p.semCpf ? 'checked' : ''}> Paciente sem CPF</label></div></div>
         <label class="f">Endereço completo<input id="rce-e-end" value="${esc(p.endereco)}"></label>
         <div class="rce-actions"><button type="button" class="btn pri" id="rce-e-save">Salvar alterações</button><button type="button" class="btn pri" id="rce-e-new">Nova receita</button><button type="button" class="btn rce-danger" id="rce-e-del">Excluir paciente</button></div></section>
       <section class="rce-card"><h2>Histórico de receitas <span class="rce-muted rce-small">(${rxs.length})</span></h2>
@@ -742,12 +763,17 @@ table.rce-cat tr.off{opacity:.5}
           <div class="bt"><button type="button" class="btn sm" data-view-rx="${esc(r.id)}">Ver / reimprimir</button><button type="button" class="btn sm" data-repeat="${esc(r.id)}">Repetir</button><button type="button" class="btn sm rce-danger" data-del-rx="${esc(r.id)}">Excluir</button></div></li>`).join('')}</ul>`
         : '<p class="rce-muted">Nenhuma receita salva para este paciente.</p>'}</section>`;
     $('#rce-back-list').addEventListener('click', () => { S.openPatientId = null; go('pacientes'); });
-    $('#rce-e-cpf').addEventListener('input', e => { e.target.value = formatCPF(e.target.value); });
-    $('#rce-e-semcpf').addEventListener('change', e => { $('#rce-e-cpf').disabled = e.target.checked; if (e.target.checked) $('#rce-e-cpf').value = ''; });
+    const eEstr = $('#rce-e-estr'), eSem = $('#rce-e-semcpf'), eId = $('#rce-e-cpf');
+    eId.addEventListener('input', () => { eId.value = eEstr.checked ? normPassaporte(eId.value) : formatCPF(eId.value); });
+    eSem.addEventListener('change', () => { eId.disabled = eSem.checked; if (eSem.checked) eId.value = ''; });
+    eEstr.addEventListener('change', () => {
+      eSem.checked = false; eId.disabled = false; eId.value = ''; eId.inputMode = eEstr.checked ? 'text' : 'numeric';
+      $('#rce-e-idl').textContent = eEstr.checked ? 'Passaporte nº' : 'CPF'; $('#rce-e-semcpf-l').style.display = eEstr.checked ? 'none' : '';
+    });
     $('#rce-e-save').addEventListener('click', async () => {
       const nome = $('#rce-e-nome').value.trim().replace(/\s+/g, ' ');
       if (!nome) return toast('O nome não pode ficar vazio.');
-      const np = {...p, nome, cpf: $('#rce-e-semcpf').checked ? '' : onlyDigits($('#rce-e-cpf').value), semCpf: $('#rce-e-semcpf').checked, endereco: $('#rce-e-end').value.trim(), updatedAt: nowISO()};
+      const est = eEstr.checked, np = {...p, nome, cpf: est || eSem.checked ? '' : onlyDigits(eId.value), semCpf: !est && eSem.checked, estrangeiro: est, passaporte: est ? normPassaporte(eId.value) : '', endereco: $('#rce-e-end').value.trim(), updatedAt: nowISO()};
       await dbPut('patients', np); upsert(S.patients, np); toast('Paciente atualizado. Receitas já emitidas não mudam.'); renderPaciente();
     });
     $('#rce-e-new').addEventListener('click', () => newRxForPatient(p.id));
@@ -898,7 +924,7 @@ table.rce-cat tr.off{opacity:.5}
   }
 
   const core = {uuid, todayISO, formatDateBR, addDaysISO, diffDaysISO, onlyDigits, formatCPF, validCPF, normalize, slug, extenso, formatDose, posologiaAuto, quantidadeTexto,
-    analyzeItem, emitenteCompleto, validateReceita, mergeRecords, renderSheet, UNIDADES, VIAS, LIMITE_DIAS, LIMITE_DIAS_LONGO, LIMITE_DIAS_A2, LIMITE_MG_A2, LIMITE_AMPOLAS, VALIDADE_DIAS, MAX_ITENS};
+    analyzeItem, idPaciente, normPassaporte, emitenteCompleto, validateReceita, mergeRecords, renderSheet, UNIDADES, VIAS, LIMITE_DIAS, LIMITE_DIAS_LONGO, LIMITE_DIAS_A2, LIMITE_MG_A2, LIMITE_AMPOLAS, VALIDADE_DIAS, MAX_ITENS};
   return {open, core, BASE_CATALOG};
 })();
 if (typeof module !== 'undefined' && module.exports) module.exports = RCE;

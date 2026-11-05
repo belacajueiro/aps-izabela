@@ -205,13 +205,35 @@ test('folha: 2 vias, itens numerados, via agrupada, sem "undefined"', () => {
 
 test('folha segue os campos do modelo Anvisa v2 (rev. 13/03/2026)', () => {
   const rx = {patient: {nome: 'Maria', cpf: '52998224725', semCpf: false, endereco: 'Rua A, 1'}, emitente: {profNome: 'Dra X', crm: '1', crmUF: 'MG', cnes: '2125935', endereco: 'Rua B, 2 – Betim/MG'},
-    issuedAt: '2026-11-05', printedAt: '2026-11-05', items: [{catalogId: 'x', dcb: 'Sertralina', concentracao: '50 mg', unidade: 'comprimido', via: 'oral', quantidade: 30, posologia: 'Tomar 1 comprimido por dia.'}]};
+    issuedAt: '2026-11-05', items: [{catalogId: 'x', dcb: 'Sertralina', concentracao: '50 mg', unidade: 'comprimido', via: 'oral', quantidade: 30, posologia: 'Tomar 1 comprimido por dia.'}]};
   const h = RCE.core.renderSheet(rx, false);
-  for (const t of ['IDENTIFICAÇÃO DO EMITENTE', 'IDENTIFICAÇÃO DO PACIENTE', 'CPF ou, se estrangeiro, passaporte nº', 'Identificação e assinatura do prescritor',
-    'IDENTIFICAÇÃO DO COMPRADOR', 'CPF ou passaporte nº', 'ESTABELECIMENTO DISPENSADOR', 'CNPJ ou CNES', 'Data de impressão deste receituário: 05/11/2026'])
+  for (const t of ['IDENTIFICAÇÃO DO EMITENTE', 'IDENTIFICAÇÃO DO PACIENTE', 'CPF:', '529.982.247-25',
+    'IDENTIFICAÇÃO DO COMPRADOR', 'CPF ou passaporte nº', 'ESTABELECIMENTO DISPENSADOR', 'CNPJ ou CNES', '05/11/2026'])
     assert.ok(h.includes(t), 'falta: ' + t);
   assert.ok(!h.includes('Órgão emissor') && !h.includes('RG:'), 'campos do modelo antigo não devem aparecer');
-  assert.ok(RCE.core.renderSheet({...rx, printedAt: undefined}, false).includes('____ / ____ / ______'));
+  for (const t of ['se estrangeiro', 'Identificação e assinatura do prescritor', 'Preenchimento opcional', 'Data de impressão', 'Lote e quantidade dispensada'])
+    assert.ok(!h.includes(t), 'não deve aparecer: ' + t);
+});
+
+test('paciente estrangeiro: exige passaporte e a folha troca CPF por Passaporte nº', () => {
+  const ok = okRx();
+  ok.patient = {nome: 'John Smith', cpf: '', estrangeiro: true, passaporte: '', endereco: 'Rua A, 1'};
+  assert.ok(RCE.core.validateReceita(ok).errors.some(e => /passaporte/i.test(e)));
+  ok.patient.passaporte = 'ab 123-456';
+  const v = RCE.core.validateReceita(ok);
+  assert.ok(!v.errors.some(e => /passaporte|CPF/i.test(e)), v.errors.join(' | '));
+  assert.equal(RCE.core.normPassaporte('ab 123-456'), 'AB123456');
+  const h = RCE.core.renderSheet({...ok, items: [{catalogId: 'x', dcb: 'Sertralina', concentracao: '50 mg', unidade: 'comprimido', via: 'oral', quantidade: 30, posologia: 'Tomar 1 comprimido por dia.'}]}, false);
+  assert.ok(h.includes('Passaporte nº:') && h.includes('AB123456'));
+  assert.ok(!h.includes('NÃO POSSUI') && !/>CPF:</.test(h));
+  // estrangeiro prevalece sobre "sem CPF"
+  const w = {...okRx(), patient: {nome: 'X', semCpf: true, endereco: 'R', estrangeiro: true, passaporte: 'Z9'}};
+  assert.ok(!RCE.core.validateReceita(w).errors.some(e => /CPF/i.test(e)));
+});
+
+test('data de emissão personalizada aparece na folha', () => {
+  const rx = {...okRx(), issuedAt: '2026-12-24', items: [{catalogId: 'x', dcb: 'Sertralina', concentracao: '50 mg', unidade: 'comprimido', via: 'oral', quantidade: 30, posologia: 'Tomar 1 comprimido por dia.'}]};
+  assert.ok(RCE.core.renderSheet(rx, false).includes('24/12/2026'));
 });
 
 test('tramadol/codeína (adendo A2): até 100 mg por dose; acima disso exige Notificação A', () => {

@@ -86,7 +86,7 @@ test('limites de dias (60 geral, 180 anticonvulsivante/antiparkinsoniano)', () =
 
 const okRx = () => ({
   patient: { nome: 'Fulano de Tal', cpf: '529.982.247-25', endereco: 'Rua A, 1' },
-  emitente: { profNome: 'Fulana', crm: '123', crmUF: 'MG' },
+  emitente: { profNome: 'Fulana', crm: '123', crmUF: 'MG', cnes: '2125935' },
   issuedAt: '2026-11-04',
   justificativa: '',
   items: [{ catalogId: 'x', unidade: 'comprimido', dose: 1, vezes: 1, quantidade: 60, posologia: 'Tomar 1 comprimido.', longoPrazo: false }],
@@ -161,7 +161,7 @@ test('catálogo base: ids únicos, campos válidos e nada de B1 por engano', () 
     ids.add(m.id);
     assert.ok(m.dcb && m.concentracao && m.forma && m.unidade && m.via);
     assert.equal(m.via, 'oral');
-    assert.ok(['C1', 'C5'].includes(m.lista));
+    assert.ok(['C1', 'C5', 'A2'].includes(m.lista));
   }
   const nomes = new Set(BASE_CATALOG.map((m) => normalize(m.dcb)));
   for (const proibido of ['clonazepam', 'diazepam', 'bromazepam', 'alprazolam', 'fenobarbital', 'zolpidem', 'metilfenidato']) {
@@ -187,8 +187,8 @@ test('folha: 2 vias, itens numerados, via agrupada, sem "undefined"', () => {
   };
   const h = renderSheet(rx, false);
   assert.equal((h.match(/RECEITA DE CONTROLE ESPECIAL/g) || []).length, 2);
-  assert.match(h, /1ª VIA – RETENÇÃO DA FARMÁCIA OU DROGARIA/);
-  assert.match(h, /2ª VIA – ORIENTAÇÃO AO PACIENTE/);
+  assert.match(h, /1ª VIA – RETENÇÃO PELA FARMÁCIA/);
+  assert.match(h, /2ª VIA – PACIENTE/);
   assert.equal((h.match(/USO ORAL/g) || []).length, 2); // uma vez por via, não por item
   assert.match(h, /1\) SERTRALINA 50 mg/);
   assert.match(h, /2\) AMITRIPTILINA 25 mg/);
@@ -201,4 +201,29 @@ test('folha: 2 vias, itens numerados, via agrupada, sem "undefined"', () => {
   const h2 = renderSheet(rx, false);
   assert.match(h2, /NÃO POSSUI/);
   assert.ok(!h2.includes('<i>ZZ</i>') && h2.includes('&lt;i&gt;ZZ&lt;/i&gt;'));
+});
+
+test('folha segue os campos do modelo Anvisa v2 (rev. 13/03/2026)', () => {
+  const rx = {patient: {nome: 'Maria', cpf: '52998224725', semCpf: false, endereco: 'Rua A, 1'}, emitente: {profNome: 'Dra X', crm: '1', crmUF: 'MG', cnes: '2125935', endereco: 'Rua B, 2 – Betim/MG'},
+    issuedAt: '2026-11-05', printedAt: '2026-11-05', items: [{catalogId: 'x', dcb: 'Sertralina', concentracao: '50 mg', unidade: 'comprimido', via: 'oral', quantidade: 30, posologia: 'Tomar 1 comprimido por dia.'}]};
+  const h = RCE.core.renderSheet(rx, false);
+  for (const t of ['IDENTIFICAÇÃO DO EMITENTE', 'IDENTIFICAÇÃO DO PACIENTE', 'CPF ou, se estrangeiro, passaporte nº', 'Identificação e assinatura do prescritor',
+    'IDENTIFICAÇÃO DO COMPRADOR', 'CPF ou passaporte nº', 'ESTABELECIMENTO DISPENSADOR', 'CNPJ ou CNES', 'Data de impressão deste receituário: 05/11/2026'])
+    assert.ok(h.includes(t), 'falta: ' + t);
+  assert.ok(!h.includes('Órgão emissor') && !h.includes('RG:'), 'campos do modelo antigo não devem aparecer');
+  assert.ok(RCE.core.renderSheet({...rx, printedAt: undefined}, false).includes('____ / ____ / ______'));
+});
+
+test('tramadol/codeína (adendo A2): até 100 mg por dose; acima disso exige Notificação A', () => {
+  const cat = RCE.BASE_CATALOG.filter(m => m.lista === 'A2');
+  assert.ok(cat.length >= 6);
+  const cod = cat.find(m => m.dcb === 'Codeína (fosfato)' && m.concentracao === '30 mg');
+  const base = {patient: {nome: 'Maria', cpf: '52998224725', semCpf: false, endereco: 'Rua A'}, emitente: {profNome: 'X', crm: '1', crmUF: 'MG', cnes: '1'}, issuedAt: '2026-11-05'};
+  const item = (dose, q) => ({catalogId: cod.id, dcb: cod.dcb, concentracao: cod.concentracao, unidade: 'comprimido', via: 'oral', lista: 'A2', mgUnidade: 30, dose, vezes: 3, quantidade: q, posologia: 'Tomar'});
+  const ok = RCE.core.validateReceita({...base, items: [item(3, 270)]}, '2026-11-05');   // 90 mg/dose, 30 dias
+  assert.equal(ok.errors.filter(e => /100 mg/.test(e)).length, 0);
+  const ruim = RCE.core.validateReceita({...base, items: [item(4, 360)]}, '2026-11-05'); // 120 mg/dose
+  assert.ok(ruim.errors.some(e => /Notificação de Receita A/.test(e)));
+  const longo = RCE.core.validateReceita({...base, items: [item(1, 180)]}, '2026-11-05'); // 60 dias > 30
+  assert.ok(longo.errors.some(e => /justificativa/i.test(e)));
 });

@@ -38774,9 +38774,9 @@ const RCE = (() => {
   }
 
   // limites da Receita de Controle Especial (RDC 1.000/2025 — conferir a norma vigente)
-  const LIMITE_DIAS = 60, LIMITE_DIAS_LONGO = 180, LIMITE_AMPOLAS = 5, VALIDADE_DIAS = 30, MAX_ITENS = 3;
+  const LIMITE_DIAS = 60, LIMITE_DIAS_LONGO = 180, LIMITE_DIAS_A2 = 30, LIMITE_MG_A2 = 100, LIMITE_AMPOLAS = 5, VALIDADE_DIAS = 30, MAX_ITENS = 3;
   function analyzeItem(item) {
-    const max = item.longoPrazo ? LIMITE_DIAS_LONGO : LIMITE_DIAS;
+    const max = item.lista === 'A2' ? LIMITE_DIAS_A2 : item.longoPrazo ? LIMITE_DIAS_LONGO : LIMITE_DIAS;
     const q = Number(item.quantidade), manual = Number(item.diasManual), un = unidadeInfo(item.unidade);
     let dias = null, origem = null;
     if (Number.isFinite(manual) && manual > 0) { dias = Math.ceil(manual); origem = 'manual'; }
@@ -38795,6 +38795,7 @@ const RCE = (() => {
       if (!onlyDigits(p.cpf)) errors.push('Informe o CPF do paciente (ou marque “paciente sem CPF”).');
       else if (!validCPF(p.cpf)) warnings.push('O CPF informado não passa na verificação dos dígitos. Confira antes de imprimir.');
     }
+    if (rx.emitente && !(rx.emitente.cnes || '').trim()) warnings.push('Informe o CNES (ou CNPJ) da unidade em Configurações: o modelo da Anvisa pede CNPJ ou CNES do emitente institucional.');
     if (!emitenteCompleto(rx.emitente)) errors.push('Complete seus dados na aba Configurações (nome, CRM e UF).');
     const items = rx.items || [];
     if (!items.length) errors.push('Adicione ao menos um medicamento.');
@@ -38805,12 +38806,17 @@ const RCE = (() => {
       if (!it.catalogId) { errors.push(`Medicamento ${n}: escolha o medicamento e a apresentação no catálogo.`); return; }
       if (!(Number(it.quantidade) > 0)) errors.push(`Medicamento ${n}: informe a quantidade.`);
       if (!it.posologia || !it.posologia.trim()) errors.push(`Medicamento ${n}: a posologia está vazia.`);
+      if (it.lista === 'A2') {
+        const mg = (Number(it.dose) || 0) * (Number(it.mgUnidade) || 0);
+        if (!it.mgUnidade) warnings.push(`Medicamento ${n}: confirme que a dose por tomada não passa de ${LIMITE_MG_A2} mg do opioide; acima disso a norma exige Notificação de Receita A (amarela).`);
+        else if (mg > LIMITE_MG_A2) errors.push(`Medicamento ${n}: a dose por tomada (${String(mg).replace('.', ',')} mg do opioide) passa de ${LIMITE_MG_A2} mg. Nesse caso a norma exige Notificação de Receita A (amarela), que este gerador não emite.`);
+      }
       const a = analyzeItem(it);
       if (a.excede) {
         precisaJustificativa = true;
         warnings.push(it.unidade === 'ampola'
           ? `Medicamento ${n}: mais de ${LIMITE_AMPOLAS} ampolas. Acima do limite, a norma exige justificativa com CID/diagnóstico.`
-          : `Medicamento ${n}: a quantidade cobre cerca de ${a.dias} dias; o limite é ${a.max} dias. Acima do limite, a norma exige justificativa com CID/diagnóstico, posologia, data e assinatura.`);
+          : `Medicamento ${n}: a quantidade cobre cerca de ${a.dias} dias; o limite é ${a.max} dias${it.lista === 'A2' ? ' (valor conservador para tramadol/codeína; confira a norma)' : ''}. Acima do limite, a norma exige justificativa com CID/diagnóstico, posologia, data e assinatura.`);
       } else if (a.semCalculo) warnings.push(`Medicamento ${n}: informe a duração em dias para conferir o limite de ${a.max} dias.`);
     });
     if (precisaJustificativa && !(rx.justificativa || '').trim()) errors.push('Preencha a justificativa com CID ou diagnóstico (quantidade acima do limite).');
@@ -38837,7 +38843,7 @@ const RCE = (() => {
   // Fonte da lista de substâncias: Anexo I da Portaria 344/98, Lista C1 (consulta de 04/11/2026; RDC 1.011 e 1.023/2026 só incluíram o adendo de Cannabis na C1).
   // As apresentações são as mais comuns no mercado: CONFERIR [NV] e ajustar na aba Medicamentos.
   // NÃO entram (Notificação de Receita B, azul): clonazepam, diazepam, bromazepam, alprazolam, fenobarbital, zolpidem, etc. (Lista B1).
-  // Também não há anabolizantes (C5), tramadol/codeína (adendos), líquidos nem injetáveis: cadastre em Medicamentos se precisar.
+  // Também não há anabolizantes (C5), líquidos nem injetáveis: cadastre em Medicamentos se precisar. Tramadol/codeína (adendos A2) estão em DEF_A2.
   // longoPrazo = anticonvulsivantes e antiparkinsonianos (a norma permite até 6 meses).
   const DEFINICOES = [
     ['Amitriptilina', 'antidepressivo', 'comprimido', ['10 mg', '25 mg', '75 mg']],
@@ -38888,13 +38894,27 @@ const RCE = (() => {
     ['Dissulfiram', 'dependência', 'comprimido', ['250 mg']],
     ['Naltrexona', 'dependência', 'comprimido', ['50 mg']],
   ];
+  // Adendos da Lista A2 (Portaria 344/98, RDC 999/2025): tramadol e codeína só entram em Receita de Controle Especial quando a dose (unidade posológica)
+  // não passa de 100 mg do opioide; acima disso é Notificação de Receita A (amarela). mgUnidade = mg do opioide por comprimido/cápsula.
+  // Apresentações: CONFERIR [NV]. Limite de dias: o app usa 30 (conservador) até conferir a norma.
+  const DEF_A2 = [
+    ['Tramadol', 'opioide', 'cápsula', [['50 mg', 50]]],
+    ['Tramadol', 'opioide', 'comprimido', [['100 mg (liberação prolongada)', 100]]],
+    ['Tramadol + paracetamol', 'opioide', 'comprimido', [['37,5 mg + 325 mg', 37.5]]],
+    ['Codeína (fosfato)', 'opioide', 'comprimido', [['30 mg', 30], ['60 mg', 60]]],
+    ['Paracetamol + codeína', 'opioide', 'comprimido', [['500 mg + 30 mg', 30], ['500 mg + 7,5 mg', 7.5], ['300 mg + 30 mg', 30]]],
+  ];
+  const BASE_CATALOG_A2 = DEF_A2.flatMap(([dcb, classe, unidade, pres]) => pres.map(([conc, mg]) => ({
+    id: `base:${slug(dcb)}:${slug(conc)}:${slug(unidade)}`, dcb, concentracao: conc, forma: unidade, unidade,
+    via: 'oral', lista: 'A2', classe, longoPrazo: false, base: true, mgUnidade: mg,
+  })));
   const BASE_CATALOG = DEFINICOES.flatMap(([dcb, classe, unidade, concs, longo]) => concs.map(conc => ({
     id: `base:${slug(dcb)}:${slug(conc)}:${slug(unidade)}`, dcb, concentracao: conc, forma: unidade, unidade,
     via: 'oral', lista: 'C1', classe, longoPrazo: !!longo, base: true,
-  })));
+  }))).concat(BASE_CATALOG_A2);
 
   // ═════════════════════════ folha da receita (A4 paisagem, 2 vias lado a lado) ═════════════════════════
-  const VIAS_TXT = ['1ª VIA – RETENÇÃO DA FARMÁCIA OU DROGARIA', '2ª VIA – ORIENTAÇÃO AO PACIENTE'];
+  const VIAS_TXT = ['1ª VIA – RETENÇÃO PELA FARMÁCIA', '2ª VIA – PACIENTE'];
   const LOGOS = (typeof RCE_LOGOS !== 'undefined') ? RCE_LOGOS : {sus: '', betim: ''};
 
   function itemHTML(it, n) {
@@ -38917,24 +38937,26 @@ const RCE = (() => {
     return `<section class="rce-via">
       <header class="rce-via-head"><div><div class="rce-org">${esc(em.orgName || '')}</div><div class="rce-unit">${esc(em.unitName || '')}</div><div class="rce-title">RECEITA DE CONTROLE ESPECIAL</div></div>${logo}</header>
       <div class="rce-via-strip">${label}</div>
-      <div class="rce-box"><div class="rce-box-title">EMITENTE</div>
+      <div class="rce-box"><div class="rce-box-title">IDENTIFICAÇÃO DO EMITENTE</div>
         <div class="rce-ln"><span>Profissional: <b>${esc((em.profNome || '').toUpperCase())}</b></span><span>CRM-${esc(em.crmUF || '')}: <b>${esc(em.crm || '')}</b></span></div>
         <div class="rce-ln"><span>Unidade: <b>${esc(em.unitName || '')}</b></span><span>CNES: <b>${esc(em.cnes || '')}</b></span></div>
-        <div class="rce-ln"><span>Endereço: <b>${esc(em.endereco || '')}</b></span></div>
+        <div class="rce-ln"><span>Endereço completo: <b>${esc(em.endereco || '')}</b></span></div>
         <div class="rce-ln"><span>CEP: <b>${esc(em.cep || '')}</b></span><span>Telefone: <b>${esc(em.telefone || '')}</b></span></div></div>
-      <div class="rce-box"><div class="rce-box-title">PACIENTE</div>
+      <div class="rce-box"><div class="rce-box-title">IDENTIFICAÇÃO DO PACIENTE</div>
         <div class="rce-fl"><span class="rce-fl-l">Nome completo:</span><span class="rce-fl-v">${esc(p.nome || '')}</span></div>
-        <div class="rce-fl"><span class="rce-fl-l">CPF:</span><span class="rce-fl-v rce-short">${esc(cpf)}</span></div>
-        <div class="rce-fl"><span class="rce-fl-l">Endereço completo:</span><span class="rce-fl-v">${esc(p.endereco || '')}</span></div></div>
+        <div class="rce-fl"><span class="rce-fl-l">Endereço completo:</span><span class="rce-fl-v">${esc(p.endereco || '')}</span></div>
+        <div class="rce-fl"><span class="rce-fl-l">CPF ou, se estrangeiro, passaporte nº:</span><span class="rce-fl-v rce-short">${esc(cpf)}</span></div></div>
       <div class="rce-box rce-grow"><div class="rce-box-title">PRESCRIÇÃO</div>
         <div class="rce-rx-body">${corpoHTML(rx.items || [])}${just}</div>
         <div class="rce-sign-row">
           <div class="rce-date-cell"><span class="rce-fl-l">Data de emissão:</span><span class="rce-fl-v rce-short"><b>${esc(formatDateBR(rx.issuedAt))}</b></span></div>
-          <div class="rce-sign-cell"><div class="rce-sign-name">${esc((em.profNome || '').toUpperCase())}</div><div class="rce-sign-reg">CRM-${esc(em.crmUF || '')} ${esc(em.crm || '')}${em.cns ? ' <span class="rce-nw">| CNS ' + esc(em.cns) + '</span>' : ''}</div></div>
+          <div class="rce-sign-cell"><div class="rce-sign-cap">Identificação e assinatura do prescritor</div><div class="rce-sign-name">${esc((em.profNome || '').toUpperCase())}</div><div class="rce-sign-reg">CRM-${esc(em.crmUF || '')} ${esc(em.crm || '')}${em.cns ? ' <span class="rce-nw">| CNS ' + esc(em.cns) + '</span>' : ''}</div></div>
         </div></div>
-      <div class="rce-box rce-smbox"><div class="rce-sm-head"><span>IDENTIFICAÇÃO DO COMPRADOR</span><span>IDENTIFICAÇÃO DO FORNECEDOR</span></div>
-        <div class="rce-sm-grid"><div class="rce-sm-col">${['Nome completo:', 'RG:', 'Órgão emissor:', 'Endereço:', 'Cidade/UF:', 'Telefone:'].map(sm).join('')}</div>
-        <div class="rce-sm-col">${['Fornecedor:', 'CNPJ/CNES:', 'Farmacêutico:', 'CRF/UF:', 'Data do fornecimento:', 'Assinatura:'].map(sm).join('')}</div></div></div>
+      <div class="rce-box rce-smbox"><div class="rce-sm-head"><span>IDENTIFICAÇÃO DO COMPRADOR</span><span>ESTABELECIMENTO DISPENSADOR</span></div>
+        <div class="rce-sm-grid"><div class="rce-sm-col">${['Nome completo:', 'CPF ou passaporte nº:', 'Endereço completo:', 'Cidade/UF:', 'Telefone:'].map(sm).join('')}</div>
+        <div class="rce-sm-col">${['Nome completo:', 'CNPJ ou CNES:', 'Responsável pela dispensação:', 'Assinatura:', 'Data:'].map(sm).join('')}</div></div>
+        <div class="rce-sm-note">Preenchimento opcional na impressão: a farmácia pode apor estes dados por carimbo (Portaria 6/99, art. 85, c). Lote e quantidade dispensada: anotar no verso.</div></div>
+      <div class="rce-printdate">Data de impressão deste receituário: ${rx.printedAt ? esc(formatDateBR(rx.printedAt)) : '____ / ____ / ______'} (recomendável)</div>
     </section>`;
   }
   const renderSheet = (rx, showLogo = true) => `<div class="rce-sheet">${VIAS_TXT.map(v => viaHTML(v, rx, showLogo)).join('')}</div>`;
@@ -39044,6 +39066,7 @@ table.rce-cat tr.off{opacity:.5}
 .rce-sm-head{display:grid;grid-template-columns:1fr 1fr;background:#d9d9d9;font-weight:700}.rce-sm-head span{padding:.5mm 1.5mm}
 .rce-sm-head span:last-child,.rce-sm-col:last-child{border-left:.3mm solid #000}
 .rce-sm-grid{display:grid;grid-template-columns:1fr 1fr}
+.rce-sign-cap{font-size:6pt;letter-spacing:.2px;color:#444}.rce-sm-note{font-size:5.8pt;font-style:italic;padding:.4mm 1.5mm .6mm;border-top:.15mm solid #7f7f7f;color:#333}.rce-printdate{font-size:6.2pt;font-style:italic;text-align:right;color:#333}
 .rce-sm-line{display:flex;align-items:flex-end;padding:.3mm 1.5mm;height:4.5mm}.rce-sm-l{white-space:nowrap;margin-right:1mm}.rce-sm-v{flex:1;border-bottom:.15mm solid #7f7f7f;height:3mm}
 
 /* impressão: só a folha (a página A4 paisagem é definida na hora de imprimir, para não afetar as outras impressões do app) */
@@ -39243,7 +39266,7 @@ table.rce-cat tr.off{opacity:.5}
   function selectPres(i, id) {
     const m = catalogById(id); if (!m) return;
     const old = S.draft.items[i];
-    S.draft.items[i] = {...blankItem(), catalogId: m.id, dcb: m.dcb, concentracao: m.concentracao, forma: m.forma, unidade: m.unidade, via: m.via, lista: m.lista, longoPrazo: !!m.longoPrazo,
+    S.draft.items[i] = {...blankItem(), catalogId: m.id, dcb: m.dcb, concentracao: m.concentracao, forma: m.forma, unidade: m.unidade, via: m.via, lista: m.lista, mgUnidade: m.mgUnidade || 0, longoPrazo: !!m.longoPrazo,
       dose: m.dose || 1, vezes: m.vezes || 1, obs: m.obs || '', quantidade: old.quantidade, diasManual: old.diasManual};
     S.draft.items[i].posologia = posologiaAuto(S.draft.items[i]);
     renderItems(); refreshAlerts();
@@ -39321,7 +39344,7 @@ table.rce-cat tr.off{opacity:.5}
     const rx = S.preview;
     viewEl.innerHTML = `<div class="rce-pv-bar"><button type="button" class="btn pri" id="rce-do-print">Imprimir / salvar em PDF</button><button type="button" class="btn" id="rce-back">← Voltar</button><button type="button" class="btn" id="rce-new-after">Nova receita</button></div>
       <p class="hint">Imprima em A4 <b>paisagem</b>, escala 100%, sem cabeçalhos/rodapés do navegador. Para gerar arquivo, escolha “Salvar como PDF”. Depois de impressa, assine e carimbe cada via.</p>
-      <div id="rce-overflow"></div><div class="rce-sheet-wrap" id="rce-sheet-wrap"><div id="rce-sheet-holder">${renderSheet(rx, S.settings.showLogo)}</div></div>`;
+      <div id="rce-overflow"></div><div class="rce-sheet-wrap" id="rce-sheet-wrap"><div id="rce-sheet-holder">${renderSheet({...rx, printedAt: todayISO()}, S.settings.showLogo)}</div></div>`;
     fitSheet();
     $('#rce-do-print').addEventListener('click', () => printRx(rx));
     $('#rce-back').addEventListener('click', () => go(S.prevView, {keepScroll: true}));
@@ -39341,7 +39364,7 @@ table.rce-cat tr.off{opacity:.5}
   function removePageStyle() { const s = document.getElementById('rce-page-style'); if (s) s.remove(); }
   async function printRx(rx) {
     const pa = document.getElementById('rce-print');
-    pa.innerHTML = renderSheet(rx, S.settings.showLogo);
+    pa.innerHTML = renderSheet({...rx, printedAt: todayISO()}, S.settings.showLogo);
     try { await Promise.all([...pa.querySelectorAll('img')].map(i => (i.decode ? i.decode().catch(() => {}) : null))); } catch (e) {}
     addPageStyle(); document.body.classList.add('rce-printing');
     const old = document.title; document.title = `Receita - ${rx.patient.nome} - ${formatDateBR(rx.issuedAt)}`;
@@ -39408,7 +39431,7 @@ table.rce-cat tr.off{opacity:.5}
   }
 
   // ───────── Medicamentos (catálogo) ─────────
-  const LISTAS = {C1: 'C1', C5: 'C5', RCE: 'Outra (RCE por adendo)'};
+  const LISTAS = {C1: 'C1', C5: 'C5', A2: 'A2 (tramadol/codeína, adendo)', RCE: 'Outra (RCE por adendo)'};
   function renderMeds() {
     const q = normalize(S.catFilter);
     const rows = [...BASE_CATALOG.map(m => ({...m, hidden: S.settings.hiddenBase.includes(m.id)})), ...S.custom.filter(m => !m.deleted).map(m => ({...m, base: false, hidden: false}))]
@@ -39458,7 +39481,7 @@ table.rce-cat tr.off{opacity:.5}
     $('#rce-c-save').addEventListener('click', async () => {
       const f = S.catForm, dcb = $('#rce-c-dcb').value.trim(), conc = $('#rce-c-conc').value.trim(), forma = $('#rce-c-forma').value.trim();
       if (!dcb || !conc || !forma) return toast('Preencha medicamento, concentração e forma farmacêutica.');
-      const rec = {id: f.id || uuid(), dcb, concentracao: conc, forma, unidade: $('#rce-c-un').value, via: $('#rce-c-via').value, lista: $('#rce-c-lista').value, classe: f.classe || '',
+      const rec = {id: f.id || uuid(), dcb, concentracao: conc, forma, unidade: $('#rce-c-un').value, via: $('#rce-c-via').value, lista: $('#rce-c-lista').value, mgUnidade: f.mgUnidade || 0, classe: f.classe || '',
         longoPrazo: $('#rce-c-long').checked, dose: Number($('#rce-c-dose').value) || 1, vezes: Number($('#rce-c-vezes').value) || 1, obs: f.obs || '', custom: true, deleted: false, updatedAt: nowISO()};
       await dbPut('catalog', rec); upsert(S.custom, rec); S.catForm = null; renderMeds(); toast('Medicamento salvo.');
     });
@@ -39476,7 +39499,7 @@ table.rce-cat tr.off{opacity:.5}
       <h3 style="margin-top:6px">Unidade</h3>
       <label class="f">Órgão<input id="rce-s-org" value="${esc(s.orgName)}"></label><label class="f">Unidade<input id="rce-s-unit" value="${esc(s.unitName)}"></label>
       <div class="rce-g3"><label class="f">CNES<input id="rce-s-cnes" value="${esc(s.cnes)}"></label><label class="f">CEP<input id="rce-s-cep" value="${esc(s.cep)}"></label><label class="f">Telefone<input id="rce-s-tel" value="${esc(s.telefone)}"></label></div>
-      <label class="f">Endereço<input id="rce-s-end" value="${esc(s.endereco)}"></label>
+      <label class="f">Endereço completo (com cidade e UF)<input id="rce-s-end" value="${esc(s.endereco)}"></label>
       <label class="rce-check"><input type="checkbox" id="rce-s-logo" ${s.showLogo ? 'checked' : ''}> Mostrar os logos do SUS e da Prefeitura de Betim no cabeçalho</label>
       <div class="rce-actions"><button type="button" class="btn pri" id="rce-s-save">Salvar dados</button></div></section>
       <section class="rce-card"><h2>Backup e outros aparelhos</h2>
@@ -39538,7 +39561,7 @@ table.rce-cat tr.off{opacity:.5}
   }
 
   const core = {uuid, todayISO, formatDateBR, addDaysISO, diffDaysISO, onlyDigits, formatCPF, validCPF, normalize, slug, extenso, formatDose, posologiaAuto, quantidadeTexto,
-    analyzeItem, emitenteCompleto, validateReceita, mergeRecords, renderSheet, UNIDADES, VIAS, LIMITE_DIAS, LIMITE_DIAS_LONGO, LIMITE_AMPOLAS, VALIDADE_DIAS, MAX_ITENS};
+    analyzeItem, emitenteCompleto, validateReceita, mergeRecords, renderSheet, UNIDADES, VIAS, LIMITE_DIAS, LIMITE_DIAS_LONGO, LIMITE_DIAS_A2, LIMITE_MG_A2, LIMITE_AMPOLAS, VALIDADE_DIAS, MAX_ITENS};
   return {open, core, BASE_CATALOG};
 })();
 if (typeof module !== 'undefined' && module.exports) module.exports = RCE;

@@ -1,4 +1,4 @@
-// ───────────── data93.js – v82 (05/11/2026, com versões frasco e seringa): folhetos "Minha insulina" para imprimir (DM1, DM2 com insulina e troca NPH→glargina).
+// ───────────── data93.js – v86 (06/11/2026, com versões frasco e seringa): folhetos "Minha insulina" para imprimir (DM1, DM2 com insulina e troca NPH→glargina).
 // Origem: pedido da usuária ("acrescente ao DM1 e DM2IR os documentos para imprimir de instrução ao paciente, conferindo as fontes").
 // Gerados por gerar.py (A4 paisagem, 4 páginas: verso/capa, doses/regras, técnica/locais-e-armazenamento, diário de 2 semanas).
 // Revisão do texto contra as fontes em 05/11/2026 (ver FONTES e mudancas abaixo). Fontes abertas: NT DAPS Betim 14/2026 (PDF da usuária),
@@ -52,8 +52,8 @@ const DOC_LISTA = [
 
 // ── ligação dos folhetos aos itens (campo c.docs lido pela aba "Paciente") e registro da revisão
 (() => {
-  const get = id => { const c = CONDICOES.find(x => x.id === id); if (!c) throw new Error("v82: item ausente " + id); return c; };
-  const MUD = "v82 (05/11/2026): folhetos 'Minha insulina' (NPH, NPH+Regular, glargina, glargina+Regular) na aba Paciente, com texto revisado contra a NT DAPS 14/2026, bulas, guia do MS e FITTER/ADA (armazenamento na prateleira de baixo, ressuspensão da NPH 10+10, agulha, dose esquecida sem janela de horas, glucagon e cetona).";
+  const get = id => { const c = CONDICOES.find(x => x.id === id); if (!c) throw new Error("v86: item ausente " + id); return c; };
+  const MUD = "v86 (06/11/2026): folhetos 'Minha insulina' (NPH, NPH+Regular, glargina, glargina+Regular) na aba Paciente, com texto revisado contra a NT DAPS 14/2026, bulas, guia do MS e FITTER/ADA (armazenamento na prateleira de baixo, ressuspensão da NPH 10+10, agulha, dose esquecida sem janela de horas, glucagon e cetona).";
   const NV = [
     "Folhetos 'Minha insulina': prazo do refil de NPH/Regular em uso (4 semanas no folheto) é conservador – a bula da Novolin N FlexPen e da Novolin R traz 6 semanas e a do frasco de Novolin N, 4; conferir a bula da marca que a farmácia de Betim dispensa.",
     "Folhetos: agulhas por aplicação em Betim – a NT 14/2026 manda trocar todo dia 'conforme o fornecimento da rede'; o folheto diz 'o ideal é uma por aplicação, no mínimo uma por dia'. Confirmar com a farmácia quantas agulhas por paciente por dia.",
@@ -63,7 +63,7 @@ const DOC_LISTA = [
     "Folhetos: QR 'Vídeo: como aplicar com caneta' aponta para o canal pessoal 'Dra Juliana Lee' (youtube.com/watch?v=vGwwVtieOVk, título 'Como aplicar insulina? Veja a técnica correta para aplicação com caneta.', confirmado em 05/11/2026); não é fonte institucional e não é da caneta reutilizável do SUS. Trocar por vídeo do MS/SBD quando houver link confirmado.",
     "Folhetos: QR do guia SBD aponta para o PDF 'Guia Prático: canetas reutilizáveis de insulina no SUS' (abr/2025), localizado por busca e não aberto na íntegra; o link antigo do folheto (página da SBD) não pôde ser verificado e foi substituído."
   ];
-  const MUDF = "Complemento v82 (05/11/2026): folhetos 'Minha insulina' também em versão frasco e seringa (NPH; NPH + Regular), com técnica de aspiração, mistura das duas insulinas na mesma seringa (Regular primeiro), descarte e armazenamento do frasco (SBD 2026 e bulas do frasco). Glargina segue só em caneta (NT DAPS 14/2026).";
+  const MUDF = "Complemento v86 (06/11/2026): folhetos 'Minha insulina' também em versão frasco e seringa (NPH; NPH + Regular), com técnica de aspiração, mistura das duas insulinas na mesma seringa (Regular primeiro), descarte e armazenamento do frasco (SBD 2026 e bulas do frasco). Glargina segue só em caneta (NT DAPS 14/2026).";
   const NVF = [
     "Folhetos em frasco: seringas em Betim – a REMUME não lista seringa; o app prescreve 'seringa para insulina 100 UI com agulha acoplada'. Tipo (U-100, 30/50 U), comprimento da agulha e quantidade por paciente por dia não foram verificados. O folheto manda usar seringa nova a cada aplicação (SBD: reutilizar não é recomendado); se Betim orientar reuso por falta de insumo, ajustar o texto.",
     "Folhetos em frasco: prazo do frasco aberto – o folheto usa 28 dias para NPH e Regular. A bula do Novolin N frasco diz 4 semanas e a do Novolin R frasco, 6 semanas (em temperatura ambiente ou geladeira); marcas como Humulin têm prazo próprio. Conferir a bula da marca dispensada.",

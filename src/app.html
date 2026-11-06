@@ -891,7 +891,8 @@ const HI = {
   ped: '<path d="M18.5 3.5l2 2"/><path d="M19.5 4.5l-3 3"/><path d="M16.5 7.5l-9 9-3 1 1-3 9-9z"/><path d="M11 9l4 4"/><path d="M8 12l1.5 1.5"/>',
   bal: '<path d="M10.6 19.9a4.9 4.9 0 0 1-6.9-6.9l9.6-9.6a4.9 4.9 0 0 1 6.9 6.9z"/><path d="M8.5 8.5l7 7"/>',
   rede: '<path d="M12 21s-6.5-5.8-6.5-11.2a6.5 6.5 0 0 1 13 0C18.5 15.2 12 21 12 21z"/><circle cx="12" cy="10" r="2.3"/>',
-  rce: '<path d="M7 3.5h7.5L18.5 7.5v13H7z"/><path d="M14.5 3.5v4h4"/><path d="M10 12h5.5M10 15.5h3.5"/>'
+  rce: '<path d="M7 3.5h7.5L18.5 7.5v13H7z"/><path d="M14.5 3.5v4h4"/><path d="M10 12h5.5M10 15.5h3.5"/>',
+  rxins: '<path d="M3 21l3.5-3.5"/><path d="M8.5 9.5l6 6"/><path d="M6 17l-1.5-1.5 9-9L15 8z"/><path d="M14 4.5l5.5 5.5"/><path d="M16.5 2l5.5 5.5"/>'
 };
 const HTILES = [
   ["co", "Consulta guiada", "da anamnese à evolução"],
@@ -903,7 +904,8 @@ const HTILES = [
   ["ped", "Dose pediátrica", "por peso"],
   ["bal", "Nomes no balcão", "marcas e preço"],
   ["rede", "Rede de Betim", "serviços e contatos"],
-  ["rce", "Receituário de controle especial", "receita em 2 vias, pronta para imprimir"]
+  ["rce", "Receituário de controle especial", "receita em 2 vias, pronta para imprimir"],
+  ["rxins", "Receita ilustrada de insulina", "doses desenhadas, técnica, mapa de glicemia"]
 ];
 const HMODS = ["de", "mu", "pv", "ho", "in", "po"];
 const svgI = k => `<svg viewBox="0 0 24 24" aria-hidden="true">${HI[k]}</svg>`;
@@ -947,6 +949,7 @@ function homeTile(k){
   if (k === "bal"){ $("#bal-q").value = ""; renderBal(); $("#dlg-bal").showModal(); return; }
   if (k === "rede") return openRede();
   if (k === "rce") return RCE.open();
+  if (k === "rxins") return openCalc("rx_insulina");
 }
 
 // ── ficha
@@ -2435,7 +2438,7 @@ Object.assign(CALCS, {
 });
 CALC_MENU.push(["vitd_full","Vitamina D: reposição completa"],["b12_full","Vitamina B12: reposição completa"],["ferro_full","Ferro: reposição completa"]);
 
-// ── v83 (05/11/2026): receita ilustrada de insulina (gerador em data94.js)
+// ── v86 (06/11/2026): receita ilustrada de insulina (gerador em data94.js)
 let RXINS_DOC = "";
 const txtf = (k, l, ph) => `<label class="f">${esc(l)}<input data-k="${k}" type="text" placeholder="${esc(ph || "")}"></label>`;
 Object.assign(CALCS, {
@@ -2449,11 +2452,11 @@ Object.assign(CALCS, {
     <div class="cgrid">${fld("nph_cafe","NPH: manhã (café)",{min:0,step:1})}${fld("nph_almoco","NPH: antes do almoço",{min:0,step:1})}${fld("nph_jantar","NPH: antes do jantar",{min:0,step:1})}${fld("nph_deitar","NPH: ao deitar",{min:0,step:1})}</div>
     <div class="cgrid">${fld("gla","Glargina: dose única",{min:0,step:1})}${sel("horaGla","Glargina: horário",[["cafe","De manhã"],["deitar","Ao deitar"]])}</div>
     <div class="cgrid">${fld("reg_cafe","Regular: antes do café",{min:0,step:1})}${fld("reg_almoco","Regular: antes do almoço",{min:0,step:1})}${fld("reg_jantar","Regular: antes do jantar",{min:0,step:1})}</div>
-    <div class="cchk">${chk("mistura","Misturar NPH e regular na mesma seringa (só com agulha fixa, se a equipe ensinou)")}${chk("hgt","Incluir mapa de glicemia de 5 dias")}${chk("corr","Incluir folha de correção da regular")}${chk("tiras","Incluir tiras e lancetas na receita")}</div>`,
+    <div class="cchk">${chk("gestante","Gestante (mapa de 7 dias com as metas da gestação e locais de aplicação da gravidez)")}${chk("mistura","Misturar NPH e regular na mesma seringa (só com agulha fixa, se a equipe ensinou)")}${chk("hgt","Incluir mapa de glicemia de 5 dias")}${chk("corr","Incluir folha de correção da regular")}${chk("tiras","Incluir tiras e lancetas na receita")}</div>`,
   run(el){
    if (typeof RXINS === "undefined") return saida(el, vazio("Gerador indisponível nesta versão."));
    const v = {nome: Sv(el,"nome"), ubs: Sv(el,"ubs"), basal: Sv(el,"basal"), dispB: Sv(el,"dispB"), dispR: Sv(el,"dispR"), horaGla: Sv(el,"horaGla"),
-     mistura: V(el,"mistura") === 1, hgt: V(el,"hgt") === 1, corr: V(el,"corr") === 1, tiras: V(el,"tiras") === 1};
+     gestante: V(el,"gestante") === 1, mistura: V(el,"mistura") === 1, hgt: V(el,"hgt") === 1, corr: V(el,"corr") === 1, tiras: V(el,"tiras") === 1};
    for (const k of ["nph_cafe","nph_almoco","nph_jantar","nph_deitar","gla","reg_cafe","reg_almoco","reg_jantar"]) v[k] = V(el,k);
    const R = RXINS.resumo(v), o = R.o;
    if (!o.temB && !o.temR) return saida(el, vazio("Digite ao menos uma dose para montar a receita."));

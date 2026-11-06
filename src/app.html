@@ -139,6 +139,8 @@ textarea.fill.mono{font:13px/1.55 var(--f-mono);background:var(--sunk)}
 /* blocos de texto */
 .box{border:1px solid var(--line);border-radius:var(--r);background:var(--surface);padding:14px 16px;margin-bottom:14px}
 .box h3{font:700 1rem var(--f-display);margin:0 0 8px}
+.box.docs .doc-row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 0;border-top:1px solid var(--line)}
+.box.docs .doc-row:first-of-type{border-top:0}
 .box.ori h4{font:700 .95rem var(--f-display);margin:14px 0 4px}
 .box.ori ul{margin:4px 0 8px;padding-left:1.2em}
 .box.ori li{margin:2px 0}
@@ -1069,7 +1071,7 @@ function renderPanel(c, legend){
   if (state.tab === "pac"){
     const al = (c.alarme||[]);
     const txt = `${oriTxt(pacSub(c, c.orient))}\n\nProcure atendimento imediatamente se:\n${al.map(a=>"- "+a).join("\n")}`;
-    p.innerHTML = `${calcPacHtml(c)}<div class="box ori"><h3>Orientações ao paciente</h3>${oriHtml(pacSub(c, c.orient))}</div>
+    p.innerHTML = `${calcPacHtml(c)}${docsHtml(c)}<div class="box ori"><h3>Orientações ao paciente</h3>${oriHtml(pacSub(c, c.orient))}</div>
       <div class="box"><h3>Procure atendimento imediatamente se</h3><ul class="alarm">${al.map(a=>`<li>${esc(a)}</li>`).join("")}</ul></div>
       <div class="actions"><button class="btn pri" id="cp-pac">Copiar orientações + sinais de alarme</button><button class="btn" id="pr-pac">Imprimir para o paciente</button></div>`;
     p.querySelector("#cp-pac").onclick = () => copy(txt, "Orientações");
@@ -1163,6 +1165,8 @@ document.addEventListener("click", ev => {
   if (t.dataset.copy !== undefined){ copy(t.dataset.copy, t.dataset.label); return; }
   if (t.dataset.cpsec){ const el=document.getElementById("soap-"+t.dataset.cpsec); copy(el.value, t.dataset.cpsec); return; }
   if (t.dataset.cprx !== undefined){ copy(document.getElementById("rx-"+t.dataset.cprx).value, "Prescrição"); return; }
+  if (t.dataset.doc){ abrirDoc(t.dataset.doc); return; }
+  if (t.dataset.rxins !== undefined){ abrirHTML(RXINS_DOC); return; }
   if (t.dataset.close !== undefined){ t.closest("dialog").close(); return; }
   if (t.dataset.pf){ pendFiltro = t.dataset.pf; renderPend(); return; }
   if (t.dataset.goto){ $("#dlg-pend").close(); const gc = get(t.dataset.goto); state.forceTab = "evid"; if (gc && modOf(gc) !== state.mod && !isAtalho(gc)) { trocarModulo(modOf(gc), gc.id); return; } state.sel = t.dataset.goto; renderList(); renderMain(); return; }
@@ -2425,6 +2429,42 @@ Object.assign(CALCS, {
  ferro_full: {nome: "Ferro: estadiamento e reposição completa (sua calculadora)", desc: "Sua calculadora de reposição de ferro (PCDT 2014 ainda listado pelo MS; CP 98/2024; carboximaltose – Portaria SECTICS 20/2023; derisomaltose – Portaria SECTICS 49/2024), integrada ao app. Revisada em 10/10/2026: o sacarato EV consta da REMUME de Betim.", html: () => `<iframe class="embcalc" data-emb="ferro_full" title="Ferro: estadiamento e reposição completa (sua calculadora)" loading="lazy" allow="clipboard-write" style="width:100%;height:900px;border:1px solid var(--line);border-radius:12px;background:#fff" srcdoc="${embAttr(EMB_HTML.ferro_full)}"></iframe>`, run(){}},
 });
 CALC_MENU.push(["vitd_full","Vitamina D: reposição completa"],["b12_full","Vitamina B12: reposição completa"],["ferro_full","Ferro: reposição completa"]);
+
+// ── v83 (05/11/2026): receita ilustrada de insulina (gerador em data94.js)
+let RXINS_DOC = "";
+const txtf = (k, l, ph) => `<label class="f">${esc(l)}<input data-k="${k}" type="text" placeholder="${esc(ph || "")}"></label>`;
+Object.assign(CALCS, {
+ rx_insulina: {nome: "Receita ilustrada de insulina (NPH, glargina e regular)",
+  desc: "Monta a receita com desenho das doses por horário, o passo a passo do dispositivo que a farmácia entrega (caneta ou frasco e seringa), como guardar, onde aplicar e a estimativa de 30 dias. Opcional: mapa de glicemia de 5 dias com as metas da SBD e folha de correção da regular. Texto conferido na NT DAPS 14/2026 de Betim, nas bulas e nas diretrizes da SBD; as doses são as que você digitar.",
+  html: () => `<div class="cgrid">${txtf("nome","Nome da pessoa","opcional")}${txtf("ubs","UBS / equipe","opcional")}</div>
+    <div class="cgrid">${sel("basal","Insulina basal",[["nph","NPH"],["gla","Glargina (fase liberada em Betim)"]])}
+    ${sel("dispB","Dispositivo da basal",[["caneta","Caneta reutilizável (refil 3 mL)"],["fixa","Seringa 100 UI, agulha fixa"],["movel","Seringa 100 UI, agulha removível"],["ml","Seringa 1 mL graduada em mL"]])}
+    ${sel("dispR","Dispositivo da regular",[["mesma","O mesmo da basal"],["caneta","Caneta reutilizável (refil 3 mL)"],["fixa","Seringa 100 UI, agulha fixa"],["movel","Seringa 100 UI, agulha removível"],["ml","Seringa 1 mL graduada em mL"]])}</div>
+    <p class="cd">Doses em UI (a conversão para mL é feita sozinha quando a seringa for graduada em mL). Deixe em branco o que não for aplicar.</p>
+    <div class="cgrid">${fld("nph_cafe","NPH: manhã (café)",{min:0,step:1})}${fld("nph_almoco","NPH: antes do almoço",{min:0,step:1})}${fld("nph_jantar","NPH: antes do jantar",{min:0,step:1})}${fld("nph_deitar","NPH: ao deitar",{min:0,step:1})}</div>
+    <div class="cgrid">${fld("gla","Glargina: dose única",{min:0,step:1})}${sel("horaGla","Glargina: horário",[["cafe","De manhã"],["deitar","Ao deitar"]])}</div>
+    <div class="cgrid">${fld("reg_cafe","Regular: antes do café",{min:0,step:1})}${fld("reg_almoco","Regular: antes do almoço",{min:0,step:1})}${fld("reg_jantar","Regular: antes do jantar",{min:0,step:1})}</div>
+    <div class="cchk">${chk("mistura","Misturar NPH e regular na mesma seringa (só com agulha fixa, se a equipe ensinou)")}${chk("hgt","Incluir mapa de glicemia de 5 dias")}${chk("corr","Incluir folha de correção da regular")}${chk("tiras","Incluir tiras e lancetas na receita")}</div>`,
+  run(el){
+   if (typeof RXINS === "undefined") return saida(el, vazio("Gerador indisponível nesta versão."));
+   const v = {nome: Sv(el,"nome"), ubs: Sv(el,"ubs"), basal: Sv(el,"basal"), dispB: Sv(el,"dispB"), dispR: Sv(el,"dispR"), horaGla: Sv(el,"horaGla"),
+     mistura: V(el,"mistura") === 1, hgt: V(el,"hgt") === 1, corr: V(el,"corr") === 1, tiras: V(el,"tiras") === 1};
+   for (const k of ["nph_cafe","nph_almoco","nph_jantar","nph_deitar","gla","reg_cafe","reg_almoco","reg_jantar"]) v[k] = V(el,k);
+   const R = RXINS.resumo(v), o = R.o;
+   if (!o.temB && !o.temR) return saida(el, vazio("Digite ao menos uma dose para montar a receita."));
+   RXINS_DOC = RXINS.doc(v);
+   const avisos = [];
+   if (Sv(el,"basal") === "gla" && Sv(el,"dispB") !== "caneta") avisos.push("A glargina de Betim vem em refil de 3 mL com caneta reutilizável (NT DAPS 14/2026): a receita saiu em caneta.");
+   if (o.mistura && !o.podeMisturar) avisos.push("A mistura na mesma seringa só é montada aqui com NPH + regular na mesma seringa de agulha fixa: as duas saíram separadas.");
+   if (o.misturar) avisos.push("Mistura na mesma seringa: a regular entra primeiro (SBD). Confirme que a pessoa foi treinada.");
+   const tab = `<table class="t"><tr><th>Insulina</th><th>Por dia</th><th>Por mês</th><th>Entregar</th></tr>${R.est.linhas.map(l => `<tr><td>${esc(l[0])}</td><td>${esc(l[1])}</td><td>${esc(l[2])}</td><td><b>${esc(l[3])}</b></td></tr>`).join("")}</table>`;
+   saida(el, `${kv([["Receita", `<div class="fn">${R.itens.map(i => `<b>${esc(i.t)}</b><br><span class="hint">${i.p}</span>`).join("<br>")}</div>`],
+     ["Estimativa de 30 dias", tab + (R.est.insumos.length ? `<p class="hint">${esc(R.est.insumos.join(" · "))}</p>` : "") + `<p class="hint">${esc(R.est.nota)}</p>`],
+     avisos.length ? ["Atenção", `<ul class="hint" style="margin:0;padding-left:16px">${avisos.map(a => `<li>${esc(a)}</li>`).join("")}</ul>`] : null])}
+    <div class="actions"><button class="btn pri sm" data-rxins="1">Abrir e imprimir (A4 retrato)</button></div>`, R.texto);
+  }}
+});
+CALC_MENU.push(["rx_insulina","Receita ilustrada de insulina"]);
 // ── calculadora da revisão 10/10/2026: TRN pelo PCDT Tabagismo 2020
 Object.assign(CALCS, {
  trn: {nome: "Tabagismo: TRN e bupropiona (PCDT 2020)",
@@ -2604,6 +2644,29 @@ const oriTxt = t => String(t||"").split("\n").map(l => l.startsWith("## ") ? "\n
 function imprimirOrientacoes(c){
   const corpo = `<h2>${esc(c.nome)}</h2>${oriHtml(pacSub(c, c.orient))}<h2>Procure atendimento imediatamente se</h2><ul>${(c.alarme||[]).map(a=>`<li>${esc(a)}</li>`).join("")}</ul>`;
   imprimir("Orientações ao paciente", corpo);
+}
+
+// ── documentos para imprimir (folhetos prontos, c.docs = ["nph","nph_reg","gla","gla_reg"]; HTML em DOC_HTML, data93.js)
+function docsHtml(c){
+  if (!c.docs || !c.docs.length || typeof DOC_HTML === "undefined") return "";
+  const L = DOC_LISTA.filter(d => c.docs.includes(d.id));
+  return `<div class="box docs"><h3>Documentos para imprimir (A4 paisagem, 4 páginas)</h3>
+    <p class="hint">Folheto "Minha insulina" para entregar ao paciente: doses, regras, técnica, armazenamento, hipoglicemia e diário de 2 semanas. Escolha pelo esquema prescrito e pelo dispositivo que o paciente recebe: caneta ou frasco com seringa (a REMUME de Betim lista NPH e Regular nas duas apresentações; confirme qual a farmácia dispensa). A equipe preenche doses, metas e telefone à mão.</p>
+    ${L.map(d => `<div class="doc-row"><div><b>${esc(d.nome)}</b><br><span class="hint" style="margin:0">${esc(d.quando)}</span></div><button class="btn" data-doc="${d.id}">Abrir e imprimir</button></div>`).join("")}
+    <p class="hint">Impressão: frente e verso, virando na borda curta; dobrar a folha 1 ao meio. Conferir doses e telefone antes de entregar.</p></div>`;
+}
+function abrirDoc(id){
+  const h = typeof DOC_HTML !== "undefined" && DOC_HTML[id];
+  if (!h){ toast("Documento indisponível"); return; }
+  abrirHTML(h);
+}
+function abrirHTML(h){
+  if (!h){ toast("Documento indisponível"); return; }
+  const html = h.replace("</body>", "<script>window.addEventListener('load',function(){setTimeout(function(){window.print()},500)})<\/script></body>");
+  const url = URL.createObjectURL(new Blob([html], {type: "text/html;charset=utf-8"}));
+  const w = window.open(url, "_blank");
+  if (!w){ toast("O navegador bloqueou a janela: permita pop-ups para este site"); return; }
+  setTimeout(() => URL.revokeObjectURL(url), 60000);
 }
 
 // ── início

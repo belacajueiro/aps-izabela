@@ -1,11 +1,11 @@
 {
- "gerado": "2026-11-05T23:07:23.527Z",
+ "gerado": "2026-11-06T09:27:58.769Z",
  "cmed": {
   "data": "09/10/2026",
   "fonte": "cmed_pmc2026",
   "icms": "PMC com ICMS de Minas Gerais: 12% para genéricos e 18% para os demais"
  },
- "n_fontes": 744,
+ "n_fontes": 749,
  "n_itens": 393,
  "sem_url": [
   "remume",
@@ -517,7 +517,8 @@
   "mckee1971",
   "aap_piolho2022",
   "memento_fb2016",
-  "jones2015"
+  "jones2015",
+  "sbd_guia_canetas2025"
  ],
  "fontes": [
   {
@@ -3072,6 +3073,9 @@
    "url": "https://diretriz.diabetes.org.br/tratamento-farmacologico-do-diabetes-na-gestacao/",
    "ano": 2026,
    "usado_em": [
+    "cr-dm1",
+    "cr-dm2-insulina",
+    "cr-glargina",
     "mu-preconcepcional",
     "pn-2tri",
     "pn-dmg",
@@ -10170,6 +10174,71 @@
    "usado_em": [
     "cr-tontura-idoso"
    ]
+  },
+  {
+   "k": "ms_guia_glargina2026",
+   "s": "MS – Guia: insulina glargina disponível em todo o SUS (2026)",
+   "t": "Ministério da Saúde. Insulina glargina disponível em todo o Sistema Único de Saúde (guia para o paciente), 2026. Armazenamento: refil fechado na geladeira (2 a 8 °C), fora da porta e longe do congelador; refil aberto, em local abaixo de 30 °C, até 28 dias, e acima de 30 °C na geladeira por até 28 dias, retirando 30 min antes; caneta sem refil em local arejado, validade de 3 anos após o primeiro uso. Locais de aplicação e rodízio. O guia não informa tipo de agulha, tempo de espera, conduta na hipoglicemia nem dose esquecida. Aberto em 05/11/2026.",
+   "f": "F",
+   "url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/guias-e-manuais/2026/guia-os-beneficios-da-insulina-glargina.pdf/@@download/file",
+   "ano": 2026,
+   "usado_em": [
+    "cr-dm1",
+    "cr-dm2-insulina",
+    "cr-glargina"
+   ]
+  },
+  {
+   "k": "sbd_guia_canetas2025",
+   "s": "SBD – Guia Prático: canetas reutilizáveis de insulina no SUS (2025)",
+   "t": "Sociedade Brasileira de Diabetes, com apoio do CFF. Guia Prático: canetas reutilizáveis de insulina no SUS (NPH e Regular), abr/2025. Itens fornecidos, uma caneta por tipo de insulina (identificar), montagem, validade da caneta de 3 anos após o primeiro uso. Localizado por busca em 05/11/2026; arquivo conferido só pelo trecho exibido na busca.",
+   "f": "NV",
+   "url": "https://diabetes.org.br/wp-content/uploads/2025/04/Guia-Pratico-SBD-Canetas-Reutilizaveis-de-Insulina-no-SUS.pdf",
+   "ano": 2026,
+   "usado_em": [
+    "cr-dm1",
+    "cr-dm2-insulina",
+    "cr-glargina"
+   ]
+  },
+  {
+   "k": "sbd_tecnica_insulina2026",
+   "s": "SBD – Técnicas de aplicação de insulina (Diretriz da SBD, ed. 2026)",
+   "t": "Sociedade Brasileira de Diabetes. Técnicas de aplicação de insulina. Preparo com seringa (insulina única; mistura NPH + Regular/ultrarrápida na mesma seringa: ar no frasco da NPH sem aspirar, depois ar e dose da Regular, depois a dose da NPH; excesso não volta ao frasco), aplicação, tempo de permanência da agulha (pode ser < 10 s; rever se refluir), comprimento de agulha e prega (4–5 mm: prega dispensável; 6 e 8 mm: prega indispensável), seringas U-100 de agulha fixa em UI (não usar seringa em mL), reutilização de seringa/agulha não recomendada (lipodistrofia), rodízio e descarte. Página lida em 05/11/2026 por extração e conferida com trechos de busca que coincidem nos passos da mistura; a página mostra 'última revisão 03/02/2022' e rodapé 'Edição 2026' – vigência a confirmar no site da SBD.",
+   "f": "F",
+   "url": "https://diretriz.diabetes.org.br/?p=6827",
+   "ano": 2026,
+   "usado_em": [
+    "cr-dm1",
+    "cr-dm2-insulina",
+    "cr-glargina"
+   ]
+  },
+  {
+   "k": "novolin_bulas",
+   "s": "Novo Nordisk – bulas do paciente Novolin N e Novolin R (Brasil)",
+   "t": "Novo Nordisk. Bulas do paciente Novolin N (frasco, Penfill, FlexPen) e Novolin R. Em uso ou de reserva: fora da geladeira, entre 15 e 30 °C; Novolin N frasco: 4 semanas; Novolin N FlexPen e Novolin R frasco/FlexPen: 6 semanas. Não congelar. Aspecto: NPH deve ficar uniformemente branca e leitosa; Regular, límpida. Esquecimento: seguir o médico e nunca dobrar a dose. Frasco (bula do paciente, MS): Novolin N e R 'devem ser usados com seringa; necessário adquirir seringas'; aspirar ar igual à dose; rolar o frasco da NPH até ficar branco e leitoso; manter a agulha sob a pele por pelo menos 6 segundos; Novolin R frasco em uso: 15–30 °C ou geladeira, até 6 semanas; descarte de seringas em coletor rígido; as bulas não descrevem a ordem da mistura. Páginas oficiais abertas em 05/11/2026; a insulina que a farmácia dispensa em Betim pode ser de outra marca (Humulin etc.), com prazo próprio.",
+   "f": "F",
+   "url": "https://www.novonordisk.com.br/content/dam/brazil/affiliate/www-novonordisk-br/Bulas/2020-07-07/Novolin N frasco - Bula do Paciente.pdf",
+   "ano": 2026,
+   "usado_em": [
+    "cr-dm1",
+    "cr-dm2-insulina",
+    "cr-glargina"
+   ]
+  },
+  {
+   "k": "sbd_metas2023",
+   "s": "SBD – Metas no tratamento do diabetes (Diretriz da SBD)",
+   "t": "Sociedade Brasileira de Diabetes. Metas no tratamento do diabetes. Tabela 1 (metas individualizadas por situação clínica: adulto com DM1 ou DM2, idoso saudável, idoso comprometido/frágil, idoso muito comprometido, criança e adolescente – HbA1c, glicemia de jejum e pré-prandial, 2 h pós-prandial, ao deitar e tempo no alvo) e Tabela 2 (classificação do estado clínico do idoso). Página aberta em 05/11/2026; consta 'última revisão 16/05/2023', DOI 10.29327/557753.2022-3, dentro do site da Diretriz edição 2026.",
+   "f": "F",
+   "url": "https://diretriz.diabetes.org.br/metas-no-tratamento-do-diabetes/",
+   "ano": 2026,
+   "usado_em": [
+    "cr-dm1",
+    "cr-dm2-insulina",
+    "cr-glargina"
+   ]
   }
  ],
  "itens": [
@@ -12785,7 +12854,7 @@
    "id": "cr-dm2-insulina",
    "nome": "Insulinização no DM2",
    "modulo": "cr",
-   "nv": 1,
+   "nv": 20,
    "fontes": [
     "pcdt_dm2",
     "sbd2026_sus",
@@ -12794,7 +12863,13 @@
     "ntc169_2026",
     "betim_dm2026",
     "betim_nt14_2026",
-    "cochrane_glarg2020"
+    "cochrane_glarg2020",
+    "ms_guia_glargina2026",
+    "sbd_guia_canetas2025",
+    "novolin_bulas",
+    "sbd_tecnica_insulina2026",
+    "sbd_metas2023",
+    "sbd_dmg"
    ]
   },
   {
@@ -14993,14 +15068,20 @@
    "id": "cr-glargina",
    "nome": "Troca da insulina NPH pela glargina (NTC 169/2026 e NT Betim 14/2026)",
    "modulo": "cr",
-   "nv": 3,
+   "nv": 17,
    "fontes": [
     "ntc169_2026",
     "betim_nt14_2026",
     "cochrane_glarg2020",
     "betim_dm2026",
     "pcdt_dm2",
-    "remume"
+    "remume",
+    "ms_guia_glargina2026",
+    "sbd_guia_canetas2025",
+    "novolin_bulas",
+    "sbd_metas2023",
+    "sbd_tecnica_insulina2026",
+    "sbd_dmg"
    ]
   },
   {
@@ -15307,7 +15388,7 @@
    "id": "cr-dm1",
    "nome": "DM1 (criança, adolescente e adulto): diagnóstico, insulina no SUS, CEAF e cuidado na APS",
    "modulo": "cr",
-   "nv": 9,
+   "nv": 28,
    "fontes": [
     "pcdt_dm1_2019",
     "ceaf_mg_dm1_2025",
@@ -15328,7 +15409,13 @@
     "sesmg_risco",
     "glucagen_bula",
     "rename",
-    "remume"
+    "remume",
+    "ms_guia_glargina2026",
+    "sbd_guia_canetas2025",
+    "novolin_bulas",
+    "sbd_tecnica_insulina2026",
+    "sbd_metas2023",
+    "sbd_dmg"
    ]
   },
   {
